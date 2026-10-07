@@ -37,6 +37,13 @@ def main(argv):
     game, manifest = games.manifest(slug)
     lang = manifest["language"]
 
+    if games.layout(manifest) != "tl-blocks":
+        sys.exit(
+            "%s is patched by script override (patch_layout=script-override).\n"
+            "  It has no game/tl/%s to import and needs no template: patch/game/\n"
+            "  already holds the finished scripts. See docs/adding-a-game.md."
+            % (manifest["title"], lang))
+
     src = os.path.join(renpy_game_dir(rest[0]), "game", "tl", lang)
     if not os.path.isdir(src):
         sys.exit("no game/tl/%s there -- run the Ren'Py SDK's languagetool "

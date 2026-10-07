@@ -7,19 +7,20 @@
     "Vicky": { "zh": "薇琪", "banned": ["维琪", "薇薇"] },
     "Sarah": { "zh": "莎拉", "banned": ["莎拉儿", "萨拉"] },
     "Akatsuki": { "zh": "晓月", "banned": ["晓月酱", "赤月"] },
-    "Akane": { "zh": "茜", "banned": ["茜子", "红"] },
+    "Akane": { "zh": "茜", "banned": ["茜子", "赤月"] },
     "Akari": { "zh": "明里", "banned": ["朱里", "亚树"] },
     "Rachel": { "zh": "瑞秋", "banned": ["蕾切尔", "瑞秋儿"] },
     "Hannah": { "zh": "汉娜", "banned": ["汉纳", "韩娜"] },
     "Catherine": { "zh": "凯瑟琳", "banned": ["凯萨琳", "凯特琳"] },
     "Elizabeth": { "zh": "伊丽莎白", "banned": ["伊利莎白", "丽莎白"] },
-    "Ellie": { "zh": "艾莉", "banned": ["艾丽", "埃莉"] },
+    "Ellie": { "zh": "艾莉", "banned": ["艾丽"] },
     "Alison": { "zh": "埃莉森", "banned": ["艾莉森", "爱莉森"] },
+    "Eleanor": { "zh": "埃莉诺", "banned": ["艾莉诺", "埃莉娜"] },
     "Annabelle": { "zh": "安娜贝尔", "banned": ["安娜贝儿", "安妮贝尔"] },
     "Mika": { "zh": "米卡", "banned": ["美香", "米迦"] },
     "Misaki": { "zh": "美咲", "banned": ["美沙", "美樱"] },
     "Takamura": { "zh": "高村", "banned": ["高村先生小姐", "竹村"] },
-    "Headmistress": { "zh": "校长", "banned": ["女校长", "校长夫人"] }
+    "Headmistress": { "zh": "校长", "banned": ["校长夫人"] }
   },
 
   "places": {
@@ -28,10 +29,15 @@
   },
 
   "terms": {
-    "Founding Families": { "zh": "开拓家族", "banned": ["建国家族", "创始家族"] },
-    "the shrimp": { "zh": "小虾米", "banned": ["小虾", "虾米"] },
-    "shrimplet": { "zh": "小虾米", "banned": ["小虾", "虾米"] }
+    "Founding Families": { "zh": "创始家族", "banned": ["开拓家族", "建国家族"] },
+    "the shrimp": { "zh": "小虾米", "banned": ["小虾"] },
+    "shrimplet": { "zh": "小虾米", "banned": ["小虾"] }
   },
+
+  "_banned_is_a_blunt_substring_match": "banned is a plain substring search over the text the patch ships, so a variant that is also an ordinary Chinese word, or a fragment of some other name, cannot be listed here. Four were dropped for exactly that reason. 红 is the single most common character in this patch (272 lines: 脸红, 红茶, 红唇, ...), so Akane=茜 is pinned by this comment instead of by a ban. 埃莉 is a prefix of 埃莉森 (Alison) and 埃莉诺 (Eleanor), so Ellie=艾莉 is pinned here as well -- and Eleanor, who collided with Ellie, is now pinned as her own term below. 女校长 is what the game itself calls the headmistress across seven lines of gallery narration and in her own introduction ('我叫埃莉森·吉尔伯特，斯特罗克学院的女校长'), so it is not a variant of 校长 at all. 虾米 appears once on its own, in 虾米大小的项圈 (shrimp-sized collars), while the nickname accounts for the other 37; the nickname stays pinned to 小虾米 here and only 小虾 remains banned, being the form that would actually be a slip. What is banned below are only renderings with no legitimate use: 露茜 for 露西, 萨拉 for 莎拉, 竹村 for 高村 and so on.",
+
+  "_doubling_exempt": ["校长", "莎拉"],
+  "_doubling_exempt_note": "The doubling rule reports every occurrence of <term> plus the term's own last character. These two canonical renderings make that shape in ordinary prose, so they are not checked for doubling: 校长 + 长得 reads as 校长长 (scripts/story.rpy, one line), and 莎拉 + 拉近/拉进/拉 reads as 莎拉拉 -- which is all seven 莎拉拉 lines, where the 拉 is the verb and not a typo. Every other term here is still doubling-checked. Add a term to this list only together with a line of the patch that shows the collision.",
 
   "_kept_verbatim": [
     "Patreon", "itch.io", "Cosy Cafe",
@@ -40,5 +46,5 @@
     "B: [picker.color.rgb[2]:.2f]",
     "1.33x"
   ],
-  "_kept_verbatim_note": "These eight entries in data/tl_trans.json have an identical value and key on purpose: platform names, the game's own title, an RGB picker format string and a scale factor. tools/check.py has no KEEP rule that matches them (it wants the values in KEEP_EXACT), so running check.py --game cosycafe-0142 will report them as untranslated. They are not a translation gap."
+  "_kept_verbatim_note": "These seven entries in data/tl_trans.json have a value identical to their key on purpose: platform names, the game's own title, three RGB picker format strings and a display scale factor. Names and format strings, not prose. tools/check.py --game cosycafe-0142 reads this list, so they are not reported as untranslated. They used to be kept alive by a KEEP_EXACT table inside tools/check.py that also held two other games' supporter credits and UI key hints -- one shared table meant every game had to carry every other game's exceptions. It is per game now."
 }

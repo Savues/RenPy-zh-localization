@@ -45,15 +45,32 @@ python tools/package_release.py --game <slug> --version v1.0.0
 
 ## 改动译文后的标准流程
 
+后两步所有游戏一样，第一步看 `game.json` 的 `patch_layout`：
+
 ```bash
-python tools/build_tl.py --game <slug> \
-  && python tools/check.py --game <slug> \
+# tl-blocks：从模板 + 译文库重建补丁
+python tools/build_tl.py --game <slug>
+
+# 两种方案都要跑
+python tools/check.py --game <slug> \
   && python tools/selftest.py --game <slug>
 ```
+
+`script-override` 的游戏不跑 `build_tl.py`：它没有 `tl_template/`，那一步只会得到一句
+「缺目录」。那个方案下 `patch/` 里的脚本**就是成品**，改完直接校验。
 
 `build_tl.py` 不保证逐字节可复现：有些英文原文在译文库里登记了多个有意译法
 （按上下文挑选），重建结果会随选择变化。`data/tl_trans.json` 和
 `data/per_block_variants.json` 是这类决策的记录。
+
+### 覆盖率数字不是工具算出来的
+
+`script-override` 的 `coverage` 写在 `game.json` 里，是**断言**。`check.py` 只会把它
+打印出来，不会重算，也不会因为对不上而报错。要动这个数字，改的是提取阶段的统计口径，
+改完记得同步更新 `_coverage_note`——不然下一个接手的人只会看到一个没有出处的数字。
+
+同理，`script-override` 游戏的 `data/tl_trans.json` 是从做完的中文脚本**反向**导出的
+副产品，不是构建输入。拿它算覆盖率或跑覆盖率检查，等于让补丁给自己判卷。
 
 改完跑一次 `check_links.py`：它检查所有相对链接，也核对根 `README.md` 的「已收录」表格
 和 `games/` 一致（不一致就 `python tools/games.py --readme` 重写）。新增游戏后同样要跑

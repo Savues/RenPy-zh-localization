@@ -2,6 +2,37 @@
 
 目标：让 `games/<slug>/` 成为下一个收录的游戏，**不改动 `tools/` 里的任何代码**。
 
+## 先选方案
+
+仓库里有两种打补丁的方式，各有各的适用场景，**没有哪条是标准、哪条是例外**。
+`game.json` 的 `patch_layout` 字段声明用哪种，工具链据此分支，不会替你猜。
+
+| `patch_layout` | 什么时候用 | 补丁长什么样 |
+|---|---|---|
+| `tl-blocks`（缺省） | 游戏发行包里有 `game/tl/<lang>/` 翻译模板 | `patch/tl/<lang>/` 下是生成的 `translate` 块 |
+| `script-override` | 游戏根本没做多语言结构，发行包里没有翻译模板 | `patch/game/` 直接顶掉游戏自己的 `.rpy` |
+
+判断方法就是看一眼发行包：
+
+```bash
+dir "<游戏目录>\game\tl\schinese"
+```
+
+有内容 → `tl-blocks`。没有（只有 `game/tl/None/common.rpym` 之类）→ `script-override`。
+
+两条路的**取舍**：
+
+- `tl-blocks` 覆盖率可以机器验：`data/tl_trans.json` 是构建输入，`check.py` 拿它和英文
+  原文逐条比，未译条目报错。代价是必须依赖游戏发翻译模板——有些游戏不发。
+- `script-override` 没有这个依赖，但也没有基准可比：译文直接在脚本里，覆盖率只能靠
+  提取阶段的数字**断言**在 `game.json` 里，`check.py` 不会从译文库推导，也不会假装能
+  判断覆盖率。代价是补丁体积更大（整个脚本而不是几个块），且装错一层目录会被
+  Ren'Py **静默忽略**。
+
+`script-override` 的完整取舍和踩过的坑，见
+[`games/cosycafe-0142/docs/approach.md`](../games/cosycafe-0142/docs/approach.md)——
+那份文档是这条路的第一手记录，从它开始读比自己摸索快。
+
 ## 1. 建目录和元数据
 
 ```bash
@@ -20,6 +51,8 @@ mkdir games/<slug>
   "renpy_version": "8.4.1",
   "language": "schinese",
   "language_name": "简体中文",
+  "patch_layout": "tl-blocks",
+  "installer": "py",
   "shim": "zz_zh_locale.rpy",
   "patch_font": "zh.ttf",
   "font_strategy": "shadow",
@@ -43,11 +76,16 @@ mkdir games/<slug>
 | `renpy_version` | ✅ | 原版引擎版本，玩家对不上号时报错时用得上 |
 | `language` | ✅ | Ren'Py 语言代码，中文简体固定 `schinese` |
 | `language_name` | ✅ | 面向玩家显示的语言名 |
+| `patch_layout` | | `tl-blocks`（缺省）或 `script-override`，见上面的「先选方案」 |
+| `installer` | | `py`（缺省，用 `tools/install.py`）或 `ps1`（游戏自带安装器）。只服务 `tl-blocks` 的是 `py`；`script-override` 必须写 `ps1` 并在 `games/<slug>/tools/` 下自带一个 |
+| `coverage` | | `script-override` 必填：`{"translated": N, "total": N}`。这是**断言**，不是推导出来的——工具不会重算它，写错了也没人会发现，所以数字要有出处（写进 `_coverage_note`） |
+| `extra_checks` | | 这个游戏自己要额外跑的命令，`cwd` 是游戏目录。`script-override` 常需要，见下 |
 | `shim` | ✅ | 语言补丁文件名。至少要设 `config.language`，字体注册和角色名映射也放这里 |
 | `patch_font` | ✅ | 中文字体在游戏里落地的文件名 |
 | `font_strategy` | | `shadow`（缺省）或 `fallback`，见下 |
 | `font_shadow` | | 游戏硬编码的字体文件名。**只有 `shadow` 策略才用得上** |
-| `font_asset` | ✅ | 仓库里打包的那份字体，见下 |
+| `font_asset` | | 仓库里打包的那份字体，见下。字体不止一份时改用 `font_assets` |
+| `font_assets` | | 一般形式：`[{"path": ..., "names": [...]}, ...]`，一份文件可以写成多个游戏里会去找的名字。`font_asset` / `patch_font` / `font_shadow` 三件套是它的简写，仍然可用 |
 | `font_license` | ✅ | 字体授权声明，打包时以 `FONT-LICENSE.txt` 放进压缩包根目录 |
 | `font_credit` | ✅ | 玩家 README 里显示的字体署名 |
 
@@ -78,8 +116,9 @@ games/<slug>/assets/fonts/<字体>.ttf
 games/<slug>/assets/fonts/LICENSE-<字体>.txt
 ```
 
-`package_release.py` 会把 `font_asset` 按 `patch_font` 加 `font_shadow` 里的每个名字各复制
-一份到 `game/fonts/`，所以 `shadow` 策略下这个列表必须和游戏实际会去找的文件名一一对应。
+`package_release.py` 按 `font_plan()` 决定放几份、叫什么名字：`font_assets` 优先，
+否则退回 `font_asset` + `patch_font` + `font_shadow`。`shadow` 策略下名字必须和游戏
+实际会去找的文件名一一对应；字体文件缺失时打包直接报错，不会打出一个装上去没字体的包。
 
 ### `font_shadow` 怎么找
 
@@ -93,7 +132,9 @@ grep -rn "_font *=" "C:\Games\你的游戏\game" --include=*.rpy
 
 把所有出现过的字体文件名都列进去——包括藏在 `{font=...}` 标签里的，那些是运行时拼出来的，改配置改不掉。
 
-## 2. 导入模板并提取待译条目
+## 2. 导入模板并提取待译条目（`tl-blocks` 方案）
+
+`script-override` 的游戏跳过本节和第 3 节——它没有模板可以导入，也没有译文库要建。
 
 ```bash
 python tools/template.py "C:\Games\你的游戏" --game <slug>
@@ -131,17 +172,58 @@ print(len(texts), "unique strings")
 - URL 与文件路径
 - 角色名牌（放在 `patch/<shim>` 的名字映射里，不是译文库）
 
-新建术语记得登记到 `games/<slug>/docs/glossary.json`，否则可能被后续润色改回别的译法。
+新建术语记得登记到 `games/<slug>/docs/glossary.json`，否则可能被后续润色改回别的译名。
+
+### `script-override` 方案怎么写译文
+
+不建译文库，直接改 `patch/game/` 下对应脚本里的字符串字面量。两件事必须做：
+
+**一、逐文件核对结构。** 字符串字面量的行号、列号、引号类型、是否三引号、语句关键字
+序列、把所有字符串遮蔽后的代码骨架，都要和原版一致，只允许字面量**内容**不同。
+写个脚本比手看可靠——`games/cosycafe-0142/tools/verify_patch.cjs` 是现成的例子。
+
+**二、写一个 `extra_checks` 挂上去。** 这一步不是可选的。共享的检查只看得出乱码、
+叠字、术语冲突，看不出一段脚本**被改坏**了。`script-override` 补丁的经典事故是按
+「文件 + 行号 + 列号」定位字面量回写，中文比英文短，同一行里靠后的字面量整体左移，
+再跑一次就写错位置——Cosy Cafe 的 `WeekDays` 就这样把星期四写成了星期三，
+没有任何通用 linter 能看出来，因为语法完全合法。
+
+```json
+"extra_checks": [["node", "tools/verify_patch.cjs"]]
+```
+
+`cwd` 是游戏目录。检查什么由你自己定：已知枚举的完整值、同一行里相邻中文字面量是否
+重复、关键变量的取值范围——凡是「结构合法但内容错了」的东西，都归它管。
+
+`check.py` 会自动跑 `extra_checks`，非零退出就算失败。
+
+### `coverage` 怎么填
+
+`script-override` 的覆盖率是从**英文原文**统计出来的玩家可见字面量数，不是从译文库
+统计的（那份库是从做完的中文脚本反向导出的副产品，拿它算覆盖率等于让补丁给自己判卷）。
+所以：
+
+- `total` = 提取阶段认定的全部玩家可见字面量
+- `translated` = 补丁里实际写了中文的条数
+- 两者相等才写 100%，并把统计口径写进 `game.json` 的 `_coverage_note`
+
+`check.py` 不会重算这两个数字，也不会因为它们不符而报错——它只负责把它们打印出来。
+**写错没人会发现**，所以数字要有出处。
 
 ## 4. 构建并校验
 
 ```bash
+# tl-blocks：从模板 + 译文库重建补丁
 python tools/build_tl.py --game <slug>
+
+# 两种方案都要跑
 python tools/check.py --game <slug>
 python tools/selftest.py --game <slug>
 ```
 
-`check.py` 要求未译条目为 0，这是硬性门槛。
+`tl-blocks` 的 `check.py` 要求未译条目为 0，这是硬性门槛。`script-override` 不查这一项
+（没有英文原文可比），改查乱码、重复空格、叠字、术语冲突、标签闭合、文件缺失，
+外加你的 `extra_checks`。
 
 ## 5. 写游戏自己的 README
 
@@ -163,6 +245,8 @@ python tools/games.py --readme
 
 ## 7. 验证
 
+`installer` 是 `py`：
+
 ```bash
 # 装到一份干净的游戏副本
 python tools/install.py "C:\Games\你的游戏" --game <slug>
@@ -171,6 +255,28 @@ python tools/install.py "C:\Games\你的游戏" --game <slug>
 python tools/uninstall.py "C:\Games\你的游戏" --game <slug>
 ```
 
+`installer` 是 `ps1`（`script-override` 必走这条）：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass `
+  -File games\<slug>\tools\install.ps1 "C:\Games\你的游戏"
+# 启动游戏，确认中文生效且没有 errors.txt
+# 再卸回来
+powershell -NoProfile -ExecutionPolicy Bypass `
+  -File games\<slug>\tools\uninstall.ps1 "C:\Games\你的游戏"
+```
+
+安装器必须做到三件事，缺一件就等于埋雷：
+
+- **先备份**每个会被覆盖的文件，且**只备份一次**（重复安装不能把玩家的备份冲掉）
+- **删除**失去源文件的陈旧 `.rpyc` / `.rpymc`。Ren'Py 优先加载字节码，留着旧的会让
+  中文静默失效，而且没有任何报错
+- 写一份 **manifest**（写了哪些文件、备份在哪），让 `uninstall.py` 能跨安装器还原。
+  两边对「原本就不存在的文件」必须用同一个约定——本仓库的约定是**不写 0 字节占位
+  文件**，而是让备份函数返回「原本不存在」
+
+备份目录记得**自底向上剪空目录**，否则卸载完会留一串空壳。
+
 最后对每个游戏跑一遍 `python tools/check.py --game <slug>`，确认仓库里所有游戏都还是干净的。
 
 ---
@@ -178,7 +284,31 @@ python tools/uninstall.py "C:\Games\你的游戏" --game <slug>
 ## 常见问题
 
 **装了补丁但游戏里还是英文**
-Ren'Py 优先加载 `.rpyc`。检查 `game/tl/schinese/` 里有没有残留的旧 `.rpyc`，`install.py` 会自动清理，但手动拷贝时容易漏。
+两种可能，先看是哪种：
+
+1. Ren'Py 优先加载 `.rpyc`。检查补丁目录里有没有失去 `.rpy` 源文件的残留字节码，
+   安装器会自动清理，手动拷贝时容易漏。
+2. **目录多了一层。** `script-override` 的补丁必须**原样**放进游戏的 `game/`：
+   `patch/game/gui.rpy` → `game/gui.rpy`，不是 `game/game/gui.rpy`。多一层 Ren'Py
+   **不报错**，只是不加载，玩家看到的就是一份原版英文游戏。这是本仓库曾经真实
+   发出去过的包级 bug，`package_release.py` 现在统一走 `games.patch_entries()`，
+   目的就是让这种错不可能再发生。
+
+**`build_tl.py` 报缺 `tl_template/`**
+`patch_layout` 声明错了。这个游戏没有翻译模板可编译，补丁应该是直接改写脚本做出来的
+（`script-override`），改 `game.json` 而不是去造一个模板。
+
+**`install.py` 提示这个游戏不该用它**
+`installer` 声明的是 `ps1`。它只会摆译文树、`shim` 和字体，顶不掉游戏自己的脚本，
+这类游戏在 `games/<slug>/tools/` 下自带安装器，照那个游戏的 `README.md` 走。
+
+**`check.py` 报术语冲突，但那句话没问题**
+`banned` 是**纯子串匹配**。一个同时也是普通中文词、或者另一个名字的一部分的写法，没法
+放进 `banned`——本仓库的三个游戏都踩过（`红` 出现在 272 行、`埃莉` 是 `埃莉森` 的
+前缀、`女校长` 是游戏自己对校长的称呼）。遇到这种就在 `glossary.json` 里写一条
+`_banned_is_a_blunt_substring_match` 说明它是靠注释钉住的，而不是靠禁用词。
+两个汉字的术语还会撞上叠字检查（`校长 长得` 读起来就是 `校长长`），这类写进
+`_doubling_exempt`。
 
 **中文显示成方块**
 `shadow` 策略下是 `font_shadow` 漏了某个字体文件名；`fallback` 策略下检查 `<shim>` 有没有

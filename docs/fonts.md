@@ -1,8 +1,20 @@
 # 字体 / Fonts
 
 中文字体**在仓库里**：每个游戏一份，放在 `games/<slug>/assets/fonts/`。安装补丁时它会
-被复制成游戏硬编码的那几个文件名放进 `game/fonts/`，玩家不需要自己找字体，也不需要
-往补丁里塞任何需要授权的东西。
+被复制成游戏要找的那个（或那几个）文件名放进 `game/fonts/`，玩家不需要自己找字体，
+也不需要往补丁里塞任何需要授权的东西。
+
+`game.json` 里有两个字段控制这件事，优先用新的那个：
+
+| 字段 | 含义 |
+|---|---|
+| `font_assets` | 一般形式：`[{"path": "assets/fonts/X.ttf", "names": ["X.ttf", "bold.ttf"]}, ...]`，一份文件可以写成多个游戏里会去找的名字 |
+| `font_asset` | 简写形式：一份字体，配 `patch_font` / `font_shadow` 决定落地的文件名 |
+| `font_license` | 字体授权声明，打包时以 `FONT-LICENSE.txt` 放进压缩包根目录 |
+| `font_credit` | 玩家 README 里显示的字体署名 |
+
+`tools/games.py` 的 `font_plan()` 是唯一的解释口：安装、打包、校验都走它。
+`font_assets` 里写的文件不存在时，打包直接报错——不会打出一个装上去没字体的包。
 
 ## 为什么必须换字体
 
@@ -16,16 +28,9 @@ Ren'Py 是按文件名找字体文件的，不是按字体内部的 family 名�
 的做法：一次盖住所有引用，完全不用改游戏脚本。少数游戏走默认字体、覆盖无效，改用
 `font_name_map` 注册回退字体，见下面「两种接入方式」。
 
-**具体是哪几个文件名取决于游戏**，记录在 `games/<slug>/game.json`：
-
-| 字段 | 含义 |
-|---|---|
-| `patch_font` | 补丁自造的名字，原版游戏里没有这个文件 |
-| `font_shadow` | 游戏自带的西文字体，会被覆盖 |
-| `font_asset` | 仓库里打包的那份字体 |
-| `font_license` | 字体授权声明，打包时以 `FONT-LICENSE.txt` 放进压缩包根目录 |
-| `font_credit` | 玩家 README 里显示的署名 |
-| `font_strategy` | `shadow`（默认，覆盖游戏自带字体文件）或 `fallback`（见下） |
+**具体是哪几个文件名取决于游戏**，记录在 `games/<slug>/game.json`：走 `shadow` 时列在
+`font_shadow`（游戏自带的西文字体，会被覆盖）里，补丁自己的名字是 `patch_font`。
+`font_strategy` 写 `shadow`（默认，覆盖游戏自带字体文件）还是 `fallback`（见下）。
 
 ## 两种接入方式
 
@@ -45,6 +50,11 @@ Ren'Py 是按文件名找字体文件的，不是按字体内部的 family 名�
 
 拉丁文继续由游戏原字体绘制，只有画不出的汉字和中文标点落到 MiSans。好处是包里只有
 一份字体（7.7 MB 而非 25.7 MB），且游戏自带的字体文件原封不动。
+
+Sinful Summer 和 Cosy Cafe 都走 `fallback`。Cosy Cafe 多带一份 `MiSans-Bold.ttf`：
+游戏里 `[b]` 加粗标签数为 0，但 `zz_zh_locale.rpy` 给粗体做了 FontGroup 回退，
+粗体得真的有字形可画才不算埋雷。两份字体各存一份，都不覆盖任何原文件——
+这正是 `font_assets` 要表达的事：一份文件，多个落地名字。
 
 选哪种，先看游戏脚本里 `{font=...}` 覆盖率：绝大多数文本走默认字体的用 `fallback`，
 真正写死字体文件的用 `shadow`。

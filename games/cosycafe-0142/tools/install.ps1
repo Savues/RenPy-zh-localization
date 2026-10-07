@@ -39,24 +39,33 @@ if (-not (Test-Path -LiteralPath (Join-Path $game "options.rpy")) -and
     Write-Error "no options.rpy in $game -- is this really the game directory?"
 }
 
+$manifest_ = Get-Content -LiteralPath (Join-Path $repoDir "game.json") -Raw -Encoding UTF8 | ConvertFrom-Json
+if ($manifest_.patch_layout -ne "script-override") {
+    Write-Error "game.json says patch_layout=$($manifest_.patch_layout); this installer only handles script-override."
+    exit 1
+}
+
 $backup = Join-Path $game ".zh_patch_backup"
 $patchGame = Join-Path $repoDir "patch\game"
-$shimSrc   = Join-Path $repoDir "patch\zz_zh_locale.rpy"
+$shimRel   = $manifest_.shim
+$shimSrc   = Join-Path $repoDir "patch\$shimRel"
 $fontSrc   = Join-Path $repoDir "assets\fonts"
+$touched   = New-Object System.Collections.Generic.List[string]
 
 function Backup-Once([string]$rel) {
     $src = Join-Path $game $rel
     $dst = Join-Path $backup $rel
     if (Test-Path -LiteralPath $dst) { return $false }   # first touch only
+    # Nothing to do when the file did not exist: tools/uninstall.py reads the
+    # absence of a backup entry as "the patch introduced this file, delete it
+    # again on uninstall". Leaving no placeholder keeps the backup directory
+    # free of empty scaffolding, same convention as install.py.
+    if (-not (Test-Path -LiteralPath $src)) { return $false }
     New-Item -ItemType Directory -Force -Path (Split-Path -Parent $dst) | Out-Null
-    if (Test-Path -LiteralPath $src) {
-        if ((Get-Item -LiteralPath $src).PSIsContainer) {
-            Copy-Item -LiteralPath $src -Destination $dst -Recurse -Force
-        } else {
-            Copy-Item -LiteralPath $src -Destination $dst -Force
-        }
+    if ((Get-Item -LiteralPath $src).PSIsContainer) {
+        Copy-Item -LiteralPath $src -Destination $dst -Recurse -Force
     } else {
-        New-Item -ItemType File -Force -Path $dst | Out-Null   # tombstone: did not exist
+        Copy-Item -LiteralPath $src -Destination $dst -Force
     }
     return $true
 }
@@ -71,24 +80,29 @@ Get-ChildItem -LiteralPath $patchGame -Recurse -File -Filter *.rpy | ForEach-Obj
     $dst = Join-Path $game $rel
     New-Item -ItemType Directory -Force -Path (Split-Path -Parent $dst) | Out-Null
     Copy-Item -LiteralPath $_.FullName -Destination $dst -Force
+    $touched.Add(($rel -replace '\\', '/'))
     $n++
 }
 Write-Host ("  scripts            {0,3} files" -f $n)
 
 # ---- 2) font shim ----------------------------------------------------------
-$shimRel = "zz_zh_locale.rpy"
 Backup-Once $shimRel | Out-Null
 Copy-Item -LiteralPath $shimSrc -Destination (Join-Path $game $shimRel) -Force
+$touched.Add($shimRel)
 Write-Host "  shim               $shimRel"
 
 # ---- 3) CJK font -----------------------------------------------------------
 $fonts = 0
-foreach ($f in @("MiSans-Regular.ttf", "MiSans-Bold.ttf")) {
-    $rel = "fonts/$f"
-    Backup-Once $rel | Out-Null
-    New-Item -ItemType Directory -Force -Path (Join-Path $game "fonts") | Out-Null
-    Copy-Item -LiteralPath (Join-Path $fontSrc $f) -Destination (Join-Path $game "fonts\$f") -Force
-    $fonts++
+foreach ($fa in $manifest_.font_assets) {
+    $srcFace = Join-Path $repoDir ($fa.path -replace '/', '\')
+    foreach ($name in $fa.names) {
+        $rel = "fonts/$name"
+        Backup-Once $rel | Out-Null
+        New-Item -ItemType Directory -Force -Path (Join-Path $game "fonts") | Out-Null
+        Copy-Item -LiteralPath $srcFace -Destination (Join-Path $game "fonts\$name") -Force
+        $touched.Add($rel)
+        $fonts++
+    }
 }
 Write-Host ("  fonts              {0,2} files" -f $fonts)
 
@@ -110,8 +124,16 @@ Get-ChildItem -LiteralPath $game -Recurse -File |
 Write-Host ("  removed bytecode   {0,3} .rpyc/.rpymc" -f $k)
 
 # ---- 5) record what we did -------------------------------------------------
-@{ version = 1; game = "cosycafe-0142"; scripts = $n; fonts = 2; shim = $shimRel } |
-    ConvertTo-Json | Set-Content -LiteralPath (Join-Path $backup "manifest.json") -Encoding UTF8
+# "files" is the same list tools/install.py v2 and tools/uninstall.py read, so
+# either installer can be undone with either uninstaller.
+@{
+    version = 2
+    game    = "cosycafe-0142"
+    lang    = $manifest_.language
+    scripts = $n
+    shim    = $shimRel
+    files   = @($touched | Sort-Object)
+} | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $backup "manifest.json") -Encoding UTF8
 
 Write-Host ""
 Write-Host "done. launch the game -- the Chinese scripts are compiled on first start."

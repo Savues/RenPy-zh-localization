@@ -5,17 +5,18 @@ Ren'Py 视觉小说 **Cosy Cafe 0.14.2** 的完整中文本地化。全部译文
 | 项目 | 数值 |
 |---|---|
 | 原引擎版本 | Ren'Py 8.3.2 (2024-09-09 build) |
+| 补丁方案 | 脚本覆盖（`patch_layout: script-override`） |
 | 可翻译字面量 | 32,639 |
 | 已翻译 | **32,639（100%）** |
 | `data/tl_trans.json` 去重条目 | 25,828 |
 | 替换的脚本文件 | 27 个 `.rpy`，42,845 行主剧情 |
 | 补丁体积 | 3.8 MB 脚本 + 15.3 MB 字体 |
 
-## 这个游戏为什么不用 translate 补丁
+## 这个游戏为什么用脚本覆盖
 
-仓库里另外两款游戏走的是 Ren'Py `translate` 块路线：`data/tl_trans.json` 存英文原文，
-`tools/build_tl.py` 生成 `game/tl/schinese/`。**Cosy Cafe 走不了这条路**，原因写在
-[docs/approach.md](docs/approach.md)，一句话版本：
+仓库里有两种打补丁的方式。Eden 和 Sinful Summer 走 Ren'Py 的 `translate` 块：
+`data/tl_trans.json` 存英文原文，`tools/build_tl.py` 生成 `game/tl/schinese/`。
+**这个游戏走不了那条**，原因写在 [docs/approach.md](docs/approach.md)，一句话版本：
 
 - 发行包**不带** `game/tl/` 翻译模板（只有 `game/tl/None/common.rpym`），没有模板就无法生成翻译块
 - 仓库的 `tools/install.py` 只能放三样东西：`game/tl/<lang>/`、`game/<shim>.rpy`、`game/fonts/*`，
@@ -24,7 +25,10 @@ Ren'Py 视觉小说 **Cosy Cafe 0.14.2** 的完整中文本地化。全部译文
 所以这个补丁直接用中文版 `.rpy` **整体替换**游戏自己的 27 个脚本。它是经过验证的方案：
 启动日志无 error、结构校验逐字节通过、实机运行确认。
 
-**因此安装请用 `tools/install.ps1`，不要用 `tools/install.py`。**
+两条路都是仓库认的方案，`game.json` 的 `patch_layout` 声明用哪条，工具链据此分支。
+
+**安装请用 `tools/install.ps1`。** 仓库的 `tools/install.py` 只会摆译文树、`shim`
+和字体，顶不掉游戏自己的脚本；对着这个游戏跑它会直接告诉你该用哪个安装器。
 
 ## 安装
 
@@ -98,10 +102,22 @@ MiSans 可商用，但字体文件本身没有书面再分发授权，这一点�
   以及同一行里相邻中文字面量是否重复，防的是早期按列号回写译文造成的错位。
   改完 `.rpy` 跑一遍：`node tools/verify_patch.cjs`
 
-有 8 条 `tl_trans.json` 的值和 key 完全相同，是**故意保留**的（平台名、游戏标题、
-RGB 取色器格式串、缩放系数），不是漏译。`tools/check.py` 的 `KEEP` 规则匹配不到它们，
-所以对本作跑 `check.py` 会报「未翻译」—— 这是预期行为，原因见 `docs/glossary.json`
-的 `_kept_verbatim_note`。
+### 校验查什么
+
+```bash
+node tools/verify_patch.cjs     # 已挂在 game.json 的 extra_checks 上
+python ../../tools/check.py --game cosycafe-0142
+python ../../tools/selftest.py --game cosycafe-0142
+```
+
+`check.py` 对这个游戏**不查译文库**：这里的 `data/tl_trans.json` 是从做完的中文脚本
+反向导出的副产品，拿它检查补丁等于让补丁给自己判卷。它查的是实际发出去的 28 个 `.rpy`
+（27 个替换脚本 + `zz_zh_locale.rpy`）——乱码、重复空格、叠字、术语冲突、标签闭合、
+文件缺失——然后跑 `extra_checks` 里的 `verify_patch.cjs`。覆盖率不重算，
+`game.json` 的 `coverage` 是断言。
+
+`tl_trans.json` 里有 7 条的值和 key 完全相同，是**故意保留**的（平台名、游戏标题、
+RGB 取色器格式串、缩放系数），登记在 `docs/glossary.json` 的 `_kept_verbatim` 里。
 
 ## 版权
 

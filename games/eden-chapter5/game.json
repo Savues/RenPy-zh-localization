@@ -5,6 +5,8 @@
   "renpy_version": "8.4.1",
   "language": "schinese",
   "language_name": "简体中文",
+  "patch_layout": "tl-blocks",
+  "installer": "py",
   "shim": "zz_zh_locale.rpy",
   "patch_font": "zh.ttf",
   "font_shadow": [

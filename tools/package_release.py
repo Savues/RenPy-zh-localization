@@ -13,12 +13,19 @@ What ships:
     README.md          player instructions (generated below)
     LICENSE            this repository's licence
     FONT-LICENSE.txt   attribution for the bundled CJK face
-    game/tl/<lang>/    the translated scripts
-    game/<shim>        language/hook script
-    game/fonts/*       the bundled face, under every filename the game asks
-                       for (patch_font plus font_shadow) -- the game hardcodes
-                       those names, and a Chinese face has to sit at those
+    game/<...>         the patch itself, laid out exactly as it has to sit in
+                       the game's own game/ directory
+    game/fonts/*       the bundled faces, each under every filename the game
+                       looks it up under -- a Chinese face has to sit at those
                        paths or the text renders as tofu
+
+The patch layout comes from game.json's patch_layout, because the two shapes
+are not interchangeable. "tl-blocks" puts generated translate blocks under
+game/tl/<lang>/. "script-override" replaces the game's own scripts instead, so
+patch/game/ mirrors the game's game/ directory and every file has to land one
+directory higher than "game/ + patch-relative path" would put it. A
+script-override patch packaged one directory too deep is silently ignored by
+Ren'Py: no error anywhere, just an untranslated game.
 
 The 1.2 MB English source database, the glossary and the build/verify tooling
 stay in the repository -- a player has no use for the original strings, and
@@ -43,20 +50,10 @@ import games  # noqa: E402
 # fixed one keeps rebuilds byte-identical.
 FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 
-SKIP = {"__pycache__", ".git", ".source.json"}
-
 
 def zip_name(slug, lang, version):
     return "%s-%s-patch-%s.zip" % (slug, lang, version)
 
-
-def font_names(manifest):
-    """Every filename the game will look the bundled face up under."""
-    names = [manifest.get("patch_font", "zh.ttf")]
-    for n in manifest.get("font_shadow", []):
-        if n not in names:
-            names.append(n)
-    return names
 
 
 # How the bundled face reaches the screen. A game that hardcodes font *files*
@@ -65,21 +62,45 @@ def font_names(manifest):
 # picks with "font_strategy"; absent means "shadow", which is what Eden wants.
 FONT_STRATEGY = {
     "shadow": {
-        "note": ("\u4e2d\u6587\u5b57\u4f53\u5df2\u7ecf\u5728\u5305\u91cc\u4e86\u3002\u6e38\u620f\u628a\u5b57\u4f53**\u6587\u4ef6\u540d**\u5199\u6b7b\u4e86"
-                 "\uff0c\u6240\u4ee5\u540c\u4e00\u4efd\u5b57\u4f53\u4f1a\u4ee5\u5b83\u8981\u7684\u6bcf\u4e2a\u6587\u4ef6\u540d\u5404\u5b58\u4e00\u4efd\u653e\u8fdb "
-                 "`game/fonts/`\uff0c\u6e38\u620f\u81ea\u5e26\u7684\u540c\u540d\u897f\u6587\u5b57\u4f53\u4f1a\u88ab\u66ff\u6362\u6389\u3002"),
-        "tree": "\u4e2d\u6587\u5b57\u4f53\uff08\u540c\u4e00\u4efd\u5b57\u4f53\u7684\u591a\u4e2a\u526f\u672c\uff09",
+        "note": ("中文字体已经在包里了。游戏把字体**文件名**写死了，"
+                 "所以同一份字体会以它要的每个文件名各存一份放进 "
+                 "`game/fonts/`\n（共 {n} 个文件），游戏自带的同名西文字体会被替换掉。"),
+        "tree": "中文字体（同一份字体的 {n} 个副本）",
     },
     "fallback": {
-        "note": ("\u4e2d\u6587\u5b57\u4f53\u5df2\u7ecf\u5728\u5305\u91cc\u4e86\uff0c\u53ea\u6709 `{{patchfont}}` \u4e00\u4efd\u3002"
-                 "\u672c\u8865\u4e01\u901a\u8fc7\n`renpy.config.font_name_map` \u628a\u5b83\u6ce8\u518c\u4e3a**\u56de\u9000**\u5b57\u4f53\uff1a"
-                 "\u6e38\u620f\u539f\u6709\u7684\u897f\u6587\u5b57\u4f53\u7167\u5e38\u7ed8\u5236\u82f1\u6587\uff0c\u53ea\u6709\u5b83\u753b\u4e0d\u51fa\u7684"
-                 "\u6c49\u5b57\u548c\u4e2d\u6587\u6807\u70b9\u624d\u4ea4\u7ed9\u4e2d\u6587\u5b57\u4f53\u3002\n"
-                 "\u6e38\u620f\u81ea\u5e26\u7684\u5b57\u4f53\u6587\u4ef6**\u4e0d\u4f1a**\u88ab\u66ff\u6362\u3002"),
-        "tree": "\u4e2d\u6587\u5b57\u4f53\uff08\u56de\u9000\u7528\uff0c\u6e38\u620f\u539f\u5b57\u4f53\u4fdd\u7559\uff09",
+        "note": ("中文字体已经在包里了，共 {n} 个字体文件。本补丁通过\n"
+                 "`renpy.config.font_name_map` 把它们注册为**回退**字体：游戏原有的"
+                 "西文字体照常绘制英文，\n只有它画不出的汉字和中文标点才交给中文字体。"
+                 "\n游戏自带的字体文件**不会**被替换。"),
+        "tree": "中文字体（回退用，游戏原字体保留）",
     },
 }
 
+
+def font_bits(manifest):
+    """-> (note, tree, trouble) rendered from the game's actual font plan.
+
+    The counts and names come from game.json rather than being written into
+    the prose, so adding a second face to a game does not leave the player
+    README claiming there is only one.
+    """
+    plan = games.font_plan(manifest)
+    names = [n for _, ns in plan for n in ns]
+    primary = names[0] if names else ""
+    style = FONT_STRATEGY[manifest.get("font_strategy", "shadow")]
+    trouble = (
+        "`game/fonts/` 没复制全。确认那 %d 个字体文件都在、大小一致（约 8 MB）。"
+        % len(names) if len(names) > 1 else
+        "`game/fonts/` 没复制全。确认 `%s` 在（约 7.7 MB）。"
+        "若仍显示方块，请检查 `%s` 是否放在游戏的 `game/` 目录下。"
+        % (primary, manifest["shim"]))
+    return (style["note"].format(n=len(names)),
+            style["tree"].format(n=len(names)),
+            trouble)
+
+
+def _tree_row(glyph, name, desc, col=36):
+    return "%s%s%s%s" % (glyph, name, " " * max(1, col - len(name)), desc)
 
 def collect(repo, slug, manifest, version, count):
     """-> [(arcname, source_path_or_None, bytes)] in a stable order."""
@@ -95,24 +116,76 @@ def collect(repo, slug, manifest, version, count):
         out.append(("FONT-LICENSE.txt",
                     games.path_of(repo, fl.replace("/", os.sep)), None))
 
-    patch_root = games.path_of(repo, "patch")
-    for dirpath, dirnames, filenames in os.walk(patch_root):
-        dirnames[:] = sorted(d for d in dirnames if d not in SKIP)
-        for fn in sorted(filenames):
-            if fn in SKIP or fn.endswith((".rpyc", ".rpymc", ".pyc")):
-                continue
-            src = os.path.join(dirpath, fn)
-            rel = os.path.relpath(src, patch_root).replace(os.sep, "/")
-            out.append(("game/" + rel, src, None))
+    # games.patch_entries() already returns paths relative to the game's own
+    # game/ directory, so the only thing left to do is prefix "game/".
+    for src, rel in games.patch_entries(repo, manifest):
+        out.append(("game/" + rel, src, None))
 
-    fa = manifest.get("font_asset")
-    if fa:
-        src = games.path_of(repo, fa.replace("/", os.sep))
-        for name in font_names(manifest):
+    for asset, names in games.font_plan(manifest):
+        src = games.path_of(repo, asset.replace("/", os.sep))
+        if not os.path.isfile(src):
+            raise SystemExit("%s: font asset %s is missing" % (slug, asset))
+        for name in names:
             out.append(("game/fonts/" + name, src, None))
 
     return sorted(out, key=lambda r: r[0])
 
+
+def layout_bits(manifest):
+    """-> the player-README fragments that differ between the patch layouts.
+
+    Keys come back as {{token}} strings so they can be merged straight into
+    render_readme's substitution table. Getting these wrong is not cosmetic:
+    the copy table *is* the install instruction, and it names real paths.
+    """
+    lang = manifest["language"]
+    shim = manifest["shim"]
+
+    if games.layout(manifest) == "script-override":
+        return {
+            "{{countlabel}}": "个玩家可见字面量",
+            "{{conflictfaq}}": (
+                "**启动时报 `Parsing the script failed` 或 "
+                "`The label X is defined twice`**\n"
+                "游戏里已经打过另一份汉化补丁，两套脚本同时躺在 `game/` 里。先卸载那一份，\n"
+                "或者在一份干净的原版上重新复制。本补丁整体替换脚本、不注册 translate 块，\n"
+                "所以冲突时报的不是 `A translation for \"X\" already exists`。"),
+            "{{copylist}}": (
+                "要复制的东西                        复制到哪里\n"
+                "game/ 里的全部内容                  <游戏目录>/game/"
+                "   （逐个覆盖同名文件）\n"
+                "game/fonts/*                        <游戏目录>/game/fonts/"),
+            "{{packtree}}": "\n".join((
+                _tree_row("    ├── ", "scripts/、gui.rpy 等",
+                          "chinese 脚本，覆盖游戏自带的同名文件"),
+                _tree_row("    ├── ", shim, "语言与字体补丁"),
+                _tree_row("    └── ", "fonts/", "{{fonttree}}"),
+            )),
+            "{{stalebytecode}}": ("删掉 `game/` 下与包内脚本同名的所有 `.rpyc` 再启动。"
+                                  "原版游戏不会有这个问题。"),
+        }
+
+    return {
+        "{{countlabel}}": "条",
+        "{{conflictfaq}}": (
+            "**启动时报 `A translation for \"X\" already exists`**\n"
+            "游戏里已经打过别的汉化补丁，两份翻译冲突。先卸载那个补丁，或者在一份干净的"
+            "原版\n上重新复制。"),
+        "{{copylist}}": (
+            "要复制的东西                        复制到哪里\n"
+            "game/tl/%s/%s<游戏目录>/game/tl/%s/\n"
+            "game/%s%s<游戏目录>/game/%s\n"
+            "game/fonts/*%s<游戏目录>/game/fonts/"
+            % (lang, " " * 21, lang, shim, " " * max(1, 26 - len(shim)), shim,
+               " " * 24)),
+        "{{packtree}}": "\n".join((
+            _tree_row("    ├── ", "tl/%s/" % lang, "translate 翻译块"),
+            _tree_row("    ├── ", shim, "语言与字体补丁"),
+            _tree_row("    └── ", "fonts/", "{{fonttree}}"),
+        )),
+        "{{stalebytecode}}": ("删掉 `game/tl/%s/` 里所有 `.rpyc` 再启动。"
+                              "原版游戏不会有这个问题。" % lang),
+    }
 
 def render_readme(manifest, slug, version, count):
     """Fill the player README from the manifest.
@@ -135,22 +208,16 @@ def render_readme(manifest, slug, version, count):
         "{{count}}": "{:,}".format(count),
     }
 
-    strategy = FONT_STRATEGY[manifest.get("font_strategy", "shadow")]
-    names = font_names(manifest)
-    patch_font = manifest.get("patch_font", "zh.ttf")
-    # {{fontnote}} embeds {{patchfont}}, and the loop below substitutes in
-    # insertion order, so the nested token has to come first.
+    names = [n for _, ns in games.font_plan(manifest) for n in ns]
+    note, tree, trouble = font_bits(manifest)
+    fields.update(layout_bits(manifest))
+    # {{fontnote}} and {{packtree}} embed {{fonttree}} / {{patchfont}}, and the
+    # loop below substitutes in insertion order, so those have to come first.
     fields.update({
-        "{{fontnote}}": strategy["note"],
-        "{{fonttree}}": strategy["tree"],
-        "{{fonttrouble}}": (
-            "`game/fonts/` 没复制全。确认那 %d 个字体文件都在、大小一致"
-            "（约 8 MB）。" % len(names)
-            if strategy is FONT_STRATEGY["shadow"] else
-            "`game/fonts/` 没复制全。确认 `%s` 在（约 7.7 MB）。"
-            "若仍显示方块，请检查 `%s` 是否放在游戏的 `game/` 目录下。"
-            % (patch_font, manifest["shim"])),
-        "{{patchfont}}": patch_font,
+        "{{fontnote}}": note,
+        "{{fonttree}}": tree,
+        "{{fonttrouble}}": trouble,
+        "{{patchfont}}": names[0] if names else "",
     })
     text = PLAYER_README
     for token, value in fields.items():
@@ -168,7 +235,7 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 | 原作 | {{author}} |
 | 引擎 | Ren'Py {{renpy}} |
 | 语言 | {{langname}}（启动时自动启用，不需要在设置里切换） |
-| 译文条目 | {{count}} 条，覆盖率 100%，没有未译条目 |
+| 译文 | {{count}} {{countlabel}}，覆盖率 100%，没有未译条目 |
 | 翻译方式 | 逐条人工翻译，没有使用任何机器翻译或在线翻译 API |
 | 中文字体 | {{fontcredit}}（已打包） |
 
@@ -184,10 +251,7 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
    选择**覆盖**
 
 ```
-要复制的东西                        复制到哪里
-game/tl/{{lang}}/        →      <游戏目录>/game/tl/{{lang}}/
-game/{{shim}}             →      <游戏目录>/game/{{shim}}
-game/fonts/*              →      <游戏目录>/game/fonts/
+{{copylist}}
 ```
 
 装完直接启动游戏，{{langname}}会自动启用。
@@ -200,14 +264,12 @@ game/fonts/*              →      <游戏目录>/game/fonts/
 
 **装完还是英文**
 游戏目录里残留了旧的 `.rpyc` 编译文件。Ren'Py 优先加载 `.rpyc`，旧的会盖过新脚本。
-删掉 `game/tl/{{lang}}/` 里所有 `.rpyc` 再启动。原版游戏不会有这个问题。
+{{stalebytecode}}
 
 **中文显示成方块**
 {{fonttrouble}}
 
-**启动时报 `A translation for "X" already exists`**
-游戏里已经打过别的汉化补丁，两份翻译冲突。先卸载那个补丁，或者在一份干净的原版
-上重新复制。
+{{conflictfaq}}
 
 **启动时报 `Could not find font`**
 `game/fonts/` 被删过或没复制全。把包里的 `game/fonts/` 整个再复制一次。
@@ -226,9 +288,7 @@ game/fonts/*              →      <游戏目录>/game/fonts/
 ├── LICENSE                汉化补丁的许可
 ├── FONT-LICENSE.txt       中文字体的版权声明
 └── game/                  ← 把这个文件夹里的内容复制到游戏的 game/ 里
-    ├── tl/{{lang}}/           翻译后的脚本
-    ├── {{shim}}               语言与字体补丁
-    └── fonts/                 {{fonttree}}
+{{packtree}}
 ```
 
 ## 版权与免责
@@ -250,8 +310,15 @@ def build(slug, version):
     slug = os.path.basename(repo)
     lang = manifest["language"]
 
-    db = games.path_of(repo, "data", "tl_trans.json")
-    count = len(json.load(open(db, encoding="utf-8"))) if os.path.isfile(db) else 0
+    # A script-override game has no build input to count: its data/tl_trans.json
+    # is reverse-derived from the finished scripts, so its size says nothing
+    # about the patch. game.json carries the real number instead.
+    cov = manifest.get("coverage")
+    if cov:
+        count = int(cov["translated"])
+    else:
+        db = games.path_of(repo, "data", "tl_trans.json")
+        count = len(json.load(open(db, encoding="utf-8"))) if os.path.isfile(db) else 0
 
     entries = collect(repo, slug, manifest, version, count)
 

@@ -93,36 +93,189 @@ def translations(game_dir):
         return json.load(f)
 
 
+def glossary(game_dir):
+    """-> the parsed docs/glossary.json, or {} when the game has none."""
+    path = path_of(game_dir, "docs", "glossary.json")
+    if not os.path.isfile(path):
+        return {}
+    with io.open(path, encoding="utf-8-sig") as f:
+        return json.load(f)
+
+
+def _list_section(game_dir, key):
+    """-> the strings in one _-prefixed list section of the glossary."""
+    v = glossary(game_dir).get(key)
+    return [x for x in v if isinstance(x, str)] if isinstance(v, list) else []
+
+
+def kept_verbatim(game_dir):
+    """-> strings this game keeps in English on purpose.
+
+    Per game, because the reason is per game: Eden keeps its supporter
+    credits, Sinful Summer keeps its key hints, Cosy Cafe keeps its RGB
+    picker format strings. A shared table used to hold all of them at once and
+    each game's oddities counted as the other two games' prose.
+    """
+    return _list_section(game_dir, "_kept_verbatim")
+
+
+def doubling_exempt(game_dir):
+    """-> canonical terms whose "<term><last char>" shape is ordinary prose.
+
+    「校长 长得」reads as 校长长, 「把莎拉拉近一点」is 莎拉 + 拉近. The game
+    names those; the checker does not try to tell them apart on its own.
+    """
+    return _list_section(game_dir, "_doubling_exempt")
+
+
+# ---------------------------------------------------------------------------
+# How a game gets patched. The two shapes that exist in the wild are not
+# interchangeable, so game.json declares which one it is and the tools branch
+# on it instead of guessing from whatever happens to be under patch/.
+#
+#   tl-blocks       the stock route. patch/tl/<lang>/ holds generated
+#                   `translate` blocks, and data/tl_trans.json is the input
+#                   build_tl.py consumes.
+#   script-override the game ships no translation templates, so the patch
+#                   replaces the game's own scripts instead. patch/game/
+#                   mirrors the game's game/ directory, and any
+#                   data/tl_trans.json is a by-product of the finished scripts
+#                   rather than something anything builds from.
+#
+# "installer" says which installer the docs should send people to. The shared
+# tools/install.py only knows how to place a tl tree, a shim and fonts; a
+# script-override game needs its own installer next to its patch.
+# ---------------------------------------------------------------------------
+LAYOUTS = ("tl-blocks", "script-override")
+
+# How each one is described in the README table. Both exist on purpose and
+# neither is the default to steer people towards.
+SHAPE_LABEL = {"tl-blocks": "translate 块",
+               "script-override": "脚本覆盖"}
+
+
+def layout(manifest):
+    """-> 'tl-blocks' or 'script-override'. Exits on anything undeclared."""
+    v = manifest.get("patch_layout", "tl-blocks")
+    if v not in LAYOUTS:
+        sys.exit("%s: patch_layout must be one of %s, not %r"
+                 % (manifest.get("slug", "?"), ", ".join(LAYOUTS), v))
+    return v
+
+
+def installer(manifest):
+    """-> 'py' (the shared tools/install.py) or 'ps1' (a game-local one)."""
+    return manifest.get("installer", "py")
+
+
+def font_plan(manifest):
+    """-> [(repo-relative asset path, [filenames to write it under)].
+
+    font_assets is the general form: one entry per face, each naming every
+    filename the game looks that face up under. The older font_asset +
+    patch_font + font_shadow triple says the same thing for the common case of
+    one face that has to be shadowed under several names, and still works.
+    """
+    rich = manifest.get("font_assets")
+    if rich:
+        return [(a["path"], list(a["names"])) for a in rich]
+    asset = manifest.get("font_asset")
+    if not asset:
+        return []
+    names = [manifest.get("patch_font", "zh.ttf")]
+    for n in manifest.get("font_shadow", []):
+        if n not in names:
+            names.append(n)
+    return [(asset, names)]
+
+
+SKIP_SUFFIX = (".rpyc", ".rpymc", ".rpyb", ".pyc")
+
+
+def patch_entries(repo, manifest):
+    """-> [(absolute source path, path relative to the game's game/ dir)].
+
+    The second element is always game-relative, so packaging only has to
+    prefix "game/" and both layouts land in the right place. Getting this
+    wrong is not cosmetic: a script-override patch one directory too deep is
+    silently ignored by Ren'Py, and the player just gets the untranslated game
+    with no error anywhere.
+    """
+    patch_root = path_of(repo, "patch")
+    lang = manifest["language"]
+    out = []
+
+    # The shim always sits at patch/<shim> and lands at the game root.
+    shim = manifest["shim"]
+    shim_src = path_of(patch_root, shim)
+    if os.path.isfile(shim_src):
+        out.append((shim_src, shim))
+
+    if layout(manifest) == "script-override":
+        # patch/game/ *is* the game's own game/ directory, contents and all.
+        sub = path_of(patch_root, "game")
+        prefix = ""
+    else:
+        sub = path_of(patch_root, "tl", lang)
+        prefix = "tl/%s/" % lang
+
+    for dirpath, dirnames, filenames in os.walk(sub):
+        dirnames[:] = sorted(d for d in dirnames
+                             if d not in ("__pycache__", ".git"))
+        for fn in sorted(filenames):
+            if fn.startswith(".") or fn.endswith(SKIP_SUFFIX):
+                continue
+            src = os.path.join(dirpath, fn)
+            rel = os.path.relpath(src, sub).replace(os.sep, "/")
+            out.append((src, prefix + rel))
+
+    return sorted(out, key=lambda e: e[1])
+
+
 def row(slug):
     """-> one markdown row describing games/<slug> for the root README."""
     game, m = manifest(slug)
-    tr = translations(game)
-    # Imported here rather than at module level: check.py imports games, so a
-    # top-level import would be circular. Only this one test needs it, and it
-    # has to be check.py's own test -- a second copy of KEEP/KEEP_EXACT here
-    # would drift and quietly start calling finished translations untranslated.
-    import check
-    left = sum(1 for k, v in tr.items() if not check.keep(k, v) and v == k)
-    # A game added before any translating has no database yet. Reporting that
+    shape = layout(m)
+    cov = m.get("coverage")
+    if cov:
+        # A game that does not build from a translation database cannot have
+        # its coverage derived from one. Counting a by-product dictionary
+        # reports a number with nothing to do with what actually ships -- and,
+        # worse, one that stays green no matter what is wrong with the patch.
+        total = int(cov["total"])
+        left = max(0, total - int(cov["translated"]))
+    else:
+        tr = translations(game)
+        # Imported here rather than at module level: check.py imports games, so
+        # a top-level import would be circular. Only this one test needs it, and
+        # it has to be check.py's own -- a second copy of KEEP/keep() here would
+        # drift, and a drifted copy does not stay harmless, it quietly starts
+        # calling finished translations untranslated.
+        import check
+        exact = kept_verbatim(game)
+        total = len(tr)
+        left = sum(1 for k, v in tr.items()
+                   if not check.keep(k, v, exact) and v == k)
+    # A game added before any translating has no numbers yet. Reporting that
     # as ✅ 100% would be a lie that also passes check_links.py.
-    if not tr:
-        state = "🚧 待翻译"
+    if not total:
+        state = "\U0001f6a7 待翻译"
     elif left:
         state = "⚠️ %d 条未译" % left
     else:
         state = "✅ 100%"
-    return "| [%s](games/%s/) | %s | %s | %s | %s 条 |" % (
+    return "| [%s](games/%s/) | %s | %s | %s | %s | %s 条 |" % (
         m["title"], slug, m["author"], m["language_name"],
-        state, "{:,}".format(len(tr)))
+        SHAPE_LABEL[shape], state, "{:,}".format(total))
 
 
 def table():
     """-> the markdown block that belongs between the README's markers."""
     return "\n".join(
-        ["| 游戏 | 原作 | 语言 | 状态 | 译文量 |",
-         "|---|---|---|---|---|"]
+        ["| 游戏 | 原作 | 语言 | 方案 | 状态 | 译文量 |",
+         "|---|---|---|---|---|---|"]
         + [row(s) for s in slugs()]
-        + ["| *（来加一个？）* | | | | |"])
+        + ["| *（来加一个？）* | | | | | |"])
 
 
 def splice(text, block):

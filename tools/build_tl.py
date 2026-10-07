@@ -41,6 +41,14 @@ def main(argv):
     trans = games.path_of(game, "data", "tl_trans.json")
 
     if not os.path.isdir(template):
+        if games.layout(manifest) != "tl-blocks":
+            sys.exit(
+                "%s is patched by script override (patch_layout=script-override).\n"
+                "  patch/ already holds the finished scripts, so there is nothing\n"
+                "  to compile. Run:\n"
+                "    python tools/check.py --game %s\n"
+                "  See docs/adding-a-game.md."
+                % (manifest["title"], manifest["slug"]))
         sys.exit("%s is missing -- run: python tools/template.py <renpy-game-dir>"
                  " --game %s" % (template, manifest["slug"]))
 

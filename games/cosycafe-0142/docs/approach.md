@@ -1,7 +1,8 @@
 # 为什么 Cosy Cafe 不用 translate 补丁
 
-仓库另外两款游戏（Eden Chapter 5、Sinful Summer 3.6）走标准的 Ren'Py 翻译块路线。
-本作偏离了，原因是硬约束，不是偏好。
+仓库里有两种打补丁的方式。Eden Chapter 5 和 Sinful Summer 3.6 用 Ren'Py 的
+`translate` 块，本作用脚本覆盖。两条都是仓库认的方案，`game.json` 的
+`patch_layout` 声明用哪条——选这条的原因是硬约束，不是偏好。
 
 ## translate 路线的前提
 
@@ -40,6 +41,29 @@ identifier = self.unique_identifier(self.label, digest)
 替换过程做过严格的结构校验：逐文件比对替换前后，字符串字面量的**行号、列号、引号类型、
 是否三引号**完全一致，语句关键字序列一致，把所有字符串遮蔽后的代码骨架逐行一致 ——
 27 个文件、40,895 个字符串字面量全部通过，只允许字面量**内容**不同。
+
+## 校验为什么查不到覆盖率
+
+`data/tl_trans.json` 是从最终 `.rpy` **反向**导出的：它是成品脚本的副产品，
+不是构建输入。拿它算覆盖率，等于让补丁给自己判卷——它会忠实地把脚本里的任何错误
+一并记进去，然后报告一个漂亮的 100%。
+
+所以覆盖率写在 `game.json` 的 `coverage` 里，**是断言不是推导**：
+
+```json
+"coverage": { "translated": 32639, "total": 32639 }
+```
+
+数字来自提取阶段对英文原文的统计，口径记在同一文件 `_coverage_note`。
+`check.py` 只负责把它打印出来，不会重算，也不会因为对不上而报错。
+
+本游戏真正需要验的东西——结构合法但内容错了——挂在 `extra_checks` 上：
+
+```json
+"extra_checks": [["node", "tools/verify_patch.cjs"]]
+```
+
+`check.py` 每次都会跑它，非零退出就算失败。
 
 ## 已知的坑
 

@@ -5,15 +5,22 @@
   "renpy_version": "8.3.2",
   "language": "schinese",
   "language_name": "简体中文",
+
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "coverage": { "translated": 32639, "total": 32639 },
+  "extra_checks": [["node", "tools/verify_patch.cjs"]],
+
   "shim": "zz_zh_locale.rpy",
-  "patch_font": "MiSans-Regular.ttf",
-  "font_strategy": "shadow",
-  "font_shadow": [],
-  "font_asset": "assets/fonts/MiSans-Regular.ttf",
+  "font_strategy": "fallback",
+  "font_assets": [
+    { "path": "assets/fonts/MiSans-Regular.ttf", "names": ["MiSans-Regular.ttf"] },
+    { "path": "assets/fonts/MiSans-Bold.ttf", "names": ["MiSans-Bold.ttf"] }
+  ],
   "font_license": "assets/fonts/LICENSE-MiSans.txt",
   "font_credit": "MiSans (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd.",
 
-  "_approach": "script-override",
-  "_coverage_note": "32,639 player-visible literals, 100% translated. No <b> tags anywhere in the game, so MiSans-Bold.ttf ships unused.",
-  "_why_not_tl_blocks": "See docs/approach.md. This game ships no game/tl/<lang>/ templates, and tools/install.py can only place a translation-patch game/tl/<lang>/ tree plus a shim. Cosy Cafe instead replaces 27 of its own .rpy files wholesale, so it is installed with tools/install.ps1 rather than tools/install.py."
+  "_why_script_override": "This game ships no game/tl/<lang>/ templates -- only game/tl/None/common.rpym -- so build_tl.py has nothing to compile and tools/install.py has nothing to place. The patch replaces 27 of the game's own .rpy files outright; patch/game/ mirrors the game's game/ directory. See docs/approach.md.",
+  "_why_ps1": "tools/install.py only knows how to place a translation tree, a shim and fonts. This game needs a script-override installer, so it ships its own next to the patch.",
+  "_coverage_note": "32,639 player-visible literals, 100% translated. Counted from the game's English scripts, not from data/tl_trans.json -- that file is reverse-derived from the finished Chinese .rpy and is not a build input, so it cannot report coverage. No <b> tags anywhere in the game, so MiSans-Bold.ttf is only reached through zz_zh_locale.rpy's bold fallback."
 }
