@@ -15,8 +15,9 @@ eden-chapter5/
 ├── game.json           本游戏的元数据（引擎版本、字体文件名、语言等）
 ├── data/tl_trans.json  译文数据库：以英文原文为 key
 ├── docs/
-│   ├── glossary.json       术语表，由 check.py 强制执行
-│   └── translation-log.md  本游戏的翻译档案：术语决策与修过的问题
+│   ├── glossary.json           术语表，由 check.py 强制执行
+│   ├── translation-log.md      翻译档案：术语决策与修过的问题
+│   └── translation-workflow.md 本次汉化的过程存档
 └── patch/              构建产物（已提交，可直接安装）
     ├── tl/schinese/       19 个翻译后的 .rpy
     └── zz_zh_locale.rpy   语言强制切换 + 字体覆盖 + 角色名映射
@@ -103,7 +104,8 @@ python tools/selftest.py                                 # 反向验证检查项
 存在（六位飞升者），中文必须统一，本作取 **天枢**。
 
 完整的术语决策、人名表、刻意不译的内容、以及最后一轮修过的 22 处问题，见
-[`docs/translation-log.md`](docs/translation-log.md)。
+[`docs/translation-log.md`](docs/translation-log.md)；这次汉化踩到的 Ren'Py 引擎的坑
+和校验器设计陷阱，见 [`docs/translation-workflow.md`](docs/translation-workflow.md)。
 
 ---
 

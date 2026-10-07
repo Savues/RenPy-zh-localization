@@ -1,10 +1,16 @@
-# 汉化工作流
+# 汉化工作流（本次记录）
 
-这份文档讲的是**跨游戏复用**的方法：Ren'Py 这套引擎本身的坑，以及校验器应该
-怎么设计才不会误报、漏报、或者干脆失效。
+**这是 Eden Chapter 5 这次汉化的过程存档**，目的只是记录当时是怎么做的、
+踩了哪些坑——不是给下一个项目当通用参考的。
 
-具体某个游戏的翻译档案（术语决策、修过的问题、最终数据）在它自己的目录下，
-例如 [`games/eden-chapter5/docs/translation-log.md`](../games/eden-chapter5/docs/translation-log.md)。
+内容分两块，读者按需取用：
+
+- **一、二节** —— Ren'Py 这套引擎本身的坑。换个游戏依然成立，值得先读。
+- **三、四节** —— 校验器的设计陷阱和几条经验。这些结论本身也来自这次翻译，
+  具体例子都取自本作。
+
+翻译内容本身的档案（术语决策、修过的问题、最终数据）在
+[`translation-log.md`](translation-log.md)。
 
 ---
 
@@ -206,6 +212,7 @@ shutil.copyfile(DB, BAK)   # ← 把已经被污染的 DB 覆盖掉了完好的�
 
 ## 相关文档
 
-- 新增一个游戏：[`adding-a-game.md`](adding-a-game.md)
-- 字体为什么不入库：[`fonts.md`](fonts.md)
-- 各游戏的翻译档案：见 `games/*/docs/translation-log.md`
+- 本游戏的翻译档案：[`translation-log.md`](translation-log.md)
+- 安装 / 卸载 / 重建步骤：[`../README.md`](../README.md)
+- 新增一个游戏：[`adding-a-game.md`](../../../docs/adding-a-game.md)
+- 字体为什么不入库：[`fonts.md`](../../../docs/fonts.md)

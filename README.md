@@ -25,8 +25,9 @@ RenPy-zh-localization/
 │       ├── game.json             元数据：引擎版本、语言、要覆盖的字体文件名
 │       ├── data/tl_trans.json    译文数据库（以英文原文为 key）
 │       ├── docs/
-│       │   ├── glossary.json         术语表，由 check.py 强制执行
-│       │   └── translation-log.md    这个游戏的翻译档案
+│       │   ├── glossary.json           术语表，由 check.py 强制执行
+│       │   ├── translation-log.md      翻译档案：术语决策与修过的问题
+│       │   └── translation-workflow.md 本次汉化的过程存档
 │       ├── patch/                构建产物，已提交，可直接安装
 │       │   ├── tl/schinese/         翻译后的 .rpy
 │       │   └── zz_zh_locale.rpy     语言与字体补丁
@@ -37,8 +38,7 @@ RenPy-zh-localization/
 │   ├── check.py    selftest.py      校验 / 反向验证校验
 │   ├── games.py                     按 slug 定位游戏目录
 │   └── tlparse.py                   Ren'Py 翻译模板解析器
-└── docs/
-    ├── translation-workflow.md  汉化流程 + Ren'Py 引擎的坑（必读）
+└── docs/                      跨游戏复用的说明
     ├── adding-a-game.md         怎么新增一个游戏的汉化
     └── fonts.md                 中文字体为什么不放进仓库
 ```
@@ -80,11 +80,14 @@ python tools/uninstall.py "C:\Games\Eden5-pc"
 | `python tools/games.py` | 列出仓库里的游戏 |
 | `python tools/check_links.py` | 检查文档之间的相对链接没断 |
 
-想了解整个流程、Ren'Py 引擎本身的坑，以及校验器是怎么被自己的误报逼出来的，
-看 [`docs/translation-workflow.md`](docs/translation-workflow.md)——那是跨游戏复用的
-方法论。某个游戏自己的术语决策、修过的问题和最终数据，在它目录下的
-`docs/translation-log.md` 里，比如
-[`games/eden-chapter5/docs/translation-log.md`](games/eden-chapter5/docs/translation-log.md)。
+某个游戏自己的档案都在它目录下的 `docs/` 里。以 Eden Chapter 5 为例：
+
+- [`translation-log.md`](games/eden-chapter5/docs/translation-log.md)——
+  术语决策、修过的问题、最终数据
+- [`translation-workflow.md`](games/eden-chapter5/docs/translation-workflow.md)——
+  这次汉化的过程存档，含 Ren'Py 引擎本身的坑
+
+跨游戏复用的通用说明在 [`docs/`](docs/)：怎么新增一个游戏、字体为什么不入库。
 
 改动译文后的标准流程：
 
@@ -129,8 +132,8 @@ python tools/build_tl.py && python tools/check.py && python tools/selftest.py
 
 ## 贡献翻译
 
-- 流程与引擎注意事项：[`docs/translation-workflow.md`](docs/translation-workflow.md)
-- 各游戏的翻译档案：`games/*/docs/translation-log.md`
+- 各游戏的翻译档案：`games/<slug>/docs/translation-log.md`（术语、修过的问题）
+- 各游戏的流程存档：`games/<slug>/docs/translation-workflow.md`（引擎的坑、校验器设计）
 - 新增一个游戏：[`docs/adding-a-game.md`](docs/adding-a-game.md)
 
 ### 推送凭据

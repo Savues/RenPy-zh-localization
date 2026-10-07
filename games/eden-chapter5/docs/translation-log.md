@@ -1,9 +1,10 @@
 # Eden Chapter 5 汉化记录
 
-这一份是**这个游戏**的翻译档案：做了什么、遇到什么、怎么定的。跨游戏复用的
-方法论（流程、Ren'Py 引擎的坑、校验器设计陷阱）在
-[`../../../docs/translation-workflow.md`](../../../docs/translation-workflow.md)；
-安装/卸载/重建步骤见[本目录的 README](../README.md)。
+这一份是**这个游戏**的翻译档案：做了什么、遇到什么、怎么定的。
+
+同目录下的 [`translation-workflow.md`](translation-workflow.md) 记的是这次汉化的
+**过程**（引擎的坑、校验器设计陷阱）；安装/卸载/重建步骤见
+[本目录的 README](../README.md)。
 
 ---
 
