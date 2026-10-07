@@ -1,0 +1,116 @@
+{
+  "_comment": "Canonical Chinese renderings. check.py fails if a banned variant appears anywhere in data/tl_trans.json. Add a term here the moment you settle on a wording, so the choice sticks.",
+  "characters": {
+    "Lyna": {
+      "zh": "莱娜",
+      "nick": "小莱娜",
+      "banned": [
+        "琳娜",
+        "莉娜",
+        "丽娜",
+        "莱纳"
+      ]
+    },
+    "Erik": {
+      "zh": "埃里克",
+      "nick": null,
+      "banned": [
+        "艾里克",
+        "埃力克",
+        "艾伦"
+      ]
+    },
+    "Helga": {
+      "zh": "赫尔加",
+      "nick": null,
+      "banned": [
+        "赫尔伽",
+        "荷尔加",
+        "海尔加"
+      ]
+    },
+    "Johan": {
+      "zh": "约翰",
+      "nick": null,
+      "banned": [
+        "约翰逊",
+        "乔汉"
+      ]
+    },
+    "Anna": {
+      "zh": "安娜",
+      "nick": null,
+      "banned": [
+        "安那",
+        "安妮"
+      ]
+    },
+    "Juliette": {
+      "zh": "朱丽叶特",
+      "nick": null,
+      "banned": [
+        "朱丽叶",
+        "茱丽叶特"
+      ]
+    }
+  },
+  "terms": {
+    "MILF": {
+      "zh": "熟女",
+      "banned": [
+        "人妻",
+        "熟女少妇"
+      ]
+    },
+    "incest": {
+      "zh": "乱伦",
+      "banned": [
+        "乱伦罪"
+      ]
+    },
+    "Mom": {
+      "zh": "妈妈",
+      "banned": [
+        "母亲大人"
+      ]
+    },
+    "Dad": {
+      "zh": "爸爸",
+      "banned": [
+        "父亲大人"
+      ]
+    },
+    "twin": {
+      "zh": "双胞胎",
+      "banned": [
+        "双胞胎姊妹",
+        "双胞胎姐妹"
+      ]
+    },
+    "sister": {
+      "zh": "妹妹",
+      "banned": [
+        "小姐姐",
+        "小妹"
+      ]
+    },
+    "pussy": {
+      "zh": "骚穴",
+      "banned": [
+        "骚货穴"
+      ]
+    },
+    "tits": {
+      "zh": "奶子",
+      "banned": [
+        "奶罩"
+      ]
+    },
+    "dick": {
+      "zh": "鸡巴",
+      "banned": [
+        "鸡吧"
+      ]
+    }
+  }
+}

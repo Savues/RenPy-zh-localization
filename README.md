@@ -9,6 +9,7 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 | 游戏 | 原作 | 语言 | 状态 | 译文量 |
 |---|---|---|---|---|
 | [Eden Chapter 5](games/eden-chapter5/) | FnB Productions | 简体中文 | ✅ 100% | 15,713 条 |
+| [Sinful Summer Chapter 3.6](games/sinfulsummer-chapter36/) | Ruykiru | 简体中文 | ✅ 100% | 22,430 条 |
 | *（来加一个？）* | | | | |
 
 > 覆盖率 = 已译条目 ÷ 全部可译条目。`check.py` 会强制要求 100%，未译条目直接报错。
@@ -142,8 +143,13 @@ python tools/build_tl.py && python tools/check.py && python tools/selftest.py
 ## 字体
 
 中文字体打包进补丁里，玩家解压就能用，不用自己去装字体。游戏按**文件名**硬编码字体，
-所以同一份字体会以游戏要的每个文件名各存一份放进 `game/fonts/`——Eden Chapter 5 用
-的是 MiSans，一个游戏 5 份约 25.7 MB，这是 Release 体积的主要来源。
+两个游戏都用 MiSans，但生效方式不同，因为它们对字体的要求不同：
+
+- **Eden Chapter 5** 把中文字体以游戏硬编码的每个文件名各存一份，覆盖原有的西文字体——
+  一个游戏 5 份约 25.7 MB，这是 Release 体积的主要来源。
+- **Sinful Summer Chapter 3.6** 只放**一份** MiSans（约 7.7 MB），由 `zz_zh_locale.rpy` 注册到
+  `renpy.config.font_name_map`。原作为 `FontGroup`：游戏原字体绘它有字形的部分，MiSans 给中文。
+  中文能正常显示，拉丁文又保留了原来的字体外观——这是覆盖字体文件做不到的。
 
 字体机制、怎么换一款、以及 MiSans 的再分发授权情况，详见 [`docs/fonts.md`](docs/fonts.md)。
 

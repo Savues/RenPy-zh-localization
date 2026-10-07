@@ -11,8 +11,12 @@ becomes 12 columns of Chinese without any risk of overflow. What would
 actually break a line is a translation that outgrows the box, so that is what
 gets flagged:
 
-  * short source -> translation wider than ABS_MAX columns
+  * translation both wider than ABS_MAX columns AND wider than its source
   * medium source -> translation more than REL_MAX times wider
+
+The first rule only fires on growth: a Chinese line of 138 columns is 69
+ideographs, which fits. If the English line it replaces already rendered at
+194 columns, the shorter Chinese is not an overflow.
 
 Two kinds of source are exempt: long-form prose (>= PROSE_MIN columns, i.e.
 Codex entries that live in a scrollable pane) and anything carrying an explicit
@@ -56,6 +60,10 @@ KEEP_EXACT = {
     "Simon M\u00e4gi", "Chris Baylock", "frodo gamgee", "26TriAxis",
     "Kevin F\u00f6rster", "Pickle (Great hair mods btw!)",
     "Hesby's femboy factory",
+    # Sinful Summer: UI key hints and platform names kept in English on purpose
+    "{b}Discord", "{b}SubscribeStar", "{b}Unifans",
+    "{size=-8}{color=#ccfdff}Ctrl / Tab",
+    "<", ">", "H", "S", "V",
 }
 
 # Shapes that must survive verbatim even though they look translatable.
@@ -111,8 +119,14 @@ def check_glossary(tr, glossary):
         for en, spec in terms.items():
             canonical = spec["zh"]
             for variant in spec.get("banned", []):
-                hits = [k for k, v in tr.items()
-                        if variant in str(v).replace(canonical, "")]
+                # Strip the canonical first so that its own occurrences do not
+                # count -- but only when the variant does not build on it, or
+                # "熟女少妇" would be reduced to "少妇" and never match.
+                if canonical in variant:
+                    hits = [k for k, v in tr.items() if variant in str(v)]
+                else:
+                    hits = [k for k, v in tr.items()
+                            if variant in str(v).replace(canonical, "")]
                 if hits:
                     bad("%s: %r should be %r, found %r in %d entry/entries "
                         "(e.g. %r)"
@@ -180,7 +194,7 @@ def main(argv):
         if not CJK.search(str(v)) or exempt(k):
             continue
         wk, wv = width(k), width(v)
-        if wv > ABS_MAX:
+        if wv > ABS_MAX and wv > wk:
             overflow.append((k, v))
         elif wk >= 12 and wv > wk * REL_MAX:
             stretched.append((k, v))

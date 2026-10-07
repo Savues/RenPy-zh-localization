@@ -1,0 +1,10 @@
+MiSans Regular
+Copyright (c) 2020-2021 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved.
+Upstream: https://hyperos.mi.com/font/
+
+Shipped unmodified, under the single filename MiSans-Regular.ttf, which
+zz_zh_locale.rpy registers in renpy.config.font_name_map as the fallback for
+every code point range the game's own Latin-only fonts cannot draw.
+
+MiSans is marketed by Xiaomi as free for commercial use. This file records
+attribution only.
