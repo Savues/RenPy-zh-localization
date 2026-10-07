@@ -57,7 +57,10 @@ identifier = self.unique_identifier(self.label, digest)
 ```
 
 **改动本补丁时务必用行内序号或字符串内容对齐，不要用列号。**
-本仓库 `data/tl_trans.json` 是从最终 `.rpy` 反向导出的，已经避开了这个问题。
+
+注意 `data/tl_trans.json` 是从最终 `.rpy` **反向**导出的，位置信息在那里已经丢失，
+所以它会忠实地把错误一并记下来 —— 当初 `"Thursday": "星期三"` 就是这样被带进去的。
+改完 `.rpy` 记得同步改这个文件。
 
 ### 提取器会漏
 
@@ -65,9 +68,21 @@ identifier = self.unique_identifier(self.label, digest)
 `gallery_pax.rpy` 的场景列表、`flags.rpy` 的 `default` 列表、`define X = Character("名字")`。
 这些是后期手工补的，共约 100 处。
 
-### 已知的翻译错误（尚未修）
+### 已修：WeekDays 星期四缺失
 
-上面那个 `flags.rpy` 的 `WeekDays` 星期四缺失，**在当前已安装的游戏里仍然存在**。
-修它需要按行内序号重新对齐 `data/tl_trans.json` 与 `patch/game/scripts/flags.rpy`。
-其余 32,637 条经往返验证未受影响（还原英文 → 重打译文 → 逐字节比对，24/27 文件完全一致，
-另 3 个文件的差异已定位为该 bug 与两条含半角引号的译文）。
+`scripts/flags.rpy` 的 `WeekDays[3]` 曾被写成「星期三」。第 6 / 13 / 20 / 27 天都是
+`CurrentWeekDay = 3`，于是 HUD（`screens.rpy:2234`）和章节标题（`functions.rpy:127`）
+把星期四显示成了星期三。
+
+修复范围：`patch/game/scripts/flags.rpy` 与 `data/tl_trans.json` 各一处。
+
+全量复查以提取阶段的英文清单（`file#line:col` → 英文原文）为基准，逐文件自动求出行偏移后
+再与译文映射表对账：**32,639 条字面量全部命中，32,637 条内容一致**。剩下 2 条是
+`Wong's` → `Wong’s` 的弯引号，两处写法一致，属排版选择而非错位。
+
+为防复发，`tools/verify_patch.cjs` 查两件事：已知枚举（`WeekDays` / `Time`）的完整值，
+以及同一行里相邻中文字面量是否重复。它不依赖英文原文，改完补丁跑一遍即可：
+
+```
+node games/cosycafe-0142/tools/verify_patch.cjs
+```

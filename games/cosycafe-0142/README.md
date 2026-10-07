@@ -94,6 +94,9 @@ MiSans 可商用，但字体文件本身没有书面再分发授权，这一点�
 - `docs/glossary.json` —— 角色名与专有名词表，钉死译名防止后续润色改口
 - `docs/translation-log.md` —— 分批翻译记录
 - [docs/approach.md](docs/approach.md) —— 为什么这个游戏偏离仓库标准做法
+- `tools/verify_patch.cjs` —— 补丁结构自检。查已知枚举（`WeekDays` / `Time`）的完整值，
+  以及同一行里相邻中文字面量是否重复，防的是早期按列号回写译文造成的错位。
+  改完 `.rpy` 跑一遍：`node tools/verify_patch.cjs`
 
 有 8 条 `tl_trans.json` 的值和 key 完全相同，是**故意保留**的（平台名、游戏标题、
 RGB 取色器格式串、缩放系数），不是漏译。`tools/check.py` 的 `KEEP` 规则匹配不到它们，

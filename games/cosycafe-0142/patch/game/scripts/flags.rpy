@@ -13,7 +13,7 @@ label variables:
     default Year = 1
 
     # Day of the week
-    default WeekDays = ["星期一", "星期二", "星期三", "星期三", "星期五", "星期六", "星期日"]
+    default WeekDays = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
     default CurrentWeekDay = 5
     default WeekDayOutput = WeekDays[CurrentWeekDay]
 
