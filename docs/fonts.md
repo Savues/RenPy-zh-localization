@@ -26,7 +26,7 @@
 把字体文件放到 `fonts/zh.ttf`，或者安装时直接指定：
 
 ```bash
-python tools/install.py "C:\Games\Eden-Chapter5-pc" --font "/path/to/YourFont.ttf"
+python tools/install.py "<游戏目录>" --game <slug> --font "/path/to/YourFont.ttf"
 ```
 
 注意：放进 `fonts/` 的文件不会被提交（见 `.gitignore`），因为**你需要自己确认
@@ -35,14 +35,19 @@ python tools/install.py "C:\Games\Eden-Chapter5-pc" --font "/path/to/YourFont.tt
 
 ## 为什么是覆盖文件名，而不是改配置
 
-游戏脚本里到处硬编码了字体**文件名**：
+游戏脚本里到处硬编码了字体**文件名**——对话框正文、标题、数值、强调，各用一个。
+它们同时出现在 `{font=...}` 标签、界面样式表和 `gui.*_font` 设置里，有些还是
+运行时才拼出来的字符串。Ren'Py 虽然有 `config.font_replacement_map`，但逐个去覆盖
+磁盘上的同名文件，是唯一能一次覆盖所有引用、且**完全不需要改动游戏脚本**的做法。
+卸载脚本会把原文件从备份里还原回来。
 
-- `comfortaa.ttf` —— 对话框正文
-- `CinzelDecorative.ttf` —— 标题 / 词条名
-- `MichromaRegular.ttf` —— 数值与状态
-- `PacificoRegular.ttf` —— 强调
+**具体是哪些文件名，取决于游戏。** 每个游戏硬编码的字体名记录在
+`games/<slug>/game.json` 的 `font_shadow` 字段里。找出它们的方法：
 
-它们同时出现在 `{font=...}` 标签、界面样式表和 `gui.*_font` 设置里。Ren'Py 虽然
-有 `config.font_replacement_map`，但逐个去覆盖磁盘上的同名文件，是唯一能一次覆盖
-所有引用、且**完全不需要改动游戏脚本**的做法——包括那些游戏运行时才拼出来的
-`{font=...}` 标签。卸载脚本会把原文件从备份里还原回来。
+```bash
+grep -rn "font=" "<游戏目录>/game" --include=*.rpy
+grep -rn "_font *=" "<游戏目录>/game" --include=*.rpy
+```
+
+两条都要搜：第二条抓界面配置，第一条抓 `{font=...}` 标签里的运行时引用。
+漏掉任何一个，就会有一部分文字仍然显示成方块。

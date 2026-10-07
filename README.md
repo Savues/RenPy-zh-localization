@@ -24,7 +24,9 @@ RenPy-zh-localization/
 │       ├── README.md             该游戏的安装/卸载/重建说明
 │       ├── game.json             元数据：引擎版本、语言、要覆盖的字体文件名
 │       ├── data/tl_trans.json    译文数据库（以英文原文为 key）
-│       ├── docs/glossary.json    术语表，由 check.py 强制执行
+│       ├── docs/
+│       │   ├── glossary.json         术语表，由 check.py 强制执行
+│       │   └── translation-log.md    这个游戏的翻译档案
 │       ├── patch/                构建产物，已提交，可直接安装
 │       │   ├── tl/schinese/         翻译后的 .rpy
 │       │   └── zz_zh_locale.rpy     语言与字体补丁
@@ -79,7 +81,10 @@ python tools/uninstall.py "C:\Games\Eden5-pc"
 | `python tools/check_links.py` | 检查文档之间的相对链接没断 |
 
 想了解整个流程、Ren'Py 引擎本身的坑，以及校验器是怎么被自己的误报逼出来的，
-看 [`docs/translation-workflow.md`](docs/translation-workflow.md)。
+看 [`docs/translation-workflow.md`](docs/translation-workflow.md)——那是跨游戏复用的
+方法论。某个游戏自己的术语决策、修过的问题和最终数据，在它目录下的
+`docs/translation-log.md` 里，比如
+[`games/eden-chapter5/docs/translation-log.md`](games/eden-chapter5/docs/translation-log.md)。
 
 改动译文后的标准流程：
 
@@ -125,7 +130,7 @@ python tools/build_tl.py && python tools/check.py && python tools/selftest.py
 ## 贡献翻译
 
 - 流程与引擎注意事项：[`docs/translation-workflow.md`](docs/translation-workflow.md)
-- 术语约定：[Eden Chapter 5 的 README](games/eden-chapter5/README.md#术语表约定)
+- 各游戏的翻译档案：`games/*/docs/translation-log.md`
 - 新增一个游戏：[`docs/adding-a-game.md`](docs/adding-a-game.md)
 
 ### 推送凭据

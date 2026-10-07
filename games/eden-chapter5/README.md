@@ -14,7 +14,9 @@
 eden-chapter5/
 ├── game.json           本游戏的元数据（引擎版本、字体文件名、语言等）
 ├── data/tl_trans.json  译文数据库：以英文原文为 key
-├── docs/glossary.json  术语表，由 check.py 强制执行
+├── docs/
+│   ├── glossary.json       术语表，由 check.py 强制执行
+│   └── translation-log.md  本游戏的翻译档案：术语决策与修过的问题
 └── patch/              构建产物（已提交，可直接安装）
     ├── tl/schinese/       19 个翻译后的 .rpy
     └── zz_zh_locale.rpy   语言强制切换 + 字体覆盖 + 角色名映射
@@ -94,9 +96,14 @@ python tools/selftest.py                                 # 反向验证检查项
 
 ## 术语表约定
 
-`docs/glossary.json` 登记了本作专名和设定的中文写法，`check.py` 会强制执行。其中一条值得记下来：
+专名和设定的中文写法登记在 [`docs/glossary.json`](docs/glossary.json)，`check.py` 会
+强制执行——它登记的是**禁用译名**，而不只是正确译名，所以后续润色改回别的写法会被拦下。
 
-> 原脚本用 **Divinarch** 和 **Celestiarch** 两个不同的英文词指同一批存在（六位飞升者），例如 “There are far more Divinarchs than the Six.” 与 “There are six Celestiarchs”。中文必须统一，本作取 **天枢**。
+其中一条值得记下来：原脚本用 **Divinarch** 和 **Celestiarch** 两个不同的英文词指同一批
+存在（六位飞升者），中文必须统一，本作取 **天枢**。
+
+完整的术语决策、人名表、刻意不译的内容、以及最后一轮修过的 22 处问题，见
+[`docs/translation-log.md`](docs/translation-log.md)。
 
 ---
 
