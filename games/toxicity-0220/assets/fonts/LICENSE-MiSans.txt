@@ -24,9 +24,32 @@ and shipped unmodified, under three filenames:
                        without a new download; nothing references it while
                        _MS_STRONG points at Medium.
 
-MiSans-Regular.ttf is byte-identical to the copies bundled in
-games/cosycafe-0142/assets/fonts/ and games/eden-chapter5/assets/fonts/, so
-every game in this repository ships the same MiSans build.
+PROVENANCE OF THE THREE FILES
+-----------------------------
+MiSans-Regular.ttf here is byte-identical to the copies in this repository at
+games/cosycafe-0142/assets/fonts/, games/sinfulsummer-chapter36/assets/fonts/
+and games/scionsofthedivine-01/assets/fonts/ -- same 8,073,152 bytes, same
+SHA-256 -- so those packages ship the same MiSans build. MiSans-Bold.ttf is
+byte-identical to the copies in games/cosycafe-0142/assets/fonts/ and
+games/scionsofthedivine-01/assets/fonts/ (7,959,920 bytes).
+MiSans-Medium.ttf exists only in this package.
+
+An earlier version of this file claimed MiSans-Regular.ttf was "byte-identical
+to the copies bundled in games/cosycafe-0142/assets/fonts/ and
+games/eden-chapter5/assets/fonts/, so every game in this repository ships the
+same MiSans build". The Eden half of that was wrong, and has been corrected:
+
+  The file at games/eden-chapter5/assets/fonts/MiSans-Regular.ttf is a
+  different build -- 7,924,400 bytes, SHA-256 7172aa1b... -- not the
+  8,073,152-byte build shipped by the four packages above. Eden's own licence
+  records where it came from: a direct download of the single-file
+  MiSans-Regular.ttf (version 2.000) from Xiaomi's CDN, not the
+  MiSans_Global_ALL.zip archive recorded at the top of this file.
+
+The mistake is written down because the generalisation is easy to repeat. A
+hash match against another game's asset proves two files are the same bytes; it
+says nothing about the assets of a game that was never compared. Four matching
+packages and one different one is the actual shape of this repository.
 
 WHY A REPLACEMENT MAP INSTEAD OF OVERWRITING THE FONT FILE
 ---------------------------------------------------------
