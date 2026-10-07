@@ -261,12 +261,12 @@ screen dev_menu():
                                 unhovered SetScreenVariable("dev_scene_hovered", False)
                                 action NullAction()
                             textbutton ">" action SetScreenVariable("dev_scene_select", available_scenes[(available_scenes.index(dev_scene_select) + 1) % len(available_scenes)]) yalign 0.5
-                        textbutton "Jump" action [Stop("bgm"), Stop("sound"), Stop("bgs"), Hide('dev_menu'), Jump("c%dp%ds%d" % (dev_chapter_select, dev_part_select, dev_scene_select))] yalign 0.5
+                        textbutton "跳转" action [Stop("bgm"), Stop("sound"), Stop("bgs"), Hide('dev_menu'), Jump("c%dp%ds%d" % (dev_chapter_select, dev_part_select, dev_scene_select))] yalign 0.5
                     null width 25
                 vbox:
                     xsize 250
                     spacing -10
-                    label "Variables" text_size 16 xpos -3
+                    label "剧情开关" text_size 16 xpos -3
                     hbox:
                         text "莱拉的晚餐："size 14 outlines [(2, "#000000", 0, 0)] yalign 0.5
                         textbutton "[layldinner]" action SetVariable("layldinner", not layldinner) yalign 0.5
@@ -280,7 +280,7 @@ screen dev_menu():
                 vbox:
                     xsize 500
                     spacing -10
-                    label "Profiles" text_size 16
+                    label "档案" text_size 16
                     default dev_char_list = ["All"] + [c for c in chara.keys()]
                     default dev_char_select_idx = 0
                     $ dev_char_select = dev_char_list[dev_char_select_idx]
@@ -304,7 +304,7 @@ screen dev_menu():
                                     unhovered SetScreenVariable("dev_char_name_hovered", False)
                                     action NullAction()
                             else:
-                                textbutton "All":
+                                textbutton "全部":
                                     text_size 16
                                     xalign 0.5
                                     yalign 0.5
@@ -318,40 +318,40 @@ screen dev_menu():
                     null height 25
                     if dev_char_select == "All":
                         hbox:
-                            textbutton "Unlock" yalign 0.5 action Function(dev_unlock_all_profiles)
+                            textbutton "解锁" yalign 0.5 action Function(dev_unlock_all_profiles)
                             text "/"
-                            textbutton "Lock" yalign 0.5 action Function(dev_lock_profiles)
+                            textbutton "锁定" yalign 0.5 action Function(dev_lock_profiles)
                             text "全部档案"
                         hbox:
-                            textbutton "Unlock" yalign 0.5 action Function(dev_unlock_all_outfits)
+                            textbutton "解锁" yalign 0.5 action Function(dev_unlock_all_outfits)
                             text "/"
-                            textbutton "Lock" yalign 0.5 action Function(dev_lock_outfits)
+                            textbutton "锁定" yalign 0.5 action Function(dev_lock_outfits)
                             text "全部服装"
                         hbox:
-                            textbutton "Unlock" yalign 0.5 action Function(dev_unlock_all_memories)
+                            textbutton "解锁" yalign 0.5 action Function(dev_unlock_all_memories)
                             text "/"
-                            textbutton "Lock" yalign 0.5 action Function(dev_lock_memories)
+                            textbutton "锁定" yalign 0.5 action Function(dev_lock_memories)
                             text "全部回忆"
                         hbox:
-                            textbutton "Unlock" yalign 0.5 action Function(dev_unlock_all_database)
+                            textbutton "解锁" yalign 0.5 action Function(dev_unlock_all_database)
                             text "/"
-                            textbutton "Lock" yalign 0.5 action Function(dev_lock_profiles_database)
-                            text "Everything"
+                            textbutton "锁定" yalign 0.5 action Function(dev_lock_profiles_database)
+                            text "一切"
                     elif dev_char_select == "mc":
                         if "Outfits" in chara[dev_char_select].tags:
                             hbox:
-                                textbutton "Unlock" yalign 0.5 action Function(dev_unlock_outfits_for, dev_char_select)
+                                textbutton "解锁" yalign 0.5 action Function(dev_unlock_outfits_for, dev_char_select)
                                 text "/"
-                                textbutton "Lock" yalign 0.5 action Function(dev_lock_outfits_for, dev_char_select)
+                                textbutton "锁定" yalign 0.5 action Function(dev_lock_outfits_for, dev_char_select)
                                 text "全部服装"
                         if "Outfits" in chara[dev_char_select].tags and hasattr(chara[dev_char_select], "get_total_outfits"):
                             $ total_outfits = chara[dev_char_select].get_total_outfits()
                             if total_outfits > 0:
                                 hbox:
-                                    textbutton "Unlock" action Function(dev_unlock_outfit_for, dev_char_select, dev_outfit_select_idx) yalign 0.5
+                                    textbutton "解锁" action Function(dev_unlock_outfit_for, dev_char_select, dev_outfit_select_idx) yalign 0.5
                                     text "/"
-                                    textbutton "Lock" action Function(dev_lock_outfit_for, dev_char_select, dev_outfit_select_idx) yalign 0.5
-                                    text "Outfit"
+                                    textbutton "锁定" action Function(dev_lock_outfit_for, dev_char_select, dev_outfit_select_idx) yalign 0.5
+                                    text "服装"
                                     textbutton "<" action SetScreenVariable("dev_outfit_select_idx", max(1, dev_outfit_select_idx - 1)) yalign 0.5
                                     textbutton "[dev_outfit_select_idx]":
                                         text_size 14
@@ -404,24 +404,24 @@ screen dev_menu():
                             text " [chara[dev_char_select].karma]"
                     else:
                         hbox:
-                            textbutton "Unlock" yalign 0.5 action Function(dev_unlock_profile, dev_char_select)
+                            textbutton "解锁" yalign 0.5 action Function(dev_unlock_profile, dev_char_select)
                             text "/"
-                            textbutton "Lock" yalign 0.5 action Function(dev_lock_profile, dev_char_select)
-                            text "Profile"
+                            textbutton "锁定" yalign 0.5 action Function(dev_lock_profile, dev_char_select)
+                            text "档案"
                         if "Outfits" in chara[dev_char_select].tags:
                             hbox:
-                                textbutton "Unlock" yalign 0.5 action Function(dev_unlock_outfits_for, dev_char_select)
+                                textbutton "解锁" yalign 0.5 action Function(dev_unlock_outfits_for, dev_char_select)
                                 text "/"
-                                textbutton "Lock" yalign 0.5 action Function(dev_lock_outfits_for, dev_char_select)
+                                textbutton "锁定" yalign 0.5 action Function(dev_lock_outfits_for, dev_char_select)
                                 text "全部服装"
                         if "Outfits" in chara[dev_char_select].tags and hasattr(chara[dev_char_select], "get_total_outfits"):
                             $ total_outfits = chara[dev_char_select].get_total_outfits()
                             if total_outfits > 0:
                                 hbox:
-                                    textbutton "Unlock" action Function(dev_unlock_outfit_for, dev_char_select, dev_outfit_select_idx) yalign 0.5
+                                    textbutton "解锁" action Function(dev_unlock_outfit_for, dev_char_select, dev_outfit_select_idx) yalign 0.5
                                     text "/"
-                                    textbutton "Lock" action Function(dev_lock_outfit_for, dev_char_select, dev_outfit_select_idx) yalign 0.5
-                                    text "Outfit"
+                                    textbutton "锁定" action Function(dev_lock_outfit_for, dev_char_select, dev_outfit_select_idx) yalign 0.5
+                                    text "服装"
                                     textbutton "<" action SetScreenVariable("dev_outfit_select_idx", max(1, dev_outfit_select_idx - 1)) yalign 0.5
                                     textbutton "[dev_outfit_select_idx]":
                                         text_size 14
@@ -432,9 +432,9 @@ screen dev_menu():
                                     textbutton ">" action SetScreenVariable("dev_outfit_select_idx", min(total_outfits - 1, dev_outfit_select_idx + 1)) yalign 0.5
                         if "Memories" in chara[dev_char_select].tags:
                             hbox:
-                                textbutton "Unlock" yalign 0.5 action Function(dev_unlock_memories_for, dev_char_select)
+                                textbutton "解锁" yalign 0.5 action Function(dev_unlock_memories_for, dev_char_select)
                                 text "/"
-                                textbutton "Lock" yalign 0.5 action Function(dev_lock_memories_for, dev_char_select)
+                                textbutton "锁定" yalign 0.5 action Function(dev_lock_memories_for, dev_char_select)
                                 text "全部回忆"
                         if "Memories" in chara[dev_char_select].tags and hasattr(chara[dev_char_select], "memories_unlocked"):
                             $ all_memories = get_all_memories_by_character()
@@ -442,10 +442,10 @@ screen dev_menu():
                             $ total_memories = len(mem_list)
                             if total_memories > 0:
                                 hbox:
-                                    textbutton "Unlock" action Function(dev_unlock_memory_for, dev_char_select, mem_list[dev_memory_select_idx]) yalign 0.5
+                                    textbutton "解锁" action Function(dev_unlock_memory_for, dev_char_select, mem_list[dev_memory_select_idx]) yalign 0.5
                                     text "/"
-                                    textbutton "Lock" action Function(dev_lock_memory_for, dev_char_select, mem_list[dev_memory_select_idx]) yalign 0.5
-                                    text "Memory"
+                                    textbutton "锁定" action Function(dev_lock_memory_for, dev_char_select, mem_list[dev_memory_select_idx]) yalign 0.5
+                                    text "回忆"
                                     textbutton "<" action SetScreenVariable("dev_memory_select_idx", (dev_memory_select_idx - 1) % total_memories) yalign 0.5
                                     textbutton "[get_memory_description(mem_list[dev_memory_select_idx])]":
                                         text_size 14
@@ -456,15 +456,15 @@ screen dev_menu():
                                     textbutton ">" action SetScreenVariable("dev_memory_select_idx", (dev_memory_select_idx + 1) % total_memories) yalign 0.5
                         if "Outfits" and "Memories" in chara[dev_char_select].tags:
                             hbox:
-                                textbutton "Unlock" yalign 0.5 action Function(dev_unlock_all_for, dev_char_select)
+                                textbutton "解锁" yalign 0.5 action Function(dev_unlock_all_for, dev_char_select)
                                 text "/"
-                                textbutton "Lock" yalign 0.5 action Function(dev_lock_all_for, dev_char_select)
-                                text "Everything"
+                                textbutton "锁定" yalign 0.5 action Function(dev_lock_all_for, dev_char_select)
+                                text "一切"
                         if "Romanceable" in chara[dev_char_select].tags:
                             null height 20
                             hbox:
                                 xpos 7
-                                text "Affection: "
+                                text "好感度："
                                 bar:
                                     xsize 100
                                     ysize 15
@@ -477,7 +477,7 @@ screen dev_menu():
             vbox:
                 xsize 200
                 spacing -10
-                label "Utilities" text_size 16
+                label "工具" text_size 16
                 textbutton "紧急更新" action Function(initialize_characters)
                 text "！！！这会用新数据重新更新旧存档。大多数情况下你不需要使用它。！！！" color "#d3b050" italic True
 

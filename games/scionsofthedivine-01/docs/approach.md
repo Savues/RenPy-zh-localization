@@ -59,7 +59,7 @@ ID，必须拿英文原文去算。这条路对得上，但对上没有模板就
 所以覆盖率写在 `game.json` 的 `coverage` 里，**是断言不是推导**：
 
 ```json
-"coverage": { "translated": 5058, "total": 5094 }
+"coverage": { "translated": 5094, "total": 5094 }
 ```
 
 数字来自提取阶段对英文原文的统计：27 个替换脚本里每一条 say 语句、
@@ -67,16 +67,19 @@ ID，必须拿英文原文去算。这条路对得上，但对上没有模板就
 每一个 `Character(...)` 名字和界面字符串，共 5,094 条。`check.py` 只负责把它
 打印出来，不会重算，也不会因为对不上而报错。
 
-**未译的 36 处全部在开发者菜单**（`screen_dev.rpy`），是 12 个不同的标签：
-`Jump`、`Variables`、`Profiles`、`All`、`Unlock`、`Lock`、`Everything`、
-`Outfit`、`Profile`、`Memory`、`Affection: `、`Utilities`。详见
-[`glossary.json`](glossary.json) 的 `_known_gaps`。
+**这条断言刚开始是对不上的。** 第一次写 `game.json` 时实测只有 5,058 条有中文，
+差的 36 处全在开发者菜单（`screen_dev.rpy`）—— 那块界面是分两批做的，第一批翻了
+标题和分组名（`开发菜单` / `章节选择` / `全部档案` / `善恶值` / `紧急更新` …），
+第二批漏了 12 个动作标签（`Jump` / `Unlock` / `Lock` / `Outfit` …）。
 
-这个缺口是这类补丁的结构性弱点，不是疏忽：通用检查器对 `script-override` 方案
-**不读** `data/tl_trans.json`，也就没有任何一处拿英文原文跟成品脚本逐条比对，
-所以"开发者菜单只翻了一半"这种状态，在 `check.py` 眼里完全正常。
+这类补丁的结构性弱点就在这里：通用检查器对 `script-override` 方案**不读**
+`data/tl_trans.json`，也就没有任何一处拿英文原文跟成品脚本逐条比对，
+所以"开发者菜单只翻了一半"这种状态，在 `check.py` 眼里完全正常。是打包时那句
+"coverage 只能断言"逼着人把英文原文重新数了一遍，才数出来的。
 `tools/verify_patch.cjs` 里为此加了一条：12 个标签要么全是英文，要么全都不是，
-中间状态直接报错。
+中间状态直接报错；补完之后这条检查也顺手改了写法——只认**显示位置**的英文，
+因为 `default dev_char_list = ["All"]` 这种机器值留在文件里是应该的，
+早先那版用 `includes('"All"')` 会把它误判成没翻。
 
 ## 字体：为什么是 fallback 而不是 shadow
 

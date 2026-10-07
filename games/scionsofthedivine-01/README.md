@@ -9,8 +9,7 @@ Ren'Py 视觉小说 **Scions of the Divine 0.1** 的中文本地化。全部 5,0
 | 原引擎版本 | Ren'Py 8.4.1 (2025-07-24 build) |
 | 补丁方案 | 脚本覆盖（`patch_layout: script-override`） |
 | 可翻译字符串 | 5,094 |
-| 已翻译 | **5,058（99.3%）** |
-| 未翻译 | 36 处，全在开发者菜单（见下） |
+| 已翻译 | **5,094（100%）** |
 | `data/tl_trans.json` 去重条目 | 4,630（有损，见下文） |
 | 替换的脚本 | 27 个 `.rpy`（15,330 行）+ `zh_ui.rpy` |
 | 补丁体积 | 0.59 MB 脚本 + 16.0 MB 字体 |
@@ -115,16 +114,7 @@ config.font_replacement_map[(zh_cjk, True, False)] = (zh_cjk_bold, False, False)
 字体授权说明见 [assets/fonts/LICENSE-MiSans.txt](assets/fonts/LICENSE-MiSans.txt) ——
 MiSans 可商用，但字体文件本身没有书面再分发授权，这一点在那个文件里写清楚了。
 
-## 已知未译
-
-**开发者菜单（游戏内的 dev-menu 覆盖层）只翻了一半。** 12 个标签、36 处仍是英文：
-
-`Jump`、`Variables`、`Profiles`、`All`、`Unlock`、`Lock`、`Everything`、
-`Outfit`、`Profile`、`Memory`、`Affection: `、`Utilities`
-
-同一文件里 `开发菜单`、`章节选择`、`变量项`、`全部档案`、`全部服装`、`全部回忆`、
-`善恶值`、`紧急更新` 已经是中文，所以这是翻到一半停了，不是"整个菜单不翻"的
-统一决定。`game.json` 的 `coverage` 已经把这 36 处扣掉。
+## 启动画面仍是英文
 
 **启动画面是图片。** 标题 `Scions of the Divine` 和内容警告（Content Warning）
 在原作里是预渲染图片（`splashname` / `splashcw`），换字体不会影响它们。
@@ -137,7 +127,7 @@ MiSans 可商用，但字体文件本身没有书面再分发授权，这一点�
   分的，比如 `Yeah.` → 对。/ 嗯。/ 好。/ 认识。），扁平表只能保留第一次出现的
   那个。另外它对 `script-override` 方案**不是构建输入**，`check.py` 不读它。
 - [`docs/glossary.json`](docs/glossary.json) —— 角色名与专有名词表，
-  由 `check.py` 强制执行；`_known_gaps` 记着开发者菜单的缺口
+  由 `check.py` 强制执行；`_developer_menu` 记着开发者菜单那 12 个标签和它们旁边的机器值
 - [`docs/translation-log.md`](docs/translation-log.md) —— 术语决策、修过的问题
 - [`docs/translation-workflow.md`](docs/translation-workflow.md) —— 引擎的坑、
   提取与回写脚本的设计、校验器为什么长成那样

@@ -126,16 +126,64 @@ MiSans 换成主字体之后，快进指示的三角箭头 `▸`（U+25B8）画�
 `DejaVuSans.ttf`，换字体时被一起改掉了。已改回，理由写进
 [`approach.md`](approach.md) 和 `tools/verify_patch.cjs` 的 `FONT_EXCEPTIONS`。
 
+## 补完的最后一处：开发者菜单
+
+打包进仓库时重新数英文原文，才发现 `screen_dev.rpy` 的开发者菜单是**两批做的**：
+标题和分组名翻了（`开发菜单`、`章节选择`、`剧情开关`、`档案`、`工具`、
+`全部档案`、`全部服装`、`全部回忆`、`善恶值：`、`紧急更新`），12 个动作标签没翻。
+一共 36 处。
+
+| 英文 | 中文 | 处数 |
+|---|---|---|
+| `Jump` | 跳转 | 1 |
+| `Variables` | 剧情开关 | 1 |
+| `Profiles` / `Profile` | 档案 | 2 |
+| `All` | 全部 | 1 |
+| `Unlock` / `Lock` | 解锁 / 锁定 | 12 + 12 |
+| `Everything` | 一切 | 2 |
+| `Outfit` | 服装 | 2 |
+| `Memory` | 回忆 | 1 |
+| `Affection: ` | 好感度： | 1 |
+| `Utilities` | 工具 | 1 |
+
+两个用词上的选择：
+
+- **`Variables` 译「剧情开关」而不是「变量」**。这一栏下面挂的是
+  `莱拉的晚餐：`、`阿斯塔拉与雷恩偷听：`、`与索尔裸泳：` 三个剧情开关，
+  直译成"变量"玩家看不懂它是什么。
+- **`All` 译「全部」、`Everything` 译「一切」**。角色选择器那个是"所有角色"，
+  而「解锁/锁定」后面那四行的分类名已经是「全部档案」「全部服装」「全部回忆」，
+  再用一次「全部」会连着出现五个"全部"。`Affection: ` 用全角冒号，跟
+  `screen_profiles.rpy` 里的 `好感度：` 对齐。
+
+### 这一屏里哪些英文不能翻
+
+开发者菜单**不是所有英文都是显示文本**，这是这块最容易翻车的地方：
+
+```python
+default dev_char_list = ["All"] + [c for c in chara.keys()]   # 机器值
+if dev_char_select != "All":                                   # 机器比较
+textbutton "All":                                              # 只有这一行是显示 → 全部
+if "Outfits" in chara[dev_char_select].tags:                   # tag
+text "Outfit"                                                 # 只有这一行是显示 → 服装
+```
+
+`dev_char_list` 里的 `"All"`、各角色 `tags` 里的 `"Outfits"` / `"Memories"` /
+`"Romanceable"` / `"Mages"` 全是引擎拿来比对的字符串，翻掉就是**静默失灵**——
+角色选择器会直接报错，tag 判断会整片失效。
+
+改法上只认一个模式：`text` / `textbutton` / `label` / `caption` / `title`
+**语句关键字后面紧跟的那个字面量**，且必须精确等于 12 个目标之一。
+36 处命中，其余一行没动。
+
+改完之后 `verify_patch.cjs` 那条检查也跟着改了写法：早先它用
+`text.includes('"All"')` 判断，于是 `dev_char_list = ["All"]` 这个机器值
+被误判成"没翻完"，检查报 `12 个标签里翻了 11 个`。现在它只匹配显示位置。
+两个方向都自测过：现状 0 个未译；把「跳转」改回 `Jump` 立刻报 1 个。
+
 ## 已知未译
 
-**开发者菜单（`screen_dev.rpy`）只翻了一半。** 12 个标签、36 处仍是英文：
-`Jump`、`Variables`、`Profiles`、`All`、`Unlock`、`Lock`、`Everything`、
-`Outfit`、`Profile`、`Memory`、`Affection: `、`Utilities`。
-
-同一文件里 `开发菜单`、`章节选择`、`变量项`、`全部档案`、`全部服装`、`全部回忆`、
-`善恶值`、`紧急更新` 已经是中文，所以这是**翻到一半停了**，不是"整个菜单不翻"的
-统一决定。`game.json` 的 `coverage` 已经把这 36 处扣掉
-（5058 / 5094），`verify_patch.cjs` 会挡住中间状态。
+没有了。`game.json` 的 `coverage` 是 `{ "translated": 5094, "total": 5094 }`。
 
 **启动画面是图片。** 标题 `Scions of the Divine` 和内容警告（Content Warning）
 在原作里是预渲染图片，换字体不影响。补丁里这两处仍是英文，不是遗漏。

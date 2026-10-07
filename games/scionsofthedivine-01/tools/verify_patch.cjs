@@ -239,24 +239,35 @@ try {
 } catch (e) {
   errors.push('字形覆盖检查跑不起来: ' + String(e));
 }
-// ---- 4. 开发者菜单的已知缺口：要么全英文，要么全翻完 ----
-const DEV_LABELS = ['Jump', 'Variables', 'Profiles', 'All', 'Unlock', 'Lock',
-                    'Everything', 'Outfit', 'Profile', 'Memory', 'Affection: ', 'Utilities'];
+// ---- 4. 开发者菜单：12 个标签必须全翻或全不翻 ----
+// 判定只认**显示位置**：语句关键字后面紧跟的那个字面量。用 includes('"All"')
+// 会被 default dev_char_list = ["All"] 和 dev_char_select == "All" 误伤——
+// 那是机器值，本来就该留在英文。
+const DEV_LABELS = [
+  ['Jump', '跳转'], ['Variables', '剧情开关'], ['Profiles', '档案'], ['All', '全部'],
+  ['Unlock', '解锁'], ['Lock', '锁定'], ['Everything', '一切'], ['Outfit', '服装'],
+  ['Profile', '档案'], ['Memory', '回忆'], ['Affection: ', '好感度：'], ['Utilities', '工具'],
+];
+
+const escapeRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
 {
   const p = path.join(ROOT, 'patch/game/scripts/screens/screen_dev.rpy');
   if (!fs.existsSync(p)) {
     errors.push('缺少文件 patch/game/scripts/screens/screen_dev.rpy');
   } else {
     const text = read(p);
-    const still = DEV_LABELS.filter(l => text.includes('"' + l + '"'));
-    if (still.length !== 0 && still.length !== DEV_LABELS.length) {
+    const left = DEV_LABELS.filter(([en]) =>
+      new RegExp('^\\s*(?:textbutton|text|label|caption|title)\\s+"' + escapeRe(en) + '"', 'm').test(text));
+    if (left.length && left.length !== DEV_LABELS.length) {
       errors.push('screen_dev.rpy 的开发者菜单停在半翻状态：' + DEV_LABELS.length +
-                  ' 个标签里翻了 ' + (DEV_LABELS.length - still.length) + ' 个。\n' +
-                  '      要么全翻（记得同步 game.json 的 coverage），要么全留英文。');
-    } else if (still.length === 0) {
-      notes.push('开发者菜单已补完：记得把 game.json 的 coverage 改成 { "translated": 5094, "total": 5094 }');
+                  ' 个标签里翻了 ' + (DEV_LABELS.length - left.length) + ' 个，还剩：\n      ' +
+                  left.map(([en, zh]) => en + ' -> ' + zh).join('\n      '));
+    } else if (left.length) {
+      notes.push('开发者菜单的 ' + DEV_LABELS.length + ' 个标签仍是英文');
     } else {
-      notes.push('开发者菜单仍是全英文（' + DEV_LABELS.length + ' 个标签 / 36 处），已登记在 docs/glossary.json 的 _known_gaps');
+      notes.push('开发者菜单 ' + DEV_LABELS.length + ' 个标签全部已译（Unlock/Lock 各 12 处，共 36 处）；' +
+                 '机器值 dev_char_list 里的 "All" 与各 tags 保持英文不动');
     }
   }
 }
