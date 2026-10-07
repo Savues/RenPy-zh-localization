@@ -5,24 +5,20 @@
 
 The archive is a plain folder tree, not a program: extracting it yields a
 `game/` directory whose contents are meant to be copied straight over the
-game's own `game/` directory. Nothing in it needs Python, an installer or a
-command line.
+game's own `game/` directory. Nothing in it needs Python, an installer, a
+command line, a network connection -- or a font the player has to go and find.
 
-What ships and what does not:
+What ships:
 
     README.md          player instructions (generated below)
     LICENSE            this repository's licence
+    FONT-LICENSE.txt   attribution for the bundled CJK face
     game/tl/<lang>/    the translated scripts
     game/<shim>        language/hook script
-
-The font is deliberately *not* in here. The game hardcodes five font file
-names and the translations render through them, so a CJK face has to sit at
-those paths -- but every redistributable CJK face is 8 MB or more and every
-convenient system one (Microsoft YaHei, SimHei, DengXian, SimSun) is
-proprietary and cannot be redistributed in a public release. The README
-therefore walks the player through copying a font from their own machine,
-which is the same thing tools/install.py does automatically for anyone who
-does have Python.
+    game/fonts/*       the bundled face, under every filename the game asks
+                       for (patch_font plus font_shadow) -- the game hardcodes
+                       those names, and a Chinese face has to sit at those
+                       paths or the text renders as tofu
 
 The 1.2 MB English source database, the glossary and the build/verify tooling
 stay in the repository -- a player has no use for the original strings, and
@@ -54,6 +50,15 @@ def zip_name(slug, lang, version):
     return "%s-%s-patch-%s.zip" % (slug, lang, version)
 
 
+def font_names(manifest):
+    """Every filename the game will look the bundled face up under."""
+    names = [manifest.get("patch_font", "zh.ttf")]
+    for n in manifest.get("font_shadow", []):
+        if n not in names:
+            names.append(n)
+    return names
+
+
 def collect(repo, slug, manifest, version, count):
     """-> [(arcname, source_path_or_None, bytes)] in a stable order."""
     out = [("README.md", None, render_readme(manifest, slug, version, count)
@@ -62,6 +67,11 @@ def collect(repo, slug, manifest, version, count):
     lic = os.path.join(games.ROOT, "LICENSE")
     if os.path.isfile(lic):
         out.append(("LICENSE", lic, None))
+
+    fl = manifest.get("font_license")
+    if fl:
+        out.append(("FONT-LICENSE.txt",
+                    games.path_of(repo, fl.replace("/", os.sep)), None))
 
     patch_root = games.path_of(repo, "patch")
     for dirpath, dirnames, filenames in os.walk(patch_root):
@@ -73,6 +83,12 @@ def collect(repo, slug, manifest, version, count):
             rel = os.path.relpath(src, patch_root).replace(os.sep, "/")
             out.append(("game/" + rel, src, None))
 
+    fa = manifest.get("font_asset")
+    if fa:
+        src = games.path_of(repo, fa.replace("/", os.sep))
+        for name in font_names(manifest):
+            out.append(("game/fonts/" + name, src, None))
+
     return sorted(out, key=lambda r: r[0])
 
 
@@ -83,10 +99,6 @@ def render_readme(manifest, slug, version, count):
     interpolation: the template is full of things both of those would try to
     read as markup, and a silent mangling here ships to players.
     """
-    shadow = "\n".join(
-        "| `%s` |" % n
-        for n in [manifest.get("patch_font", "zh.ttf")] + list(
-            manifest.get("font_shadow", [])))
     fields = {
         "{{title}}": manifest["title"],
         "{{author}}": manifest["author"],
@@ -97,8 +109,7 @@ def render_readme(manifest, slug, version, count):
         "{{version}}": version,
         "{{zipname}}": zip_name(slug, manifest["language"], version),
         "{{shim}}": manifest["shim"],
-        "{{patchfont}}": manifest.get("patch_font", "zh.ttf"),
-        "{{shadowtable}}": shadow,
+        "{{fontcredit}}": manifest.get("font_credit", ""),
         "{{count}}": "{:,}".format(count),
     }
     text = PLAYER_README
@@ -119,36 +130,13 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 | 语言 | {{langname}}（启动时自动启用，不需要在设置里切换） |
 | 译文条目 | {{count}} 条，覆盖率 100%，没有未译条目 |
 | 翻译方式 | 逐条人工翻译，没有使用任何机器翻译或在线翻译 API |
+| 中文字体 | {{fontcredit}}（已打包） |
 
 ---
 
 ## 安装
 
-**不需要 Python，不需要安装器，不需要联网。** 两步。
-
-### 第一步：中文字体
-
-游戏脚本把字体**文件名**写死了，中文必须通过这几个文件渲染。Windows 自带的
-这几款都能显示中文，任选一款：
-
-```
-C:\\Windows\\Fonts\\msyh.ttc     微软雅黑
-C:\\Windows\\Fonts\\simhei.ttf   黑体
-C:\\Windows\\Fonts\\Deng.ttf     等线
-C:\\Windows\\Fonts\\simsun.ttc   宋体
-```
-
-macOS 用 `/System/Library/Fonts/PingFang.ttc`（苹方），Linux 用
-`/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc`。
-
-把选中的那个字体文件复制到游戏的 `game/fonts/` 目录下，**复制成下面这些名字**
-（内容完全一样，只是文件名不同）：
-
-| 复制成的文件名 |
-|---|
-{{shadowtable}}
-
-### 第二步：复制补丁文件
+**不需要 Python，不需要安装器，不需要联网，也不用自己找字体。** 三步：
 
 1. 把游戏**完全关闭**
 2. 解压 `{{zipname}}`
@@ -159,30 +147,35 @@ macOS 用 `/System/Library/Fonts/PingFang.ttc`（苹方），Linux 用
 要复制的东西                        复制到哪里
 game/tl/{{lang}}/        →      <游戏目录>/game/tl/{{lang}}/
 game/{{shim}}             →      <游戏目录>/game/{{shim}}
+game/fonts/*              →      <游戏目录>/game/fonts/
 ```
 
 装完直接启动游戏，{{langname}}会自动启用。
 
+中文字体已经在包里了。游戏把字体**文件名**写死了，所以同一份字体会以它要的每个
+文件名各存一份放进 `game/fonts/`，游戏自带的同名西文字体会被替换掉。
+
+---
+
 ## 常见问题
 
 **装完还是英文**
-游戏目录里残留了旧的 `.rpyc` 编译文件。Ren'Py 优先加载 `.rpyc`，旧的会盖过新
-脚本。删掉 `game/tl/{{lang}}/` 里所有 `.rpyc` 再启动。原版游戏不会有这个问题。
+游戏目录里残留了旧的 `.rpyc` 编译文件。Ren'Py 优先加载 `.rpyc`，旧的会盖过新脚本。
+删掉 `game/tl/{{lang}}/` 里所有 `.rpyc` 再启动。原版游戏不会有这个问题。
 
 **中文显示成方块**
-第一步的字体没放对。确认 `game/fonts/` 下那 5 个文件都存在，而且不是 0 字节。
-
-**某个界面（比如章节选择、存档界面）的字不对**
-那几个界面在原文里带 `{font=...}` 标记，用的是字体文件名而不是默认字体。
-第一步如果只放了 `{{patchfont}}` 一个文件，这些地方就会出问题——5 个都要放。
+`game/fonts/` 没复制全。确认那 5 个字体文件都在、大小一致（约 8 MB）。
 
 **启动时报 `A translation for "X" already exists`**
-游戏里已经打过别的汉化补丁，两份翻译冲突。先卸载那个补丁，或者在一份干净的
-原版上重新复制。
+游戏里已经打过别的汉化补丁，两份翻译冲突。先卸载那个补丁，或者在一份干净的原版
+上重新复制。
+
+**启动时报 `Could not find font`**
+`game/fonts/` 被删过或没复制全。把包里的 `game/fonts/` 整个再复制一次。
 
 **启动时报 `config.say_arguments_callback` 相关错误**
-本补丁的语言脚本依赖 Ren'Py 8.x 的回调接口。原版游戏用的是 {{renpy}}，
-其它版本如果报错请反馈。
+本补丁的语言脚本依赖 Ren'Py 8.x 的回调接口。原版游戏用的是 {{renpy}}，其它版本
+如果报错请反馈。
 
 ---
 
@@ -192,18 +185,22 @@ game/{{shim}}             →      <游戏目录>/game/{{shim}}
 {{zipname}}
 ├── README.md              本文件
 ├── LICENSE                汉化补丁的许可
+├── FONT-LICENSE.txt       中文字体的版权声明
 └── game/                  ← 把这个文件夹里的内容复制到游戏的 game/ 里
     ├── tl/{{lang}}/           翻译后的脚本
-    └── {{shim}}               语言与字体补丁
+    ├── {{shim}}               语言与字体补丁
+    └── fonts/                 中文字体（同一份字体的多个副本）
 ```
 
 ## 版权与免责
 
-游戏版权归 {{author}} 所有。本汉化补丁是**非官方的同人翻译作品**，与原作方无
-任何关联，仅供学习交流使用。请自行确认当地法律与原作方的授权状况。
+游戏版权归 {{author}} 所有。本汉化补丁是**非官方的同人翻译作品**，与原作方无任何
+关联，仅供学习交流使用。请自行确认当地法律与原作方的授权状况。
 
-本包**不包含**任何游戏程序文件、图像、音频、原始脚本或字体文件，只包含翻译
-补丁与安装说明。请勿将本补丁与游戏本体一同分发。
+本包**不包含**任何游戏程序文件、图像、音频或原始脚本，只包含翻译补丁与中文字体。
+请勿将本补丁与游戏本体一同分发。
+
+中文字体的版权与授权见 `FONT-LICENSE.txt`。
 """
 
 
@@ -249,10 +246,10 @@ def main():
     print("packaged %s [%s] -> %s"
           % (manifest["title"], manifest["language_name"],
              os.path.basename(out)))
-    print("  %d files, %.2f MB" % (len(entries), os.path.getsize(out) / 1048576))
-    for arc, src, blob in entries[:5]:
+    print("  %d entries, %.2f MB" % (len(entries), os.path.getsize(out) / 1048576))
+    for arc, src, blob in entries[:4]:
         print("    %s" % arc)
-    print("    ... (%d more)" % max(0, len(entries) - 5))
+    print("    ... (%d more)" % max(0, len(entries) - 4))
     print("  path:   %s" % os.path.relpath(out, games.ROOT))
     print("  sha256: %s" % digest)
     return 0

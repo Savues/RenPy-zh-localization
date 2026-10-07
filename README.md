@@ -17,21 +17,17 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 
 ## 下载安装（不需要 Python）
 
-Releases 里的压缩包是**直接覆盖**用的。解压后把里面的 `game/` 文件夹内容复制到
-游戏的 `game/` 文件夹，选择覆盖就行——不用装 Python，不用跑脚本，不用联网。
+Releases 里的压缩包是**直接覆盖**用的，三步：关掉游戏 → 解压 → 把解压出来的 `game/`
+文件夹里的**全部内容**复制到游戏的 `game/` 文件夹，选择覆盖。不用装 Python，不用跑
+脚本，不用联网，**也不用自己找字体**——中文字体已经打进包里了。
 
 ```
-第 1 步  放中文字体
-        游戏按文件名硬编码字体，中文必须走这几个名字。把系统里任一款
-        中文字体（微软雅黑 / 黑体 / 等线 / 宋体都行）复制成这 5 个文件名，
-        放进游戏的 game/fonts/ 目录：
-          zh.ttf   comfortaa.ttf   CinzelDecorative.ttf
-          MichromaRegular.ttf   PacificoRegular.ttf
-
-第 2 步  解压补丁包，把 game/ 里的内容复制到游戏的 game/，选择覆盖
+game/tl/schinese/      →  <游戏目录>/game/tl/schinese/
+game/zz_zh_locale.rpy  →  <游戏目录>/game/zz_zh_locale.rpy
+game/fonts/*           →  <游戏目录>/game/fonts/
 ```
 
-完整说明在补丁包内的 `README.md`。
+装完直接启动游戏，中文自动启用。完整说明在补丁包内的 `README.md`。
 
 仓库里的 `tools/install.py` 是同一件事的自动化版本，适合愿意跑脚本的人。
 两者装出来的东西完全一样。
@@ -46,6 +42,7 @@ RenPy-zh-localization/
 │   └── eden-chapter5/        ← 每个游戏一个独立目录
 │       ├── README.md             该游戏的安装/卸载/重建说明
 │       ├── game.json             元数据：引擎版本、语言、要覆盖的字体文件名
+│       ├── assets/fonts/                     随补丁分发的中文字体 + 授权声明
 │       ├── data/tl_trans.json    译文数据库（以英文原文为 key）
 │       ├── docs/
 │       │   ├── glossary.json           术语表，由 check.py 强制执行
@@ -63,7 +60,7 @@ RenPy-zh-localization/
 │   └── tlparse.py                   Ren'Py 翻译模板解析器
 └── docs/                      跨游戏复用的说明
     ├── adding-a-game.md         怎么新增一个游戏的汉化
-    └── fonts.md                 中文字体为什么不放进仓库
+    └── fonts.md                 字体机制、换字体、授权情况
 ```
 
 游戏目录和工具链是分开的：加新游戏只需要在 `games/` 下建一个新文件夹，**不用改任何工具代码**。
@@ -102,6 +99,7 @@ python tools/uninstall.py "C:\Games\Eden5-pc"
 | `python tools/selftest.py` | 反向验证 `check.py` 的每一项检查都会真的报错 |
 | `python tools/games.py` | 列出仓库里的游戏 |
 | `python tools/package_release.py [--version v1.0.0]` | 生成给玩家用的覆盖安装包（写到 `dist/`） |
+| `python tools/publish_release.py [--dry-run]` | 把 `dist/` 的包挂到 GitHub Release（多个游戏共用一个 Release） |
 | `python tools/check_links.py` | 检查文档之间的相对链接没断 |
 
 某个游戏自己的档案都在它目录下的 `docs/` 里。以 Eden Chapter 5 为例：
@@ -111,7 +109,7 @@ python tools/uninstall.py "C:\Games\Eden5-pc"
 - [`translation-workflow.md`](games/eden-chapter5/docs/translation-workflow.md)——
   这次汉化的过程存档，含 Ren'Py 引擎本身的坑
 
-跨游戏复用的通用说明在 [`docs/`](docs/)：怎么新增一个游戏、字体为什么不入库。
+跨游戏复用的通用说明在 [`docs/`](docs/)：怎么新增一个游戏、字体是怎么解决的。
 
 改动译文后的标准流程：
 
@@ -143,7 +141,11 @@ python tools/build_tl.py && python tools/check.py && python tools/selftest.py
 
 ## 字体
 
-仓库**不放任何字体文件**，原因是版权和体积：微软雅黑、等线是微软的专有字体没有再分发授权；开源的思源黑体单个就 15–20 MB。`install.py` 改为在用户机器上现找一款能显示中文的。详见 [`docs/fonts.md`](docs/fonts.md)。
+中文字体打包进补丁里，玩家解压就能用，不用自己去装字体。游戏按**文件名**硬编码字体，
+所以同一份字体会以游戏要的每个文件名各存一份放进 `game/fonts/`——Eden Chapter 5 用
+的是 MiSans，一个游戏 5 份约 25.7 MB，这是 Release 体积的主要来源。
+
+字体机制、怎么换一款、以及 MiSans 的再分发授权情况，详见 [`docs/fonts.md`](docs/fonts.md)。
 
 ---
 

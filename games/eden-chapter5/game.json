@@ -12,5 +12,8 @@
     "CinzelDecorative.ttf",
     "MichromaRegular.ttf",
     "PacificoRegular.ttf"
-  ]
+  ],
+  "font_asset": "assets/fonts/MiSans-Regular.ttf",
+  "font_license": "assets/fonts/LICENSE-MiSans.txt",
+  "font_credit": "MiSans Regular (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd."
 }

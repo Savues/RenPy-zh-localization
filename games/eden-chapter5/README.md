@@ -13,6 +13,7 @@
 ```
 eden-chapter5/
 ├── game.json           本游戏的元数据（引擎版本、字体文件名、语言等）
+├── assets/fonts/       随补丁分发的 MiSans + 授权声明
 ├── data/tl_trans.json  译文数据库：以英文原文为 key
 ├── docs/
 │   ├── glossary.json           术语表，由 check.py 强制执行
@@ -25,23 +26,23 @@ eden-chapter5/
 
 ---
 
-## 安装
-
-先克隆仓库，然后：
 ## 安装（方式一：直接覆盖，不需要 Python）
 
-从 [Releases](https://github.com/Savues/RenPy-zh-localization/releases) 下载
-补丁包，解压后把里面的 `game/` 文件夹内容复制到游戏的 `game/` 文件夹，选择覆盖。
+从 [Releases](https://github.com/Savues/RenPy-zh-localization/releases) 下载补丁包，
+三步：关掉游戏 → 解压 → 把解压出来的 `game/` 文件夹里的**全部内容**复制到游戏的
+`game/` 文件夹，选择覆盖。
 
-唯一的额外步骤是字体：游戏按文件名硬编码了 5 个字体，中文必须走它们，所以要先把
-系统里的一款中文字体（微软雅黑 / 黑体 / 等线 / 宋体都行）复制成下面这些名字放进
-游戏的 `game/fonts/`：
+**字体已经打包在补丁里了**，不用自己找、不用自己改文件名。游戏硬编码的那 5 个字体名
+（`zh.ttf`、`comfortaa.ttf`、`CinzelDecorative.ttf`、`MichromaRegular.ttf`、
+`PacificoRegular.ttf`）下都会放好同一份 MiSans。
 
 ```
-zh.ttf   comfortaa.ttf   CinzelDecorative.ttf
-MichromaRegular.ttf   PacificoRegular.ttf
+game/tl/schinese/      →  <游戏目录>/game/tl/schinese/
+game/zz_zh_locale.rpy  →  <游戏目录>/game/zz_zh_locale.rpy
+game/fonts/*           →  <游戏目录>/game/fonts/
 ```
 
+装完直接启动即可，**不需要**在设置里切语言。
 
 ## 安装（方式二：脚本）
 
@@ -61,7 +62,7 @@ python tools/install.py "C:\Games\Eden-Chapter5-pc" --game eden-chapter5
 
 1. `patch/tl/schinese` → 游戏的 `game/tl/schinese`（翻译后的脚本）
 2. `patch/zz_zh_locale.rpy` → `game/zz_zh_locale.rpy`
-3. 把一款系统中文字体写进 `game/fonts/`，并覆盖游戏硬编码的 4 个字体文件名
+3. 把 `assets/fonts/` 里的 MiSans 写进 `game/fonts/`，覆盖游戏硬编码的 4 个字体文件名
 
 被覆盖的原始文件全部备份到 `game/.zh_patch_backup/`，装完直接启动即可，**不需要**在设置里切语言。
 
@@ -102,18 +103,25 @@ callback(who, *args, **kwargs)  ->  (args, kwargs)
 
 ---
 
-## 从源码重建
 ## 生成补丁包
 
 ```bash
 python tools/package_release.py --version v1.0.0
 ```
 
-输出 `dist/eden-chapter5-schinese-patch-v1.0.0.zip`：包含玩家向的 `README.md`、
-`LICENSE`，以及一个可直接覆盖的 `game/` 目录。**不含字体**——可再分发的中文字体
-都要 8 MB 以上，而好用的系统字体都是专有的，所以改成让玩家自己放（见上文）。
+输出 `dist/eden-chapter5-schinese-patch-v1.0.0.zip`：玩家向的 `README.md`、`LICENSE`、
+`FONT-LICENSE.txt`，以及一个可直接覆盖的 `game/` 目录（已含中文字体）。约 27.3 MB，
+其中字体占 25.7 MB——同一份 MiSans 按游戏要的 5 个文件名各存一份，见
+[`docs/fonts.md`](../../docs/fonts.md)。
 
 打包结果是确定性的：固定时间戳 + 排序写入，同一份代码树重复打包产出字节一致的 zip。
+
+发布到 GitHub（多个游戏的包挂在同一个 Release 上，Release 说明不写单个游戏的详情）：
+
+```bash
+python tools/publish_release.py --version v1.0.0 --dry-run   # 先看要做什么
+python tools/publish_release.py --version v1.0.0
+```
 
 ---
 

@@ -1,0 +1,18 @@
+MiSans Regular
+Copyright (c) 2020-2021 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved.
+Upstream: https://hyperos.mi.com/font/
+Downloaded from: https://cdn.cnbj1.fds.api.mi-img.com/vipmlmodel/font/MiSans/MiSans-Regular.ttf
+Font version: 2.000
+
+Shipped unmodified. On install it is copied to the font filenames the game
+hardcodes: comfortaa.ttf, CinzelDecorative.ttf, MichromaRegular.ttf,
+PacificoRegular.ttf and zh.ttf.
+
+NOTE ON REDISTRIBUTION
+----------------------
+Xiaomi markets MiSans as a font that is free for commercial use, but the font
+file itself carries no licence text: its name table has no licence description
+(nameID 13) and no licence URL, and the copyright line ends in
+"All Rights Reserved". Unlike SIL OFL, which grants redistribution explicitly,
+this file grants no written redistribution right. Shipping it inside a public
+release is therefore a judgement call made by whoever publishes this package.

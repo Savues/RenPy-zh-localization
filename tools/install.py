@@ -7,8 +7,9 @@
 What it does
     1. game/tl/<lang>     <- games/<slug>/patch/tl/<lang>
     2. game/<shim>         <- games/<slug>/patch/<shim>
-    3. game/fonts/*        <- a CJK-capable face, shadowing the font filenames
-                              the game hardcodes (see game.json)
+    3. game/fonts/*        <- the CJK face bundled in the repo, written under
+                              every filename the game hardcodes (game.json), so
+                              script and release-zip installs render identically
 
 Anything it overwrites is copied to game/.zh_patch_backup/ first; run
 tools/uninstall.py to put the game back exactly as it was.
@@ -23,7 +24,7 @@ import games  # noqa: E402
 
 BACKUP = ".zh_patch_backup"
 
-# Optional override shipped with the repo; see docs/fonts.md.
+# Last-resort fallback; see docs/fonts.md.
 REPO_FONT = os.path.join(games.ROOT, "fonts", "zh.ttf")
 
 SYSTEM_FONTS = [
@@ -57,8 +58,21 @@ def resolve_game(arg):
     die("not a Ren'Py game directory: %s" % arg)
 
 
-def pick_font(override=None):
-    for cand in [override, REPO_FONT] + SYSTEM_FONTS:
+def pick_font(override, manifest, repo):
+    """The bundled face wins over any system font, on purpose.
+
+    game.json's font_asset is the exact file the release zip ships, so a
+    script install and an unzip-the-zip install put the same glyphs on
+    screen. The system list is only a fallback for a checkout that is
+    missing the asset.
+    """
+    cands = [override]
+    asset = manifest.get("font_asset")
+    if asset:
+        cands.append(games.path_of(repo, asset.replace("/", os.sep)))
+    cands.append(REPO_FONT)
+    cands += SYSTEM_FONTS
+    for cand in cands:
         if cand and os.path.isfile(cand):
             return cand
     return None
@@ -152,10 +166,11 @@ def main(argv):
         die("no options.rpy in %s -- is this really the game directory?" % game)
 
     names = [manifest.get("patch_font", "zh.ttf")] + manifest["font_shadow"]
-    font = pick_font(font_override)
+    font = pick_font(font_override, manifest, repo)
     if not font:
-        die("no CJK font found. Put one at fonts/zh.ttf, or pass --font <path>. "
-            "See docs/fonts.md.")
+        die("no CJK font found. Restore %s, or pass --font <path>. "
+            "See docs/fonts.md."
+            % (manifest.get("font_asset") or "fonts/zh.ttf"))
 
     print("%s [%s] -> %s" % (manifest["title"], lang, game))
     install_script(game, repo, lang)
