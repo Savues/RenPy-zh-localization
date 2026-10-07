@@ -26,6 +26,7 @@ import hashlib
 import io
 import json
 import os
+import ssl
 import subprocess
 import sys
 import urllib.error
@@ -42,6 +43,22 @@ UPLOADS = "https://uploads.github.com"
 # Windows is the only platform this has been exercised on; the credential file
 # layout is git's, so the same parsing works anywhere git wrote one.
 CRED_HINT = os.path.expanduser("~/.renpy-zh-credentials")
+
+
+def ssl_context():
+    """The interpreter these tools run under is a mingw build: it has no CA
+    file and no Windows certificate store to fall back on, so every HTTPS
+    call dies on certificate verification. certifi ships in the same tree."""
+    if os.environ.get("SSL_CERT_FILE"):
+        return None
+    try:
+        import certifi
+    except ImportError:
+        return None
+    return ssl.create_default_context(cafile=certifi.where())
+
+
+SSL = ssl_context()
 
 
 class GitHub(object):
@@ -64,7 +81,7 @@ class GitHub(object):
                 "application/json"
         req = urllib.request.Request(url, data=body, headers=hdr, method=method)
         try:
-            with urllib.request.urlopen(req) as r:
+            with urllib.request.urlopen(req, context=SSL) as r:
                 text = r.read().decode("utf-8")
                 return r.status, (json.loads(text) if text else {})
         except urllib.error.HTTPError as e:
