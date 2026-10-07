@@ -1,0 +1,26 @@
+MiSans Regular / Bold
+Copyright (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd. All Rights Reserved.
+Upstream: https://hyperos.mi.com/font/
+
+Shipped unmodified, under two filenames:
+
+  MiSans-Regular.ttf   130 references across 12 .rpy files -- the face that
+                       actually renders this patch
+  MiSans-Bold.ttf      0 references; the game uses no <b> tags and defines no
+                       bold styles. Shipped only so a future edit has a real
+                       bold weight available.
+
+Both files were already present, unmodified, in three other Ren'Py installs on
+this machine (RealmInvader, ScionsoftheDivine, SinfulSummer); the three copies
+are byte-identical, so this package ships that same build.
+
+NOTE ON REDISTRIBUTION
+----------------------
+Xiaomi markets MiSans as free for commercial use, but the font file carries no
+licence text: its name table has no licence description (nameID 13) and no
+licence URL, and the copyright line ends in "All Rights Reserved". Unlike SIL
+OFL, which grants redistribution explicitly, this file grants no written
+redistribution right. Shipping it inside a public repository is a judgement
+call made by whoever publishes this package. Drop these two files and switch
+patch/game/gui.rpy to any OFL-licensed CJK face (e.g. Noto Sans SC) if that
+matters to you.

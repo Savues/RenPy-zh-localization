@@ -9,6 +9,7 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 <!-- games:start -->
 | 游戏 | 原作 | 语言 | 状态 | 译文量 |
 |---|---|---|---|---|
+| [Cosy Cafe 0.14.2](games/cosycafe-0142/) | Cosy Creator | 简体中文 | ✅ 100% | 25,828 条 |
 | [Eden Chapter 5](games/eden-chapter5/) | FnB Productions | 简体中文 | ✅ 100% | 15,713 条 |
 | [Sinful Summer Chapter 3.6](games/sinfulsummer-chapter36/) | Ruykiru | 简体中文 | ✅ 100% | 22,430 条 |
 | *（来加一个？）* | | | | |

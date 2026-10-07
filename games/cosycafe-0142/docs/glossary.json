@@ -1,0 +1,44 @@
+{
+  "_comment": "Cosy Cafe character names, taken from the game's own script.rpy where define <Name> = Character(\"...\") already carried official Chinese renderings. Kept here so a future pass cannot split one character across two spellings.",
+
+  "characters": {
+    "Lucy": { "zh": "露西", "banned": ["露茜", "露西丝"] },
+    "Victoria": { "zh": "维多利亚", "banned": ["维克多", "维多利亚女王"] },
+    "Vicky": { "zh": "薇琪", "banned": ["维琪", "薇薇"] },
+    "Sarah": { "zh": "莎拉", "banned": ["莎拉儿", "萨拉"] },
+    "Akatsuki": { "zh": "晓月", "banned": ["晓月酱", "赤月"] },
+    "Akane": { "zh": "茜", "banned": ["茜子", "红"] },
+    "Akari": { "zh": "明里", "banned": ["朱里", "亚树"] },
+    "Rachel": { "zh": "瑞秋", "banned": ["蕾切尔", "瑞秋儿"] },
+    "Hannah": { "zh": "汉娜", "banned": ["汉纳", "韩娜"] },
+    "Catherine": { "zh": "凯瑟琳", "banned": ["凯萨琳", "凯特琳"] },
+    "Elizabeth": { "zh": "伊丽莎白", "banned": ["伊利莎白", "丽莎白"] },
+    "Ellie": { "zh": "艾莉", "banned": ["艾丽", "埃莉"] },
+    "Alison": { "zh": "埃莉森", "banned": ["艾莉森", "爱莉森"] },
+    "Annabelle": { "zh": "安娜贝尔", "banned": ["安娜贝儿", "安妮贝尔"] },
+    "Mika": { "zh": "米卡", "banned": ["美香", "米迦"] },
+    "Misaki": { "zh": "美咲", "banned": ["美沙", "美樱"] },
+    "Takamura": { "zh": "高村", "banned": ["高村先生小姐", "竹村"] },
+    "Headmistress": { "zh": "校长", "banned": ["女校长", "校长夫人"] }
+  },
+
+  "places": {
+    "Foundsborough College": { "zh": "芬兹伯勒学院", "banned": ["芬斯伯勒学院", "芬兹伯格学院"] },
+    "Wong's Chinese Dragon": { "zh": "Wong's Chinese Dragon", "banned": ["龙的传人", "小龙的"] }
+  },
+
+  "terms": {
+    "Founding Families": { "zh": "开拓家族", "banned": ["建国家族", "创始家族"] },
+    "the shrimp": { "zh": "小虾米", "banned": ["小虾", "虾米"] },
+    "shrimplet": { "zh": "小虾米", "banned": ["小虾", "虾米"] }
+  },
+
+  "_kept_verbatim": [
+    "Patreon", "itch.io", "Cosy Cafe",
+    "R: [picker.color.rgb[0]:.2f]",
+    "G: [picker.color.rgb[1]:.2f]",
+    "B: [picker.color.rgb[2]:.2f]",
+    "1.33x"
+  ],
+  "_kept_verbatim_note": "These eight entries in data/tl_trans.json have an identical value and key on purpose: platform names, the game's own title, an RGB picker format string and a scale factor. tools/check.py has no KEEP rule that matches them (it wants the values in KEEP_EXACT), so running check.py --game cosycafe-0142 will report them as untranslated. They are not a translation gap."
+}

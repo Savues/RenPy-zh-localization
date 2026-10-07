@@ -1,0 +1,2 @@
+style frame:
+    background None

@@ -64,6 +64,13 @@ KEEP_EXACT = {
     "{b}Discord", "{b}SubscribeStar", "{b}Unifans",
     "{size=-8}{color=#ccfdff}Ctrl / Tab",
     "<", ">", "H", "S", "V",
+    # Cosy Cafe: platform names, the game's own title, and the RGB picker
+    # format strings.  Names and format strings, not prose -- every other
+    # entry in this patch carries real Chinese.
+    "Patreon", "Cosy Cafe",
+    "R: [picker.color.rgb[0]:.2f]",
+    "G: [picker.color.rgb[1]:.2f]",
+    "B: [picker.color.rgb[2]:.2f]",
 }
 
 # Shapes that must survive verbatim even though they look translatable.

@@ -1,0 +1,19 @@
+{
+  "slug": "cosycafe-0142",
+  "title": "Cosy Cafe 0.14.2",
+  "author": "Cosy Creator",
+  "renpy_version": "8.3.2",
+  "language": "schinese",
+  "language_name": "简体中文",
+  "shim": "zz_zh_locale.rpy",
+  "patch_font": "MiSans-Regular.ttf",
+  "font_strategy": "shadow",
+  "font_shadow": [],
+  "font_asset": "assets/fonts/MiSans-Regular.ttf",
+  "font_license": "assets/fonts/LICENSE-MiSans.txt",
+  "font_credit": "MiSans (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd.",
+
+  "_approach": "script-override",
+  "_coverage_note": "32,639 player-visible literals, 100% translated. No <b> tags anywhere in the game, so MiSans-Bold.ttf ships unused.",
+  "_why_not_tl_blocks": "See docs/approach.md. This game ships no game/tl/<lang>/ templates, and tools/install.py can only place a translation-patch game/tl/<lang>/ tree plus a shim. Cosy Cafe instead replaces 27 of its own .rpy files wholesale, so it is installed with tools/install.ps1 rather than tools/install.py."
+}
