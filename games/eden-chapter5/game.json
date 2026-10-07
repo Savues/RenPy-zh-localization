@@ -1,0 +1,16 @@
+{
+  "slug": "eden-chapter5",
+  "title": "Eden Chapter 5",
+  "author": "FnB Productions",
+  "renpy_version": "8.4.1",
+  "language": "schinese",
+  "language_name": "简体中文",
+  "shim": "zz_zh_locale.rpy",
+  "patch_font": "zh.ttf",
+  "font_shadow": [
+    "comfortaa.ttf",
+    "CinzelDecorative.ttf",
+    "MichromaRegular.ttf",
+    "PacificoRegular.ttf"
+  ]
+}

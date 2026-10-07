@@ -1,20 +1,22 @@
 # -*- coding: utf-8 -*-
-"""Remove the Eden Chapter 5 Chinese patch and restore the original files.
+"""Remove an installed patch and restore the original files.
 
-    python tools/uninstall.py "<path-to-game>"
-    python tools/uninstall.py "<path-to-game>" --purge-backup
+    python tools/uninstall.py "<path-to-the-game>" [--game <slug>]
+    python tools/uninstall.py "<path-to-the-game>" --purge-backup
+
+The list of touched files comes from the manifest install.py wrote into
+game/.zh_patch_backup/, so this works even for a game whose folder has since
+been renamed or whose manifest has drifted.
 """
 import json
 import os
 import shutil
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import games  # noqa: E402
+
 BACKUP = ".zh_patch_backup"
-PATCHED = ["tl/schinese", "zz_zh_locale.rpy"]
-PATCHED_FONTS = ["fonts/zh.ttf", "fonts/comfortaa.ttf",
-                 "fonts/CinzelDecorative.ttf",
-                 "fonts/MichromaRegular.ttf",
-                 "fonts/PacificoRegular.ttf"]
 
 
 def die(msg):
@@ -30,10 +32,25 @@ def resolve_game(arg):
     die("not a Ren'Py game directory: %s" % arg)
 
 
+def touched(game):
+    """Paths install.py may have written, relative to the game folder."""
+    mpath = games.path_of(game, BACKUP, "manifest.json")
+    if os.path.isfile(mpath):
+        with open(mpath, encoding="utf-8") as f:
+            m = json.load(f)
+        return ["tl/%s" % m["lang"], m["shim"]] + ["fonts/%s" % n
+                                                    for n in m["fonts"]], m
+    # no manifest: fall back to whatever is lying around
+    return (["tl/schinese", "zz_zh_locale.rpy"]
+            + ["fonts/%s" % n for n in
+               ("zh.ttf", "comfortaa.ttf", "CinzelDecorative.ttf",
+                "MichromaRegular.ttf", "PacificoRegular.ttf")], {})
+
+
 def restore(game, rel):
     """Put back game/<rel> from the backup, or delete it if there was none."""
-    dst = os.path.join(game, rel)
-    src = os.path.join(game, BACKUP, rel.replace("/", os.sep))
+    dst = games.path_of(game, rel)
+    src = games.path_of(game, BACKUP, rel.replace("/", os.sep))
     if os.path.isdir(dst):
         shutil.rmtree(dst)
     if os.path.isdir(src):
@@ -53,20 +70,26 @@ def restore(game, rel):
             os.remove(stale)
 
 
-def main():
-    args = [a for a in sys.argv[1:] if not a.startswith("--")]
-    purge = "--purge-backup" in sys.argv
-    if len(args) != 1:
+def main(argv):
+    purge = "--purge-backup" in argv
+    slug, rest = games.take_slug(argv)
+    rest = [a for a in rest if a != "--purge-backup"]
+    if len(rest) != 1:
         sys.exit(__doc__)
 
-    game = resolve_game(args[0])
-    bdir = os.path.join(game, BACKUP)
+    game = resolve_game(rest[0])
+    bdir = games.path_of(game, BACKUP)
     if not os.path.isdir(bdir):
         die("no %s in %s -- this game does not look patched by us"
             % (BACKUP, game))
 
-    print("removing patch from %s" % game)
-    for rel in PATCHED + PATCHED_FONTS:
+    rels, manifest = touched(game)
+    label = ""
+    if manifest.get("game"):
+        label = "  (%s)" % manifest["game"]
+
+    print("removing patch from %s%s" % (game, label))
+    for rel in rels:
         restore(game, rel)
 
     left = [r for r in os.listdir(bdir) if r != "manifest.json"]
@@ -79,4 +102,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])

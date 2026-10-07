@@ -1,6 +1,6 @@
 # The game's own translation templates. Imported by tools/template.py; they are
 # the original (English) script and are not ours to redistribute.
-tl_template/
+games/*/tl_template/
 
 # Build scratch
 work/
@@ -19,13 +19,12 @@ errors.txt
 traceback.txt
 
 # Fonts are deliberately absent from this repo: every mainstream CJK face is
-# either proprietary or too large to carry. See fonts/README.md.
+# either proprietary or too large to carry. See docs/fonts.md.
 fonts/*.ttf
 fonts/*.otf
 fonts/*.ttc
 fonts/*.otf2
 fonts/*.woff*
-!fonts/README.md
 
 # Python
 __pycache__/

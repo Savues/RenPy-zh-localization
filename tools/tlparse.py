@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
-"""Parse Ren'Py translation templates into editable lines + translatable units."""
-import os, re, json
+"""Parse Ren'Py translation templates into editable lines + translatable units.
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TL = os.path.join(ROOT, "tl_template")
+The template directory is passed in rather than derived from this file's
+location, so one copy of the tooling serves every game under games/.
+"""
+import os
+import re
 
 
 def find_strings(line):
+    """Locate every quoted run in a line, honouring backslash escapes."""
     out, i, n = [], 0, len(line)
     while i < n:
         c = line[i]
@@ -18,7 +21,7 @@ def find_strings(line):
             while j < n:
                 ch = line[j]
                 if ch == "\\" and j + 1 < n:
-                    buf.append(line[j:j+2]); j += 2; continue
+                    buf.append(line[j:j + 2]); j += 2; continue
                 if ch == q:
                     break
                 buf.append(ch); j += 1
@@ -33,20 +36,20 @@ def unescape(s):
     out, i, n = [], 0, len(s)
     while i < n:
         if s[i] == "\\" and i + 1 < n:
-            out.append(s[i+1]); i += 2
+            out.append(s[i + 1]); i += 2
         else:
             out.append(s[i]); i += 1
     return "".join(out)
 
 
-def parse(rel):
+def parse(tl, rel):
     """-> (lines, edits) where edits = [(line_idx, start, end, quote, text)]"""
-    path = os.path.join(TL, rel.replace("/", os.sep))
+    path = os.path.join(tl, rel.replace("/", os.sep))
     lines = open(path, encoding="utf-8-sig").read().split("\n")
     edits = []
     block_id = None
     for i, line in enumerate(lines):
-        m = re.match(r'^translate\s+schinese\s+(\S+):', line)
+        m = re.match(r"^translate\s+\S+\s+(\S+):", line)
         if m:
             block_id = m.group(1)
             continue
@@ -63,21 +66,20 @@ def parse(rel):
     return lines, edits
 
 
-def iter_all():
-    for dirpath, _, fns in os.walk(TL):
+def iter_all(tl):
+    for dirpath, _, fns in os.walk(tl):
         for fn in sorted(fns):
             if fn.endswith(".rpy"):
                 p = os.path.join(dirpath, fn)
-                yield os.path.relpath(p, TL).replace(os.sep, "/")
+                yield os.path.relpath(p, tl).replace(os.sep, "/")
 
 
-def load():
-    """-> {rel: (lines, edits)} and a flat unique-text index."""
+def load(tl):
+    """-> {rel: (lines, edits)} in walk order."""
     files = {}
     order = []
-    for rel in iter_all():
-        lines, edits = parse(rel)
-        files[rel] = (lines, edits)
+    for rel in iter_all(tl):
+        files[rel] = parse(tl, rel)
         order.append(rel)
     return files, order
 

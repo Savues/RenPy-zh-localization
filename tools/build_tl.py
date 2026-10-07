@@ -1,21 +1,19 @@
 # -*- coding: utf-8 -*-
-"""Build patch/tl/schinese from tl_template/ + data/tl_trans.json.
+"""Build a game's patch/tl/<lang>/ from its tl_template/ + data/tl_trans.json.
 
-    python tools/build_tl.py
+    python tools/build_tl.py [--game <slug>]
 
-Requires tl_template/ (the game's own untranslated game/tl/schinese/*.rpy).
-Run `python tools/template.py <game-dir>` first if you do not have it.
+Requires the game folder to contain tl_template/ (the original English
+templates, imported by tools/template.py).
 """
+import json
 import os
 import shutil
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import tlparse  # noqa: E402
-
-OUT = os.path.join(tlparse.ROOT, "patch", "tl", "schinese")
-TRANS = os.path.join(tlparse.ROOT, "data", "tl_trans.json")
-TEMPLATE = os.path.join(tlparse.ROOT, "tl_template")
+import games          # noqa: E402
+import tlparse        # noqa: E402
 
 
 def esc(s, q):
@@ -33,19 +31,24 @@ def esc(s, q):
     return "".join(out)
 
 
-def main():
-    if not os.path.isdir(TEMPLATE):
-        sys.exit("tl_template/ missing -- run: python tools/template.py <game-dir>")
-    tlparse.TL = TEMPLATE
+def main(argv):
+    slug, _ = games.take_slug(argv)
+    game, manifest = games.manifest(slug)
+    lang = manifest["language"]
 
-    files, order = tlparse.load()
-    tr = {}
-    if os.path.exists(TRANS):
-        import json
-        tr = json.load(open(TRANS, encoding="utf-8"))
+    template = games.path_of(game, "tl_template")
+    out = games.path_of(game, "patch", "tl", lang)
+    trans = games.path_of(game, "data", "tl_trans.json")
 
-    if os.path.isdir(OUT):
-        shutil.rmtree(OUT)
+    if not os.path.isdir(template):
+        sys.exit("%s is missing -- run: python tools/template.py <renpy-game-dir>"
+                 " --game %s" % (template, manifest["slug"]))
+
+    files, order = tlparse.load(template)
+    tr = json.load(open(trans, encoding="utf-8")) if os.path.exists(trans) else {}
+
+    if os.path.isdir(out):
+        shutil.rmtree(out)
     applied = missing = missing_chars = 0
     for rel in order:
         lines, edits = files[rel]
@@ -58,17 +61,19 @@ def main():
                 continue
             lines[i] = lines[i][:s] + esc(z, q) + lines[i][e:]
             applied += 1
-        dest = os.path.join(OUT, rel.replace("/", os.sep))
+        dest = os.path.join(out, rel.replace("/", os.sep))
         os.makedirs(os.path.dirname(dest), exist_ok=True)
         with open(dest, "w", encoding="utf-8", newline="\n") as f:
             f.write("\ufeff")
             f.write("\n".join(lines))
 
     total = sum(len(edits) for _, edits in files.values())
+    print("%s [%s]" % (manifest["title"], lang))
     print("applied: %d / %d" % (applied, total))
     print("still untranslated: %d (%d chars)" % (missing, missing_chars))
+    print("written to %s" % os.path.relpath(out, games.ROOT))
     return 0 if missing == 0 else 1
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

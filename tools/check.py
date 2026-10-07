@@ -27,11 +27,8 @@ import os
 import re
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TRANS = os.path.join(ROOT, "data", "tl_trans.json")
-OUT = os.path.join(ROOT, "patch", "tl", "schinese")
-SHIM = os.path.join(ROOT, "patch", "zz_zh_locale.rpy")
-GLOSSARY = os.path.join(ROOT, "docs", "glossary.json")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import games  # noqa: E402
 
 TAGS = ["i", "b", "u", "s"]
 CJK = re.compile(r"[\u2e80-\u9fff\uac00-\ud7af\u3000-\u303f\uff00-\uffef]")
@@ -97,17 +94,17 @@ def exempt(k):
     return width(k) >= PROSE_MIN or "\\n" in k or "\n" in k
 
 
-def check_glossary(tr):
+def check_glossary(tr, glossary):
     """docs/glossary.json pins the wording of proper nouns.
 
     The game script itself calls Divinarch and Celestiarch by two different
     English names for the same six beings; nothing but a pinned glossary stops
     a future pass from splitting them into two Chinese words again.
     """
-    if not os.path.isfile(GLOSSARY):
-        bad("docs/glossary.json is missing")
+    if not os.path.isfile(glossary):
+        bad("%s is missing" % os.path.relpath(glossary, games.ROOT))
         return
-    g = json.load(open(GLOSSARY, encoding="utf-8-sig"))
+    g = json.load(open(glossary, encoding="utf-8-sig"))
     for section, terms in g.items():
         if section.startswith("_"):
             continue
@@ -123,15 +120,15 @@ def check_glossary(tr):
                            len(hits), hits[0][:50]))
 
 
-def check_doubling(tr):
+def check_doubling(tr, glossary):
     """Catch terms whose last character got typed twice, e.g. 神谕者者.
 
-    Driven off docs/glossary.json. Only the exact shape "term + term's last
+    Driven off the game's own docs/glossary.json. Only the exact shape "term + term's last
     character" counts -- a bare "CC" scan would flag 克拉拉, 莉莉 and 谢谢.
     """
-    if not os.path.isfile(GLOSSARY):
+    if not os.path.isfile(glossary):
         return
-    g = json.load(open(GLOSSARY, encoding="utf-8-sig"))
+    g = json.load(open(glossary, encoding="utf-8-sig"))
     seen = set()
     for section, terms in g.items():
         if section.startswith("_"):
@@ -148,8 +145,16 @@ def check_doubling(tr):
                     % (tail, en, len(hits), hits[0][:50]))
 
 
-def main():
-    tr = json.load(open(TRANS, encoding="utf-8"))
+def main(argv):
+    slug, _ = games.take_slug(argv)
+    game, manifest = games.manifest(slug)
+    lang = manifest["language"]
+    trans = games.path_of(game, "data", "tl_trans.json")
+    out = games.path_of(game, "patch", "tl", lang)
+    shim = games.path_of(game, "patch", manifest["shim"])
+    glossary = games.path_of(game, "docs", "glossary.json")
+
+    tr = json.load(open(trans, encoding="utf-8"))
 
     empty = [k for k, v in tr.items() if not str(v).strip()]
     if empty:
@@ -187,12 +192,12 @@ def main():
             % (len(stretched), REL_MAX, [k[:40] for k, _ in stretched[:3]]))
 
     nfiles = nlines = 0
-    for dirpath, _, fns in os.walk(OUT):
+    for dirpath, _, fns in os.walk(out):
         for fn in sorted(fns):
             if not fn.endswith(".rpy"):
                 continue
             nfiles += 1
-            rel = os.path.relpath(os.path.join(dirpath, fn), OUT)
+            rel = os.path.relpath(os.path.join(dirpath, fn), out)
             rel = rel.replace(os.sep, "/")
             text = open(os.path.join(dirpath, fn), encoding="utf-8-sig").read()
             nlines += text.count("\n")
@@ -201,12 +206,13 @@ def main():
                 if n % 2:
                     bad("%s: unbalanced [%s] tags (%d)" % (rel, tag, n))
 
-    check_glossary(tr)
-    check_doubling(tr)
+    check_glossary(tr, glossary)
+    check_doubling(tr, glossary)
 
-    if not os.path.isfile(SHIM):
-        bad("patch/zz_zh_locale.rpy is missing")
+    if not os.path.isfile(shim):
+        bad("%s is missing" % os.path.relpath(shim, games.ROOT))
 
+    print("%s [%s]" % (manifest["title"], lang))
     print("translations: %d" % len(tr))
     print("patch files:  %d" % nfiles)
     print("patch lines:  %d" % nlines)
@@ -216,4 +222,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

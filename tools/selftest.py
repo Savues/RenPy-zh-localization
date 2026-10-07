@@ -20,24 +20,36 @@ import os
 import subprocess
 import sys
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DB = os.path.join(ROOT, "data", "tl_trans.json")
-GLOSSARY = os.path.join(ROOT, "docs", "glossary.json")
-CHECK = os.path.join(ROOT, "tools", "check.py")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import games  # noqa: E402
+
+CHECK = os.path.join(games.ROOT, "tools", "check.py")
 ENV = dict(os.environ, PYTHONIOENCODING="utf-8")
+SLUG = [None]
+
+
+def paths():
+    repo, _ = games.manifest(SLUG[0])
+    return (games.path_of(repo, "data", "tl_trans.json"),
+            games.path_of(repo, "docs", "glossary.json"))
 
 
 def run_check():
-    r = subprocess.run([sys.executable, CHECK], capture_output=True, env=ENV)
+    cmd = [sys.executable, CHECK]
+    if SLUG[0]:
+        cmd += ["--game", SLUG[0]]
+    r = subprocess.run(cmd, capture_output=True, env=ENV)
     return r.returncode, r.stdout.decode("utf-8", "replace")
 
 
 def write_db(tr):
-    io.open(DB, "w", encoding="utf-8", newline="\n").write(
+    io.open(paths()[0], "w", encoding="utf-8", newline="\n").write(
         json.dumps(tr, ensure_ascii=False))
 
 
-def main():
+def main(argv):
+    SLUG[0], _ = games.take_slug(argv)
+    DB, GLOSSARY = paths()
     with open(DB, "rb") as f:
         pristine = f.read()
     base = json.loads(pristine.decode("utf-8"))
@@ -98,4 +110,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))
