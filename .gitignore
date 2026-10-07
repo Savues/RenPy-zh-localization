@@ -4,6 +4,7 @@ games/*/tl_template/
 
 # Build scratch
 work/
+dist/
 *.log
 *.tmp
 *.bak
