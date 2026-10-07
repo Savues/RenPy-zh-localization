@@ -1,0 +1,47 @@
+# The game's own translation templates. Imported by tools/template.py; they are
+# the original (English) script and are not ours to redistribute.
+tl_template/
+
+# Build scratch
+work/
+*.log
+*.tmp
+*.bak
+*.orig
+
+# Ren'Py bytecode -- never commit compiled output
+*.rpyc
+*.rpymc
+*.rpyb
+.saves/
+log.txt
+errors.txt
+traceback.txt
+
+# Fonts are deliberately absent from this repo: every mainstream CJK face is
+# either proprietary or too large to carry. See fonts/README.md.
+fonts/*.ttf
+fonts/*.otf
+fonts/*.ttc
+fonts/*.otf2
+fonts/*.woff*
+!fonts/README.md
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Locked-down local overrides
+*.local.json

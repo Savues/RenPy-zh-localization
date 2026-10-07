@@ -1,0 +1,218 @@
+{
+  "_comment": "Canonical Chinese renderings. check.py fails if a banned variant appears anywhere in data/tl_trans.json. Add a term here the moment you settle on a wording, so the choice sticks.",
+  "settings": {
+    "Divinarch": {
+      "zh": "天枢",
+      "banned": [
+        "神架构师",
+        "神架构"
+      ]
+    },
+    "Celestiarch": {
+      "zh": "天枢",
+      "banned": [
+        "神架构师",
+        "神架构"
+      ]
+    },
+    "Oracle": {
+      "zh": "神谕者",
+      "banned": [
+        "论者"
+      ]
+    },
+    "Circle of Eden": {
+      "zh": "伊甸之环",
+      "banned": [
+        "伊甸圆环"
+      ]
+    },
+    "Luminox": {
+      "zh": "露米诺克斯",
+      "banned": []
+    },
+    "Witch of Darkness": {
+      "zh": "暗之魔女",
+      "banned": [
+        "黑暗魔女",
+        "暗魔女"
+      ]
+    },
+    "Time Pocket": {
+      "zh": "时间口袋",
+      "banned": [
+        "时间夹缝"
+      ]
+    },
+    "End of Times": {
+      "zh": "时间尽头",
+      "banned": [
+        "时端"
+      ]
+    },
+    "Wayfarer": {
+      "zh": "游荡者",
+      "banned": [
+        "游浪者"
+      ]
+    },
+    "Spiritual Energy": {
+      "zh": "灵力",
+      "banned": []
+    },
+    "Temporia": {
+      "zh": "坦皮奥拉",
+      "banned": []
+    },
+    "Thallum": {
+      "zh": "萨勒姆",
+      "banned": []
+    },
+    "Lunebrook": {
+      "zh": "卢恩布鲁克",
+      "banned": []
+    },
+    "Brookdale": {
+      "zh": "布鲁克代尔",
+      "banned": []
+    },
+    "Meliode": {
+      "zh": "梅利奥德",
+      "banned": []
+    }
+  },
+  "characters": {
+    "Ravena": {
+      "zh": "拉维娜",
+      "nick": null
+    },
+    "Gianna": {
+      "zh": "吉安娜",
+      "nick": null
+    },
+    "Yuki": {
+      "zh": "由纪",
+      "nick": null
+    },
+    "Mai": {
+      "zh": "梅",
+      "nick": null
+    },
+    "Tobias": {
+      "zh": "托拜厄斯",
+      "nick": null
+    },
+    "Sophia": {
+      "zh": "索菲娅",
+      "nick": null
+    },
+    "Vela": {
+      "zh": "薇拉",
+      "nick": null
+    },
+    "Lily": {
+      "zh": "莉莉",
+      "nick": null
+    },
+    "Aqua": {
+      "zh": "阿库娅",
+      "nick": null
+    },
+    "Cinnie": {
+      "zh": "辛西",
+      "nick": null
+    },
+    "Gris": {
+      "zh": "葛莉斯",
+      "nick": null
+    },
+    "Natasha": {
+      "zh": "娜塔莎",
+      "nick": "娜塔"
+    },
+    "Selena": {
+      "zh": "塞莱娜",
+      "nick": null
+    },
+    "Mara": {
+      "zh": "玛拉",
+      "nick": null
+    },
+    "Lucia": {
+      "zh": "露西娅",
+      "nick": null
+    },
+    "Ailana": {
+      "zh": "艾拉娜",
+      "nick": null
+    },
+    "Sahar": {
+      "zh": "萨哈尔",
+      "nick": null
+    },
+    "Milena": {
+      "zh": "米莱娜",
+      "nick": "米莉"
+    },
+    "Nebulys": {
+      "zh": "涅布利斯",
+      "nick": null
+    },
+    "Zack": {
+      "zh": "扎克",
+      "nick": null
+    },
+    "Elara": {
+      "zh": "埃拉拉",
+      "nick": null
+    },
+    "Juliana": {
+      "zh": "朱丽安娜",
+      "nick": null
+    },
+    "Clara": {
+      "zh": "克拉拉",
+      "nick": null
+    },
+    "Korvah": {
+      "zh": "科尔瓦",
+      "nick": null
+    },
+    "Solstice": {
+      "zh": "索尔斯蒂斯",
+      "nick": null
+    },
+    "Cealith": {
+      "zh": "凯莉丝",
+      "nick": null
+    }
+  },
+  "systems": {
+    "Fire Caster": {
+      "zh": "火系施法者",
+      "banned": [
+        "火法师"
+      ]
+    },
+    "Light Caster": {
+      "zh": "光系施法者",
+      "banned": []
+    },
+    "Dark Caster": {
+      "zh": "暗系施法者",
+      "banned": []
+    },
+    "Wind Caster": {
+      "zh": "风系施法者",
+      "banned": []
+    },
+    "Nexian": {
+      "zh": "涅克西安",
+      "banned": []
+    },
+    "Moonborn": {
+      "zh": "月生族",
+      "banned": []
+    }
+  }
+}
