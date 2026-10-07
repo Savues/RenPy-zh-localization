@@ -36,8 +36,9 @@ RenPy-zh-localization/
 │   ├── games.py                     按 slug 定位游戏目录
 │   └── tlparse.py                   Ren'Py 翻译模板解析器
 └── docs/
-    ├── fonts.md               中文字体为什么不放进仓库
-    └── adding-a-game.md       怎么新增一个游戏的汉化
+    ├── translation-workflow.md  汉化流程 + Ren'Py 引擎的坑（必读）
+    ├── adding-a-game.md         怎么新增一个游戏的汉化
+    └── fonts.md                 中文字体为什么不放进仓库
 ```
 
 游戏目录和工具链是分开的：加新游戏只需要在 `games/` 下建一个新文件夹，**不用改任何工具代码**。
@@ -75,6 +76,10 @@ python tools/uninstall.py "C:\Games\Eden5-pc"
 | `python tools/check.py` | 校验译文库与补丁 |
 | `python tools/selftest.py` | 反向验证 `check.py` 的每一项检查都会真的报错 |
 | `python tools/games.py` | 列出仓库里的游戏 |
+| `python tools/check_links.py` | 检查文档之间的相对链接没断 |
+
+想了解整个流程、Ren'Py 引擎本身的坑，以及校验器是怎么被自己的误报逼出来的，
+看 [`docs/translation-workflow.md`](docs/translation-workflow.md)。
 
 改动译文后的标准流程：
 
@@ -119,4 +124,6 @@ python tools/build_tl.py && python tools/check.py && python tools/selftest.py
 
 ## 贡献翻译
 
-见 [各游戏的 README](games/eden-chapter5/README.md#术语表约定) 与 [`docs/adding-a-game.md`](docs/adding-a-game.md)。
+- 流程与引擎注意事项：[`docs/translation-workflow.md`](docs/translation-workflow.md)
+- 术语约定：[Eden Chapter 5 的 README](games/eden-chapter5/README.md#术语表约定)
+- 新增一个游戏：[`docs/adding-a-game.md`](docs/adding-a-game.md)
