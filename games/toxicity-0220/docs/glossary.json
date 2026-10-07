@@ -1,0 +1,211 @@
+{
+  "_comment": "TOXICity character names and stat labels. Unlike most games in this repo, almost every one of these is not a translation choice -- game/define_default.rpy already shipped them in Chinese in the original 0.22.0 English release (define k = Character(\"卡莉\") and so on). This file pins them so a future pass cannot split one character across two spellings, and so the choices we DID make (relationship stats, room names) stay put.",
+  "characters": {
+    "Kallie": {
+      "zh": "卡莉",
+      "banned": [
+        "卡丽",
+        "凯莉",
+        "凯丽",
+        "卡利",
+        "卡莉丝"
+      ]
+    },
+    "Laura": {
+      "zh": "劳拉",
+      "banned": [
+        "萝拉",
+        "蘿拉",
+        "劳菈",
+        "拉菈",
+        "萝菈"
+      ]
+    },
+    "Shelley": {
+      "zh": "雪莉",
+      "banned": [
+        "雪丽",
+        "谢莉",
+        "雪莱",
+        "雪莉儿"
+      ]
+    },
+    "Eve": {
+      "zh": "伊芙",
+      "banned": [
+        "伊夫",
+        "艾芙",
+        "爱芙",
+        "伊芙丝"
+      ]
+    },
+    "Otis": {
+      "zh": "奥蒂斯",
+      "banned": [
+        "奥蒂斯儿",
+        "奥蒂滋",
+        "奥迪斯"
+      ]
+    },
+    "Andrew": {
+      "zh": "安德鲁",
+      "banned": [
+        "安德鲁儿",
+        "安德鲁兹",
+        "安德路"
+      ]
+    },
+    "Charles": {
+      "zh": "查尔斯",
+      "banned": [
+        "查尔斯儿",
+        "查理斯",
+        "查尔斯顿"
+      ]
+    },
+    "Annie": {
+      "zh": "安妮",
+      "banned": [
+        "安妮儿",
+        "安尼",
+        "安尼儿"
+      ]
+    },
+    "Nancy": {
+      "zh": "南希",
+      "banned": [
+        "南茜",
+        "南希儿",
+        "楠希"
+      ]
+    },
+    "Macy": {
+      "zh": "梅茜",
+      "banned": [
+        "梅茜儿",
+        "梅西",
+        "玛茜"
+      ]
+    },
+    "Keith": {
+      "zh": "基思",
+      "banned": [
+        "基思儿",
+        "基斯",
+        "凯思"
+      ]
+    },
+    "Raul": {
+      "zh": "劳尔",
+      "banned": [
+        "劳尔儿",
+        "劳昂",
+        "拉尔"
+      ]
+    }
+  },
+  "relationship_stats": {
+    "Trust": {
+      "zh": "信任",
+      "banned": [
+        "信赖",
+        "信任值",
+        "好感度"
+      ]
+    },
+    "Desire": {
+      "zh": "欲望",
+      "banned": [
+        "欲望值",
+        "慾望"
+      ]
+    },
+    "Love": {
+      "zh": "爱意",
+      "banned": [
+        "爱意值"
+      ]
+    },
+    "Friend": {
+      "zh": "好感",
+      "banned": [
+        "好感度"
+      ]
+    },
+    "Anxiety": {
+      "zh": "焦虑",
+      "banned": [
+        "焦虑值"
+      ]
+    }
+  },
+  "places": {
+    "Ladies' Room": {
+      "zh": "洗手间",
+      "banned": [
+        "女士洗手间",
+        "盥洗室",
+        "化妆室",
+        "女厕所"
+      ]
+    },
+    "Student Center": {
+      "zh": "学生中心",
+      "banned": [
+        "学生中信"
+      ]
+    },
+    "New York": {
+      "zh": "纽约",
+      "banned": [
+        "纽约市",
+        "新约克"
+      ]
+    }
+  },
+  "_ladies_bathroom_note": "\"ladies' bathroom\" is deliberately NOT pinned to 洗手间. The game uses two different English phrases for two different things: the proper-noun \"Ladies' Room\" (a specific room the characters talk about by name) and the ordinary \"ladies' bathroom\". The former is 洗手间 / 女洗手间 depending on register; the latter is always 女洗手间. Only the proper noun is pinned above.",
+  "_kept_verbatim": [
+    "All 17 OST track names in game/options.rpy -- The Spiders Of Battersea Park, Corpse Rot, Black Rose, Terror Drome and so on. Album and track titles are names, not prose; translating them would make the in-game music list impossible to match against the soundtrack.",
+    "\"Page Up\" / \"Page Down\" in game/screens.rpy -- key names.",
+    "The three gag lines in game/dump.rpy -- that file is a developer's scratch script the game never calls (it is wrapped in `if False:` by the patch), so it is left as documentation.",
+    "Two profanity lines in game/script3.rpy (\"What the fuck!? Marley?\", \"Hey, whoa motherfucker! What the fuck!?\") -- kept in English on purpose so the profanity stays as blunt as the surrounding register.",
+    "The leetspeak strings in game/specialscreens.rpy (3r4mThgIn, 3clff0 34+, 4om3 ag@ln) -- those are the in-game \"glitch\" title cards, deliberately illegible in the original.",
+    "Every asset path and internal identifier (/gui/gallery/ach_chapter1_hover.webp, shelley_ch8_sex2, current_movie_ch9_s, ...) -- not player-visible prose."
+  ],
+  "_kept_verbatim_note": "None of the above appear in data/tl_trans.json: the database is built only from literal pairs where the Chinese side actually contains an ideograph, so deliberately-untranslated strings are absent rather than present-and-equal. That means tools/check.py --game toxicity-0220 reports 0 untranslated entries. The list above exists so the next person to sweep for English knows these were looked at and kept.",
+  "mod_terms": {
+    "Lust points": {
+      "zh": "情欲点",
+      "banned": [
+        "情欲数",
+        "欲期点"
+      ]
+    },
+    "H scenes": {
+      "zh": "情色场景",
+      "banned": [
+        "成人场景"
+      ]
+    },
+    "Pregnant": {
+      "zh": "怀孕",
+      "banned": [
+        "已怀孕"
+      ]
+    },
+    "Not pregnant": {
+      "zh": "未怀孕",
+      "banned": [
+        "未怀孕状"
+      ]
+    },
+    "(Your choice)": {
+      "zh": "你的选择",
+      "banned": [
+        "你的回答"
+      ]
+    }
+  },
+  "_banned_is_a_blunt_substring_match": "banned is checked with a plain substring search over every value in data/tl_trans.json, so a term that is ALSO an ordinary Chinese word cannot be listed: 爱情, 友谊, 不安, 压力, 爱心 and 情欲 all occur in ordinary prose here (the last one belongs to the mod's own 情欲点 counter, which is a different thing from the Desire stat). Those are pinned by section comment instead. What is banned below are only name/label variants that have no legitimate use: 凯莉 for 卡莉, 南茜 for 南希, 基斯 for 基思 and so on.",
+  "_not_pregnant_note": "the mod's own label is 未怀孕; two dialogue lines say 没怀孕 instead, which is the same thing in ordinary speech, so it is not banned."
+}

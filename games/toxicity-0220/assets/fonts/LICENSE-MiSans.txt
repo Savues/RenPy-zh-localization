@@ -1,0 +1,37 @@
+MiSans Regular / Bold
+Copyright (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd. All Rights Reserved.
+Upstream: https://hyperos.mi.com/font/
+
+Shipped unmodified, under two filenames:
+
+  MiSans-Regular.ttf   the face that actually renders this patch. The game asks
+                       for "fonts/msyh.ttc" in 291 places (every gui.*_font
+                       slot plus inline {font=...} tags); the patch's shim
+                       rewrites that request to this file at startup rather than
+                       overwriting msyh.ttc on disk.
+  MiSans-Bold.ttf      reached through the same replacement map whenever the
+                       engine asks for a bold face. The scripts carry ~90 <b>
+                       tags, so this is genuinely used.
+
+Both files are byte-identical to the copies bundled in
+games/cosycafe-0142/assets/fonts/ and games/eden-chapter5/assets/fonts/, so
+every game in this repository ships the same MiSans build.
+
+WHY A REPLACEMENT MAP INSTEAD OF OVERWRITING THE FONT FILE
+---------------------------------------------------------
+TOXICity already ships fonts/msyh.ttc (Microsoft YaHei), which has full CJK
+coverage -- Chinese renders fine before this patch. MiSans is a typographic
+upgrade, not a tofu fix. That is why nothing is overwritten: uninstalling
+restores the exact original game and the player is left with the game's own
+font, not a patched one.
+
+NOTE ON REDISTRIBUTION
+----------------------
+Xiaomi markets MiSans as free for commercial use, but the font file carries no
+licence text: its name table has no licence description (nameID 13) and no
+licence URL, and the copyright line ends in "All Rights Reserved". Unlike SIL
+OFL, which grants redistribution explicitly, this file grants no written
+redistribution right. Shipping it inside a public repository is a judgement
+call made by whoever publishes this package. Drop these two files and the patch
+still renders -- the shim detects the missing font and leaves the game on
+fonts/msyh.ttc (see docs/approach.md).

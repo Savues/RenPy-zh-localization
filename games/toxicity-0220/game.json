@@ -1,0 +1,33 @@
+{
+  "slug": "toxicity-0220",
+  "title": "TOXICity 0.22.0",
+  "author": "Ils Productions",
+  "renpy_version": "7.4.5",
+  "language": "schinese",
+  "language_name": "简体中文",
+
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "coverage": { "translated": 28524, "total": 28524 },
+
+  "shim": "zzz_font_misans.rpy",
+  "font_strategy": "fallback",
+  "font_assets": [
+    { "path": "assets/fonts/MiSans-Regular.ttf", "names": ["MiSans-Regular.ttf"] },
+    { "path": "assets/fonts/MiSans-Bold.ttf", "names": ["MiSans-Bold.ttf"] }
+  ],
+  "font_license": "assets/fonts/LICENSE-MiSans.txt",
+  "font_credit": "MiSans (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd.",
+
+  "_why_script_override": "Two hard blocks, both in docs/approach.md. (1) The release ships no game/tl/<lang>/ templates, so tools/template.py has nothing to import and tools/build_tl.py has nothing to compile against. (2) The patch also carries a third-party mod whose scripts live in game/mod/ entirely outside game/tl/, which a translate-block patch cannot express. patch/game/ mirrors the game's own game/ directory.",
+
+  "_why_ps1": "tools/install.py only knows how to place game/tl/<lang>/, a shim and fonts. It cannot overwrite the game's own scripts, and this patch is nothing but overwritten scripts, so it ships its own installer next to the patch.",
+
+  "_coverage_note": "28,524 player-visible literals, 100% translated. Counted from the shipped Chinese scripts, NOT from data/tl_trans.json -- that database is reverse-derived from the finished .rpy and is not a build input, so it cannot report coverage. It holds 25,300 deduplicated EN->ZH pairs, which is lower than 28,524 because repeated short strings (moans, menu options, stat deltas) collapse in the dictionary; every one of them is still present in the scripts. Verified with tools/check.py and tools/selftest.py (93 injected faults, 93 caught).",
+
+  "_bundled_mod": "GugatronCheats.rpy / GugatronUnlock.rpy / mod.rpy, translated and shipped under patch/game/mod/, plus a cheat-menu button inserted at screens.rpy:267. Third-party work; the patch provides the Chinese translation only. See README.md.",
+
+  "_font_mechanism": "Neither documented strategy is literally true here. The game ships fonts/msyh.ttc (Microsoft YaHei), which already has full CJK coverage, so Chinese renders fine before this patch and there is no tofu to fix -- MiSans is a typographic upgrade. Nothing on disk is overwritten: patch/zzz_font_misans.rpy rewrites all 291 requests for fonts/msyh.ttc to MiSans at startup, and patch/game/mod/zzz_zh_font.rpy does the same for the mod's two decorative faces (fonts/DCC - Ash.otf, mod/Monster Racing - Personal Used.otf), which have no CJK glyphs at all. font_strategy is recorded as 'fallback' because that is the closer of the two -- the game's own font files survive untouched -- but the implementation is config.font_replacement_map, not a FontGroup. If the MiSans files are missing the shim skips itself and the game stays on msyh.ttc rather than failing to start.",
+
+  "_renpy_7_note": "This game runs Ren'Py 7.4.5, not 8.x. renpy.loadable() and config.font_replacement_map both exist there (the engine's own renpy/common/00voice.rpy calls renpy.loadable), but renpy.loader.loadable is an 8.x shape -- do not copy cosycafe-0142's shim verbatim into this game's tree."
+}

@@ -7,15 +7,23 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 ## 已收录
 
 <!-- games:start -->
-| 游戏 | 原作 | 语言 | 状态 | 译文量 |
-|---|---|---|---|---|
-| [Cosy Cafe 0.14.2](games/cosycafe-0142/) | Cosy Creator | 简体中文 | ✅ 100% | 25,828 条 |
-| [Eden Chapter 5](games/eden-chapter5/) | FnB Productions | 简体中文 | ✅ 100% | 15,713 条 |
-| [Sinful Summer Chapter 3.6](games/sinfulsummer-chapter36/) | Ruykiru | 简体中文 | ✅ 100% | 22,430 条 |
-| *（来加一个？）* | | | | |
+| 游戏 | 原作 | 语言 | 方案 | 状态 | 译文量 |
+|---|---|---|---|---|---|
+| [Cosy Cafe 0.14.2](games/cosycafe-0142/) | Cosy Creator | 简体中文 | 脚本覆盖 | ✅ 100% | 32,639 条 |
+| [Eden Chapter 5](games/eden-chapter5/) | FnB Productions | 简体中文 | translate 块 | ✅ 100% | 15,713 条 |
+| [Sinful Summer Chapter 3.6](games/sinfulsummer-chapter36/) | Ruykiru | 简体中文 | translate 块 | ✅ 100% | 22,430 条 |
+| [TOXICity 0.22.0](games/toxicity-0220/) | Ils Productions | 简体中文 | 脚本覆盖 | ✅ 100% | 28,524 条 |
+| *（来加一个？）* | | | | | |
 <!-- games:end -->
 
-> 覆盖率 = 已译条目 ÷ 全部可译条目。`check.py` 会强制要求 100%，未译条目直接报错。
+> 覆盖率 = 已译条目 ÷ 全部可译条目。「方案」一列说明这款游戏用哪种方式打补丁：
+> `translate 块` 是游戏自带翻译模板时的做法，译文库是**构建输入**，`check.py` 能拿它
+> 和英文原文逐条比对，未译条目直接报错。`脚本覆盖` 是游戏压根不带模板时的做法，补丁
+> 直接替换游戏自己的脚本——这时没有构建输入可比，覆盖率由 `game.json` 的 `coverage`
+> 断言，`check.py` 不再从译文库推导，也**不会**假装能替它判断覆盖率。
+>
+> 两种都是这个仓库认的方案，不存在哪条是标准、哪条是例外。新游戏选哪条，见
+> [`docs/adding-a-game.md`](docs/adding-a-game.md)。
 >
 > 上面这张表由 `python tools/games.py --readme` 从 `games/` 生成，两个标记之间的内容不要手改。
 > `check_links.py` 会核对它有没有过期。
@@ -29,19 +37,36 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 游戏的 `game/` 文件夹，选择覆盖。不用装 Python，不用跑脚本，不用联网，**也不用自己找
 字体**——中文字体已经打进包里了。
 
+包里 `game/` 的内容和游戏的 `game/` 是**一一对应**的，整体复制、选择覆盖即可。
+具体对应关系取决于那个游戏用哪种方案：
+
+**`translate 块` 补丁**（多一层 `tl/<lang>/`）：
+
 ```
 game/tl/schinese/      →  <游戏目录>/game/tl/schinese/
 game/zz_zh_locale.rpy  →  <游戏目录>/game/zz_zh_locale.rpy
 game/fonts/*           →  <游戏目录>/game/fonts/
 ```
 
-中间那个 `zz_zh_locale.rpy` 是语言与字体补丁，文件名以各游戏 `game.json` 里的 `shim`
-为准。每个游戏自己的 `README.md` 写明了它的确切文件清单。
+**`脚本覆盖` 补丁**（直接顶掉游戏自己的 `.rpy`，不多一层）：
 
+```
+game/gui.rpy           →  <游戏目录>/game/gui.rpy
+game/scripts/*.rpy     →  <游戏目录>/game/scripts/
+game/zz_zh_locale.rpy  →  <游戏目录>/game/zz_zh_locale.rpy
+game/fonts/*           →  <游戏目录>/game/fonts/
+```
+
+差一层目录不会被 Ren'Py 报错，只会**静默忽略**——补丁装上了，游戏还是英文。
+所以每个游戏自己的 `README.md` 都写死了它的确切文件清单，别照着别的游戏抄。
+
+`zz_zh_locale.rpy` 是语言与字体补丁，文件名以各游戏 `game.json` 里的 `shim` 为准。
 装完直接启动游戏，中文自动启用。完整说明在补丁包内的 `README.md`。
 
-仓库里的 `tools/install.py` 是同一件事的自动化版本，适合愿意跑脚本的人。
-两者装出来的东西完全一样。
+`tools/install.py` 是这件事的自动化版本，适合愿意跑脚本的人，但它只会摆译文树、
+`shim` 和字体这三样——**只服务 `installer` 为 `py` 的游戏**。`脚本覆盖` 的补丁要顶掉
+游戏自己的脚本，仓库里那个脚本做不了，所以这类游戏自带一个安装器，
+`game.json` 的 `installer` 字段写明用哪个（见各游戏的 `README.md`）。
 
 ---
 
@@ -52,20 +77,21 @@ RenPy-zh-localization/
 ├── games/
 │   └── <slug>/               ← 每个游戏一个独立目录
 │       ├── README.md             该游戏的安装/卸载/重建说明
-│       ├── game.json             元数据：引擎版本、语言、字体方案、要带的字体文件
+│       ├── game.json             元数据：方案、装法、覆盖率、字体、额外检查
 │       ├── assets/fonts/         随补丁分发的中文字体 + 授权声明
-│       ├── data/tl_trans.json    译文数据库（以英文原文为 key）
+│       ├── data/tl_trans.json    译文数据库（仅 translate 块方案是构建输入）
 │       ├── docs/
 │       │   ├── glossary.json           术语表，由 check.py 强制执行
 │       │   ├── translation-log.md      翻译档案：术语决策与修过的问题
 │       │   └── translation-workflow.md 本次汉化的过程存档
 │       └── patch/                构建产物，已提交，可直接安装
-│           ├── tl/<lang>/           翻译后的 .rpy
+│           ├── tl/<lang>/           translate 块方案：翻译后的 .rpy
+│           ├── game/                脚本覆盖方案：顶掉游戏自己的 .rpy
 │           └── <shim>               语言与字体补丁
 ├── tools/                    共用工具链（与具体游戏无关）
-│   ├── install.py  uninstall.py     装 / 卸补丁
-│   ├── template.py  build_tl.py     导入模板 / 构建补丁
-│   ├── check.py    selftest.py      校验 / 反向验证校验
+│   ├── install.py  uninstall.py     装 / 卸补丁（只服务 installer=py 的游戏）
+│   ├── template.py  build_tl.py     导入模板 / 构建补丁（只服务 translate 块方案）
+│   ├── check.py    selftest.py      校验 / 反向验证校验（按方案选检查集）
 │   ├── games.py                     列出游戏、按 slug 定位目录
 │   ├── package_release.py           生成给玩家用的覆盖安装包（写到 dist/）
 │   ├── publish_release.py           把所有游戏的包挂到同一个 GitHub Release
@@ -101,17 +127,17 @@ python tools/uninstall.py "C:\Games\Eden-Chapter5-pc" --game eden-chapter5
 
 ## 工具链
 
-`--game <slug>` 用来指定操作哪个游戏。仓库里只有一个游戏时可以省略；现在有两个，
+`--game <slug>` 用来指定操作哪个游戏。仓库里只有一个游戏时可以省略；现在有三个，
 `games.py`、`check_links.py`、`publish_release.py` 之外的工具**必须带上**，否则会报错
 并列出可用的 slug。
 
 | 命令 | 作用 |
 |---|---|
-| `python tools/install.py <游戏目录> --game <slug>` | 安装补丁 |
-| `python tools/uninstall.py <游戏目录> --game <slug> [--purge-backup]` | 卸载并还原 |
-| `python tools/template.py <游戏目录> --game <slug>` | 导入英文原文模板（仅首次） |
-| `python tools/build_tl.py --game <slug>` | 由模板 + 译文库重新构建补丁 |
-| `python tools/check.py --game <slug>` | 校验译文库与补丁 |
+| `python tools/install.py <游戏目录> --game <slug>` | 安装补丁（仅 `installer=py` 的游戏） |
+| `python tools/uninstall.py <游戏目录> --game <slug> [--purge-backup]` | 卸载并还原（能读任一安装器写的 manifest） |
+| `python tools/template.py <游戏目录> --game <slug>` | 导入英文原文模板（仅首次、仅 translate 块方案） |
+| `python tools/build_tl.py --game <slug>` | 由模板 + 译文库重新构建补丁（仅 translate 块方案） |
+| `python tools/check.py --game <slug>` | 校验译文库与补丁（按方案选检查集） |
 | `python tools/selftest.py --game <slug>` | 反向验证 `check.py` 的每一项检查都会真的报错 |
 | `python tools/games.py [--readme]` | 列出仓库里的游戏；`--readme` 重写本文件的「已收录」表格（不需要 `--game`） |
 | `python tools/package_release.py --game <slug> [--version v1.0.0]` | 生成单个游戏的覆盖安装包（写到 `dist/`） |
@@ -128,31 +154,54 @@ python tools/uninstall.py "C:\Games\Eden-Chapter5-pc" --game eden-chapter5
 跨游戏复用的通用说明在 [`docs/`](docs/)：怎么新增一个游戏、字体是怎么解决的、
 维护者怎么发版。
 
-改动译文后的标准流程：
+改动译文后的流程。后两步所有游戏都一样，第一步看方案：
 
 ```bash
-python tools/build_tl.py --game <slug> \
-  && python tools/check.py --game <slug> \
+# translate 块方案：从模板 + 译文库重建补丁
+python tools/build_tl.py --game <slug>
+
+# 脚本覆盖方案：patch/ 里就是成品脚本，改完直接校验
+
+python tools/check.py --game <slug> \
   && python tools/selftest.py --game <slug>
 ```
 
+对 `脚本覆盖` 的游戏跑 `build_tl.py` 只会得到一句「缺 `tl_template/`」：那个游戏没有
+翻译模板可以编译，补丁是直接改写脚本做出来的。
+
 ### 校验查什么
 
-`tools/check.py` 覆盖九类问题：
+`tools/check.py` 按方案选检查集。**两种方案都查**的：
 
-- **未译条目** —— 值与英文原文完全相同，且又不是变量 / 标签 / 按键名之类必须保留的东西
-- **空译文** —— 值是空串或纯空白
 - **乱码** —— U+FFFD 等替换字符
 - **重复空格** —— 两个汉字之间多打了一个空格
 - **叠字错误** —— 术语多打一个字，例如把「神谕者」写成「神谕者者」
 - **术语冲突** —— `docs/glossary.json` 里登记的禁用译名
-- **行宽溢出** —— 按*渲染列宽*算，一个汉字算两列
 - **标签不闭合** —— `[i]` `[b]` 等成对标签数量为奇数
-- **文件缺失** —— `docs/glossary.json` 或语言补丁 `shim` 不在
+- **文件缺失** —— `docs/glossary.json`、语言补丁 `shim`、字体文件不在
+
+**只有 `translate 块` 方案**查的（需要拿译文和英文原文比）：
+
+- **未译条目** —— 值与英文原文完全相同，且又不是变量 / 标签 / 按键名之类必须保留的东西
+- **空译文** —— 值是空串或纯空白
+- **行宽溢出** —— 按*渲染列宽*算，一个汉字算两列
+
+> **`脚本覆盖` 方案为什么少三项**：它没有译文库可读——`data/tl_trans.json` 是从
+> 做完的中文脚本里反向导出来的副产品，拿它检查补丁等于让补丁给自己判卷。剩下三项
+> 都得拿英文原文当基准，那种补丁本来就不依赖英文原文（游戏压根没发模板）。这一款
+> 游戏自己需要验的东西，写进 `game.json` 的 `extra_checks`（Cosy Cafe 在那里查
+> `WeekDays` 枚举有没有被写坏）。
 
 > **行宽为什么按列宽算**：`H-how…` 只有 6 列，翻成「怎、怎么会……」是 12 列——看着涨了一倍，其实一个汉字也就占两列，离对话框容量还差得远。真正会撑破对话框的是长句子，所以豁免了本来就长、且在可滚动面板里显示的文本（比如 Eden 的 Codex 词条）。
 
-> **`selftest.py` 是干什么的**：一个不会报警的检查等于没有检查。这个命令会往译文库里逐条注入已知错误，要求 `check.py` 每次都以非零码退出，最后再把数据库**逐字节**还原并校验。改阈值或改规则之后跑一次，就知道有没有把哪项检查改瞎了。
+> **有意保留英文的字符串**登记在**各游戏自己的** `docs/glossary.json` 的
+> `_kept_verbatim` 里，不放在 `check.py` 的公共表里。公共表曾经把三款游戏的例外混在
+> 一起，结果一款游戏的字体格式串要靠另外两款游戏的赞助者名单撑着才算合法。
+
+> **`selftest.py` 是干什么的**：一个不会报警的检查等于没有检查。这个命令会**先在
+> 干净树上跑一遍**并要求 `check.py` 退出 0（不然注入什么都「成功」，那个数字就没意义
+> 了），再往译文库或脚本里逐条注入已知错误，要求每次都以非零码退出，最后把文件
+> **逐字节**还原并校验。改阈值或改规则之后跑一次，就知道有没有把哪项检查改瞎了。
 
 ---
 
@@ -162,7 +211,7 @@ python tools/build_tl.py --game <slug> \
 
 ## 字体
 
-中文字体打包进补丁里，玩家解压就能用，不用自己去装字体。目前两款游戏都用 MiSans，
+中文字体打包进补丁里，玩家解压就能用，不用自己去装字体。目前三款游戏都用 MiSans，
 但**生效方式**不同，因为它们对字体的要求不一样：
 
 - **Eden Chapter 5** 把中文字体以游戏硬编码的每个文件名各存一份，覆盖原有的西文字体——
@@ -170,6 +219,8 @@ python tools/build_tl.py --game <slug> \
 - **Sinful Summer Chapter 3.6** 只放**一份** MiSans（约 7.7 MB），由 `zz_zh_locale.rpy` 注册到
   `renpy.config.font_name_map`。原作为 `FontGroup`：游戏原字体绘它有字形的部分，MiSans 给中文。
   中文能正常显示，拉丁文又保留了原来的字体外观——这是覆盖字体文件做不到的。
+- **Cosy Cafe 0.14.2** 同样是 `fallback`，但游戏里的 `[b]` 加粗是空的，得额外带一份
+  `MiSans-Bold.ttf` 让粗体有字形可画；两份字体都只放一份，不覆盖任何原文件。
 
 字体机制、怎么换一款、以及 MiSans 的再分发授权情况，详见 [`docs/fonts.md`](docs/fonts.md)。
 
@@ -180,7 +231,7 @@ python tools/build_tl.py --game <slug> \
 - 本仓库的**代码与工具链**以 MIT 协议发布，见 [`LICENSE`](LICENSE)。MIT 的适用范围只有
   `tools/` 里的工具链和仓库本身的骨架文件：**不**涉及补丁所针对的那些游戏，也不涉及
   译文所依据的原始脚本与素材——那些仍属各自作者。
-- **各游戏本身**的版权归各自作者所有。本仓库**不包含**游戏的任何程序文件、图像、音频或原始脚本；导入用的英文原文（`games/*/tl_template/`）也已被 `.gitignore` 排除。
+- **各游戏本身**的版权归各自作者所有。本仓库**不包含**游戏的任何程序文件、图像、音频或原始脚本；导入用的英文原文（`games/*/tl_template/`）也已被 `.gitignore` 排除。走「脚本覆盖」方案的游戏，`games/*/patch/game/` 里是**被汉化改写过的**脚本（`define`、逻辑、变量名都还在），它们是翻译作品的产物、不是原版的复制品，但一样受各自作者的版权约束。
 - `games/*/data/` 与 `games/*/patch/` 属于**同人翻译作品**，仅供学习交流使用。请自行确认当地法律与原作方的授权状况。译文不能整包塞回游戏目录再传给别人。
 - 本项目与任何游戏厂商无任何关联。
 
