@@ -127,3 +127,28 @@ python tools/build_tl.py && python tools/check.py && python tools/selftest.py
 - 流程与引擎注意事项：[`docs/translation-workflow.md`](docs/translation-workflow.md)
 - 术语约定：[Eden Chapter 5 的 README](games/eden-chapter5/README.md#术语表约定)
 - 新增一个游戏：[`docs/adding-a-game.md`](docs/adding-a-game.md)
+
+### 推送凭据
+
+这台机器没装 Git Credential Manager，所以把凭据交给 git 自带的 `store`
+helper，并落到**仓库外**的独立文件：
+
+```bash
+git config --global credential.helper "store --file=$HOME/.renpy-zh-credentials"
+
+printf 'protocol=https
+host=github.com
+username=x-access-token
+password=<TOKEN>
+
+' \
+  | git credential approve
+```
+
+之后 `git push` 直接可用，token 不必再出现在命令行里。
+
+> `store` helper 是**明文**存储的。它比写进 `.git/config` 或每次命令行参数
+> 干净一点（仓库里查不到、命令历史里查不到），但仍然不是加密存储。Windows 上
+> 如果能用 Git Credential Manager 或 WinCred，优先用它们——凭据会进系统凭据库。
+> 详见仓库根目录下的 `.renpy-zh-credentials` 是否存在，以及 `git config
+> --global --unset credential.helper` 如何撤销。
