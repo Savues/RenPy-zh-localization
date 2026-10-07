@@ -1,0 +1,45 @@
+{
+  "slug": "dropout-saga-0120",
+  "title": "DropOut Saga 0.12.0b",
+  "author": "LazyBloodLines",
+  "renpy_version": "8.3.3",
+  "language": "schinese",
+  "language_name": "简体中文",
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "coverage": {
+    "translated": 14941,
+    "total": 15214,
+    "verbatim": 273
+  },
+  "extra_checks": [
+    [
+      "python",
+      "tools/verify_patch.py"
+    ]
+  ],
+  "shim": "000_zh_fonts.rpy",
+  "font_strategy": "fallback",
+  "font_assets": [
+    {
+      "path": "assets/fonts/MiSans-Regular.ttf",
+      "names": [
+        "MiSans-Regular.ttf"
+      ]
+    },
+    {
+      "path": "assets/fonts/MiSans-Bold.ttf",
+      "names": [
+        "MiSans-Bold.ttf"
+      ]
+    }
+  ],
+  "font_license": "assets/fonts/LICENSE-MiSans.txt",
+  "font_credit": "MiSans (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd.",
+  "_why_script_override": "The release ships only game/tl/None/common.rpym -- no per-language templates -- so build_tl.py has nothing to compile and install.py has nothing to place. The patch therefore replaces 14 of the game's own .rpy files outright, and five more .rpy files are additions that land beside them: the MOD compatibility shim, the guide tool, its two data tables and the toolbox. The font shim goes to the game root instead of game/, because it has to run before gui.rpy is evaluated. The release's remaining five scripts -- Bust_Char.rpy, images.rpy, myscreens.rpy, PhoneTexting.rpy and replay_scenes.rpy -- are deliberately not shipped: between them they hold seven string literals, all of them asset names, style prefixes or colour values, and they were shipping here byte-identical to the release. Copying a file you did not change is the one thing a script-override patch can do that a translation would never do.",
+  "_why_ps1": "tools/install.py only knows how to place a translation tree, a shim and fonts. This patch is overwritten scripts plus an optional third-party mod, so it ships its own installer next to the patch. The installer also calls the mod translator with the interpreter inside the game, which no shared tool does.",
+  "_coverage_note": "every player-visible literal is translated. Measured, not taken from a translation database: the extraction pass found 15,214 translatable literals in the English 0.12.0b release, and 14,941 of them are Chinese in the patch while the other 273 are the verbatim strings listed in docs/glossary.json under _kept_verbatim (interpolation only, Ren'Py Preference keys, engine identifiers, and in-world German/Russian/French). 14,941 + 273 = 15,214. tools/verify_patch.py re-derives both numbers from data/coverage.json and fails if they drift. There is no data/tl_trans.json for this game: with script-override there is no build input, so a translation database could only ever agree with the patch by construction.",
+  "_mod_translation": "Shawn's Mod is third-party content the player installs separately; the game knows nothing about it (no script in the release mentions it). The release build of the mod exists only as .rpyc -- six files, no .rpy source anywhere, and translate blocks cannot help because a .rpyc is already a compiled AST. So the Chinese mod is not shipped as binaries: data/mod_zh.json holds the 1,273 pairs and tools/mod_translate.py rebuilds the .rpyc against whatever copy of the mod the player actually has, using the interpreter inside the game. That matters because mod builds differ -- the copy published for 0.6.9a and the copy this patch was developed against are not the same bytes (Shawn_Cheats.rpyc is 3,044 vs 3,186). Committing our build would have meant shipping binaries that only match one of them. Run tools/install.ps1 -WithMod, or the translator on its own; see README.md.",
+  "_mod_unresolved": "The mod's meeting_1_m route is a 0.6.9a Day 1 alternative that 97% of the game does not contain: its hook label meeting_1 was deleted wholesale in 0.12.0b, so those 1,028 lines of dialogue cannot be reached and are not translated. Everything else in the mod is translated and reachable. See README.md and MOD_COMPAT_REPORT.md in the development workspace.",
+  "_renpy_screen_takeover": "The guide tool replaces the mod's modmenu and quick_menu screens. Ren'Py resolves a screen name by init priority first and only then by filename, so those two need init 999 (the mod declares modmenu at init 0 and quick_menu at init 969) and the zz_ filename to win the remaining ties. 1000 and above work too but make lint warn about the out-of-range priority; 999 is in range and still beats both."
+}

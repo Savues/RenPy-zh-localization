@@ -1,0 +1,63 @@
+MiSans Regular and Bold
+Copyright (c) 2020-2021 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved.
+Upstream: https://hyperos.mi.com/font/
+
+Shipped unmodified, as MiSans-Regular.ttf and MiSans-Bold.ttf.
+
+PROVENANCE
+----------
+Both files are byte-identical to the copies already in this repository, SHA-256
+verified rather than assumed:
+
+  MiSans-Regular.ttf  8,073,152 bytes  6aa32ded55e110a9...
+    games/clownsquad/, games/cosycafe-0142/,
+    games/sinfulsummer-chapter36/, games/scionsofthedivine-01/,
+    games/toxicity-0220/
+  MiSans-Bold.ttf     7,959,920 bytes  c01078cf5e0ca166...
+    games/clownsquad/, games/cosycafe-0142/,
+    games/scionsofthedivine-01/, games/toxicity-0220/
+
+games/eden-chapter5/assets/fonts/MiSans-Regular.ttf is a DIFFERENT build
+(7,924,400 bytes, 7172aa1b...) and is deliberately not listed. It came from a
+direct single-file download rather than the MiSans_Global_ALL.zip archive. Four
+matching packages and one different one is the shape of this repository; a hash
+match against another game's asset proves those two files are the same bytes and
+says nothing about assets that were never compared.
+
+WHY THESE TWO, AND HOW THEY REACH THE SCREEN
+--------------------------------------------
+The static faces, not "MiSans VF.ttf": Ren'Py 8.3 resolves bold through
+renpy/text/font.py:714, which looks the (font, bold, italic) triple up in
+config.font_replacement_map and swaps the FILE rather than asking for a heavier
+weight. A variable font's weight axis is therefore unreachable, and the static
+pair is 12 MB smaller.
+
+This game does not use the shadow strategy. Nothing on disk is overwritten:
+patch/000_zh_fonts.rpy writes config.font_replacement_map entries and sets
+style.default.font at startup, so uninstalling leaves the game on its own fonts
+and the patch leaves nothing to undo.
+
+  - Regular  answers every request the game and Shawn's Mod make for the eight
+    Latin faces they hardcode (mod/OS.ttf, mod/OSB.ttf, mod/fonts/Roboto-Light,
+    Roboto-Thin, Proxima Nova Semibold, AktivGrotesk-Light, BebasNeue, and the
+    game's own fonts/Firestarter_Z.ttf), plus the engine's style default.
+  - Bold     answers every bold request in that same set. The map entries carry
+    bold=False on purpose: Bold is already a heavy weight, and letting FreeType
+    embolden it again smears the strokes.
+  - style.skip_triangle stays on DejaVuSans.ttf on purpose. The game asks for it
+    explicitly, in a comment, because U+25B8 (BLACK RIGHT-POINTING SMALL
+    TRIANGLE) is the only glyph it draws that MiSans does not carry. Letting the
+    Chinese font take it would turn the skip indicator into a tofu box.
+
+MiSans has no italic weight, so italic requests keep their flag and the engine
+synthesises the slant, exactly as it did before the patch.
+
+NOTE ON REDISTRIBUTION
+----------------------
+Xiaomi markets MiSans as free for commercial use, but the font file carries no
+licence text: its name table has no licence description (nameID 13) and no
+licence URL, and the copyright line ends in "All Rights Reserved". Unlike SIL
+OFL, this grants no written redistribution right. Shipping it inside a public
+repository is a judgement call made by whoever publishes this package. Drop both
+files and the game still runs -- it falls back to the fonts it shipped with, and
+Chinese text renders as tofu wherever those faces lack glyphs.

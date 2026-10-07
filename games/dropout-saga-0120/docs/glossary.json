@@ -1,0 +1,265 @@
+{
+  "characters": {
+    "Sophia": {
+      "zh": "索菲娅",
+      "banned": [
+        "索菲亚",
+        "索菲雅"
+      ]
+    },
+    "Ava": {
+      "zh": "艾娃",
+      "banned": [
+        "艾娅",
+        "艾雅"
+      ]
+    },
+    "Ashley": {
+      "zh": "阿什莉",
+      "banned": [
+        "阿什丽"
+      ]
+    },
+    "Asuna": {
+      "zh": "亚苏娜",
+      "banned": [
+        "亚苏娟",
+        "亚苏娜娜"
+      ]
+    },
+    "Lila": {
+      "zh": "莱拉",
+      "banned": [
+        "莱菈"
+      ]
+    },
+    "Loli": {
+      "zh": "洛莉",
+      "banned": [
+        "洛莉丝"
+      ]
+    },
+    "Julie": {
+      "zh": "朱莉",
+      "banned": [
+        "朱莉叶"
+      ]
+    },
+    "Isabella": {
+      "zh": "伊莎贝拉",
+      "banned": [
+        "伊莎贝拉贝"
+      ]
+    },
+    "Jasmine": {
+      "zh": "贾丝敏",
+      "banned": [
+        "贾丝敏敏"
+      ]
+    },
+    "Ingrid": {
+      "zh": "英格丽",
+      "banned": [
+        "英格丽丽"
+      ]
+    },
+    "Kayle": {
+      "zh": "凯尔",
+      "banned": [
+        "凯尔尔"
+      ]
+    },
+    "Jennifer": {
+      "zh": "珍妮弗",
+      "banned": [
+        "珍妮弗弗"
+      ]
+    },
+    "Mika": {
+      "zh": "米卡",
+      "banned": [
+        "米卡卡"
+      ]
+    },
+    "Norman": {
+      "zh": "诺曼",
+      "banned": [
+        "诺曼曼"
+      ]
+    },
+    "Kane": {
+      "zh": "凯恩",
+      "banned": [
+        "凯恩恩"
+      ]
+    },
+    "Peter": {
+      "zh": "彼得",
+      "banned": [
+        "彼得得"
+      ]
+    },
+    "Chloe": {
+      "zh": "巧琪",
+      "banned": [
+        "巧琪琪"
+      ]
+    },
+    "Hina": {
+      "zh": "希娜",
+      "banned": [
+        "希娜娜"
+      ]
+    },
+    "Tom": {
+      "zh": "汤姆",
+      "banned": [
+        "汤姆姆"
+      ]
+    },
+    "Grace": {
+      "zh": "格雷丝",
+      "banned": []
+    }
+  },
+  "vocabulary": {
+    "corruption": {
+      "zh": "堕落",
+      "banned": [
+        "堝",
+        "墒",
+        "穨",
+        "纞"
+      ]
+    },
+    "goodness": {
+      "zh": "善良",
+      "banned": []
+    },
+    "herd": {
+      "zh": "群体",
+      "banned": []
+    },
+    "newcomers": {
+      "zh": "小势力声望",
+      "banned": []
+    }
+  },
+  "_kept_verbatim": [
+    "\n",
+    "%s",
+    "...?",
+    ":D",
+    ";]",
+    "<",
+    ">",
+    "?",
+    "???",
+    "???2",
+    "????",
+    "An American Language!",
+    "Chyo, vory nam podkrepleniye gonyat?",
+    "DropOutSaga",
+    "DropOutSaga-1673269288",
+    "Fr?",
+    "Gut.",
+    "H",
+    "Jaz...",
+    "Jaz?",
+    "Kazhetsya, eto zdes'",
+    "LI_info_page2",
+    "MC",
+    "MC_bio1",
+    "Mein vater wanted a son.",
+    "O-?",
+    "RTI.",
+    "S",
+    "SYT! {image=phone/emoji/sweat.png}",
+    "Shift+A",
+    "Uell.",
+    "V",
+    "Vidat', dumayut my ne spravimsya.",
+    "[ash]...",
+    "[asu!u]!",
+    "[asu!u]!!!!!",
+    "[asu]",
+    "[asu].",
+    "[asu]...",
+    "[asu]?",
+    "[ava!u]!",
+    "[ava]",
+    "[ava]!",
+    "[ava].",
+    "[ava]. [isa].",
+    "[ava]...",
+    "[ch]!",
+    "[config.name!t]",
+    "[config.version]",
+    "[gui.about!t]\\n",
+    "[ingrid]...",
+    "[isa!u]!",
+    "[isa]",
+    "[isa].",
+    "[isa]...",
+    "[item.title]",
+    "[ja]",
+    "[ja].",
+    "[ja]...",
+    "[ja]?",
+    "[ja]?!",
+    "[ju!u]!",
+    "[ju]!",
+    "[ju].",
+    "[ju]...",
+    "[ju]?",
+    "[kayle]?",
+    "[l]",
+    "[lila]",
+    "[lila].",
+    "[message!tq]",
+    "[name]",
+    "[nickname_sophia1]...",
+    "[p]",
+    "[page]",
+    "[r1!u]?!",
+    "[r1]",
+    "[r1].",
+    "[r1]...",
+    "[r1]?",
+    "[r1]?!",
+    "[sophia!u]!",
+    "[sophia!u]!!",
+    "[sophia]",
+    "[sophia]!",
+    "[sophia].",
+    "[sophia]...",
+    "[sophia]?",
+    "[tom]...",
+    "after choices",
+    "all mute",
+    "auto-forward",
+    "auto-forward time",
+    "bio_LI",
+    "bio_MC",
+    "dialogueBoxOpacity",
+    "music volume",
+    "notifyEx",
+    "phoneFrame",
+    "sound volume",
+    "text speed",
+    "voice volume",
+    "{#auto_page}A",
+    "{#quick_page}Q",
+    "▸"
+  ],
+  "_doubling_exempt": [
+    "艾娃",
+    "莱拉",
+    "拉拉",
+    "凯尔",
+    "米卡"
+  ],
+  "_doubling_note": "艾娃 + 娃 = 娃娃, 莱拉 + 拉 = 拉拉拉, 拉拉 + 拉 = 拉拉拉, 凯尔 + 尔 and 米卡 + 卡 are both ordinary words. The rule only fires on the literal \"term + term's last character\" shape, so listing the canonical spelling here is enough to exempt it; the checker does not try to tell these apart from a doubled typo.",
+  "_kept_verbatim_note": "105 distinct strings, 273 occurrences, none of them prose. They fall into four groups. (1) Interpolation and punctuation only -- 124 occurrences of \"???\" for the protagonist's silent or masked lines, plus \"[sophia]...\", \"[r1]?\", \"▸\", \"?\" and friends: there is no word to translate. (2) Ren'Py Preference keys -- \"text speed\", \"music volume\", \"sound volume\", \"voice volume\", \"all mute\", \"after choices\", \"auto-forward\": these are looked up by name, and the visible label beside each one is translated (screens.rpy:802 label _(\"文字显示速度\")). (3) Identifiers the engine matches on -- \"Q.Save\" was one of these too and is now translated, while \"bio_MC\", \"LI_info_page2\", \"phoneFrame\", \"notifyEx\", \"dialogueBoxOpacity\", \"MC\", \"bio_MC\" and \"DropOutSaga\" remain, because they name screens, images, persistent keys or the save directory. (4) In-world lines the game itself leaves in another language -- \"Gut.\", \"Kazhetsya, eto zdes'\", \"Mein vater wanted a son.\", \"An American Language!\", \"Jaz...\": translating these would change what the scene is doing. One deliberate stylistic variant is NOT in this list: script.rpy:993 renders Lila's name as 「莉、莉拉」 because the English has her say it with a stutter (\"Lee-lah?\"), and 艾娃's own list would flag it, so it is called out here instead.",
+  "_coverage_note": "Coverage is measured, not asserted. The extraction pass found 15,214 translatable literals in the English release; 14,941 are Chinese in the patch and the 273 above are verbatim, which adds up exactly. tools/verify_patch.py re-derives both numbers from data/coverage.json and fails if either moves."
+}

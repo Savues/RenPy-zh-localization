@@ -5,6 +5,8 @@ games/*/tl_template/
 # Build scratch
 work/
 dist/
+# mod_translate.py default outdir when run from a checkout
+games/*/out/
 *.log
 *.tmp
 *.bak

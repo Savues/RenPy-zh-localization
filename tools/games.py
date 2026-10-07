@@ -244,6 +244,14 @@ def row(slug):
         # worse, one that stays green no matter what is wrong with the patch.
         total = int(cov["total"])
         left = max(0, total - int(cov["translated"]))
+        # "verbatim" is for the strings a script-override patch deliberately
+        # leaves in English: interpolation-only text, Ren'Py's own Preference
+        # keys, in-world German. They are counted as coverage because the
+        # English release counted them, and calling them untranslated would be
+        # the one thing this table must never do. Only games that measure
+        # coverage themselves can set it; a database-built game derives the
+        # same set from the database instead.
+        kept = int(cov.get("verbatim") or 0)
     else:
         tr = translations(game)
         # Imported here rather than at module level: check.py imports games, so
@@ -256,10 +264,13 @@ def row(slug):
         total = len(tr)
         left = sum(1 for k, v in tr.items()
                    if not check.keep(k, v, exact) and v == k)
+        kept = 0
     # A game added before any translating has no numbers yet. Reporting that
     # as ✅ 100% would be a lie that also passes check_links.py.
     if not total:
         state = "\U0001f6a7 待翻译"
+    elif kept and left <= kept:
+        state = "✅ 100%%（%s 条保留原文）" % "{:,}".format(kept)
     elif left:
         state = "⚠️ %d 条未译" % left
     else:

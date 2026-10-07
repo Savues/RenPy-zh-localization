@@ -1,0 +1,101 @@
+{
+  "_what_these_numbers_are": "Two different walks, kept apart on purpose. 'coverage' is measured English-side: it starts from the 15,214 translatable literals the extraction pass found in the pristine 0.12.0b release and asks how many of them are Chinese in the patch. 'patch' is measured patch-side: it walks the files this repository actually ships. The two do not have to agree, and today they differ, because the English inventory and the patch disagree about which literals are prose in options.rpy (its line numbering is off by one from the release's, which moves entries between the buckets). tools/verify_patch.py re-derives 'patch' and the arithmetic below; it cannot re-derive 'coverage', because the English release is not redistributed here.",
+  "coverage": {
+    "english_total": 15214,
+    "translated": 14941,
+    "verbatim": 273,
+    "_arithmetic": "14941 + 273 = 15214. The 273 are the verbatim strings listed in docs/glossary.json under _kept_verbatim: interpolation only, Ren'Py Preference keys, engine identifiers, and in-world German/Russian/French."
+  },
+  "patch": {
+    "prose": 14617,
+    "chinese": 14353,
+    "non_cjk_prose": 264,
+    "files": {
+      "day1_update.rpy": {
+        "lines": 3724,
+        "literals": 1373,
+        "prose": 1229,
+        "chinese": 1213
+      },
+      "day2_update.rpy": {
+        "lines": 4613,
+        "literals": 2000,
+        "prose": 1778,
+        "chinese": 1698
+      },
+      "day3_update.rpy": {
+        "lines": 5243,
+        "literals": 2450,
+        "prose": 2340,
+        "chinese": 2323
+      },
+      "day4_update.rpy": {
+        "lines": 6134,
+        "literals": 2687,
+        "prose": 2438,
+        "chinese": 2408
+      },
+      "day5_update.rpy": {
+        "lines": 6055,
+        "literals": 2587,
+        "prose": 2359,
+        "chinese": 2345
+      },
+      "day6_update.rpy": {
+        "lines": 5365,
+        "literals": 2181,
+        "prose": 1978,
+        "chinese": 1965
+      },
+      "day7_update.rpy": {
+        "lines": 4047,
+        "literals": 2093,
+        "prose": 1877,
+        "chinese": 1836
+      },
+      "day8_update.rpy": {
+        "lines": 11,
+        "literals": 3,
+        "prose": 2,
+        "chinese": 2
+      },
+      "gui.rpy": {
+        "lines": 475,
+        "literals": 11,
+        "prose": 0,
+        "chinese": 0
+      },
+      "options.rpy": {
+        "lines": 249,
+        "literals": 72,
+        "prose": 5,
+        "chinese": 1
+      },
+      "patreonmenu.rpy": {
+        "lines": 915,
+        "literals": 336,
+        "prose": 301,
+        "chinese": 297
+      },
+      "replay_gallery.rpy": {
+        "lines": 128,
+        "literals": 34,
+        "prose": 14,
+        "chinese": 10
+      },
+      "screens.rpy": {
+        "lines": 2433,
+        "literals": 742,
+        "prose": 131,
+        "chinese": 100
+      },
+      "script.rpy": {
+        "lines": 1347,
+        "literals": 428,
+        "prose": 165,
+        "chinese": 155
+      }
+    }
+  },
+  "measured_with": "The extraction pass's own rules (tools/extract.py in the development workspace): prose = a string literal that is not a resource path, not a hex colour, not a bare lower_snake identifier, and not inside a comment. Kept identical on purpose so verify_patch.py and the extraction agree by construction rather than by coincidence."
+}
