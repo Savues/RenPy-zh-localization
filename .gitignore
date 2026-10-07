@@ -19,8 +19,8 @@ log.txt
 errors.txt
 traceback.txt
 
-# Fonts are deliberately absent from this repo: every mainstream CJK face is
-# either proprietary or too large to carry. See docs/fonts.md.
+# Ad-hoc fonts dropped in at the repo root are build scratch. The face each game
+# actually ships lives in games/<slug>/assets/fonts/ and is committed on purpose.
 fonts/*.ttf
 fonts/*.otf
 fonts/*.ttc

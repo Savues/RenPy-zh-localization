@@ -59,6 +59,28 @@ def font_names(manifest):
     return names
 
 
+# How the bundled face reaches the screen. A game that hardcodes font *files*
+# has the patch overwrite them ("shadow"); a game reached through
+# renpy.config.font_name_map only needs the one file ("fallback"). game.json
+# picks with "font_strategy"; absent means "shadow", which is what Eden wants.
+FONT_STRATEGY = {
+    "shadow": {
+        "note": ("\u4e2d\u6587\u5b57\u4f53\u5df2\u7ecf\u5728\u5305\u91cc\u4e86\u3002\u6e38\u620f\u628a\u5b57\u4f53**\u6587\u4ef6\u540d**\u5199\u6b7b\u4e86"
+                 "\uff0c\u6240\u4ee5\u540c\u4e00\u4efd\u5b57\u4f53\u4f1a\u4ee5\u5b83\u8981\u7684\u6bcf\u4e2a\u6587\u4ef6\u540d\u5404\u5b58\u4e00\u4efd\u653e\u8fdb "
+                 "`game/fonts/`\uff0c\u6e38\u620f\u81ea\u5e26\u7684\u540c\u540d\u897f\u6587\u5b57\u4f53\u4f1a\u88ab\u66ff\u6362\u6389\u3002"),
+        "tree": "\u4e2d\u6587\u5b57\u4f53\uff08\u540c\u4e00\u4efd\u5b57\u4f53\u7684\u591a\u4e2a\u526f\u672c\uff09",
+    },
+    "fallback": {
+        "note": ("\u4e2d\u6587\u5b57\u4f53\u5df2\u7ecf\u5728\u5305\u91cc\u4e86\uff0c\u53ea\u6709 `{{patchfont}}` \u4e00\u4efd\u3002"
+                 "\u672c\u8865\u4e01\u901a\u8fc7\n`renpy.config.font_name_map` \u628a\u5b83\u6ce8\u518c\u4e3a**\u56de\u9000**\u5b57\u4f53\uff1a"
+                 "\u6e38\u620f\u539f\u6709\u7684\u897f\u6587\u5b57\u4f53\u7167\u5e38\u7ed8\u5236\u82f1\u6587\uff0c\u53ea\u6709\u5b83\u753b\u4e0d\u51fa\u7684"
+                 "\u6c49\u5b57\u548c\u4e2d\u6587\u6807\u70b9\u624d\u4ea4\u7ed9\u4e2d\u6587\u5b57\u4f53\u3002\n"
+                 "\u6e38\u620f\u81ea\u5e26\u7684\u5b57\u4f53\u6587\u4ef6**\u4e0d\u4f1a**\u88ab\u66ff\u6362\u3002"),
+        "tree": "\u4e2d\u6587\u5b57\u4f53\uff08\u56de\u9000\u7528\uff0c\u6e38\u620f\u539f\u5b57\u4f53\u4fdd\u7559\uff09",
+    },
+}
+
+
 def collect(repo, slug, manifest, version, count):
     """-> [(arcname, source_path_or_None, bytes)] in a stable order."""
     out = [("README.md", None, render_readme(manifest, slug, version, count)
@@ -112,6 +134,24 @@ def render_readme(manifest, slug, version, count):
         "{{fontcredit}}": manifest.get("font_credit", ""),
         "{{count}}": "{:,}".format(count),
     }
+
+    strategy = FONT_STRATEGY[manifest.get("font_strategy", "shadow")]
+    names = font_names(manifest)
+    patch_font = manifest.get("patch_font", "zh.ttf")
+    # {{fontnote}} embeds {{patchfont}}, and the loop below substitutes in
+    # insertion order, so the nested token has to come first.
+    fields.update({
+        "{{fontnote}}": strategy["note"],
+        "{{fonttree}}": strategy["tree"],
+        "{{fonttrouble}}": (
+            "`game/fonts/` 没复制全。确认那 %d 个字体文件都在、大小一致"
+            "（约 8 MB）。" % len(names)
+            if strategy is FONT_STRATEGY["shadow"] else
+            "`game/fonts/` 没复制全。确认 `%s` 在（约 7.7 MB）。"
+            "若仍显示方块，请检查 `%s` 是否放在游戏的 `game/` 目录下。"
+            % (patch_font, manifest["shim"])),
+        "{{patchfont}}": patch_font,
+    })
     text = PLAYER_README
     for token, value in fields.items():
         text = text.replace(token, value)
@@ -152,8 +192,7 @@ game/fonts/*              →      <游戏目录>/game/fonts/
 
 装完直接启动游戏，{{langname}}会自动启用。
 
-中文字体已经在包里了。游戏把字体**文件名**写死了，所以同一份字体会以它要的每个
-文件名各存一份放进 `game/fonts/`，游戏自带的同名西文字体会被替换掉。
+{{fontnote}}
 
 ---
 
@@ -164,7 +203,7 @@ game/fonts/*              →      <游戏目录>/game/fonts/
 删掉 `game/tl/{{lang}}/` 里所有 `.rpyc` 再启动。原版游戏不会有这个问题。
 
 **中文显示成方块**
-`game/fonts/` 没复制全。确认那 5 个字体文件都在、大小一致（约 8 MB）。
+{{fonttrouble}}
 
 **启动时报 `A translation for "X" already exists`**
 游戏里已经打过别的汉化补丁，两份翻译冲突。先卸载那个补丁，或者在一份干净的原版
@@ -189,7 +228,7 @@ game/fonts/*              →      <游戏目录>/game/fonts/
 └── game/                  ← 把这个文件夹里的内容复制到游戏的 game/ 里
     ├── tl/{{lang}}/           翻译后的脚本
     ├── {{shim}}               语言与字体补丁
-    └── fonts/                 中文字体（同一份字体的多个副本）
+    └── fonts/                 {{fonttree}}
 ```
 
 ## 版权与免责

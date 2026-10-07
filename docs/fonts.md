@@ -12,8 +12,9 @@ Ren'Py 是按文件名找字体文件的，不是按字体内部的 family 名�
 
 这些名字同时出现在 `{font=...}` 标签、界面样式表和 `gui.*_font` 设置里，有些还是
 运行时才拼出来的字符串。逐个去改脚本既慢又脆；Ren'Py 虽然有
-`config.font_replacement_map`，但**直接覆盖磁盘上的同名文件**是唯一能一次盖住所有
-引用、且完全不需要改动游戏脚本的做法。
+`config.font_replacement_map`。绝大多数情况下，**直接覆盖磁盘上的同名文件**是最省事
+的做法：一次盖住所有引用，完全不用改游戏脚本。少数游戏走默认字体、覆盖无效，改用
+`font_name_map` 注册回退字体，见下面「两种接入方式」。
 
 **具体是哪几个文件名取决于游戏**，记录在 `games/<slug>/game.json`：
 
@@ -24,6 +25,29 @@ Ren'Py 是按文件名找字体文件的，不是按字体内部的 family 名�
 | `font_asset` | 仓库里打包的那份字体 |
 | `font_license` | 字体授权声明，打包时以 `FONT-LICENSE.txt` 放进压缩包根目录 |
 | `font_credit` | 玩家 README 里显示的署名 |
+| `font_strategy` | `shadow`（默认，覆盖游戏自带字体文件）或 `fallback`（见下） |
+
+## 两种接入方式
+
+`font_strategy` 决定玩家 README 怎么讲字体，也决定 `game/fonts/` 里放几份文件。
+
+**`shadow`**（Eden Chapter 5）：游戏把字体**文件名**写死，补丁直接覆盖磁盘上那几个文件。
+`font_shadow` 列出所有要被替换的名字，`game/fonts/` 里就放同样数量的副本。代价是包大。
+
+**`fallback`**（Sinful Summer Chapter 3.6）：游戏只给 328 行文本打了 `{font=...}` 标签，
+其余两万行和全部界面都走默认字体。这种情况下覆盖文件没有意义——补丁改为在
+`zz_zh_locale.rpy` 里用 `renpy.config.font_name_map` 把字体注册成 `FontGroup`：
+
+- 把游戏用到的字体名**别名**和**文件名**都映射到同一个 `FontGroup`
+- `FontGroup` 先全部建好，再一次性写 `font_name_map`；反过来会抛异常
+  （`renpy/text/font.py`，字体名已经是字典键时 `FontGroup.add()` 拒绝添加）
+- `add` 时划给 MiSans 的码位要含 `…`(U+2026) 和 `—`(U+2014)，否则中文标点仍是方块
+
+拉丁文继续由游戏原字体绘制，只有画不出的汉字和中文标点落到 MiSans。好处是包里只有
+一份字体（7.7 MB 而非 25.7 MB），且游戏自带的字体文件原封不动。
+
+选哪种，先看游戏脚本里 `{font=...}` 覆盖率：绝大多数文本走默认字体的用 `fallback`，
+真正写死字体文件的用 `shadow`。
 
 给新游戏找字体名，两条 grep 都要跑：
 
