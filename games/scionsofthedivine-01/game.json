@@ -1,0 +1,26 @@
+{
+  "slug": "scionsofthedivine-01",
+  "title": "Scions of the Divine 0.1",
+  "author": "Dark Seraph Productions",
+  "renpy_version": "8.4.1",
+  "language": "schinese",
+  "language_name": "简体中文",
+
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "coverage": { "translated": 5058, "total": 5094 },
+  "extra_checks": [["node", "tools/verify_patch.cjs"]],
+
+  "shim": "zh_font.rpy",
+  "font_strategy": "fallback",
+  "font_assets": [
+    { "path": "assets/fonts/MiSans-Regular.ttf", "names": ["MiSans-Regular.ttf"] },
+    { "path": "assets/fonts/MiSans-Bold.ttf", "names": ["MiSans-Bold.ttf"] }
+  ],
+  "font_license": "assets/fonts/LICENSE-MiSans.txt",
+  "font_credit": "MiSans (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd.",
+
+  "_why_script_override": "The game ships every script inside game/archive.rpa and has no Ren'Py translation templates -- game/tl/ holds only None/common.rpym, the file Ren'Py itself writes. There is nothing for build_tl.py to compile, and tools/install.py cannot replace a game's own scripts. The patch drops 28 Chinese .rpy files next to the archive; Ren'Py prefers a loose file over the same path inside an archive, so the archive itself is never rewritten. See docs/approach.md.",
+  "_why_ps1": "tools/install.py only knows how to place a translation tree, a shim and fonts. It cannot override the game's scripts, so this game ships its own installer next to the patch.",
+  "_coverage_note": "5,094 player-visible strings, counted during extraction from the English scripts (every say statement, text/textbutton/label/caption/title argument, menu choice, Character name and UI string in the 27 replaced scripts). All but 36 are translated; the 36 are the 12 distinct labels of the developer menu in screen_dev.rpy, deliberately listed in docs/glossary.json under _kept_verbatim. Counted from the English original, not from data/tl_trans.json -- that file is reverse-derived from the finished Chinese .rpy and is not a build input, so it cannot report coverage."
+}

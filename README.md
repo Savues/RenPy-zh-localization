@@ -11,6 +11,7 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 |---|---|---|---|---|---|
 | [Cosy Cafe 0.14.2](games/cosycafe-0142/) | Cosy Creator | 简体中文 | 脚本覆盖 | ✅ 100% | 32,639 条 |
 | [Eden Chapter 5](games/eden-chapter5/) | FnB Productions | 简体中文 | translate 块 | ✅ 100% | 15,713 条 |
+| [Scions of the Divine 0.1](games/scionsofthedivine-01/) | Dark Seraph Productions | 简体中文 | 脚本覆盖 | ⚠️ 36 条未译 | 5,094 条 |
 | [Sinful Summer Chapter 3.6](games/sinfulsummer-chapter36/) | Ruykiru | 简体中文 | translate 块 | ✅ 100% | 22,430 条 |
 | [TOXICity 0.22.0](games/toxicity-0220/) | Ils Productions | 简体中文 | 脚本覆盖 | ✅ 100% | 28,524 条 |
 | *（来加一个？）* | | | | | |

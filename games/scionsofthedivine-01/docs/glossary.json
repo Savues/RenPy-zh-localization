@@ -1,0 +1,289 @@
+{
+  "_comment": "Scions of the Divine names and terms. The English keys are the literal strings the game itself uses -- define sara = Character(\"Sarah\") and the CHARACTER_DATA table in scripts/systems/definitions.rpy -- so a glossary entry can be checked against the source without guessing. tools/check.py enforces the `banned` lists against the 28 .rpy files this patch ships.",
+  "characters": {
+    "Sarah": {
+      "zh": "莎拉",
+      "banned": [
+        "萨拉",
+        "莎拉儿",
+        "莎莉"
+      ]
+    },
+    "Layla": {
+      "zh": "莱拉",
+      "banned": [
+        "莱尔",
+        "莱拉儿",
+        "莱菈"
+      ]
+    },
+    "Astara": {
+      "zh": "阿斯塔拉",
+      "banned": [
+        "艾斯塔拉",
+        "阿斯达",
+        "阿斯塔菈"
+      ]
+    },
+    "Christine": {
+      "zh": "克里斯汀",
+      "banned": [
+        "克里斯丁",
+        "克里斯庭",
+        "克莉丝汀"
+      ]
+    },
+    "Melany": {
+      "zh": "梅拉妮",
+      "banned": [
+        "梅拉尼",
+        "梅拉"
+      ]
+    },
+    "Veronica": {
+      "zh": "维罗妮卡",
+      "banned": [
+        "维罗尼卡",
+        "薇罗妮卡",
+        "维罗妮可"
+      ]
+    },
+    "Soul": {
+      "zh": "索尔",
+      "banned": [
+        "索尔夫",
+        "苏尔"
+      ]
+    },
+    "Silas": {
+      "zh": "塞拉斯",
+      "banned": [
+        "塞拉士",
+        "赛拉斯"
+      ]
+    },
+    "Rayne": {
+      "zh": "雷恩",
+      "banned": [
+        "瑞恩",
+        "雷茵",
+        "雷恩德"
+      ]
+    },
+    "Kate": {
+      "zh": "凯特",
+      "banned": [
+        "凯丝",
+        "凯特丝"
+      ]
+    },
+    "Katelyn": {
+      "zh": "凯特琳",
+      "banned": [
+        "凯特林",
+        "凯瑟琳"
+      ]
+    },
+    "King Nasos": {
+      "zh": "纳索斯国王",
+      "banned": [
+        "纳索斯",
+        "纳索"
+      ]
+    },
+    "Queen Annis": {
+      "zh": "安妮丝女王",
+      "banned": [
+        "安妮斯女王",
+        "安妮丝",
+        "安妮斯"
+      ]
+    },
+    "Leon": {
+      "zh": "里昂",
+      "banned": [
+        "莱昂",
+        "里昂娜"
+      ]
+    },
+    "Eddie": {
+      "zh": "埃迪",
+      "banned": [
+        "艾迪",
+        "爱迪"
+      ]
+    },
+    "Bart": {
+      "zh": "巴思",
+      "banned": [
+        "巴特",
+        "巴斯"
+      ]
+    },
+    "Riley": {
+      "zh": "莱利",
+      "banned": [
+        "莱莉",
+        "莱里"
+      ]
+    },
+    "Bartender": {
+      "zh": "酒保",
+      "banned": [
+        "调酒师",
+        "酒侍"
+      ]
+    }
+  },
+  "places": {
+    "Reshmun": {
+      "zh": "雷什蒙",
+      "banned": [
+        "雷什盟",
+        "雷什孟",
+        "雷什门"
+      ]
+    },
+    "Vextross": {
+      "zh": "韦克斯特罗斯",
+      "banned": [
+        "维克斯特罗斯",
+        "薇克斯特罗斯",
+        "维克斯托斯"
+      ]
+    },
+    "Luminate": {
+      "zh": "卢米奈特",
+      "banned": [
+        "露米奈特",
+        "卢米奈",
+        "路米奈特"
+      ]
+    }
+  },
+  "terms": {
+    "Scion": {
+      "zh": "神裔",
+      "banned": [
+        "神子",
+        "神之裔"
+      ]
+    },
+    "Divine Power": {
+      "zh": "神力",
+      "banned": [
+        "神圣之力",
+        "神的力量"
+      ]
+    },
+    "deity": {
+      "zh": "神明",
+      "banned": [
+        "神祗"
+      ]
+    },
+    "spirit": {
+      "zh": "神灵",
+      "banned": [
+        "神魄",
+        "精魄"
+      ]
+    },
+    "goddesses": {
+      "zh": "女神",
+      "banned": [
+        "女神们",
+        "女神族"
+      ]
+    },
+    "Primordial One": {
+      "zh": "原初者",
+      "banned": [
+        "太初者",
+        "元初者",
+        "原初之神"
+      ]
+    },
+    "Sentinel": {
+      "zh": "守望者",
+      "banned": [
+        "哨兵",
+        "监视者"
+      ]
+    },
+    "The Last God": {
+      "zh": "最后的真神",
+      "banned": [
+        "最后真神",
+        "最终之神",
+        "最后的众神"
+      ]
+    },
+    "Whispering": {
+      "zh": "低语",
+      "banned": [
+        "耳语",
+        "呢喃"
+      ]
+    },
+    "mage": {
+      "zh": "法师",
+      "banned": [
+        "魔法师",
+        "咒法师"
+      ]
+    },
+    "BFC": {
+      "zh": "残暴格斗锦标赛",
+      "banned": [
+        "残暴格斗大赛",
+        "BFC大赛"
+      ]
+    },
+    "Sector": {
+      "zh": "区块",
+      "banned": [
+        "扇区",
+        "地区"
+      ]
+    },
+    "realm": {
+      "zh": "领域",
+      "banned": [
+        "境界",
+        "领地"
+      ]
+    },
+    "sorcery": {
+      "zh": "巫术",
+      "banned": [
+        "魔法书",
+        "巫咒"
+      ]
+    }
+  },
+  "_banned_is_a_blunt_substring_match": "banned is a plain substring search over the text the patch ships, with the canonical rendering removed first when the variant is a prefix of it. That makes 梅拉 a usable ban for Melany=梅拉妮 (the canonical is stripped, so it cannot fire on the correct spelling), but it also rules out several renderings that would otherwise be tempting. 神 is the most frequent character in this patch and appears in 神明 / 女神 / 神裔 / 神力 / 最后的真神, so no one-character term is pinned by ban -- they are pinned here by comment instead. 梅拉尼 is a prefix of nothing, but 拉 alone cannot be banned: it is the first character of 莱拉 and 阿斯塔拉 and the common noun 拉近, so those two names are pinned by comment. 原初 cannot be banned either -- it is the prefix of the canonical 原初者, and the checker only strips the canonical when the canonical is contained in the variant, not the other way round. Two entries had to be removed from the banned lists after check.py ran, because they are not variants at all: 凯特琳 is the correct rendering of Katelyn (the game has Kate introduce herself as \"My name's Katelyn, but you can call me Kate.\", so Kate and Katelyn are two spellings of one person and both have to exist), and 神灵 is the correct rendering of \"the spirit of\", which means soul or essence and is a different word from deity. Both are now their own entries. What is banned below are only renderings with no legitimate use: 萨拉 for 莎拉, 雷什盟 for 雷什蒙, and so on.",
+  "_doubling_exempt": [],
+  "_doubling_exempt_note": "Empty on purpose. The doubling rule looks for a canonical term immediately followed by its own last character -- 神裔裔, 守望者者, 莎拉拉 -- and none of this game's terms produce that shape anywhere in the 28 shipped scripts, so every term in this file is doubling-checked. The three that looked most likely to collide do not: 莱拉 + 拉 and 阿斯塔拉 + 拉 never end up adjacent in the Chinese (the verbs they would collide with are 拉近 / 拉远, and those lines do not put a 拉 immediately after the name), and 最后的真神 + 神 does not occur. Add a term here only together with a line of the patch that shows the collision.",
+  "_kept_verbatim": [
+    "Dark Seraph Productions",
+    "Honey Select 2",
+    "Studio Neo",
+    "Illusion",
+    "SoDaRa",
+    "Kinetic Text Tags",
+    "Stella@MakeVisualNovels",
+    "Text Shader Tags",
+    "suno.ai",
+    "Patreon",
+    "itch.io",
+    "Page Up",
+    "Page Down",
+    "Shift+A",
+    "A-Z"
+  ],
+  "_kept_verbatim_note": "Fifteen strings the patch deliberately leaves in English. The first thirteen are names of the people, tools and platforms the credits page has to credit by their real names -- renaming someone's handle is not a translation decision. The last three are keyboard hints (Page Up / Page Down / Shift+A) and the profile sort key A-Z, which the game itself compares against as a machine value in screen_profiles_select.rpy. tools/check.py does not read this list for a script-override patch -- the equivalent guard for this layout is docs/glossary.json's banned lists, which do run -- but the list is recorded here because these are exactly the strings a later pass would otherwise 'fix' by mistake.",
+  "_known_gaps": {
+    "screen_dev.rpy": "The developer menu (dev-menu overlay, opened from inside the game) is translated only in part. Its headings 开发菜单 / 章节选择 / 变量项 / 全部档案 / 全部服装 / 全部回忆 / 善恶值 / 紧急更新 are Chinese, but twelve labels are still English: Jump, Variables, Profiles, All, Unlock, Lock, Everything, Outfit, Profile, Memory, Affection: and Utilities. They are the only player-visible strings in the patch that are not translated; game.json's coverage field subtracts their 36 occurrences. Listed here so the gap is written down rather than forgotten -- nothing in tools/check.py would catch it, because a script-override patch has no English source to compare against."
+  }
+}

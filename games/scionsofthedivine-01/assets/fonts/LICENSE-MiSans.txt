@@ -1,0 +1,40 @@
+MiSans Regular / Bold
+Copyright (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd. All Rights Reserved.
+Upstream: https://hyperos.mi.com/font/
+
+Shipped unmodified, under two filenames:
+
+  MiSans-Regular.ttf   the face that actually renders this patch. The game ships
+                       three Latin faces of its own -- fonts/IMMORTAL.ttf,
+                       fonts/PlaypenSans-VariableFont_wght.ttf and
+                       fonts/rune.ttf -- and none of them has a single hanzi
+                       glyph, so Chinese would render as tofu without this file.
+                       patch/zh_font.rpy points every font slot in the game at
+                       it instead of overwriting any original file on disk.
+  MiSans-Bold.ttf      reached through config.font_replacement_map, which maps
+                       a bold request for MiSans-Regular onto this real bold
+                       face. Ren'Py's synthetic emboldening smears dense hanzi
+                       badly, so the real weight is worth carrying.
+
+Both files are byte-identical to the copies in games/cosycafe-0142/assets/fonts/
+and games/toxicity-0220/assets/fonts/, so every script-override game in this
+repository ships the same MiSans build.
+
+WHY A SHIM INSTEAD OF OVERWRITING A FONT FILE
+----------------------------------------------
+Ren'Py prefers a loose game/fonts/<name>.ttf over the same path inside
+archive.rpa, so shadowing the three Latin faces would work too. It is not done
+here: overwriting the originals would make uninstall unable to give the player
+their own game back byte-for-byte. The shim costs one extra .rpy and leaves
+every original font untouched.
+
+NOTE ON REDISTRIBUTION
+----------------------
+Xiaomi markets MiSans as free for commercial use, but the font file carries no
+licence text: its name table has no licence description (nameID 13) and no
+licence URL, and the copyright line ends in "All Rights Reserved". Unlike SIL
+OFL, which grants redistribution explicitly, this file grants no written
+redistribution right. Shipping it inside a public repository is a judgement
+call made by whoever publishes this package. Drop these two files and point
+zh_font.rpy at any OFL-licensed CJK face (e.g. Noto Sans SC) if that matters
+to you.

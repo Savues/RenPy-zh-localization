@@ -1,0 +1,115 @@
+﻿init offset = -1
+
+style pref_vbox:
+    variant "medium"
+    xsize 675
+
+## Since a mouse may not be present, we replace the quick menu with a version
+## that uses fewer and bigger buttons that are easier to touch.
+screen quick_menu():
+    variant "touch"
+    zorder 100
+
+    if quick_menu and not quick_menu_disable:
+
+        hbox:
+            style_prefix "mquick"
+            xalign 0.5
+            yalign 1.01
+            textbutton _("返回") action Rollback()
+            null width 20
+            textbutton _("快进") action Skip() alternate Skip(fast=True, confirm=True)
+            null width 20
+            textbutton _("自动") action Preference("auto-forward", "toggle")
+            null width 20
+            textbutton _("菜单") action ShowMenu()
+            if persistent.dev_menu:
+                null width 20
+                textbutton _("开发菜单"):
+                    if renpy.get_screen("dev_menu"):
+                        action Hide("dev_menu")
+                    else:
+                        action Show("dev_menu")
+
+style mquick_button_text:
+    size gui.quick_button_text_size
+
+style window:
+    variant "small"
+    background "gui/phone/textbox.png"
+
+style radio_button:
+    variant "small"
+    foreground "gui/phone/button/radio_[prefix_]foreground.png"
+
+style check_button:
+    variant "small"
+    foreground "gui/phone/button/check_[prefix_]foreground.png"
+
+style nvl_window:
+    variant "small"
+    background "gui/phone/nvl.png"
+
+style main_menu_frame:
+    variant "small"
+    #background "gui/phone/overlay/main_menu.png"
+
+style game_menu_outer_frame:
+    variant "small"
+    #background "gui/phone/overlay/game_menu.png"
+
+style game_menu_navigation_frame:
+    variant "small"
+    xsize 510
+
+style game_menu_content_frame:
+    variant "small"
+    top_margin 0
+
+style pref_vbox:
+    variant "small"
+    xsize 600
+
+style bar:
+    variant "small"
+    ysize gui.bar_size
+    left_bar Frame("gui/phone/bar/left.png", gui.bar_borders, tile=gui.bar_tile)
+    right_bar Frame("gui/phone/bar/right.png", gui.bar_borders, tile=gui.bar_tile)
+
+style vbar:
+    variant "small"
+    xsize gui.bar_size
+    top_bar Frame("gui/phone/bar/top.png", gui.vbar_borders, tile=gui.bar_tile)
+    bottom_bar Frame("gui/phone/bar/bottom.png", gui.vbar_borders, tile=gui.bar_tile)
+
+style scrollbar:
+    variant "small"
+    ysize gui.scrollbar_size
+    base_bar Frame("gui/phone/scrollbar/horizontal_[prefix_]bar.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("gui/phone/scrollbar/horizontal_[prefix_]thumb.png", gui.scrollbar_borders, tile=gui.scrollbar_tile)
+
+style vscrollbar:
+    variant "small"
+    xsize gui.scrollbar_size
+    base_bar Frame("gui/phone/scrollbar/vertical_[prefix_]bar.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+    thumb Frame("gui/phone/scrollbar/vertical_[prefix_]thumb.png", gui.vscrollbar_borders, tile=gui.scrollbar_tile)
+
+style slider:
+    variant "small"
+    ysize gui.slider_size
+    base_bar Frame("gui/phone/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
+    thumb "gui/phone/slider/horizontal_[prefix_]thumb.png"
+
+style vslider:
+    variant "small"
+    xsize gui.slider_size
+    base_bar Frame("gui/phone/slider/vertical_[prefix_]bar.png", gui.vslider_borders, tile=gui.slider_tile)
+    thumb "gui/phone/slider/vertical_[prefix_]thumb.png"
+
+style slider_vbox:
+    variant "small"
+    xsize None
+
+style slider_slider:
+    variant "small"
+    xsize 900
