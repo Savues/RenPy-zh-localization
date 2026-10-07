@@ -215,4 +215,4 @@ shutil.copyfile(DB, BAK)   # ← 把已经被污染的 DB 覆盖掉了完好的�
 - 本游戏的翻译档案：[`translation-log.md`](translation-log.md)
 - 安装 / 卸载 / 重建步骤：[`../README.md`](../README.md)
 - 新增一个游戏：[`adding-a-game.md`](../../../docs/adding-a-game.md)
-- 字体为什么不入库：[`fonts.md`](../../../docs/fonts.md)
+- 字体机制、换字体与授权：[`fonts.md`](../../../docs/fonts.md)
