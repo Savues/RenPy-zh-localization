@@ -6,13 +6,18 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 
 ## 已收录
 
+<!-- games:start -->
 | 游戏 | 原作 | 语言 | 状态 | 译文量 |
 |---|---|---|---|---|
 | [Eden Chapter 5](games/eden-chapter5/) | FnB Productions | 简体中文 | ✅ 100% | 15,713 条 |
 | [Sinful Summer Chapter 3.6](games/sinfulsummer-chapter36/) | Ruykiru | 简体中文 | ✅ 100% | 22,430 条 |
 | *（来加一个？）* | | | | |
+<!-- games:end -->
 
 > 覆盖率 = 已译条目 ÷ 全部可译条目。`check.py` 会强制要求 100%，未译条目直接报错。
+>
+> 上面这张表由 `python tools/games.py --readme` 从 `games/` 生成，两个标记之间的内容不要手改。
+> `check_links.py` 会核对它有没有过期。
 
 ---
 
@@ -107,10 +112,10 @@ python tools/uninstall.py "C:\Games\Eden-Chapter5-pc" --game eden-chapter5
 | `python tools/build_tl.py --game <slug>` | 由模板 + 译文库重新构建补丁 |
 | `python tools/check.py --game <slug>` | 校验译文库与补丁 |
 | `python tools/selftest.py --game <slug>` | 反向验证 `check.py` 的每一项检查都会真的报错 |
-| `python tools/games.py` | 列出仓库里的游戏（不需要 `--game`） |
+| `python tools/games.py [--readme]` | 列出仓库里的游戏；`--readme` 重写本文件的「已收录」表格（不需要 `--game`） |
 | `python tools/package_release.py --game <slug> [--version v1.0.0]` | 生成单个游戏的覆盖安装包（写到 `dist/`） |
 | `python tools/publish_release.py [--version v1.0.0] [--dry-run]` | 打包全部游戏并挂到同一个 GitHub Release（不需要 `--game`） |
-| `python tools/check_links.py` | 检查文档之间的相对链接没断（不需要 `--game`） |
+| `python tools/check_links.py` | 检查文档里的相对链接，以及本文件「已收录」表格有没有过期（不需要 `--game`） |
 
 某个游戏自己的档案都在它目录下的 `docs/` 里。以 Eden Chapter 5 为例：
 

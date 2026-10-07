@@ -55,7 +55,9 @@ python tools/build_tl.py --game <slug> \
 （按上下文挑选），重建结果会随选择变化。`data/tl_trans.json` 和
 `data/per_block_variants.json` 是这类决策的记录。
 
-改完跑一次 `check_links.py`——改了文档就会用到它。
+改完跑一次 `check_links.py`：它检查所有相对链接，也核对根 `README.md` 的「已收录」表格
+和 `games/` 一致（不一致就 `python tools/games.py --readme` 重写）。新增游戏后同样要跑
+——那张表是生成的，不要手改。
 
 ## 推送凭据
 
