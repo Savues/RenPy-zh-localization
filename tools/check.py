@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Validate the translation database and the built patch.
 
-    python tools/check.py
+    python tools/check.py --game <slug>
 
 Run this before every release. Exit code 0 = clean, 1 = problems found.
 

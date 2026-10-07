@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Prove the guards in check.py actually fire.
 
-    python tools/selftest.py
+    python tools/selftest.py --game <slug>
 
 Every check in check.py is only worth having if it fails when it should. This
 script injects one known-bad value per guard into a throwaway copy of the
