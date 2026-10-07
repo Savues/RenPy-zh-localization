@@ -1,0 +1,12 @@
+# Pin line endings so a fresh clone rebuilds byte-identical output on any OS.
+# Without this, core.autocrlf=true rewrites the .rpy files to CRLF and the
+# built patch no longer matches what tools/build_tl.py emits.
+* text=auto eol=lf
+
+*.ttf   binary
+*.otf   binary
+*.ttc   binary
+*.png   binary
+*.jpg   binary
+*.rpyc  binary
+*.rpymc binary
