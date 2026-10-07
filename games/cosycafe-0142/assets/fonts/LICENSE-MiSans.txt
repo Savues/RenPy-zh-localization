@@ -10,9 +10,37 @@ Shipped unmodified, under two filenames:
                        bold styles. Shipped only so a future edit has a real
                        bold weight available.
 
-Both files were already present, unmodified, in three other Ren'Py installs on
-this machine (RealmInvader, ScionsoftheDivine, SinfulSummer); the three copies
-are byte-identical, so this package ships that same build.
+PROVENANCE OF THE TWO FILES
+---------------------------
+MiSans-Regular.ttf here is byte-identical to the copies in this repository at
+games/sinfulsummer-chapter36/assets/fonts/ and
+games/toxicity-0220/assets/fonts/ -- same 8,073,152 bytes, same SHA-256 -- so
+all three packages ship the same MiSans build. The one at
+games/eden-chapter5/assets/fonts/ is a different build (7,924,400 bytes) and is
+tracked separately.
+
+An earlier version of this file said these fonts were "already present,
+unmodified, in three other Ren'Py installs on this machine (RealmInvader,
+ScionsoftheDivine, SinfulSummer)". One of those three was wrong, and has been
+corrected:
+
+  Scions of the Divine does not ship MiSans. Its game/archive.rpa holds
+  exactly four faces -- fonts/IMMORTAL.ttf,
+  fonts/OpenSans-VariableFont_wdth,wght.ttf,
+  fonts/PlaypenSans-VariableFont_wght.ttf and fonts/rune.ttf -- and not one of
+  them has a hanzi glyph. The two MiSans files found in that install's
+  game/fonts/ were copied there by this repository's own Scions of the Divine
+  patch, about eighteen hours before this file was written.
+
+  RealmInvader is no longer on this machine, so that half of the claim cannot
+  be re-checked either way.
+
+The mistake is written down because the scan that produced it is easy to
+repeat. A hash match against another game's asset proves two files are the same
+bytes; it says nothing about which install those bytes came from. And a file
+whose LastWriteTime predates the directory holding it was carried in by
+Copy-Item -- the two MiSans files in that install were stamped 2026-09-25
+while the install itself was created 2026-10-06, which is the tell.
 
 NOTE ON REDISTRIBUTION
 ----------------------
