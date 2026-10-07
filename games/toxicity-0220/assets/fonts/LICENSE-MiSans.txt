@@ -1,19 +1,30 @@
-MiSans Regular / Bold
+MiSans Regular / Medium / Bold
 Copyright (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd. All Rights Reserved.
 Upstream: https://hyperos.mi.com/font/
 
-Shipped unmodified, under two filenames:
+Taken unmodified from one upstream archive
+  https://hyperos.mi.com/font-download/MiSans_Global_ALL.zip
+and shipped unmodified, under three filenames:
 
   MiSans-Regular.ttf   the face that actually renders this patch. The game asks
                        for "fonts/msyh.ttc" in 291 places (every gui.*_font
                        slot plus inline {font=...} tags); the patch's shim
                        rewrites that request to this file at startup rather than
                        overwriting msyh.ttc on disk.
-  MiSans-Bold.ttf      reached through the same replacement map whenever the
-                       engine asks for a bold face. The scripts carry ~90 <b>
-                       tags, so this is genuinely used.
+  MiSans-Medium.ttf     the weight actually used for emphasis. The same map
+                       sends every bold request here, so it covers both the
+                       ~93 {b} tags in the scripts and style.say_dialogue,
+                       which the patch sets bold for dialogue legibility.
+                       MiSans ships 400 / 500 / 700; measured ink coverage of
+                       a sample CJK line at 48px is 1.00x / 1.11x / 1.64x,
+                       so 700 reads too heavy for body text and 500 is the
+                       middle. Flip one line in patch/zzz_font_misans.rpy to
+                       change the choice.
+  MiSans-Bold.ttf      the 700 face. Kept so that choice can be flipped
+                       without a new download; nothing references it while
+                       _MS_STRONG points at Medium.
 
-Both files are byte-identical to the copies bundled in
+MiSans-Regular.ttf is byte-identical to the copies bundled in
 games/cosycafe-0142/assets/fonts/ and games/eden-chapter5/assets/fonts/, so
 every game in this repository ships the same MiSans build.
 
@@ -32,6 +43,6 @@ licence text: its name table has no licence description (nameID 13) and no
 licence URL, and the copyright line ends in "All Rights Reserved". Unlike SIL
 OFL, which grants redistribution explicitly, this file grants no written
 redistribution right. Shipping it inside a public repository is a judgement
-call made by whoever publishes this package. Drop these two files and the patch
+call made by whoever publishes this package. Drop these three files and the patch
 still renders -- the shim detects the missing font and leaves the game on
 fonts/msyh.ttc (see docs/approach.md).

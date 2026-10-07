@@ -14,6 +14,7 @@
   "font_strategy": "fallback",
   "font_assets": [
     { "path": "assets/fonts/MiSans-Regular.ttf", "names": ["MiSans-Regular.ttf"] },
+    { "path": "assets/fonts/MiSans-Medium.ttf", "names": ["MiSans-Medium.ttf"] },
     { "path": "assets/fonts/MiSans-Bold.ttf", "names": ["MiSans-Bold.ttf"] }
   ],
   "font_license": "assets/fonts/LICENSE-MiSans.txt",
@@ -27,7 +28,7 @@
 
   "_bundled_mod": "GugatronCheats.rpy / GugatronUnlock.rpy / mod.rpy, translated and shipped under patch/game/mod/, plus a cheat-menu button inserted at screens.rpy:267. Third-party work; the patch provides the Chinese translation only. See README.md.",
 
-  "_font_mechanism": "Neither documented strategy is literally true here. The game ships fonts/msyh.ttc (Microsoft YaHei), which already has full CJK coverage, so Chinese renders fine before this patch and there is no tofu to fix -- MiSans is a typographic upgrade. Nothing on disk is overwritten: patch/zzz_font_misans.rpy rewrites all 291 requests for fonts/msyh.ttc to MiSans at startup, and patch/game/mod/zzz_zh_font.rpy does the same for the mod's two decorative faces (fonts/DCC - Ash.otf, mod/Monster Racing - Personal Used.otf), which have no CJK glyphs at all. font_strategy is recorded as 'fallback' because that is the closer of the two -- the game's own font files survive untouched -- but the implementation is config.font_replacement_map, not a FontGroup. If the MiSans files are missing the shim skips itself and the game stays on msyh.ttc rather than failing to start.",
+  "_font_mechanism": "Neither documented strategy is literally true here. The game ships fonts/msyh.ttc (Microsoft YaHei), which already has full CJK coverage, so Chinese renders fine before this patch and there is no tofu to fix -- MiSans is a typographic upgrade. Nothing on disk is overwritten: patch/zzz_font_misans.rpy rewrites all 291 requests for fonts/msyh.ttc to MiSans at startup, and patch/game/mod/zzz_zh_font.rpy does the same for the mod's two decorative faces (fonts/DCC - Ash.otf, mod/Monster Racing - Personal Used.otf), which have no CJK glyphs at all. font_strategy is recorded as 'fallback' because that is the closer of the two -- the game's own font files survive untouched -- but the implementation is config.font_replacement_map, not a FontGroup. If the MiSans files are missing the shim skips itself and the game stays on msyh.ttc rather than failing to start. Bold requests route to MiSans-Medium (500), not the 700 face: measured ink coverage of a sample CJK line at 48px is 1.00x/1.11x/1.64x for 400/500/700, and 700 reads too heavy for body text. The same shim sets style.say_dialogue.bold and replaces its outlines, because the tuple the game ships, (2, 50% black, +3 +3), dilates a 2px halo and then shifts it down-right, leaving the top-left edges unprotected.",
 
   "_renpy_7_note": "This game runs Ren'Py 7.4.5, not 8.x. renpy.loadable() and config.font_replacement_map both exist there (the engine's own renpy/common/00voice.rpy calls renpy.loadable), but renpy.loader.loadable is an 8.x shape -- do not copy cosycafe-0142's shim verbatim into this game's tree."
 }
