@@ -1,0 +1,161 @@
+{
+  "_comment": "Canonical Chinese renderings. Add a term here the moment you settle on a wording, so the choice sticks. `banned` is matched as a plain substring against the text this patch ships: data/tl_trans.json. A variant that is also an ordinary Chinese word, or a fragment of another name, cannot be banned -- pin it with a note here instead.",
+  "characters": {
+    "Adam": {
+      "zh": "亚当",
+      "nick": "小丑",
+      "banned": ["亚当斯", "亚东"]
+    },
+    "Lena": {
+      "zh": "莉娜",
+      "nick": null,
+      "banned": ["丽娜", "莱娜", "利娜", "琳娜"]
+    },
+    "Beatrice": {
+      "zh": "碧翠丝",
+      "nick": null,
+      "banned": ["碧崔丝", "贝特丽丝", "贝阿特丽斯", "碧翠思"]
+    },
+    "Rose / Rosa": {
+      "zh": "罗丝",
+      "nick": "罗丝·克莱因",
+      "banned": ["萝丝", "罗莎", "罗西"]
+    },
+    "Charles": {
+      "zh": "查尔斯",
+      "nick": null,
+      "banned": ["查尔斯·瓦伦丁"]
+    },
+    "Philip": {
+      "zh": "菲利普",
+      "nick": null,
+      "banned": ["菲利浦", "菲力普"]
+    },
+    "Isabella": {
+      "zh": "伊莎贝拉",
+      "nick": "伊莎",
+      "banned": ["伊莎白拉", "依莎贝拉", "伊莎贝菈"]
+    },
+    "Alicia": {
+      "zh": "艾丽西亚",
+      "nick": null,
+      "banned": ["爱丽丝", "艾莉西亚", "艾丽西娅", "阿莉西亚"],
+      "_note": "The original says Alicia, not Alice. The translation shipped inside archive.rpa renders it 爱丽丝; zz_zh_locale.rpy overrides that at runtime, and this entry is what stops a later pass from putting 爱丽丝 back into the dialogue database."
+    },
+    "Lienara / Lady Lia": {
+      "zh": "莉娅",
+      "nick": "莉娅小姐",
+      "banned": ["丽娅", "莉安娜", "利艾娜"]
+    },
+    "Tienara / Tia": {
+      "zh": "蒂娅",
+      "nick": null,
+      "banned": ["蒂安娜", "缇娅", "提娅"]
+    },
+    "Eileen": {
+      "zh": "艾琳",
+      "nick": null,
+      "banned": ["艾仑", "艾琳儿"]
+    },
+    "Dmitri": {
+      "zh": "德米特里",
+      "nick": null,
+      "banned": ["德米特烈", "德米特利", "德米特里奇"]
+    },
+    "Kalestra": {
+      "zh": "卡莱斯特拉",
+      "nick": null,
+      "banned": ["卡莱斯特", "卡莱斯特菈"]
+    },
+    "Alfred": {
+      "zh": "阿尔弗雷德",
+      "nick": null,
+      "banned": ["阿尔弗雷", "亚尔弗雷德"]
+    },
+    "Veronica": {
+      "zh": "维罗妮卡",
+      "nick": null,
+      "banned": ["维罗妮可", "薇罗妮卡"]
+    },
+    "Nami": {
+      "zh": "娜米",
+      "nick": null,
+      "banned": ["纳米", "娜咪"]
+    },
+    "Lili / Lil / Lily": {
+      "zh": "莉莉",
+      "nick": null,
+      "banned": ["莉莉莉", "丽丽", "莉莉丝"]
+    },
+    "Mia": {
+      "zh": "米娅",
+      "nick": null,
+      "banned": ["米亚", "米娅儿"]
+    },
+    "???": {
+      "zh": "？？？",
+      "nick": null,
+      "banned": [],
+      "_note": "The three-way speaker the game never names. Full-width question marks, no speaker prefix."
+    },
+    "Everyone": {
+      "zh": "众人",
+      "nick": null,
+      "banned": ["全部人", "大家伙"]
+    },
+    "both": {
+      "zh": "两人",
+      "nick": null,
+      "banned": ["俩个人"]
+    }
+  },
+  "places_and_factions": {
+    "Hero Academy": {
+      "zh": "英雄学院",
+      "nick": null,
+      "banned": ["英雄学园", "勇者学院", "英雄学阮"]
+    },
+    "Dellaymen / Dellaines": {
+      "zh": "德拉伊姆",
+      "nick": null,
+      "banned": ["德莱姆", "德拉伊梅", "戴莱姆"]
+    },
+    "The Council": {
+      "zh": "评议会",
+      "nick": null,
+      "banned": ["评议委员会", "理事会"],
+      "_note": "委员会 cannot be banned here even though it is what a lazy pass would write for The Council: the script also says \"file a complaint ... through the commission\", where 委员会 is correct. 评议委员会 is the shape worth catching."
+    },
+    "The Saints": {
+      "zh": "圣十字会",
+      "nick": null,
+      "banned": ["圣人十字会", "圣十字军"]
+    },
+    "The Great One / The Greatest": {
+      "zh": "至高者",
+      "nick": null,
+      "banned": ["最伟大者", "至高无上者"]
+    },
+    "IntervAI": {
+      "zh": "IntervAI",
+      "nick": null,
+      "banned": [],
+      "_note": "A proper noun that stays in Latin script; the game never writes it out."
+    }
+  },
+  "titles": {
+    "Clown Squad": {
+      "zh": "弄臣本色",
+      "nick": null,
+      "banned": ["小丑小队", "小丑帮"]
+    },
+    "Lil's show": {
+      "zh": "《明星之夜》",
+      "nick": null,
+      "banned": ["莉莉的秀", "莉莉的节目"]
+    }
+  },
+  "_banned_is_a_blunt_substring_match": "None of the variants above is an ordinary Chinese word, so a plain substring match is enough. 娜米/纳米 and 两人/俩个人 are the two closest calls: 纳米 is a real word (nanometre) and this game's text never mentions one, but if that ever changes the entry has to go.",
+  "_doubling_exempt": []
+}
+

@@ -9,6 +9,7 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 <!-- games:start -->
 | 游戏 | 原作 | 语言 | 方案 | 状态 | 译文量 |
 |---|---|---|---|---|---|
+| [Clown Squad](games/clownsquad/) | Astreon | 简体中文 | translate 块 | ✅ 100% | 5,034 条 |
 | [Cosy Cafe 0.14.2](games/cosycafe-0142/) | Cosy Creator | 简体中文 | 脚本覆盖 | ✅ 100% | 32,639 条 |
 | [Eden Chapter 5](games/eden-chapter5/) | FnB Productions | 简体中文 | translate 块 | ✅ 100% | 15,713 条 |
 | [Scions of the Divine 0.1](games/scionsofthedivine-01/) | Dark Seraph Productions | 简体中文 | 脚本覆盖 | ✅ 100% | 5,094 条 |

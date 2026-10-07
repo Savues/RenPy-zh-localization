@@ -1,0 +1,12 @@
+MiSans Regular and Bold
+Copyright (c) 2020-2021 Beijing Xiaomi Mobile Software Co.,Ltd. All Rights Reserved.
+Upstream: https://hyperos.mi.com/font/
+
+Shipped unmodified, as the two files MiSans-Regular.ttf and MiSans-Bold.ttf.
+zz_zh_locale.rpy registers them in renpy.config.font_name_map as the fallback
+for every code point range the game's own fonts cannot draw, and in
+renpy.config.font_replacement_map so `{b}` runs use the real Bold weight
+instead of a synthetically emboldened Regular.
+
+MiSans is marketed by Xiaomi as free for commercial use. This file records
+attribution only.
