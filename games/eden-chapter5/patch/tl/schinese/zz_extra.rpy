@@ -1501,7 +1501,7 @@ translate schinese strings:
 
     # screens.rpy:479
     old "And, of course, to all our {color=#cc0000}supporters{/color} — thank you. ❤️"
-    new "当然，也要感谢我们所有的 {color=#cc0000}支持者{/color}——谢谢你们。❤️"
+    new "当然，也要感谢我们所有的 {color=#cc0000}支持者{/color}——谢谢你们。"
 
     # screens.rpy:480
     old "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].nn[renpy.license!t]"

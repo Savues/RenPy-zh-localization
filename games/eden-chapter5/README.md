@@ -28,6 +28,25 @@ eden-chapter5/
 ## 安装
 
 先克隆仓库，然后：
+## 安装（方式一：直接覆盖，不需要 Python）
+
+从 [Releases](https://github.com/Savues/RenPy-zh-localization/releases) 下载
+补丁包，解压后把里面的 `game/` 文件夹内容复制到游戏的 `game/` 文件夹，选择覆盖。
+
+唯一的额外步骤是字体：游戏按文件名硬编码了 5 个字体，中文必须走它们，所以要先把
+系统里的一款中文字体（微软雅黑 / 黑体 / 等线 / 宋体都行）复制成下面这些名字放进
+游戏的 `game/fonts/`：
+
+```
+zh.ttf   comfortaa.ttf   CinzelDecorative.ttf
+MichromaRegular.ttf   PacificoRegular.ttf
+```
+
+其余 4 个名字是游戏自带的西文字体，会被覆盖；备份一份或重新解压一次游戏即可恢复。
+
+## 安装（方式二：脚本）
+
+先克隆仓库，然后：
 
 ```bash
 python tools/install.py "C:\Games\Eden-Chapter5-pc"
@@ -81,6 +100,21 @@ callback(who, *args, **kwargs)  ->  (args, kwargs)
 ```
 
 它返回的是**传给 say 的位置参数和关键字参数**，不是 `(who, what)`。而且 `config.say_arguments_callback` 是**单个可调用对象**、默认值为 `None`——对它调 `.append()` 会直接抛 `AttributeError`。
+
+---
+
+## 从源码重建
+## 生成补丁包
+
+```bash
+python tools/package_release.py --version v1.0.0
+```
+
+输出 `dist/eden-chapter5-schinese-patch-v1.0.0.zip`：包含玩家向的 `README.md`、
+`LICENSE`，以及一个可直接覆盖的 `game/` 目录。**不含字体**——可再分发的中文字体
+都要 8 MB 以上，而好用的系统字体都是专有的，所以改成让玩家自己放（见上文）。
+
+打包结果是确定性的：固定时间戳 + 排序写入，同一份代码树重复打包产出字节一致的 zip。
 
 ---
 
