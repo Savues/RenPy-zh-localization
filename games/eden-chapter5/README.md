@@ -42,7 +42,6 @@ zh.ttf   comfortaa.ttf   CinzelDecorative.ttf
 MichromaRegular.ttf   PacificoRegular.ttf
 ```
 
-其余 4 个名字是游戏自带的西文字体，会被覆盖；备份一份或重新解压一次游戏即可恢复。
 
 ## 安装（方式二：脚本）
 
