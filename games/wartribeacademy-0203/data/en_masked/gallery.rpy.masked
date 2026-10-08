@@ -1,0 +1,95 @@
+
+screen gallery():
+    tag menu
+
+    add @S
+
+    $start = gallery_page * maxperpage
+    $end = min(start + maxperpage - 1, len(gallery_items) - 1)
+
+    
+    grid maxnumx maxnumy:
+        xfill True
+        yfill True
+
+        for i in range(start, end + 1):
+            $gallery_items[i].refresh_lock()
+            if gallery_items[i].is_locked:
+                add gallery_items[i].locked:
+                    xalign 0.5
+                    yalign 0.5
+
+            else:
+                imagebutton idle gallery_items[i].thumb:
+                    action ToggleScreen(@S, dissolve, gallery_items[i].images)
+                    xalign 0.5
+                    yalign 0.5
+
+        for i in range(end + - start + 1, maxperpage):
+            null
+
+
+    
+    grid maxnumx maxnumy:
+        xfill True
+        yfill True
+
+        for i in range(start, end +1):
+            hbox:
+                xalign 0.5
+                yalign 0.1
+                $total = gallery_items[i].num_images()
+                $partial = gallery_items[i].num_unlocked
+                text gallery_items[i].name
+                text @S
+
+        for i in range(end - start + 1, maxperpage):
+            null
+
+    
+    if gallery_page > 0:
+        textbutton @S:
+            action SetVariable(@S, gallery_page - 1)
+            xalign 0.1
+            yalign 0.98
+    if (gallery_page + 1) * maxperpage < len(gallery_items):
+        textbutton @S:
+            action SetVariable(@S, gallery_page + 1)
+            xalign 0.9
+            yalign 0.98
+
+    
+    textbutton @S:
+        action Return()
+        xalign 0.5
+        yalign 0.98
+
+
+
+
+
+
+
+
+
+screen gallery_closeup(images):
+
+    add images[closeup_page] at truecenter
+
+    if closeup_page > 0:
+        textbutton @S:
+            action SetVariable(@S, closeup_page - 1)
+            xalign 0.1
+            yalign 0.98
+            background @S
+    if closeup_page < len(images) - 1:
+        textbutton @S:
+            action SetVariable(@S, closeup_page + 1)
+            xalign 0.9
+            yalign 0.98
+            background @S
+
+    textbutton @S:
+        action [SetVariable(@S, 0), Hide(@S, dissolve)]
+        xalign 0.5
+        yalign 0.98

@@ -1,0 +1,879 @@
+{
+  "_comment": "Wartribe Academy 角色与专有名词译名。取自本次汉化全过程唯一使用的术语表，任何后续润色都不得改动 zh 里的写法；banned 登记的是本次汉化真实犯过、并已回滚的错误译名。",
+  "characters": {
+    "Cleo": {
+      "zh": "克莉奥",
+      "banned": [
+        "克莉奥丝",
+        "克莱奥"
+      ]
+    },
+    "Juna": {
+      "zh": "茱娜",
+      "banned": [
+        "茱娜丝",
+        "茶娜",
+        "朱娜"
+      ]
+    },
+    "Luce": {
+      "zh": "露丝"
+    },
+    "Magna": {
+      "zh": "玛格娜"
+    },
+    "Priscilla": {
+      "zh": "普里西拉"
+    },
+    "Rhea": {
+      "zh": "蕾娅"
+    },
+    "Lunette": {
+      "zh": "露内特"
+    },
+    "Vandal": {
+      "zh": "范德尔"
+    },
+    "Unknown Girl": {
+      "zh": "神秘少女"
+    },
+    "Unknown": {
+      "zh": "神秘人"
+    },
+    "Yuni": {
+      "zh": "优妮"
+    },
+    "Xichi": {
+      "zh": "西奇"
+    },
+    "Yun-Yun": {
+      "zh": "云云"
+    },
+    "Natalie": {
+      "zh": "娜塔莉"
+    },
+    "Taliya": {
+      "zh": "塔莉娅"
+    },
+    "Merchant": {
+      "zh": "商人"
+    },
+    "Herald": {
+      "zh": "传令官"
+    },
+    "Jessie": {
+      "zh": "杰西"
+    },
+    "Violet": {
+      "zh": "薇奥莱特"
+    },
+    "Intruder": {
+      "zh": "入侵者"
+    },
+    "Joana": {
+      "zh": "乔安娜"
+    },
+    "Spectator 1": {
+      "zh": "观众一号"
+    },
+    "Spectator 2": {
+      "zh": "观众二号"
+    },
+    "Dancer": {
+      "zh": "舞女"
+    },
+    "Rummi": {
+      "zh": "露米"
+    },
+    "Servant": {
+      "zh": "仆人"
+    },
+    "Tavern Girl": {
+      "zh": "酒馆女招待"
+    },
+    "Joy": {
+      "zh": "乔伊"
+    },
+    "Wench": {
+      "zh": "妓女"
+    },
+    "Drunk 1": {
+      "zh": "醉汉一号"
+    },
+    "Drunk 2": {
+      "zh": "醉汉二号"
+    },
+    "Innkeeper": {
+      "zh": "客栈老板"
+    },
+    "Shop Lady": {
+      "zh": "店主娘"
+    },
+    "Josie": {
+      "zh": "乔茜",
+      "banned": [
+        "茱西",
+        "乔茜丝"
+      ]
+    },
+    "Ezra": {
+      "zh": "埃兹拉"
+    },
+    "Servants": {
+      "zh": "仆人们"
+    },
+    "Josie and Ezra": {
+      "zh": "乔茜与埃兹拉",
+      "banned": [
+        "茱西",
+        "乔茜丝"
+      ]
+    },
+    "Jenos": {
+      "zh": "耶诺斯"
+    },
+    "Mother": {
+      "zh": "母亲"
+    },
+    "Father": {
+      "zh": "父亲"
+    },
+    "Bar Owner": {
+      "zh": "酒馆老板"
+    },
+    "Baron's Son": {
+      "zh": "男爵之子"
+    },
+    "First Girl": {
+      "zh": "第一个女孩"
+    },
+    "Second Girl": {
+      "zh": "第二个女孩"
+    },
+    "Villager": {
+      "zh": "村民"
+    },
+    "Villager Elder": {
+      "zh": "村长"
+    },
+    "Cherry": {
+      "zh": "切莉"
+    },
+    "Demon Cherry": {
+      "zh": "恶魔切莉"
+    },
+    "1st Random Man": {
+      "zh": "随机男子一号"
+    },
+    "2nd Random Man": {
+      "zh": "随机男子二号"
+    },
+    "Matron": {
+      "zh": "老板娘"
+    },
+    "Dautry": {
+      "zh": "道特里"
+    },
+    "Promoter": {
+      "zh": "皮条客"
+    },
+    "Patron": {
+      "zh": "客人"
+    },
+    "Vagrant": {
+      "zh": "流浪汉"
+    },
+    "Monica": {
+      "zh": "莫妮卡"
+    },
+    "Sash": {
+      "zh": "萨什"
+    },
+    "Isha": {
+      "zh": "伊莎"
+    },
+    "Tavern Owner": {
+      "zh": "酒馆老板"
+    },
+    "Admiral": {
+      "zh": "海军上将"
+    },
+    "Pearl": {
+      "zh": "珀尔"
+    },
+    "Mindasu": {
+      "zh": "明达苏"
+    },
+    "Jenda": {
+      "zh": "延达"
+    },
+    "Bastet": {
+      "zh": "芭斯特"
+    },
+    "Bas-Cat": {
+      "zh": "猫型巴斯"
+    },
+    "Ingnetta": {
+      "zh": "英格内塔"
+    },
+    "Yuel": {
+      "zh": "尤尔"
+    },
+    "Fir": {
+      "zh": "菲尔"
+    },
+    "Nymph": {
+      "zh": "宁芙"
+    },
+    "Ulanna": {
+      "zh": "乌兰娜"
+    },
+    "Chick": {
+      "zh": "小鸡"
+    },
+    "Ingnetta's Patron": {
+      "zh": "英格内塔的客人"
+    },
+    "Armored Adventurer": {
+      "zh": "铠甲冒险者"
+    },
+    "Glasses Adventurer": {
+      "zh": "眼镜冒险者"
+    },
+    "Elf 1": {
+      "zh": "精灵一号"
+    },
+    "Elf 2": {
+      "zh": "精灵二号"
+    },
+    "Elf 3": {
+      "zh": "精灵三号"
+    },
+    "Brew Witch": {
+      "zh": "酿酒女巫"
+    },
+    "Witch": {
+      "zh": "女巫"
+    },
+    "Slaver": {
+      "zh": "奴隶贩子"
+    },
+    "Other Slaver": {
+      "zh": "另一名奴隶贩子"
+    },
+    "Roosten Slave": {
+      "zh": "鸡舍奴隶"
+    },
+    "Guard": {
+      "zh": "守卫"
+    },
+    "First Girl?": {
+      "zh": "第一个女孩？"
+    },
+    "Other Girl?": {
+      "zh": "另一个女孩？"
+    },
+    "Village Girl": {
+      "zh": "村中少女"
+    },
+    "Village Girl II": {
+      "zh": "村中少女二号"
+    },
+    "Village Mother": {
+      "zh": "村中母亲"
+    },
+    "Another Village Girl": {
+      "zh": "另一名村中少女"
+    },
+    "Lady Crestmoor": {
+      "zh": "克莱斯特穆尔夫人"
+    },
+    "Fredrika": {
+      "zh": "芙蕾德莉卡"
+    },
+    "Wild Nymph": {
+      "zh": "野性宁芙"
+    },
+    "Elrich": {
+      "zh": "埃尔里奇"
+    },
+    "Grandfather Crestmoor": {
+      "zh": "克莱斯特穆尔老爷子"
+    },
+    "Parlor Keep": {
+      "zh": "客厅主人"
+    },
+    "Stacia": {
+      "zh": "斯塔西亚"
+    },
+    "Bouncer": {
+      "zh": "门卫"
+    },
+    "Niel": {
+      "zh": "尼尔"
+    },
+    "Wilford": {
+      "zh": "威尔福德"
+    },
+    "Jorgi": {
+      "zh": "乔吉"
+    },
+    "Mystra": {
+      "zh": "迷斯特拉"
+    },
+    "Darius": {
+      "zh": "达里乌斯"
+    },
+    "Niko": {
+      "zh": "尼科"
+    },
+    "Domina": {
+      "zh": "多米娜"
+    },
+    "Valk": {
+      "zh": "瓦尔克"
+    },
+    "Gladix": {
+      "zh": "格拉迪克斯"
+    },
+    "Scarlet": {
+      "zh": "斯嘉丽"
+    },
+    "Talking Sword": {
+      "zh": "会说话的剑"
+    },
+    "Shout Caster": {
+      "zh": "施法者"
+    },
+    "Soldier I": {
+      "zh": "士兵一号"
+    },
+    "Soldier II": {
+      "zh": "士兵二号"
+    },
+    "Mistress": {
+      "zh": "女主人"
+    },
+    "Assassin": {
+      "zh": "刺客"
+    }
+  },
+  "terms": {
+    "Wartribe / Wartribe Academy": {
+      "zh": "战族 / 战族学院"
+    },
+    "Nubilia": {
+      "zh": "努比利亚"
+    },
+    "Leona": {
+      "zh": "莱奥娜"
+    },
+    "Featana": {
+      "zh": "菲塔娜"
+    },
+    "Marion Twins": {
+      "zh": "玛丽昂姐妹"
+    },
+    "Krestmoor / Crestmoor": {
+      "zh": "克莱斯特穆尔"
+    },
+    "The Pale One": {
+      "zh": "苍白者"
+    },
+    "Bonadeans": {
+      "zh": "博纳德一族"
+    },
+    "Hemal": {
+      "zh": "赫玛尔"
+    },
+    "Shadefiend": {
+      "zh": "暗影魔"
+    },
+    "Fast Travel": {
+      "zh": "快速旅行"
+    },
+    "Explorer mode": {
+      "zh": "探索模式"
+    },
+    "HP / damage": {
+      "zh": "生命值 / 伤害"
+    },
+    "dice / roll": {
+      "zh": "骰子 / 掷骰"
+    },
+    "Angela": {
+      "zh": "安吉拉"
+    },
+    "Wil": {
+      "zh": "威尔"
+    },
+    "Arsaineel": {
+      "zh": "阿尔萨尼尔"
+    },
+    "Mags": {
+      "zh": "玛格斯"
+    },
+    "Shri": {
+      "zh": "什里"
+    },
+    "Cornelius": {
+      "zh": "科尔内利乌斯"
+    },
+    "lifevine": {
+      "zh": "生命藤"
+    },
+    "Eldertree": {
+      "zh": "古树"
+    },
+    "Vivian": {
+      "zh": "维维安"
+    },
+    "Longfellow": {
+      "zh": "朗费罗"
+    },
+    "Ron": {
+      "zh": "罗恩"
+    },
+    "Glimmer-ring": {
+      "zh": "微光指环"
+    },
+    "Uldbrand": {
+      "zh": "乌尔德布兰德"
+    },
+    "Empal": {
+      "zh": "恩特派"
+    },
+    "Half-demon": {
+      "zh": "半魔"
+    },
+    "Lumen": {
+      "zh": "露门"
+    },
+    "Luminous": {
+      "zh": "卢米纳斯"
+    },
+    "Lusty": {
+      "zh": "拉丝蒂"
+    },
+    "Juden": {
+      "zh": "珠登"
+    },
+    "The Minx": {
+      "zh": "小妖精"
+    },
+    "Inarsin": {
+      "zh": "伊纳尔辛"
+    },
+    "Rhodius": {
+      "zh": "洛迪乌斯"
+    },
+    "Harkham": {
+      "zh": "哈克夏姆"
+    },
+    "Aiodet": {
+      "zh": "艾奥迪特"
+    },
+    "Pacificca": {
+      "zh": "帕西菲卡"
+    },
+    "Luminis": {
+      "zh": "卢米尼斯"
+    },
+    "Rusti": {
+      "zh": "拉丝蒂"
+    },
+    "Hamnet": {
+      "zh": "哈姆内特"
+    },
+    "Tatiana": {
+      "zh": "塔季扬娜"
+    },
+    "Onyx": {
+      "zh": "欧尼克斯"
+    },
+    "Marion": {
+      "zh": "玛丽昂"
+    },
+    "Judy / Judith": {
+      "zh": "茱蒂"
+    },
+    "Edith Posener": {
+      "zh": "伊迪思·波塞纳"
+    },
+    "Harmony Clan": {
+      "zh": "和谐族"
+    },
+    "Gigas": {
+      "zh": "吉格斯"
+    },
+    "Athon": {
+      "zh": "阿松"
+    },
+    "Ignis": {
+      "zh": "伊格尼斯"
+    },
+    "Daria": {
+      "zh": "达莉娅"
+    },
+    "Slates": {
+      "zh": "斯莱茨"
+    },
+    "Athon Nautica": {
+      "zh": "阿松·诺提卡"
+    },
+    "Petra": {
+      "zh": "佩特拉"
+    },
+    "Nautica": {
+      "zh": "诺提卡"
+    },
+    "Shales": {
+      "zh": "沙尔斯"
+    },
+    "Ardent": {
+      "zh": "热忱"
+    },
+    "Guppy": {
+      "zh": "小鱼"
+    },
+    "Horntoad": {
+      "zh": "角蟾"
+    },
+    "The Grand Trade": {
+      "zh": "大交易场"
+    },
+    "Dotri": {
+      "zh": "道特里"
+    },
+    "Matilda": {
+      "zh": "玛蒂尔达"
+    },
+    "Gozen": {
+      "zh": "师父"
+    },
+    "Chi-Chi": {
+      "zh": "小西"
+    },
+    "Salt Water": {
+      "zh": "咸水城"
+    },
+    "Salt water island": {
+      "zh": "咸水岛"
+    },
+    "Gladys": {
+      "zh": "格拉迪克斯"
+    },
+    "Horace Saniton": {
+      "zh": "霍勒斯·萨尼顿"
+    },
+    "Odious": {
+      "zh": "奥迪厄斯"
+    },
+    "Everly": {
+      "zh": "埃弗莉"
+    },
+    "White Fang": {
+      "zh": "白牙"
+    },
+    "Crusher Island": {
+      "zh": "粉碎岛"
+    },
+    "Ascot": {
+      "zh": "阿斯科特"
+    },
+    "Maggie": {
+      "zh": "玛姬"
+    },
+    "Sideon": {
+      "zh": "赛顿"
+    },
+    "Lamia": {
+      "zh": "拉米亚"
+    },
+    "Weblegs": {
+      "zh": "蛛腿族"
+    },
+    "Lizard-kin": {
+      "zh": "蜥蜴族"
+    },
+    "Tempura": {
+      "zh": "滕普拉"
+    },
+    "Impera": {
+      "zh": "因佩拉"
+    },
+    "Chikita": {
+      "zh": "琪琪塔"
+    },
+    "Keiko": {
+      "zh": "圭子"
+    },
+    "Tekkens": {
+      "zh": "泰克人"
+    },
+    "Dragon Lord": {
+      "zh": "龙君"
+    },
+    "grove": {
+      "zh": "林苑"
+    },
+    "mate": {
+      "zh": "伴侣"
+    },
+    "Chandi": {
+      "zh": "昌迪"
+    },
+    "Ritual of Restraint": {
+      "zh": "克己仪式"
+    },
+    "Phil": {
+      "zh": "菲尔"
+    },
+    "dark elf": {
+      "zh": "暗精灵"
+    },
+    "Zuchi Soma": {
+      "zh": "祖基·索玛"
+    },
+    "Tahara": {
+      "zh": "塔哈拉"
+    },
+    "Kokkan": {
+      "zh": "科坎"
+    },
+    "Sun Child": {
+      "zh": "太阳之女"
+    },
+    "Edith": {
+      "zh": "伊迪思"
+    },
+    "Ko'nen": {
+      "zh": "科嫩"
+    },
+    "Zu'Ki": {
+      "zh": "祖基"
+    },
+    "Golden Pack": {
+      "zh": "金爪队"
+    },
+    "Kahnites": {
+      "zh": "卡恩派"
+    },
+    "Imperdiet": {
+      "zh": "因佩迪特"
+    },
+    "Hemar": {
+      "zh": "赫玛尔"
+    },
+    "Kanit": {
+      "zh": "卡尼特"
+    },
+    "cucum": {
+      "zh": "卡库姆"
+    },
+    "Grammy": {
+      "zh": "奶奶"
+    },
+    "Den leader": {
+      "zh": "族长"
+    },
+    "Prisha": {
+      "zh": "普莉莎"
+    },
+    "Sabah": {
+      "zh": "萨巴"
+    },
+    "Fatima": {
+      "zh": "法蒂玛"
+    },
+    "Bonadea": {
+      "zh": "博纳德"
+    },
+    "Lilith": {
+      "zh": "莉莉丝"
+    },
+    "Underdark": {
+      "zh": "幽暗地穴"
+    },
+    "griffin": {
+      "zh": "狮鹫"
+    },
+    "Arjenta": {
+      "zh": "阿尔真塔"
+    },
+    "Tina": {
+      "zh": "蒂娜"
+    },
+    "Maree": {
+      "zh": "玛蕾"
+    },
+    "Cortina": {
+      "zh": "科尔蒂娜"
+    },
+    "Josephine": {
+      "zh": "约瑟芬"
+    },
+    "Lazarus": {
+      "zh": "拉撒路"
+    },
+    "Mina": {
+      "zh": "米娜"
+    },
+    "Leona Djoser": {
+      "zh": "莱奥娜·乔塞尔"
+    },
+    "The Sun's Peak": {
+      "zh": "太阳峰"
+    },
+    "Rahm": {
+      "zh": "拉姆"
+    },
+    "Phina": {
+      "zh": "菲娜"
+    },
+    "Fenix": {
+      "zh": "费尼克斯"
+    },
+    "Lafay": {
+      "zh": "拉斐"
+    },
+    "Warmaster": {
+      "zh": "战务大师"
+    },
+    "Nibbles": {
+      "zh": "尼布尔斯"
+    },
+    "Lumpy": {
+      "zh": "兰皮"
+    },
+    "Nips": {
+      "zh": "尼普"
+    },
+    "Nats": {
+      "zh": "自然人"
+    },
+    "Valkyrie": {
+      "zh": "瓦尔基莉"
+    },
+    "Azure": {
+      "zh": "蔚蓝"
+    },
+    "Albatross": {
+      "zh": "信天翁"
+    },
+    "Salt Water Arena": {
+      "zh": "咸水竞技场"
+    },
+    "Lord Potts": {
+      "zh": "波茨大人"
+    },
+    "Lady Potts": {
+      "zh": "波茨夫人"
+    },
+    "the city of Potts": {
+      "zh": "波茨城"
+    },
+    "Upper Potts": {
+      "zh": "上波茨区"
+    },
+    "the regents": {
+      "zh": "摄政们"
+    },
+    "Gyeorugi": {
+      "zh": "格雷奥鲁吉"
+    },
+    "Nomad": {
+      "zh": "游牧者"
+    },
+    "Moron Citay": {
+      "zh": "蠢货城"
+    },
+    "Bjerg": {
+      "zh": "比耶格"
+    },
+    "Tildor": {
+      "zh": "蒂尔多"
+    },
+    "Yolk": {
+      "zh": "约克"
+    },
+    "Sush": {
+      "zh": "苏什"
+    },
+    "Hammerfell": {
+      "zh": "哈默费尔"
+    },
+    "Gracen": {
+      "zh": "格雷森"
+    },
+    "Dalia": {
+      "zh": "达莉亚"
+    },
+    "Rumi": {
+      "zh": "露米"
+    },
+    "Cherri": {
+      "zh": "切莉"
+    },
+    "Matty": {
+      "zh": "马蒂"
+    },
+    "Stone": {
+      "zh": "斯通"
+    },
+    "Hael": {
+      "zh": "哈埃尔"
+    },
+    "Orange City": {
+      "zh": "橙子城"
+    },
+    "hillstocks": {
+      "zh": "货场"
+    },
+    "Blacktop": {
+      "zh": "黑石场"
+    },
+    "Void Castle": {
+      "zh": "虚空城堡"
+    },
+    "Valley gorge": {
+      "zh": "山谷峡口"
+    },
+    "Eastern Lakes": {
+      "zh": "东部湖区"
+    }
+  },
+  "_kept_verbatim": [
+    "*GASP*",
+    "Dora vi vi godo sa sahudo ba nusa?!",
+    "Gorasa?",
+    "Gorasa? Ba hu hujo hu hu gosa do bajo?",
+    "Gosaba vido?",
+    "H",
+    "Left Trigger\\nLeft Shoulder",
+    "Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\\n\\n[renpy.license!t]",
+    "Mouse Wheel Up\\nClick Rollback Side",
+    "Right Trigger\\nA/Bottom Button",
+    "S",
+    "V",
+    "Version [config.version!t]\\n",
+    "WartribeAcademy",
+    "[gui.about!t]\\n",
+    "do gosa hu?",
+    "vi' husa hu govisa vi do sago ba hu bado.",
+    "{#auto_page}A",
+    "{#file_time}%A, %B %d %Y, %H:%M",
+    "{#quick_page}Q",
+    "{i}Imperdiet!{/i}",
+    "……{w}*TSK*"
+  ],
+  "_kept_verbatim_note": "22 条玩家可见字面量按设计保留英文。分四类：(1) Ren'Py 关于页与快捷键标签，如 'Made with Ren''Py'、'{#auto_page}A'、'Mouse Wheel Up\\nClick Rollback Side'——键帽与手柄按键本身没有中文译法；(2) 存档目录名 'WartribeAcademy'，改了会让玩家读不到自己的旧存档；(3) 舞台指示如 '*GASP*'、'……{w}*TSK*'——全项目统一保留英文星号体；(4) 部族语台词如 'do gosa hu?'、'Gorasa?'——脚本自己明说角色听不懂，照字面保留乱码才成立。此外 'Imperdiet!' 是咒语原文。凡是只由 Ren'Py 变量与标签组成、根本不含英文单词的字面量（'[player_name]……'、'[mc_hp] / [mc_max_hp]' 等）不在此列，由 tools/verify_patch.cjs 自动放行。新增一条必须同时说明理由。",
+  "_banned_is_a_blunt_substring_match": "banned 是对补丁全文的纯子串匹配，因此「同时也是普通中文词」或「是另一个名字的前缀」的写法不能登记。本次汉化实际发生过的错误译名（茱迪丝、朱迪思、茶娜、娇院、切碼）都是只在错误版本里出现过的拼写，与正文无冲突，故可安全登记。反过来，两个汉字的译名还会撞上叠字检查（详见 _doubling_exempt）。",
+  "_doubling_exempt": [
+    "萨巴",
+    "小鸡",
+    "母亲",
+    "父亲"
+  ],
+  "_doubling_exempt_note": "叠字检查报的每一个「译名 + 自身末字」，在这里都能对上一行正文，全部是正常中文而非重复字错误：(1) 萨巴 + 巴 = 萨巴巴，见 script.rpy:21927「巴巴巴，胡萨巴巴巴多操。」——部族语台词照原文的音节重复译出，重复是台词本身带的；(2) 小鸡 + 鸡 = 小鸡鸡，见 script_3.rpy:23816「把你的小鸡鸡留在那边！」——英文原文是 Just keep your willy on that side!，willy 在中文里本就是俗称「小鸡鸡」，与词表里 Chick = 小鸡（幼鸡）只是巧合同形；(3) 母亲 + 亲 = 母亲亲，见 script_2.rpy:5644「皇家畜群里的每一头都由母亲亲自照看照料。」——「母亲亲自」是正常动补搭配，英文是 watched and cared for by mother；(4) 父亲 + 亲 = 父亲亲，见 script.rpy:1028「……但这已经由您父亲亲自确认过。」——同上，「亲自确认」。这四条之外的术语仍然照常检查；新增一条必须同时给出补丁里会触发的行号。"
+}

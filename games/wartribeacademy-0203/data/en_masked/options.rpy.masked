@@ -1,0 +1,208 @@
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+define config.name = _(@S)
+
+
+
+
+
+define gui.show_name = True
+
+
+
+
+define config.version = @S
+
+
+
+
+
+define gui.about = _p(@T3)
+
+
+
+
+
+
+define build.name = @S
+
+
+
+
+
+
+
+define config.has_sound = True
+define config.has_music = True
+define config.has_voice = True
+
+
+
+
+
+
+
+
+
+
+
+
+define config.main_menu_music = @S
+
+
+
+
+
+
+
+
+
+
+define config.enter_transition = dissolve
+define config.exit_transition = dissolve
+
+
+
+
+define config.intra_transition = dissolve
+
+
+
+
+define config.after_load_transition = None
+
+
+
+
+define config.end_game_transition = None
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define config.window = @S
+
+
+
+
+define config.window_show_transition = Dissolve(.2)
+define config.window_hide_transition = Dissolve(.2)
+
+
+
+
+
+
+
+default preferences.text_cps = 0
+
+
+
+
+
+default preferences.afm_time = 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define config.save_directory = @S
+
+
+
+
+
+
+define config.window_icon = @S
+
+
+
+
+
+
+
+
+init python:
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    build.classify(@Q, None)
+    build.classify(@Q, None)
+    build.classify(@Q, None)
+    build.classify(@Q, None)
+    build.classify(@Q, None)
+
+    
+
+    
+    
+
+    
+    
+
+    build.documentation(@Q)
+    build.documentation(@Q)
+
+
+
+
+
+
+
+
+
+
+
+
+

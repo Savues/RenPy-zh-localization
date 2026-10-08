@@ -1,0 +1,13399 @@
+#2.0.0
+label theinvasion11_1:
+    play music "audio/La Citadelle.mp3" fadein 5.0
+    $ servants = 36
+    scene invasion11_3
+    with fade
+    y "哈莎，我记得你以前是我们的密码解读员。"
+    scene invasion11_3
+    with dissolve
+    haha "早上好，指挥官。{w}这话没错。你有新的密文给我吗？"
+    haha "好谜题能磨砺心智。"
+    y "哈莎，我们认识多久了？"
+    y "你不用那么叫我，我们不是朋友吗？"
+    haha "蒂玛管你叫指挥官，你倒是不介意。"
+    y "因为她是个小丫头，真该学学什么叫尊重人。"
+    y "你直接叫我的名字就行，或者……以前你都是怎么叫我的来着？"
+    haha "就叫「队长」吧。"
+    y "哦，还真是。你一直都是这样吧？"
+    scene invasion11_1
+    with fade
+    haha "{i}不赶快行动的话，我们都会死在下一波攻势下，队长。{/i}"
+    scene invasion11_9
+    with fade
+    haha "{i}队长，镇上的人已经受够蒂玛了。{/i}"
+    scene invasion11_8
+    with dissolve
+    haha "{i}队长，那些鱼都是你点的吗？{/i}"
+    y "（吃了那条鱼之后我难受死了。）"
+    scene invasion11_2
+    with dissolve
+    y "是啊，是很久了，但我看一切都没变。"
+    y "（我或许暂时不该说出到底是谁给我的。）"
+    y "（莫妮卡果然还是间谍。）"
+    scene invasion11_5
+    with dissolve
+    y "这是我的一个盟友留给我的东西。"
+    scene invasion11_6
+    with dissolve
+    y "他们用某种密码把讯息藏了起来。"
+    y "我想请你帮忙破解它。"
+    haha "嗯……"
+    haha "我认不出它的排列方式，也看不出规律，至少第一眼看不出来。"
+    haha "能给我点时间研究一下吗？"
+    y "好，你慢慢来。但别告诉任何人，我还不清楚会是什么。"
+    scene invasion11_7
+    with dissolve
+    haha "明白，指挥官。"
+    scene invasion11_2 with fade
+    haha "学院那边情况如何？那里的女人也像部族里的一样火辣吗？"
+    y "有几个是……"
+    scene invasion11_11 with dissolve
+    haha "我相信你把她们管得很好。"
+    y "你我之间说句实话，那可不是我的强项。"
+    y "有时我倒宁愿再和你一起在前线。"
+    scene invasion11_2 with dissolve
+    haha "你太看轻自己了，指挥官。我一直知道你沉着冷静，值得信赖。"
+    y "你也是，哈莎。破解了那段密码之后告诉我。"
+    scene invasion11_10 with dissolve
+    haha "当然。向您致敬，指挥官。"
+    y "愿荣光归于[tribe_name]。"
+    scene bg black
+    with fade
+    jump mainend
+label theinvasion12_1:
+    play music "audio/Coy Koi.mp3" fadein 5.0
+    $ servants = 37
+    
+    scene invasion12_1 with fade
+    "..."
+    
+    scene invasion12_2 with dissolve
+    leo "..."
+    
+    scene invasion12_3 with dissolve
+    fea "莱奥娜·乔塞尔……"
+    
+    scene invasion12_5 with dissolve
+    fea "也许？"
+    
+    scene invasion12_4 with dissolve
+    fea "唔嗯……"
+    y "菲塔娜，你在做什么？"
+    
+    scene invasion12_6 with dissolve
+    fea "哦，你好，[player_name]。我只是看看。"
+    
+    scene invasion12_7 with dissolve
+    y "你有什么事想对乔塞尔夫人说吗？"
+    
+    scene invasion12_9 with dissolve
+    fea "她真美。"
+    y "我明白了。你对她有意思？"
+    
+    scene invasion12_11 with dissolve
+    fea "什么意思？"
+    y "你对她有爱慕之情吗？"
+    fea "咦？呕，才不是。{w}我只是欣赏她的品味和那份天生的优雅。"
+    fea "她戴角的姿态真好看。不知道她会不会保养。"
+    y "我觉得不会。她不像是那种人。"
+    
+    scene invasion12_9 with dissolve
+    fea "那一定有人替她打理。也许是仆人？{w}不。是专人吗？太光滑了。"
+    y "你干脆直接问她不就行了？"
+    
+    scene invasion12_11 with dissolve
+    fea "问她？不行不行。她对我来说太遥不可及了。"
+    fea "说真的。她要是龙裔，肯定是一条威风凛凛的红龙。"
+    y "她也没那么高高在上啦。你应该试着跟她说说话。"
+    fea "我能跟她聊什么啊？"
+    fea "你觉得她喜欢泥浴吗？"
+    y "我觉得你该试着跟她聊聊。"
+    y "你们俩的共同点比你想象的多。"
+    
+    scene invasion12_9 with dissolve
+    fea "你真这么觉得？"
+    y "我想她会欣赏你的心意。何不试试？"
+    
+    scene invasion12_10 with dissolve
+    fea "你说得对，绝不要害怕尝试！"
+    
+    scene invasion12_12 with dissolve
+    fea "莱奥娜。"
+    leo "梅迪夫人。今天有什么可以效劳？"
+    
+    scene invasion12_13 with dissolve
+    fea "呃、嗯。"
+    fea "请脱衣服。"
+    y "……{w}我为什么要多管闲事？"
+    
+    scene invasion12_14 with dissolve
+    leo "你说什么？"
+    fea "请把衣服脱到露出鳞片为止。"
+    
+    scene invasion12_15 with dissolve
+    leo "我明白了。{w}我懂了。"
+    y "什么？"
+    
+    scene invasion12_16 with dissolve
+    leo "有不少自然人跟我打听我的肤色和身材。"
+    leo "你是想让我给你当模特？"
+    
+    scene invasion12_17 with dissolve
+    fea "是的，非常想。"
+    fea "我族里有一系列衣服，我觉得特别适合你！"
+    leo "那能请我们私下进行吗？"
+    fea "说得对，我忘了我们的风俗不同。"
+    leo "我正打算采纳几种风格，也许你能帮我。"
+    
+    scene invasion12_18 with dissolve
+    fea "真的？！"
+    fea "那、那太好了，我—— 呃、嗯——"
+    
+    scene invasion12_17 with dissolve
+    fea "我很乐意。"
+    leo "好吧，容我和王子说几句，之后我会去找你。"
+    
+    scene invasion12_13 with dissolve
+    fea "我很期待！"
+    
+    scene invasion12_19 with dissolve
+    y "我可没料到会变成这样。"
+    
+    scene invasion12_20
+    with dissolve
+    leo "是你鼓励她跟我搭话的吧？"
+    y "我可不能为她的疯狂负责。"
+    
+    scene invasion12_22
+    with dissolve
+    leo "我不是这个意思。"
+    
+    scene invasion12_21
+    with dissolve
+    leo "你看出她太害羞不敢来找我，所以鼓励了她。"
+    leo "你顾虑她的感受，想帮她达成目的。"
+    
+    scene invasion12_23
+    with dissolve
+    leo "为什么？"
+    y "菲塔娜为人真挚，出发点也是好的。虽然有点古怪。"
+    
+    scene invasion12_24
+    with dissolve
+    leo "呼……"
+    
+    scene invasion12_25
+    with dissolve
+    leo "请容我致歉。"
+    leo "我初到你们学院时，曾对你的动机和品格妄下断言。"
+    leo "那是我的错。{w}对不起。"
+    y "你以为我是个没脑子的莽夫？"
+    
+    scene invasion12_26
+    with dissolve
+    leo "不是没脑子。我只是以为你和你父亲是一路人。"
+    y "但莽夫这一点，你不否认……"
+    
+    scene invasion12_27
+    with dissolve
+    leo "这些时日下来，我看出你是真心关心这些居民。"
+    leo "你绝不会动手伤害他们中的任何一个……{w}我们任何一个人。"
+    
+    scene invasion12_28
+    with dissolve
+    y "这话可奇怪了。"
+    y "你竟然这么看轻我，我差点就生气了。"
+    y "伤害我未来的盟友对我有什么好处？"
+    y "我是来保护你们的。"
+    
+    scene invasion12_27
+    with dissolve
+    leo "是的。我相信。"
+    leo "这就更显得我来这里毫无意义了。"
+    y "你什么意思？"
+    leo "当我听说你父亲和你部族的计划时，我是来保护其他人的。"
+    y "是要我保护他们……免受我的伤害吗？"
+    leo "当然。人心难测，但我听说过一些可怕的事。"
+    
+    scene invasion12_28
+    with dissolve
+    y "无稽的谣言满天飞。"
+    
+    scene invasion12_29
+    with dissolve
+    leo "那不是谣言。"
+    
+    scene invasion12_30
+    with dissolve
+    mina "乔塞尔夫人？您的仆人有要事禀报。她说非常紧急。"
+    
+    scene invasion12_31
+    with dissolve
+    leo "难以置信。"
+    leo "精灵，你没看见我正与你主人在谈话吗？"
+    
+    scene invasion12_32
+    with dissolve
+    mina "我主人不在此处。我向指挥官致歉，但我效忠的是战酋。"
+    leo "真是这样？"
+    
+    scene invasion12_33
+    with dissolve
+    mina "我的话您听到了吗？我可不希望白费口舌。"
+    mina "我也不想被误解。"
+    
+    scene invasion12_34
+    with dissolve
+    leo "..."
+    mina "..."
+    y "（这火药味是怎么回事？）"
+    y "（精灵和魔族关系不好吗？）"
+    
+    scene invasion12_32
+    with dissolve
+    y "米娜，注意礼貌。你是在对我的客人说话。"
+    leo "没关系，[player_name]，我的王子殿下。"
+    
+    scene invasion12_33
+    with dissolve
+    leo "毕竟我们都是各自族群的奴仆。"
+    leo "若阿尔真塔那边传召，想必事关重大。"
+    
+    scene invasion12_35
+    with dissolve
+    leo "我们之后再继续讨论吧，现在事情太多。"
+    y "既然你这么说。"
+    y "向您致敬，乔塞尔夫人。"
+    leo "意志如铁。"
+    
+    scene invasion12_37
+    with dissolve
+    y "米娜，你不该那样。"
+    mina "对不起，指挥官。"
+    
+    scene invasion12_36
+    with dissolve
+    mina "但她说的话贬低了我们和我们的大酋长。"
+    y "你听到了？"
+    
+    scene invasion12_37
+    with dissolve
+    mina "原谅我。我感觉她像是在侮辱你。"
+    y "我不认为她是那个意思。"
+    y "我大概能理解你的感受，但他们爱怎么想就怎么想吧。"
+    y "我们来这里的目的就是证明他们错了，并让他们见识我们的做法。"
+    y "莱奥娜似乎已经不再计较了，但若是再有不敬，米娜，我会严惩。"
+    y "试着控制一下自己。"
+    
+    scene invasion12_38
+    with dissolve
+    mina "明白，指挥官。不会再有下次了。"
+    scene bg black
+    with fade
+    "..."
+    jump mainend
+label theinvasion13_1:
+    play music "audio/Pondering Madly.mp3" loop fadein 5.0
+    $ servants = 38
+    $ theinvasion13_1_q = 0
+    $ theinvasion13_2_q = 0
+    $ theinvasion13_3_q = 0
+    $ theinvasion13_4_q = 0
+    
+    scene invasion13_29
+    with fade
+    haha "唔嗯……"
+    
+    scene invasion13_28
+    with dissolve
+    y "那段密码还在想吗？"
+    haha "我已经解出来了，但不明白它的意思。"
+    
+    scene invasion13_29
+    with dissolve
+    haha "那段讯息解开后是一则谜语。"
+    haha "上面写着「从何处来者，想想我们的名字，此处便是我们嬉游之地」。"
+    
+    scene invasion13_28
+    with dissolve
+    haha "这段密码是谁给你的？"
+    y "我不能。"
+    
+    scene invasion13_31
+    with dissolve
+    haha "嗯，不知道他们从哪来、叫什么名字，我就没法解出这个谜。"
+    
+    scene invasion13_29
+    with dissolve
+    haha "不过能走到这一步也算有意思。"
+    y "谢谢你，哈莎，这对我帮助很大。"
+    
+    scene invasion13_30
+    with dissolve
+    haha "能帮上忙是我的荣幸，指挥官。"
+    scene bg bedroom2 with fade
+    y "..."
+    y "「从何处来者，想想我们的名字，此处便是我们嬉游之地。」"
+    y "真是个谜……"
+    y "（莫妮卡来自鸡舍，想想他们的名字？）"
+    y "（我记得鸡舍的人自称「公鸡」。）"
+    y "（一个公鸡们嬉戏的地方？）"
+    y "（我不太明白。）"
+    y "有没有什么地方是鸡舍的人常去的？"
+    y "也许我该找人帮忙？"
+    y "我能想到几个去过鸡舍的人……"
+label theinvasion13_1_menu:
+    menu:
+        "去问问……"
+        "双胞胎姐妹" if theinvasion13_1_q == 0:
+            $ theinvasion13_1_q = 1
+            y "玛丽昂姐妹四处巡演，我敢说她们去过鸡舍。"
+            scene bg black
+            with fade
+            "..."
+            
+            scene invasion13_2
+            with fade
+            amy "去过。至少我去过。"
+            
+            scene invasion13_1
+            with dissolve
+            jdy "我当时病了。"
+            amy "我们在那儿演了一场关于他们国家动物的戏。"
+            y "我猜，是公鸡？"
+            
+            scene invasion13_3
+            with dissolve
+            jdy "我也这么想。其实是蛇怪。"
+            y "咦？这有什么特别的意义吗？"
+            
+            scene invasion13_2
+            with dissolve
+            amy "嗯，蛇怪和蛇鹫是近亲，这是众所周知的事。"
+            amy "从蛋里孵出来的龙，长着鸟一样的特征、蛇一样的尾巴，还有一头竖起的红发。"
+            y "这怎么做到的？龙的头配蛇的尾巴？"
+            amy "头和身体是鸡的，翅膀是龙的，尾巴是蛇的尾巴。"
+            
+            scene invasion13_4
+            with dissolve
+            jdy "拿来设计戏服简直绝了。"
+            amy "嗯……仔细看的话，大部分确实像公鸡……"
+            y "我还是想不通这到底有什么深意……"
+            jump theinvasion13_1_menu
+        "蕾娅" if theinvasion13_2_q == 0:
+            $ theinvasion13_2_q = 1
+            y "蕾娅看起来见多识广，我敢说她去过鸡舍。"
+            scene bg black
+            with fade
+            "..."
+            
+            scene invasion13_7
+            with fade
+            r "鸡舍？当然，我在那边做过些买卖。"
+            r "你想知道什么？"
+            y "关于他们的人和他们的名字，有什么值得记一笔的地方吗？"
+            
+            scene invasion13_8
+            with dissolve
+            r "他们的名字？"
+            r "除了是从常见家禽派生出来的？没有了。真没有。"
+            
+            scene invasion13_5
+            with dissolve
+            y "你就想不出什么值得一记的？"
+            
+            scene invasion13_6
+            with dissolve
+            r "我没想过要去档案室查他们名字的由来。跟他们的钱财比起来，那根本不值一提。"
+            y "「公鸡」会不会有什么隐藏的含义？"
+            
+            scene invasion13_9
+            with dissolve
+            r "你要是拿我寻开心，那你演得可真不错。"
+            r "我真不知道你在说什么。"
+            
+            scene invasion13_5
+            with dissolve
+            y "算了……"
+            y "（这还真没什么用。）"
+            jump theinvasion13_1_menu
+        "米娜":
+            y "米娜一直在暗中跟着我父亲。我想他以前去过鸡舍附近。"
+            scene bg black
+            with fade
+            "..."
+            scene invasion13_10
+            with fade
+            mina "鸡舍的人。那是种危险的种族。他们想的话，会变成兽性十足的战士。"
+            scene invasion13_11
+            with dissolve
+            mina "若不是他们那套护群的性子，在战斗力上未必不能与我们匹敌。"
+            y "关于他们的名字，你知道些什么吗？"
+            scene invasion13_12
+            with dissolve
+            mina "他们的名字？"
+            y "知道啊，比如他们为什么会被取这个名字之类的。"
+            mina "根据他们的历史，他们聚落的首领一度靠鸡活命。"
+            scene invasion13_11
+            with dissolve
+            mina "他是个养鸡的，慢慢攒下了家业，也因此被人叫成了这个名字。"
+            y "听起来更像骂人的话。"
+            scene invasion13_10
+            with dissolve
+            mina "他们对这个名字非常自豪。公鸡。"
+            y "谢谢你，米娜。"
+            scene invasion13_13
+            with dissolve
+            y "（所以讯息的第一部分和他们的名字有关。）"
+            y "（看来我该找人多问问公鸡的事。）"
+            jump theinvasion13_1_menu2
+label theinvasion13_1_menu2:
+    menu:
+        "去问谁呢……"
+        "普里西拉" if theinvasion13_3_q == 0:
+            $ theinvasion13_3_q = 1
+            y "我想不出还有谁比普里西拉更懂鸡了。"
+            "..."
+            scene invasion13_15
+            with fade
+            p "公鸡都待在哪里？家养的公鸡足足有好几十万只。"
+            p "根本无法确定它们最常聚集在哪里。"
+            scene invasion13_14
+            with dissolve
+            p "努比利亚有超过五十万只鸡。按公母各半来算，那就是二十五万只公鸡。"
+            y "这是个谜语，我觉得他们指的不是字面意思。"
+            scene invasion13_16
+            with dissolve
+            p "哦……{w}也许他们指的是鸡棚？那就是农场了。肯定是农场。"
+            y "嗯，这么说倒也说得通……虽然那里也没什么好查的。"
+            scene invasion13_17
+            with dissolve
+            p "鸡的起源至今仍不明。"
+            y "（但「我们嬉游之地」又是什么意思？）"
+            jump theinvasion13_1_menu2
+        "露丝"if theinvasion13_4_q == 0:
+            $ theinvasion13_4_q = 1
+            scene bg black
+            with fade
+            "..."
+            scene invasion13_32
+            with fade
+            lu "公鸡？像我们家农场里那种？"
+            y "对，就是。听说它们喜欢在哪里玩耍？"
+            scene invasion13_33
+            with dissolve
+            lu "我不太确定——"
+            lu "我喜欢看它们，但我不记得见过它们玩什么游戏……"
+            scene invasion13_34
+            with dissolve
+            lu "要说的话，它们之间倒是挺暴力的。"
+            lu "它们老是互相挡道。我经常得把它们赶开！"
+            scene invasion13_35
+            with dissolve
+            y "也是，把动物放一起，打起来不是很自然吗。"
+            y "嗯……暴力。"
+            y "（难道是某个暴力场所？）"
+            jump theinvasion13_1_menu2
+        "克莉奥":
+            scene bg black
+            with fade
+            "..."
+            scene invasion13_19
+            with fade
+            cf "问题是什么来着？"
+            y "公鸡会在什么样的地方嬉戏？"
+            scene invasion13_18
+            with dissolve
+            cf "你的口味还真是特别，[player_name]……"
+            cf "不过你是指斗鸡游戏吧？"
+            y "什么？"
+            scene invasion13_21
+            with dissolve
+            cf "那在南方很常见，在努比利亚倒不算多。"
+            y "你怎么会知道这个？"
+            scene invasion13_20
+            with dissolve
+            cf "那、那是赌博的事……"
+            scene invasion13_18
+            with dissolve
+            cf "我从来没参与过！我只是在打牌的时候听说过。"
+            y "你还真是好赌。"
+            cf "别把我说得像个怨气冲天的老头子。"
+            y "你说的南方，是指鸡舍的地盘？"
+            scene invasion13_19
+            with dissolve
+            cf "是。斗鸡在鸡舍很流行，在努比利亚没那么盛行，但肯定还能找到那么一个场子。"
+            scene invasion13_22
+            with dissolve
+            cf "不过那太恶心了。你要是参与了，我会很失望的。"
+            y "放心吧。我对拿别人的鸡下注没兴趣。"
+            scene invasion13_20
+            with dissolve
+            cf "我不是那个意思——{w}真蠢——{w}闭嘴，小鱼。"            
+            y "（[cf] 好像有点眉目了。斗鸡场说不定就是我要找的。）"
+            y "（说到地下娱乐，我能想到一个人或许知道得更多。）"
+    scene bg black
+    with fade
+    "..."
+    scene invasion13_26
+    with dissolve
+    y "你知道我能在哪儿找到那样的人吗？"
+    matron "我还以为你对那种娱乐没兴趣。"    
+    matron "那可不是我平常能满足你的东西。"
+    scene invasion13_25
+    with dissolve
+    matron "不过我从来不是个爱评判别人癖好的人。"
+    scene invasion13_23
+    with dissolve
+    matron "去咸水竞技场，找管酒吧的那位先生点「公鸡与蛋」。"
+    y "我不太想那么做。"
+    scene invasion13_24
+    with dissolve
+    matron "那只是句暗语。他不会以为你在勾引他。"
+    y "……{w}我考虑考虑。"
+    y "（我想我可以让埃兹拉替我去探探。）"
+    scene invasion13_25
+    with dissolve
+    matron "当然。我建议你晚上去。"
+    y "为什么？"
+    matron "斗鸡在努比利亚并不流行。"
+    matron "如果你介意被人认出来，夜里去会容易遮掩得多。"
+    y "（但我去那儿可不是为了看斗鸡。）"
+    y "谢谢你，老板娘。"
+    scene invasion13_26
+    with dissolve
+    matron "随时为您效劳，亲爱的王子殿下。"
+    y "（夜色中的城中咸水竞技场。）"
+    scene bg black
+    with fade
+    jump mainend
+label theinvasion14_1:
+    play music "audio/Blood Eagle.mp3" loop fadein 3.0
+    $ servants = 39
+    scene invasion14_52
+    with fade
+    y "（咸水竞技场。）"
+    scene invasion14_2
+    with dissolve
+    y "（老板娘说的是那间酒吧？）"
+    scene invasion14_3
+    with dissolve
+    baro "想喝哪杯随你。"
+    scene invasion14_1
+    with dissolve
+label theinvasion14_1_menu:
+    menu:
+        "说……"
+        "给我来你们最烈的酒。":
+            y "我要你们最烈的。"
+            scene invasion14_4
+            with dissolve
+            baro "你付不起这个价。"
+            y "我保证我付得起。"
+            scene invasion14_5
+            with dissolve
+            baro "我说的就是这个。你输不起的东西太多了。"
+            y "..."
+            y "没事了。"
+            jump theinvasion14_1_menu
+        "打听斗鸡的事":
+            scene invasion14_7
+            with dissolve
+            y "这里有比赛吗？"
+            baro "这里是竞技场。当然有。"
+            scene invasion14_8
+            with dissolve
+            y "那动物对战呢？"
+            scene invasion14_5
+            with dissolve
+            baro "什么动物？"
+            y "会咯咯叫的那种？"
+            scene invasion14_6
+            with dissolve
+            baro "没有。这儿没有那种东西。"
+            scene invasion14_8
+            with dissolve
+            y "..."
+            jump theinvasion14_1_menu
+        "「公鸡与蛋」":
+            scene invasion14_4
+            with dissolve
+            y "我要一份「公鸡与蛋」。"
+            baro "..."
+            scene invasion14_8
+            with dissolve
+            "酒保盯着你看了好一会儿。"
+            scene invasion14_5
+            with dissolve
+            baro "你确定要点「公鸡与蛋」？"
+            y "..."
+            y "（那只是句暗号吧？）"
+            y "是的。"
+            scene invasion14_9
+            with dissolve
+            baro "..."
+            scene invasion14_10
+            with dissolve
+            baro "来……"
+            jump theinvasion14_1_a       
+label theinvasion14_1_a:
+    scene invasion14_20
+    with fade
+    "..."
+    y "（竞技场就在那儿。）"
+    scene invasion14_21
+    with dissolve
+    y "（真是糟糕透顶的运动。）"
+    scene invasion14_22
+    with dissolve
+    y "（但我来这儿不是为了这个。）"
+    scene invasion14_23
+    with dissolve
+    y "（他们会把藏身处藏在哪儿？）"
+    scene invasion14_24
+    with dissolve
+    y "嗯？"
+    y "（他们大概觉得，进这儿的人都是来看热闹的。）"
+    y "（不会有人去检查这里。）"
+    scene invasion14_25
+    with dissolve
+    y "找到了……{w}没人注意。我应该能溜进去。"
+    y "（不知道会发现什么。）"
+    scene invasion14_11
+    with fade
+    y "（这里肯定有人待过。）"
+    scene invasion14_12
+    with dissolve
+    y "像是某种地窖。看来他们改用了这里。"
+    scene invasion14_13
+    with dissolve
+    y "（他们准备得比我预想的充分。）"
+    scene invasion14_14
+    with dissolve
+    y "（可我要找的到底是什么？）"
+    scene invasion14_15
+    with dissolve
+    stop music fadeout 4.0
+    y "嗯……"
+    "{i}呈梦妮克——阅后批注。{/i}"
+    "{i}他们已经决定动手了！立即批复！趁还来得及。{/i}"
+    y "另有一封信，随这张便条送来。"
+    y "这是父亲的印章。那这就是父亲写给鸡舍的信？"
+    y "..."
+    scene invasion14_16
+    with dissolve
+    "{i}承诺的道路已经开启。路径自会揭晓。{/i}"
+    "{i}趁热打铁。{/i}"
+    "{i}能抓的尽量抓，其余的就地杀掉。{/i}"
+    "{i}办妥之后再来找我。{/i}"
+    scene invasion14_15
+    with dissolve
+    y "这是允许鸡舍士兵包围并占领{i}学院{/i}的协议？"
+    y "（什么？这不可能。）"
+    y "父亲是想让士兵越过他的防线？"
+    scene invasion14_17
+    with dissolve
+    y "我不认为这是莫妮卡希望我发现的东西。"
+    y "要是我能把剩下的间谍都抓到手就好了。或者哪怕能和其中一个说上话也好。"
+    y "可他们的最后一个据点在我动手前就被烧掉了。"
+    scene invasion14_18
+    with dissolve
+    y "这种信要是落到不该拿到的人手里，会非常危险。"
+    y "有人可能会曲解它的意思。"
+    y "这里根本什么都没有……{w}我对父亲的指望太高了。"
+    scene invasion14_19
+    with dissolve
+    y "现在得悄悄离开，别惊动任何人……"
+    scene invasion14_26
+    with fade
+    "..."
+    y "咦？米娜？"   
+    y "（没想到她会在这里。是哈莎告诉她的？）"
+    y "你跟踪我？"
+    scene invasion14_27
+    with dissolve
+    mina "我发现你要来这种危险的地方，就想确保你平安。"
+    y "原来如此。那圭子呢？"
+    scene invasion14_28
+    with dissolve
+    kei "我下来是因为觉得挺好玩的。"
+    scene invasion14_29
+    with dissolve
+    mina "圭子来是为了维持秩序。"
+    mina "我让其他人把那些混混赶出去。"
+    scene invasion14_31
+    with dissolve
+    y "看来不是全部都赶走了？"
+    kei "有几个不肯配合。"
+    y "你白跑这一趟了。我好得很。"
+    scene invasion14_30
+    with dissolve
+    mina "我猜你找到那个鸡舍窝点了？"
+    scene invasion14_31
+    with dissolve
+    y "你知道那事？（米娜到底知道多少？）"
+    y "我更想跟父亲谈。"
+    scene invasion14_32
+    with dissolve
+    mina "指挥官，他的手段我一清二楚。"
+    scene invasion14_33
+    with dissolve
+    mina "我猜你有些疑问。能否请你把这封信交还给我？"
+    y "你知道这封信的事？"
+    scene invasion14_34
+    with dissolve
+    mina "这么说你已经看过了？"
+    scene invasion14_35
+    with dissolve
+    mina "你父亲寄来的那封信不过是诱饵，为的是把鸡舍的士兵引到明处。"
+    mina "战酋本想让鸡舍的人放松警惕。"
+    scene invasion14_37
+    with dissolve
+    mina "正如你所见，我们做到了，而且已经把他们处理干净。"
+    mina "你不必在那些破败的老鼠洞里多待。"
+    scene invasion14_38
+    with dissolve
+    y "这些计谋没人告诉过我。目的是什么？"
+    scene invasion14_33
+    with dissolve
+    play music "audio/A Turn for the Worse.mp3" loop fadein 5.0
+    mina "目的自始至终都是消灭努比利亚的敌人——鸡舍。"
+    y "（父亲是想把所有鸡舍的人都杀掉？）"
+    y "（有哪里不对劲。）"
+    scene invasion14_38
+    with dissolve
+    y "他要是真打算背叛他们，本可以告诉我。"
+    y "那就更没道理要把这封信瞒着我了。"
+    scene invasion14_39
+    with dissolve
+    y "你为什么不把这些命令告诉我？"
+    scene invasion14_42
+    with dissolve
+    mina "你父亲认为让你蒙在鼓里更妥当。"
+    y "这我很难相信。"
+    scene invasion14_37
+    with dissolve
+    mina "指挥官，我无意冒犯，但事实已经很明显了。"
+    scene invasion14_35
+    with dissolve
+    mina "你的手段不如从前干净。你甚至还放走了一些人。"
+    y "你说的是莫妮卡。她对我们还有用处，而且现在更算是我们的人了。"
+    y "这不正是我们的做法吗？把外人纳入自己人之中。"
+    scene invasion14_34
+    with dissolve
+    mina "她以前与我们为敌。"
+    scene invasion14_35
+    with dissolve
+    mina "放心吧。我已经处理掉了。"
+    scene invasion14_38
+    with dissolve
+    y "什么？{w}你什么意思？"
+    scene invasion14_35
+    with dissolve
+    mina "她没料到，所以我动手很快。"
+    y "你杀了她？"
+    scene invasion14_34
+    with dissolve
+    mina "我完成了你父亲交代给我们的任务。"
+    scene invasion14_39
+    with dissolve
+    y "我放了她一条生路。作为交换，我答应给她自由。"
+    y "你让我蒙羞……"
+    scene invasion14_41
+    with dissolve
+    mina "这一点我也很愧疚。"
+    mina "但那不是我们部族负担得起的承诺。"
+    y "我本来打算和他们谈判。"
+    y "违抗指挥官的命令，可判流放或死刑。"
+    scene invasion14_37
+    with dissolve
+    mina "我所做的一切，都是以我们战酋的名义。"
+    y "你还干了什么……{w}（米娜不只对付了莫妮卡吧？）"
+    y "那天是你放的火吧？就是我们去见她那个接头人的时候。"
+    y "（她是不是为了父亲，才特意瞒着些什么？）"
+    y "你想瞒着什么？"
+    scene invasion14_34
+    with dissolve
+    mina "没什么，指挥官。我只是不想让你被敌人牵着鼻子走。"
+    y "是父亲安排鸡舍的士兵袭击我们的学院……"
+    y "你是不想让我找到这封信吧？"
+    scene invasion14_39
+    with dissolve
+    mina "..."
+    y "这{i}才是{/i}原本的计划，对吧？你想瞒的是{i}这个{/i}。"
+    y "把名门望族的子女聚集起来，抓走或杀掉。"
+    y "「趁热打铁」的时候——就是那场祭典。那会给他提供大量现成的目标。"
+    y "他真打算杀掉别家的女儿们？可为什么？"
+    scene invasion14_40
+    with dissolve
+    mina "这也需要问吗？你是他的儿子，也流着你母亲的血。"
+    y "报复？"
+    scene invasion14_33
+    with dissolve
+    mina "荣誉。"
+    y "我们不是这么办事的。"
+    y "我们不会拿无辜者的性命去换报复。"
+    y "这怎么会是我们的计划？！"
+    scene invasion14_34
+    with dissolve
+    mina "我们不质疑战酋，指挥官。"
+    scene invasion14_36
+    with dissolve
+    mina "而且你的质疑也没有意义。这个安排已经取消了。"
+    scene invasion14_38
+    with dissolve
+    y "（脑子一团乱。父亲还骗了我什么？）"
+    y "（这一切都是幌子？）"
+    y "（母亲当年调查的事也是假的？只是为了夺权的另一套说辞？）"
+    y "他为什么改了主意？"
+    scene invasion14_42
+    with dissolve
+    mina "指挥官，别让情绪蒙蔽你的判断。"
+    mina "最好你我都回学院去，让冷静的一方占上风。"
+    scene invasion14_39
+    with dissolve
+    y "这是直接命令。有什么变化吗？米娜？{w}告诉我真相！"
+    scene invasion14_40
+    with dissolve
+    mina "*叹气*{w}……{w}既然这能让你想明白，我就把实情告诉你。"
+    mina "战酋多年来一直在追查杀害你母亲的凶手。"
+    mina "他几乎已经放弃了，于是决定：如果找不到该杀的人，就把所有人都杀一遍。"
+    scene invasion14_39
+    with dissolve
+    y "把所有人都杀一遍……"
+    y "所以他安排了这所学院落成，也安排努比利亚的敌人来袭击它。"
+    scene invasion14_38
+    with dissolve
+    y "而我就为这样的缘由送掉性命？"
+    scene invasion14_35
+    with dissolve
+    mina "不，当然不是。我们本来会在时机成熟时把你接出来。"
+    mina "他绝不会拿你的命去冒险。"
+    y "我不知道……"
+    scene invasion14_34
+    with dissolve
+    mina "但最近发生的事让我们的计划改了道。"
+    mina "我们本来已经准备照计划进行——"
+    mina "但现在有机会找到他真正的敌人。"
+    mina "最近浮出了一系列事件，都与刺杀你母亲有关。"
+    scene invasion14_33
+    with dissolve
+    mina "第一件是一种蔓延到他军中士兵的疾病，就发生在你们学院落成前不久。"
+    mina "第二件是这一带的亡灵回归，这在任何地方都是罕见之事。"
+    mina "还有一件，就发生在你母亲遇袭的那条山道。"
+    scene invasion14_34
+    with dissolve
+    mina "最后，是有报告显示，潜伏的鸡舍士兵被人喂了各种让人上瘾的药剂。"
+    mina "你母亲去世时，又出现了一份我们熟悉的报告。"
+    scene invasion14_36
+    with dissolve
+    mina "这些事让我们相信，你当时已经开始接近真正的敌人了。"
+    y "所以他退出了与间谍和入侵者达成的协议。"
+    y "父亲派你我来把他们清理干净。"
+    scene invasion14_35
+    with dissolve
+    mina "是。圭子带来了这个消息。"
+    y "圭子……{w}还有谁知道这个计划？"
+    scene invasion14_34
+    with dissolve
+    mina "只有我。圭子不过是个传话的。"
+    mina "作为他忠实的影子，只有我留在他身边。"
+    scene invasion14_40
+    with dissolve
+    mina "就连他亲生的儿子也无法理解那份爱对他意味着什么。"
+    mina "你根本不了解他。"
+    scene invasion14_38
+    with dissolve
+    y "他也不了解我——如果他以为我会眼睁睁看着无辜者被屠杀。"
+    y "我必须去见他。我必须当面跟他说清楚。"
+    scene invasion14_36
+    with dissolve
+    mina "恐怕这不行，指挥官。"
+    y "为什么？"
+    mina "你是下一阶段的关键。你必须留在这里。"
+    y "你是要我坐以待毙？"
+    mina "但不是死。"
+    y "什么——{w}你是要我当诱饵……{w}要是我拒绝呢？"
+    scene invasion14_37
+    with dissolve
+    mina "当心吧，指挥官。"
+    mina "战酋的命令至高无上。"
+    mina "你必须服从，没人有义务向你解释。"
+    scene invasion14_38
+    with dissolve
+    y "放屁。这世上还有上下级之分。"
+    y "我命令你给我个解释。"
+    scene invasion14_35
+    with dissolve
+    mina "在这件事上，我不欠你什么。我只向战酋负责。"
+    scene invasion14_38
+    with dissolve
+    y "米娜，恐怕我还有更多问题要问你。"
+    y "而且我感觉你以后都不会回答了，对吧？"
+    scene invasion14_41
+    with dissolve
+    mina "指挥官，我很抱歉事情到了这一步，但下一阶段你必须到场。"
+    mina "哪怕身上缠着绷带。"
+    scene invasion14_42
+    with dissolve
+    mina "放下武器，指挥官。跟我们走。"
+    y "我不知道自己愿不愿意。"
+    scene invasion14_40
+    with dissolve
+    mina "别把我当成我姐姐。"
+    mina "她为效命而跟着你，我则为护卫而跟着你父亲。"
+    scene invasion14_42
+    with dissolve
+    mina "你会领教我的刀刃又快又准。"
+    mina "对上我们两个，你毫无胜算。"
+    mina "冷静点，指挥官。我不想造成无谓的伤害。"
+    y "那他们全都是叛徒了？"
+    scene invasion14_37
+    with dissolve
+    mina "他们只是效忠我们战酋的好士兵。"
+    scene invasion14_38
+    with dissolve
+    y "好士兵？"
+    scene invasion14_43
+    with vpunch
+    mina "!?"
+    scene invasion14_44
+    with dissolve
+    mina "哈莎。{w}我不是叫你别露面吗。"
+    scene invasion14_46
+    with dissolve
+    haha "..."
+    y "连你也这样，哈莎？"
+    scene invasion14_49
+    with dissolve
+    mina "哈莎，制住大酋长。"
+    scene invasion14_47
+    with dissolve
+    haha "..."
+    mina "哈莎？{w}蒂玛在哪儿？"
+    scene invasion14_51
+    with dissolve
+    haha "我已经让她安息了。我姐姐脾气火爆，不适合谈判。"
+    scene invasion14_44
+    with dissolve
+    mina "谈判？我们没时间跟指挥官谈判。"
+    haha "女主人，你误会了。我是要和你谈判。"
+    scene invasion14_48
+    with dissolve
+    mina "你在说什么？"
+    haha "我早就怀疑这是大酋长的计划。"
+    haha "但我相信指挥官有正确的直觉。"
+    haha "继续挑衅下去，会让部族陷入战争。"
+    y "哈莎说得对。"
+    y "得由我们去告诉战酋，他的计划会带来毁灭。"
+    mina "我们就是他本人的手。我们有什么资格质疑他？"
+    haha "那还有谁能？"
+    scene invasion14_44
+    with dissolve
+    mina "哈莎，我警告你。现在收回你话还来得及。"
+    mina "我给过你明确的命令。"
+    haha "我的命是指挥官给的，我相信他做的是对我们部族有利的事。"
+    scene invasion14_49
+    with dissolve
+    mina "叛徒……{w}我们没有资格质疑大酋长。你会因此被绞死。"
+    scene invasion14_50
+    with dissolve
+    mina "圭子。"
+    kei "不客气。"
+    scene invasion14_53
+    with vpunch
+    kei "我等这一刻很久了！"
+    scene invasion14_54
+    with vpunch
+    haha "!"
+    scene invasion14_55
+    with vpunch
+    kei "呃啊——"
+    scene invasion14_56
+    with vpunch
+    kei "呀呵——呼！"
+    scene invasion14_57
+    with vpunch
+    kei "咳、咳咳！"
+    scene invasion14_59
+    with dissolve
+    kei "你、你这个卑鄙小人——"
+    scene invasion14_58
+    with dissolve
+    haha "缜密的谋划胜过一腔蛮力。"
+    scene invasion14_60
+    with dissolve
+    y "看来你已经走投无路了，米娜。"
+    y "别逼我们造成不必要的伤害。"
+    scene invasion14_61
+    with dissolve
+    mina "那你说吧。"
+    scene invasion14_62
+    with dissolve
+    mina "等大酋长到了，一切自会拨乱反正。"
+    y "我就是指望这个。"
+    scene bg black
+    with fade
+    "..."
+    scene invasion14_64
+    with fade
+    y "（努比利亚让我对一切都起了疑心。）"
+    y "（先是茱娜，现在又来这一套。我的营地里简直一团乱。）"
+    y "哈莎。你确定要这样做吗？"
+    scene invasion14_65
+    with dissolve
+    haha "你是在掂量我值不值得信。"
+    y "我相信你是忠诚的。但事情没这么简单，对吧？"
+    y "我不确定能不能相信你会不反抗就违抗你的女主人。"
+    scene invasion14_66
+    with dissolve
+    haha "我理解你的顾虑。但正如我所说，我一切都是为了我们族人。"
+    haha "没有你父亲，我本会一无所有，是他给了我一个家。"
+    scene invasion14_63
+    with dissolve
+    haha "我既在这里安了家，也将在这里长眠。"
+    scene invasion14_67
+    with dissolve
+    haha "愿荣光归于[tribe_name]。"
+    y "愿荣光归于[tribe_name]。"
+    scene invasion14_64
+    with dissolve
+    y "……{w}这本来可能很危险。"
+    y "谢谢你出手。"
+    y "你姐姐要怎么处置？"
+    scene invasion14_65
+    with dissolve
+    haha "她会为错过这场冲突而不痛快。"
+    scene invasion14_66
+    with dissolve
+    haha "但她也只能服从。事已至此，她不会违抗你的命令。"
+    scene invasion14_64
+    with dissolve
+    y "好。我的人已经在路上了。你和埃兹拉带上他们，把这两个人押回牢房。"
+    scene invasion14_65
+    with dissolve
+    haha "是，指挥官。"
+    scene bg black
+    with fade
+    y "（所以学院只是一场闹剧？）"
+    y "（父亲策划这件事多久了？）"
+    scene invasion14_69
+    with fade
+    y "（但不可否认，现在已经办成了。鸡舍奴隶们都死了。）"
+    y "就连莫妮卡也……"
+    y "（我得让父亲把这些事解释给我听。）"
+    scene invasion14_68
+    with dissolve
+    y "（米娜确实说过，他们认为杀害母亲的凶手就在眼前。）"
+    y "（如果那是真的，我现在就不能扰乱平静。那等于向狼群示弱。）"
+    y "（我就该装作什么都没发生，专心准备祭典。）"
+    y "（同时紧盯着敌人可能利用的线索。）"
+    scene invasion14_70
+    with dissolve
+    y "（牵涉的人越少越好。）"
+    y "（至少哈莎站在我这边。这个决定可能会让他被流放。）"
+    y "（作为父亲的一颗獠牙，他也不会好过。）"
+    y "（也许我能想办法感谢他的帮助。）"
+    scene bg black
+    with fade
+    "..."
+    y "……{w}现在我该怎么办？"
+    jump mainend
+label theinvasion15_1:
+    $ servants = 40
+    scene invasion15_1 with fade
+    y "告诉我父亲的计划。"
+    scene invasion15_2 with dissolve
+    mina "我确信他有很多话想对你说，指挥官。"
+    mina "但不像你，我知道不该去干涉他的计划。"
+    scene invasion15_3
+    with dissolve
+    mina "我没有什么能透露给你的。"
+    scene invasion15_4
+    with dissolve
+    y "我听说学院成形之前，首领和几个家族谈过话。"
+    y "我知道你大概不会，不过如果你能把事情说清楚，我或许会放你走。"
+    scene invasion15_5
+    with dissolve
+    mina "真是软弱得可笑的提议。"
+    mina "没有任何我没告诉过你的事。"
+    y "茱娜的失踪是你策划的吗？"
+    scene invasion15_6
+    with dissolve
+    mina "你是问我有没有害她？{w}没有。我妹妹是自己大意才遭殃的。"
+    mina "和你在一起的时光让她变柔软了。"
+    mina "又一件你欠我们部族的罪。"
+    y "..."
+    menu:
+        "米娜……"
+        "威胁审讯":
+            y "你很熟悉我们部族的规矩，米娜。"
+            y "如果你不配合，我会像对其他囚犯一样对你用刑。"
+            scene invasion15_5
+            with dissolve
+            mina "我很乐意。不过你真做得到吗？"
+            y "你觉得我不敢？"
+            mina "我不怀疑你的品味，可你怎么可能做得到？"
+            mina "你信任谁来审问我？要是我对他们说了你不希望我说的话呢？"
+            mina "不，能待在这里的只有你最信任的人。"
+            mina "即便如此，在不知道会发现什么之前，你也绝不可能让别人碰我。"
+            mina "所以你只能亲自动手来教训我。"
+            scene invasion15_6
+            with dissolve
+            mina "你很懂得怎么摆弄别人的身体。"
+            mina "你大概能让我屈服。{w}再纠缠下去，我说不定真的就顺从你了。"
+            mina "但我说的话你就能信吗？在你手底下，我什么话都{i}愿意{/i}说。"
+            y "你很清楚拷问的陷阱在哪。作为父亲的影子，果然如此。"
+            y "乔茜肯定能准备点什么用在你身上。"
+            y "大概是某种吐真剂之类的东西。"
+            scene invasion15_5
+            with dissolve
+            mina "你只想听更多谎话，却要往我脑子里灌那些废物？"
+            y "如果这样就能知道真相，那也无所谓。"
+            mina "也许你说得对。我没给你多少选择。"
+            mina "但我唯一能告诉你的真相，是你父亲的那个。"
+            scene invasion15_7
+            with dissolve
+            mina "让那个真相原封不动地在这里、在这个时间泄露出去？"
+            mina "连你也知道那是蠢事。你以为现在有多少双眼睛盯着你？"
+            mina "一旦闻到血的味道，你的敌人就会像猎犬一样扑上来。"
+            mina "你知道最好的选择就是等首领到来。"
+        "谈判":
+            y "我们没必要打起来。我们要的东西是一样的。"
+            scene invasion15_7
+            with dissolve
+            mina "你只说对了一半，指挥官。"
+            mina "没有任何理由动武。"
+            mina "首领到了之后，一切由他定夺。到那时连你也无法违逆。"
+            y "嗯哼……{w}你是说我们要的东西不一样？"
+            scene invasion15_6
+            with dissolve
+            y "我倒觉得我们的目标相同：让部族得到荣誉。"
+            y "还有找出杀害我母亲的凶手。"
+            y "我们都想让族人得到最好的结果。我们仍然可以合作。"
+            mina "错了。我不是我们族人的守护者。"
+            mina "我属于你的父亲。他的意志就是我的意志。"
+            mina "你没能理解我。不过没关系。"
+            scene invasion15_5
+            with dissolve
+            mina "只要你留在这里等着，我就满足了。"
+            mina "你必须被看守起来。{w}虽然我们意见相左，我可不想你受伤。"
+            mina "你今天的任何一个盟友，明天都可能变成敌人。"
+            y "这话从你嘴里说出来可真讽刺。"
+            scene invasion15_6
+            with dissolve
+            mina "这话依然成立。你知道最好的选择就是等首领到来。"
+    scene invasion15_8
+    with fade
+    y "（她说得没错。）"
+    y "（祭典近在眼前。我经不起更多动荡了。）"
+    y "（真正的敌人的威胁正在逼近。）"
+    y "（或许我该等一等。）"
+    y "（事实上米娜也不知道那个人是谁。所以这也许是我唯一的选择。）"
+    y "暂且把你留在这里吧，米娜。"
+    scene invasion15_1
+    with dissolve
+    y "如果你说的是真的，首领到了之后很可能会放你走。"
+    y "但那要由他决定。"
+    y "你会得到妥善的照顾，不会有人打扰你。"
+    y "想聊天的话，告诉守卫一声。"
+    scene invasion15_2
+    with dissolve
+    mina "当然。{w}指挥官。"
+    scene bg black
+    with fade
+    "..."
+    scene invasion15_9
+    with fade
+    y "（埃兹拉在休息。发生了这么多事，我理解。）"
+    scene invasion15_10
+    with dissolve
+    y "埃兹拉。"
+    scene invasion15_11
+    with dissolve
+    ez "主、主人——"
+    scene invasion15_12
+    with dissolve
+    ez "主、主人。对不起。我只是闭目休息一下。"
+    scene invasion15_13
+    with dissolve
+    ez "我能为您做点什么？"
+    scene invasion15_14
+    with dissolve
+    ez "是因为其他人吗？"
+    scene invasion15_17
+    with dissolve
+    y "你不必道歉。有太多责任被我不公平地压在你身上了。"
+    y "我本想让乔茜多分担一些，但别人做不了她的活。"
+    scene invasion15_16
+    with dissolve
+    ez "您真是善良，主人。不过我没关系的。"
+    y "我只是来告诉你，你一定过得很辛苦。该休息的时候就休息吧。"
+    y "如果需要的话，我的房间随时为你敞开，你可以躺下歇歇。"
+    scene invasion15_15
+    with dissolve
+    ez "啊、啊。我知道了。"
+    y "我可不想在最需要你的时候你已经累垮了。"
+    scene invasion15_19
+    with dissolve
+    ez "我、一定。{w}谢谢您，主人。"
+    scene invasion15_18
+    with dissolve
+    ez "愿荣光归于[tribe_name]。"
+    scene bg black
+    with fade
+    jump mainend
+label theadmiral1_1:
+    play music "audio/Coy Koi.mp3" fadein 3.0
+    $ lovecleo = 25
+    scene admiral11_58 with fade
+    cf "..."
+    ad "..."
+    y "?"
+    cf "..."
+    ad "...?"
+    y "（我实在听不出他们在说什么。）"
+    scene admiral11_57 with dissolve
+    if xxxadmiral == 2:        
+        ad "我就不该开口。"
+        ad "只是无伤大雅的玩笑，我可没打算养成习惯。"
+    else:
+        ad "我之前说过，我很会照顾自己。"
+        cf "我不喜欢这样。你应该……"
+    scene admiral11_56 with dissolve
+    y "看看谁来了。很高兴见到你，海军上将。"
+    ad "我们的船上传开了你要办祭典的消息。听说会很盛大。"
+    ad "那这阵风把我吹到你的海岸上，倒是我的好运。"
+    y "你能来真好。我还以为你在出海。"
+    
+    ad "计划有变。"
+    ad "我和你的一些客人有个重要的会面。"
+    y "我的客人？什么事？"
+    ad "老样子，维护世界和平。"
+    cf "又是那些该死的斯莱特，对吧？"
+    scene admiral11_53 with dissolve
+    ad "这次不是。斯莱特的事我来处理。"
+    ad "你们两个一点都不用担心。玩耍取乐本来就是孩子的事。"
+    cf "拜托，母亲。我们不是孩子了。"
+    scene admiral11_54 with dissolve
+    if xxxadmiral == 2:
+        ad "是啊。我想确实如此。"
+    ad "那么，容我失陪一下，我在城里还有点事。"
+    scene admiral11_52 with dissolve
+    y "刚才是怎么回事？"
+    scene admiral11_50
+    with dissolve
+    cf "*叹气* 母亲有毛病，一种上瘾的毛病。"
+    cf "母亲有个问题：出海几个月不回，就会变得暴躁。"
+    scene admiral11_49
+    with dissolve
+    cf "等她一靠岸，她就会……"
+    if xxxadmiral == 2:
+        scene admiral11_48
+        with dissolve
+        cf "这个嘛——你不是有一次在妓院见过她吗？"
+        y "所以她跟你说过那件事了。"
+        scene admiral11_49
+        with dissolve
+        cf "当然了。我没生气。{w}我是说，这——"
+        scene admiral11_44
+        with dissolve
+        cf "得知是你们两个，我居然松了口气，这很奇怪吗？"
+        y "不，我……我明白了。"
+    else:
+        scene admiral11_49
+        with dissolve
+        cf "你懂我意思了吧？"
+        y "我大概明白了。"
+    scene admiral11_51 with dissolve 
+    y "我理解你担心母亲的心情，可这跟我有什么关系？"
+    scene admiral11_50
+    with dissolve
+    cf "太危险了！想想看——她是海军上将。要是被人撞见什么不得体的场面呢？"
+    y "什么不得体的场面？"
+    scene admiral11_49
+    with dissolve
+    cf "你、你知道我是什么意思。"
+    if xxxadmiral == 2:
+        cf "而且因为我信任你……"
+    else:
+        cf "我是说，如果你不介意的话……"
+    scene admiral11_47
+    with dissolve
+    cf "要是由你来满足母亲的……{w}需求呢？"
+    y "呃……{w}你想让我跟你母亲上床？"
+    scene admiral11_45
+    with dissolve
+    cf "不——我只是不想让她随便找个谁就睡。"
+    cf "我也不想让她寂寞到随便抓个人就上！"
+    y "我懂了。所以你是想管住她？"
+    y "我是她的玩具吗？"
+    scene admiral11_49
+    with dissolve
+    cf "我的意思是，不管你在不在她都会去。要是你不在呢？"
+    scene admiral11_43
+    with dissolve
+    cf "你不必答应，但——我想过了，比起别人，我宁愿是你。"
+    cf "..."
+    scene admiral11_44
+    with dissolve
+    y "变态。"
+    scene admiral11_49
+    with dissolve
+    cf "*哼* 我母亲可是苏什的热忱海军上将，她要是能别孤身一人、赤身裸体地出现在那种娱乐场所，我会好受些。"
+    y "你当真的？你想要我、想要我给她套上嘴套？"
+    scene admiral11_50
+    with dissolve
+    cf "是的。你这么说也行。"
+    menu:
+        "去当海军上将的嘴套？"
+        "{color=ffff00}我来干{/color}":
+            y "我来。"
+            scene admiral11_48
+            with dissolve
+            cf "真的？你不觉得奇怪吗？"
+            y "你只是希望我们俩都平安快乐。"
+            y "这没什么不好的。"
+            scene admiral11_47
+            with dissolve
+            cf "好、好吧。好。"
+            y "你想这件事很久了吧。你有计划了对吧？"
+            scene admiral11_46
+            with dissolve
+            cf "想让我显得像个变态，小鱼？"
+            scene admiral11_44
+            with dissolve
+            cf "不过是的……{w}我有计划。要是想抓到她，我们得抓紧。"
+            scene admiral11_43
+            with dissolve
+            cf "而且我留这个发色也不合适……"
+            jump theadmiral1_2
+        "你说得对，太疯狂了 (回避)":
+            scene admiral11_47
+            with dissolve
+            y "你说得对，确实疯狂。也许有些事还是别去碰为好。"
+            y "比如我们的父母为了生出我们做的事？"
+            cf "呃。你说得对。也许是我想太多了。"
+            scene admiral11_45
+            with dissolve
+            cf "是个傻主意。忘了我提过吧。"
+            y "已经办妥了。"
+            scene admiral11_46
+            with dissolve
+            cf "抱歉让场面变得这么奇怪，[player_name]。"
+            y "不，没关系——{w}还有点受宠若惊呢。"
+            scene bg black
+            with fade
+            jump mainend
+label theadmiral1_2:
+    scene admiral11_41
+    with fade
+    ad "你这里开的到底是什么店？"
+    scene admiral11_40
+    with dissolve
+    ad "我可没点女孩。"
+    ad "就算陪她来的那个男人质量不错也一样。"
+    scene admiral11_42
+    with dissolve
+    matron "她只是他的看守。她坚持要我问问她能不能留下来就近看着。"
+    scene admiral11_39
+    with dissolve
+    matron "只是个请求，夫人要是愿意，我可以把她打发走。"
+    ad "嗯哼……{w}看起来她不会给我找麻烦。" 
+    scene admiral11_38
+    with dissolve
+    matron "她保证会守规矩。"
+    scene admiral11_37
+    with dissolve
+    ad "呵。好吧。" 
+    ad "看来我也没那么介意。"
+    matron "谢谢您的慷慨，尊贵的客人。请，尽情享用。"
+    scene admiral11_36
+    with dissolve
+    ad "所以你就打算这么看着？" 
+    scene admiral11_35
+    with dissolve
+    cf "..." 
+    ad "不打算说点什么？要是你喜欢这样，也无所谓。"
+    scene admiral11_34
+    with dissolve
+    ad "但你既然想留下，就得替我做点事。" 
+    scene admiral11_33
+    with dissolve
+    ad "我要你跪在他面前。让我看看你家少爷的本钱。"
+    scene admiral11_32
+    with dissolve
+    ad "怎么？他不是你家人吧？"
+    ad "就算是一个变态，还会带家人来这种地方吗？"
+    scene admiral11_31
+    with dissolve
+    y "（我有种感觉，她觉得我最好别硬起来。）"
+    scene admiral11_30
+    with dissolve
+    y "（可她一跪下来，效果完全反过来了。）"
+    scene admiral11_29
+    with dissolve
+    ad "好了。"
+    cf "..." 
+    scene admiral11_28
+    with dissolve
+    y "（呵，抱歉了，[cf]。）"
+    scene admiral11_27
+    with dissolve
+    ad "让他准备好伺候我。"
+    scene admiral11_26
+    with dissolve
+    cf "..."
+    scene admiral11_vid1
+    with dissolve
+    ad "这才乖。"
+    "[cf]只是轻轻舔着你的前端。"
+    "她似乎在努力让自己别去想那些事。"
+    "可每次舔的时候都那么专注地盯着你的肉棒看，应该很难做到吧。"
+    y "（[cf]对这种事表现出了一点兴趣。）"
+    y "（她会一直这样下去吗？）"
+    y "（这样没完没了的，而她母亲就在旁边看着，多少有点尴尬。）"
+    y "嗯？"
+    "[cf]仿佛陷入了某种恍惚的状态。"
+    scene admiral11_vid2
+    with dissolve
+    "女孩像是在取悦自己一样，温柔地舔着你的前端。"
+    "她已经不再分心，而是真的想把你挑逗到高潮。"
+    "她急切地用舌头接住你的液体，沉浸在你的肉棒气味中。"
+    "这份沉醉似乎被她母亲的声音打断了……"
+    ad "你就打算一直舔下去吗？"
+    ad "你知道怎么让他舒服吧？" 
+    cf "..."
+    ad "温柔又害羞？怕把这可怜的男人弄坏了？"
+    scene admiral11_vid3
+    with dissolve
+    y "（哦，她好像生气了。）"
+    ad "就是这样。我真意外你居然不干呕。"
+    cf "呃啊——"
+    ad "噗哈哈！我话说早了。"
+    ad "看来你们俩真的不是亲戚。"
+    ad "除非你们是波茨城那种亲上加亲的表兄妹？"
+    ad "我哪有那么好的运气。"
+    cf "咕叽 咕叽 咕叽~"
+    ad "哼。"
+    scene admiral11_25
+    with dissolve
+    ad "好了，够了。去角落里坐着。" 
+    scene admiral11_24
+    with dissolve
+    ad "轮到我了。"
+    scene admiral11_23
+    with dissolve
+    ad "我就喜欢壮实的年轻男人。"
+    y "..." 
+    scene admiral11_vid4
+    with dissolve
+    y "?" 
+    ad "{size=-5}你在搞什么名堂？{/size}"
+    ad "{size=-5}你为什么把她带来这里？{/size}" 
+    y "{size=-5}你知道？{/size}" 
+    ad "{size=-5}当然。我了解我女儿。{/size}"
+    ad "{size=-5}现在别让我失望，趁她没生气之前滚吧。{/size}"
+    y "{size=-5}这是她的主意。{/size}"
+    ad "{size=-5}嗯哼？是这样吗？{/size}"
+    scene admiral11_vid6
+    with dissolve
+    ad "{size=-5}这么说倒也说得通。{/size}"
+    ad "{size=-5}她就这么想来看我？{/size}" 
+    ad "{size=-5}她告诉你我为什么来这里了吗？{/size}" 
+    y "{size=-5}她说你每次出航都又久又不尽兴。{/size}"
+    ad "{size=-5}当然。{/size}"
+    ad "{size=-5}我带着一船的男人。{/size}"
+    ad "{size=-5}船上的女人要么是水手，要么是妓女，绝不会两者都是。{/size}"
+    scene admiral11_vid5
+    with dissolve
+    ad "{size=-5}假设我偶尔让一两个溜上来。{/size}" 
+    ad "{size=-5}每天早上她们在我床上。{/size}"
+    ad "{size=-5}每天中午在我嘴里。{/size}"
+    ad "{size=-5}每天晚上在我小穴里。{/size}"
+    ad "{size=-5}不过我们现在不在船上，对吧？{/size}" 
+    ad "{size=-5}既然你要留下，就老实尽你的本分，泥地居民。{/size}"
+    y "（我该怎么办？）"
+    menu:
+        "海军上将会知道……继续吗？" 
+        "{color=00ff00}继续{/color}":
+            scene admiral11_23
+            with dissolve
+            ad "{size=-5}很好，小鬼~{/size}"
+            scene admiral11_21
+            with dissolve
+            ad "{size=-5}既然你是她的贡品，今天可要好好表现。{/size}"
+            scene admiral11_19
+            with fade
+            ad "让你的女主人好好欣赏一番吧。"
+            ad "（她在装出满不在乎的样子？）"
+            ad "（别逗她逗得太狠了。）"
+            scene admiral11_20
+            with dissolve
+            ad "（可这么棒的鸡巴，我怎么能拒绝？）"
+            scene admiral11_vid7
+            with dissolve
+            ad "哈啊~好壮——"
+            ad "唔嗯！你把这个男人带到我面前……"
+            ad "你喜欢这样？嗯啊~"
+            ad "你是我从没见过的一种变态。"
+            cf "..."
+            scene admiral11_vid8
+            with dissolve
+            ad "你有很多像他这样的男人吗？"
+            ad "我、我挺喜欢他的表现的。要是你愿意出个价把他让给我？"
+            ad "要是每天都能由我独占这根鸡巴，你要多少钱？"
+            cf "不、没有……"
+            ad "哦？"
+            cf "..."
+            ad "少、少爷——住手……"
+            scene admiral11_20
+            with dissolve
+            ad "你得教教我怎么正确地操他。我想知道。"
+            ad "他的主人是怎么用他的？又是怎么让他舒服的？"
+            ad "给我看看。"
+            scene admiral11_18
+            with fade
+            cf "..."
+            scene admiral11_17
+            with dissolve
+            cf "{size=-5}抱歉，我不是故意的。这话就那么脱口而出了……{/size}"
+            scene admiral11_16
+            with dissolve
+            cf "{size=-5}别把力气浪费在我身上，好吗？你得让母亲累垮。{/size}"
+            scene admiral11_15
+            with dissolve
+            cf "{size=-5}不过你尽力就好。{/size}"
+            scene admiral11_14
+            with dissolve
+            y "我会努力的。"
+            scene admiral11_13
+            with dissolve
+            ad "啊，好可爱。"
+            scene admiral11_12
+            with dissolve
+            ad "哦？"
+            cf "啊？"
+            scene admiral11_vid9
+            with dissolve
+            ad "哦，用他的力气？我喜欢。"
+            cf "唔呼~"
+            cf "你、你要做什么——哈！"
+            cf "{size=-5}冷、冷静点，小鱼。唔唔唔——{/size}"
+            cf "{size=-5}你、你要再这么动下去，我就没法压住声音了~{/size}"
+            y "{size=-5}叫出来吧，反正你母亲也不知道你是怎么呻吟的。{/size}"
+            cf "{size=-5}住、住手——{/size} 啊！"
+            cf "{size=-5}唔唔唔——你要是继续这样，最好就让我高潮。{/size}"
+            ad "真是个不得了的男人……"
+            cf "唔唔唔 噢噢噢~"
+            scene admiral11_vid10
+            with dissolve
+            ad "哦？连我都没被这样做过。"
+            cf "唔唔唔~"
+            ad "我被按在墙上过，被串起来过，被摇着干过。"
+            ad "甚至还有一次是跟一个矮人——"
+            cf "呃啊——"
+            cf "{size=-5}呕呕，我不想听。{/size} 呃啊~"
+            ad "在这个姿势下，很难说谁是主人谁是仆人。"
+            cf "{size=-5}喂，这、这真的有必要吗？~{/size}"
+            cf "呃啊~ 唔唔啊~"
+            cf "{size=-5}你、你最好别把我摔下去。{/size}"
+            cf "哈啊~ 啊哈！"
+            cf "{size=-5}等、等一下，我得喘口气——{/size}"
+            scene admiral11_12
+            with dissolve
+            cf "够、够了。"
+            scene admiral11_11
+            with dissolve
+            cf "快、快点给她吧。"
+            scene admiral11_10
+            with dissolve
+            ad "哦，那好吧。你的男人你留着吧，佩特拉。"
+            scene admiral11_9
+            with dissolve
+            cf "什、什么？你、你早就知道！？"
+            ad "哈哈哈！当然了。那[player_name]，你现在要反悔了吗？"
+            scene admiral11_8
+            with dissolve
+            cf "哦——"
+            scene admiral11_vid11
+            with dissolve
+            cf "等、等一下——你为什么还要继续？"
+            y "抱歉，[cf]，但你还没射呢。"
+            cf "哈！~那个——"
+            cf "该、该死的小鱼，我只是——"
+            cf "啊啊~我那么一说，自己就变得更想要了！"
+            y "不过，我还想让你高兴。"
+            cf "被、被人看着的时候，你怎么还能说这种话？"
+            y "我倒觉得你喜欢被人看着。"
+            y "你喜欢看别人，也喜欢被人盯着，对不对？"
+            cf "笨、笨蛋。"
+            scene admiral11_vid12
+            with dissolve
+            y "是吗？你都快把脸埋进我这里了还这么说。"
+            cf "小、小鱼！{w}呜啊啊~"
+            y "我敢打赌你能感觉到它涌上头顶。那种快感？"
+            cf "好胀，哈啊~"
+            cf "好、好深！继续~"
+            cf "嗤~~现在别停——我——"
+            cf "呃啊~我快到了——"
+            cf "对对对——"
+            scene admiral11_vid13
+            with dissolve
+            cf "唔唔唔！~"
+            cf "你、你们两个真是气死人了！呃啊啊啊~"
+            scene admiral11_8
+            with dissolve
+            y "完事了？"
+            cf "哈啊……哈啊……"
+            cf "哦，闭嘴……"
+        "坦白 (跳过)":
+            y "啊……她知道了。"
+            cf "?" 
+            y "你不用装。她知道了。" 
+            cf "!?"
+    scene bg black
+    with fade
+    ad "你们两个到底来这里做什么？" 
+    scene admiral11_5
+    with dissolve
+    cf "只是来确保你别做蠢事。" 
+    scene admiral11_6
+    with dissolve
+    ad "比如把我的人送去勾引我母亲？" 
+    scene admiral11_4
+    with dissolve
+    cf "这、这是以防万一！" 
+    cf "我可不想听说你被人撞见出丑。"
+    cf "以前就发生过！" 
+    scene admiral11_3
+    with dissolve
+    ad "难道你指望你的王子替你来满足我？" 
+    ad "也夸夸你母亲啊，女儿。"
+    ad "我学到了。我多少知道节制了。"
+    ad "这次我顶多只会自己满足一下。"    
+    cf "你今天本来打算雇点娱乐。我们都到这儿了，不用我多说了吧。"
+    ad "老板娘和我早就知道你的名字了。我俩都觉得这是个有趣的恶作剧。" 
+    scene admiral11_2
+    with dissolve
+    cf "所以你们就是在耍我！？" 
+    cf "知道的话，一开始就告诉我啊！" 
+    ad "哈！自己乱掺和反倒怪到我头上？再说了，我也没想到你会玩这么大！" 
+    ad "傻丫头，你想在母亲面前耍手段还得再等好几年呢！" 
+    scene admiral11_1
+    with dissolve
+    cf "啧——我们走！" 
+    ad "看你这么“照顾”他，我大概不用担心外孙的事了。"
+    cf "啊！担心你真是我最大的失误！" 
+    ad "嘿嘿嘿。"
+    scene bg black
+    with fade
+    jump mainend
+label joana4plus_1:
+    play music "audio/Experimental Test Subject.mp3" fadein 3.0
+    $ loveluce = 27
+    scene joana4_1
+    with fade
+    joana "又来了，姐姐？这回呢？又想换个方式侮辱我？"
+    scene joana4_2
+    with dissolve
+    lu "乔安娜，他又不是想把你留在这里。只是你没给他多少选择。"
+    scene joana4_9
+    with dissolve
+    lu "你要是告诉我为什么监视他，我也许能说服他放你走。"
+    scene joana4_3
+    with dissolve
+    joana "我知道你被诅咒了，可没想到你还这么胆小。"
+    joana "你要是有点脑子，早该找人把你姐姐从这里弄出去了。"
+    scene joana4_4
+    with dissolve
+    lu "我给维维安写了信。她没给我回。"
+    scene joana4_5
+    with dissolve
+    lu "她肯定会知道该怎么做，所以——"
+    scene joana4_6
+    with dissolve
+    joana "还在靠姐姐吗？你写信维维安就会回吗！"
+    scene joana4_7
+    with dissolve
+    joana "她已经够忙了，不需要你添乱。"
+    scene joana4_8
+    with dissolve
+    joana "露丝，你不觉得现在得亲自出手了吗？"
+    scene joana4_10
+    with dissolve
+    joana "你看——对不起……{w}我不是要对你这么生硬。"
+    scene joana4_11
+    with dissolve
+    joana "这不是你的错。不过这一切都是个大误会。"
+    joana "如果你能把我弄出去，我就能跟王子把事情说清楚。我只需要拿回我的东西。"
+    lu "他不会那么轻易放你走。"
+    scene joana4_12
+    with dissolve
+    joana "他不必放。你能放我走。"
+    lu "你想把我救出去？可王子——"
+    scene joana4_13
+    with dissolve
+    joana "啊——我一天比一天虚弱……"
+    joana "求你了——你知道我不习惯这种待遇。再待下去，我可能就变了一个人。"
+    scene joana4_14
+    with dissolve
+    joana "我只是想念家里的安稳，仅此而已。"
+    joana "悄悄行动，王子就不会知道。"    
+    scene joana4_15
+    with dissolve
+    lu "我……{w}我保证我很快就会想出办法，姐姐。"
+    scene bg black
+    with fade
+    jump mainend
+label joana5_1:
+    play music "audio/Nomadic Sunset.mp3" fadein 3.0
+    $ loveluce = 28
+    scene joana5_1
+    with fade
+    m "喂露丝，看这个！虽然是试验品，但我觉得更结实也更轻。你觉得呢？"
+    lu "..."
+    m "露丝？"
+    scene joana5_2
+    with dissolve
+    lu "嗯？啊，对、对不起，玛格娜。"
+    m "有什么心事吗？"
+    lu "没什么。我们刚才说到哪了？"
+    lu "是啊，很漂亮的一件。"
+    scene joana5_3
+    with dissolve
+    m "你不必说，不过你知道可以跟我聊聊，对吧？"
+    lu "我——{w}我知道。只是我觉得不该说。"
+    m "家人？"
+    lu "是的。"
+    m "没关系。我们都有不靠谱的家人。"
+    scene joana5_4
+    with dissolve
+    m "说真的，这里谁没有？哈哈哈！"
+    lu "你、你说得对——嘿嘿。"
+    scene bg black
+    with fade
+    "..."
+    scene joana5_5
+    with fade
+    m "她是这么说的。"
+    y "她不想说，那还有什么好谈的？"
+    scene joana5_6
+    with dissolve
+    m "你其实不懂女人吧？你该去跟她谈谈。"
+    m "她不会告诉{i}我{/i}，但不代表她不会告诉{i}你{/i}。"
+    y "（露丝的家族就是一窝毒蛇，我不确定自己要不要把手伸进去。）"
+    y "（但她的家人还是得查清楚。）"
+    scene joana5_7
+    with dissolve
+    m "她会对你敞开心扉。别告诉她是我让你去的。"
+    m "只要说「露丝，你为什么难过？」"
+    scene joana5_6
+    with dissolve
+    m "她会说「哦，王子[player_name]，你好有洞察力啊。」"
+    m "「我要把你的洞察力射进我身体里~」"
+    y "怎么说呢，我觉得她不会这么回答。"
+    scene joana5_5
+    with dissolve
+    m "我仿佛已经看到了。"
+    y "我去跟她谈谈。"
+    scene joana5_7
+    with dissolve
+    m "听你这么说我就放心了。{w}露丝是个好姑娘。"
+    m "你要是不要她，我可就收下了。"
+    y "..."
+    scene joana5_8
+    with fade
+    v "为主人赴汤蹈火，露丝夫人……"
+    scene joana5_9
+    with dissolve
+    lu "好。谢谢你的忠诚，薇奥莱特。"
+    scene joana5_10
+    with dissolve
+    v "打扰一下，露丝夫人。您有客人来了。"
+    lu "你好，[player_name]。呃——我、我能为您做什么？"
+    scene joana5_11
+    with dissolve
+    y "听说你心情不太好，露丝。你还好吗？"
+    lu "当然——我是说……{w}大概是我能有的最好状态吧？"
+    y "真的吗？有什么事困扰你吗？"
+    scene joana5_12
+    with dissolve
+    lu "嗯？啊——我真的看起来那么阴沉吗？"
+    lu "没什么。有什么能为您效劳的，[player_name]？"
+    y "你不用瞒着我。你不觉得我会帮忙吗？"
+    scene joana5_13
+    with dissolve
+    lu "你当然会。"
+    lu "我只是不确定那是不是——"
+    lu "由我来说并不合适。"
+    scene joana5_14
+    with dissolve
+    lu "*叹气* 但是……{w}你不该被我怀疑。"
+    lu "你说得对。是关于我家里人的事。"
+    scene joana5_15
+    with dissolve
+    lu "是维维安，我大姐。"
+    y "（维维安、乔安娜、露内特，然后是露丝。格雷森家的人口真多。）"
+    lu "维维安去信天翁出访了。"
+    scene joana5_14
+    with dissolve
+    lu "她丈夫是去战时与信天翁商谈贸易的。"
+    lu "这是她失踪最久的一次，连个消息都没有。"
+    lu "我开始有些担心了。"
+    lu "而且最糟糕的是……{w}不，不可能的。"
+    y "说下去。你不用犹豫。"
+    scene joana5_13
+    with dissolve    
+    lu "这只是猜测。{w}但我觉得乔安娜跟这事有关。"
+    y "你为什么这么说？"
+    scene joana5_15
+    with dissolve
+    lu "罗恩是信天翁人，所以跟着维维安和她丈夫去当向导。"
+    scene joana5_14
+    with dissolve
+    lu "可薇奥莱特和我从——{w}从我认识你开始，就没收到维维安或罗恩的消息。"
+    lu "我很担心……"
+    y "这确实值得担心，但也可能什么都说明不了。"
+    scene joana5_16
+    with dissolve
+    lu "罗恩和薇奥莱特……{w}他们经常通信。"
+    lu "薇奥莱特不想让乔安娜注意到这件事，你明白吗？"
+    scene joana5_15
+    with dissolve
+    y "（一家之主给自己的仆人写信，却不告诉妻子？）"
+    y "当然。我能理解这有多难说出口。"
+    y "乔安娜可能会以为她丈夫和仆人之间有什么。"
+    scene joana5_16
+    with dissolve
+    lu "对、对。而且乔安娜最近的举动已经超过她平常的……{w}小把戏了。"
+    lu "而且还有一桩更麻烦的事……"
+    lu "乔安娜一直对维维安的丈夫朗费罗勋爵有想法。"
+    y "朗费罗勋爵？那不可能是真名。"
+    scene joana5_18
+    with dissolve
+    lu "我不开玩笑。朗费罗家是波茨城的名门望族。"
+    y "我知道，我是在逗你。露丝，你逗起来真有趣。"
+    scene joana5_15
+    with dissolve
+    lu "哼。我可不喜欢。"
+    y "我不是故意要把你的话打断的。"
+    y "我知道你是认真的。请继续说，露丝。"
+    scene joana5_16
+    with dissolve
+    lu "好吧……{w}我原谅你。"
+    lu "我知道这听起来很蠢，但我觉得乔安娜做了什么。"
+    scene joana5_14
+    with dissolve
+    lu "我爱我的姐妹们，我不想把她们想得很坏。"
+    lu "但为了家族，我必须知道发生了什么。"
+    lu "我只是……{w}不想那是什么更险恶的事。"
+    y "你觉得我能帮上忙吗？"
+    scene joana5_13
+    with dissolve
+    lu "其实吧，我已经深入想过了。"
+    lu "事实上我已经有计划了，如果……你愿意帮忙的话？"
+    y "那是我的荣幸。"
+    scene joana5_18
+    with dissolve
+    lu "那就……{w}我私下跟你细说。"
+    scene bg black
+    with fade
+    "..."
+    jump mainend
+label joana6_1:
+    $ loveluce = 29
+    scene joana6_2
+    with fade
+    joana "就这样？自由来得这么容易？"
+    joana "你费了那么大劲把我留下，现在就这样放我走？"
+    scene joana6_1
+    with dissolve
+    y "你还想抱怨？"
+    scene joana6_3
+    with dissolve
+    joana "你一定以为我傻。你在玩什么把戏。"
+    joana "但你根本玩不起。"
+    scene joana6_4
+    with dissolve
+    joana "你扣押了贵族。我可以让你上法庭。"
+    scene joana6_5
+    with dissolve
+    y "啧——{w}这次你可以蒙混过关，但别以为我就会放过你。"
+    scene joana6_6
+    with dissolve
+    y "要是我说了算，我就会把你留下，但你的姐姐才是你的恩人。"
+    scene joana6_7
+    with dissolve
+    joana "露丝？"
+    scene joana6_8
+    with dissolve
+    y "我们之间的事还没完。"
+    y "但为了把你交还给家人，露丝答应给我一份担保。"
+    scene joana6_9
+    with dissolve
+    y "（那是谎话，但也许能让她放下戒心。）"
+    scene joana6_10
+    with dissolve
+    joana "她又许了你什么？用舌头把你洗个遍？"
+    joana "我猜她在床上一定很有天赋。"
+    y "那是我和她之间的事。但她不可能永远护着你。"
+    scene joana6_11
+    with dissolve
+    joana "所以你把我交给我姐姐处置？"
+    joana "你们两个以为我会向她低头？"
+    y "我很想看看。不过露丝认为你是清白的。"
+    y "（又一个谎话。但希望这次能帮露丝达成目的。）"
+    scene joana6_10
+    with dissolve
+    joana "所以你终于明白，这件事已经不由你掌控了。"
+    joana "这件事迟早会找上你。"
+    scene joana6_11
+    with dissolve
+    y "你现在尽管得意，等你姐姐不再护着你，我会再找到你。"
+    scene joana6_12
+    with dissolve
+    joana "你真是蠢到家了。"
+    joana "等我离开这个地方，你就再也见不到我了。"
+    joana "哈。那你又能怎样？"
+    scene joana6_13
+    with dissolve
+    "你上前一步，乔安娜却躲开了你……"
+    y "……{w}滚出这里。"
+    scene joana6_14
+    with dissolve
+    y "（希望她信了我的表演。我得让她以为我不想放她走，可她还是照走不误。）"
+    scene bg black
+    with fade
+    y "（如果她确信自己没把柄，那就好办了。露丝会轻松一些。）"
+    jump mainend
+label joana7_1:
+    play music "audio/Novus Initium.mp3" fadein 3.0
+    $ loveluce = 30
+    scene joana7_1
+    with fade
+    lu "你、你没事吧？"
+    joana "我现在很好。多亏了你。"
+    scene joana7_2
+    with dissolve
+    lu "对不起。我真的尽力为你求情了。"
+    lu "如果你不是这么爱惹事，我想——"
+    joana "爱惹事？！你一定是神志不清了！"
+    joana "我才不是那样。"
+    scene joana7_3
+    with dissolve
+    lu "你、你在他家里打了他，还企图逃跑。"    
+    joana "这些游牧……他们就是恶臭与失败的化身。"
+    scene joana7_4
+    with dissolve
+    joana "我只是像对待被关押的动物那样，做了理所当然的事。"
+    joana "你听说这些事之后，就该立刻给爸爸写信才对。"
+    scene joana7_5
+    with dissolve
+    lu "我确实试着给维维安写了信。她、她不可能不回。"
+    scene joana7_6
+    with dissolve
+    joana "你这傻姑娘。"
+    joana "你还不明白吗？"
+    scene joana7_7
+    with dissolve
+    joana "她明摆着是跟朗费罗师傅还有我那位丈夫跑了。"
+    joana "那两个男人早就盯上她了。"
+    joana "她本来就不是什么正经人。{w}不用替她操心。"
+    joana "靠着在信天翁的人脉，她肯定能过得很舒坦。"
+    scene joana7_8
+    with dissolve
+    lu "不，她、她才不会做那种事。"
+    scene joana7_7
+    with dissolve
+    joana "哦，可怜的妹妹。天真又不是你的错。"
+    joana "毕竟你可是被恶魔亲吻过的。"
+    scene joana7_4
+    with dissolve
+    joana "所以你才该听我的。我会照顾好你。"
+    lu "..."
+    scene joana7_3
+    with dissolve
+    lu "你回家路上没问题吧？"
+    joana "别来教训我，露丝。"
+    scene joana7_1
+    with dissolve
+    joana "大家闺秀要学会将就别人给的东西。"
+    lu "……对不起。跟拉姆走吧，妹妹。一路平安。"
+    scene joana7_4
+    with dissolve
+    joana "别那么闷闷不乐。虽然慢了半拍，但你还是把我救出来了，小露丝。"
+    scene joana7_7
+    with dissolve
+    joana "我会替你在爸爸面前美言几句。"
+    scene joana7_9
+    with dissolve
+    joana "而这位，要为她的无能代你承受审判之光的照耀。"
+    joana "等我们回去，我一定让她尝尝悔过的滋味。"
+    v "..."
+    scene joana7_10
+    with dissolve
+    joana "走吧，你这个眼中钉。我们走。"
+    v "是，我的女男爵大人。"
+    scene joana7_11
+    with dissolve
+    y "（露丝认为，她监视我的计划和姐姐神秘失踪一事有关。）"
+    y "（乔安娜似乎以为自己被放出来了，可以把薇奥莱特带回去受审。）"
+    y "（如果露丝是对的，乔安娜会想办法掩盖痕迹。我只要做好诱饵的分内事就好。）"
+    scene bg black
+    with fade
+    "..."
+    jump mainend
+label joana8_1:
+    $ loveluce = 31
+    scene joana5_13
+    with fade
+    lu "希望不会出什么事。我不愿意往最坏处想。"
+    lu "如果她选择回城，或许就什么事都没有。"
+    lu "但是……{w}乔安娜不是那种会既往不咎的人。我怀疑她不会善罢甘休。"
+    scene joana5_14
+    with dissolve
+    lu "我觉得她多半会冲你来。"
+    lu "你会没事吗？"
+    y "她应该不至于蠢到亲自回来，对吧？"
+    scene joana5_15
+    with dissolve
+    lu "不。她会暗中算计你……那股恶意会随着时间慢慢蔓延到你身上。"
+    scene joana5_14
+    with dissolve
+    lu "呃——我也说不清楚该怎么讲，但是——"
+    lu "乔安娜恨男人。"
+    lu "在和罗恩男爵订婚之前，她对追求者相当刻薄。"
+    scene joana5_15
+    with dissolve
+    lu "那些人都放下身段去讨好她。"
+    lu "她当众嘲笑他们。谁要是看着不合适，她就让人家跳舞。"
+    lu "要是对方穷一点，她就索要大笔金银和货物。" 
+    scene joana5_13
+    with dissolve
+    lu "她有一次让一个男人头顶一桶蝎子举了两个钟头，就为了证明他的爱！" 
+    lu "而且在我看来，她还挺享受的……"
+    scene joana5_16
+    with dissolve
+    lu "但后来她遇见了男爵，看起来就软化下来了。" 
+    lu "罗恩男爵来追求我们的大姐，可他来晚了，维维安已经嫁人了。"
+    scene joana5_18
+    with dissolve
+    lu "父亲说这是一桩重要的联姻，于是乔安娜就嫁给了他。"
+    y "她没有亏待他吗？" 
+    lu "不，一点也没有。无论怎么看，她对他都很和善。"  
+    scene joana5_17
+    with dissolve
+    lu "我以为她已经改掉那些习性了。"
+    scene joana5_15
+    with dissolve
+    lu "我告诉你这些，是因为我觉得你现在跟了我，她就会冲你来。"
+    y "什么？为什么？" 
+    scene joana5_14
+    with dissolve
+    lu "我以前以为那只是我自己臆想出来的一套阴谋。"
+    scene joana5_13
+    with dissolve
+    lu "可自从维维安和她丈夫跟乔安娜的丈夫一起失踪之后，我开始不这么想了。"
+    y "别担心我。我能照顾好自己。既然我们有所防备，乔安娜就占不到我的先手。"
+    scene joana5_15
+    with dissolve
+    lu "我不想等到你受伤才后悔。"
+    scene joana5_18
+    with dissolve
+    lu "所、所以……相信我吧。我有计划！" 
+    play music "audio/Eye of Forgiveness.mp3" fadein 3.0
+    scene joana8_26
+    with fade
+    y "（露丝越来越狡猾了。）"
+    y "（乔安娜刚被放出来，还没机会安排什么阴谋。）"
+    y "（如果她要动手，也只会借她或薇奥莱特的手。）"
+    y "（露丝安排乔安娜住在城澡堂附近的街上。）"
+    y "（她那种身份的女人，会留意接近自己地盘的人。）"
+    y "（乔安娜会知道我在这里，而且手无防备。）"
+    y "（如果露丝的怀疑是真的，我就是那个诱饵。）"
+    scene joana8_1
+    with dissolve
+    atk2 "看起来就是这里。"
+    y "客人？没看见这澡堂被包了吗？" 
+    scene joana8_2
+    with dissolve
+    atk1 "那肯定就是目标。"
+    atk1 "看来你今天运气不太好。" 
+    scene joana8_3
+    with dissolve
+    y "你们找我有什么事吗？" 
+    atk2 "没什么，老兄。只是生意上的事。"
+    atk2 "兄弟，别往心里去，可你惹错人了。"
+    atk1 "老实挨完这顿打，{i}也许{/i}你一会儿就能站起来。"
+    y "用剑打？"
+    y "（佣兵？还是些街头混混。）"
+    scene joana8_4
+    with dissolve
+    y "（看来他们不知道我是谁。）"
+    y "（他们看起来训练不足。我大概能缴了他们的械。）"
+    y "（或者要是他们知道我是谁，我也许能说服他们。）"
+    scene joana8_5
+    with dissolve
+    y "（不管怎样，在援兵到来之前我得做点什么。）"
+    menu:
+        "该怎么办……"
+        "告诉他们你是谁":
+            scene joana8_6
+            with dissolve
+            y "你们真不知道我是谁？我是努比利亚第十城的王子。"
+            y "[tribe_name]部族的统帅。"
+            atk1 "可我一点都不在乎。"
+            scene joana8_7
+            with dissolve
+            atk2 "嘿，我听说过他们！他是那个游牧者的儿子——叫什么来着……" 
+            atk1 "那又怎样？他不是没带武器吗？再说了，看{i}他{/i}也不像个传说。" 
+            atk2 "不对，等等，要是他说的是真的，这家伙就是个怪物。"
+            atk2 "他们说他一剑挥下来就砍死了十只哥布林！"
+            atk1 "扯淡，那不可能！"
+            y "没错，你那朋友说错了。{w}只有八只。"
+            y "（那是我一剑砍断树木才触发的陷阱。不过他们不需要知道这个。）"  
+            scene joana8_13
+            with dissolve
+            atk1 "妈的胡说八道。他这么说只是想唬退我们！" 
+            atk2 "别傻了。没有哪个女孩值得。"
+            atk2 "那婊子八成是在撒谎。早知道就不该信你，混蛋。"
+            atk2 "我不想惹麻烦。是个戴着黑鸟面具的女孩叫我们来收拾你的。"
+            y "（黑鸟面具。这听上去肯定是乔安娜。）"
+            scene joana8_14
+            with dissolve
+            ez "好了好了。你们两个谁都别想走。"
+            scene joana8_12
+            with dissolve
+            atk2 "混账——"
+            ez "识相的话就扔下武器，跟我乖乖走。"
+            atk1 "..."
+        "谈判，拖延":
+            scene joana8_6
+            with dissolve
+            y "要是想要钱之类的，我也有。"
+            atk1 "别扯了，老兄。我们听够了空话。我们要那婊子藏着的东西。"
+            scene joana8_7
+            with dissolve
+            atk2 "闭嘴。"
+            atk1 "她的金子也不嫌多。"
+            y "是个女孩让你们这么干的？她是不是棕头发？" 
+            atk1 "除了那张蠢鸟面具，什么都没瞧见。"
+            atk2 "狗娘养的，闭嘴。"
+            y "（鸟面具，听上去是乔安娜。）"
+            scene joana8_6
+            with dissolve
+            y "（如果你们想要女人，我也能提供。）"
+            y "你们去过小妖精馆吗？" 
+            atk1 "那种高档地方？"
+            scene joana8_13
+            with dissolve
+            atk2 "你——我说了别跟这家伙说话！"
+            atk2 "直接把他蛋割了，走人！"
+            scene joana8_14
+            with dissolve
+            ez "肯定有人的蛋要交代在这了……"
+            atk1 "啊——操！"
+            scene joana8_12
+            with dissolve
+            ez "识相的话就扔下武器，跟我乖乖走。"
+            atk1 "..."
+        "缴械":
+            scene joana8_6
+            with dissolve
+            y "好在我没带武器。"
+            y "这样你们两个才有看头。"
+            scene joana8_8
+            with vpunch
+            atk1 "把他的宝贝割下来，那位小姐会另外加钱！" 
+            atk2 "等——"
+            scene joana8_9
+            with vpunch
+            atk1 "操！呃啊——" 
+            scene joana8_10
+            with dissolve
+            atk2 "该、该死……"
+            y "（真是一对业余货。他们压根不懂怎么配合着进攻。）"
+            atk2 "蠢货，他怎么不干脆等着？"
+            y "你们两个是谁派来的？"
+            y "你们可以告诉我，也可以让我把你们那几把破剑一起收走。"
+            atk2 "是个娘们儿，戴着其中一种——呃，其中一种鸟嘴面具。"
+            y "黑色的，带鸟嘴的？"
+            atk2 "对。她给我们看了某个女人的照片，说只要把你的零件带回去，就能上她。"
+            y "（听上去是乔安娜和薇奥莱特。）"
+            scene joana8_11
+            with dissolve
+            ez "那当然不会发生了，对吧？"
+            scene joana8_12
+            with dissolve
+            ez "看来我根本没必要来。"
+            y "不过送他们上路这事，我还需要你们帮忙。"
+    stop music fadeout 4.0
+    scene bg black
+    with fade
+    "..."
+    scene joana8_15
+    with fade
+    joana "露丝，这是什么意思？"
+    joana "我是无辜的，你知道的。"
+    y "我们有证人可以作证不是。"
+    ez "他们说是你付钱让他们袭击我们的大人。"
+    scene joana8_16
+    with dissolve
+    joana "荒唐。两个强盗的话，能压过一位波茨女男爵？"
+    y "我们可没说我们只有两个人。"
+    y "再说了，你的仆人薇奥莱特也会作证。"
+    joana "你们这两个卑鄙混蛋——"
+    y "你说这话可真够讽刺的。"
+    scene joana8_17
+    with dissolve
+    joana "你们不能关我！你们休想。"
+    joana "我不会再让你们把我关进牢里！"
+    lu "他们不会。你会被移交格雷森家看管。"
+    scene joana8_18
+    with dissolve
+    joana "露丝，我姐姐终于来了！理智的声音。"
+    lu "我们将对罗恩男爵、维维安·格雷森和朗费罗大人的失踪正式立案调查你是否有牵连。"
+    scene joana8_19
+    with vpunch
+    joana "什么？"
+    lu "你把薇奥莱特带到城里的住处之后，她发现了你和你丈夫之间的书信。"
+    lu "目前还不清楚，但有可能是你指点了他们的行踪，若真是如此，那他们的失踪……"
+    joana "什么！？太荒唐了！父亲才不会听这些。" 
+    lu "他已经授权我把你控制起来，带回家。"
+    joana "你、你们要——这一切都是你们安排好的？"
+    scene joana8_20
+    with dissolve
+    joana "阴谋家！父亲会为了这件事拧下你那条苍白的脑袋！"
+    scene joana8_21
+    with dissolve
+    y "带她走，埃兹拉。"
+    y "在我们找到机会把她移交之前，她会被关在这里，由露丝小姐照看。"
+    scene joana8_22
+    with dissolve
+    joana "你们这群卑鄙的该死婊子！" 
+    y "能顺便堵上她的嘴吗？"
+    lu "请、请不要伤害她……"
+    scene joana8_23
+    with dissolve
+    y "你确定要这样吗？" 
+    lu "薇奥莱特发现了罗恩男爵的笔迹。"
+    lu "乔安娜说她不知道男爵出了什么事，可正是乔安娜给他指的路线。"
+    lu "我不明白她为什么要隐瞒这件事，除非真有什么问题。"
+    lu "这就意味着，不管我姐姐和其他人出了什么事，乔安娜至少要负一部分责任。"
+    lu "必须把她带回波茨，让父亲调查。"
+    scene joana8_24
+    with dissolve
+    lu "谢谢你做了这一切，[player_name]。抱歉没能让你出了这口气。"
+    lu "尤其是她刚才还威胁过你！"
+    y "没事。真的。"
+    scene joana8_25
+    with dissolve
+    lu "你对我们太宽容了。"
+    y "（对他们家了解得越多，我越发现他们自家的问题就够多了。）" 
+    y "（还好事情暂时解决了。）"
+    "..."
+    scene bg black
+    with fade
+    jump mainend
+label thegracen1_1:
+    play music "audio/Nomadic Sunset.mp3" fadein 3.0
+    $ loveluce = 32
+    scene thegracen1_1
+    with fade
+    lune "露丝！"
+    lu "姐、姐姐？什么事？"
+    lune "过来。"
+    lu "嗯——"
+    scene thegracen1_2
+    with dissolve
+    lune "这样。"
+    lu "这到底是什么？"
+    scene thegracen1_3
+    with dissolve
+    lune "你还没有为舞会准备的衣服吧？"
+    lune "也许穿上这个，就能把别人的注意力真正引开一点。"
+    lune "尤其是那个刻薄的子爵千金。"
+    lu "真漂亮……"
+    lune "是啊。我知道。"
+    scene thegracen1_4
+    with dissolve
+    lu "这是你特意为我做的？"
+    lune "你以为我专门给你量身做了件衣服？"
+    lune "我是让裁缝给{i}我{/i}做的。那个蠢裁缝把尺寸搞错了。"
+    scene thegracen1_3
+    with dissolve
+    lune "我这儿太紧了！"
+    lune "你想要就拿去。"
+    lu "可我们不是一样的——"
+    lune "你到底要不要？！"
+    scene thegracen1_4
+    with dissolve
+    lu "不——我是说——{w}要！我当然要！"
+    lu "我……{w}谢谢你，姐姐。"
+    lune "你谢我干什么？"
+    scene thegracen1_5
+    with dissolve
+    lune "我可不是为了你才这么做的，好吗？"
+    lune "赶紧把这男人装进袋子里吧。你让家族丢脸了。"
+    lu "当然。对不起，姐姐。"
+    scene thegracen1_6
+    with dissolve
+    lune "拉姆作证，换作是我，我们第一晚过后就结束了。"
+    scene bg black
+    with fade
+    jump mainend
+label thehammerfells1_1:
+    play music "audio/Nomadic Sunset.mp3" fadein 3.0
+    $ thehammerfells1_1_q1 = 0
+    $ thehammerfells1_1_q2 = 0
+    $ thehammerfells1_1_q3 = 0
+    $ lovemag = 24
+    #IF MAGROOM = 12 You can summon Stacia but not Magna
+    #IF MAGROOM = 11 You can summon Magna but not Stacia
+    scene bg bedroom2 with fade
+    if magroom == 10 or magroom == 11:
+        y "咦？斯塔西亚的信？"
+        y "说今天想见我还有玛格娜。那她是回学院了。"
+        y "……{w}希望没出什么乱子……"
+    elif magroom == 12:
+        y "咦？斯塔西亚的信？"
+        y "她很正式……{w}她要求和我、玛格娜会面。"
+        y "……{w}希望没出什么乱子……"
+    scene thehammerfells1_1
+    with fade
+    sta "..."
+    scene thehammerfells1_2
+    with dissolve
+    m "..."
+    scene thehammerfells1_3
+    with vpunch
+    m "呀啊！"
+    scene thehammerfells1_5
+    with dissolve
+    sta "玛姬。我们能谈谈吗？"
+    scene thehammerfells1_6
+    with dissolve
+    if magroom == 10 or magroom == 11:
+        m "啊，{i}母亲{/i}回学院了？"
+        m "怎么了，学院的男人们不够你挑的？可这里暂时还没那种货色。"
+        sta "我是来处理公务的，玛格娜。一向如此。"
+        sta "你要是愿意参与，对你这个哈默费尔家的女主人来说是有好处的。"
+    elif magroom == 12:
+        m "还在四处发威风呢？"
+        m "你要是愿意，我们可以过两招。反正你毫无胜算。"
+        sta "我不是来挑事的。"
+    scene thehammerfells1_7
+    with dissolve
+    sta "能不能先穿好衣服，我们再谈？"
+    m "像我这样跟你说话让你有意见？"
+    sta "没有，不过我已经把你的恩人请来了，这样我们就能谈谈家族的事。"
+    sta "我希望我们都能体面一点。"
+    scene thehammerfells1_8
+    with dissolve
+    m "我想我们两个之中，他更愿意看我而不是你。"
+    sta "拜托，穿上衣服吧。"
+    scene thehammerfells1_9
+    with fade
+    y "啊？"
+    m "这他妈是个蠢透了的主意。你要是到炉子边上待过就知道了。"
+    sta "我看过那里的劳动条件，必须改善。"
+    y "（看来气氛已经热起来了。）"
+    scene thehammerfells1_10
+    with dissolve
+    m "我不想听。你别管了。"
+    if magroom == 10 or magroom == 11:
+        scene thehammerfells1_11
+        with dissolve
+        sta "王子殿下，[player_name]，希望我女儿没给你添太多麻烦。"
+        y "又见面了，斯塔西亚。（我老忘了她是玛格娜的后母，不是她姐姐。）"
+    y "我能为哈默费尔家做些什么？"
+    scene thehammerfells1_11
+    with dissolve
+    sta "是生意上的事。我想听听你的看法，也想听听你作为兵器大师的见解。"
+    sta "约克的法师工匠们一直在研究一项真正惊人的东西。"
+    scene thehammerfells1_12
+    with dissolve
+    sta "有了它的帮助，我们的钢铁产量能翻三倍，甚至四倍。"
+    sta "而人力只要一小部分！"
+    scene thehammerfells1_13
+    with dissolve
+    m "是啊，所以你才喜欢这个主意。"
+    m "你只是想裁掉人手。"
+    sta "自动锻造机能让我们产出多得多的材料，而且更安全。"
+    m "材料会又脆又软，而且炉边干活本来就不算完全安全。"
+    y "你能从头讲一遍吗，你们两个在谈什么？"
+    scene thehammerfells1_14
+    with dissolve
+    sta "抱歉，[player_name]。"
+    sta "法师工匠们有一座炉子，靠小幅度的魔法操控来炼钢。"
+    sta "具体原理我不清楚，但基本上就是他们精炼钢材的速度极快，付出的力气也更少。"
+    m "铁匠打兵器。法师就该守着自己那套咒语和口诀。"    
+    sta "有了它，我们就不用再依赖那些维生技师了。"
+    sta "他们的精炼流程快上一倍，而且只需要很少的人看管。"
+    sta "传统方法要二十个人才干得出的活，两个人就够了。"
+    sta "战事将近，钢材需求正旺，我们能供得上。"
+    scene thehammerfells1_13
+    with dissolve
+    m "你这是要断了我们服务家族的收入。你比谁都清楚这意味着什么！"
+    m "我们的人靠自家的矿场和锻造铺讨生活、糊口！"
+    m "她说的是要把人赶出去。"
+    scene thehammerfells1_14
+    with dissolve
+    sta "我们没有任何理由去扛他们的担子。"
+    m "作为主家，我们有责任。"
+    sta "我们首先要对本家尽责。要是自家也过得苦不堪言，我们就没资格统领别人。"
+    sta "再说了，他们也会另谋生计。我们的人多才多艺。"
+    scene thehammerfells1_13
+    with dissolve
+    m "你不过是想打着我们的旗号，为所欲为罢了。"
+    sta "我嫁给你父亲可不是为了这个姓氏。"
+    m "别提他。"
+    scene thehammerfells1_18
+    with dissolve
+    sta "你也许觉得我和他之间什么都没有，可我爱过你的父亲。"
+    sta "他娶我或许另有所图，可我敬重他，视为我们族人中最了不起的人。"
+    sta "最重要的是他爱自己的家。他爱你和你的姐妹们，我也愿意相信他同样在乎我。"
+    sta "他绝不会想看到家族被责任压垮，最后沦为芸芸众生中的一员！"
+    scene thehammerfells1_15
+    with dissolve
+    m "你根本不知道他会怎么想。"
+    sta "我了解他。我大概比任何时候的你都更了解他！"
+    scene thehammerfells1_16
+    with dissolve
+    m "!"
+    scene thehammerfells1_18
+    with dissolve
+    sta "我记得他的做法。我一直按他希望的方式继续工作。"
+    sta "「从天亮到天黑。」"
+    m "你好大的胆子。别拿我们家族的话来压我。你根本不懂它的含义。"
+    sta "我当然懂。我每天都在看着你和他，不是吗？"
+    sta "你还要多久才肯把我当家人？"
+    sta "你还指望我多卖力？"
+    scene thehammerfells1_17
+    with dissolve
+    m "我从来没这么指望过……"
+    m "「从天亮到天黑，每过一个时辰，就有一张新面孔在我们的炉火边落座。」"
+    m "那是对陌生人的欢迎之词。而你自己就享受过这份欢迎。"
+    scene thehammerfells1_19
+    with dissolve
+    m "那不是努力的箴言。"
+    sta "..."
+    scene thehammerfells1_18
+    with dissolve
+    sta "你父亲真是那个意思吗？"
+    scene thehammerfells1_20
+    with dissolve
+    m "随你吧。你想怎样就怎样。反正你是哈默费尔家的女主人，不是吗？"
+    m "但你不是我的家人。"
+    scene thehammerfells1_21
+    with dissolve
+    sta "..."
+    sta "玛姬……"
+    y "玛格娜只是一时气话。她肯定不是那个意思。"
+    scene thehammerfells1_22
+    with dissolve
+    sta "不，是我的错。我不该提她父亲。"
+label thehammerfells1_2:
+    menu:
+        "去问斯塔西亚关于……"
+        "她家族的事" if thehammerfells1_1_q1 == 0:
+            $ thehammerfells1_1_q1 = 1
+            y "你好像和他们家非常亲近，可你自己的家我却没怎么听说过。"
+            scene thehammerfells1_23
+            with dissolve
+            sta "这是有意为之的，大人，[player_name]。"
+            sta "不过我想我该说明一下。"
+            sta "我家是哈默费尔大人宗族的首位服务家族。欧尼克斯。"
+            scene thehammerfells1_26
+            with dissolve
+            sta "我们两家彼此忠诚、彼此尊重。"
+            sta "哈默费尔家与欧尼克斯家联姻是常有的事。"
+            scene thehammerfells1_25
+            with dissolve
+            sta "若不是玛格娜性子独立，她大概早该和我们家的人订亲了。"
+            y "所以你们几乎就像同一个部族。"
+            scene thehammerfells1_27
+            with dissolve
+            sta "是，但也不能说我们一直这么亲近。"
+            sta "事实上，哈默费尔大人要负一部分责任。"
+            scene thehammerfells1_28
+            with dissolve
+            sta "他的第一任妻子不是我们家族的人，而是来自北方异邦的女子。"
+            y "玛格娜的母亲不是努比利亚人？"
+            scene thehammerfells1_26
+            with dissolve
+            sta "不是。看她的肤色不明显吗？"
+            y "我从没在意过。"
+            sta "约克人期待我们两家之间维持一种自然的平衡。"
+            sta "如今哈默费尔家无疑是主家，而我们就是他们的手足。"
+            sta "很多人对他娶了个外族女子感到受辱。"
+            sta "许多人认为这是对她们自身努力的不敬。"
+            scene thehammerfells1_24
+            with dissolve
+            sta "玛格娜的父亲再婚娶了我们家的人，好让异议者闭嘴。"
+            sta "玛格娜并不买账……"
+            y "嗯。你刚说如今哈默费尔家是主家……"
+            y "以前不是吗？"
+            scene thehammerfells1_25
+            with dissolve
+            sta "你今天好奇心可真重！"
+            sta "好吧，你说得对。我们欧尼克斯家曾经才是主家。"
+            y "出什么事了？"
+            scene thehammerfells1_24
+            with dissolve
+            sta "似乎所有男人都会犯的毛病。"
+            scene thehammerfells1_23
+            with dissolve
+            sta "我们的队长迷上了一个女人，把自己搞成了笑话。"
+            y "出什么事了？"
+            scene thehammerfells1_22
+            with dissolve
+            sta "那是一桩丑闻。其实吧……"
+            sta "不，还是别提过去为好。反正你母亲和他都早就不在了。"
+            y "（我母亲？这跟那件事有关系？）"
+            y "我真的很想知道。"
+            scene thehammerfells1_28
+            with dissolve
+            sta "不，别。是我失言了。"
+            sta "我不该说得好像欧尼克斯家还有什么分量似的。"
+            scene thehammerfells1_27
+            with dissolve
+            sta "请原谅我，我不该再多说了。"
+            sta "也许改天吧……{w}等更合适的时候。"
+            y "（糟了。现在我是真的想知道。不过我会耐着性子慢慢问。）"
+            y "我理解。也许改天吧。"
+            jump thehammerfells1_2
+        "玛格娜" if thehammerfells1_1_q2 == 0:
+            $ thehammerfells1_1_q2 = 1
+            y "你和玛格娜到底是什么关系？"
+            y "你们两个看起来很熟，却又似乎一样疏远。"
+            scene thehammerfells1_26
+            with dissolve
+            sta "我小时候常和玛姬一起玩。你也知道，我们是一起上学的。"
+            scene thehammerfells1_28
+            with dissolve
+            sta "我和家里人合不来……"
+            sta "我家里觉得我是个不成器的服务家族成员。我没有天赋。"
+            sta "我不喜欢锻造铺。我另有打算，另有志向。"
+            sta "对约克人来说，抛弃钢铁与火焰就是亵渎。"
+            sta "可我依旧深深热爱玛姬的家。"
+            scene thehammerfells1_29
+            with dissolve
+            sta "我家人视我为异类，可她家人却热情地接纳了我。"
+            sta "我是跟她的姐妹们、她的父亲，还有她的母亲一起长大的。"
+            scene thehammerfells1_27
+            with dissolve
+            sta "她母亲的死，也是我母亲的死。"
+            sta "在我家提亲之前，我们一直很亲近。"
+            scene thehammerfells1_26
+            with dissolve
+            sta "看起来是顺理成章的选择。他们还有别的女儿，可哈默费尔家最熟悉的还是我。"
+            sta "我也没有自己的产业，也就是说我带不来别的价值。"
+            scene thehammerfells1_24
+            with dissolve
+            sta "我发誓要做好哈默费尔大人的妻子，做他孩子的母亲。"
+            sta "可玛姬大概更怨恨后一个……"
+            jump thehammerfells1_2
+        "玛格娜的母亲" if thehammerfells1_1_q1 == 1:
+            $ thehammerfells1_1_q1 = 2
+            y "玛格娜的母亲，她是个什么样的人？"
+            y "看来她在你们的人生中占据着很重要的位置。"
+            scene thehammerfells1_24
+            with dissolve
+            sta "哈默费尔夫人。哈……"
+            scene thehammerfells1_25
+            with dissolve
+            sta "我想最简单的形容是，她就像玛格娜。"
+            scene thehammerfells1_29
+            with dissolve
+            sta "她有强烈的正义感，也总让人感到自己是受欢迎的。"
+            sta "但在锻造之事上，她更像我，而玛格娜更像我父亲。"
+            sta "感觉她是一个完整的人，而我们每个人都只是她的一部分。"
+            y "她听起来是个很了不起的人。"
+            sta "确实是。她教会我如何做一个有目标、有干劲的女人。"
+            y "她是怎么——"
+            scene thehammerfells1_28
+            with dissolve
+            sta "去世的？"
+            sta "她病了一阵子，但还没到撑不住的地步。"
+            scene thehammerfells1_23
+            with dissolve
+            sta "可有一天，她就这样在睡梦中走了……"            
+            sta "当我们听到这个消息时……"
+            scene thehammerfells1_22
+            with dissolve
+            sta "事情来得太突然……{w}前一天我才刚跟她说过话。"
+            sta "我们谁能预料到呢？"
+            sta "玛格娜接受不了。"
+            jump thehammerfells1_2
+        "没有别的（继续）" if thehammerfells1_1_q1 >= 1:
+            scene thehammerfells1_29
+            with dissolve
+            sta "如果你真要帮我一个忙，我希望你能把玛格娜当成自己的孩子。"
+            sta "约克的部族需要强有力的领导，而玛格娜在你身边会变得比她自己更出色。"
+            sta "与此同时，我会继续做我认为对这个家族最好的事。"
+            y "你打算继续推进这个计划吗？整件事似乎让她很不满。"
+            scene thehammerfells1_28
+            with dissolve
+            sta "不。我现在理解她的顾虑了。我无意去轻视它们。"
+    scene thehammerfells1_29
+    with dissolve
+    sta "她知道我们能把这项科学与魔法用在正地方。"
+    sta "她不会让这东西拖累她的人民，我只要让她看到它能造福我们的城市、造福约克。"
+    y "你觉得你们两个有可能和好吗？"
+    scene thehammerfells1_27
+    with dissolve
+    sta "我……{w}很希望她能重新把我当成同辈看待。"
+    sta "事情也许永远回不到从前。对此我已经释怀了。"
+    scene thehammerfells1_24
+    with dissolve
+    sta "对我而言，重要的是延续哈默费尔家的血脉。"
+    sta "她大概很看不上我的做法。我不能说这不让人难受……"
+    scene thehammerfells1_28
+    with dissolve
+    sta "我还是把她当作某种意义上的姐姐。"
+    scene thehammerfells1_29
+    with dissolve
+    sta "不过身为当家人，我们总有些必须面对的事，对吧？"
+    y "没错。"
+    sta "我希望她能看到，我无意伤害她或她的家人。"
+    sta "我们两个之中，她总是更周到一些。"
+    scene thehammerfells1_26
+    with dissolve
+    sta "我一如既往地想让她为我骄傲。"
+    y "我相信她能体会到。时间久了她会看到的。"
+    y "也许是我看错了，但你现在……比以前温和多了，斯塔西亚。"
+    scene thehammerfells1_25
+    with dissolve
+    sta "你的意思是我以前太紧绷了。"
+    sta "可那是从前，那时候我几乎不认识你。"
+    scene thehammerfells1_29
+    with dissolve
+    sta "对不熟的人保持防备，不是很自然吗？"
+    y "您说得也对。"
+    y "这么说我们现在就算熟了？"
+    sta "熟到我愿意承认的程度而已。"
+    y "这听起来可不像夸奖。"
+    sta "你这么想我很高兴。"
+    scene thehammerfells1_30
+    with dissolve
+    sta "谢谢你听我说完，王子殿下，[player_name]。"
+    if magroom == 12:
+        scene thehammerfells1_29
+        with dissolve
+        sta "回头见。"
+    elif magroom == 10 or magroom == 11:
+        scene thehammerfells1_29
+        with dissolve
+        sta "我大概该在城里找间房。"
+    scene thehammerfells1_31
+    with dissolve
+    m "..."
+    scene thehammerfells1_32
+    with dissolve
+    y "（看来玛格娜留下来了。）"
+    y "（不知道她怎么看这件事。）"
+    scene bg black
+    with fade
+    jump mainend
+label thehammerfells2_1:
+    $ lovemag = 25
+    scene thehammerfells2_1
+    with fade
+    m "嘿，我想请你帮个忙。"
+    y "这到底是什么？"
+    scene thehammerfells2_2
+    with dissolve
+    m "我想私下和斯塔西亚谈谈，你能帮我安排吗？"
+    y "这次倒主动了？我还以为你恨斯塔西亚。"
+    scene thehammerfells2_1
+    with dissolve
+    m "我不——"
+    m "我不恨斯塔西亚，她是我的朋友，我……"
+    scene thehammerfells2_2
+    with dissolve
+    m "我不恨她。"
+    y "（玛格娜在这件事上别扭得反常。）"
+    scene thehammerfells2_1
+    with dissolve
+    m "*叹气* 我很不想承认，但她偶尔也有些好主意。"
+    m "虽然她有点让人恼火，但她还是我的……"
+    y "我明白了。她是你部族的一员，我会尽力帮忙。"
+    y "我可以为你们安排一个完全私密的地方。"
+    scene thehammerfells2_3
+    with dissolve
+    m "太好了。"
+    m "告诉她地点，我会在那里等她。"
+    y "你不也需要知道地点吗？"
+    scene thehammerfells2_2
+    with dissolve
+    m "不用。我让西奇告诉我就行。"
+    y "你让西奇跟着——{w}你当然会这么做。"
+    scene bg bedroom2 with fade
+    "斯塔西亚听说玛格娜发出了邀请，虽然意外却很快答应下来。"
+    scene thehammerfells2_4
+    with fade
+    "玛格娜和斯塔西亚私下商议计划的条件，商议了许久……"
+    scene thehammerfells2_5
+    with dissolve
+    "……{w}谈判结束之后……"
+    scene thehammerfells2_6
+    with fade
+    y "完事了？"
+    sta "真意外，她居然没让你一起谈条件。"
+    sta "她经常提起你。"
+    m "才没有。没那么{i}经常{/i}。"    
+    sta "你们的新计划不打算跟他说了？"
+    m "都是无聊的走形式。他要是想知道，我会告诉他。"
+    sta "你凭什么觉得他会同意？"
+    scene thehammerfells2_7
+    with dissolve
+    m "我觉得他肯定会同意。"
+    m "我只是觉得他根本不在乎。"
+    y "你的计划里有我？"
+    sta "那要看你会不会选玛格娜做你的妻子。"
+    sta "我们还没蠢到要去讨饭，不过这当然也是个值得考虑的因素。"
+    sta "所以只要操作得当，我们都能赢。就像我一直说的，从头到尾都是。"
+    scene thehammerfells2_8
+    with dissolve
+    sta "你想听听细节吗？"
+    m "我觉得那些东西他不在意。"
+    menu:
+        "想知道吗？"
+        "我想知道":
+            y "我想知道。每一个细节都值点什么。"
+            scene thehammerfells2_9
+            with dissolve
+            sta "看吧。我就说他会。"
+            sta "玛姬承认我把自动锻造机引进约克的计划并非全无价值。"
+            sta "我已经安排拿出一部分利润，接济那些向我们宣誓效忠的家族。"
+            sta "一旦出状况，我们就让他们待命支援，同时他们也可以自由地另谋职业。"
+            sta "只要我们一心提高生产效率，大家都应该有好处。"
+            sta "产量提升意味着利润提升。利润提升就意味着你能拿到更好的武器。"
+            scene thehammerfells2_8
+            with dissolve
+            sta "当然，有了[tribe_name]的支持，我们能做得多得多。你会是个很有价值的客户。"
+            m "她说得没错，你和你的人会是评判我们武器的最佳人选。"
+            y "这跟我选你做未婚妻有什么关系？"
+            sta "如果你选了别人做妻子，这种协议根本不可能成立。"
+            sta "如果我的合作对象是克莱斯特穆尔夫人您，那条件就不一样了。"
+            scene thehammerfells2_7
+            with dissolve
+            sta "但如果你和玛格娜成婚，我就是在和自家人谈，那就再理想不过了。"
+            sta "当然我们会给你优厚的报酬，而且你可以优先挑货。"
+            scene thehammerfells2_6
+            with dissolve
+            m "别再拿货品勾引他了。他不是那种人。"
+            sta "我还是觉得他会讲道理的。"
+            scene thehammerfells2_9
+            with dissolve
+            sta "你在别的铁匠那儿拿不到更好的条件，你的军队也不会缺武器！"
+            sta "你要是不答应，一定会后悔。"
+            sta "要我起草一份协议吗？"
+            y "你想让我现在就决定？"
+            scene thehammerfells2_10
+            with dissolve
+            m "斯塔西亚，别闹了。不着急，别听她的。"
+            m "我不想你只是出于责任感才选我。"
+            m "所以别让她把你带偏。我会让你看到，出于别的理由我才是你的最佳选择。"
+        "她说得对，我不（跳过）":
+            y "好吧。我其实不太需要听。"
+            y "既然玛格娜觉得这是个好主意，那肯定没问题。"
+            scene thehammerfells2_9
+            with dissolve
+            sta "你连细节都不听就答应了？"
+            m "那叫信任。他知道我不是在坑他。"
+            sta "对，不是在坑{i}他{/i}。"
+            m "再说了，在他决定愿不愿意为了娶我而忍下你之前，这事都还没定下来。"
+            sta "说得有道理。"
+            sta "那么看来谈判暂时就算定了。"
+            scene thehammerfells2_10
+            with dissolve
+            m "太好了。这件事就到此为止吧。"
+            m "节庆上见，[player_name]！"
+            m "哦哦！记得给我在玛丽昂姐妹的演出留个前排座位！"
+    scene thehammerfells2_11
+    with dissolve
+    sta "谢谢你在这件事上展现的专业手法。"
+    y "别谢我。我什么也没做。"
+    scene thehammerfells2_12
+    with dissolve
+    sta "不。我认为是你替我软化了她的心。"
+    sta "哪怕你并非有意如此。"
+    y "如果你真打算还这份人情的话。"
+    y "我对自己的母亲几乎一无所知。你之前提过她的一些事。"
+    y "你能告诉我些什么？"
+    scene thehammerfells2_13
+    with dissolve
+    sta "啊……"
+    sta "你说得对。我想你确实有资格知道。"
+    scene thehammerfells2_14
+    with dissolve
+    sta "很久以前，在努比利亚主城建立之前，我们欧尼克斯家是约克的当家。"
+    sta "我们掌控着所有主要矿脉，更重要的是，还有最顶尖铁匠的支持。"
+    scene thehammerfells2_15
+    with dissolve
+    sta "我父亲斯泰戈·欧尼克斯促成了我们家和玛格娜父亲的结盟。"
+    sta "可就在努比利亚建城前不久，发生了一桩丑闻。"
+    scene thehammerfells2_16
+    with dissolve
+    sta "简单来说，我父亲对妻子不忠。"
+    sta "他在追求一个家族之外的女人。"
+    sta "我之前没提过，这对当时的各个家族来说是莫大的侮辱。"
+    sta "矿工们抱团得很紧。家族之间通婚是惯例，尤其是当家之间。"
+    sta "所以当我母亲发现他对一位游牧女王的情欲时，有很多人要求他下台。"
+    y "一位游牧女王？你不会是指——"
+    scene thehammerfells2_14
+    with dissolve
+    sta "是的。他给你母亲写了很多信。"
+    sta "他声称那些信从未送到她手上。但他的意图昭然若揭。"
+    scene thehammerfells2_13
+    with dissolve
+    sta "那是一桩丑闻。一位大人像个早熟的毛头小子一样向别的女人献殷勤。"
+    sta "我把这些话告诉你都觉得难为情。"
+    sta "那时我太小，什么都不懂。"
+    scene thehammerfells2_14
+    with dissolve
+    sta "但传闻说，你母亲为这件事拒绝了给我们家族的单子。"
+    sta "不好说，但很多人认为那是因为我父亲。"
+    scene thehammerfells2_15
+    with dissolve
+    sta "你应该能理解我为什么不想谈这种事。"
+    sta "我父亲和你母亲都已经不在人世了。"
+    scene thehammerfells2_16
+    with dissolve
+    sta "而且从那之后一切都变了。再提这种丑事有什么意义？"
+    y "我想我明白了。"
+    y "（斯塔西亚没听懂其中的含义。那至少说明她是无知的。）"
+    scene thehammerfells2_17
+    with dissolve
+    sta "总之。我虽然喜欢听点八卦，但对我来说这也太陈旧了。"
+    sta "既然是关于你母亲的事，希望这多少让你满意了。"
+    y "是的。谢谢你，斯塔西亚。"
+    sta "当然，[player_name]。"
+    if magroom == 12:
+        scene thehammerfells2_18
+        with dissolve
+        sta "哦——我差点忘了。"
+        sta "玛姬听说我去找过你几次。"
+        sta "我告诉她我不是想拿她当消遣，不过她似乎乐意让你在我身上为所欲为。"
+        sta "我猜那句「去你的，斯塔西亚」可不只是一句气话。"
+        scene thehammerfells2_19
+        with dissolve
+        sta "就算她确实是那种愿意分享的人。有时候让她得到点特别的关注也不错。"
+        sta "也许我该去看看玛丽昂姐妹在打什么主意。"
+        sta "顺便偷瞄一眼现场。我确实很喜欢她们的把戏。"
+        play sound "audio/sounds/freshring.ogg"
+        "你已解锁召唤玛格娜的能力！"
+    elif magroom == 10 or magroom == 11:
+        scene thehammerfells2_18
+        with dissolve
+        sta "对了——记得多关注关注我的宝贝女儿。"
+        sta "最近的事只让她压力更大。如果你能让她放松一些，我会很感激。"        
+        sta "我把话说清楚，我是请你去让她过得开心。"
+        sta "召唤她一次，让她体会身体的快感。"
+        sta "我很乐意回报你，表示我的谢意。"
+        y "我明白了。"
+        scene thehammerfells2_19
+        with dissolve
+        sta "很好。{w}我收到了庆典的请柬。"
+        sta "我期待每一刻。"
+        sta "希望你不介意我住在这里吧？"
+        sta "或许玛姬那边能腾出点地方给我。"
+        y "我会安排好你的住处。"
+        sta "谢谢你，亲爱的王子殿下。"
+        play sound "audio/sounds/freshring.ogg"
+        "你已解锁召唤斯塔西亚的能力！"
+    $ magroom = 13
+    scene thehammerfells2_20
+    with dissolve
+    y "（欧尼克斯大人对母亲有感情？而且当时他还是约克的城主。）"
+    y "（也就是说，他可能有作案的手段和动机。）"
+    y "（也许他最后真的追上了她。）"
+    scene bg black
+    with fade
+    jump mainend
+label thehammerfells3_1:
+    $ lovemag = 26
+    $ magroom = 14
+    scene thehammerfells3_1
+    with fade
+    m "嘿。你觉得斯塔西亚性感吗？"
+    scene thehammerfells3_2
+    with dissolve
+    y "什么？这是什么圈套吗？"
+    scene thehammerfells3_3
+    with dissolve
+    m "别担心。你可以如实回答。"
+    menu:
+        "斯塔西亚性感吗？"
+        "是":
+            y "是。她是个美人。"
+            y "她身材丰腴、皮肤白皙、个子高挑。我实在挑不出什么毛病。"
+            scene thehammerfells3_2
+            with dissolve
+            m "是啊，就身体来说，她要是肯下功夫，体格会比我强得多。"
+            m  "那倒不错。"
+            y "你为什么问这个？"
+        "否":
+            y "不，我自己并不觉得她有吸引力。"
+            scene thehammerfells3_2
+            with dissolve
+            m "哼。我可没想到。真可惜。"
+            y "你是想让我觉得你的继母很有魅力？"
+            y "我还以为你不喜欢她。"
+            scene thehammerfells3_3
+            with dissolve
+            m "你可以讨厌一个人，同时又觉得她很性感。"
+    scene thehammerfells3_4
+    with dissolve
+    m "你有兴趣替我们从中调解吗？"
+    y "又一次争执？"
+    scene thehammerfells3_2
+    with dissolve
+    m "好吧。你可以这么叫。"
+    m "我和她有一笔账要算，我们需要有人帮忙。"
+    scene thehammerfells3_3
+    with dissolve
+    m "平常我会随便挑个人下手，但我想你可能会享受这个机会？"
+    y "你们两个肯定在谋划什么……"
+    scene thehammerfells3_4
+    with dissolve
+    m "这是说你不去了？"
+    menu:
+        "去？"
+        "{color=00ff00}是{/color}":
+            y "我可没这么说。我会替你们俩调解。"
+            m "很好。"
+            scene thehammerfells3_3
+            with dissolve
+            m "她是个精明的婆娘，但我们仍有相通之处。"
+            m "到我房间来，我得拿点东西。"
+            y "好吧……"
+            scene bg black
+            with fade
+            jump thehammerfells3_2
+        "不（回避）":
+            y "我不会卷进这件事里。"
+            y "不过你们俩能相处得来，倒很好。"
+            scene thehammerfells3_4
+            with dissolve
+            m "真意外。{w}我还以为你更有冒险精神呢。"
+            m "不过我想这样也好。让她知道只要你想来就能来，一定会很不舒服。"
+            scene thehammerfells3_3
+            with dissolve
+            m "总之，我还有些事要做。回头见？"
+            y "向你致敬，玛格娜。"
+            scene thehammerfells3_2
+            with dissolve
+            m "愿荣光归于[tribe_name]。"
+            scene bg black
+            with fade
+            jump mainend
+label thehammerfells3_2:
+    scene thehammerfells3_5
+    with fade
+    sta "那么？想像以前那样来一场？" 
+    m "换成男人不是不一样了吗？" 
+    sta "没区别。谁让他射得最多，谁就赢。"
+    y "（我就知道会是这种场面。）"
+    m "你确定要和我比这个？" 
+    m "你又没有皮鞭和锁链，你按不住他。"
+    sta "依我看他是愿意的，玛姬。"
+    sta "今天我大概用不上，不过以前她们总是喜欢那样。"
+    m "白痴。"
+    m "你和{i}我{/i}做的时候，她们可个个都愿意。"
+    m "你还是照样抽了她们。"
+    sta "那不是挺管用的吗？"
+    scene thehammerfells3_6
+    with dissolve
+    y "你们俩在打什么主意？"
+    sta "你也知道玛姬，她好胜心强，所以想把这笔旧赌注结了。"
+    m "我既是更好的情人，也是更好的战士。"
+    scene thehammerfells3_7
+    with dissolve
+    y "这是什么？我认不出来……"
+    sta "一项她赢了，另一项我们十二比十二。"
+    m "是十二比十一。苏什那边那个女孩当时就已经湿了，那少一分。"
+    scene thehammerfells3_8
+    with dissolve
+    sta "哦，你只是因为她说你的手指冰凉才不高兴。"
+    m "不高兴？等会儿看谁才叫不高兴。"
+    sta "随你怎么说吧。那个王子至少值三分。" 
+    scene thehammerfells3_9
+    with dissolve
+    sta "我会轻轻松松赢下来。"
+    m "会是一场压倒性的胜利。说出你的条件吧。"
+    y "我说了不算吗？" 
+    scene thehammerfells3_10
+    with dissolve
+    staxmag "不是。"
+    y "看她们相处得不错真好……"
+    sta "老规矩。"
+    sta "不插入、不用药，蒙上她们的眼睛。"
+    y "插入？"
+    scene thehammerfells3_8
+    with dissolve
+    m "那你的工具呢？" 
+    sta "我可以用吗？" 
+    sta "他受得住。"
+    scene thehammerfells3_9
+    with dissolve
+    m "呃。不用工具。再说他是个男的，不是女的。"
+    sta "好吧。"
+    y "我倒是想说——"
+    scene thehammerfells3_10
+    with vpunch
+    staxmag "不！"
+    scene thehammerfells3_8
+    with dissolve
+    m "赢家给对方「灌」？"
+    y "「灌」？"
+    scene thehammerfells3_9
+    with dissolve
+    sta "我会把你弄得一塌糊涂。"
+    m "试试看。"
+    y "这是怎么回事？"
+
+    scene bg black
+    with fade
+    "..."
+    sta "你确定他看不见？" 
+    m "我知道怎么对付蒙眼布。"
+    sta "那谁先来？"
+    m "我们轮流来。"
+    y "..."
+    scene thehammerfells3_11
+    with fade
+    "某种微凉的东西有节奏地滴落在你的前端。" 
+    "吐。"
+    scene thehammerfells3_12
+    with dissolve
+    "第一个女孩开始抚弄你的鸡巴，摸索着它的长度。"
+    "她们手上现在沾着一层黏液，就像女人小穴的内壁。"
+    scene thehammerfells3_13
+    with dissolve
+    "女人温暖柔软的双臀压在你的大腿上。"
+    "她现在坐在你的腿上。"
+    "她的大腿紧贴着你的。"
+    scene thehammerfells3_14
+    with dissolve
+    "她只是勉强碰到你龟头的顶端。"
+    "却停在那里，然后就从你身上下来了。"
+    scene thehammerfells3_15
+    with dissolve
+    "下一个很快就接上了。二号。"
+    "她一只手托住你的蛋囊，另一只手轻轻挤压你的前端。"    
+    "她的呼吸近在咫尺，你能靠触感分辨出她胸口的每一次起伏。"
+    scene thehammerfells3_16
+    with dissolve
+    "和另一个不同，她的脸靠近你的下腹。"
+    "女人轻柔地舔舐着，在你皮肤的缝隙间与四周打转。"
+    scene thehammerfells3_17
+    with dissolve
+    "她的触碰有些迟疑。"
+    scene thehammerfells3_22
+    with dissolve
+    "但还是小心地双手握住你的阴茎，有节奏地撸动。"
+    scene thehammerfells3_vid1
+    with dissolve
+    "速度很温和，像女人第一次和男人做爱时那样。"
+    "她的手起初冰凉，但已经暖了许多。"
+    "她的动作让你的鸡巴沾上了上一个女孩的唾液。"
+    "她这样持续了很短一会儿，才把手从你身上移开。"
+    scene thehammerfells3_vid2
+    with dissolve
+    "随后那个女人的身影退开，另一个取代了她的位置。"
+    "这一次她毫不客气地把你拉起来站稳，让你的鸡巴深深没入她的身体。"
+    "令人意外的是，她甚至没有发出一声闷哼。"
+    "女人把它迎进嘴里，喉咙平稳，只是舌头上下舔动。"
+    "无声。绵长。性感。"
+    scene thehammerfells3_18
+    with dissolve
+    "接着突然退出，她的双唇在离开时轻抚过你绷紧的皮肤。" 
+    "你听见一声压抑的咳嗽，那女人大概呛出了眼泪。"
+    "但你分辨不出是谁。"
+    scene thehammerfells3_19
+    with dissolve
+    "更紧的吮吸感让你乱了阵脚。" 
+    "一开始你以为她是用小穴在弄你，但接着她那不容错认的舌头熟练地在你前端打转。"
+    "她的舌头绕上你鸡巴的顶端，翻到下方，又短暂地将你裹住，然后重复着这个动作。"
+    scene thehammerfells3_20
+    with dissolve
+    "她一次又一次专注于你敏感的顶端。"
+    scene thehammerfells3_21
+    with dissolve
+    "然后继续，她再一次将你吞下。"
+    scene thehammerfells3_20
+    with dissolve
+    "又一次。又一次。"
+    scene thehammerfells3_21
+    with dissolve
+    "她上下套动着脖子……"
+    scene thehammerfells3_20
+    with dissolve
+    "一边吞下一股浓烈的先液和她自己的唾液，一边在你的肉棒上口水横飞。"
+    scene thehammerfells3_21
+    with dissolve
+    "相比之前二号那种平静的供奉，这突如其来的动作让人吃不消。"
+    scene thehammerfells3_20
+    with dissolve
+    "你忍不住想她到底是怎么呼吸的。"
+    scene thehammerfells3_21
+    with dissolve
+    "像一头饥饿的野兽，她近乎绝望地挣扎着为你口交。"
+    scene thehammerfells3_19
+    with dissolve
+    "然后她来得快，停得也快。" 
+    "她迅速用手替代了嘴。"
+    "以和她之前吮吸时一样的节奏摆弄着你。"
+    "迟疑片刻，又是一阵轻颤，她再次离开你，让出空间。"
+    scene thehammerfells3_23
+    with dissolve
+    "下一个乐意填满这个空位。她再次跨坐在你身上。"
+    "她倾身靠近时，你感到一阵温热柔软的气息萦绕在你的脖颈上。"
+    "她嬉闹般地抽送着你的鸡巴，在每次抽送之间又完全松手，让它晃荡。"
+    scene thehammerfells3_24
+    with dissolve
+    "她一点点靠近，胸部渐渐贴近你的脸。"
+    "她的小穴在温热湿润的肉瓣间娇弄着你的鸡巴。"
+    scene thehammerfells3_25
+    with dissolve
+    "你的鸡巴整根抵在她身上，而她的上身却向后仰。"
+    "她没有把你推进体内，只是把自己光滑的肉棒在你的磨刀石上来回摩擦。"
+    "感觉奇异地受限……就像她在戏弄你。"
+    scene thehammerfells3_26
+    with dissolve
+    "你的鸡巴勉强没进去。{w}又勉强进去了。{w}界限在她最轻柔的腰肢摇动中消融。"
+    "她本就缓慢的动作慢到近乎爬行，然后你感到龟头套上了她的外阴。"
+    "连一根羽毛的距离都没有隔开她与那明摆着的插入。" 
+
+    scene bg black
+    with fade
+    "然后她从你身上下来了……"
+    "有人在低声咕哝……"
+    "一阵压低嗓门的热烈交谈……"    
+    scene thehammerfells3_27
+    with fade
+    m "好吧。这不会有任何结果。"
+    m "这样我们没法让他射出来。"
+    m "而一个男人一辈子只会射一次。"
+    m "那完全就看谁运气好了！"
+    scene thehammerfells3_28
+    with dissolve
+    sta "要是我全程都不松手，早就把他拿下了。"
+    scene thehammerfells3_29
+    with dissolve
+    m "想得美。"
+    scene thehammerfells3_30
+    with dissolve
+    sta "让他自己决定吧。他反正看不见。"
+    sta "你更喜欢哪个？第一个还是最后一个？"
+    m "就是。你觉得哪个更好玩？"
+    sta "还是哪个更有魅力？"
+    scene thehammerfells3_31
+    with dissolve
+    y "我来选？我终于能说句话了……"
+    menu:
+        "哪个女孩表现更好？" 
+        "{color=00ff00}第一个{/color}":
+            scene thehammerfells3_33
+            with dissolve
+            y "第一个女孩本来会是我的……"
+            m "这下我沉冤得雪了。" 
+            sta "嘁。我想重来一次。这场比试不公平。"
+            scene thehammerfells3_35
+            with dissolve
+            m "别不服气。"
+            m "留给以后吧，输家。" 
+            sta "诸神在上，真要命……"
+            scene thehammerfells3_vid3
+            with fade
+            y "所以这就是「灌」？"
+            m "对，这就是一根命藤的花苞。"
+            y "那东西不危险吗？"
+            m "一般来说，等它们长成那种巨型怪物才会危险。可这只是根花苞，根本不会再长。"
+            m "不过要是像这样挤一挤，它会挤出一种类似牛奶的东西？"
+            m "我以前去地里干活的时候常捡到这些。"
+            m "它能持续喷大约十分钟，我也不知道为什么。"
+            y "你和斯塔西亚以前也对别的女孩做过这个？"
+            m "只有她们自己开口才行……"
+            y "她们会开口吗？"
+            m "你想要这玩意儿的女孩数量，会让你吓一跳。"
+            m "信不信由你，这提取物对身体的好处相当大。"
+            m "我听说对皮肤也是上佳的补品。"
+            scene thehammerfells3_vid4
+            with dissolve
+            sta "还、还剩多少？"
+            m "唔……感觉我快要射了。再忍一下。"
+            sta "你、你当然说得轻松。至少别推那么用力——别、别这么快！"
+            m "哈！你对别的女孩可从来不会手软。"
+            m "你对那个金发女孩说了什么？"
+            m "「求饶啊？」"
+            sta "呃啊——"
+            m "可怜那姑娘以为自己要昏过去了。"
+            m "不过话说回来，她看起来确实挺享受的。"
+            scene thehammerfells3_vid5
+            with dissolve
+            sta "呕——"
+            m "不过这真的让人很反胃。"
+            y "那些女孩为什么不自己来？"
+            m "因为把它变成一场游戏更好玩啊！"
+            m "这东西也不便宜——"
+            m "本来就不好找，更别提装满这么多奶的。"
+            m "你可以说，她们该庆幸自己有机会玩上一回~"
+            sta "呃！"
+            m "她等下肯定要吐得厉害。"
+            m "噗哈哈哈我等不及了！" 
+            m "撑住啊，{i}妈咪{/i}~"            
+            scene thehammerfells3_40
+            with dissolve
+            sta "..."
+            m "糟了，滴出来了一点。"
+            sta "你、你个母淫兽……" 
+            scene thehammerfells3_41
+            with dissolve
+            m "呵。蠢母狗出现了。" 
+            m "那说明她没事。"
+            scene thehammerfells3_39
+            with dissolve
+            m "我会照顾她的。谢谢你的帮忙，[player_name]！"
+            y "当然……"
+            sta "呃呜……"
+            scene bg black
+            with fade
+            jump mainend
+        "{color=00ff00}第二个{/color}" :
+            y "第二个女孩本来会是我的……"
+            scene thehammerfells3_32
+            with dissolve
+            sta "我也这么觉得。" 
+            sta "要是你第一次没噎到，你本来就赢了。"
+            sta "你该多练练。" 
+            scene thehammerfells3_34
+            with dissolve
+            m "我为什么要练习吸男人的鸡巴？"
+            m "除了[player_name]，谁也别想进去……"
+            sta "这一定会让我很满足。"
+            scene thehammerfells3_vid6
+            with dissolve
+            y "所以这就是「灌」？" 
+            sta "是啊。运气好的话，我们就从两头一起灌满。"
+            sta "一头含在嘴里，另一头塞进她屁股。"
+            y "你说什么？" 
+            sta "一根贵重的命藤花苞。贵妇人会出个好价钱来买。"
+            sta "要是奶多的话，出价还会更高。"
+            y "为什么？"
+            sta "他们说这东西的汁液对健康和美容都有好处。"
+            sta "我自己没试过，不过拿来寻欢确实不错。"
+            sta "问题是，一开始挤，汁液很快就变质。"
+            sta "花苞也会烂掉。"
+            sta "所以最好一次全吸完！"
+            scene thehammerfells3_vid7
+            with dissolve
+            sta "这种东西偶尔会自己送上门来。"
+            sta "知道该去哪儿找的话，其实挺好找。"
+            sta "玛姬时不时就会弄到一些，然后卖出去。"
+            sta "要是有女孩想要却付不起钱，她们最后还是照样付了~"
+            m "你、你说得好像很严重似的——呃啊~"
+            sta "其实吧，玛姬从来没真的强求过谁。"
+            sta "我相信她本来是打算白送给她们的。"
+            sta "不过「灌」她们可有意思多了……"
+            m "你不用那么变态嘛~"
+            scene thehammerfells3_vid8
+            with dissolve
+            sta "好吧好吧。这些可不便宜，而且能把那些女孩灌得神魂颠倒。"
+            sta "我不过是想物尽其用而已。"
+            sta "真该看看那些女孩事后的样子。她们会软得站都站不稳，眼前发晕。"
+            sta "有些人整整一个时辰都走不了路！"
+            m "啧——"
+            sta "玛姬除外，对吧？我相信她会没事的。"
+            sta "这根还很粗呢！"
+            sta "我们能从里面挤出不少奶来……"
+            m "哦——操——"
+            sta "（好可爱~）"
+            scene thehammerfells3_36
+            with fade
+            sta "她还清醒着呢。甚至还摆出了那副凶样。" 
+            m "呃啊——" 
+            scene thehammerfells3_37
+            with dissolve
+            sta "不错。到早上应该就流干净了。" 
+            scene thehammerfells3_38
+            with dissolve
+            m "混……{w}蛋……"
+            sta "呵呵呵。"
+            scene bg black
+            with fade
+            jump mainend
+label theempath1_1:
+    scene theempath1_15
+    with fade
+    lu "玛格娜，你对这个庆典紧张吗？"
+    m "我为什么会紧张？"
+    m "那可是一场盛会！{w}而且还是塔哈拉双胞胎主持的！"
+    m "一定会很棒的！"
+    m "你紧张吗？"
+    lu "不，我……{w}嗯，我本来希望我父母能来。"
+    lu "他们不来也是理所当然的。只是我突然有点傻想法……"
+    lu "不过至少你母亲来支持你了，很好。"
+    m "嗯？你是说斯塔西亚？{w}别提了。"
+    lu "你觉得[player_name]会觉得我们这个家族不够支持他吗？"
+    m "他看起来像会在意这种事的人吗？"
+    m "别担心。你不需要他们的支持。"
+    m "需要父母出面替自己背书的人，本来就没什么安全感。"
+    m "何况亲爱的老爸也帮不上什么忙，对吧？"
+    scene theempath1_14
+    with dissolve
+    lu "玛格娜。普里西拉的母亲来看过她了吧？"
+    scene theempath1_13
+    with dissolve
+    m "无意冒犯，普里西拉。"
+    p "我并不介意。"
+    lu "我觉得克莱斯特穆尔夫人能来支持自己的女儿，真是太好了。"
+    lu "和母亲这么亲近，一定很幸福吧。"
+    lu "我想我还没有那样的联系。"
+    scene theempath1_6
+    with dissolve
+    p "我不知道。"
+    p "克莱斯特穆尔夫人是我唯一认识的母亲，但她并不是生我的母亲。"
+    p "克莱斯特穆尔夫人在救下我之后收养了我。"
+    m "咦，我不知道这件事。"
+    lu "什、什么？可你们两个长得那么像。"
+    p "在她的术法之下，我才长成了现在这样。"
+    p "克莱斯特穆尔夫人是用一个村中少女的身体创造了我。"
+    m "创造？你说的是亡灵魔法吧。"
+    lu "所以你不是她的血亲？那你真正的母亲是谁？"
+    p "我……{w}我不记得自己以前是谁。"
+    lu "哦、哦。对不起……"
+    m "别难过。那不是你的错。"
+    scene theempath1_5
+    with dissolve
+    lu "你、你被收养根本没关系！"
+    lu "重要的是她选了你做她的女儿！"
+    m "我就说那位夫人身上有哪里怪怪的。"
+    lu "天哪，玛格娜。"
+    lu "别担心。我们会替你保守秘密。"
+    m "我是说，我根本不在乎。我的继母比我还年轻。"
+    m "我可没资格指手画脚。"
+    r "..."
+    p "当然。真的，这与我无关。我过的是更显赫的生活。"
+    p "我的母亲是泰克的洛林·克莱斯特穆尔。我是克莱斯特穆尔家的正统继承人。"
+    p "我的血脉所负的责任，是对泰克的人民。"
+    p "客观来说，我曾经是谁都比不上普里西拉·克莱斯特穆尔。"
+    lu "确实。听说你要来的时候，我还挺受挫的……"
+    m "你真正该担心的人是蕾娅。"
+    scene theempath1_12
+    with dissolve
+    r "我和普里西拉有什么不同？"
+    scene theempath1_10
+    with dissolve
+    m "普里西拉可不是个冷冰冰的婊子。"
+    lu "玛格娜！"
+    scene theempath1_11
+    with dissolve
+    r "哈哈哈！{w}我喜欢你这张嘴，哈默费尔。"
+    scene theempath1_9
+    with dissolve
+    m "是吗？我敢打赌你的也一样厉害。"
+    scene theempath1_7
+    with dissolve
+    lu "呃。我真希望她们别吵了。{w}还是说，别调情了？"
+    p "两只求偶的鸟儿彼此凶巴巴的，并不罕见。"
+    lu "如果她们互相喜欢，就该直接说出来。"
+    scene bg black
+    with fade
+    "..."
+    scene theempath1_4
+    with fade
+    p "子爵夫人，您觉得这很可怕吗？"
+    r "你母亲的亡灵魔法？不。{w}她无法生育。那是件值得做的事。"
+    p "那结果又如何？"
+    scene theempath1_3
+    with dissolve
+    p "我这样算不算某种怪物？"
+    p "我读过相关的文献。他们把我的同类形容成蛭虫和寄生虫。"
+    r "你说「你那一类」是什么意思？"
+    r "你缺少那种被视为这类东西所必需的自我保护意识。"
+    scene theempath1_2
+    with dissolve
+    r "而且在我看来，你一点也不像怪物。"
+    p "……{w}谢谢你。"
+    p "承蒙你这么说，我很感激。"
+    r "别怀疑自己，普里西拉。你是与众不同的。"
+    r "..."
+    scene theempath1_3
+    with dissolve
+    r "你的身体。它以什么为食？"
+    p "进食……{w}到目前为止，古树的精华是管用的。"
+    p "不过，我有几个想法，也许别的东西也有效。"
+    p "我问这种问题的时候，母亲通常不太高兴。"
+    scene theempath1_1
+    with dissolve
+    r "我们不如一起试试那些方案？"
+    r "我敢说我们能想出管用的东西。"
+    p "真的吗？"
+    r "的确。"
+    scene bg black
+    with fade
+    "..."
+    jump mainend
+label theprep1_1:
+    play music "audio/Nomadic Sunset.mp3" loop fadein 5.0
+    $ servants = 41
+    scene theprep1_1
+    with fade
+    jdy "接下来是流程安排……"
+    jdy "你会和我还有我妹妹一起在上面，不过不用担心。"
+    scene theprep1_2
+    with dissolve
+    jdy "你什么都不用说。作为你这位才华横溢的主人，我会代你发言。"
+    jdy "介绍完毕后，美酒佳肴就会流水般端上来。"
+    scene theprep1_3
+    with dissolve
+    jdy "在我们准备表演的时候，镇上的人大概会聚来看你。"
+    jdy "等一切准备妥当，宾客们就会欣赏到一场表演。"
+    y "那我这段时间都在干什么？"
+    scene theprep1_4
+    with dissolve
+    jdy "你只需要在宾客中露露面。"
+    jdy "别担心。我会确保你被伺候、打理得妥妥帖帖。"
+    scene theprep1_5
+    with dissolve
+    jdy "招待客人固然重要，但你该借这个机会多走动走动。"
+    jdy "有些外来的贵族想跟你聊几句。"
+    scene theprep1_6
+    with dissolve
+    jdy "各个家族都以某种方式到来了，这会彰显你的分量与价值。"
+    jdy "走完过场式的寒暄之后，就由你来选人。"
+    scene theprep1_7
+    with dissolve
+    y "选人？你是什么意思？"
+    jdy "人们觉得你会有一个中意的对象。我们就顺势认下这个说法。"
+    scene theprep1_8
+    with dissolve
+    jdy "再说，拥有一个结合的象征也是传统。选一个人与你同帐，就是这样的象征。"
+    y "我还是不太明白。"
+    scene theprep1_9
+    with dissolve
+    jdy "新婚夫妇当众庆祝是努比利亚人的习俗。"
+    jdy "你在庆典上选的人未必会成为你最后选择的人，"
+    jdy "但这可能是民众唯一一次庆祝你结合的机会。"
+    scene theprep1_10
+    with dissolve
+    jdy "这不是你的正式宣告，别搞错了。你不是在选妻子。"
+    scene theprep1_11
+    with dissolve
+    jdy "我还有很多事要忙，就让我带你去见你的美发师。"
+    jdy "天知道他们多需要练习。"
+    scene theprep1_12
+    with dissolve
+    jdy "埃兹拉，接下来交给你可以吗？"
+    scene theprep1_13
+    with dissolve
+    ez "当然，玛丽昂夫人。交给我吧。"
+    scene theprep1_14
+    with dissolve
+    y "你好，埃兹拉。真的有必要给我做发型吗？"
+    ez "如果您不喜欢，那就不必了，少爷。"
+    ez "但在努比利亚人看来，整理仪容能留下好印象。"
+    y "呃。行吧。赶紧做完算了。"
+    scene theprep1_15
+    with fade
+    y "既然都这样了，能尊重的习俗还是尊重吧。那他们想看什么？"
+    ez "通常是先开个宴会，再热闹到深夜，然后亲友聚在一起，把新人送到他们的房间。"
+    ez "新人会得到属于他们的私密空间，而庆祝会一直持续到新人出来送客！"
+    ez "在里面待得越久，越能显出旺盛的精力。"
+    ez "王公与大人物的盛大聚会，据说能持续好几天。"
+    y "真是有意思的传统。所以茱蒂想让我为那一晚选个人。"
+    scene theprep1_16
+    with dissolve
+    y "那样不会让各个家族之间起冲突吗？有些人不会生气吗？"
+    ez "也许会。但我想他们会理解的。你这么做，归根结底是为了努比利亚的人民。"
+    ez "民众期待你有一个中意的人。你的选择会被他们看作你对努比利亚抱有好感。"
+    ez "如果你选不出来，就意味着你对结合并不认真。"
+    ez "庆典结束时，人们想亲眼看着你和被你选中的人离开。"
+    scene theprep1_17
+    with dissolve
+    ez "我们会准备一顶帐篷来代替你的房间。"
+    y "他们还指望我和选中的人睡上好几天？"
+    ez "谁知道民众期待什么。"
+    ez "不过多亏了克莱斯特穆尔夫人，资源足够让我们庆祝到第二天。"
+    ez "别去想这对民众意味着什么，只管享受吧，少爷。"
+    menu:
+        "我问……"
+        "我可以选很多人吗？":
+            y "我可以选很多人吗？"
+            scene theprep1_18
+            with dissolve
+            ez "我认为那不是个好主意。"
+            ez "对我们来说，拥有多位妻子是很自然的，但努比利亚人可没那么宽容。"
+            ez "眼下，顺从他们的传统会有效得多。"
+            scene theprep1_15
+            with dissolve
+            ez "在这里嘲笑他们的做法，会让他们不快。"
+            y "那博纳德一族呢？普莉莎、萨巴她们。"
+            ez "哦，她们是例外。宗教很少随大流。"
+            ez "事实上，我敢肯定观众会很高兴你选她们。"
+            ez "博纳德一族很受欢迎。"
+        "我可以不作选择吗？":
+            y "要是我不选人呢？"
+            scene theprep1_18
+            with dissolve
+            ez "我认为那样没有任何好处。"
+            ez "不过既然你态度这么坚决……"
+            ez "您也完全可以选一个人，当晚就送她们离开，少爷。"
+            ez "我们可以安排其中一位候选人在您之后来道晚安。"
+            scene theprep1_15
+            with dissolve
+            ez "那样至少显得有个定论。"
+            ez "但做出选择能让民众安心。"
+            y "那我还是随便选一个好了……"
+        "我倒更想和别人在一起……":
+            scene theprep1_18
+            with dissolve
+            y "跟你说实话吧，埃兹拉，我想我更愿意和另一个人共度这一夜。"
+            ez "这话要是传出去，多数人都会吃惊。"
+            scene theprep1_15
+            with dissolve
+            ez "要是茱娜女主人在这儿，我想她一定会告诉你那是「免谈」。"
+            y "我知道。可庆典就是要好玩嘛！"
+            y "我想和我想选的人一起迎接这场盛事的落幕。"
+    scene theprep1_17
+    with dissolve
+    y "埃兹拉，你有推荐的人选吗？"
+    ez "这不是我该置喙的，少爷。"
+    ez "但既然您坚持要我说，我建议是哈默费尔夫人。"
+    y "为什么是哈默费尔家？"
+    scene theprep1_15
+    with dissolve
+    ez "哈默费尔夫人最受民众爱戴。我觉得没人敢对她无礼。"
+    ez "而且，她能弄到新式武器，对我们战族是优势。"
+    ez "除此之外，我很欣赏她对自己身材的自豪。"
+    ez "恕我直言，少爷，她把身体保养得很好。"
+    y "这话倒是有几分道理。"
+    scene theprep1_16
+    with dissolve
+    ez "你的选择没什么可怀疑的。我敢肯定他们会对你的选择满意。"
+    ez "民众的愿望，是成为你人生的一部分。"
+    ez "好了，我想我能做的都做了。"
+    ez "希望玛丽昂夫人不会觉得太乱。"
+    ez "不过我还是觉得你平常的头发更好看。"
+    scene theprep1_18
+    with dissolve
+    ez "好。我决定了。{w}我会建议她在那上面多下点功夫。"
+    y "谢谢你，埃兹拉。"
+    y "要是没别的事了，您可以走了。"
+    ez "遵命，主人。"
+    scene bg black
+    with fade
+    "..."
+    jump mainend
+#ALL FLAGS MUST BE CAUGHT UP AT THIS POINT
+#MOVING PAST THIS LABEL PROGRESSES THE STORY TO TERMINATION
+label theprep2_1:
+    "这个庆典会持续很久。参加前请务必{color=ffff00}保存{/color}。"
+    menu:
+        "参加庆典？"
+        "是的，继续！":
+            y "（今天就是庆典的日子。）"
+        "算了，稍后再来！":
+            scene bg black
+            with fade
+            jump mainend
+    scene bg bedroom2
+    with fade
+    y "（显然有很多事要做，可我完全不知道该怎么做。）"
+    y "（幸好其他人都很熟悉这些事。）"
+    scene theprep2_6
+    with fade
+    y "现在还很早，真有必要马上开始吗？"
+    jdy "要说迟了，是我们迟了。要是合身的地方有问题，我需要时间调整。"
+    scene theprep2_1
+    with dissolve
+    jdy "你得像个真正的统治者。艾米和我挑了几套合适的衣服。"
+    y "我没有发言权吗？"
+    scene theprep2_2
+    with dissolve
+    jdy "我当然希望没有。女孩们得在你房间里布置。"
+    scene theprep2_3
+    with dissolve
+    jdy "趁我在忙这个，你何不去把你的礼物取回来？"
+    jdy "玛格娜这会儿应该已经做好了。"
+    y "玛格娜给我做了东西？"
+    scene theprep2_4
+    with dissolve
+    jdy "是的。自己去看看吧。我记得她在营房。"
+    jdy "还不快去！我需要空间。"
+    scene theprep2_5
+    with dissolve
+    jdy "姑娘们快点，我们活儿多着呢！"
+    y "（茱蒂好像进入了她自己的节奏。）"
+    y "（不过，有方向总是好的。）"
+    scene bg black
+    with fade
+    "..."
+    scene theprep2_12
+    with fade
+    m "哦——你在这儿！我刚还让优妮去找你……算了。"
+    m "哈！你一定会喜欢这个。"
+    scene theprep2_19
+    with dissolve
+    m "我用我们最新的合金让人做的。很轻，但没轻到你感觉不到每次挥动的分量。"
+    y "你给我做了一把刀？"
+    m "可不敢全算我的功劳。是露丝帮我做的。她用炉子时意外地拿手。"
+    y "她家是做玻璃的，玛格娜。"
+    m "哦，对……"
+    scene theprep2_20
+    with dissolve
+    m "看看它合不合你的口味吧！"
+    scene theprep2_8
+    with dissolve
+    y "这是你在这儿做的？"
+    y "多漂亮的一把刀。"
+    scene theprep2_9
+    with dissolve
+    y "而且是真锋利的？不是道具吧？"
+    m "当然。而且它割起来一定很痛快。"
+    scene theprep2_10
+    with dissolve
+    y "谢谢你，玛格娜。我完全不知道你在做这个。"
+    m "不用谢我。主意是克莉奥出的。"
+    scene theprep2_11
+    with dissolve
+    m "金色的装饰是普里西拉提供的。"
+    m "蕾娅什么都没做。我觉得这话必须说。{w}她屁都没干。"
+    scene theprep2_7
+    with dissolve
+    m "所以别想替她记功。"
+    y "我明白了，玛格娜。谢谢你。"
+    scene theprep2_8
+    with dissolve
+    y "（不过这种材料不只是昂贵，还很稀有。）"
+    y "（我很难相信蕾娅在弄到这种材料时一点忙都没帮。）"
+    menu:
+        "这真是……"
+        "想得真周到":
+            scene theprep2_14
+            with dissolve
+            y "替我谢谢其他人，我很喜欢。想得真周到。"
+            y "而且工艺很美。谢谢你，玛格娜。"
+            scene theprep2_18
+            with dissolve
+            m "我、我是说。每个人都出了一点力。"
+        "白费力气":
+            scene theprep2_16
+            with dissolve
+            y "这次有点白费力气。"
+            y "我不需要新的剑。"
+            scene theprep2_17
+            with dissolve
+            m "现在也许用不上，但迟早会有用的。"
+            m "我再打磨几下吧。"
+
+    y "你知道我到底该做什么吗？"
+    scene theprep2_15
+    with dissolve
+    m "这个问题去问艾米。"
+    scene theprep2_36
+    with dissolve
+    m "哦——她这不就来了。那我就先不打扰你们两位了！"
+    scene theprep2_37
+    with dissolve
+    amy "[player_name]。哦，你拿到剑了！"
+    scene theprep2_38
+    with dissolve
+    amy "很好很好。"
+    amy "我们得聊聊你在节庆上的表演。"
+    y "表演？我可不是什么艺人，既没那个天分，也没那个兴致。"
+    amy "这只是句客套话，你只要做你自己就行，我们会把你安排成压轴的高潮！"
+    scene theprep2_39
+    with dissolve
+    amy "我来说说我们预期会发生什么。"
+    amy "大部分演出都由我们的人才负责。"
+    amy "我们从剧团里招了几个人，但主要还是茱蒂从她那边安排来的。"
+    y "贵族的节庆，这样合适吗？"
+    scene theprep2_40
+    with dissolve
+    amy "当然合适！要是那些女孩质量不行，那就不好了。可茱蒂挑的都是最拿得出手的。"
+    amy "她们各有本事，靠的就是这个来勾住人群。"
+    scene theprep2_41
+    with dissolve
+    amy "我们的客人只会庆幸能品到这么上等的佳酿，可不会问它是从哪儿来的。"
+    amy "更重要的是……{w}茱蒂打算借这些交流，多摸清其他人的底细。"
+    amy "我不太喜欢这样——不过我知道你们两位之间有约定。"
+    scene theprep2_42
+    with dissolve
+    amy "我还没天真到要去妨碍你。"
+    y "所以你需要我做什么？"
+    amy "我们想讨好的有两类人：普通民众，还有贵族。"
+    amy "只要我们照着惯例来，镇上的人就会满意。"
+    amy "聚会开始之前我们会把你藏起来，光是这样就足以让众人心痒难耐了。"
+    scene theprep2_43
+    with dissolve
+    amy "等到最后再让他们逮到你在场，那就皆大欢喜了。"
+    amy "上午我们会把演出、美酒、歌声、艺术和美食统统安排上，人人都能找到自己喜欢的。"
+    amy "至于贵族那边，你的魅力能派上用场，但我还是担心讨不好他们。"
+    amy "少些来往，出岔子的机会就小些。"
+    amy "所以硬要跟这些贵族应酬，这一晚就全毁了。"
+    scene theprep2_44
+    with dissolve
+    y "你说得好像我一定会得罪人似的。"
+    amy "那是肯定的。不——倒不是跟你有关！"
+    amy "，你会发现讨好所有人是不可能的。这就是他们的天性，也是这种事的本质。"
+    amy "希望我没惹你生气吧？"
+    y "没有。我明白。有些人就是没有仗打，也要找个地方斗。"
+    scene theprep2_42
+    with dissolve
+    amy "没错，就是这样。"
+    amy "哦对了，埃兹拉跟你说过「甄选」的事吗？"
+    menu:
+        "「甄选」？"
+        "是的，我记得":
+            y "是的，我记得。你想让我挑一个人，那晚给我的床做装饰。"
+            scene theprep2_41
+            with dissolve
+            amy "我不会这么说，但本质上没错。"
+        "不，提醒我一下":
+            y "不，提醒我一下。"
+            scene theprep2_41
+            with dissolve
+            amy "送新婚夫妇进卧室，是努比利亚的婚俗。"
+            amy "等到那时候，这儿的民众可没机会见证你真正的婚礼。"
+            y "有何不可？"
+            amy "贵族的婚礼通常在当地领主的宅邸举行。"
+            scene theprep2_40
+            with dissolve
+            amy "可你们是游牧者，没有家。所以你要在你选中的人的宅子里成婚。"
+            amy "也就是说，这里的本地人都看不到你真正的婚礼。"
+            amy "这次节庆就当作替代。"
+            scene theprep2_42
+            with dissolve
+            amy "所以你会挑一个能共度一夜的人选。"
+            amy "而大家会把你今晚的决定视为你与努比利亚联姻的象征。"
+            y "那就简单了。"
+            y "你是要我今晚挑个人一起睡。"
+            scene theprep2_43
+            with dissolve
+            amy "呃——睡觉的部分没必要。我们只是要让大家看到你做出选择。"
+            amy "聚会自然{i}认定{/i}我们会顺理成章地同床。"
+            amy "但凡是你不愿意做的事，我们都不会强迫你。"
+            scene theprep2_44
+            with dissolve
+            y "我们？"
+            amy "我是说泛指！{w}我是说以学院的名义！"
+            scene theprep2_45
+            with dissolve
+            amy "呃，重点是，在遴选之前我们该把你藏起来。"
+    scene theprep2_44
+    with dissolve
+    amy "总、总之，你不许离开场地，先、先放松一会儿吧。"
+    amy "等太阳西斜，你去校区后面，走楼梯上去。茱蒂会给你带路。"
+    amy "我们在旧的要塞神殿里搭好了舞台。"
+    scene theprep2_43
+    with dissolve
+    amy "现在你该回房间了，菲塔娜要检查你的服装。"
+    scene theprep2_46
+    with dissolve
+    amy "眼下只有她有时间帮你。"
+    amy "她挑刺可厉害了，[player_name]，祝你好运！"
+    y "..."
+    scene bg black
+    with fade
+    "..."
+    scene theprep2_34
+    with fade
+    fea "这样应该可以。"
+    fea "不算完美，但确实管用。"
+    fea "我们再让莱奥娜检查一下有没有问题。"
+    y "莱奥娜？"
+    scene theprep2_35
+    with dissolve
+    fea "我们很多服装都以莱奥娜为模特。"
+    fea "她的穿搭深受民众喜爱。"
+    fea "我们的裁缝就是照着她的身材和体格来设计的。"
+    scene theprep2_34
+    with dissolve
+    fea "等她弄完，我就请她过来看看你的尺寸。现在别动，我们好收尾。"
+    y "（真是折磨人的一个早上。）"
+    scene theprep2_21
+    with fade
+    "..."
+    scene theprep2_22
+    with dissolve
+    y "瞧是谁啊，乔塞尔尔夫人。"
+    y "能看到您穿成这样真是难得。我可没想到您会穿这种衣服。"
+    y "（她里面到底有没有穿别的？）"
+    scene theprep2_23
+    with dissolve
+    leo "也许我一直没机会显露，不过我毕竟是贵族小姐。"
+    leo "我主大人看着还满意吗？"
+    menu:
+        "她的礼服您还满意吗？"
+        "是":
+            scene theprep2_24
+            with dissolve
+            y "嗯。那身衣服很衬您，怎么看都好看。"
+            leo "是吗？唔……或许我该让阿尔真塔在我的衣柜里更随意一些。"
+        "否":
+            scene theprep2_24
+            with dissolve
+            y "果然，我没什么贵族品味。"
+            leo "我明白了。这样也好。我对这种展示没什么兴趣。"
+    leo "..."
+    y "啊？"
+    leo "..."
+    scene theprep2_25
+    with dissolve
+    y "呃……{w}怎么了？你为什么这么盯着我看？"
+    leo "我听说你在城里击退了一次鸡舍族的入侵。"
+    y "真的吗？（不知道她是从哪儿听来的。）"
+    y "真的。不过别担心，学院很安全。"
+    y "多亏了斥候，我们把他们一锅端了。你不用操心。"
+    scene theprep2_26
+    with dissolve
+    leo "你看起来对自己的战绩很得意。你父亲不会因此生气吗？"
+    y "你这话是什么意思？"
+    leo "你父亲另有盘算，不是吗？"
+    y "（莱奥娜知道多少？我不记得跟任何人提过父亲的计划。）"
+    leo "你不知道，对吧？"
+    y "看来有太多事我不知道……"
+    y "你得说具体点。"
+    scene theprep2_27
+    with dissolve
+    leo "我明白了。{w}是的，我看你和你父亲完全不一样。"
+    leo "他和他那些手段不适合你。"
+    y "（{i}她{/i}知道我父亲的什么阴谋？）"
+    y "（她为什么要对我说这些？她是内鬼吗？）"
+    y "你在说什么，莱奥娜？"
+    scene theprep2_28
+    with dissolve
+    leo "你人太好了，太有原则了。"
+    leo "在你父亲创办这里之前，他找过我。"
+    leo "他做了些安排，让你看起来超出自己身份的分量。"
+    y "（她说的不是母亲吧？）"
+    y "抱歉，我有点糊涂。我的父亲找过你？"
+    scene theprep2_30
+    with dissolve
+    leo "我自己，还有其他几个家族。子爵家、克莱斯特穆尔家、玛丽昂姐妹家，再加上我。"
+    y "（如果真是这样，父亲又瞒下一件没告诉我的事。）"
+    y "这倒出乎我的意料。很难想象那些姑娘全都和战首一起喝茶。"
+    scene theprep2_29
+    with dissolve
+    leo "不，不是这里的姑娘们。是其他几个家族的当家人。"
+    leo "洛林·克莱斯特穆尔、茱蒂·玛丽昂，还有阿尔萨尼尔子爵大人。"
+    y "（还确实都是一家之主。）"
+    scene theprep2_26
+    with dissolve
+    leo "我怀疑他挑这些家族，正是因为他们都是些耍心机的人。"
+    y "那他为什么要选你？"
+    scene theprep2_27
+    with dissolve
+    leo "我想他是指望我父亲会出面。"
+    leo "老头子肯定会一口答应。"
+    scene theprep2_25
+    with dissolve
+    leo "等我明白他想做什么，我就退出了。"
+    y "那你们都谈了些什么？这场阴谋到底是什么？"
+    leo "他想安排一场展示你实力的戏：一次你轻易就能击退的假入侵。"
+    scene theprep2_31
+    with dissolve
+    leo "障眼法。他安排了几个鸡舍族人突破他的防线，袭击这所学院。"
+    leo "他似乎很有信心，觉得你会三两下就解决掉他们。"
+    scene theprep2_27
+    with dissolve
+    leo "如果真实现了，你在整个努比利亚都会声名大噪、身价倍增。"
+    leo "也能让你族里的反对者闭嘴。"
+    y "他想让我看起来像个英雄。"
+    scene theprep2_30
+    with dissolve
+    leo "这就是目的。他要抬高你的身价。"
+    leo "我来这里是为了加固你的防务，阻止这场造势。"
+    leo "我承认，也很好奇你是不是只会耍嘴皮子。"
+    scene theprep2_31
+    with dissolve
+    leo "后来我听说，你私下里把鸡舍族的部队送去了长眠。"
+    scene theprep2_32
+    with dissolve
+    leo "那是……{w}我没想到。"
+    leo "现在这样了解你，我绝不会怀疑你。"
+    y "（父亲和鸡舍族之间确实有勾当，只不过那不是障眼法。）"
+    y "（如果莱奥娜说的是真的，那父亲要么是在骗努比利亚，要么是在骗鸡舍族。）"
+    y "（米娜是父亲的影子，她认定父亲这么做是为了复仇。）"
+    y "（只不过，父亲改了主意。）"
+    y "（为什么？）"
+    scene theprep2_31
+    with dissolve
+    y "莱奥娜，你确定这是真的吗？"
+    leo "千真万确。你可以去问其他人，但谁知道他们会怎么说。"
+    leo "那些人乐于抬高你的身价。你对他们来说是一笔好买卖。"
+    y "你是说茱蒂、克莱斯特穆尔夫人和子爵大人？"
+    scene theprep2_32
+    with dissolve
+    leo "没错。他们都是脆弱的蠢货，把所有人都看成金银。"
+    leo "但你的价值不止于此……{w}你身上有真正的卓越。"
+    leo "别让这份东西蒙尘。"
+    y "谢谢你，莱奥娜。"
+    scene theprep2_31
+    with dissolve
+    leo "一天转眼就过去了。我该去准备晚宴了。你现在过去吗？"
+    y "还不急。（走之前我得把这笔记下来。）"
+    y "很高兴和你谈了这些，莱奥娜。"
+    scene theprep2_33
+    with dissolve
+    y "愿荣耀与你和你的家族同在。"
+    leo "愿你的意志坚如铁。"
+    scene theprep2_47
+    with fade
+    y "（这些话到底是什么意思？）"
+    y "（父亲对鸡舍族和努比亚人都动了手？）"    
+    y "（他的目的是什么？真像米娜说的那样吗？）"
+    y "（现在，我大概得把目前的发现记录下来。一份好报告能帮我把顾虑传达给首领。）"
+    scene theprep2_48
+    with dissolve
+    y "（主宾要藏着不露面，这正常吗？）"
+    y "（切，说起来我才是主办方。也许当个神秘的主办方对我更有利。）"    
+    scene theprep2_49
+    with dissolve
+    j "..."
+    scene theprep2_50
+    with dissolve
+    j "……{w}师父……"
+    scene bg black
+    with fade
+    jump theceremony1_1
+label theceremony1_1:
+    "..."
+    scene theceremony1_21
+    with fade
+    y "这就是艾米叫我来的地方。"
+    y "我想我该在这里跟她碰头……"
+    scene theceremony1_23
+    with fade
+    jdy "你来了，很好。艾米和其他人已经先上去了。只要爬到顶，你就能从那座旧建筑后面出来。"
+    jdy "从早上开始，村里的人就自己在校场上搞起了表演。"
+    jdy "庆典之日，这是常事。"
+    scene theceremony1_22
+    with dissolve
+    jdy "不过天快黑了，剩下的夜晚就由我们这位好主人来撑场面了。"
+    jdy "我不能再陪你了。剩下的欢迎就由你自己应付吧。"
+    jdy "别人看到我一直缠着你，未必会高兴。"
+    jdy "你随意什么时候到都行。其他人都已经准备好了。"
+    scene theceremony1_24
+    with dissolve
+    jdy "我们会先通报你，你可以在我们准备演出时先欣赏一下。"
+    scene theceremony1_25
+    with dissolve
+    y "（如果努比利亚真的有人在暗中算计我，那人今晚肯定在这里。）"
+    scene theceremony1_26
+    with dissolve
+    y "（舞台已经搭好，就等着他们动手了。）"
+    y "（也许我能做点什么把他们揪出来。）"
+    play music "audio/Jasmine Whipers - Patrick Patrikios.mp3" fadein 4.0
+    scene theceremony1_9
+    with fade
+    "节庆现场如今挤满了四面八来的访客。"
+    scene theceremony1_12
+    with dissolve
+    "许多你不认识的脸，还有一些你认识的人，似乎都混在一起。"
+    "空气里满是躁动，就像鱼群抢食时那阵喧闹。"
+    scene theceremony1_10
+    with dissolve
+    "你感觉很多人都是带着目的来的。不过那些企图对你来说毫无意义。"
+    scene theceremony1_27
+    with dissolve
+    "你的路直通茱蒂那里。"
+    scene theceremony1_28
+    with dissolve    
+    "茱蒂很快注意到了你的到来。"
+    scene theceremony1_29
+    with dissolve
+    jdy "四方而来的各位，今晚的主人到了！"
+    scene theceremony1_15
+    with dissolve
+    jdy "我们谦卑的王子，[player_name]！"
+    scene theceremony1_1
+    with dissolve
+    "人群为你的到来鼓掌，四面八方都传来欢呼。"
+    scene theceremony1_13
+    with dissolve
+    jdy "作为今晚的开场，我们准备了一段以舞蹈演绎的美丽故事。"
+    scene theceremony1_14
+    with dissolve
+    jdy "请各位入座放松，我们即将开始漫长的庆祝之夜！"
+    jdy "荣耀归于[tribe_name]！"
+    scene theceremony1_5
+    with dissolve
+    y "人们真的这么喜欢我吗？"
+    jdy "也许吧。也许他们只是为今晚的狂欢而兴奋。不管怎样，他们欢呼总是好事。"
+    jdy "这样其他客人也会更尊重你的莅临。"
+    y "唔……我听见下面传来人声？"
+    scene theceremony1_19
+    with dissolve
+    jdy "市民们划船去了。"
+    y "划船？"
+    jdy "我们改作池塘的那圈护城河，当年外围还环绕着另一圈。"
+    jdy "从护城河里，村民和乡绅们就能瞥见上面的动静。"
+    jdy "有些人干脆漂到水上，只为占个好位置。"
+    y "真是了不起。看起来要布置成这样得费不少功夫。"
+    scene theceremony1_7
+    with dissolve
+    jdy "你的人和克莱斯特穆尔家的仆人都帮了大忙。"
+    jdy "不过还得谢前几天的雨。"
+    scene theceremony1_6
+    with dissolve
+    jdy "你的衣服有点歪，我帮你正一正。"
+    scene theceremony1_11
+    with dissolve
+    jdy "就稍微调一下……"
+    scene theceremony1_7
+    with dissolve
+    jdy "好了。"
+    scene theceremony1_8
+    with dissolve
+    amy "可以走了吗？"
+    scene theceremony1_4
+    with dissolve
+    amy "王子准备好了的话，我们就开始。我马上回来！"
+    scene theceremony1_5
+    with dissolve
+    y "你要在这座舞台上演一出戏？"
+    jdy "今晚我们是客人，没打算表演。"
+    jdy "我们不想让其他家族觉得我们在炫技，所以艾米只在幕后操琴。"
+    scene theceremony1_30
+    with dissolve
+    amy "好了，我们准备好了。不过我还是觉得稍微露一手也没什么。"
+    scene theceremony1_32
+    with dissolve
+    amy "毕竟那本来就是我们的看家本领。"
+    jdy "别耍贫嘴，老实弹你的，妹妹。"
+    scene theceremony1_33
+    with dissolve
+    amy "我知道。我只弹我们需要的曲子，仅此而已。"
+    y "演戏？下面的人怎么看得到？"
+    scene theceremony1_20
+    with dissolve
+    jdy "啊，用镜子折射，靠近舞台的人就能看到。"
+    y "你真是想得周全。"
+    scene theceremony1_34
+    with dissolve
+    jdy "嗯。别担心，专心享受今晚就好。"
+    scene theceremony1_35
+    with dissolve
+    jdy "演出很快就要开始了。"
+    play music "audio/Egypt (Solo Flute).webm" fadein 4.0
+    scene theartists1_1
+    with fade
+    "第一位舞者旋转着登上舞台。她是名娇小的精灵，穿着以花卉为主题的服饰。"
+    scene theartists1_2
+    with dissolve
+    "紧随其后，一位装饰华丽的女人跟在精灵身后。"
+    "这段演出全程无言，两人却如在共舞。"
+    y "（她看起来很眼熟。）"
+    scene theartists1_3
+    with dissolve
+    "音乐和她们的动作似乎融为一体。"
+    scene theartists1_4
+    with dissolve
+    "那个女人对可怜的精灵少女施起了催眠般的进攻。"
+    scene theartists1_5
+    with dissolve
+    "她踉跄着后退，被这记突然袭击打得晕头转向，双眼也被蒙住了。"
+    scene theartists1_6
+    with dissolve
+    "这时舞台侧方又冲出一个人：一位英勇的战士？"
+    y "哦，这位我肯定认识。"
+    scene theartists1_7
+    with dissolve
+    "她引领着看似失明的少女，尽责地护着她。"
+    scene theartists1_8
+    with dissolve
+    "可麻烦来了。是个强盗，还是某种斗士？"
+    y "嘿，是那对姐妹。她看起来真是毫无兴趣……"
+    scene theartists1_9
+    with dissolve
+    "那名斗士威胁着我们的英雄，让她们无法达成那个未知的目的。"
+    scene theartists1_8
+    with vpunch
+    "接着就是一次肢体冲突！"
+    scene theartists1_11
+    with dissolve
+    "精灵少女任由那强盗摆布，她的前途只能一片灰暗。"
+    scene theartists1_12
+    with dissolve
+    "但也许并非如此！又一个来客从烟雾中现身！"
+    y "她穿的那是什么鬼？这也能算衣服？"
+    scene theartists1_13
+    with dissolve
+    "新登场的舞者再次护住我们的少女。老天似乎格外疼爱我们的精灵。"
+    scene theartists1_14
+    with dissolve
+    "闪光与光辉洒满舞台——"
+    y "（我看不懂这个故事。）"
+    scene theartists1_15
+    with vpunch
+    "敌人被狠狠一击命中！"
+    y "（这是谁写的？）"
+    scene theartists1_16
+    with dissolve
+    "或许我们的精灵现在安全了……"
+    scene theartists1_17
+    with dissolve
+    "两位英雄开始共舞。"
+    scene theartists1_18
+    with dissolve
+    "可惜啊，烟雾毁了庆典。"
+    "那个红衣女巫般的女人又出现了。她正掐着我们那位衣着单薄朋友的脖子。"
+    scene theartists1_19
+    with dissolve
+    "有什么办法，精灵的哀求能救下她吗？"
+    "双方就这样一来一回，最后终于达成了交易。"
+    scene theartists1_20
+    with dissolve
+    "女巫施展魔法，一缕雾气从她手中飘向我们的精灵。"
+    scene theartists1_21
+    with dissolve
+    "女巫得意地大笑起来，我们的英雄则趴在地上。"
+    scene theartists1_22
+    with dissolve
+    "长笛声渐渐消散，剩下的只有一片欢呼。"
+    stop music fadeout 5.0
+    scene theartists1_23
+    with fade
+    y "（总而言之，这是一场无言的表演，但视觉上有不少可圈可点之处。）"
+    scene theartists1_24
+    with dissolve
+    y "（我看不懂，不过观众似乎很享受。）"
+    scene theartists1_25
+    with dissolve
+    "人群欢呼着，上层看台甚至把花瓣撒满了舞台。"
+    "茱蒂示意你退到一旁，好让演员们下台……"
+    scene theceremony1_35
+    with fade
+    jdy "你喜欢刚才的演出吗？"
+    menu:
+        "那场演出……"
+        "挺发人深省的":
+            scene theceremony1_40
+            with dissolve
+            y "真是发人深省。"
+            y "我不确定它有没有真正的深意，但确实挺有看点的，而这就够了。"
+            scene theceremony1_37
+            with dissolve
+            jdy "很好，你能品出艺术的内蕴。"
+        "舞者们跳得不错":
+            scene theceremony1_40
+            with dissolve
+            y "故事我不懂，不过舞者们确实跳得不错。"
+            y "她们的服饰也确实够有意思。"
+            scene theceremony1_37
+            with dissolve
+            jdy "我想这才是她们的用意吧——讨好你。"
+        "完全讲不通":
+            scene theceremony1_40
+            with dissolve
+            y "我完全搞不懂这到底在讲什么。"
+            y "这些事件似乎前后不连贯。"    
+            y "我甚至不确定她们做的事有什么重大意义。"
+            scene theceremony1_37
+            with dissolve
+            jdy "有时艺术本就没有意义，却美在毫无意义。"
+    scene theceremony1_38
+    with dissolve
+    jdy "不管怎样，开场比我们预想的还要顺利。"
+    y "你和你姐姐布置得很棒。"
+    scene theceremony1_39
+    with dissolve
+    jdy "嗯，克莱斯特穆尔家确实帮了不少忙，该记他们一功。"
+    y "（趁我没忘莱奥娜说的话，我最好先问问她。）"
+    scene theceremony1_40
+    with dissolve
+    y "有件事我得问问你，关于你和我父亲的那次会面。"
+    scene theceremony1_41
+    with dissolve
+    jdy "可我从没见过你的父亲。"
+    y "你确定吗？"
+    scene theceremony1_38
+    with dissolve
+    jdy "哦！你大概是指我母亲。"
+    jdy "在学院成立之前，母亲和他以及另外三个家族的人见过面。"
+    scene theceremony1_41
+    with dissolve
+    jdy "当然那次出席的是……{w}我体内的母亲。"
+    y "对，就是那次。你知道他们谈了什么吗？"
+    jdy "你去问我母亲会更容易问出来。"
+    y "有可能吗？"
+    scene theceremony1_37
+    with dissolve
+    jdy "是的……{w}我们能晚点再说吗？"
+    jdy "我不想在这里引人怀疑。"
+    y "我真的想知道。这可能会影响我今晚要见的那些客人。"
+    scene theceremony1_41
+    with dissolve
+    jdy "那可太不方便了……"
+    scene theceremony1_42
+    with dissolve
+    jdy "我给你们五分钟，行吗？"
+    scene theceremony1_43
+    with dissolve
+    jdy "过来……"
+    scene theceremony1_45
+    with dissolve
+    ange "所以你听说过那次会面？"
+    y "安吉拉，你是代表你们家族跟我父亲谈的。能告诉我发生了什么吗？"
+    scene theceremony1_46
+    with dissolve
+    ange "你怎么不去问你父亲？"
+    y "他眼下没法见人。你能告诉我的尽量告诉我吧，这或许能帮我们两家在今晚处境好些。"
+    scene theceremony1_47
+    with dissolve
+    ange "唔……好吧——"
+    ange "当时我并不打算让两家结亲，所以我选择把我们排除在外。"
+    ange "但和威尔的情况让我多考虑了一番。"
+    y "他都向你和其他人提了什么要求？"
+    scene theceremony1_48
+    with dissolve
+    ange "他请求我们支持这所学院。"
+    ange "说到底，那些要求都算正常。"
+    ange "他向克莱斯特穆尔家要钱，向子爵要情报，还要我们为他演一场戏。"
+    y "一场戏？什么样的戏？"
+    scene theceremony1_49
+    with dissolve
+    ange "那是典型的宣传把戏。造一支假军队，来展示真正的实力。"
+    ange "他们会发动进攻，却毫无威胁可言，然后立刻撤退。"
+    ange "而我们则在旁边表演出真的身处险境的样子。"
+    ange "也就是说，我们的剧团。"
+    ange "他这一手确实阴险，我没想到他还有这种心思。"
+    y "（如果这事和鸡舍族有关，那就说不通了。他们可是真正的敌人。）"
+    y "（会不会是她搞错了父亲的要求？）"
+    scene theceremony1_46
+    with dissolve
+    ange "真庆幸他没把事情做绝。"
+    ange "你不知道衣服上的血渍有多难洗。"
+    ange "想想这种事的代价，我就不寒而栗。"
+    y "他想从杰奥姆那里得到什么？"
+    scene theceremony1_48
+    with dissolve
+    ange "恐怕我们始终没弄清楚。他把打算告诉那个半魔之后，她就一言不发地走了。"
+    ange "走了才好。没必要和她那种人谈判。"
+    y "……{w}还有别的能告诉我的吗？"
+    ange "瞧瞧我们这两个惹祸精~ {w}是的，我又听到一些。"
+    scene theceremony1_47
+    with dissolve
+    ange "子爵家那小子私下里把你父亲的事告诉了他。"
+    ange "但也没那么悄悄，还让我听到了一些风声。"
+    ange "你父亲想知道各个村庄的位置，还有它们的奴隶运输路线。"
+    y "奴隶路线？"
+    scene theceremony1_48
+    with dissolve
+    ange "早有记载，小村子里会用一些廉价的奴隶劳力。"
+    ange "据我所知，这门生意挺赚钱的。"
+    y "他对奴隶贸易感兴趣？"
+    ange "我不确定那是他的本意。我听到的就这些。"
+    scene theceremony1_50
+    with dissolve
+    y "谢谢你，安吉拉。"
+    scene theceremony1_44
+    with dissolve
+    jdy "你用母亲的名字叫我，听起来怪怪的。"
+    jdy "别养成习惯，好吗？"
+    y "已经过五分钟了吗？"
+    scene theceremony1_51
+    with dissolve
+    jdy "没有，不过我们快引人怀疑了。"
+    jdy "我不太明白你们俩的意思，不过我和艾米为你准备了一场盛大的宴会。"
+    scene theceremony1_52
+    with dissolve
+    jdy "我知道你做的事非常重要……{w}但还是尽量享受一下，好吗？"
+    y "我明白。谢谢你，茱蒂。"
+    scene theceremony1_53
+    with dissolve
+    y "（父亲要奴隶路线做什么？）"
+    y "（他是在找什么人吗？母亲？）"
+    y "（如果母亲还活着，要说她最后沦落到那里也不难相信。）"
+    y "（可如果真是这样，为什么不早点去找她？）"
+    "..."
+    jump festivalhub1_1
+label festivalhub1_1:
+    stop music fadeout 5.0
+    $ festival_loc = renpy.random.randint(1, 4)
+    if festival_loc == 1:
+        scene festival_loc1 with fade
+    elif festival_loc == 2:
+        scene festival_loc2 with fade
+    elif festival_loc == 3:
+        scene festival_loc3 with fade
+    else:
+        scene festival_loc4 with fade
+    menu:
+        "该去应酬了……"
+        "玛格娜" if party_mag == 0:
+            $ party_mag = 1
+            jump thefestival1_1 
+        "蕾娅" if party_rhea == 0:
+            $ party_rhea = 1
+            jump thefestival2_1
+        "蕾娅" if party_rhea == 1:
+            $ party_rhea = 2
+            jump thefestival4_1
+        "克莉奥" if party_cleo == 0:
+            $ party_cleo = 1
+            jump thefestival3_1
+        "海军上将" if party_cleo == 1:
+            $ party_cleo = 2
+            jump thefestival15_1
+        "克莱斯特穆尔夫人" if party_mag >=1 and party_pris == 0:
+            $ party_pris = 1
+            jump thefestival5_1
+        "露丝" if party_mag >= 1 and party_luce == 0:
+            $ party_luce = 1
+            jump thefestival6_1
+        "伊莎" if party_bona == 0:
+            $ party_bona = 1
+            jump thefestival7_1
+        "菲塔娜与莱奥娜" if party_fea == 0 and party_leo == 0:
+            $ party_fea = 1
+            $ party_leo = 1
+            jump thefestival16_1
+        "菲塔娜" if party_fea == 1:
+            $ party_fea = 2
+            jump thefestival8_1
+        "普里西拉" if party_pris == 1:
+            $ party_pris = 2
+            jump thefestival9_1
+        "博纳德一族" if party_bona == 1:
+            $ party_bona = 2
+            jump thefestival10_1
+        "演出节目" if party_fea >= 2 and party_judy == 0:
+            $ party_judy = 1
+            jump thefestival11_1
+        "莱奥娜" if party_leo == 1 and party_pris >= 2 and party_fea >= 2:
+            $ party_leo = 2
+            jump thefestival17_1
+        "露丝" if party_rhea >= 2 and party_luce == 1:
+            $ party_luce = 2
+            jump thegracen2_1
+        "玛格娜" if party_mag == 1:
+            $ party_mag = 2
+            jump thefestival18_1
+        "乔伊" if party_rhea == 2 and party_fea >= 2:
+            $ party_rhea = 3
+            jump thefestival14_1
+        "埃兹拉" if party_pris >= 2 and ezra_morph == 1 and party_ezra == 0:
+            $ party_ezra = 1
+            jump thesoldier1_1
+        "优妮" if party_mag == 2:
+            $ party_mag = 3
+            jump thefestival12_1
+        "博纳德一族" if party_bona == 2:
+            $ party_bona = 3
+            jump thefestival13_1
+        "前往仪式" if party_bona >= 2 and party_rhea >= 2 and party_leo >= 2:
+            jump theceremony2_1
+label thefestival1_1:
+    play music "audio/Electro Shaker Heaven.mp3" fadein 4.0
+    scene thefestival1_13
+    with fade
+    jor "我真不敢相信你们居然怀疑我！"
+    m "不是我干的，好吗？我当时躲在下面！"
+    scene thefestival1_14
+    with dissolve
+    m "你干吗要吃毒药啊？光是这个我就该把你关起来。"
+    scene thefestival1_15
+    with dissolve
+    jor "那不是毒药，只是零食！谁会被几颗浆果放倒啊？"
+    scene thefestival1_16
+    with dissolve
+    m "不对，那就是毒药。"
+    m "也许我该再让守卫把你用车拉走一次？"
+    scene thefestival1_17
+    with dissolve
+    jor "好了好了，玛格斯。太早了。"
+    y "很高兴在这里见到你，乔吉。"
+    if jorgi_inno == 2:
+        scene thefestival1_20
+        with dissolve
+        jor "王子！我该好好谢谢你！"
+        jor "之后来找我，我给你介绍几件我们最好的货。"
+        y "谢谢，不过真的没必要。"
+        m "得了，放心吧。他已经有最好的铁匠了，何必在意第二名？"
+        jor "你觉得我是第二名？真是荣幸之至。"
+        scene thefestival1_18
+        with dissolve
+        m "说得对。你顶多是个四流铁匠，配把三流锤子。"
+        jor "好了好了，玛格斯……"
+    else:
+        y "希望你别往心里去？"
+        scene thefestival1_18
+        with dissolve
+        jor "我很高兴你肯收下我。要我说，不亏也不亏。"
+        m "别跟他计较，乔吉以前三天两头进监狱。"
+        scene thefestival1_20
+        with dissolve
+        jor "我们小公主有你照看着，我该高兴才对。"
+        jor "那个该死的斯塔西亚就是不讲道理。"
+        m "说话小声点，乔吉。她听得见你的。"
+        scene thefestival1_19
+        with dissolve
+        jor "我逗你玩的！"
+        jor "..."
+        jor "她真的听不见吧？"
+    scene thefestival1_17
+    with dissolve
+    m "喝吧，乔吉。是派对！放松点。"
+    scene thefestival1_21
+    with dissolve
+    m "我得去找我的情人聊聊，好吗？"
+    jor "你看我像会拦住你的人吗？"    
+    m "喂，[player_name]，过来一下。"
+    scene thefestival1_22
+    with dissolve
+    m "你打算挑谁啊？"
+    y "真直接啊，玛格娜？"
+    scene thefestival1_23
+    with dissolve
+    m "你知道能不等的我就不喜欢等。"
+    m "告诉我嘛，我会保密的~"
+    y "你知道我不能告诉你。我不想让流言传开。"
+    scene thefestival1_24
+    with dissolve
+    m "哦，好好好。守着你的秘密吧。呵——"
+    y "你脸有点红。该不会已经喝醉了吧？"
+    scene thefestival1_25
+    with dissolve
+    m "才没有！我才喝了一杯。"
+    scene thefestival1_26
+    with dissolve
+    m "一会儿见，[player_name]~ 给我留点时间，好吗？"
+    scene thefestival1_27
+    with dissolve
+    m "喝麦酒的那个！站住！"
+    scene bg black
+    with fade
+    y "她玩得开心就好……"
+    jump festivalhub1_1
+label thefestival2_1:
+    play music "audio/Witch Waltz.mp3" fadein 4.0
+    scene thefestival2_4
+    with fade
+    y "看看你啊，蕾娅子爵。这次节庆待你如何？"
+    scene thefestival2_3
+    with dissolve
+    r "还不算差。当然不算我参加过的最好的，但——"
+    scene thefestival2_5
+    with dissolve
+    r "不过看起来你帮了很多忙。很多有分量的帮忙。"
+    scene thefestival2_6
+    with dissolve
+    r "那你呢？我看双胞胎一直把你藏到现在。"
+    scene thefestival2_7
+    with dissolve
+    y "是啊，让人群吊足了胃口。这对你有什么影响？"
+    y "你是否也觉得如有所缺？"
+    scene thefestival2_8
+    with dissolve
+    r "你不会以为我整天都在想你吧？"
+    scene thefestival2_1
+    with dissolve
+    cnl "好个王子！终于得以拜见，实属荣幸。"
+    scene thefestival2_2
+    with dissolve
+    cnl "我听过太多关于你的佳话。"
+    r "才过了十秒都不到。哥哥，你能别管这么多吗？"
+    scene thefestival2_9
+    with dissolve
+    cnl "亲爱的妹妹！我有多久没见你了！"
+    scene thefestival2_10
+    with dissolve
+    cnl "父亲把你送到这儿有多久了？太久了！"
+    scene thefestival2_13
+    with dissolve
+    r "收起你的嘲讽，科尔内利乌斯。"
+    cnl "看来时间还不够长，没能让你嘴上留情。"
+    scene thefestival2_11
+    with dissolve
+    r "[player_name]，这位是我的哥哥科尔内利乌斯。科尔内利乌斯，你认得今晚的主人吗？"
+    scene thefestival2_13
+    with dissolve
+    cnl "当然，当然。能在今晚出席是我的荣幸。"
+    r "那你为什么来这里？"
+    r "你总是跟在卢西安身边。这次大哥又派你来做什么？"
+    cnl "我可伤心了。你就把我看得这么轻？"
+    scene thefestival2_14
+    with dissolve
+    cnl "怎么会，能来向尊敬的王子致意是好事。"
+    cnl "我不知道我亲爱的妹妹蕾娅跟你说了什么，王室游牧者。"
+    cnl "但我此来，是要自豪地代表家族，对您的联姻表示全力支持。"
+    y "真是这样？"
+    cnl "我理解我们那位可爱的妹妹有时说话带刺。"
+    cnl "不过我听说过你在这里的诸多成就。"
+    cnl "在你的治理下，当地人安居乐业，而你犀利的口才更助你一臂之力。"
+    cnl "我只希望今后能有更多机会为此出力。"
+    scene thefestival2_15
+    with dissolve
+    r "我相信我的心上人没兴趣再多见几个子爵。"
+    r "一个就够了，对吧，[player_name]？"
+    scene thefestival2_16
+    with dissolve
+    cnl "我可不敢说。{i}每一个{/i}故事都有不止一面。"
+    scene thefestival2_17
+    with dissolve
+    cnl "尤其是那些被刻进历史的……"
+    y "你对历史了解多少？"
+    scene thefestival2_18
+    with dissolve
+    r "{size=-5}别让他钻了空子。他在撒谎。{/size}"
+    y "（该听她的吗？听一下又有什么损失？）"
+    menu:
+        "听科尔内利乌斯的？"
+        "否":
+            scene thefestival2_19
+            with dissolve
+            y "抱歉，科尔内利乌斯，我宁愿把时间花在喝酒上，而不是看戏。"
+            y "过去的事可以以后再说。再说，谁还在乎早就没了的东西？"
+            scene thefestival2_20
+            with dissolve
+            cnl "如果我没弄错的话——我很少弄错——你确实在乎。"
+            scene thefestival2_23
+            with dissolve
+            r "你这是当众打主人的脸。"
+            r "有点风度。"
+            cnl "当然了，妹妹。{w}是我失礼了。"
+            cnl "谢谢你的邀请，王室游牧者。"
+            y "尽量玩得开心，道上之主。"
+            scene thefestival2_26
+            with dissolve
+            cnl "我的王子。"
+            scene thefestival2_25
+            with dissolve
+            cnl "妹妹，凡事都别去求神。"
+            r "哥哥，喝酒就要喝得豪迈。"
+            scene thefestival2_10
+            with dissolve
+            cnl "呵。告退了，荡妇。"
+            scene thefestival2_27
+            with dissolve
+            y "他在说什么？"
+            scene thefestival2_28
+            with dissolve
+            r "大概是你母亲。"
+            r "他自以为了不起，比我知道得多，当然也比你知道得多。"
+            y "可我还是好奇，他到底什么意思？"
+            scene thefestival2_29
+            with dissolve
+            r "科尔内利乌斯知道，你父亲正在调查你母亲的死因。"
+            r "他们似乎想让你俩都别再查耶诺斯。"
+            y "他们为什么要这么做？要是耶诺斯是凶手，不是正好能减轻他们的压力吗？"
+            r "也许我们过去和他有过合作，也许我们暗中就好他那身肉的味道，我也说不准。"
+            r "当我开始深挖时，我的大哥卢西安就明确告诉我别再查了。"
+            r "我就算烧成火了他都懒得搭理。"
+            scene thefestival2_31
+            with dissolve
+            r "里面确实有事。{w}我戳到他的痛处了。"
+            y "你觉得他们在隐瞒什么？"
+            scene thefestival2_30
+            with dissolve
+            r "当然。我们可是子爵。我们藏的东西有什么价值，才是真正的谜团。"
+            r "我之前没有完全说实话……{w}我怂恿你调查，是出于私心。"
+            y "我一开始就这么怀疑。"
+            scene thefestival2_32
+            with dissolve
+            r "你当然怀疑了，好孩子~"
+            y "..."
+            scene thefestival2_33
+            with dissolve
+            r "但我了解得越多，冒出的问题就越多。"
+            r "我原以为你和你父亲是搞错了方向。我不信这事有什么名堂。"
+            r "我们本该有的那位老炼金术师的记录，全被抹掉了。"
+            scene thefestival2_34
+            with dissolve
+            r "那些书页被撕、被毁，而我们对他的盯梢也早就断了很久。"
+            r "想从我们的监视下溜掉，不付出代价是不可能的。"
+            r "那耶诺斯能给我家族什么，是我们自己弄不到手的？"
+            r "也许我家{i}确实{/i}牵涉其中。但我怎么也想不通。"
+            y "也许我们当初该听你哥哥的话？"
+            scene thefestival2_35
+            with dissolve
+            r "他只会喂我们一堆谎话。我已经吃够了。"
+            r "他藏着的东西，正是我们要找的答案。"
+            r "但他会摆出一副先知的姿态，把你引进死胡同。"
+            r "*叹气* 我不会替我的家族道歉。"
+            scene thefestival2_34
+            with dissolve
+            r "至少不会用言语道歉。"
+            y "所以你打算用别的方式道歉？"
+            scene thefestival2_33
+            with dissolve
+            r "当然。也就是用解开你这个谜团来道歉。"
+            y "就这些吗？"
+            scene thefestival2_32
+            with dissolve
+            r "我们可以再谈谈条件。我可不想听你说我不合你的意。"
+            scene thefestival2_31
+            with dissolve
+            r "现在我们该各走各的了。你还有客人要见。"
+            r "向[tribe_name]致敬，我的伴侣。"
+            y "同样向你致敬，子爵。"
+            scene bg black
+            with fade
+            jump festivalhub1_1
+        "是":
+            $ listen2cornelius = 1
+            y "你对过去了解多少？"
+            r "..."
+            scene thefestival2_17
+            with dissolve
+            cnl "首先，我也翻过我们家的档案。"
+            cnl "我觉得你挺奇怪的，都看了那些资料了，还去查耶诺斯。"
+            y "你什么意思？"
+            r "够了，科尔内利乌斯。"
+            scene thefestival2_16
+            with dissolve
+            cnl "我明白你为什么会对掌握你们门路的人感兴趣。"
+            cnl "是的，这里的家族确实和我们家的炼金术师共享过那东西。"
+            y "（这指的是我母亲吗？）"
+            scene thefestival2_12
+            with dissolve
+            y "他知道吗？"
+            scene thefestival2_13
+            with dissolve
+            r "……{w}是。"
+            scene thefestival2_19
+            with dissolve
+            y "你们家族怎么会对我们此行的目的知道得这么清楚？"
+            y "你告诉他了？"
+            scene thefestival2_18
+            with dissolve
+            r "不是。"
+            scene thefestival2_20
+            with dissolve
+            cnl "我的朋友，当有人朝黑暗里喊话时，我们就在那儿听着。"
+            y "有话就直说，科尔内利乌斯。"
+            scene thefestival2_21
+            with dissolve
+            cnl "你身在黑暗之中，王子。"
+            cnl "她让你追着一个死人跑，指望你能替她找到洗刷污名的办法。"
+            r "我不是在做这个。我们又不知道他已经死了。"
+            cnl "哦？是吗？"
+            scene thefestival2_22
+            with dissolve
+            cnl "努比利亚最负盛名的炼金术师换了采买的路子，"
+            cnl "换了他的习性，收起了他那套{i}少年{/i}戏的做派，而各位子爵竟然毫不知情？"
+            cnl "我们当然知道。当然{i}她{/i}也知道。"
+            scene thefestival2_23
+            with dissolve
+            cnl "那个人已经死了。"
+            r "但他的事业还在延续。"
+            scene thefestival2_24
+            with dissolve
+            cnl "他有个得意门生，但那终究替代不了伟人。"
+            cnl "那个旁征博引的学徒。他的作品或许能糊弄大众，可那股灵气已经没了。"
+            cnl "他最后的伟大贡献是什么？午夜之油？"
+            cnl "那他的集大成之作呢？"
+            cnl "那都是二十多年前的事了！承认吧，会下金蛋的鹅已经死了。"
+            scene thefestival2_25
+            with dissolve
+            r "我知道野心这回事很难琢磨，科尔内利乌斯，但我敢肯定有人有办法。"
+            r "就算没有，他们也有足够的脑子能造出来。还有什么地方比耶诺斯更适合下手？"
+            r "哪怕我们得从他的鬼魂开始。"
+            scene thefestival2_24
+            with dissolve
+            cnl "如今披着他的斗篷的那个人，可不是你以为你应得的那份珍宝，妹妹。"
+            scene thefestival2_11
+            with dissolve
+            y "等等，这是什么意思？耶诺斯死了？"
+            scene thefestival2_16
+            with dissolve
+            cnl "你母亲大约在十五年前就去世了。"
+            cnl "按我们的记录，耶诺斯死在那之前。"
+            cnl "所以，除非是鬼魂杀了你母亲，否则耶诺斯不是凶手。"
+            y "我猜你来这儿，是因为你以为你知道答案？"
+            scene thefestival2_17
+            with dissolve
+            cnl "可那个答案不会是你想听的。"
+            cnl "而这正是悲剧发生时我父亲给你父亲的答复："
+            scene thefestival2_21
+            with dissolve
+            cnl "这就是不幸。"
+            cnl "她的路线穿过了强盗的殖民地，你父亲以为她会平安无事的地方，她并不平安。"
+            cnl "这种事不是第一次发生。"
+            cnl "证据表明那支队伍纪律涣散，幸存者提到了当地强盗惯用的突袭手法。"
+            scene thefestival2_23
+            with dissolve
+            r "可她的遗体不见了。"
+            cnl "那场火烧掉了那伙人里大半，谁的骨头是谁的，根本分不清。"
+            scene thefestival2_25
+            with dissolve
+            r "她的护卫都是男人，找到的骨头也都是男人的，而她是唯一的女人。"
+            cnl "狗屁科学，骨头就是骨头。凭那些骨头根本定不出什么。"
+            scene thefestival2_24
+            with dissolve
+            r "区别很明显。其中有一具是生过孩子的。"
+            cnl "也许她只是腰细。据说她长得就有点像个男人。"
+            r "你是个蠢货。"
+            menu:
+                "科尔内利乌斯说的话……"
+                "深深刺痛了你":
+                    y "就凭这句话，我就能要了你的脑袋。"
+                    y "你竟污蔑我母亲的名声？"
+                    scene thefestival2_22
+                    with dissolve
+                    cnl "啊哈哈哈——我这张嘴真是没把门的。"
+                    cnl "当然了，我绝无冒犯之意，王子。"
+                    scene thefestival2_21
+                    with dissolve
+                    cnl "我对令堂只有敬意。"
+                "说不通":
+                    scene thefestival2_11
+                    with dissolve
+                    y "你在胡说八道。"
+                    y "一群手艺低劣的强盗，对我们任何一支分队都构不成威胁。"
+                    y "一定有某个有能耐的人掺和其中。"
+                    y "竟然说我母亲会栽在那种人手里，简直是胡说八道。"
+                    scene thefestival2_17
+                    with dissolve
+                    cnl "那大概是我错了。这种事确实可能发生，不过你比我更清楚。"
+                    cnl "你母亲那样的女人，可不是那么容易就能拿下的。"
+                "你倒挺领情":
+                    scene thefestival2_11
+                    with dissolve
+                    y "我欣赏你的坦率，子爵。看来你们家在这上头多得是。"
+                    y "谢谢你在这件事上肯跟我谈开。"
+                    scene thefestival2_21
+                    with dissolve
+                    cnl "当然。要是你们愿意，我们很欢迎你们以家人相待。"
+            scene thefestival2_21
+            with dissolve
+            cnl "你母亲坚强而骄傲。你们两家天生相配。"
+            cnl "我们修路，你们驻防。你若愿意，我们可以再细谈。"
+            scene thefestival2_17
+            with dissolve
+            cnl "当然啦，要是你选我妹妹做正妻的话。"
+            y "别说了。今天是庆功宴，这种事该改天再谈。"
+            scene thefestival2_15
+            with dissolve
+            cnl "恰恰相反，这才是做生意的最佳时机。"
+            r "这或许是我们唯一能达成一致的事了。"
+            scene thefestival2_20
+            with dissolve
+            y "我受够这些应酬了。谢谢你的美意，科尔内利乌斯。"
+            cnl "别给神明留下余地，妹妹。"
+            scene thefestival2_28
+            with dissolve
+            r "很抱歉你经历了那些，不过我确实提醒过你了。"
+            r "科尔内利乌斯是条毒蛇。"
+            y "他撒谎吗？"
+            scene thefestival2_29
+            with dissolve
+            r "你是说关于耶诺斯的事？"
+            scene thefestival2_34
+            with dissolve
+            r "不，但他会巧言令色把你从自己的路上带偏。别让他得逞。"
+            y "我能信你吗？你不也在做同样的事？"
+            scene thefestival2_35
+            with dissolve
+            r "我知道你瞧不上我，但我本以为你至少有点眼力，知道什么时候我们是一条心的。"
+            r "可我为什么要向你解释？"
+            scene thefestival2_33
+            with dissolve
+            r "听不听随你。"
+            scene thefestival2_32
+            with dissolve
+            r "好好享受你的宴会吧。"
+            y "..."
+            scene bg black
+            with fade
+            jump festivalhub1_1
+label thefestival3_1:
+    play music "audio/Coy Koi.mp3" fadein 4.0
+    scene thefestival3_1
+    with fade
+    y "克莉奥夫人。"
+    scene thefestival3_2
+    with dissolve
+    cf "王储，[player_name]。"
+    y "你真美。这身衣服真利落，也很合身。"
+    scene thefestival3_3
+    with dissolve
+    cf "谢谢。是母亲把她以前一位船长的旧衣服改的。"    
+    y "很适合你。克莉奥海军上将？"
+    scene thefestival3_4
+    with dissolve
+    cf "住口。"
+    scene thefestival3_5
+    with dissolve
+    cf "哦，赛顿的尿——快看那边！"
+    y "什么？"
+    scene thefestival3_6
+    with dissolve
+    cf "那不是艾米和斯莱特家的人吗？"
+    y "这有什么问题吗？"
+    cf "她怎么会跟他们混在一起？那帮脏兮兮的食腐鬼从来就没安过好心。"
+    cf "我敢说他们是想跟别的家族攀上关系。要是被他们得手了，说不定就是想把我挤下去……"
+    y "他们这么做不是正常的吗？"
+    y "再说了，玛丽昂家为什么要帮他们？"
+    scene thefestival3_7
+    with dissolve
+    cf "你知道吗，斯莱特家和玛丽昂家曾经是同一族？"
+    cf "那是很久以前的事了，不过他们是远亲。我敢说其中有些人甚至是表亲。"
+    y "我不知道这个……"
+    cf "我倒不觉得这意味着什么……{w}他们现在肯定是不同的家族了。"
+    y "（多半斯莱特家是为了争夺政治势力，才和玛丽昂家结盟。）"
+    y "（他们那次强行拉拢 [cf] 的手段适得其反，现在多半急着在我这边找个盟友。）"
+    cf "不过斯莱特家一直在找任何借口，想把我和母亲从舰队领袖的位置上挤下去。"
+    scene thefestival3_9
+    with dissolve
+    cf "我们得小心，别把事情搅得太大。"
+    cf "试着规矩点？"
+    y "你什么意思？我一向都很乖。"
+    scene thefestival3_8
+    with dissolve
+    cf "我是认真的。你也见识过斯莱特家为了目的什么都做得出来。"
+    cf "别惹其他家族生气，行吗？"
+    scene thefestival3_11
+    with dissolve
+    cf "至少在他们离开之前别惹。"
+    cf "我不想他们现在就有胆子去挖我的过去。"
+    y "别担心。他们不知道。我们会一直瞒着。"
+    scene thefestival3_10
+    with dissolve     
+    cf "嗯。只能说目前为止你表现得相当不错。"
+    scene thefestival3_8
+    with dissolve
+    cf "答应我，你不会让我撞见你和哪个斯莱特家的姑娘在一起？"
+    scene thefestival3_11
+    with dissolve
+    cf "别的公主倒无所谓，但斯莱特家的女仆不行！"
+    y "别傻了。今晚我为什么要那么做？"
+    scene thefestival3_10
+    with dissolve 
+    cf "哼。"
+    cf "..."
+    scene thefestival3_12
+    with dissolve
+    cf "喂，小鱼？！你说「今晚」是什么意思？！"
+    y "哈哈哈哈哈！"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival4_1:
+    play music "audio/Coy Koi.mp3" fadein 4.0
+    scene thefestival2_36
+    with fade
+    joy "[player_name]。我的主人。感谢您准许我以宾客身份出席。"
+    y "我不记得做过这种决定。不过你终究还是来道贺了，我很高兴。"
+    y "再说了，要是我的夫人坚持不同意，我也是没办法。"
+    joy "嘻嘻。你只要暗示一下，蕾娅就会同意让我陪你出席。"
+    y "其实我有个问题想请教夫人，方便让我跟她单独说几句吗？"
+    if listen2cornelius == 0:
+        scene thefestival2_37
+        with dissolve
+        r "我和乔伊之间没有秘密，你想说什么都可以。"
+        y "你知道其他几个家族和我父亲之间有没有举行过什么预备会议吗？"
+    elif listen2cornelius == 1:
+        scene thefestival2_37
+        with dissolve
+        r "乔伊，请转告王子，我可不把明珠丢在猪前。"
+        joy "对、对不起，主人。我也不清楚为什么，不过她心情不太好。"
+        y "（她还为刚才的事不痛快。）"
+        menu:
+            "道歉？"
+            "说吧":
+                $ listen2cornelius = 0
+                scene thefestival2_38
+                with dissolve
+                joy "蕾娅，你该对主人表示尊敬。"
+                y "对不起。我不是想冲你发火。"
+                y "你是出于好意。大概是我让科尔内利乌斯搅了心绪。"
+                scene thefestival2_41
+                with dissolve
+                r "*叹气* 我想我可以原谅这次冒犯。"
+                r "你还年轻。"
+                y "我们明明同岁……{w}算了。"
+                y "在学院开学之前，我家和你家之间有过什么会面吗？" 
+            "我没必要……":
+                scene thefestival2_38
+                with dissolve
+                joy "蕾娅，你该对主人表示尊敬。"
+                y "没关系。反正我也不该为那种事操心。"
+                scene thefestival2_39
+                with dissolve
+                joy "对不起，主人。"
+                y "没事的，乔伊。我不如就好好享受宴会吧。"
+                y "（不管发生过什么，都已经过去了。反正现在也没什么区别。）"
+                "..."
+                jump festivalhub1_1
+    scene thefestival2_40
+    with dissolve
+    r "确实有一些。"
+    r "我听说过一些传闻。内容主要是些粗鄙的表态和事先站队。"
+    r "具体细节我不清楚，只是从上下文里拼出了个大概。"
+    y "你家派了谁去？"
+    r "我哥哥。"
+    scene thefestival2_42
+    with dissolve
+    y "科尔内利乌斯？我可以从他嘴里套点消息。"
+    r "恐怕没那么容易。卢西安子爵。"
+    r "那次会议的某些结果已经不言自明了。"
+    scene thefestival2_43
+    with dissolve
+    r "那天玛丽昂家和乔塞尔家似乎退出了。"
+    r "在同一场会议上，克莱斯特穆尔家交出了他们的仆人。"
+    scene thefestival2_44
+    with dissolve
+    r "我想，你父亲是拿某样值钱的东西，换他们来保护我们的道路。"
+    r "因为之后修筑了防御工事，以防军队行军通过。"
+    r "我听见我哥哥说过，不花钱白拿东西有多容易……"
+    y "知道我父亲要的是什么吗？"
+    scene thefestival2_45
+    with dissolve
+    r "照卢西安的说法，我原以为他要的是我。"
+    y "也许父亲要的是你本人。"
+    r "我怀疑不止如此。"
+    scene thefestival2_44
+    with dissolve
+    r "承蒙神明垂怜，我没有姐妹，不过旁支小户我们还是有一些的。"
+    r "随便哪个小贵族家的姑娘，拿出来当礼物都更体面。"
+    r "子爵本可以送来一大群心甘情愿的姑娘。"
+    scene thefestival2_45
+    with dissolve
+    r "但不管怎样，卢西安都乐意照办。他还真是个不一般的混账。"
+    r "而这个家族终于给了我一个容身之所。"
+    y "你太谦虚了，蕾娅。"
+    menu:
+        "蕾娅一直是个很棒的……"
+        "资源":
+            y "你一直是个很棒的资源。"
+            scene thefestival2_46
+            with dissolve
+            r "哦，彼此彼此，[player_name]。"
+            r "我们俩不就是在互相榨干对方吗？"
+            y "说得好。"
+            r "我已经迫不及待想从你那双甜蜜的眼睛里，榨出最后一滴智慧来了。"
+            y "我也一样。"
+            r "哼。"
+        "床伴":
+            y "你一直是个很棒的床伴。"
+            scene thefestival2_46
+            with dissolve
+            r "和你度过的时光并不难熬。当然了，属于要慢慢才尝得出的那种口味。"
+            y "你在说我？这话从你嘴里说出来可真讽刺。"
+            r "哦，是吗？这话虽然算不上什么值得我引以为傲的原则，不过我非得反驳你不可。"
+            r "任何男人能碰到我的皮肤，都该觉得三生有幸。"
+            r "需要我提醒你，我是什么味道吗？"
+            y "以后有的是时间，让你再尝个够。"
+            r "别以为你就这么走运。"
+        "朋友":
+            y "你一直是个很棒的朋友。我知道不用我多嘴，可是——"
+            y "你比你自己家族以为的，要好得多。"
+            scene thefestival2_46
+            with dissolve
+            r "唔嗯……"
+            r "你大概以为我会回一句刻薄话……{w}但我真的很感激这份心意。"
+            r "谢谢。"
+            y "不必客气。"
+    scene thefestival2_47
+    with dissolve
+    r "那么，说回那些谈判——"
+    r "我一直怀疑，这所学院就是你父亲计划的全部。"
+    r "至少可以这么说，他们低估了你父亲。我敢肯定，他得到了他想要的。"
+    y "我同意……"
+    y "（不知道他想要的到底是什么。）"
+    scene thefestival2_48
+    with dissolve
+    joy "感谢你抽时间跟我们交谈，王子[player_name]。"
+    y "当然。祝各位女士宴会愉快。"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival5_1:
+    play music "audio/Behind the Sword.mp3" fadein 4.0
+    $ thefestival5_1_q = 0
+    $ thefestival5_2_q = 0
+    scene fes_guests1_16
+    with fade
+    y "克莱斯特穆尔夫人。"
+    scene fes_guests1_17
+    with dissolve
+    d_cm "王子。我正想着我们什么时候能聊聊。"
+    scene fes_guests1_18
+    with dissolve
+    d_cm "看来你把你那群羊管得不错。"
+    d_cm "他们对你的到来十分兴奋。你一定是个了不得的人物。"
+    menu:
+        "大家很兴奋？"
+        "保持谦逊":
+            y "这不是因为我做了什么。是大家太容易兴奋了。"
+            y "我只是努比利亚一个谦卑的仆人。"
+            scene fes_guests1_19
+            with dissolve
+            d_cm "谦卑，是。仆人，可不是。"
+        "展现骄傲":
+            y "他们欣然追随。这正是我们部族实力的证明。"
+            y "知道交到我们手里很安全，你该安心了。"
+            scene fes_guests1_19
+            with dissolve
+            d_cm "我确实就是这么看的。"
+    scene fes_guests1_20
+    with dissolve
+    d_cm "不过很高兴看到，我在这里的投资没有白费。"
+    d_cm "连这场演出都很精彩。神秘感会把人们拉拢到我们这边。"
+    y "这你得去谢玛丽昂家。"
+    d_cm "他们总是能拿出这么赏心悦目的表演。"
+    d_cm "那么，压轴的是什么？"
+    d_cm "今夜谁会有幸光临你的帐篷？"
+    y "这可是个秘密，克莱斯特穆尔夫人。"
+    d_cm "拜托拜托，今晚不是宴会吗？叫我洛林就好。"
+    y "说到宴会——我好像一直没看见安娜……"
+    scene fes_guests1_21
+    with dissolve
+    d_cm "别管她。我让她今晚别出席了。"
+    d_cm "今晚所有人的目光都会落在我长女身上，你也不例外。"
+    y "咦？她至少也该出席啊。我看不出这有什么不妥。"
+    scene fes_guests1_22
+    with dissolve
+    d_cm "所以你对她有兴趣？"
+    d_cm "你若这么在意，就努力来换取我的欢心吧，我自会让你再见到她。"
+    y "（她把女儿们当玩具一样使唤。）"
+    label thefestival5_2:
+    menu:
+        "去问克莱斯特穆尔夫人……"
+        "再问问安娜的事" if thefestival5_1_q == 0:
+            $ thefestival5_1_q = 1
+            y "安娜完全不会来？"
+            scene fes_guests1_23
+            with dissolve
+            d_cm "看来她给你留下了极深的印象。"
+            scene fes_guests1_25
+            with dissolve
+            d_cm "那就别担心。你的配合会让她重新回到你身边。"
+            y "我在意这个，倒不是因为这个。"
+            jump thefestival5_2
+        "关于见你父亲的事" if thefestival5_2_q == 0:
+            $ thefestival5_2_q = 1
+            y "克莱斯特穆尔夫人，恕我直言，我明白你和我父亲为这桩联姻做了安排。"
+            y "能否详细说说你们的安排，也好让我知道该如何配合？"
+            scene fes_guests1_23
+            with dissolve
+            d_cm "这些事你不必操心。"
+            scene fes_guests1_22
+            with dissolve
+            d_cm "我已经表达了一份我认为你和你父亲都会中意的支持。"
+            scene fes_guests1_25
+            with dissolve
+            d_cm "不过这件事，我们私下里越少谈越好。"
+            jump thefestival5_2
+        "告辞（继续）" if thefestival5_2_q == 1 or thefestival5_1_q == 1:
+            scene fes_guests1_22
+            with dissolve
+            y "（这场对话开始让我有点吃不消了。）"
+            y "（而且感觉她是想跟我保持距离。）"
+            y "祝您玩得愉快，克莱斯特穆尔夫人。"
+            scene fes_guests1_24
+            with dissolve
+            d_cm "你也是，尊贵的王子。我很期待看看你到底有几斤几两。"
+            y "..."
+            scene bg black
+            with fade
+            jump festivalhub1_1
+label thefestival6_1:
+    play music "audio/Electro Chill A.mp3" fadein 4.0
+    scene thefestival6_1
+    with fade
+    lu "*GASP*"
+    y "怎么了？"
+    scene thefestival6_2
+    with dissolve
+    lu "没、没什么！{w}你只是看起来……"
+    scene thefestival6_1
+    with dissolve
+    lu "你今天美极了。"
+    y "谢谢。还有你的礼服——你穿着真是惊艳。"
+    scene thefestival6_5
+    with dissolve
+    lu "嘻嘻。"
+    lu "其实是露内特帮我准备的。"
+    y "露内特准备的？"
+    y "……{w}衣服上没什么问题吧？"
+    scene thefestival6_4
+    with dissolve
+    lu "没有没有。这种事她可是非常认真的。"
+    scene thefestival6_6
+    with dissolve
+    lu "她确保这件衣服无论白天还是夜里都完美无缺。"
+    y "那晚上呢？"
+    scene thefestival6_5
+    with dissolve
+    lu "呃——"
+    scene thefestival6_3
+    with dissolve
+    lu "谢、谢谢你帮我家的事。"
+    lu "我知道他们很难相处。"
+    scene thefestival6_11
+    with dissolve
+    lu "呵——这说得可够客气的了，不是吗？"
+    y "你不用为那个担心，露丝。我帮你，本就是理所当然。"
+    scene thefestival6_10
+    with dissolve
+    lu "理所当然？"
+    lu "我会尽量不惹出麻烦。"
+    scene thefestival6_6
+    with dissolve
+    lu "就像玛姬那样！"
+    scene thefestival6_7
+    with dissolve
+    lu "她看起来玩得很开心，是吧？"
+    scene thefestival6_8
+    with dissolve
+    y "是啊，大概是太开心了。"
+    scene thefestival6_9
+    with dissolve
+    lu "我会保证她今晚保持清醒。"
+    lu "你更喜欢这样，对吧？"
+    y "你以为我会选她？"
+    scene thefestival6_10
+    with dissolve
+    lu "当然，你也可以选我们中的任何一个。"
+    lu "但我觉得她最可能是想随心所欲。"
+    scene thefestival6_12
+    with dissolve
+    y "也许今晚我可以带你一起去？"
+    scene thefestival6_13
+    with dissolve
+    lu "嘻嘻嘻。{w}格雷森家的人都很脆弱。你不该拿我们的感情开玩笑。"
+    scene thefestival6_14
+    with dissolve
+    y "我很少玩，露丝。而且我会很温柔。"
+    scene thefestival6_15
+    with dissolve
+    lu "不管你做什么决定，我都很期待。"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival7_1:
+    play music "audio/East of Tunesia.mp3" fadein 4.0
+    scene thebona1_2
+    with fade
+    y "嗯？"
+    isha "..."
+    gram "这么说，你胆子够大，敢在我面前露出真面目？"
+    gram "在你所选的那位主的庇护之下，你感到安心吗？"
+    gram "真可惜。"
+    gram "唯一真神会为你的邪恶审判你，伊莎。"
+    scene thebona1_3
+    with dissolve
+    isha "我从未偏离他的光明。他的恩赐在黎明等着我。"
+    isha "我忠于他的正道。你能这样说吗，赫玛尔尊者？"
+    scene thebona1_5
+    with dissolve
+    gram "傲慢的孩子。"
+    scene thebona1_4
+    with dissolve
+    gram "你算什么人，也配揣度他的心意？"
+    scene thebona1_6
+    with dissolve
+    gram "你和他的仇敌一起在泥地里刨食，还自以为清白？"
+    scene thebona1_10
+    with dissolve
+    y "赫玛尔尊者。欢迎回到我们的学院。"
+    y "身为这场祭典的宾客，我必须说明：只要你维持安宁，这里就欢迎你留下。"
+    y "我相信你能明白这地方的神圣。"
+    scene thebona1_7
+    with dissolve
+    gram "孩子，你不必对我说教。"
+    gram "我不是来跟你互相折辱的。我会尊重你的地盘。"
+    y "那就也请尊重我的其他客人。伊莎受我的君主庇护。"
+    y "对她任何的不敬，都会被视为针对我本人。"
+    gram "当然。谁也不想那样。"
+    gram "我谨咬住舌头，以示敬意。"
+    gram "但愿这不会给努比利亚这注定美好的一天蒙上阴影。"
+    gram "是吧，伊莎？"
+    scene thebona1_9
+    with dissolve
+    stop music fadeout 4.0
+    isha "当然。这里没有什么值得争执的。不过还是谢谢你，[player_name]大人。"
+    scene thebona1_11
+    with dissolve
+    y "那就请原谅我的失礼。我是个嫉妒心很重的领主。"
+    scene thebona1_8
+    with dissolve
+    gram "愿拉姆见证你得到应有的收成。"
+    y "（这个人我得多留个心眼。）"
+    isha "我们走吧……"
+    scene thebona1_13
+    with dissolve
+    y "你没事吧，伊莎？"
+    isha "王子[player_name]……"
+    scene thebona1_12
+    with dissolve
+    isha "刚才的事很抱歉。我希望不会给你带来麻烦。"
+    y "没关系。气氛是有点紧张，不过我们会没事的。"
+    y "谢谢你的耐心。"
+    scene thebona1_14
+    with dissolve
+    isha "不！应该说是我该感谢你才对！"
+    y "那我们就算两不相欠了。没什么好再说的。"
+    scene thebona1_15
+    with dissolve
+    isha "我想是吧。"
+    y "嘿，伊莎，我不是想说你什么。只是你这身衣服……"
+    y "会不会有点太冒险？"
+    scene thebona1_16
+    with dissolve
+    isha "冒险？"
+    scene thebona1_17
+    with dissolve
+    isha "哦！你、你……"
+    isha "对、对，当然。"
+    scene thebona1_18
+    with dissolve
+    isha "你是观形者……"
+    y "观形者？"
+    scene thebona1_19
+    with dissolve
+    isha "你的衣服和我的，是同一套里的两件……"
+    isha "你那件是用观形者的茎秆做的，我这件是用潜行者的皮做的。"
+    isha "观形者是少数能看穿潜行者隐藏形态的生物之一。"
+    scene thebona1_16
+    with dissolve
+    isha "所以你能看见……{w}我藏在下面的样子。"
+    scene thebona1_20
+    with dissolve
+    y "哦。"
+    y "也就是说，只有我能这样看你？"
+    scene thebona1_15
+    with dissolve
+    isha "当然。这种不受欢迎的样子，我可不想跟我们的客人分享。"
+    scene thebona1_14
+    with dissolve
+    isha "我、我还以为跟你分享一下没关系呢？"
+    y "知道只有我能这样看着你……"
+    y "这么看也挺好。"
+    scene thebona1_19
+    with dissolve
+    isha "宴会办得如何？你有机会和所有客人说过话了吗？"
+    y "还没有。不过我正在努力。"
+    scene thebona1_16
+    with dissolve
+    isha "那就祝你今晚愉快。我会看好其他人，不让他们惹麻烦。"
+    isha "我们这一家带来的客人确实不少。"
+    y "是啊，不过这也是你们家族魅力的一部分。"
+    y "愿你的收获丰盈，伊莎。"
+    scene thebona1_15
+    isha "愿你的收获丰盈，[player_name]。"
+    with dissolve
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival8_1:
+    play music "audio/Celebration.mp3" fadein 4.0
+    scene thefestival8_1
+    with fade
+    fea "哦！[player_name]！"
+    fea "你见过这种场面吗？"
+    fea "给他看，给他看！"
+    scene thefestival8_2
+    with dissolve
+    "?!"
+    fea "哇！你敢相信吗？！{w}是真的喷火龙！"
+    fea "你是半龙吗？"
+    scene thefestival8_3
+    with dissolve
+    fea "我还以为只剩我一个了！"
+    y "哈哈哈，我敢肯定他们只是表演者。"
+    scene thefestival8_4
+    with dissolve
+    fea "不过连我都还喷不出火呢。"
+    fea "现在我可得试试。"
+    scene thefestival8_6
+    with dissolve
+    fea "呸！"
+    fea "呜啊！"
+    scene thefestival8_7
+    with dissolve
+    fea "吼啊！"
+    y "呵……菲塔娜，很高兴看到你玩得开心。"
+    y "看到你穿得整整齐齐，我更高兴。"
+    scene thefestival8_8
+    with dissolve
+    fea "当然。我已经明白，露出皮肤和鳞片会让别人不自在。"
+    fea "所以就该穿得与场合相称。"
+    scene thefestival8_5
+    with dissolve
+    fea "你不能光着身子到处走。"
+    y "（她好像为自己说出一句人尽皆知的道理而很得意。）"
+    scene thefestival8_11
+    with dissolve
+    fea "照这么说，我办活动时你也一定打扮得很得体吧。"
+    y "你是说光着身子，对吧？"
+    fea "当然。纳特本就该如此。"
+    y "我就知道。我真是感激你这次选择穿好衣服出席。"
+    scene thefestival8_8
+    with dissolve
+    fea "你的祭典真是享受。我敢说大获成功！"
+    scene thefestival8_10
+    with dissolve
+    stop music fadeout 6.0
+    fea "气味很特别，人类也很有意思，虽然他们老盯着我看。"
+    y "对不起。我敢说他们大多数人只是从没见过鳞片这么美的纳特。"
+    fea "唔，这么一说，他们看确实是理所当然的。"
+    fea "这么说来，我遮住身上这么多还真是可惜。"
+    scene thefestival8_9
+    with dissolve
+    fea "也许我该——"
+    y "不！{w}不，那样就好。别脱衣服。"
+    scene thefestival8_8
+    with dissolve
+    fea "好吧好吧。至少穿上这些衣服我能多装点东西。"
+    scene thefestival8_12
+    with dissolve
+    fea "哦——对了！"
+    scene thefestival8_13
+    with dissolve
+    fea "给……{w}这是全套的。"
+    y "你刚才去哪了——这是什么？"
+    fea "打开看看。"
+    scene thefestival8_14
+    with dissolve
+    y "..."
+    y "（是个音乐盒。）"    
+    play sound "audio/Waltz No.19 in A minorChopin.webm" fadein 1.0
+    "..."
+    "音乐盒放出一段柔和的曲子……"
+    "是一首怀旧的曲子，听起来像是飘向了地平线。"
+    "虽然没勾起什么旧日回忆，却让人有种归属感……"
+    stop sound fadeout 5.0
+    "……{w}然后就停了……"
+    scene thefestival8_15
+    with dissolve
+    fea "喜欢吗？"
+    y "这是……"
+    menu:
+        "这是……"
+        "意外地动人":
+            y "没想到这么动人。"
+            y "曲子很美。"
+            scene thefestival8_16
+            with dissolve
+            fea "好。母亲老说我这个人很难预测。"
+            fea "你喜欢就太好了。"
+            scene thefestival8_17
+            with dissolve
+            fea "我想我已经摸清你们人类的习俗和喜好了。"
+        "可爱":
+            y "很可爱。"
+            scene thefestival8_16
+            with dissolve
+            fea "可爱？你一定是搞错了。这可是威武的乐章。"
+            y "是吗？那不管怎么说……"
+            y "谢谢你，菲塔娜。"
+            scene thefestival8_17
+            with dissolve
+            fea "唔。那就还好。"
+        "不太是我的菜":
+            y "说实话，真不太合我口味。"
+            scene thefestival8_16
+            with dissolve
+            fea "啊，那我最初的印象就没错。你跟别的人类不一样。"
+            fea "也许我该送你在炎热天气里给皮肤降温的那种石头……"
+            y "我领你的情，菲塔娜。抱歉没能引起我的共鸣。"
+            fea "没关系。你的心意我还是感受到了。"
+            scene thefestival8_17
+            with dissolve
+            fea "虽然是失望的心意。我还是会珍惜这份记忆。"    
+    fea "我让那两个长得一样的把它送到你房间去，你就不用随身带着了。"
+    scene thefestival8_18
+    with dissolve
+    y "那两个……哦，双胞胎。谢谢你，菲塔娜。"
+    y "（这倒让我吃了一惊。）"
+    y "（菲塔娜作为人类真的在成长。作为一位公主。）"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival9_1:
+    play music "audio/Celebration.mp3" fadein 4.0
+    scene thefestival9_12
+    with fade
+    p "王储。能看你登台真好。"
+    p "你显得那样威严，正是权力的写照。"
+    y "谢谢。还有看你这一身，这才是真正的王室行头。"
+    scene thefestival9_13
+    with dissolve
+    p "是的。母亲让人仔细赶制的。"
+    scene thefestival9_2
+    with dissolve
+    y "你没戴眼镜？"
+    scene thefestival9_1
+    with dissolve
+    p "没有，母亲准备了能让我看得清楚的东西。"
+    scene thefestival9_3
+    with dissolve
+    p "是涂在眼睛上的透明镜片。"
+    y "真的？是治盲症的东西？那真是了不起。"
+    scene thefestival9_4
+    with dissolve
+    p "只是一时的办法。按她的说法，她是想让我能把整张脸露出来。"
+    scene thefestival9_5
+    with dissolve
+    p "我必须展现出气势。"
+    scene thefestival9_6
+    with dissolve
+    p "我总有一天会成为克莱斯特穆尔女公爵。我不能一直显得那么温顺。"    
+    y "在我看来你一点也不温顺。我从没那样想过你，普里西拉。"
+    y "有时候，人得靠一个契机才能找到自己的力量。"
+    scene thefestival9_8
+    with dissolve
+    y "啊？"
+    "{i}一股暖意渗入你的身体：安心。{/i}"
+    y "（这就是她的情绪？）"
+    scene thefestival9_10
+    with dissolve
+    p "啊——真是抱歉。"
+    p "我只是被你的话暖到了。"
+    p "我不是故意要窥探你的感官的。"
+    scene thefestival9_11
+    with dissolve
+    y "（我仿佛这样就能窥见她的心思。或许反而会害了她。）"
+    y "没关系。我相信你没有恶意。你是个善良的女孩，普里西拉。"
+    y "我很欣赏你的坦诚。"
+    y "（她内心是真心想要支持我。）"
+    y "（情绪这么赤裸，我想她不可能在隐瞒什么。）"
+    scene thefestival9_10
+    with dissolve
+    p "那么……如果你愿意的话。"
+    scene thefestival9_8
+    with dissolve
+    "{i}普里西拉的情绪开始在你体内变得愈发强烈。{/i}"
+    "{i}你感到灼热。{w}紧绷。{w}悬心。{w}隐隐作痛。{w}"
+    scene thefestival9_9
+    with dissolve
+    "{i}像是笼中之兽尝到了自由一般的释然。{/i}"
+    scene thefestival9_6
+    with dissolve
+    p "抱歉，[player_name]。恐怕我把你独占得太久了。"
+    scene thefestival9_5
+    with dissolve
+    p "其他客人该等得不耐烦了。希望你今晚过得愉快。"
+    y "好、好的。祝您今晚愉快，克莱斯特穆尔夫人。"
+    scene thefestival9_4
+    with dissolve
+    p "你也是，王子[player_name]。"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival10_1:
+    play music "audio/Ambient G Drums.mp3" fadein 4.0
+    scene thebona1_42
+    with fade
+    sab "王子[player_name]！你认出她了吗？"
+    menu:
+        "右边那个女孩是……"
+        "萨巴的妹妹":
+            y "对，当然。那是你妹妹。我怎么会忘记一个曾经把膝盖压在我背上的人呢？"
+            scene thebona1_44
+            with dissolve
+            sab "是的，那件事抱歉。是祖基！她看起来不一样了吧？"
+        "危险的暗精灵":
+            y "这是一位……危险的暗精灵。"
+            scene thebona1_43
+            with dissolve
+            sab "这话说得可不太好听，[player_name]。"
+            sab "她是祖基，我妹妹。"
+            zuki "我很受用他对我的评价。"
+            scene thebona1_44
+            with dissolve
+            sab "哦？你早就知道她喜欢这样吗？你在这方面真有天赋！"
+        "祖基":
+            y "她当然是祖基。我怎么会忘记一个曾经把膝盖压在我背上的人呢？"
+            scene thebona1_44
+            with dissolve
+            sab "是的，那件事抱歉。她看起来不一样了吧？"
+    zuki "尊贵的男士……{w}我不是故意冒犯。"
+    y "算不上冒犯。所有客人都受欢迎，而且萨巴是你姐姐。{w}我很乐意款待你。"
+    scene thebona1_45
+    with dissolve
+    pria "王子来了！你今晚味道真好。"
+    fati "我想你是想说「他看起来很棒」吧，普莉莎。"
+    scene thebona1_46
+    with dissolve
+    pria "不，他闻起来简直如神明降世。浑身都是使命的气息。"
+    fati "这种事你也闻得出来？"
+    zuki "是的。*嗅* 你很强。"
+    y "啊？"
+    pria "难道不是吗？！*嗅* *嗅*"
+    sab "别在意，[player_name]。普莉莎就是习惯先闻了再说。"
+    pria "祖基为了让这里安宁，才答应来向你表态支持。"
+    sab "她只是想确保自己对我们领主表示了敬意。"
+    scene thebona1_47
+    with dissolve
+    pria "以防万一。我特意给我们的客人除了爪：不许带武器！"
+    fati "祖基从没见过这么多人。对她来说大概有点招架不住。"
+    sab "我们会留在这儿当她的盾牌。不会让她落单。"
+    pria "哈！你这么严肃，八成把她吓着了！"
+    zuki "不会。他就像一个其实是女性的男性，但我并不害怕。"
+    y "一个像女性的男人？"
+    scene thebona1_48
+    with dissolve
+    zuki "抱歉。是我说错了吗？{w}我一直笃定你身上是男人的部件。"
+    sab "她是在以敬称相称！"
+    sab "在卡恩派的文化里，男性通常担任仆人。"
+    sab "她只是不习惯用敬称来称呼男性。"
+    zuki "我失敬了吗？对不起。我不是故意要……"
+    zuki "我们部族才刚刚慢慢学习更好的风俗。"
+    pria "如今男孩更加稀罕，你该对他更加敬重才是。"
+    fati "说出口有些奇怪，但儿子{i}确实{/i}对我们非常重要。"
+    sab "没错……{w}尤其是拉姆本地、乃至珠登以西的贵族男性都很稀少。"
+    scene thebona1_49
+    with dissolve
+    y "你什么意思？"
+    fati "书上记载，许多贵族男性在那场瘟疫中绝嗣了。"
+    fati "所以待嫁的女子这么多，男子却几乎没有。"
+    y "我好像听说过类似的事，但专指儿子吗？"
+    sab "拉姆的教诲说，安宁使男子变弱，而拉姆考验了他们。"
+    sab "这样才能确保只有强者引领我们走向未来。"
+    sab "可、可是现在这么少，也许他们比拉姆以为的更弱……"
+    zuki "儿子是珍贵的。我们会保护你。"
+    pria "没错！我们会确保你睡得安稳。"
+    y "我领这份情，不过我想我不会有事。"
+    y "我该让你们各位去社交了。有什么需要尽管告诉我。我是你们谦卑的主人。"
+    scene thebona1_50
+    with dissolve
+    fati "不，是我们欠你一份情。谢谢你宽宏让我们在此作客。"
+    fati "我们都感谢你对我们苦难的扶持。"
+    sab "当然我们是，多谢您的款待，[player_name]大人。"
+    pria "谁要是敢找你麻烦，我随时都在。"
+    y "什么都别操心。几位好好玩就是了。"
+    scene bg black
+    with fade
+    y "（连某些天生的对头都能相处融洽，这倒是件好事。也许是个好兆头。）"
+    jump festivalhub1_1
+label thefestival11_1:
+    play music "audio/Electro Shaker Heaven.mp3" fadein 4.0
+    scene fes_guests1_26
+    with fade
+    ingn "[player_name]王子，您肯赏光驾临，真是让我们受宠若惊。"
+    yuel "希望我们今晚的姑娘们能让你满意？"
+    scene fes_guests1_27
+    with dissolve
+    ingn "哎呀尤尔，他来这里当然是为了最上等的货色，你说是不是，亲爱的？"
+    yuel "啊，你说得对，是啊。我现在看出来了，那眼神跟猎人一模一样。"
+    y "你们三个在嘀咕什么？我只是在招待我的客人。"
+    bas "你还真大方，还把我们当客人。"
+    y "芭斯特，你那身衣服真的没问题吗？"
+    scene fes_guests1_28
+    with dissolve
+    bas "这才是正统的自然装束。指望一个臭烘烘的人类懂？做梦吧。"
+    ingn "哎呀，你要单独点她的名，她可是会挠人的。"
+    scene fes_guests1_29
+    with dissolve
+    yuel "她那坏脾气，我替她道歉。"
+    y "呃……谢谢你？"
+    yuel "真可惜，今晚我们没法单独相处了。"
+    ingn "那些有钱的姑娘真是好命，对吧，亲爱的？"
+    scene fes_guests1_30
+    with dissolve
+    bas "居然对一身土味的人流口水，想象一下就好笑。"
+    ingn "你不是一直都说喜欢土味吗。"
+    scene fes_guests1_31
+    with dissolve
+    bas "哦——你撒谎跟呼吸一样自然，贱人！"
+    ingn "啊！求你了，帅王子——保护我嘛！"
+    y "..."
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival12_1:
+    play music "audio/120 Monster.mp3" fadein 4.0
+    scene thefestival1_28
+    with fade
+    yun "这里可不行……"
+    scene thefestival1_29
+    with dissolve
+    yun "王、王储，[player_name]！"
+    y "优妮，玛格娜也是叫你来参加的吗？"
+    scene thefestival1_30
+    with dissolve
+    yun "嗯……是啊！我就是想着来玩一趟。"
+    y "你是在跟踪谁吗？"
+    scene thefestival1_28
+    with dissolve
+    yun "呃……对、对！"
+    y "玛格娜给你的活儿太不公平了，对吧？"
+    scene thefestival1_30
+    with dissolve
+    yun "没有！我，那个……这其实是我和小西的好处。"
+    y "你们两个？你们两个在搞什么？"
+    yun "呃……我不能说。" 
+    y "没必要瞒着我，我直接去问玛格娜就行。她现在在哪？"
+    scene thefestival1_31
+    with dissolve
+    yun "她、她……呃。"
+    yun "这是秘密！"
+    y "你居然要瞒着我？"
+    scene thefestival1_30
+    with dissolve
+    yun "呀！哦——我好像在那头看到她了！"
+    y "啊？"
+    yun "我得走了！"
+    scene thefestival1_32
+    with dissolve
+    yun "谢、谢谢款待，我的王子！"
+    scene bg black
+   
+    with fade
+    y "她在瞒什么？优妮说西奇也在这儿。"
+    y "也许能从她嘴里撬出更多……{w}得先找到她才行。"
+    "..."
+    "一段时间后……"
+    scene thefestival1_33
+    with fade
+    y "（我不认识这个人。是她吗？）"
+    scene thefestival1_34
+    with dissolve
+    y "（是她。）"
+    scene thefestival1_35
+    with dissolve
+    y "西奇！"
+    xi "!"
+    scene thefestival1_36
+    with dissolve
+    y "西奇，你这身打扮真有意思。"
+    scene thefestival1_37
+    with dissolve
+    xi "这是我们部族庆典时穿的衣服。"
+    y "你是努比利亚部族出身？我还以为你是城里人。"
+    xi "和优妮一样，我也是在城里做工，然后去上学院。"
+    y "对了，我刚跟优妮聊过。你们两个在做什么？"
+    xi "师父已经准许我们去寻……"
+    scene thefestival1_38
+    with dissolve
+    xi "啊——抱歉，我不假思索就答了。看在优妮的份上，我不能说。"
+    y "不假思索？告诉我有什么妨碍吗？"
+    scene thefestival1_39
+    with dissolve
+    xi "请、请别凑那么近盯着我看。"
+    y "（嗯……感觉可以再施加点压力。）"
+    scene thefestival1_40
+    with vpunch
+    y "西奇，告诉我你在瞒什么。"
+    y "我……（咦？）"
+    scene thefestival1_41
+    with dissolve
+    y "（她这眼神，暗示得也太明显了。）"
+    scene thefestival1_42
+    with vpunch
+    y "啊-"
+    scene thefestival1_43
+    with dissolve
+    y "可恶，被她打了个措手不及。{w}精神加肉体的双重攻势……"
+    y "不知道是不是她算好的。"
+    y "下次见到玛格娜，我只能去问她了……"
+    scene bg black
+    with fade
+    "..."
+    scene thefestival1_1
+    with fade
+    m "咦？你发现优妮和西奇了？"
+    y "优妮说你在用某种方式奖励她，那两个在打什么主意？"
+    scene thefestival1_2
+    with dissolve
+    m "我可不想把好事搞砸。有些事留着当惊喜比较好。"
+    y "这种惊喜我以后多的是。"
+    y "她们为什么在跟踪别人，又为什么要躲着我？"
+    scene thefestival1_3
+    with dissolve
+    m "你确定不打算留到以后再问？"
+    m "你不知道反而更好。"
+    y "原来你{i}果然{/i}在谋划什么。"
+    menu:
+        "留到以后再说？"
+        "先保密":
+            y "好吧。我感觉这事跟我有关，不过就让你先留着秘密。"
+            scene thefestival1_4
+            with dissolve
+            m "别那么垂头丧气嘛。"
+            scene thefestival1_5
+            with dissolve
+            m "我又不是要瞒着你什么危险的事。"
+            scene thefestival1_6
+            with dissolve
+            m "其实我什么都不想瞒你。"
+            scene thefestival1_8
+            with dissolve
+            m "可惜这夜色非要把你从我身边带走。"
+            scene thefestival1_9
+            with dissolve
+            m "你要是愿意，我们可以一起溜出去，就你和我？"
+            scene thefestival1_7
+            with dissolve
+            m "那就算你没选我，也记得我的味道吧~"
+            y "放心吧玛格娜，今晚之外我们还有的是机会。"
+            y "再说了，我们俩都该待在这儿。我估计很快就会被人找到。"
+            scene thefestival1_10
+            with dissolve
+            m "呵呵呵。"
+            scene bg black
+            with fade
+            jump festivalhub1_1
+        "不，让她们自己告诉你":
+            $ magna_explained = 1
+            y "现在就告诉我吧。"
+            scene thefestival1_4
+            with dissolve
+            m "好吧。我让她们比一场。"
+            scene thefestival1_5
+            with dissolve
+            m "谁先跟其余每个女孩都偷偷搭上话，谁就赢。"
+            y "可她们赢了能得到什么？"
+            scene thefestival1_6
+            with dissolve
+            m "你说她们能赢什么？"
+            y "跟我有关系吗？"
+            scene thefestival1_8
+            with dissolve
+            m "当然有关系。我跟她们说了，我不在的晚上，可以给她们未来的丈夫当个暖床的。"
+            m "两个都是自愿的。"
+            scene thefestival1_9
+            with dissolve
+            m "所以我就把它变成了一个游戏。我跟她们说，今晚要是我被选中，就让其中一个陪我。"
+            scene thefestival1_7
+            with dissolve
+            y "换作任何一个晚上都不算什么，偏偏今晚不一样。"
+            y "我可不能让一个会拆我台的女人进我的帐篷。"
+            m "所以她们才必须偷偷摸摸。"
+            scene thefestival1_10
+            with dissolve
+            y "玛格娜……"
+            m "嘿嘿嘿。"
+            scene bg black
+            with fade
+            jump festivalhub1_1
+label thefestival13_1:
+    play music "audio/CCnight.mp3" fadein 4.0
+    scene thebona1_21
+    with fade
+    sab "这样不安全。你是我姐姐，你该明白这意味着什么。"
+    pria "我喜欢这样，萨巴。什里那边不会喜欢，但我喜欢。"
+    scene thebona1_22
+    with dissolve
+    zuki "姐姐，我很感激你的好意，但卡恩派不参与这种事。"
+    zuki "我决定留下谁，是个重大的抉择。"
+    fati "她不是要你留下他，只是让他今晚保护你。"
+    scene thebona1_23
+    with dissolve
+    zuki "他在就能庇护我吗？他能从那些猎犬手里护住我？"
+    sab "也许不能，但不然你怎么知道他值不值得？"
+    fati "再说了，你既然搬出卡恩派的传统，那长女继承的那条呢？"
+    scene thebona1_24
+    with dissolve
+    zuki "我、我姐姐经验更丰富，这不是我的错。"
+    sab "我们说的不是那个，法蒂玛！"
+    scene thebona1_25
+    with dissolve
+    y "博纳德一族的，祖基。你们有人跟什里打过照面吗？"
+    sab "哦，他来了！"
+    pria "谢天谢地没有。伊莎一直在替我们盯着他们，干得不错。"
+    scene thebona1_26
+    with dissolve
+    sab "[player_name]大人。您来得正是时候。我正想跟您谈谈今晚的狂欢。"
+    y "狂欢？"
+    pria "她说的其实就是我们今晚的群交。"
+    sab "不，请先让普莉莎退下，我只是想说如果您选了我们一家，该怎么和您同帐篷过夜。"
+    y "我总不能只选你们其中一个吧？"
+    scene thebona1_27
+    with dissolve
+    sab "当然不是。我们毕竟是一家人。"
+    scene thebona1_28
+    with dissolve
+    fati "您理应和我们所有人在一起，今夜大伙儿也都盼着如此。"
+    scene thebona1_29
+    with dissolve
+    fati "我们每个人都很适合这样的欢庆之夜。"
+    scene thebona1_30
+    with dissolve
+    fati "您会发现我们的衣服很容易就能脱掉。"
+    y "我明白了……"
+    y "上次见面时，我大概没仔细看。"
+    scene thebona1_34
+    with dissolve
+    pria "我还特意为你蓬松过尾巴呢~"
+    fati "所以您看，我们很适合一整晚的供奉。"
+    y "（她们适合的可不止这个。我该不该担心普莉莎呢。）"
+    scene thebona1_31
+    with dissolve
+    sab "法蒂玛，或许我们没必要当着祖基的面谈这个？"
+    scene thebona1_33
+    with dissolve
+    pria "那姑娘迟早得习惯，不是我们刚才在说的事吗？"
+    pria "太阳之女的头生参与这种讨论，再自然不过。"
+    scene thebona1_32
+    with dissolve
+    y "谈这个我不介意，可我们到底要讨论什么？"
+    y "我觉得这种事还是交给机缘巧合为好。"
+    scene thebona1_35
+    with dissolve
+    sab "是、是的，不过如果您允许，我还是想私下和您谈谈。"
+    scene thebona1_36
+    with dissolve
+    fati "你现在就问他？"
+    sab "不然还能什么时候？"
+    pria "我的尾巴？"
+    zuki "..."
+    scene thebona1_37
+    with fade    
+    sab "我尽量说得直白些，[player_name]大人。今晚如果您选了我们，能带上我姐姐吗？"
+    y "你想让我和她睡？"
+    scene thebona1_38
+    with dissolve
+    sab "咦？不、不是不是！不是那个意思！"
+    sab "我是说，她不会拒绝你，可是——"
+    sab "但我不确定她是否安全。"
+    sab "奶奶就在这儿。她要是知道祖基的事，肯定会搞出点什么。" 
+    sab "今晚您要是召博纳德族人，我们就没人能盯着祖基了。"
+    scene thebona1_39
+    with dissolve
+    sab "别担心，人们本来就习惯见一大群博纳德族人。"
+    sab "再说了，作为我姐姐，严格来说祖基也是博纳德人。"
+    sab "她不会显眼的。"
+    y "什里真会在这里伤害她吗？"
+    scene thebona1_40
+    with dissolve
+    sab "她是暗精灵，有可能。"
+    y "就因为这个？拉姆人就这么厌恶暗精灵吗？"
+    scene thebona1_38
+    with dissolve
+    sab "要不是她是我母亲，结果可能就不一样了。"
+    sab "可既然祖基本来该是太阳之女……" 
+    sab "她有可能动摇我们的信仰。我们族人……"
+    scene thebona1_40
+    with dissolve
+    sab "求您了？[player_name]大人？我知道可以信任您。"
+    scene thebona1_41
+    with dissolve
+    sab "伊莎也许先选了您，但我们所有人留在这里，都是因为信任您。"
+    y "我明白。人是多了点，不过帐篷挤一挤总够。"
+    scene thebona1_39
+    with dissolve
+    sab "真的？！谢谢你，[player_name]！太感谢了！" 
+    y "不过您也明白，不管她在不在，欢庆都不会停……"
+    scene thebona1_52
+    with dissolve
+    sab "我明白。{w}我不会留手的。"
+    sab "让我把全部交给那个保护我家族的人，本就是应该的。"
+    scene thebona1_51
+    with dissolve
+    sab "我相信其他人也是同样的想法。"
+    y "很好……"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival14_1:
+    play music "audio/Electro Shaker Heaven.mp3" fadein 4.0
+    if _in_replay:
+        $ listen2cornelius = 1
+    if listen2cornelius == 0:
+        #RHEA WAS RUDE
+        scene thefestival2_50
+        with fade
+        joy "大人，我为我女主人的失礼深深致歉。"
+        y "没事的，乔伊。子爵只是忠于本性罢了。"
+        joy "她人真的很温柔。只是这场祭典……"
+        scene thefestival2_51
+        with dissolve
+        joy "我、我是说，您的祭典没什么不好，只是这里的客人让她有些应付不来。"
+        joy "她不喜欢这种宴会——"
+    else:
+        scene thefestival2_49
+        with dissolve
+        joy "[player_name]主人！" 
+        joy "感谢您让我以客人的身份参加这场聚会！" 
+        y "不用客气，欢迎你，乔伊。再说你也是贵人。" 
+        scene thefestival2_51
+        with dissolve
+        joy "只、只是小门小户，而且只侍奉您和蕾——呃，女主人。"
+        y "即便如此，你来了我也很高兴。我希望每个人都能玩得开心。"
+        scene thefestival2_55
+        with dissolve
+        joy "是啊，真的很好玩，不过我还是很期待压轴的环节。"
+        joy "祭典本身当然也很享受！"
+    y "别担心，乔伊。这本来也不是我的菜。"
+    scene thefestival2_52
+    with dissolve
+    joy "我还是觉得很抱歉，大人。既然我现在是您的仆人，早就该习惯这种场面了……"
+    y "真的没关系，乔伊。"
+    y "无论怎么看你都做得很好。你是个真正的部族男儿。"
+    y "成为[tribe_name]的一员，感觉怎么样？"
+    scene thefestival2_53
+    with dissolve
+    joy "很、很好，大人。像我这样身份低微的人能为您做事，是我的福气。"
+    y "放轻松，不必端着架子。你说什么我都不会介意。"
+    y "说实话从来不是失礼的事。"
+    scene thefestival2_54
+    with dissolve
+    y "那就告诉我，你对这一切到底怎么想？我不会生气。"
+    joy "这个嘛……{w}一开始我有点担心。我没有别的意思，只是拿不准。"
+    joy "我们来之前，蕾娅就和我商量过让我到您身边做事。"    
+    joy "我记得当时只是觉得这笔买卖挺划算。"
+    joy "做个无主之人并不容易。跟着你，我还能保住她那份。"
+    y "你们俩早就盘算好让我当你的仆人？"
+    joy "是蕾娅的主意。看起来这是让我不至于落入她家族手里的最省事的办法。"
+    scene thefestival2_56
+    with dissolve
+    joy "哦、哦不。我是不是说了不该说的？"
+    y "没有。那个算计人的蕾娅，我一直觉得她在打什么主意。不过这么一来，倒也多少对我有利。"
+    y "希望你那算计人的女主人没打算什么计划来搅乱今晚的安排吧？"
+    scene thefestival2_55
+    with dissolve
+    joy "嘿嘿，没有，大人。我已经告诉她安分点最好。难得她这次好像也同意。"
+    joy "您决定仪式选谁了吗？" 
+    scene thefestival2_52
+    with dissolve
+    joy "哦，呃——请原谅我。这样问太唐突了，是吧？" 
+    y "没事。我知道您心里也装着不少事。"
+    y "可我也拿不定主意……{w}可选的人太多了。"
+    y "蕾娅看起来特别冷淡，我觉得她并不想被选中。" 
+    scene thefestival2_51
+    with dissolve
+    joy "怎么可能！我不这么认为。她甚至还——" 
+    scene thefestival2_56
+    with dissolve
+    joy "甚至……{w}特意做了身讨你喜欢的衣服……"
+    y "是吗？"
+    scene thefestival2_55
+    with dissolve
+    joy "是的。我想被你选中，她会很得意的。" 
+    joy "在她眼里，凡事都要比个高下。"
+    y "哈，这倒让我也紧张起来了。要是选了她，谁知道她会不会张嘴就把我整个吞下去。"
+    scene thefestival2_49
+    with dissolve
+    joy "呵呵呵。"
+    joy "您要是真选她，也许我能帮上忙？" 
+    scene thefestival2_57
+    with dissolve
+    joy "蕾娅最近真是难搞得很。"
+    joy "我们俩该联手扳回一城。" 
+    y "真正结实的同盟？" 
+    scene thefestival2_58
+    with dissolve
+    joy "你不觉得蕾娅会很受用吗？" 
+    y "嗯……说得太对了。{w}好吧，我听着。"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival15_1:
+    play music "audio/Electro Shaker Heaven.mp3" fadein 4.0
+    $ thefestival15_1_q_1 = 0
+    $ thefestival15_1_q_2 = 0
+    $ thefestival15_1_q_3 = 0
+    scene thefestival3_13
+    with fade
+    y "海军上将，风采卓绝。"
+    y "今晚两位诺提卡家的小姐都精心打扮了一番。"
+    scene thefestival3_14
+    with dissolve
+    ad "你父亲要是发现你学的全是这个——如何讨好老贵妇们——怕是要气坏了。"
+    y "我没想到你还有这张父亲牌……"
+    scene thefestival3_15
+    with dissolve
+    ad "再看看你！"
+    ad "赛顿的胡子在上，你这一身派头简直像个上流人物。"
+    scene thefestival3_16
+    with dissolve
+    ad "看来我们中间真要出个真正的贵族了。"
+    y "上将大人，您才是真正的贵族，气派十足。"
+    scene thefestival3_19
+    with dissolve
+    ad "啊，不必讨好我，小子！今天的主角是我女儿，对吧？"
+    ad "再说了，老船身上也没什么值得下钩的好处。"
+    y "上将大人，宴会玩得还愉快吗？"
+    scene thefestival3_18
+    with dissolve
+    ad "尚可。我很喜欢你请来的某些客人，尤其是那些娱乐节目。"
+    ad "但另一些我就喜欢得像屁股里塞了根棍子。"
+    scene thefestival3_14
+    with dissolve
+    ad "比如那个魔族女人。一定是个悍妇吧？"
+    y "她其实是个很可爱的姑娘。"
+    ad "真是这样？"
+    scene thefestival3_15
+    with dissolve
+    ad "克莉奥呢？我还以为她这会儿已经挂在你肩上了。"
+    y "她就在附近某处。要我帮您找来吗？"
+    scene thefestival3_19
+    with dissolve
+    ad "不用不用。您尽兴就好，她也正好放松一下。"
+    ad "在祭典上碰见自己的母亲，说明你还没学会怎么玩。"    
+    label thefestival15_2:
+    menu:
+        "上将……"
+        "今晚有安排吗？" if thefestival15_1_q_1 == 0:
+            $ thefestival15_1_q_1 = 1
+            y "你今晚有安排吗？"
+            scene thefestival3_18
+            with dissolve
+            ad "安排？祭典的意义就在于没有安排。"
+            ad "不过，我敢肯定今晚肯定有一场场热闹的宴会。"
+            scene thefestival3_19
+            with dissolve
+            ad "今晚会热闹起来的可不止您那顶帐篷。"
+            scene thefestival3_20
+            with dissolve
+            ad "不过我敢肯定，我那顶帐篷肯定没那么有意思。"
+            jump thefestival15_2
+        "您什么时候启航？" if thefestival15_1_q_2 == 0:
+            $ thefestival15_1_q_2 = 1
+            y "你什么时候开船？"
+            scene thefestival3_18
+            with dissolve
+            ad "哦，别提了。我酒一醒差不多就走人！"
+            scene thefestival3_16
+            with dissolve
+            ad "啊，你跟我一起来嘛？"
+            y "你是不是已经喝太多了？你知道我可不行。"
+            scene thefestival3_21
+            with dissolve
+            ad "可你要是去了呢？"
+            ad "就你、我和克莉奥！"
+            ad "前方是海平线，身后是陆地与承诺。"
+            y "听起来还不赖。"
+            scene thefestival3_20
+            with dissolve
+            ad "那可太不赖了。"
+            jump thefestival15_2
+        "带谁进帐篷？" if thefestival15_1_q_3 == 0:
+            $ thefestival15_1_q_3 = 1
+            y "我还在琢磨该请谁进帐篷。"
+            scene thefestival3_18
+            with dissolve
+            ad "你在犹豫？好选择可多的是。"
+            ad "如果你没选她们的代表，谁也不会往心里去。"
+            y "你确定？"
+            scene thefestival3_15
+            with dissolve
+            ad "当然不会。这里面有几个人简直有病。"
+            y "..."
+            scene thefestival3_14
+            with dissolve
+            ad "但你别因此畏手畏脚。挑了就别后悔。"
+            ad "人们会叫你三思。"
+            scene thefestival3_17
+            with dissolve
+            ad "我看那种屁话都别管，想选谁就选谁。"
+            ad "再说了，这是个大夜晚。你会想要一个床上够劲、够会玩的人。"
+            y "这说法倒也新鲜……"
+            scene thefestival3_21
+            with dissolve
+            ad "说到底就是发泄一下精力，对吧？"
+            ad "谁也不会怪你寻欢作乐！"
+            jump thefestival15_2
+        "你先告辞" if thefestival15_1_q_1 == 1 and thefestival15_1_q_2 == 1 and thefestival15_1_q_3 == 1:
+            y "能与您共处总是荣幸，上将大人。不过我还得去照看其他客人。"
+            ad "那就好！"
+            scene thefestival3_21
+            with dissolve
+            ad "今晚可不是给我们这些老家伙准备的，我早就风光够了。"
+            ad "去好好玩吧！我就不了。"
+            scene thefestival3_20
+            with dissolve
+            y "一路顺风，上将。"
+            ad "一路平安。"
+            scene bg black
+            with fade
+            jump festivalhub1_1
+label thefestival16_1:
+    play music "audio/CCnight.mp3" fadein 4.0
+    scene festival_leo_2
+    with fade
+    leo "啊，王子殿下。真巧，竟能偶遇。"
+    scene festival_leo_1
+    with dissolve
+    leo "我还以为您今晚忙得抽不开身。"
+    leo "您的客人，还有您的候选者们，可都是一群有本事的人。"
+    y "谢谢你，莱奥娜。玩得开心吗？"
+    scene festival_leo_3
+    with dissolve
+    leo "我一向敬佩风月手段。维持士气很重要。"
+    scene festival_leo_4
+    with dissolve
+    fea "好吃的东西什么时候才上来？"
+    scene festival_leo_5
+    with dissolve
+    fea "最好的肉我要先占。"
+    scene festival_leo_6
+    with dissolve
+    leo "夫人的意思是，她有点饿了。"
+    leo "今天真是够长的。"
+    fea "今晚大家都得吃饱才撑得住。"
+    scene festival_leo_7
+    with dissolve
+    fea "尤其是您选中的那位，对吧？"
+    scene festival_leo_8
+    with dissolve
+    leo "我相信这不会影响王子殿下决定是否赏饭。"
+    fea "那当然，莱奥娜这样丰满的身材，是得多吃点，对吧？"
+    scene festival_leo_9
+    with dissolve
+    fea "不然她那对胸脯怎么会长这么大？"
+    leo "这、这个结论下得不对。"
+    fea "不管怎样，跟主人讨吃的也算礼貌。"
+    fea "我说完了，该你了吧！"
+    scene festival_leo_10
+    with dissolve
+    fea "快，告诉他你想让他喂你多少！"
+    scene festival_leo_11
+    with dissolve
+    fea "你是饿了吧？"
+    leo "我……"
+    fea "我看得出来。谁在发情不是一眼就明白吗？"
+    scene festival_leo_12
+    with dissolve
+    fea "去求他。"
+    scene festival_leo_13
+    with dissolve
+    leo "我当然不会做那种事。这可是公共场合。"
+    fea "哦，那就是私下咯。"
+    leo "够了……求你了。"
+    y "菲塔娜，我饶她一回。{w}暂时饶过。"
+    y "我敢说饭菜很快就好。"
+    y "宴会愉快。"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thefestival17_1:
+    play music "audio/Ambient G Drums.mp3" fadein 4.0
+    scene festival_leo_14
+    with dissolve
+    y "莱奥娜，很高兴再见到你。"
+    leo "你也相当讨人喜欢。"
+    scene festival_leo_16
+    with dissolve
+    arj "谢谢您体恤我家夫人，好心的王子殿下。"
+    leo "您和其他几位谈过了吗？"
+    y "谈过了。说到底，我觉得该和父亲把事情理清楚。"
+    scene festival_leo_19
+    with dissolve
+    y "作为亲历者，我想请您陪我同去。"
+    y "只有他能真正看透这一切究竟意味着什么。"
+    y "而且如果您在场，我或许能摸清他的全部意图。"
+    scene festival_leo_14
+    with dissolve
+    leo "能站在您身边是我的荣幸。"
+    leo "你竟能挫败一个被自己人瞒着你的阴谋，实在值得大加赞赏。"
+    scene festival_leo_15
+    with dissolve
+    pal_o "换成我，那事早就帮你办成了。"
+    scene festival_leo_17
+    with dissolve
+    leo "别越界说话。"
+    pal_o "呃——是、是，莱奥娜女主人。"
+    scene festival_leo_18
+    with dissolve
+    y "你说什么？"
+    leo "在她身边待的这段时间里，我作为魔族的能力变强了不少。"
+    leo "接受了自己的处境之后，我才开始明白自己对她有多大的影响力。"
+    leo "看来只要我们的协定还在，每当她想操纵阿尔真塔时，我就能反过来操纵她。"
+    y "真正的阿尔真塔还好吗？你用起魔族魔法来不觉得别扭？"
+    leo "换作别的场合，我就不会了。"
+    leo "我厌恶他们那一族，但也不得不承认他们的用处。"
+    scene festival_leo_20
+    with dissolve
+    leo "只要苍白者还没有废弃我们的盟约，她就该还活着。"
+    leo "我相信苍白者有理由让她活得好好的。"
+    leo "她是苍白者手里仅剩的筹码。"
+    pal_o "..."
+    scene festival_leo_19
+    with dissolve
+    leo "不过，还是回到正事上。"
+    leo "你父亲愿意和一个一开始就撕毁盟约的人谈判吗？"
+    y "我想只要我带上你，他就会听进道理。"
+    y "他别无选择。我受够了被蒙在鼓里。"
+    scene festival_leo_21
+    with dissolve
+    leo "那有我在旁边看着也好。"
+    scene festival_leo_22
+    with dissolve
+    leo "意志如铁啊，游牧者大人。"
+    y "荣幸之至，莱奥娜。"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thegracen2_1:
+    play music "audio/Ambient G Drums.mp3" fadein 4.0
+    scene thefestival6_16
+    with fade
+    y "嗯？科尔内利乌斯和露丝？不知道他们在聊什么。"
+    scene thefestival6_17
+    with dissolve
+    y "（嗯……露丝是不是已经厌倦他了？）"
+    scene thefestival6_18
+    with dissolve
+    cnl "我保证这是真的。那些路我很熟。"
+    cnl "对方的用意已经很明显了。"
+    lu "我、我明白了……{w}谢谢您的帮助，科尔内利乌斯大人。"
+    scene thefestival6_19
+    with dissolve
+    cnl "为格雷森效力义不容辞。毕竟我们两家本就是天然盟友。"
+    cnl "若还需要什么，尽管再来找我。"
+    cnl "我随时可以安排我们私下谈。"
+    scene thefestival6_20
+    with dissolve
+    lu "那倒不必。"
+    lu "[player_name]王子。真高兴又见到您。"
+    cnl "啊，看来我又借光多了一场会面。"
+    y "科尔内利乌斯，又是公事？我早说过了，今晚是喜庆场合。同为领主，你也该好好享受一下。"
+    cnl "我保证，能为贵府效力是我的荣幸。"
+    scene thefestival6_21
+    with dissolve
+    lu "那我就不打扰二位了。"
+    scene thefestival6_22
+    with dissolve
+    y "露丝？（她好像急着要走。）"
+    y "我希望你没有在纠缠我的客人，科尔内利乌斯。"
+    scene thefestival6_23
+    with dissolve
+    cnl "绝不会，亲爱的王子。我只是给了那位小姐她想要的东西。"
+    y "那是什么？"
+    scene thefestival6_24
+    with dissolve
+    cnl "抱歉，绅士可不会泄露少女的秘密。"
+    y "你真要这样让我下不来台？"
+    scene thefestival6_25
+    with dissolve
+    cnl "请别误会——我绝无轻慢之意，只是两家之间礼节上的往来。"
+    scene thefestival6_26
+    with dissolve
+    cnl "不过，也许你有意结下一门有价值的合作？"
+    scene thefestival6_23
+    with dissolve
+    cnl "若我们能站到同一边，无论你想知道什么，我都有义务作答。"
+    y "算了，科尔内利乌斯。别惹麻烦就行。"
+    scene thefestival6_25
+    with dissolve
+    cnl "我保证绝无此类行径。对您我只有最深的敬意，大人。"
+    scene thefestival6_27
+    with dissolve
+    cnl "失陪了。我再去用您另一样好东西。"
+    y "..."
+    scene bg black
+    with fade
+    y "（不知道露丝是怎么回事。）"
+    jump festivalhub1_1
+label thefestival18_1:
+    play music "audio/CCnight.mp3" fadein 4.0
+    scene fes_guests1_32
+    with fade
+    sta "你很有把握，但你得考虑另一种可能。"
+    m "没有另一种可能。放着别管吧，斯塔西亚。"
+    sta "你依然是个美人，你知道的，还有别的合适人选呢。"
+    scene fes_guests1_33
+    with dissolve
+    sta "这种好事不会一直有。"
+    m "我说过了。自己出去找一个吧，我对那没兴趣。"
+    y "我错过了什么吗？玛格娜怎么突然气冲冲走了？"
+    scene fes_guests1_1
+    with dissolve
+    sta "哦，王子殿下。您听到什么了吗？"
+    sta "恐怕只是养孩子的烦恼罢了。"
+    y "哈默费尔家又多了一件要吵的事？"
+    scene fes_guests1_2
+    with dissolve
+    sta "差不多吧。"
+    sta "哦，我还是直接问你吧。"
+    sta "如果我们家的人嫁到别的家族去，你会介意吗？"
+    y "你们家的人？"
+    scene fes_guests1_3
+    with dissolve
+    sta "你和玛格娜的婚姻相当稳固。就算最后你没选她，她也对你死心塌地。"
+    sta "可要是你最后不选她，我们决定把玛格娜、我自己、还是她的哪个姐妹嫁出去，你会觉得被冒犯吗？"
+    y "这话不该由我来说是吧？"
+    scene fes_guests1_1
+    with dissolve
+    sta "就是！我真不知道玛姬怎么就看不出来。"
+    sta "啊，要不是你跟玛格娜那桩婚事，我倒真觉得我们能成，王子殿下。"
+    scene fes_guests1_2
+    with dissolve
+    sta "能成为你的女人，就是无上的满足。"
+    sta "我明白玛姬为什么这么上心了。"
+    scene fes_guests1_3
+    with dissolve
+    sta "可惜我命里没这个福分。"
+    y "日后自有分晓。或许你们两位都会成为我的床伴。"
+    scene fes_guests1_4
+    with dissolve
+    sta "您还是一如既往地自信惊人。"
+    scene fes_guests1_5
+    with dissolve
+    sta "真希望您和我女儿能修成正果。"
+    sta "那之前，祝您今晚愉快，[player_name]王子。"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label theceremony2_1:
+    play music "audio/Celebration.mp3" fadein 2.0
+    $ theceremony2_1_q1 = 0
+    $ theceremony2_1_q2 = 0
+    $ theceremony2_1_q3 = 0
+    $ theceremony2_1_q4 = 0
+    scene theceremony2_1
+    with fade
+    "祭典的帷幕开始落下，但许多人仍在三三两两地闲谈。"
+    scene theceremony2_2
+    with dissolve
+    "有些人聊得格外起劲，人声嘈杂依旧。"
+    scene theceremony2_3
+    with dissolve
+    "人们吃饱喝足，身边伴着还算能看的人。"
+    "现在正是大戏开场的最佳时机。"
+    scene theceremony2_22
+    with dissolve
+    "光焰喷涌，满天都是星尘般的碎屑。"
+    scene theceremony2_4
+    with dissolve
+    "各人的目光都被这番光景吸引过去，你和茱蒂、艾米一起走向中央舞台。"
+    scene theceremony2_23
+    with dissolve
+    y "（看起来狮鹫是乔茜安排的。干得漂亮。）"
+    scene theceremony2_5
+    with dissolve
+    jdy "艾米和我是今晚的主持人，但跟你比起来，我们只是暖场。"
+    jdy "我介绍完你之后，你就上去宣布你的选择。"
+    scene theceremony2_6
+    with dissolve
+    jdy "记住，说出今晚陪你进帐篷的女孩的名字，并给出你选择她的理由。"
+    scene theceremony2_7
+    with dissolve
+    jdy "别担心，放轻松。我们一定会让你以最盛大的方式收尾。"
+label theceremony2_2:
+    menu:
+        "快到时间了……"
+        "问问帐篷的事……" if theceremony2_1_q1 == 0:
+            $ theceremony2_1_q1 = 1
+            y "帐篷有什么特别的？"
+            jdy "您的炼金师和我商量好了，会在您的帐篷里备好足够的助兴之物。"
+            y "你什么意思？"
+            scene theceremony2_8
+            with dissolve
+            jdy "让我给客人准备一个无聊的地方，那可不合我的天性——而这位客人正是您。"
+            jdy "再说了，我想其他姑娘们都很乐意参与布置您的帐篷。"
+            scene theceremony2_6
+            with dissolve
+            jdy "所以我们和其他人一起，按每位候选人各自的提议，放了一些我们认为适合今夜的东西。"
+            jdy "你知道我更希望你选我姐姐，不过别担心，我按所有候选人都备了东西。"
+            scene theceremony2_7
+            with dissolve
+            jdy "姑娘们都知道会有些什么，但对你来说最好还是留作惊喜。"
+            jump theceremony2_2
+        "你说的\"理由\"是指什么？" if theceremony2_1_q2 == 0:
+            $ theceremony2_1_q2 = 1
+            y "你说的\"理由\"，具体是指什么？"
+            jdy "给出一个像样的理由，说明你们两家为何该结为姻亲。"
+            jdy "就算不属实也没关系，只要能让大家觉得你是认真的。"
+            scene theceremony2_9
+            with dissolve
+            jdy "不过你既然想过，我敢说你一定有话可说。"
+            jdy "你总知道自己要选谁吧？"
+            y "唔嗯……"
+            scene theceremony2_8
+            with dissolve
+            jdy "哦，凭缪斯起誓……"
+            jump theceremony2_2
+        "表现出对敌人的顾虑" if theceremony2_1_q3 == 0:
+            $ theceremony2_1_q3 = 1
+            y "我可不想把自己摆在所有潜在敌人眼皮底下。"
+            scene theceremony2_9
+            with dissolve
+            jdy "我理解你的顾虑，这担心不无道理。"
+            scene theceremony2_7
+            with dissolve
+            jdy "大伙儿期待一场精彩的表现。你只需拿出自信，若你当真想走，之后随时可以悄悄溜走。"
+            y "（暗藏的敌人这件事仍然很棘手。）"
+            y "（也许选一个我能看着的人很重要。）"
+            y "（可话又说回来，那样可能会吓得他们退缩。）"
+            y "（我最好连想都别想。）"
+            y "（再说了，人们期待的是真心的表演。）"
+            jump theceremony2_2
+        "要是我谁都不想选呢？" if theceremony2_1_q4 == 0:
+            $ theceremony2_1_q4 = 1
+            y "要是我谁都不想选呢？"
+            scene theceremony2_8
+            with dissolve
+            jdy "临阵怯场我也能理解。"
+            jdy "那就请选我姐姐吧。她会很乐意今晚退下，把你一个人留着。"
+            scene theceremony2_6
+            with dissolve
+            jdy "可要是一个家族都不选，那会引起骚动的。"
+            jdy "我必须奉劝你，无论如何都别那么做。"
+            y "我明白了……"
+            jump theceremony2_2
+        "我准备好了（继续）":
+            y "好，开始吧。"
+    scene theceremony2_7
+    with dissolve
+    jdy "太好了。"
+    jdy "还有最后一件事……{w}如果你打算选我们家族，报哈姆内特的名字，别报我的。"
+    jdy "否则你帐篷里等着的就是我，不是她。"
+    y "要是这正是我的打算呢？"
+    scene theceremony2_8
+    with dissolve
+    jdy "不行。{w}别人会奇怪，为什么被选中的玛丽昂家姐妹最后没成为正妻。"
+    jdy "*叹气*"
+    jdy "我只能说到这里，不会再左右你的选择。"
+    scene theceremony2_9
+    with dissolve
+    jdy "说到底今晚只是娱乐。缪斯不会挑她如何启发人。"
+    y "现在该我向观众讲话了吗？"
+    scene theceremony2_7
+    with dissolve
+    jdy "我来介绍你和你所有的候选人。等我给你信号，你再上去宣布。"
+    scene theceremony2_10
+    with dissolve
+    amy "你们两位准备好了吗？"
+    jdy "随时都可以。"
+    amy "那就别让大伙儿等着了！"
+    scene theceremony2_19
+    with dissolve
+    amy "欢迎努比利亚的子民们！"
+    amy "众神赐予我们的这个夜晚，真是太好了！"
+    amy "食物、美酒、居所，还有同伴——一个国家还能求什么？"
+    amy "别担心，酒会一直供应到深夜——"
+    scene theceremony2_18
+    with dissolve
+    jdy "我只请大家为我们的主人和努比利亚的未来干杯！"
+    jdy "我们举起这座帐篷，象征新时代、结合与多子多福！" 
+    jdy "当我们展望旅途的下一程之际，且让我们片刻驻足，回想我们为何而来！"
+    scene theceremony2_20
+    with dissolve
+    amy "现在由我向各位献上今晚的主角：哥布林与恶魔的杀手——"
+    jdy "西部海岸的守卫者——"
+    amy "游牧者之心！[tribe_name]的统帅！"
+    jdy "努比利亚第十王子，[player_name]！"
+    y "（有点让人难为情。我不习惯这种介绍。）"
+    y "（不过大家看起来确实很开心。）"
+    jdy "我们的王子迫不及待要宣布今晚与他同帐篷的美丽姑娘了。"
+    "观众们这下似乎更加兴奋了。"
+    scene theceremony2_24
+    with dissolve
+    jdy "会不会是来自苏什的克莉奥·诺提卡？水路上的公主！"
+    scene theceremony2_25
+    with dissolve
+    amy "或许是来自比耶格的寻路者子爵蕾娅女士！"
+    scene theceremony2_28
+    with dissolve
+    jdy "或者是来自约克锻造坊的玛格娜·哈默费尔？！"
+    scene theceremony2_27
+    with dissolve
+    amy "又或者是来自波茨的美人露丝·格雷森？"
+    jdy "若她足够幸运的话，那就是卑微的小女子、我姐姐哈姆内特·玛丽昂，您的美丽女主人！"
+    scene theceremony2_26
+    with dissolve
+    amy "不不不，谁会错过来自杰奥姆的强者莱奥娜·乔塞尔？"
+    amy "或者我们自家的龙裔少女：梅迪的菲塔娜！最后的异类？！"
+    scene theceremony2_29
+    with dissolve
+    jdy "当然，谁也不该忘记博纳德家族里那些来自拉姆的美丽女儿们！"    
+    scene theceremony2_30
+    with dissolve
+    jdy "最后，还有来自泰克的神秘美人：普里西拉·克莱斯特穆尔，克莱斯特穆尔家产的继承人！"
+    amy "她们齐聚于此，都是来寻找属于自己的前程与恩宠！"
+    scene theceremony2_20
+    with dissolve
+    amy "就让此举代表我们诸城接纳新成员的诚意。"    
+    jdy "努比利亚，请为我们的王子献上最热烈的欢迎！"
+    scene theceremony2_21
+    with dissolve
+    "随着茱蒂最后这句高呼，人群欢呼起来。"
+    play sound "audio/sounds/Arena_crowd.wav" fadein 3.0
+    "你花点时间想想该选谁、该说什么……"
+    "（这个选择会立刻带来后果。现在正是存档的好时机。）"
+label theceremony2_M1:
+    menu:
+        "你选择了……"
+        "克莉奥":
+            $ chose_cleo = 1
+            y "我的选择是诺提卡家的克莉奥女士。"
+            scene theceremony2_11
+            with dissolve
+            y "他们称霸海洋，我们统治陆地，这将为努比利亚带来长久的守护。"
+            "你的话音落下，人群为她欢呼。"
+            "克莉奥满脸震惊，说不出话来。"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            scene bg black
+            with fade
+            "..."
+            jump themermaid1_1
+        "玛格娜":
+            $ chose_mag = 1
+            y "我的选择是哈默费尔家的玛格娜女士。"
+            scene theceremony2_13
+            with dissolve
+            y "我们的需求加上她家族的供给，我们的土地上将没有更强大的军队。"
+            "{i}你的话音落下，人群为她欢呼。{/i}"
+            "从你站的地方就能看见玛格娜灿烂的笑容。"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            scene bg black
+            with fade
+            "..."
+            jump thesmith1_1
+        "露丝":
+            $ chose_luce = 1
+            y "我的选择是格雷森家的露丝女士。"
+            scene theceremony2_12
+            with dissolve
+            y "她把力量藏在温柔之后。我们将是柔中之刚的结合。"            
+            "{i}你的话音落下，人群为她欢呼。{/i}"
+            "露丝双颊绯红，隔这么远都能让你感到暖意。"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            scene bg black
+            with fade
+            "..."
+            jump theblessed1_1
+        "普里西拉":
+            $ chose_pris = 1
+            y "我很荣幸选中克莱斯特穆尔家的普里西拉小姐。"
+            y "凭这份本领与财力，我们两大家族将守护整个努比利亚！"
+            scene theceremony2_30
+            with dissolve
+            "{i}你的话音落下，人群为她欢呼。{/i}"
+            "周围的人似乎都在恭喜普里西拉，她礼貌地一一点头致意。"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            scene bg black
+            with fade
+            "..."
+            jump theempath2_1
+        "蕾娅":
+            $ chose_rhea = 1
+            y "我很荣幸选中子爵家与蕾娅小姐。"
+            scene theceremony2_15
+            with dissolve
+            y "我们将一起踏平敌人的心房！"
+            "{i}你的话音落下，人群为她欢呼。{/i}"
+            "蕾娅的嘴角似乎微微上扬。{w}你怀疑她是不是正咬紧牙关……"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            scene bg black
+            with fade
+            "..."
+            jump theviscount1_1
+        "莱奥娜":
+            $ chose_leo = 1
+            y "我很荣幸选中乔塞尔尔家族的莱奥娜小姐"
+            scene theceremony2_17
+            with dissolve
+            y "我们的双手将成为努比利亚的盾牌与利剑。无人能攻破我们的城墙！"
+            "{i}你的话音落下，人群为她欢呼。{/i}"
+            "莱奥娜板着严肃的脸，向四周道贺的人点头致意。"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            scene bg black
+            with fade
+            "..."
+            jump thedemoness1_1
+        "（更多选项）":
+            jump theceremony2_M2
+label theceremony2_M2:
+    menu:
+        "你选择了……"
+        "菲塔娜":
+            $ chose_fea = 1
+            y "我很荣幸选中菲塔娜——一位拥有流浪者心灵的女子。"
+            scene theceremony2_14
+            with dissolve
+            y "她与我将为努比利亚所有无家可归之人筑起一个家！"
+            "{i}人群起初将信将疑，但随着你话音落下，还是为她欢呼起来。{/i}"
+            "菲塔娜咧嘴笑着站了起来。似乎完全没意识到自己该上台了……"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            scene bg black
+            with fade
+            "..."
+            jump thedragon1_1
+        "博纳德一族":
+            $ chose_bona = 1
+            y "我很荣幸选中博纳德一族。"
+            scene theceremony2_16
+            with dissolve
+            y "拉姆之光象征着您的显赫与成功。愿我沐浴于它的温暖，为您带来丰收！"
+            "你的话音落下，人群为她欢呼。"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽欢乐吧！愿今夜这两个家族的结合蒙福！"
+            scene bg black
+            with fade
+            "..."
+            jump thebonadeans1_1
+        "哈姆内特（艾米）":
+            $ chose_amy = 1
+            y "我很荣幸选中今晚的盛情女主人，哈姆内特·玛丽昂。"
+            scene theceremony2_32
+            with dissolve
+            y "哈姆内特一直是战士的缪斯，我将把她的激励化作力量，让我们的城市更强大！"
+            "你话音落下，人群爆发出欢呼。"
+            scene theceremony2_37
+            with dissolve
+            jdy "好了，就是这样！尊敬的宾客们！"
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            scene theceremony2_38
+            with dissolve
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            scene bg black
+            with fade
+            "..."
+            jump thetwin_amy_1
+        "茱蒂":
+            $ chose_judy = 1
+            y "我很荣幸选中我们美丽的主人，茱蒂·玛丽昂。"
+            scene theceremony2_33
+            with dissolve
+            y "茱蒂今天为我们的舞台带来了生命的喜悦，而我们将与她一起，把这份喜悦带进我们的城市！"
+            scene theceremony2_31
+            with dissolve
+            "{i}你的话音落下，人群为她欢呼。{/i}"
+            scene theceremony2_36
+            with dissolve
+            "{i}茱蒂对你的决定感到意外，但她迅速行动起来挽回局面。{/i}"
+            scene theceremony2_37
+            with dissolve
+            jdy "女士们！先生们！还请原谅我们新任的王储！"
+            jdy "这已经不是第一次有人把我当成我姐姐了。"
+            scene theceremony2_38
+            with dissolve
+            jdy "这不过是漫长岁月中无数次选择的第一步——"
+            jdy "喝吧！吃吧！尽情欢乐吧！祝福今夜这二人的结合！"
+            "{i}茱蒂神情紧绷地把你们两位领进了帐篷。{/i}"
+            "..."
+            jump thetwin_judy_1
+        "没有人……":
+            $ chose_none = 1
+            y "今晚真是精彩绝伦的一夜，多亏了主人们的绝佳演出。"
+            scene theceremony2_33
+            with dissolve
+            y "可我今晚怎么能选一个家族，请进我的帐篷呢？"
+            "{i}人群似乎开始交头接耳，窃窃私语。{/i}"
+            scene theceremony2_38
+            with dissolve
+            jdy "哦，王储大人，[player_name]，您真爱逗人！没必要让大伙儿吊着胃口——"
+            jdy "请容我再一次介绍我的姐姐，才华横溢的哈姆内特·玛丽昂！"
+            scene theceremony2_37
+            with dissolve
+            jdy "她将努力展现努比利亚与我们王储部族之间的联结！"
+            jdy "当然——今晚她还会当小王储的暖床人~"
+            scene bg black
+            with fade
+            "{i}掌声与欢呼渐渐响起，茱蒂把你领进了帐篷。{/i}"
+            "..."
+            jump theemptyroom1_1
+        "（之前的选项）":
+            jump theceremony2_M1
+label thedragon1_1:
+    play music "audio/Lovely Piano Song.mp3" fadein 4.0
+    scene thedragon1_1
+    with fade
+    fea "今天真好玩！明天我们再办一场节庆吧！"
+    y "恐怕没那么简单……"
+    scene thedragon1_2
+    with dissolve
+    fea "唔……那至少还能免费请我们吃东西吧？"
+    y "你在这儿的时候，不是一直都管我们饭吃吗？"
+    fea "对啊！"
+    scene thedragon1_3
+    with dissolve
+    fea "你这大皮囊里打算装些什么？"
+    y "你不是该在课上学我们族的生活方式吗？" 
+    y "节庆最后会发生什么？"
+    fea "嗯……我听说人类有些不一样的癖好。"
+    scene thedragon1_4
+    with dissolve
+    fea "但对我真正重要的只有三件事：你们怎么吃、怎么打、怎么干！" 
+    scene thedragon1_5
+    with dissolve
+    fea "反正重要的就只有这些！"
+    y "说得一点没错……"
+    y "你要干什么？"
+    fea "开始适应了啊。好客是人类的特点，对吧？"
+    scene thedragon1_6
+    with dissolve
+    fea "我可没法就这么穿着它自在。"
+    y "你不会一进别人的房间就脱光吧？"
+    scene thedragon1_7
+    with dissolve
+    fea "不会，只对你才会。怎么了？要我开始吗？"
+    y "不，千万别。"
+    scene thedragon1_8
+    with dissolve
+    fea "我感觉你是在担心我。"
+    scene thedragon1_9
+    with dissolve
+    fea "别担心我。我可比看上去结实多了！"
+    y "早就有人说过你很结实。"
+    scene thedragon1_10
+    with dissolve
+    fea "我既{i}强壮{/i}又聪明。"
+    scene thedragon1_11
+    with dissolve
+    fea "所以我早就盘算好了。{w}我们该学蜥蜴族那样交配！" 
+    y "（她的鳞片在「融化」？）抱歉，什么？" 
+    scene thedragon1_13
+    with dissolve
+    fea "我在这里见过太多人类的习俗了。我想让你看看我们自然人是怎么做的。"
+    fea "禽类那种做法蠢透了，全是跳舞。"
+    scene thedragon1_14
+    with dissolve
+    fea "不过蜥蜴族的方式一直让我有点着迷。"
+    y "他们的方式又是什么样的？" 
+    fea "嗯，有两种。"
+    scene thedragon1_15
+    with dissolve
+    fea "一种是群体式，另一种是我想和你试试的。"
+    fea "群体式就是营地里的每个雄性都抢着和同一个雌性交配。"
+    y "为什么？" 
+    scene thedragon1_14
+    with dissolve
+    fea "这不是明摆着的吗？因为这样受孕的概率最高。"
+    fea "我知道你还不想要崽，但蜥蜴族要的只有这个。"
+    fea "我当然反对。我的龙血只该和你的血混在一起！" 
+    scene thedragon1_15
+    with dissolve
+    fea "所以有那么多伴侣是绝对不行的！" 
+    y "这可不只是原因之一。" 
+    y "既然那是一号方法，二号方法又是什么？" 
+    fea "核心还是「更多」！" 
+    fea "第一个产崽的雌性，会让她的雄性留在每一个其他雌性身边。" 
+    fea "也就是说，他会给所有能受孕的雌性都播下种子！"
+    scene thedragon1_14
+    with dissolve
+    fea "懂了吗？这样我们产崽的概率最大。"
+    y "我想自然人根本不在乎要留住自己的伴侣。"
+    fea "怎么样？要不要试试！？"
+    y "就算我想试，我要和谁交配？"
+    fea "当然得先是我，但至少还得……"
+    scene thedragon1_15
+    with dissolve
+    fea "再加上另外十个！" 
+    y "十个？！" 
+    fea "我想要一大窝崽！不过别害怕，只是练习而已。"
+    y "我看不太可能。我上哪儿去找另外十个？"
+    fea "呵呵呵，别傻了。"
+    scene thedragon1_14
+    with dissolve
+    fea "我们肯定能找到。"
+    fea "外面至少就有那么多个。"
+    y "问题倒不在这里……"
+    y "（我总不能挨家挨户去搭话吧。菲塔娜根本不懂待人接物该有的礼数。）"
+    y "嗯……（我根本不可能那么做。光从身体上就做不到。）" 
+    y "（偏偏是今晚，当着众人的面让十个女孩怀孕？我真能偷偷做到吗？）" 
+    y "（那可会引起不小的骚动。）"
+    y "（不过如果我把注意力放在菲塔娜身上，也许能让她忘掉这个打算？）"
+    menu:
+        "顺了她的意？（不可能）"
+        "{color=00ff00}但先哄哄她{/color}":
+            y "好吧。第一步是让你怀孕，对吧？"             
+            jump thedragon1_2
+        "说服她放弃（跳过）":
+            y "今晚已经够漫长了。这个计划还是改天再说吧。"
+            scene thedragon1_13
+            with dissolve
+            fea "啊，我懂了。人类的身体比自然人虚弱。我明白了。"
+            fea "要是你以为不往我体内灌一发就能蒙混过关，那你就大错特错了。"
+            y "..."
+            scene bg black
+            with fade
+            "..."
+            y "（她不是开玩笑的。等她长成现在这样贪得无厌的样子，等我们年纪再大些，可就难对付多了。）"
+            jump theexposition1_1
+label thedragon1_2:
+    scene thedragon1_13
+    with dissolve
+    play music "audio/Ammil - The Tides.mp3" loop fadein 5.0
+    fea "正是如此。现在我知道我们还不能要崽，不过我们只是练习。"
+    y "对。"
+    scene thedragon1_12
+    with dissolve
+    fea "所以我觉得在我体内来五次大概就够了。" 
+    y "没错。{w}什么？" 
+    fea "你是觉得多来几次更安全？" 
+    y "菲塔娜，我知道自己很厉害，但就算我，连续那么多次也会吃不消。"
+    y "这不太像人类会有的要求。"
+    scene thedragon1_16
+    with dissolve
+    fea "这个就是为此准备的！" 
+    fea "我让你那位大眼睛朋友帮我做的。" 
+    y "大眼睛……乔茜？她现在又在做什么？"
+    fea "蜥蜴族用这个能整整数。" 
+    y "一星期？！"
+    fea "保证够你用！" 
+    fea "她只要多喝水就行。"
+    y "乔茜……你到底在给他们做什么？"
+    y "这……安全吗？"
+    fea "嗯……我先喝。我以前是斟酒的。"
+    fea "我对毒药有抗性！"
+    scene thedragon1_17
+    with fade
+    fea "唔嗯……"
+    y "感觉怎么样？还好吗？" 
+    scene thedragon1_18
+    with dissolve
+    fea "我不……{w}知道。"
+    fea "哦……{w}我觉得好暖。"
+    y "以乔茜的作风，她给你的恐怕不只是活力。"
+    scene thedragon1_19
+    with dissolve
+    fea "我感觉挺好。其实感觉特别棒……"
+    fea "你能和我一起来吗？{w}求、求你了？" 
+    y "嗯……再来一瓶药水又何妨？"
+    scene thedragon1_20
+    with dissolve
+    fea "我好难受……{w}有什么东西在撩拨我。"
+    fea "我、我们能马上开始吗？"
+    y "嗯……其实……我也有同样的感觉。"
+    scene thedragon1_21
+    with dissolve
+    fea "啊——对，就这样骑上来。"
+    y "这药水……{w}我感觉更有劲了，浑身都是力量。"
+    scene thedragon1_22
+    with dissolve
+    fea "呃……你的阴茎真的那么——"
+    scene thedragon1_23
+    with vpunch
+    fea "巨、大？！"
+    scene thedragon1_24
+    with dissolve
+    fea "啊啊～"
+    scene thedragon1_vid1
+    with dissolve
+    fea "它——什、什么？"
+    y "出什么事了吗？"
+    fea "不、不。我——"
+    fea "你插进来的时候，感觉像是要把我撕开一样。"
+    fea "但不知怎么，开始感觉像是……"
+    fea "像是你本就该待在我体内。"
+    y "你说得对……"
+    y "我之前确实有种强烈的冲动想操你，可是……"
+    y "（我觉得这药水把我们的感官钝化了一点。）"
+    y "（可它为什么要这么做？）"
+    fea "[player_name]？你还好吗？"
+    fea "你觉得这样憋得难受吗？"
+    scene thedragon1_vid2
+    with dissolve
+    y "是的。感觉我好像没插得够深……"
+    fea "那你就再用力点插进来啊！"
+    fea "我说过了，我可比看上去结实多了！"
+    y "嗯……（我得更狠地操她。）"
+    fea "呃啊！咦？！"
+    fea "你是不是变大了？人类能做到这种事？！"
+    fea "这样舒服多了~"
+    fea "可我还需要你再刮得更深——再深一点，[player_name]……"
+    y "我也这么觉得。"
+    y "我不知道那东西加了什么，可那药让我觉得好想把你灌满。"
+    fea "别留手。我受得住！"
+    scene thedragon1_vid3
+    with dissolve
+    fea "诶诶！？"
+    y "你没事吧？"
+    fea "对——多、多灌点！"
+    y "你的身体确实紧紧地顶着我。"
+    y "明明有高潮的感觉，身体却完全不肯慢下来。"
+    y "这药水把我们的感官钝得很厉害，对吧？"
+    fea "我、我不知道！我只感觉到体内深处那股灼热。"
+    fea "在我小穴的深处我能感觉到——"
+    y "（这种感觉太原始了，痛与快感并存。）你真的没问题吗？"
+    fea "呃啊——别、别停下来！"
+    y "好吧，是你自找的。"
+    scene thedragon1_vid4
+    with dissolve
+    fea "哈啊~"
+    y "这才对嘛。现在感觉对了！"
+    y "你湿成这样还夹紧我，太舒服了！"
+    fea "好、好舒服——继、继续~"
+    y "是龙的特征吗？你小穴的内壁在一波波地蠕动。"
+    y "在我的鸡巴上抽搐着。"
+    fea "我、我不知道~ 哈啊~"
+    y "等等，停下……"
+    scene thedragon1_25
+    with fade
+    fea "唔……"
+    y "所以我确实高潮了……{w}可我一点感觉都没有。真是让人懊恼。"
+    scene thedragon1_26
+    with dissolve
+    fea "真神奇，我的感官正在一点点回来。"
+    fea "到最后我都快疯了……"
+    scene thedragon1_27
+    with dissolve
+    fea "啊？"
+    y "我想我明白是怎么回事了。"
+    scene thedragon1_28
+    with dissolve
+    fea "你不用继续了。我知道人类是要留着精的。"
+    fea "你下一次应该分给别人——"
+    scene thedragon1_vid5
+    with dissolve
+    fea "你、你不用继续。我能感觉到你的精液正从我阴道里淌出来。"
+    fea "你已经做得够多了。"
+    y "不够……"
+    fea "呃啊~（怎么回事？）"
+    fea "（我的腿已经不听使唤了。可我还能感觉到那阵颤栗。）"
+    fea "（我阴道的内壁在自己收缩。）"
+    fea "（这么大的东西，我不该能这么轻松地吞下去。）"
+    fea "（可我一点不适都没有。）"
+    fea "呃啊~ 只有快感……"
+    fea "（这样很危险。）"
+    y "混、混蛋。就、就是这样。我明白了。"
+    y "我要在你体内射出来，弄个明白。"
+    scene thedragon1_vid6
+    with dissolve
+    fea "（那种感觉又回到我身上了。）"
+    fea "（那种被幸福填满的感觉。）"
+    y "这药水就是为了和精液起反应才做出来的。"
+    y "我往你体内灌得越多，你就越舒服。"
+    y "你在我身上夹得更紧，内壁也越来越湿。"
+    y "我敢说你也开始觉得舒服了。"
+    y "这是专门做来让你渴求精液的药水。"
+    fea "不、不可能。不是那样——"
+    scene thedragon1_vid7
+    with dissolve
+    fea "呃啊~ 嗯嗯~？"
+    fea "（我的身体怎么了？）"
+    scene thedragon1_28
+    with dissolve
+    fea "呃啊~（全都不对劲。）"
+    fea "呃啊啊……（那种感觉一阵阵地涌上来。）"
+    fea "（我还能感觉到他在我体内。像是从阴道一路顶进我的胸口。）"
+    scene thedragon1_29
+    with dissolve
+    fea "（如果我不做点什么，他就会再次射在我体内。）"
+    fea "（那样的话，我会坏掉的。）"
+    scene thedragon1_30
+    with dissolve
+    y "菲塔娜？"
+    fea "[player_name]……"
+    scene thedragon1_31
+    with dissolve
+    fea "别、别担心。"
+    scene thedragon1_32
+    with dissolve
+    fea "我没那么脆弱……"
+    y "你没事吧？"
+    scene thedragon1_33
+    with dissolve
+    fea "我小看你那位大眼睛朋友了。"
+    fea "但我不会让它击垮我。"
+    scene thedragon1_34
+    with dissolve
+    fea "毕竟我是一条龙。"
+    scene thedragon1_35
+    with vpunch
+    y "哇。（这药水好像让她变得更野了。）"
+    fea "[player_name]……{w}你的精液感觉真好。"
+    scene thedragon1_36
+    with dissolve
+    fea "我想要更多。"
+    fea "给我。"
+    fea "灌进我小穴的深处~"
+    scene thedragon1_vid8
+    with dissolve
+    fea "抱歉，我得接管了。"
+    fea "这样更好。你要是射了，我就能把它堵在深处，不让它流出来。"
+    y "所以它确实在影响你，对吧？"
+    fea "你的精液很危险。可我强烈地想要它。"
+    fea "所以为了保险起见，我们一次只来一点点。"
+    y "感觉怎么样？"
+    scene thedragon1_vid9
+    with dissolve
+    fea "就像它把我全身的感觉都打开了。"
+    fea "它碰到的每一处都在渴望更多你的肉。"
+    fea "可要是没有它，就痛得更厉害。"
+    fea "所以我需要它。一次一点。"
+    y "一定很难受吧。"
+    fea "是。再、多一点~"
+    scene thedragon1_vid10
+    with dissolve
+    fea "所以我才要这样骑着你。"
+    fea "刚才你可是急着把那种吓人的奶水灌进我体内。"
+    fea "但现在我可以慢慢品尝它。"
+    fea "上下。上下。"
+    fea "我们做彼此的好伴侣，好吗？~"
+    y "你确定这样更安全？"
+    scene thedragon1_vid11
+    with dissolve
+    y "你一直在一点点加快，对吧？"
+    y "你觉得我这次再射进你体内会发生什么？"
+    fea "你敢试，我就从你身上下来。"
+    fea "一次只滴一点点，[player_name]。"
+    fea "现在给我一点，我需要一点——"
+    y "这样下去，你肯定会让我狠狠干在你体内。"
+    scene thedragon1_37
+    with dissolve
+    fea "停下！{w}看吧？"
+    scene thedragon1_36
+    with dissolve
+    fea "需要的话，我们随时可以停。"
+    y "你也太坏了。我正要高潮呢。"
+    fea "那可不行。"
+    fea "我只想感受你的肉体。再多就受不住了。"
+    y "..."
+    scene thedragon1_38
+    with dissolve
+    fea "好了~"
+    scene thedragon1_vid12
+    with dissolve
+    fea "嘿嘿嘿——"
+    y "你们族里的雌性都这么残忍吗？"
+    fea "我是我们族里仅剩的雌性。"
+    fea "这不叫残忍。是你那位大眼睛朋友搞错了。"
+    fea "那药水本不该让你的精液变得这么美味。"
+    fea "它本来只是要让你像蜥蜴族那样能撑满一整夜。"
+    y "（自打变化之后，菲塔娜的态度完全变了。）"
+    scene thedragon1_39
+    with fade
+    fea "呵呵呵。"
+    y "你玩得开心我很高兴，但今晚不能再这样下去了。"
+    scene thedragon1_40
+    with dissolve
+    fea "别小看我。变成龙的我强得多。"
+    fea "我要是想慢慢把你放进去，我做得到。"
+    scene thedragon1_41
+    with dissolve
+    fea "只要……"
+    scene thedragon1_42
+    with dissolve
+    fea "像是……"
+    scene thedragon1_43
+    with dissolve
+    fea "这个~"
+    scene thedragon1_vid13
+    with dissolve
+    y "你这样含着我的鸡巴往下吞——"
+    fea "是啊。真美味。严丝合缝地嵌在我体内。"
+    y "靠，要不是因为这药水，我可能早就射了。"
+    fea "别抗拒。就让我取刚刚好的量~"
+    fea "你知道吗，在蜥蜴族的聚落里是由雌性做主导。"
+    fea "你该庆幸才是。"
+    y "切——我可没觉得。"
+    scene thedragon1_40
+    with vpunch
+    fea "呵——你才不能。"
+    y "该、该死……"
+    fea "呵呵呵。"
+    scene thedragon1_41
+    with dissolve
+    fea "好了……"
+    scene thedragon1_42
+    with dissolve
+    fea "一点点……"
+    scene thedragon1_43
+    with dissolve
+    fea "一点……"
+    scene thedragon1_vid14
+    with dissolve
+    fea "再多~"
+    fea "噢啊啊~"
+    y "（她看上去越来越享受了。）"
+    y "（只要抓住她的破绽，我就能反客为主。）"
+    fea "哦哦哦~ 人类的鸡巴真好~"
+    y "（暂时配合她的节奏，让她以为自己在掌控。）"
+    fea "嗯嗯~ 就是这样。人类的鸡巴最棒了！"
+    y "我受宠若惊。不过别以为所有人类都这样。"
+    fea "我知道。我有一个特别的~"
+    fea "就像你也有一个特别的——"
+    scene thedragon1_44
+    with vpunch
+    fea "哈？！"
+    scene thedragon1_45
+    with vpunch
+    fea "唔噢！"
+    fea "（糟了！）"
+    y "好了，你的挑逗到此为止。"
+    scene thedragon1_46
+    with dissolve
+    fea "等等，求、求你——"
+    scene thedragon1_vid15
+    with dissolve
+    y "现在你被我逼到无处可逃了。"
+    fea "啊啊~（我搞错了！）"
+    fea "（要是他在这个姿势下射进来，就全完了！）"
+    fea "（他的湿滑精液会灌进我体内，把我变成他的女人。）"
+    fea "咔啊~"
+    fea "（他的女人？）"
+    fea "呃啊啊~"
+    fea "（等等，我一开始为什么要抗拒？）"
+    fea "（那不正是我想要的吗？）"
+    y "我希望你准备好为戏弄我付出代价。"
+    scene thedragon1_vid16
+    with dissolve
+    fea "对不起。做、做吧。我是个坏女孩。"
+    y "哦，知道后悔了？"
+    fea "我只是害怕某、某种很傻的东西——"
+    fea "射进我身体里，[player_name]~"
+    fea "让我成为你的~"
+    y "那药水真的把你折腾得不轻。"
+    y "不过眼下，我们算是达成一致了。"
+    y "别后悔，菲塔娜。"
+    fea "不、不，[player_name]~ 永远不会！"
+    scene thedragon1_vid17
+    with dissolve
+    fea "哦啊啊~"
+    fea "呼啊啊啊——{w}[player_name]……"
+    scene thedragon1_47
+    with fade
+    y "你刚才怎么折腾我折腾得那么狠？"
+    fea "嗯……"
+    scene thedragon1_48
+    with dissolve
+    fea "我刚才真怕你射进来我会坏掉。"
+    y "你比那结实多了。"
+    fea "是啊……{w}我们龙族……"
+    scene thedragon1_49
+    with dissolve
+    fea "我、我只是想让它持续得更久一点……"
+    y "哈……{w}你干得太棒了，菲塔娜。"
+    scene bg black
+    with fade
+    jump theexposition1_1
+label thesmith1_1:
+    play music "audio/CCnight.mp3" fadein 4.0
+    scene thesmith1_2
+    with fade
+    m "好棒的帐篷！他们真是布置得下足了功夫。"
+    scene thesmith1_1
+    with dissolve
+    m "他们甚至还问我想添些什么。"
+    scene thesmith1_2
+    with dissolve
+    y "是吗？" 
+    scene thesmith1_3
+    with dissolve
+    m "我想他们把每个女孩都问了一遍。"
+    m "好为大家各准备一份。"
+    scene thesmith1_4
+    with vpunch
+    m "哇哦！" 
+    scene thesmith1_5
+    with dissolve
+    y "浴池我想是留到之后的。你现在浑身都湿透了。" 
+    m "你叫我的时候我就已经湿了。" 
+    scene thesmith1_6
+    with dissolve
+    m "再说了，我还有换洗的衣服。"
+    scene thesmith1_7
+    with dissolve
+    m "那个蠢女人特地准备了这些。"
+    y "哪个蠢女人？"
+    m "我{i}母亲{/i}？"
+    y "斯塔西亚给你弄了套衣服？" 
+    scene thesmith1_8
+    with dissolve
+    m "正是。一套愚蠢、靠不住又难穿的衣服。"
+    scene thesmith1_9
+    with dissolve
+    m "我跟她说了，那看着像被戴绿帽子的老婆穿的东西。"
+    m "那个蠢丫头自己也穿了一版来。"
+    y "你觉得她是在宣示什么？"
+    scene thesmith1_10
+    with dissolve
+    m "不，她大概知道我绝不会穿那种东西。"
+    scene thesmith1_11
+    with dissolve
+    m "尤其是在大庭广众之下。"
+    m "不过现在只剩我们两个，就让你看看吧~"
+    scene thesmith1_12
+    with fade
+    "..."
+    stop music fadeout 5.0    
+    scene thesmith1_13
+    with dissolve
+    m "来，瞧瞧？居然有人说穿着这个还能打架。" 
+    y "我觉得她不是想让你穿着它打架。"
+    scene thesmith1_14
+    with dissolve
+    m "哪个男人会觉得这种衣服有吸引力？" 
+    scene thesmith1_15
+    with dissolve
+    m "我穿着这个怎么展示柔韧性？" 
+    m "我伸第一个懒腰它就会撕开。"
+    y "也许那就是本意。"
+    scene thesmith1_16
+    with dissolve
+    m "笨蛋。想撕我的衣服，就用自己的手来撕。"
+    m "或者用你的武器帅气地割下来。"
+    m "我看你把剑带来了。"
+    y "对，他们带了。"
+    scene thesmith1_17
+    with dissolve
+    m "所以你喜欢？"
+    y "当然喜欢。这是你和其他人送我的礼物。"
+    m "那做工呢？" 
+    y "刃身平衡得很好，配得上上阵杀敌。"
+    scene thesmith1_18
+    with dissolve
+    m "我想看你用它。"
+    m "把这些从我身上割下来。" 
+    y "什么？" 
+    scene thesmith1_19
+    with dissolve
+    m "把这些臭美的衣服从我身上割下来。"
+    y "嗯。（瞄对位置的话，我大概能不伤到她。）" 
+    y "你确定吗？" 
+    m "当然可以。来吧。"
+    y "好，但别动。"
+    scene thesmith1_18
+    with dissolve
+    m "我就保持这样——"
+    scene thesmith1_20
+    with vpunch
+    m "!"
+    play music "audio/Late Nights - Causmic.mp3" fadein 4.0
+    scene thesmith1_21
+    with dissolve
+    m "刚才那下太刺激了……"
+    scene thesmith1_22
+    with dissolve
+    m "你还真是一点都没留手……"
+    scene thesmith1_23
+    with dissolve
+    m "站在刀锋上的感觉，还不赖。"
+    y "哈——你当然会这么说。"
+    y "不过运气好的话，你永远不会亲眼见证战争。"
+    scene thesmith1_24
+    with dissolve
+    m "那日子可没法过。"
+    y "你想打仗？那我现在就告诉你，那可不是你该盼着的经历。" 
+    y "公开的厮杀和忍者执行的那些任务完全不是一回事。"
+    scene thesmith1_25
+    with dissolve
+    m "可我说的正是这个。"
+    m "既然{i}你{/i}要到那里去，我就想和你一起去。"
+    scene thesmith1_26
+    with dissolve
+    m "你这话说反了。"
+    m "我一定会和你一起去。"
+    scene thesmith1_27
+    with dissolve
+    m "我知道你不把我当什么侍妾。" 
+    m "所以你会让我跟着去。"
+    scene thesmith1_28
+    with dissolve
+    m "还是说我能做的只有爬上你的床？"
+    menu:
+        "你会让玛格娜跟着上战场吗？" 
+        "是的。":
+            scene thesmith1_29
+            with dissolve
+            y "会。我不能剥夺你一场荣耀战斗的机会。" 
+            y "就算你是我妻子，我会害怕失去你。"
+            scene thesmith1_30
+            with dissolve
+            m "但我更害怕与你分离。"
+            m "我还想让谁陪在身边呢？"
+            y "玛格娜，你说话像个坠入爱河的少女。" 
+            m "我不否认。" 
+            scene thesmith1_32
+            with dissolve
+            m "再说了，躲起来谁也保护不了。" 
+            m "万一你……我不想不在你身边——" 
+            m "我、我是说你要是输了个什么……"
+            scene thesmith1_31
+            with dissolve
+            m "可你不会输。正因如此我才爱你！" 
+            m "你很强。"
+            m "强到足够了。" 
+            m "比……更强——"
+            m "..." 
+            y "你父亲还强？"
+            m "..." 
+            scene thesmith1_33
+            with dissolve
+            m "你不会丢下我，对吧？" 
+            m "不会。我知道我这么问很不讲道理。"
+            m "我不是那种女人。"
+            scene thesmith1_34
+            with dissolve
+            m "只要告诉我你不会死，我就满足了。"
+            menu:
+                "我不会死":
+                    y "我不会死。"
+                    y "别怕。你也不会。" 
+                    y "我们会为彼此撑腰，对吧？"
+                    scene thesmith1_35
+                    with dissolve
+                    m "没错。没人能拦下我们。" 
+                    m "不管是我们的家族，还是我们的城市。"
+                    scene thesmith1_36
+                    with dissolve
+                    y "还是我们的部族。"
+                    m "很好。"
+                "我不会丢下你":
+                    y "我不会丢下你。"
+                    y "不管我去哪儿，我都会把你一起拖上。" 
+                    m "哼。"
+                    scene thesmith1_35
+                    with dissolve
+                    m "你有时候真会说些让人害臊的话。" 
+                    y "是你自己要求的。"
+                    scene thesmith1_36
+                    with dissolve
+                    m "呵。抱歉，可是……"
+                    m "我一定会让你把这句话兑现的。" 
+                "我没法承诺":
+                    y "我没法给出那种承诺。" 
+                    y "现实是，战局不是我们能左右的。" 
+                    y "我们无法确定任何事。"
+                    scene thesmith1_35
+                    with dissolve
+                    m "那我就更该尽可能待在你身边。"
+                    scene thesmith1_36
+                    with dissolve
+                    m "别再浪费时间了。"
+        "不，太危险了" :
+            scene thesmith1_39
+            with dissolve
+            y "我不确定这是不是个好主意。"
+            scene thesmith1_38
+            with dissolve
+            m "因为危险？" 
+            y "呃……{w}对，毫无意义的冒险。"
+            y "我要是死了，凭什么还要我的命也跟着一起死？" 
+            scene thesmith1_37
+            with dissolve
+            m "我可不会闲坐在家里混日子。" 
+            y "我不能让你去。"
+            m "哦是吗？那你打算怎么阻止我？" 
+            menu:
+                "我会……" 
+                "把你按住":
+                    scene thesmith1_40
+                    with dissolve
+                    y "我会把你按住，直到你放弃为止。" 
+                    m "我永远都不会放弃。" 
+                    y "我永远不会松手。" 
+                    m "你会先撑不住。"
+                    scene thesmith1_41
+                    with dissolve
+                    y "除非你的肚子先被我的精液灌满。" 
+                    scene thesmith1_42
+                    with dissolve
+                    m "这算是承诺吗？" 
+                "操，蠢货。":
+                    y "我非操到你腿软不可。"
+                    scene thesmith1_40
+                    with dissolve
+                    y "你的腿会软到站都站不稳，更别说跟着去了。" 
+                    m "你以为我受不住猛干？"
+                    m "我能比任何男人都持久。"
+                    y "男人猎手玛格娜？你还没习惯被一路顶进子宫里呢。" 
+                    scene thesmith1_41
+                    with dissolve
+                    y "可你要是强迫我，我会让你臣服。" 
+                    m "就算成了你的女人，我也不会。"
+                    scene thesmith1_42
+                    with dissolve
+                    m "就算你一天把我弄开十次，我也不会让步。"                    
+                    y "那我们最好现在就开始。" 
+                "把你关起来":
+                    y "我会把你关起来。" 
+                    m "哈！连我小时候都关不住我，一间牢房更不在话下。" 
+                    scene thesmith1_40
+                    with dissolve
+                    m "现在更不可能让几根铁条拦住我。"
+                    m "你这座监牢里非闹起暴动不可。"
+                    y "不，你会是孤身一人。"
+                    m "然后暴动就会发生。"
+                    m "而且凶猛到狱卒每天都得亲自进我的牢房。" 
+                    scene thesmith1_41
+                    with dissolve
+                    m "到时候就看看你那根铁棒会变成什么样。" 
+                    y "玛格娜，那是比喻吗？" 
+                    scene thesmith1_42
+                    with dissolve
+                    m "什么？我是在叫你把它塞进自己屁股里！"  
+    m "我可不耐烦了，你要放就快点放。"
+    y "别担心，你很快就会求我停下。"
+    scene thesmith1_43
+    with dissolve
+    m "是吗？来试试啊，[player_name]。有种就压倒我。"
+    y "我从没见过哪个女孩处在你的位置上还敢这么嚣张……"
+    scene thesmith1_vid1
+    with dissolve
+    m "你、你只是没遇过我这样的人~"
+    m "或者像我这样的身体。"
+    y "真是够自信的。"
+    m "你否认吗？我们不是配合得天衣无缝吗？"
+    y "我放慢速度可是为你好。"
+    y "你刚才那点时间就草草收场，现在都干涸了吧。"
+    y "我只是想确保你还湿着。"
+    m "别小看我，[player_name]。就算让你得手几次，我也不会输给身体里那个小女人。"
+    m "别因为我手下留情。"
+    y "好吧。"
+    scene thesmith1_vid2
+    with dissolve
+    m "唔唔——操，太爽了~"
+    m "可、可是想想看，放开来全力交给我会多舒服。"
+    m "哦哦~我已经能感觉到你在我里面绷紧了！"
+    y "好像很舒服的是你啊。"
+    y "那是汗吗？"
+    m "别、别担心我，我会把你吸干。"
+    m "我会让你看到，我跟别的女孩不一样。"
+    m "我会学会所有能让你上瘾的东西。"
+    y "好吧好吧。那我就专门照顾这里好了……"
+    y "我每次顶这里你都会发抖。"
+    m "嗯、什么？"
+    scene thesmith1_vid3
+    with dissolve
+    m "唔唔 唔嗯"
+    y "哦，突然就不出声了？"
+    m "唔唔，我、只是让你——{w}随你处置。"
+    y "我觉得你比起别的地方，更喜欢这里"
+    y "我压这里的时候，你会舒服吗？"
+    y "我射在里面还是外面，你更喜欢哪种？"
+    m "唔嗯嗯嗯嗯~"
+    scene thesmith1_vid4
+    with dissolve
+    m "我、我说过了。我还是会把你吸干~"
+    m "唔唔唔唔~"
+    m "你慢下来了，对吧？"
+    m "别、别告诉我我们又得重新练你的耐力了？"
+    y "让你按喜欢的方式爽到，是我的职责。"
+    y "你喜欢这种又长又慢的抽插。我这样顶你的时候，你总会叫得很甜。"
+    m "呼啊——想得美。那只是巧合。"
+    m "操、操这也太深了~"
+    y "你想让我停下吗？"
+    m "不要！继续~"
+    scene thesmith1_vid5
+    with dissolve
+    y "所以你倒是承认自己会叫啊。"
+    m "我什么都、没承认~"
+    m "就那样认真地操我吧。"
+    m "我看你的剑招还差得远呢，可不会就这么满足。"
+    m "我想被你射得一塌糊涂……"
+    m "今晚就教教我你那鸡巴的形状吧。"
+    y "哦操，你要让我高潮了。"
+    scene thesmith1_44
+    with vpunch
+    y "啧——"
+    m "?"
+    m "你为什么拔出来了？做完了？"
+    y "别听起来那么失望嘛。"
+    scene thesmith1_45
+    with dissolve
+    m "你不会射一次就停吧？"
+    y "……{w}真可爱。"
+    scene thesmith1_47
+    with fade
+    m "你知道那不是我的骚穴吧？"
+    y "我知道。"
+    m "你真要把它塞进来——"
+    scene thesmith1_46
+    with vpunch
+    m "不、不带润滑剂？！"
+    scene thesmith1_vid6
+    with dissolve
+    m "你、你是想把我撕成两半吗？"
+    y "你真以为你没上油的话，我能这样操你？"
+    y "你的骚穴把我润得刚刚好。"
+    m "话是这么说——你该不会真以为女孩就该用后面来吧？"
+    y "我倒觉得你干得相当漂亮。"
+    y "除了有点紧，你感觉简直完美，玛格娜。"
+    scene thesmith1_vid7
+    with dissolve
+    m "那只是因为我是个完美的女、女人。"
+    m "换成别人早就被撑成两半了。"
+    m "别对别的女孩这样，好吗？"
+    y "你不认为别人能承受吗？"
+    y "优妮不行吗？"
+    m "当然不行。西奇也、也不行。"
+    y "那斯塔西亚呢？"
+    m "好、好主意……{w}是我说错了……{w}斯塔西亚承受得住。"
+    m "去、去试试她。"
+    scene thesmith1_51
+    with fade
+    m "哈啊……哈啊……{w}你还真的一点都没留手啊。"
+    y "你还没完事吧？"
+    y "就一次就完了？"
+    m "操、才不是。"
+    scene thesmith1_vid8
+    with dissolve
+    y "我就再专门照顾这里好了。"
+    m "呼唔唔唔。"
+    y "这才乖。"
+    m "唔唔唔~"
+    m "别、别得意。只是、只是巧合。"
+    y "你都看不见我的脸，怎么知道我在得意？"
+    m "我、我就是知道。"
+    m "你操起来就像在得意~"
+    scene thesmith1_vid9
+    with dissolve
+    m "看、看吧？我就知道。"
+    y "我只是感慨，居然有人能这么大胆，吞下这么多鸡巴。"
+    m "我唯一收下的，只有当乖女孩的奖励~"
+    m "我可是尽了自己的义务了吧？"
+    m "我城里的公主，跑到这儿来勾引她家族的一位军阀？"
+    m "跑来让你射出来？~"
+    y "没想到你会这么看。"
+    y "我一直以为你只是爱我的鸡巴。"
+    m "呵呵呵~"
+    m "那就快给我啊——你就这点本事？"  
+    scene thesmith1_vid10
+    with dissolve
+    m "嘿嘿嘿~"
+    m "我是真的爱你哦，你不知道吗？"
+    m "在其他那些愚蠢的小男孩里，你格外显眼。"
+    y "玛格娜……{w}所以我是最蠢的那个小男孩？"
+    m "呼呵。{w} 你以为我会让次货进我的骚穴里？"
+    m "[player_name]~你这帐篷里有过我，你一辈子都忘不掉。"
+    y "那我可得好好回报你。"
+    y "顶回来，哈默费尔夫人。"
+    y "我让你知道，做我的女人是什么滋味。"
+    m "操，好爽~"
+    scene thesmith1_vid11
+    with dissolve
+    m "呼呵，呼呵呵呵~"
+    m "唔唔唔——我就知道~"
+    m "这才是让你射出来的最好方法。"
+    m "一男一女摇着腰弄到自己想要的。"
+    y "你最喜欢这样？"
+    m "这才叫老实~"
+    m "像畜生一样做爱，你的鸡巴还埋在我里面。"
+    m "这才是吞下你精液的最爽方式。"
+    m "像个老实的小婊子~"
+    y "..."
+    scene thesmith1_vid12
+    with dissolve
+    m "啊！你、你在干什么？！"
+    y "给你想要的。把你当成个老实的小婊子。"
+    m "哈啊——对、对了！就要这样！"
+    y "你真惹人爱，玛格娜。"
+    y "一个既能打又能给出甜蜜性爱的好战士。"
+    y "但偶尔呢，能有个足够强壮的女人挨一顿狠操也不错。"
+    m "操——就是这样！就、就往那儿操！"
+    m "[player_name]！狠狠干我！"
+    y "我要把它涂满你的骚穴、涂满你的后背，玛格娜。"
+    m "对对对——"
+    scene thesmith1_vid13
+    with dissolve
+    m "咳哼！{w}呼啊——操~"
+    m "..."
+    scene thesmith1_48
+    with dissolve
+    m "你、你还在射？"
+    scene thesmith1_49
+    with dissolve
+    m "呵……你把我弄得一塌糊涂。"
+    m "我一点都不像淑女吧？"
+    y "我也不知道。"
+    scene thesmith1_50
+    with dissolve
+    y "我觉得我现在这个姿势正是我喜欢的。"
+    scene thesmith1_53
+    with dissolve
+    y "我觉得你确实摸清了我的身体。"    
+    y "你的动作越来越精准。就像是去到了我都不知道你能去的地方。"
+    scene thesmith1_52
+    with dissolve
+    m "当、当然了。我说过我会做到的。"
+    m "我是个好学生……"
+    if magna_explained == 1:
+        y "说起来，你那些忍者呢？"
+        y "我记得今晚该奖赏其中一个吧？"
+        m "呵——你担心他们满不满意？"
+        m "我改主意了。{w}听说你选了我，我就改主意了。我想让你只属于我。"
+        y "这……倒是没想到你会这么浪漫。"
+        m "哦，闭嘴吧。"
+        m "别担心他们。我们会一起奖赏他们的付出。"
+        m "整晚都这样……"
+    else:
+        y "你是。今天的课就上到这里了吗？"
+    scene thesmith1_53
+    with dissolve
+    m "..."
+    y "呵。看来她终于把自己累趴下了。"
+    y "晚安，哈默费尔夫人。"
+    scene bg black
+    with fade
+    "..."
+    jump theexposition1_1
+label theblessed1_1:
+    play music "audio/Lovely Piano Song.mp3" fadein 4.0
+    scene theblessed1_1
+    with fade
+    y "露丝！节庆好玩吗？跟波茨那边的一样吗？"
+    scene theblessed1_2
+    with dissolve
+    lu "非常好玩。"
+    lu "王子殿下？我能请您说几句话吗？"
+    y "现在才讲究礼节，是不是太晚了点，露丝？"
+    y "我们现在已经很熟了，不是吗？"
+    y "我说过了。不要敬称。有话直说。除非你是想让我叫你公主殿下？"
+    scene theblessed1_4
+    with dissolve
+    lu "啊——不，我不是那个意思……"
+    lu "我、我只是出于礼貌才……"
+    scene theblessed1_3
+    with dissolve
+    lu "因、因为我要正式拒绝你的邀请。"
+    y "什么？"
+    scene theblessed1_4
+    with dissolve
+    lu "今晚我不能和你待在一起。"
+    y "（真没想到。）我做了什么让你不高兴吗？"
+    scene theblessed1_3
+    with dissolve
+    lu "没有！完全不是，我——"
+    scene theblessed1_2
+    with dissolve
+    lu "不是你的问题……{w}只是我家里。"
+    y "好了，露丝。今晚那些都不重要。我明白你家族带来的麻烦，但现在只想想你我。"
+    scene theblessed1_4
+    with dissolve
+    lu "不行。我明天要带乔安娜回去受审。"
+    y "什么？怎么这么突然？我还以为你不介意把她留在这里。"
+    lu "情况变了。我怀疑我大姐可能遇到了麻烦。"
+    scene theblessed1_6
+    with dissolve
+    lu "乔安娜也要负一部分责任。据科尔内利乌斯子爵说，乔安娜给我姐姐选的那条路是条死路。"
+    y "那个子爵到底跟你说了什么？他们的名声可是爱撒谎。"
+    lu "我知道。不过在道路与距离这种专业问题上，我相信「路途之主」骄傲到不屑说谎。"
+    lu "乔安娜给我姐姐选的那条路，本来就不是给普通旅人走的，而且还会把他们引进敌方的地盘。"
+    scene theblessed1_4
+    with dissolve
+    lu "我还盼着科尔内利乌斯能告诉我不是这样。我们必须在可怕的事发生前采取行动。"
+    lu "而且乔安娜必须接受我家人的审问。"
+    y "需要我帮忙吗？"
+    lu "不不。我本来打算明天再告诉你。"
+    scene theblessed1_2
+    with dissolve
+    lu "我没想过你会选我……"
+    lu "你身边该有个能承诺留下来陪你的人。"
+    scene theblessed1_3
+    with dissolve
+    lu "我做不到——{w}我想不出我家和你们家哪里合适。"
+    lu "我不想他们做出伤害你的事。"
+    y "你姐姐对我毫无威胁。不管你怎么想，都不是真的。"
+    scene theblessed1_5
+    with dissolve
+    lu "不只是这样！"
+    lu "我只是——{w}我想了很多事……"
+    scene theblessed1_6
+    with dissolve
+    lu "我觉得我家对你没有好处。"
+    lu "我觉得只为了结盟就结婚是不对的。"
+    lu "如果你要的是那种东西，我觉得还有更好的选择。"
+    scene theblessed1_4
+    with dissolve
+    lu "我觉得太多事情都不对，都——"
+    lu "也许他们是对的。也许我受了诅咒。也许我就是不祥之兆。"
+    y "（讽刺的是，正是她家族里的失序，成了我能相信他们意图的理由之一。）"
+    y "（他们争名夺利吵得太凶，以至于一眼就能看透。）"
+    y "既然我已经选了你，我只在乎一件事。"
+    y "你愿意跟我在一起吗，露丝？"
+    scene theblessed1_6
+    with dissolve
+    lu "[player_name]……{w}当然愿意。"
+    y "我也不想只是为了做样子才娶你。"
+    y "我很欣赏你，以及你的种种长处。"
+    scene theblessed1_8
+    with dissolve
+    y "在这里的其他候选人中，你也很受欢迎。我从不知道你会是我的不祥之兆。"
+    y "你有你独特的地方，也有你的缺点。"
+    y "其中最大的缺点，就是你看不出自己最好的一面。"
+    scene theblessed1_7
+    with dissolve
+    y "我个人觉得，你是我的幸运符。"
+    y "所以别再轻视我选择你这件事。"
+    y "明天早上的事，交给明天早上再说。"
+    y "如果你有必要、或者想离开，你可以走。"
+    y "但我的床还给你留着，如果你想要的话。"
+    scene theblessed1_2
+    with dissolve
+    lu "[player_name]。{w}真的很抱歉。你说得对。"
+    scene theblessed1_9
+    with dissolve
+    lu "咳咳。我全心接受你的邀请。"
+    scene theblessed1_4
+    with dissolve
+    lu "我没法承诺明天，但、但是……{w}今晚露丝·格雷森能给你的，都可以给你。"
+    menu:
+        "露丝把自己献给了你"
+        "{color=00ff00}接受她的献身{/color}":
+            y "那么，我们上床吧，如何？"
+            jump theblessed1_2
+        "欣然与她共寝（跳过）":
+            y "那么，我们上床吧。"            
+            scene bg black
+            with fade
+            "..."
+            jump theexposition1_1
+label theblessed1_2:
+    scene theblessed1_10
+    with dissolve
+    lu "嗯……"
+    y "这到底是什么？"
+    scene theblessed1_11
+    with dissolve
+    lu "只是——这里是不是放了很多剑？"
+    lu "我能理解他们为什么把最新那把留给你，可这些又是怎么回事？"
+    scene theblessed1_12
+    with dissolve
+    y "咦。你说得对。这把也是空的。"
+    y "咦？那是——"
+    scene theblessed1_13
+    with dissolve
+    yun "呀啊！"
+    scene theblessed1_14
+    with dissolve
+    yun "西奇，我们中计了！"
+    scene theblessed1_15
+    with dissolve
+    xi "..."
+    yun "西奇！"
+    scene theblessed1_16
+    with dissolve
+    xi "你这白痴。他还没找到我呢。"
+    y "（她说得对，我还没被找到。）"
+    scene theblessed1_17
+    with fade
+    y "西奇？优妮？你们两个来这里做什么。"
+    xi "师父让我们盯着格雷森夫人。"
+    lu "我？"
+    scene theblessed1_18
+    with dissolve
+    xi "她担心她会偷偷溜走。"
+    yun "她说露丝夫人正为某件事挣扎，而玛格娜不想让我们插手。"
+    xi "她确实让我们盯着她，以防她消失不见。"
+    lu "我？"
+    y "她还真猜对了，不是吗？"
+    scene theblessed1_19
+    with dissolve
+    y "你本来打算今晚丢下我一个人。"
+    lu "你这么一说，听起来挺让人伤心的……"
+    y "是有点让人难过。"
+    scene theblessed1_20
+    with dissolve
+    lu "那我就只好补偿你了。"
+    scene theblessed1_21
+    with dissolve
+    yun "太好了！她们两个在一起了。我们的任务完成了。"
+    yun "我们走吧，小西。"
+    xi "..."
+    scene theblessed1_22
+    with dissolve
+    yun "*咳嗽* *咳嗽*"
+    scene theblessed1_23
+    with dissolve
+    yun "哎呀小西！你干嘛那样做？"
+    scene theblessed1_24
+    with dissolve
+    yun "*咳嗽* *咳嗽*"
+    scene theblessed1_25
+    with dissolve
+    yun "喂、喂，我还没准备好！"
+    yun "啊？"
+    scene theblessed1_26
+    with vpunch
+    yun "小西！？"
+    scene theblessed1_27
+    with dissolve
+    yun "别、别看！"
+    scene theblessed1_28
+    with dissolve
+    y "没看……"
+    lu "我在想是不是玛格娜让她这么做的。"
+    lu "没关系，云云，我换一下，你穿这件。"
+    scene theblessed1_29
+    with fade
+    yun "谢谢您，露丝夫人！幸好我们身材差不多。"
+    lu "不用客气，云云。替我谢谢玛格娜关照我。"
+    scene theblessed1_30
+    with dissolve
+    lu "也抱歉我没有第二套内衣。"
+    lu "我这两套衣服可都没法不穿内衣。"
+    scene theblessed1_31
+    with dissolve
+    yun "没、没关系。这样已经完全够了。"
+    lu "你真可爱，云云……{w}这样吧。"
+    scene theblessed1_32
+    with dissolve
+    lu "......"
+    yun "真的？"
+    lu "我觉得那样会很不错，你说呢？"
+    scene theblessed1_33
+    with dissolve
+    yun "只要指挥官不介意就好？"
+    lu "毕竟这是他的帐篷。"
+    y "你们两个一起？我想你们怎么折腾我都可以。"
+    scene theblessed1_34
+    with dissolve
+    yun "你说得对。他看着确实很愿意。"
+    play music "audio/Ammil - The Tides.mp3" loop fadein 5.0
+    scene theblessed1_35
+    with fade
+    lu "去吧。我想看看你们能做到什么程度。"
+    yun "不，露丝夫人。我们应该同时进行。"
+    scene theblessed1_36
+    with dissolve
+    lu "我觉得他吃得消。"
+    yun "是啊……"
+    scene theblessed1_vid1
+    with dissolve
+    y "两个女孩从不同方向同时舔着……"
+    y "这就是极乐。"
+    y "可你们俩谁负责含？"
+    yun "..."
+    lu "..."
+    y "就用不说话的方式。"
+    y "..."
+    y "该死。{w}这样也挺色情的。"
+    scene theblessed1_vid2
+    with dissolve
+    yun "唔唔~"
+    y "云云接受了呢。你知道你的衣服滑下来了吗？"
+    y "你胸口那两颗还在，衣服不该会松下来才对……"
+    lu "啾噜~"
+    y "操、操。这简直像是在朝拜鸡巴。"
+    y "她们一本正经地又揉又摸……"
+    yun "唔唔唔~"
+    y "这个……"
+    y "操，舒服死了……{w}但我不想这样就射了。"
+    y "你们两个都停下。"
+    scene theblessed1_37
+    with fade
+    lu "像、这样吗？"
+    y "对。就这样别动。"
+    lu "你在打什么主意？"
+    scene theblessed1_38
+    with dissolve
+    yun "我真的要就这么躺着吗？我刚才还挺开心的……"
+    scene theblessed1_vid3
+    with dissolve
+    yun "哦？"
+    yun "那、那个……{w}这样挺无聊的，对吧？"
+    lu "我们俩都不太擅长这个吧？"
+    y "我还以为忍者能有更多耐心呢。"
+    yun "我只是说——你把它放进来不是会更舒服吗？"
+    lu "我明白它的吸引力了。"
+    scene theblessed1_vid4
+    with dissolve
+    lu "也许只是因为我躺着的角度，不过我挺喜欢我的视野。"
+    yun "嗯，那倒也不赖，不过……"
+    yun "你根本不喜欢女孩吧？"
+    lu "我喜欢可爱的。"
+    yun "真、真的吗？"
+    lu "嗯。"
+    lu "我喜欢和我还有我的朋友们一起玩的可爱女孩……{w}或者我的主人。"
+    yun "你……{w}觉得我可爱吗？"
+    lu "我说过了。你很可爱，云云。"
+    scene theblessed1_vid5
+    with dissolve
+    lu "你呢？"
+    yun "什、什么？"
+    lu "你觉得我可爱吗？"
+    yun "露丝夫人很、很可爱……"
+    lu "谢谢~"
+    lu "你开始明白这样做的魅力了吗？他这样弄？"
+    yun "有、有一点。"
+    lu "他要是这样做，我们就能一起分享他。"
+    lu "我喜欢这样。你不喜欢吗？"
+    y "（露丝真的在一点点哄她上钩。）"
+    lu "专心看着——是不是觉得随时都会滑进去？"
+    lu "感觉……{w}很棒吧？"
+    lu "我们俩谁都可以……"
+    lu "他会滑进你里面……"
+    lu "他也可以滑进我里面……"
+    scene theblessed1_vid6
+    with dissolve
+    yun "对、对啊……{w}那、那确实很舒服。"
+    yun "它蹭到了特别舒服的地方~"
+    lu "唔嗯~"
+    lu "你真柔软，云云这个小可爱。"
+    lu "看你摆出这个姿势，真的挺厉害。"
+    yun "谢谢您，露、露丝夫人。"
+    lu "玛格娜大概很为你骄傲吧。照顾她的朋友们？"
+    lu "替她和别的漂亮女孩打好关系？"
+    scene theblessed1_vid7
+    with dissolve
+    y "（我看不出来是谁更投入。）"
+    y "（不过可以肯定的是，优妮已经兴奋起来了。）"
+    y "（但露丝似乎很享受把她一步步逼到边缘的感觉。）"
+    lu "你想要他的鸡巴吗？"
+    yun "想要，露丝夫人。"
+    lu "你愿意为此做什么？"
+    yun "我、我不清楚……求、求你吗？"
+    lu "好。那就让我听听你怎么求。"
+    scene theblessed1_vid8
+    with dissolve
+    lu "说吧，云云~"
+    yun "求你了……{w}我还要更多。露丝夫人，我——"
+    yun "我想要他，求你了。"
+    lu "云云这个小妖精~真可爱。"
+    lu "玛姬要是发现你在我的夜晚把他抢走，肯定会生气。"
+    yun "对、对不起~"
+    lu "没关系。我不介意。"
+    lu "再说了，也轮不到我说了算。"
+    lu "你得去求他~"
+    yun "[player_name]，求你了~给我吧？"
+    y "露丝，别再逗这可怜的孩子了。"
+    scene theblessed1_39
+    with fade
+    yun "哦……{w}真、真的可以吗？"
+    lu "有点清醒过来了？"
+    scene theblessed1_40
+    with dissolve
+    lu "真的没关系。我要谢谢你把他分给我。"
+    lu "说实话，我今晚有点怕一个人待着。"
+    scene theblessed1_41
+    with dissolve
+    lu "你在这里真的很好，优妮。"
+    yun "露丝夫人……"
+    scene theblessed1_42
+    with dissolve
+    lu "所以，[player_name]，你不能射在她里面，但你能让她高潮，行吧？"
+    scene theblessed1_43
+    with dissolve
+    yun "唔呣——"
+    y "露丝，都演成这样了？我可不能保证什么。"
+    y "可怜的孩子需要高潮。我得让她高潮。"
+    scene theblessed1_44
+    with vpunch
+    yun "呀啊！"
+    scene theblessed1_vid9
+    with dissolve
+    lu "唔唔——[player_name]~你不用担心我。"
+    y "我知道。你已经够湿了，露丝。借朋友的仆人来给自己助兴？"
+    lu "我敢肯定，玛姬是故意的~"
+    y "你不如问问这位？"
+    yun "唔唔！~"
+    lu "云云，是玛姬让你来看我的吗？"
+    yun "唔、唔嗯！"
+    lu "就这些吗？"
+    yun "是、是的~"
+    scene theblessed1_vid10
+    with dissolve
+    lu "真的？"
+    yun "唔、唔嗯。"
+    lu "真、真是意外。"
+    y "也没那么意外。她大概早知道让西奇去做那事会发生什么。"
+    lu "当着你的面把女孩扒光？"
+    y "更是为了你~"
+    lu "咦~为、为什么是我？"
+    yun "有、有点害羞……"
+    lu "我？"
+    y "你平时确实很害羞。但你在床上可完全是另一个人，露丝。"
+    y "玛格娜只是想让你有兴致而已。"
+    scene theblessed1_vid11
+    with dissolve
+    yun "嗯呜啊~~"
+    lu "我、我？可明明是为你准备的，不是吗？"
+    y "露丝，不管优妮在不在，我都会很乐意把自己插进你体内。"
+    y "担心自己配不配待在这里的，是你才对。"
+    y "你不觉得玛格娜已经注意到了？"
+    lu "呵——我猜你、你说得对。"
+    lu "那、那我得谢谢她了。"
+    y "你想要的话，我们可以给她更多。"
+    lu "那就改天再约——"
+    lu "我开始替你嫉妒了~"
+    scene theblessed1_vid12
+    with dissolve
+    yun "我、我很抱歉。"
+    lu "哎呀，不是你的错啦，云云。你还是很可爱。"
+    lu "慢慢享用我爱人的鸡巴吧~"
+    lu "你配得上更多。"
+    yun "唔唔~谢、谢谢您，露丝夫人~"
+    lu "好可爱……"
+    y "你一夸优妮，她就会夹紧一点。"
+    y "她真的很吃关注这一套。"
+    y "对吧，云云。"
+    yun "唔唔唔唔——唔唔~"
+    y "够了。"
+    scene theblessed1_45
+    with dissolve
+    lu "等等——[player_name]？她还没高潮。"
+    lu "你是不是该——"
+    scene theblessed1_46
+    with dissolve
+    y "我已经玩够她了。"
+    y "我现在想尝尝这个骚穴。"
+    scene theblessed1_47
+    with dissolve
+    lu "真是的，坏心眼。"
+    lu "那你说吧。"
+    lu "拿去吧。"
+    scene theblessed1_vid13
+    with dissolve
+    lu "唔唔唔唔——"
+    lu "好、好像过了好久一样……"
+    lu "是因为你刚才吊着我吗？"
+    lu "那真的很折磨人。"
+    y "很好。我听你和优妮玩，好像你有点在欺负她。"
+    lu "我没那个意思~"
+    y "但她被撂在一旁、没做完也没满足，这是你的错。"
+    lu "那、那我也道歉！"
+    lu "我不是故意要刻薄——"
+    lu "她、她就是太可爱了嘛，不是吗？"
+    y "这一点我同意。"
+    scene theblessed1_48
+    with dissolve
+    lu "怎么了？你为什么停下？"
+    y "我要射在你里面。"
+    lu "我就知道。"
+    y "我要把这些装饰摘掉。我要我的女人原汁原味。"
+    scene theblessed1_49
+    with dissolve
+    lu "你把我的腿往后压，跟我们对她做的一样？"
+    y "所以你注意到了。"
+    scene theblessed1_50
+    with dissolve
+    y "准备好了吗？"
+    lu "唔嗯~"
+    scene theblessed1_51
+    with vpunch
+    lu "啊啊！~"
+    scene theblessed1_vid14
+    with dissolve
+    lu "咿呀！"
+    lu "这、这样——有点粗暴！"
+    y "你受不了？"
+    lu "我、我能，但——"
+    lu "你、你要一直顶那里吗？"
+    y "担心了？你喝过那些药了吧？"
+    y "就算我射在你里面，你也不会怀孕。"
+    lu "那、那不是——"
+    scene theblessed1_vid15
+    with dissolve
+    lu "哦、哦哦~"
+    y "这样好点了吗？"
+    lu "射、射在我里面。"
+    y "啊？"
+    lu "我、我要怀你的孩子~"
+    y "露丝，你开始有点神志不清了，不是吗？"
+    lu "不。不、不~我要怀你的孩子。全、全灌进来~"
+    y "你……{w}你已经喝过药了吧？"
+    lu "我、我不记得了。"
+    y "我……{w}我现在停不下来了。要是射进你里面——"
+    y "操，露丝，我要射了。"
+    y "我就要这样射进你里面。"
+    lu "给、给我！~"
+    scene theblessed1_vid16
+    with dissolve
+    lu "唔唔——啊呜~~"
+    y "操……{w}她真的把它挤出来了。"
+    scene theblessed1_52
+    with dissolve
+    y "我真希望你喝过药了。"
+    lu "呵……{w}我喝了。"
+    scene theblessed1_53
+    with dissolve
+    y "原来你也在耍我？"
+    lu "..."
+    y "..."
+    scene bg black
+    with fade
+    "..."
+    jump theexposition1_1
+label themermaid1_1:
+    scene themermaid1_4
+    with fade
+    cf "你这笨蛋，小鱼。你错过了跟别的女孩亲热的机会！"
+    cf "真是浪费了好机会。"    
+    y "要是我本来想跟苏什的公主{i}亲热{/i}呢？"
+    scene themermaid1_5
+    with dissolve
+    cf "哦，闭嘴吧。"
+    cf "说真的。我留在这儿帮你牵线还有什么意义？"
+    y "你真的在因为我选了你而生气吗？"
+    scene themermaid1_6
+    with dissolve
+    cf "*叹气* 我当然没生气……"
+    scene themermaid1_3
+    with dissolve
+    cf "不过选别人不是更明智吗？"
+    cf "{size=-5}你知道我本来就已经喜欢你了，小鱼。{/size}"
+    y "你说什么？"
+    scene themermaid1_2
+    with dissolve
+    cf "算了。现在哭也没用了！"
+    cf "那我想……"
+    scene themermaid1_5
+    with dissolve
+    cf "睡前吃点东西吧？"
+    scene themermaid1_1
+    with dissolve
+    menu:
+        "睡觉？" 
+        "{color=00ff00}让我们好好享受彼此{/color}":
+            y "让我们多享受一会儿彼此的陪伴。"
+            scene themermaid1_4
+            with dissolve
+            cf "我就猜你会这么说。"
+            cf "你想做什么？"
+            y "我不知道。你觉得我们该怎么做？"
+            scene themermaid1_6
+            with dissolve
+            cf "真是的，小鱼。你至少也该有点计划吧？" 
+            cf "女孩也是需要有人费点心思的。" 
+            cf "你不能只把她们带进帐篷，就指望跟她们睡觉。" 
+            scene themermaid1_3
+            with dissolve
+            cf "这次我就饶了你。"
+            cf "只要你同意照我{i}的{/i}计划做？" 
+            y "你还真是勤快啊。所以你确实想象过和我共度这一晚？"
+            scene themermaid1_4
+            with dissolve
+            cf "你想让我说什么，笨蛋？"
+            cf "如果我要成为被你选中的人，我总不能让别人以为你没玩得开心吧？"            
+            y "所以是为了给别人看。"
+            scene themermaid1_5
+            with dissolve
+            cf "就是给别人看的。"
+            scene themermaid1_7
+            with dissolve
+            cf "我换衣服的时候你坐着别动。"
+            scene themermaid1_9
+            with fade
+            "..."
+            scene themermaid1_10
+            with dissolve
+            cf "我好看吗？"
+            y "嗯……"
+            menu:
+                "[cf]的新衣服……"
+                "很迷人，不过……":
+                    y "固然迷人，但另一件更好。"
+                    scene themermaid1_8
+                    with dissolve
+                    cf "你真这么觉得？"
+                    jump themermaid1_2
+                "完美":
+                    y "完美极了。" 
+                    cf "哦，我没想到。不过你眼光不错。"
+                    scene themermaid1_11
+                    with dissolve
+                    cf "你觉得这样会显眼吗？"
+                    y "大概没另一件那么显眼。"
+                    jump themermaid1_2
+                "有点素" :
+                    y "我虽然不是裁缝，但这样不也有点素吗？" 
+                    scene themermaid1_11
+                    with dissolve
+                    cf "你不懂得欣赏它的韵味？" 
+                    jump themermaid1_2
+        "好，就这么办，吃完睡觉（跳过）":
+            y "好，就这么办。"
+            scene themermaid1_3
+            with dissolve
+            cf "真的？" 
+            y "是的。我只是很高兴你没有犹豫就接受了我的邀请。"
+            y "我乐意休息，今天真是漫长的一天。"
+            scene themermaid1_2
+            with dissolve
+            cf "嘿嘿嘿，你知道吗，你还真是处处给人惊喜。"
+            cf "我也……{w}很高兴自己接受了这个邀请。"
+            scene bg black
+            with fade
+            y "（最好专心眼前的正事。）"
+            #EXPO 27
+            scene themermaid1_86
+            with fade
+            y "..."
+            y "呵，没持续多久啊……{w}[cf]今晚真的很主动。"
+            y "……{w}睡个好觉，小美人鱼。"
+            scene bg black
+            with fade
+            jump theexposition1_1
+label themermaid1_2:
+    play music "audio/Waterlilies 1.wav" loop fadein 5.0
+    scene themermaid1_12
+    with dissolve
+    cf "那就好。本来就是不起眼的款式。"
+    scene themermaid1_13
+    with dissolve
+    cf "不过，它还是有可能会吸引你的地方。"
+    scene themermaid1_14
+    with dissolve
+    y "如果我没看错，你没穿内衣。"
+    scene themermaid1_15
+    with dissolve
+    y "想把我勾进来吗，[cf]夫人？"
+    scene themermaid1_16
+    with dissolve
+    cf "别急。这还不止这些。"
+    scene themermaid1_17
+    with dissolve
+    cf "你也得换衣服。"
+    y "我？"
+    scene themermaid1_18
+    with dissolve
+    cf "总得穿得配得上场合吧？"
+    scene themermaid1_19
+    with dissolve
+    cf "而且我们要去的地方，不能让人认出我们。"
+    scene themermaid1_20
+    with dissolve
+    y "你打算做什么啊，你这个小海妖？"
+    scene themermaid1_21
+    with fade
+    y "我穿的这是什么？根本算不上一套衣服……"
+    y "为什么我穿成这样？"
+    cf "这样别人就认不出你。"
+    cf "离开很危险。走出帐篷，就等于告诉努比利亚人你没有兴趣。"
+    scene themermaid1_23
+    with dissolve
+    y "她们都靠得那么近……我们为什么要这么做？"
+    cf "很刺激，对吧？"
+    scene themermaid1_22
+    with dissolve
+    jdy "你当模特还是有点天赋的。想不想来我的剧团里露个脸？"
+    tal "留给我姐姐吧，那更像是她会做的事。"
+    scene themermaid1_24
+    with dissolve
+    cf "继续走。"
+    y "等等，我的发——"
+    cf "之后再弄！"
+    scene themermaid1_25
+    with dissolve
+    cf "再说了，她们正忙着呢。只要我们低调点，就没人认得出我们。"
+    cf "那个……{w}要是我们能不被发现地抵达目的地，我有个惊喜给你。"
+    scene themermaid1_26
+    with dissolve
+    y "听起来你早就全都安排好了……"    
+    cf "嘘，藤壶——"
+    y "海军上将？你想想我要告诉她我们在这儿，她会气成什么样。"
+    scene themermaid1_28
+    with dissolve
+    cf "你可别敢！"
+    cf "安静点——"
+    scene themermaid1_27
+    with dissolve
+    ad "啊，洛林！最近过得怎么样？奶牛生意还顺利吗？"
+    scene themermaid1_29
+    with dissolve
+    d_cm "您很清楚，诺提卡夫人，我们不做那种事。"
+    ad "好吧好吧，抱歉。我只是有点搞混了。"
+    scene themermaid1_30
+    with dissolve
+    ad "群交也好，挤牛奶也好，反正最后都会让你手上沾满白色的液体。"
+    d_cm "那些都是实验。粗俗的人体会不出它的价值。"
+    ad "是是是。下次你再做那种「实验」的时候，欢迎给我发张请帖。"
+    scene themermaid1_31
+    with dissolve
+    cf "好！我们差不多该走了！"
+    scene themermaid1_32
+    with dissolve
+    cf "我要跟你比赛，小鱼！"
+    scene themermaid1_33
+    with dissolve
+    y "我连我们要去哪儿都还不知道呢！"
+    scene themermaid1_34
+    with dissolve
+    cf "嘿嘿——你可得跟上！"
+    scene bg black
+    with fade    
+    "..."
+    scene themermaid1_35
+    with fade
+    cf "喜欢这里的景色吗？"
+    y "很美。"
+    scene themermaid1_36
+    with dissolve
+    cf "我有时候会来这里，只为了一个人待着。"
+    y "我说的是那个女孩。"
+    scene themermaid1_37
+    with dissolve
+    cf "你真笨！{w}早知道我就不该在意别人怎么看你了……"
+    y "我可是大成功了呢，对吧？"
+    scene themermaid1_38
+    with dissolve
+    cf "别得意忘形。我只是说，我好像不用再看着你了。"
+    y "既然你看不看着我，那你就打算走了？"
+    scene themermaid1_39
+    with dissolve
+    cf "想都别想。总得有人留下来，管着你别太嚣张。"
+    cf "还得管着你在不合适的时候别动手动脚。"
+    y "当然了当然了。"
+    scene themermaid1_40
+    with dissolve
+    cf "你觉得下面的人能看见我们吗？"
+    y "得有人特意抬头往上看才行，不过也确实有可能。"
+    y "就算真被看见了，半裸着的人也是我不是吗？"
+    scene themermaid1_41
+    with dissolve
+    cf "你说得也对。那就轮到我出力了，对吧？"
+    scene themermaid1_42
+    with dissolve
+    cf "你有没有注意到那枚微光指环？"
+    scene themermaid1_43
+    with dissolve
+    y "就是那种东西。"
+    scene themermaid1_44
+    with dissolve
+    y "!"
+    scene themermaid1_45
+    with dissolve
+    cf "现在还会有人发现我们吗？"
+    scene themermaid1_46
+    with dissolve
+    y "要是之前都没发现的话……"
+    y "那现在可说不定要被看个正着了……"
+    scene themermaid1_47
+    with dissolve
+    cf "喜欢吗？"
+    y "这身衣服确实一点都不端庄……"
+    y "你不担心有人看到你的那对奶子吗？"
+    scene themermaid1_48
+    with dissolve
+    cf "庆典的注意力还在中央的舞台附近。这附近没人。"
+    scene themermaid1_49
+    with dissolve
+    cf "可你还没回答我的问题。你喜欢吗？"
+    y "我不知道。你倒是好好看清楚点啊。"
+    scene themermaid1_50
+    with dissolve
+    cf "这样好点了吗？"
+    y "嗯……好看了一点点。"
+    scene themermaid1_52
+    with dissolve
+    cf "嘿，[player_name]。你没事吧？"
+    y "你什么意思？"
+    cf "只是感觉你压力比刚才更大了吧。"
+    y "没什么好让你操心的。"
+    scene themermaid1_51
+    with dissolve
+    cf "真的？"
+    y "是啊。我是说——我觉得你不用操心。"
+    scene themermaid1_53
+    with dissolve
+    cf "你最好没在骗我，小鱼。"
+    y "嗯，如果你想帮我减压，我倒是能想到几件你可以做的事。"
+    scene themermaid1_54
+    with dissolve
+    cf "不过我们总得回帐篷去吧？"
+    scene themermaid1_55
+    with dissolve
+    y "当然。不过你特意把我带到这么高的地方，还穿成这样？"
+    y "你这不是在求我吗。"
+    scene themermaid1_56
+    with dissolve
+    cf "万一被人看见怎么办？"
+    scene themermaid1_vid1
+    with dissolve
+    cf "哦呵~"
+    y "让他们看好了。他们认不出这里是谁，而且所有人都以为我们在帐篷里。"
+    cf "你、你要让他们以为有陌生人在你的塔上做、做爱吗？"
+    y "就算我想阻止也阻止不了。"
+    cf "你、你必须一直戴着面具吗？"
+    y "你不喜欢我的面具？这可是我的爱人送我的。"
+    y "仔细看看我的眼睛……我不就是你梦中的男人吗？"
+    cf "闭、闭嘴，白痴。"
+    cf "笨、笨小鱼～"
+    cf "啊——你好硬——"
+    y "都怪你。你湿漉漉的小穴还紧紧地吸着我呢——"
+    cf "你可别让、被别人撞见我们！"
+    y "要是被人看见了，要我去骂他们吗？"
+    cf "不、不！"
+    cf "算、算了～ 唔嗯嗯！"    
+    scene themermaid1_vid2
+    with dissolve
+    cf "哈啊～ 狠狠地干我吧，[player_name]～"
+    y "端庄什么的早就没了。"
+    cf "哈～ 对——[player_name]，对！～"
+    y "你要是叫成这样，别人真会以为这上面有海妖。"
+    cf "闭、闭嘴，小鱼～ 都怪你！"
+    cf "唔！？更、更用力～"
+    y "你就是想被人看见，对吧？"
+    cf "不、不是～ 当然不是——"
+    cf "嗯啊～ 你要是选了我这种邋遢女人，别人会更看不起你的！"
+    y "你就是这样的人吗？"
+    cf "是！哈啊～ 我就是个湿答答的小丫头！"
+    cf "我想要你按着我、让我趴在木板上狠狠地干我～"
+    cf "所以快给我我想要的！"
+    scene themermaid1_vid3
+    with dissolve
+    cf "哦，要是现在有人看过来，就能看见你在我的小穴里进出！"
+    "光是想想，[cf]就收紧了。"
+    "焦虑与她的快感交织在一起，她顺着你的肉棒继续摆动腰肢。"
+    cf "今晚的月光也很亮。"
+    cf "真、真的藏不住了吗。"
+    y "你太兴奋了吧？"
+    cf "嗯啊～ 你不也很兴奋吗？"
+    "[cf]的腰肢显出更强烈的渴望，她想就地榨干你。"
+    "不过她是有意识地这么做，还是无意识的，还不好说。"
+    "也许她只是发情了，不管怎样……"
+    y "你这小坏丫头。要让我射了。"
+    cf "射……{w}射进来吧，[player_name]"
+    scene themermaid1_vid4
+    with dissolve
+    cf "哦……{w}这样下去很危险，小鱼。"
+
+    stop music fadeout 4.0
+    scene themermaid1_57
+    with fade
+    cf "我、我们得在宴会散场前回到房间……"
+    scene themermaid1_58
+    with dissolve
+    cf "趁着那边人多，好混进去。"
+    scene themermaid1_59
+    with dissolve
+    cf "呃，我不该起得这么快的……"
+    scene themermaid1_60
+    with dissolve
+    cf "有必要射这么多吗？"
+    scene themermaid1_61
+    with dissolve
+    cf "我们该回去了。"
+    y "你要就这样回去？会被人看见的。"
+    scene themermaid1_62
+    with dissolve
+    cf "所以我才带着这个。"
+    scene themermaid1_63
+    with dissolve
+    y "这可遮不住你多少。"
+    scene themermaid1_64
+    with dissolve
+    cf "所以？"
+    y "[cf]，你这坏蛋。"    
+    cf "就算被人看见，他们也不会以为是我们。我们应该在自己的帐篷里。"
+    cf "他们只会以为我们是帮工。"
+    y "万一有人拦住你寻欢呢？"
+    scene themermaid1_65
+    with dissolve
+    cf "你会保护我的吧？就像在小妖精那次一样。"
+    y "当然。"
+    scene themermaid1_66
+    with dissolve
+    cf "所以来吧。把你的小穴猫带回床上去～"
+
+    scene bg black
+    with fade
+    "你们两个开始往帐篷的方向走去……"
+    "看来一路都很顺利，直到……"
+
+    play music "audio/Coy Koi.mp3" loop fadein 5.0
+    scene themermaid1_67
+    with fade
+    gram_s "为拉姆的荣耀尽忠是你的职责。"
+    bas "我当然知道。我们会尽力而为的，老太婆。"
+    gram_s "以你那套做派居然能混到现在，还真是奇迹。"
+    y "（有趣的是，[cf]偏偏就在芭斯特身边打扮成了猫的样子。）"
+    y "（看来她们是打算让我们悄悄走过去。也许真能蒙混过关。）"
+    scene themermaid1_68
+    with dissolve
+    gram_s "你们两个。站住。"
+    y "（糟了。被发现了。）"
+    scene themermaid1_70
+    with dissolve
+    cf "什、什么事？"
+    scene themermaid1_69
+    with dissolve
+    gram_s "是的？拜托了，芭斯特。管教好你的女人们，不然就得由我来替你管教。"
+    scene themermaid1_71
+    with dissolve
+    bas "是……{w}我的女人们。"
+    y "是的，我的祭主？"
+    gram_s "至少你们当中还有人记得该怎么称呼头衔。"
+    gram_s "听说你把表演辞退了，我还有点失望。"
+    gram_s "让这两个给我上。"
+    cf "打、打扰一下——呃、咳咳……"
+    scene themermaid1_72
+    with dissolve
+    bas "那一位是……{w}对，当然。"
+    bas "我任何一个女人都乐意为你助兴。"
+    y "（这位祭主以为[cf]是纳特吗？她的眼神实在不怎么样。）"
+    scene themermaid1_73
+    with dissolve
+    gram_s "最近是有点无聊。这套排场太正式了。"
+    gram_s "我已经太老了，没心思再参加那种宴会后的余兴。"
+    scene themermaid1_74
+    with dissolve
+    bas "别担心。我敢说这两个很乐意帮你找回青春。"
+    scene themermaid1_75
+    with dissolve
+    bas "对吧，你们两个？"
+    y "（她一定知道。[cf]不是她的人。）"
+    cf "是、是的。当然。这就去办，我的祭主。"
+    scene themermaid1_76
+    with dissolve
+    gram_s "在我那个年代，每个女人身边都有三个男人护卫着。"
+    scene themermaid1_77
+    with dissolve
+    gram_s "如今人手这么不足，真是可惜。"
+    scene themermaid1_78
+    with dissolve
+    bas "别担心。今晚我们面前就有一位顶级的样本。"
+    scene themermaid1_79
+    with dissolve
+    bas "瞧他怎么让她一下就吞到底。"
+    scene themermaid1_80
+    with dissolve
+    cf "{size=-5}你最好别这样，小鱼。{/size}"
+    bas "我敢说这会让你回想起当年～"
+    y "{size=-5}抱歉了，[cf]，你懂的。{/size}"
+    scene themermaid1_81
+    with vpunch
+    cf "哈！"
+    scene themermaid1_vid5
+    with dissolve
+    gram_s "太厉害了……{w}我从没见过有人这么快就吞得这么深。"
+    gram_s "你那些女人在我们脚下的石头上滴水吗？"
+    bas "当然了。这种夜晚？她们脏得很。"
+    bas "那么大尺寸的人类男性，她们当然得准备好吞下去，对吧？"
+    bas "她们要是不湿就会痛，这是理所当然的。"
+    cf "{size=-5}小鱼，你这个混蛋！{/size}"
+    y "{size=-5}没坏我们的事吧？{/size}"
+    cf "{size=-5}真、真好笑！{/size}"
+    gram_s "他就要那样一直顶下去吗？"
+    bas "不，我确定他只是在热身。"
+    scene themermaid1_vid6
+    with dissolve
+    gram_s "嗯。你挑人的口味还真是相当变态。"
+    gram_s "可不是随便哪个妓女都能这样随叫随做地干。"
+    gram_s "至少这样一来，你手上就有了一件驯得服服帖帖、也练得熟手的东西。"
+    bas "是啊。要半裸着到处乱走、奶子还甩在外面，那得是变态中的变态。"
+    bas "把鸡巴挂在身侧游荡，那又是另一个档次的变态了。"
+    gram_s "这就是训练的用处啊。"
+    cf "{size=-5}操、真、真丢人！{/size}"
+    y "{size=-5}可你还不是照样夹紧我、自己耸动起来。{/size}"
+    cf "{size=-5}别扫兴——操我吧，你这野兽～{/size}"
+    y "!"
+    gram_s "我看够了。"
+    bas "站住，你们两个。"
+
+    stop music fadeout 5.0
+    scene themermaid1_82
+    with dissolve
+    cf "{size=-5}为、为什么？～{/size}"
+    gram_s "这些天看这些也没什么意思。"
+    gram_s "芭斯特，把那个男人送到我在城里的房间去。"
+    y "（哦，诸神啊，不要。）"
+    scene themermaid1_83
+    with dissolve
+    bas "当然……{w}要不先让她把他收拾干净。"
+    bas "可不想让他脏兮兮地去见你。"
+    bas "我送你回去。"
+    gram_s "好吧。快点。"
+    scene bg black
+    with fade
+    y "（谢天谢地被她发现了。我们赶紧滚出去吧。）"
+    "你和[cf]一点也没耽搁，赶紧让到了一边……"
+
+    play music "audio/Late Nights - Causmic.mp3" fadein 4.0
+    scene themermaid1_84
+    with fade
+    y "憋屈？"
+    cf "你没接着做啊。反正她们也不知道我们是谁。"
+    cf "除非你想加入那位老太婆？"
+    y "拜托了，[cf]，我正努力为你兴奋起来呢。"
+    scene themermaid1_85
+    with dissolve
+    cf "可恶，直接操我吧，小鱼～"
+    scene themermaid1_vid7
+    with dissolve
+    y "你这个坏女孩，你就是想让人知道？"
+    cf "不、不，我-"
+    y "你就是想让她们看见。"
+    cf "这样不是更好吗？你也想要。"
+    cf "刚才在外面有人的鸡巴插进了我里面。"
+    cf "我想让她们看着你占有我。"
+    cf "你不愿意占有我吗？"
+    y "我刚刚当着另外两个人的面操了你。"
+    y "你是我的，[cf]。"
+    cf "好啊。那就随你的心意来吧。"
+    scene themermaid1_vid8
+    with dissolve
+    y "也许你会想听芭斯特知道那是我们。"
+    cf "猫型纳特？她、她挺可爱的对吧？唔嗯嗯～"
+    y "你觉得呢？我怎么一点也不意外。"
+    y "猫可是出了名的爱吃鱼。"
+    cf "闭、闭嘴，小鱼！"
+    cf "你还真是很会戳我的笑点，是吧？"
+    y "我认识你很久了，不是吗？"
+    cf "下、下次要不要把她也叫上～"
+    y "我还能再弄开一个穴。"
+    scene themermaid1_vid9
+    with dissolve
+    cf "哦，[player_name]～"
+    cf "你真走运——你这根鸡巴这么好用——"
+    cf "你就是靠这个把这些女孩都管得服服帖帖的，对吧？"
+    y "你猜得不算太远。"
+    y "到头来你还是来了。"
+    cf "哦是吗？"
+    cf "你非得用你这根鸡巴把我压住吗？"
+    y "你可以当个坏女孩。"
+    y "赌徒、暴露狂、裸体癖？"
+    cf "这不是同一件事吗？"
+    y "你喜欢光着身子，也喜欢被人看。那是两码事。"
+    y "你知道，要是被人发现了，他们可以随便拿捏你。"
+    cf "啧——不过既然你是这么想的——"
+    cf "你最好更努力一点，好彻底把我制服啊～"
+    scene themermaid1_vid10
+    with dissolve
+    y "我倒希望你干脆就屈服于温柔。"
+    y "[cf]，我爱你。"
+    cf "小鱼！这不公平！"
+    cf "这、这完全不像你！～"
+    y "我们在一起的时候，我会变得不一样。"
+    y "你不是吗？"
+    cf "我知道你只是在撩我，可是——"
+    cf "你顶得这么用力——"
+    cf "我怎么可能抵抗得了？"
+    y "你就是抵抗不了。"
+    y "乖乖顺从就好。"
+    cf "嗯唔！"
+    scene themermaid1_vid11
+    with dissolve
+    cf "不要！啊啊～"
+    cf "[player_name]！"
+    scene themermaid1_86
+    with dissolve
+    cf "我也爱你，小鱼……"
+    y "（[cf]今晚真是主动得不得了。）"
+    y "……{w}睡个好觉，你这只小穴猫。"
+    scene bg black
+    with fade
+    stop music fadeout 4.0
+    "..."
+    jump theexposition1_1
+label theviscount1_1:
+    scene theviscount1_8
+    with fade
+    r "其实你并不一定非要选我。"
+    r "我们的生意没有那些排场照样转得动。"
+    y "但这不是生意。这是享乐。"
+    scene theviscount1_7
+    with dissolve
+    r "哈！谁的？{w}当然不会是我的？"
+    y "我看只是在撑场面，不过你看起来倒是很乐意来。"
+    scene theviscount1_9
+    with dissolve
+    r "众人的目光都盯着我们的时候？当然要装出高兴的样子，你这个笨蛋。"
+    r "要是他们觉得你一文不值，我们这桩交易还有什么意义？" 
+    r "你以为我没有分寸吗？" 
+    y "所以就只是在撑场面？" 
+    scene theviscount1_10
+    with dissolve
+    r "当然。"
+    r "想让你那根玩意儿爽一爽的话，我早就说过了，机会多的是。"
+    r "但别把我的商品和服务当成请帖。" 
+    r "相信我。我用不着。" 
+    scene theviscount1_11
+    with dissolve
+    y "那也许这个能让你改变主意。"    
+    scene theviscount1_14
+    with dissolve
+    y "请看……"
+    scene theviscount1_13
+    with dissolve
+    y "乔伊！"
+    r "你什么时候——"
+    scene theviscount1_12
+    with dissolve
+    y "你慢慢往这边走的时候，我已经让人把乔伊叫来了。"
+    y "我们什么都还没开始，不过我倒很乐意让她留下来陪我过夜。"
+    scene theviscount1_15
+    with dissolve
+    r "又想拿她来对付我？看来你的花样已经用完了。"
+    r "她归你随意摆弄。你想怎样就怎样。"
+    y "你不介意吗？" 
+    scene theviscount1_16
+    with dissolve
+    r "我干吗要在意？骚货就是骚货。"
+    joy "喂！太狠了吧？你就一点都不在意吗？"
+    scene theviscount1_17
+    with dissolve
+    y "啊。（她露馅了。）"
+    r "我就知道。你一溜烟跑掉的时候，我就觉得不对劲。"
+    joy "啊？"
+    r "你总是这么轻易就把底牌交出去。"
+    joy "呃——就算是这样！这也太狠了。"
+    scene theviscount1_18
+    with dissolve
+    joy "我们给她一个教训。第二轮！"
+    scene theviscount1_19
+    with vpunch
+    y "对！"
+    r "什、什么？"
+    play music "audio/Late Nights - Causmic.mp3" fadein 4.0
+    scene bg black
+    with vpunch
+    r "喂、喂，这可是北方的丝绸！"
+    scene theviscount1_20
+    with fade
+    r "就算把我扒光了蒙住眼睛，这待遇也比我大多数时候都好了。"
+    joy "啊，不过还有一件事。"
+    scene theviscount1_21
+    with dissolve
+    r "唔……好冰——"
+    joy "好了。"
+    scene theviscount1_22
+    with dissolve
+    r "你们两个以为自己在干什么？"
+    y "你以前做过这个吗？"
+    joy "确实没有。"
+    joy "我们平时不用这些的。"
+    y "我来帮你处理。"
+    scene theviscount1_23
+    with dissolve
+    r "你们两个在搞什么鬼？"
+    y "你就等着看吧。"
+    y "啊，抱歉，用词不当。"
+    joy "我倒是有点兴奋了呢。"
+    scene theviscount1_25
+    with dissolve
+    joy "我们来玩个游戏吧，蕾娅！轮流由你猜。"
+    joy "要是猜对了，你就有奖品。"
+    scene theviscount1_26
+    with dissolve
+    r "猜猜看是什么？"
+    joy "你在这类事情上非常敏锐。我有信心你能想出来。" 
+    scene theviscount1_28
+    with dissolve
+    y "我敢说你一定会喜欢的。"
+    r "你能把你的鸡巴从我屁股上挪开吗？"
+    r "那我要是输了呢？"
+    joy "那奖品就归王子了。"
+    r "反正我都要挨操。"
+    scene theviscount1_27
+    with dissolve
+    y "唉，你这么一说……"
+    r "哦，好吧。" 
+    r "那就快点开始吧。"
+    scene theviscount1_24
+    with dissolve
+    y "（蕾娅装作乐在其中，不过我现在已经看出来了。）"
+    y "（这女孩是个束缚癖。）"
+    scene theviscount1_vid1
+    with dissolve
+    r "唔——我得猜你有多大吗？"
+    r "还是猜你射之前会干我多少次？"
+    y "我喜欢你这么有想象力，蕾娅。"
+    joy "我也是！"
+    r "啧——要是你只想撩我，那就直接射吧，我好睡觉。"
+    y "别担心，我们会好好疼爱你的。"
+    r "那你倒是告诉我，我到底要猜什么啊！"
+    y "我这边快好了，再给你一次机会想想。"
+    scene theviscount1_vid2
+    with dissolve
+    r "哦～什、什么？等等。"
+    r "这、这个……"
+    joy "感觉不一样吗？"
+    joy "应该是一样的。我照着他的样子做的。"
+    y "你什么时候有机会做这个的？"
+    joy "主人，你在校园里干的事可多了。"
+    r "我看明白你们两个在打什么主意了。"
+    r "你们是想让我猜现在插在我里面的是谁吧？"
+    joy "没错！你真机灵，蕾娅。谢天谢地，我真想不出这种点子。"
+    r "啧——你们两个要是以为这能难住我，可就太小看我了。"
+    joy "唔嗯——好、好吧。下、下一个开始。"
+    scene theviscount1_vid3
+    with dissolve
+    r "乔伊以为自己很聪明，不过我知道，她那边也感觉到了顶回来的东西。"
+    r "她八成是试着操得太用力，已经瘫软了。"
+    r "她就吃这套。"
+    r "不过话说回来，这个又粗又硬，早就准备好了，最关键的是……"
+    r "你身上全是男人的肉味，[player_name]。"
+    scene theviscount1_vid4
+    with dissolve
+    r "想、想塞就随便你怎么塞吧，反正明摆着是你～"
+    y "行。我给你。"
+    y "你骑起鸡巴来可真够狠。"
+    r "哼。"
+    y "这都第三个了，对吧？"
+    y "不过她们倒是挺容易到手的。交到你手上，就跟我们溜进你身体里一样容易。"
+    y "你这个湿漉漉的小变态。"
+    r "我只是在想，下一个节庆我要怎么在你身上狠狠干一场。"
+    y "哼。好了乔伊，该下一个了。"
+    joy "唔嗯……{w}好吧。"
+    scene theviscount1_vid5
+    with fade
+    r "噢HH——操。哼。"
+    r "你要是还这样耸我，一眼就能看出是谁，[player_name]。"
+    joy "你、你确定吗？"
+    r "我熟悉这个节奏，这种只顾自己爽的节奏——"
+    r "乔伊试着动了动，想让我感、感觉更舒服一点。"
+    r "怎么样？"
+    r "你、你现在可以不用再往我里面捅了～"
+    joy "唔嗯嗯——"
+    joy "唔嗯！~"
+    r "你一边操我，一边在抠自己的屁股吗？"
+    r "下、下一个姿势。"
+    scene theviscount1_vid6
+    with dissolve
+    joy "不、不是我……{w}是主人正在、正在进入我……"
+    joy "咦——等、等一下……"
+    r "他、他现在就在里面。所以乔伊在我里面……"
+    r "我早该想到你们会玩这种花样——"
+    y "喂，乔伊，你说刚才操她的是我吗？"
+    joy "不、不是主人，我终究是在她里面～"
+    y "不过感觉上，我确实像是在同时操着你们两个。"
+    joy "嗯哼。嘿——呀、哈啊～"
+    y "乔伊负责你喜欢的那个位置，我来给你应得的节奏。"
+    r "唔唔唔~"
+    scene theviscount1_vid7
+    with dissolve
+    joy "主人，[player_name]，你、你不会射在里面吧？"
+    y "当然不会。那就全毁了。"
+    joy "是～那、那我射出来可以吗？"
+    y "你该跟乔伊学学，蕾娅。"
+    y "乖顺的女孩子得先请求许可。"
+    r "自己动吧。"
+    joy "蕾娅～ 别这么没礼貌。"
+    y "好吧，那我让你轻松点。下一个你可以自己来骑。"
+    scene theviscount1_vid8
+    with dissolve
+    r "呼——"
+    y "这次没那么容易了吧？"
+    r "你要是没流那么多先走液，说不定就难了。"
+    r "这肯定是你。{w}怎么样？"
+    joy "唔……{w}你真的确定？"
+    r "什、什么？我分得清假鸡巴和真鸡巴，好吗？"
+    r "这全都是白费力气。"
+    scene theviscount1_vid9
+    with dissolve
+    joy "是、是啊，可这个我花了好贵的价钱。"
+    r "是吗？"
+    r "那、那说不定……"
+    r "不。不行！这可是货真价实的鸡巴，乔伊。我拿我的屁股跟你赌。"
+    y "这赌我接了。"
+    joy "嘿！不过既然她是对的，那就是说我的屁股没事了？"
+    scene theviscount1_vid10
+    with dissolve
+    r "所以我猜对了？"
+    joy "没错。你有奖品。"
+    y "（她怎么还在我身上磨？）"
+    r "不管那是什么，我有种感觉我并不想要。"
+    joy "你决定让他射在谁里面～" 
+    joy "你？{w}还是我？"
+    r "……{w}你知道我会选谁。" 
+    r "要是我输了会是谁？！"
+    joy "嘿嘿嘿，你知道答案的。"
+    joy "也一样会是你～"
+    joy "反正今晚本来就是你的夜晚～"
+    r "好狡猾的手腕……{w}你有成为子爵的料，我最亲爱的。" 
+    r "那就来吧。快点射。"
+    y "你一直在想让我射出来，是吧？"
+    y "可不是用这种方式。"
+    scene theviscount1_vid11
+    with dissolve
+    r "啊？"
+    y "这到底是什么？"
+    r "（他蹭得我正舒服。）"
+    r "真、真的是你吗？"
+    y "啊，我以为你会上当呢。我们可没说游戏已经结束了。"
+    y "只是上一轮你说对了而已。"
+    joy "你、你耍赖！"
+    r "哦？"
+    y "现在你可以认输，把眼罩摘下来了。"
+    y "但我知道你太好胜，也太骄傲，做不到。"
+    r "（那双手是他的没错，可这动作怎么看都更像乔伊。）"
+    r "（她们到底打算骗我到什么地步？）"
+    scene theviscount1_vid12
+    with dissolve
+    r "啊——操！"
+    y "怎么样？"
+    r "唔——这、这是你的鸡巴。"
+    y "你确定？你脸都红了。我还以为我那种只顾自己的抽插满足不了子爵大人呢。"
+    joy "蕾娅？舒服吗？"
+    r "呃嗯——{w}我不知道。"
+    joy "我让你很舒服吧？"
+    r "呃啊——你们两个怎么突然这么好了？"
+    scene theviscount1_vid13
+    with dissolve
+    y "时间到！"
+    y "你第一次猜对了！是我的鸡巴。"
+    r "啧——我正要说——"
+    y "你只错了一个，蕾娅。奖励是一整管滚烫的浓精。"
+    joy "恭喜！"
+    r "乔伊你这傻丫头——别、别再怂恿他了！"
+    r "操~"
+    y "我要按我想要的方式操到你射出来。"
+    y "你会喜欢的，对吧，蕾娅？"
+    r "呃啊～ 操！快、快点射！"
+    scene theviscount1_vid14
+    with vpunch
+    r "噗嘻呋呋呋呜——操！啊啊～"
+    r "啊呜！～"
+    scene theviscount1_29
+    with dissolve
+    joy "干得好，主人。"
+    scene theviscount1_30
+    with dissolve
+    joy "她看起来真的很享受呢！"
+    scene theviscount1_31
+    with dissolve
+    r "乔伊……{w}等下我要操你的屁股。"
+    joy "!"
+    scene bg black
+    with fade
+    "..."
+    jump theexposition1_1
+label thedemoness1_1:
+    play music "audio/Lovely Piano Song.mp3" fadein 4.0
+    scene thedemoness1_2
+    with fade
+    leo "你还肯让我进你的帐篷，我很感激。"
+    y "你刚来的时候告诉我，乔塞尔尔家族对我们的提议毫无兴趣。"
+    scene thedemoness1_1
+    with dissolve
+    leo "而就眼下的情形来看，我已相信这是最上乘的配对。"
+    leo "我们携手，将筑起一座庇护努比利亚万世的堡垒。"
+    leo "况且，只有你知道我与苍白者的契约。"
+    y "你怕我会告诉别人吗？"
+    scene thedemoness1_2
+    with dissolve
+    leo "嗯。我考虑过，但我看不出你分享我的秘密能有什么好处。"
+    leo "不。事实上，你我二人天生就最适合利用她来为自己谋利。"
+    leo "我真该像你那样，找出一个驯服她的法子。"
+    leo "我那份幼稚的愚蠢耽误了我。"
+    scene thedemoness1_3
+    with dissolve
+    leo "不。{w}公平地说，那只会让我一直被封印着，直到那恶魔把我踩在脚下。"
+    leo "我最感激你。"
+    scene thedemoness1_4
+    with dissolve
+    arj "我也一样。"
+    leo "今晚我为你备了一份礼物。"
+    leo "其他人也都带着自己的献礼来了。"
+    leo "论金银或闲话，我拿不出什么可比的东西。"
+    leo "但我有的，我愿一并献给你。"
+    scene thedemoness1_5
+    with dissolve
+    leo "阿尔真塔便献给你，[player_name]，她是我唯一的仆人。"
+    leo "只要我在你身边，她就归你差遣。"
+    scene thedemoness1_6
+    with dissolve
+    arj "我活着的意义就是侍奉，王子殿下，[player_name]。"
+    leo "我知道其他人已经献上了贵重的仆人。"
+    leo "但阿尔真塔有诸多独一无二之处。"
+    leo "她当然也是与其他仆人一样训练有素的仆人。"
+    leo "但她同时还通晓各种技艺：能读、能写、能舞，能照料、能打扫，还能下厨。"
+    leo "若你愿意，甚至可以用她来开启你自己的家族。"
+    y "开启家族？"
+    scene thedemoness1_5
+    with dissolve
+    leo "当然这还不是全部。苍白者也归你差遣。"
+    leo "那是一件用于战斗与逼供的可怕利器。"        
+    y "我当然看得出这其中的用处，可我说的是阿尔真塔……"
+    scene thedemoness1_7
+    with dissolve
+    arj "我没问题的。我和她相处并不会感到不适。"
+    arj "至于组建家族——如果你愿意的话，我的子宫归你所有。"
+    y "哦，这可真夸张。唔，谢谢你？"    
+    leo "她是个尽心尽力的仆人，也是虔诚的信徒……"
+    scene thedemoness1_8
+    with dissolve
+    leo "可她是个变态。"
+    arj "呵呵呵。"
+    scene thedemoness1_9
+    with dissolve
+    arj "我只是在我家小姐身边教她一些世间的常识。"
+    arj "我给了她一些研究男性身体的好书。"
+    scene thedemoness1_10
+    with dissolve
+    leo "荤书。"
+    arj "我也当然告诉过她，发情的时候要懂得排解。"
+    leo "她教我怎么……"
+    arj "据说就是弹弄她的小豆子。"
+    y "……{w}侍女替小姐做这种事，可以吗？"
+    scene thedemoness1_9
+    with dissolve
+    arj "贵族拿仆人做实验，这种事并不算稀奇。"
+    leo "可就算按这个标准，你也太出格了，阿尔真塔……"
+    leo "可我爱她。"
+    arj "呵呵呵。"
+    leo "你真的没问题吗？"
+    scene thedemoness1_11
+    with dissolve
+    arj "我没事。我早该在很久以前就死去了。你给我的每一刻都是欢愉。"
+    leo "……{w}谢谢你。"
+    scene thedemoness1_12
+    with dissolve
+    leo "好。我要开始了。"
+    arj "我这就去梳妆打扮～"
+    scene thedemoness1_13
+    with fade
+    arj "这样可以吗？"
+    y "看起来你们两个更像是脱光了……"
+    scene thedemoness1_14
+    with dissolve
+    leo "太好了。谢谢你如此周到，阿尔真塔。"
+    arj "这是我的荣幸。"
+    scene thedemoness1_15
+    with dissolve
+    leo "跪下吧，恶魔。"
+    pal_o "呼——"
+    scene thedemoness1_16
+    with dissolve
+    pal_o "这事别把我扯进去，半血母狗。我不感兴趣。"
+    scene thedemoness1_17
+    with vpunch
+    leo "跪下。"
+    scene thedemoness1_18
+    with vpunch
+    pal_o "呃啊！"
+    pal_o "哈啊……哈……"
+    pal_o "狗娘养的婊子。这不会持续太久。我还是有办法占有你的子嗣。"
+    pal_o "不管走哪一条路，你都立下了誓言。这不过是时间问题。"
+    leo "低头。"
+    scene thedemoness1_19
+    with vpunch
+    pal_o "哈啊——"
+    scene thedemoness1_21
+    with dissolve
+    pal_o "啧——"
+    scene thedemoness1_21
+    with dissolve
+    pal_o "这样羞辱我，能让你满足吗？"
+    scene thedemoness1_22
+    with dissolve
+    leo "随你怎么呻吟。想自由的话，你可以解除契约。"
+    leo "在那之前，别躲到我的仆人背后去。"
+    leo "现在，该为今晚能好好侍奉我们道谢了。" 
+    scene thedemoness1_23
+    with dissolve
+    pal_o "是、是的，女主人——{w}谢谢你给我这个机会来侍奉。"
+    y "真是厉害……你能叫她离开阿尔真塔的身体吗？"
+    scene thedemoness1_24
+    with dissolve
+    leo "我试过了。有什么东西不让她服从。"
+    leo "我怀疑还是有办法把她赶出去，必要的话我愿意在魔法污泥里打滚。"
+    leo "但我还没牺牲我的骄傲。我要把这个魔族从阿尔真塔体内弄出去。"
+    scene thedemoness1_25
+    with dissolve
+    leo "在那之前，随你怎么处置它来服侍我们。"
+    menu:
+        "供你享乐？"
+        "{color=00ff00}那就继续{/color}":
+            y "那你说吧。"
+            scene thedemoness1_24
+            with dissolve
+            leo "阿尔真塔，帮我们的大人宽衣，如何？"
+            pal_o "唔呃——"
+            jump thedemoness1_2
+        "不必（跳过）":
+            y "不用演示了。"
+            scene thedemoness1_24
+            with dissolve
+            leo "哦。那至少让我伺候您舒服。"
+            leo "说实话……{w}我需要练习。"
+            y "嗯……好吧，那就一点点。"
+            scene bg black
+            with fade
+            jump theexposition1_1
+label thedemoness1_2:
+    play music "audio/Late Nights - Causmic.mp3" fadein 4.0
+    scene thedemoness1_26
+    with dissolve
+    pal_o "呃，为什么我非得做这个？"
+    y "你之前倒是很想做。"
+    scene thedemoness1_27
+    with dissolve
+    pal_o "你根本没打算做交易。也就是说，我没兴趣舔你的鸡巴。"
+    scene thedemoness1_28
+    with dissolve
+    pal_o "不过你要是愿意改主意，我还是可以被说服的~"
+    scene thedemoness1_29
+    with dissolve
+    leo "闭嘴，含着他的鸡巴。"
+    pal_o "呃呃呃——不、不等等！"
+    scene thedemoness1_vid1
+    with dissolve
+    pal_o "啊呃！"
+    pal_o "呼呃咕斯——呃呵~"
+    leo "谢谢你迁就我，游牧者大人。"
+    y "该道谢的是我。"
+    pal_o "呼 Yoo foo——"
+    pal_o "唔唔唔唔~"
+    y "这感觉好像有点浅……"
+    leo "她在用舌头吗？"
+    y "啊，你说对了。正是这样。她没有。"
+    pal_o "呃咕 嗯 咕哝 母狗~"
+    leo "所以她才在含糊嘟囔。"
+    scene thedemoness1_vid2
+    with dissolve
+    leo "用你的舌头。"
+    pal_o "呃咕呵！"
+    leo "做完之后你该记住他的味道。"
+    y "好了。"
+    pal_o "唔呃呃呵~"
+    leo "你觉得她能让你满足吗？"
+    y "你是说她能不能让我射出来？"
+    y "不，不完全是。"
+    leo "好吧……{w}我也想让她来弄我。"
+    pal_o "唔嗯？唔咕——"
+    y "请便。"
+    scene thedemoness1_vid3
+    with dissolve
+    pal_o "呼——{w}呃咕——{w}你——{w}呃呵——{w}母狗~"
+    y "你让你的仆人和你的敌人一起伺候你。"
+    leo "哈~ 同时从两边取乐，不是很常见吗？"
+    y "通常不会同时。"
+    y "哪个更让你满足，莱奥娜？"
+    leo "我觉得……"
+    leo "我喜欢让她知道自己几斤几两。"
+    y "苍白者？"
+    leo "嗯~ 是的……{w}我被胁迫的盟友。"
+    leo "没有那些操纵手段，你的影响力微乎其微。"
+    leo "难得……{w}我可以确定你在侍奉我。"
+    scene thedemoness1_vid4
+    with dissolve
+    leo "我的身体……{w}好烫。"
+    y "我觉得这说明她干得不错。"
+    pal_o "呃咕 呃咕 弗呃~"
+    leo "这和我们用你那个仆人提供的补药时不一样。"
+    y "你为什么这么说？"
+    leo "身体深处有什么……"
+    leo "在发痛。"
+    leo "她在做什么……"
+    y "她在舔你的阴蒂。"
+    leo "不，是——更多……"
+    scene thedemoness1_vid5
+    with dissolve
+    leo "但是……"
+    pal_o "..."
+    leo "我不想让她停。"
+    y "啊？"
+    leo "我想……{w}我想让她开心。"
+    y "是发生了什么怪事吗？"
+    leo "我想要她进到我里面来……"
+    y "好吧，绝对有什么怪事在发生。"
+    scene thedemoness1_30
+    with dissolve
+    y "住口。"
+    scene thedemoness1_31
+    with dissolve
+    y "莱奥娜？"
+    leo "呃……"
+    y "你对她做了什么？"
+    scene thedemoness1_32
+    with dissolve
+    pal_o "她刚才在用那些手段对付我，我没理由不能反过来用在她身上。"
+    y "啧——回答问题。"
+    scene thedemoness1_33
+    with dissolve
+    pal_o "你不用生气！我只是把她的性欲推过了极限而已。"
+    pal_o "顺便说一句，那极限低得很。她真的应该多做点爱。"
+    scene thedemoness1_34
+    with dissolve
+    pal_o "现在——"
+    scene thedemoness1_35
+    with vpunch
+    y "！灯！"
+    scene thedemoness1_36
+    with dissolve
+    y "你，你事先计划了什么？"
+    pal_o "别担心，我没法伤害你，记得吗？"
+    pal_o "我们只是改成当着她的面寻开心而已。"
+    leo "站直。"
+    scene thedemoness1_37
+    with dissolve
+    pal_o "呃啊！"
+    scene thedemoness1_38
+    with dissolve
+    leo "把胳膊背到身后。你这个小骗子。你在打什么算盘？"
+    scene thedemoness1_39
+    with dissolve
+    leo "呃……"
+    pal_o "等等，别想歪了！"
+    scene thedemoness1_40
+    with dissolve
+    pal_o "我只是想一起参与，我没有任何恶意！"
+    leo "她撒谎跟呼吸一样自然。"
+    scene thedemoness1_41
+    with dissolve
+    y "莱奥娜，你没事吧？"
+    scene thedemoness1_42
+    with dissolve
+    leo "你、你能不能帮我绑住她？"
+    y "好吧……"
+    scene bg black
+    with fade
+    y "嗯……用绳子。这个就行。"
+    leo "哦我受不了了！够、够好了，直接操我吧！"
+    scene thedemoness1_vid6
+    with fade
+    leo "唔嗯嗯嗯！[player_name]~"
+    pal_o "呵呵。你本该更小心些的。"
+    pal_o "只要有足够多的我的体液，连铁甲巨兽都会热得硬起来。"
+    leo "闭、闭嘴——操、操啊啊啊~"
+    y "（这感觉不一样。）"
+    leo "我身体里有什么东西，在发痒——"
+    y "（我怎么感觉有点饿了？）"
+    y "我要更用力吗？"
+    leo "是是是——请！更用力~"
+    leo "求你了帮帮我~"
+    y "我做得对吗？这是你想要的吗？"
+    leo "我不知道~ 你感觉好爽！"
+    y "你也是……{w}你身体的温度在我体内蔓延。"
+    leo "我也是。好满~你进得好深~"
+    leo "那、那我为什么还想要更多？我、我想——"
+    pal_o "嘻嘻，说啊~{w}说出来？"
+    leo "我的嘴……{w}我、我的屁股……"
+    leo "不——别再乱搞我的脑子！"
+    pal_o "我在这边呢。现在你完全是自个儿在做哦，公主~"
+    pal_o "你的脑子很快就会流着口水糊成一团好几小时。"
+    y "让我试试看……"
+    y "（咦？我好像拔不出来？）"
+    leo "我需要被填满——求你了~"
+    scene thedemoness1_vid7
+    with dissolve
+    pal_o "别担心。我不会就这样把你的脑子搞坏。"
+    pal_o "显然我比什么愚蠢的药剂或药水高明多了。"
+    pal_o "你现在想要鸡巴想得要命。"
+    leo "呃——{w}坏心眼的家伙！"
+    y "（我为什么停不下来？）"
+    pal_o "但等他射了精，你就会失去所有的羞耻心。"
+    leo "你、你在说什么？"
+    pal_o "任何插在你体内的鸡巴都会让你的身体颤抖着索取更多。"
+    pal_o "你肯定会彻底失去理智~"
+    leo "等、等等住手，她对你施法了！"
+    y "我好像没法……"
+    y "我向你发誓，刚才我明明打算停下的——呃呵 操~"
+    pal_o "没错。你的气味让别人{i}不得{/i}不操你。"
+    leo "哈啊你这魔族！"
+    pal_o "当然~ 呵呵呵！"
+    pal_o "你现在要是在外面，所有男人都会把你操到傻。"
+    pal_o "而你会像现在这样，求他们操你。"
+    y "这、这不对劲，我好像停不下来！"
+    y "呃啊——"
+    scene thedemoness1_vid8
+    with dissolve
+    pal_o "我本来打算等你回幽暗地穴之后再用这个。"
+    pal_o "本来可以好好看他们把你操到傻~"
+    pal_o "但你惹毛我了！"
+    pal_o "你让我含着他的时候，我在他的精液里动了手脚。"
+    pal_o "他下一个射进去的女孩就会神志不清！"
+    y "啧，提醒我盯着她点。"
+    leo "别让她惹火你。"
+    pal_o "哈哈哈！等你射出来，她绝对会醉得不省人事！"
+    pal_o "每一分抚弄都会再送她一波高潮。"
+    leo "够了，你这个淫妇！唔嗯——"
+    pal_o "她会连着好几天神志不清地高潮着——活该这贱人！"
+    y "（该死，我还能怎么办？）"
+    y "（我还是有一种无法抑制的冲动想继续。）"
+    leo "我、我有个主意。"
+    y "（该死）我试试慢下来！"
+    scene thedemoness1_vid9
+    with dissolve
+    y "慢一点，就这样，我、我能撑住。"
+    leo "好、很好！就是这样——{w}仔细听着~"
+    leo "我们换个位置！"
+    y "换？操，我差一点点就到了——"
+    pal_o "那样可不管用哦~"
+    leo "魔族魔法是建立在感、感情上的！"
+    leo "你觉得你能不能停、停一下别操我？"
+    y "我不知道——"
+    leo "我相信你的意志——求你了~"
+    y "我尽量。"
+    leo "等我射出来，就顶进去狠狠干她，干到你能干多久就多久。"
+    y "操了她？"
+    leo "完全彻底，快点——"
+    pal_o "哦，我看穿你在干什么了。祝你好运！"
+    scene thedemoness1_43
+    with vpunch
+    leo "呃呼！"
+    scene thedemoness1_44
+    with dissolve
+    y "（不行。我非操她不可。）"
+    scene thedemoness1_45
+    with dissolve
+    y "呃……"
+    scene thedemoness1_46
+    with vpunch
+    pal_o "呃啊！~"
+    scene thedemoness1_vid10
+    with dissolve
+    pal_o "不错。要是你们能抵挡住这诱惑，你们两个都是绝妙的样本。"
+    pal_o "但这不会持续太久。这不是你真正想操的小穴吧？"
+    y "去你的。"
+    y "（她说得对。我不想要这个。我想要的是她。）"
+    scene thedemoness1_vid11
+    with dissolve
+    y "咦？我看不见……"
+    y "（她给我蒙上眼睛了？）"
+    leo "嗯~ 就是这样。继续操我~"
+    pal_o "呼啊？！是你？！"
+    pal_o "咳~ 狡猾的母狗——他不会上当的！"
+    leo "就一直往里顶、顶进去。"
+    leo "我要你滚烫滚烫的精液~"
+    y "莱奥娜……{w}（她贴着我耳朵低语的样子，真就像我在操身边的人。）"
+    leo "我湿成这样了吧？"
+    pal_o "啧！"
+    leo "让、让我流汁水，填满我。{w}操我。"
+    leo "我是你的搭档。你的朋友。你的爱人。你的女人。"
+    pal_o "你这婊子！"
+    scene thedemoness1_vid12
+    with dissolve
+    y "莱奥娜……"
+    pal_o "这个穴才不、不是她的！混蛋！"
+    leo "我、我也一样，[player_name]，再给我更多~"
+    pal_o "人类怎么能蠢成这样？！"
+    leo "你感受到我了，对吧？你听见我的声音了吗？"
+    leo "让、让我射出来。听听我射出来~"
+    pal_o "该死的人类！蠢货！尿脑子！"
+    y "你要再这么动下去，我就要射了。"
+    pal_o "别、别这么做！我从没在这么小的身体上用过这个法术！"
+    leo "给我。我真的非常需要……"
+    y "莱奥娜，我——"
+    pal_o "住手！不不不！"
+    scene thedemoness1_vid13
+    with dissolve
+    pal_o "你——！"
+    pal_o "啊啊啊！"
+    scene thedemoness1_47
+    with dissolve
+    pal_o "不不不……"
+    pal_o "操。操我。操。"
+    scene thedemoness1_48
+    with vpunch
+    pal_o "呼呃 呼呃——唔嗯嗯！"
+    scene thedemoness1_49
+    with dissolve
+    y "莱奥娜……"
+    scene thedemoness1_50
+    with dissolve
+    leo "我知道……{w}轮到我了，对吧？"
+    scene thedemoness1_vid14
+    with fade
+    leo "谢谢你为我做到这一步。"
+    y "计划本来就是你想出来的。说真的，还有别的选择吗？"
+    y "我可不能让你接下来好几天都醉在情欲里。"
+    leo "我心里某个角落怀疑过你会答应帮忙。"
+    y "你以为我会让那种事发生在你身上？"
+    leo "是。为了占我的便宜。光明正大地。"
+    leo "哈~ 随你高兴骑我的肉。"
+    y "我一叫你，你就会来，对吧？"
+    leo "是、是的。"
+    y "那莱奥娜，我已经随我高兴骑你了。"
+    leo "但有底线。"
+    scene thedemoness1_vid15
+    with dissolve
+    y "什么底线？"
+    leo "唔呼~ 我会——{w}我绝不会在人前到你那儿去。"
+    y "啊，所以我不能把你召到人前被操。"
+    y "还有呢？"
+    leo "如、如果我正在和别人商谈，我就不会来~"
+    y "你不会为了我丢下别人？"
+    y "你的工作就那么重要？"
+    leo "它比享乐更优先~"
+    y "嗯。这个我们可以慢慢来。"
+    y "我觉得偶尔破几次规矩是我应得的。"
+    y "你不这么认为吗？"
+    leo "唔嗯~ 也、也许吧。但我的恶魔优先。"
+    y "莱奥娜，我会帮你征服你的恶魔。"
+    scene thedemoness1_vid16
+    with dissolve
+    leo "这、这些恶魔……{w}有时让我觉得自己无能为力。"
+    leo "但如果你在身边……{w}就没那么难受了。"
+    leo "我觉得自己什么都能做到~"
+    leo "即使我是你的女人。"
+    leo "你确定你想要我？这么容易被手段和谎言就弄、弄到手？"
+    y "我确定。"
+    y "莱奥娜，我想做唯一爬上你高墙的人。"
+    y "突破你的防线。"
+    leo "我不想一个人游荡……{w}做吧。"
+    leo "贯穿我的子宫吧，[player_name]大人~"
+    y "莱奥娜……"
+    scene thedemoness1_vid17
+    with dissolve
+    leo "唔嗯噗！{w}唔嗯嗯……"
+    leo "[player_name]……"
+    y "莱奥娜……"
+    scene thedemoness1_51
+    with dissolve
+    y "（勇敢的女孩。即便在黑暗中迷失，她也行动敏捷。）"
+    scene thedemoness1_52
+    with dissolve
+    y "她会成长为出色的游牧者。"
+    scene bg black
+    with fade
+    "..."
+    jump theexposition1_1
+label thebonadeans1_1:
+    play music "audio/Lovely Piano Song.mp3" fadein 4.0
+    scene thebonadeans1_2
+    with fade
+    pria "哦快看！还有吃的！" 
+    fati "普莉莎，小心别吃太多。" 
+    fati "你喝酒也该注意点……" 
+    sab "别害羞，祖基。我想他会听你说完。"
+    zuki "但我不是你们中的一员。"
+    sab "你是博纳德一族的孩子。"
+    sab "而且名义上，代表是伊莎。"
+    scene thebonadeans1_1
+    with dissolve
+    isha "[player_name]不会因为别人属于别的部族就评判她。"
+    sab "她说你能留下，就没人有权拒绝。"
+    isha "萨巴说得对。我决定你和其余人是一起的。"
+    isha "你值得一个机会，卡恩派也值得一个机会。"
+    isha "[player_name]在我没资格留下的时候，依然愿意接纳我。" 
+    isha "我敢肯定，他对你也会同样宽厚。"
+    y "你在顾虑什么？"
+    scene thebonadeans1_3
+    with dissolve
+    zuki "啊……"
+    zuki "只是——"
+    zuki "..."
+    sab "走吧。"
+    scene thebonadeans1_4
+    with dissolve
+    zuki "我……{w}我是卡恩派，也是暗精灵，但萨巴是我的妹妹。"
+    zuki "作为太阳与月之下的孩子，我把自己献上，做你的女人。"
+    y "什么？这也太突然了。"
+    scene thebonadeans1_5
+    with dissolve
+    zuki "我们初次见面时，我就对你有所怀疑。" 
+    zuki "在我看来，你身上没有那人的气味。"
+    y "哪个人？" 
+    scene thebonadeans1_6
+    with dissolve
+    zuki "我心里的那个人。值得我托付的人。我孩子的父亲。" 
+    y "这……要求不少。是什么让你改了主意？"
+    scene thebonadeans1_7
+    with dissolve
+    zuki "你保护着那么多人，却还愿意为护着我妹妹而承担这份重担。"
+    zuki "作为她的姐姐，我本该在她身边的。"
+    sab "祖基……"
+    isha "我不认为我们谁把萨巴当成过负担。"
+    scene thebonadeans1_8
+    with dissolve
+    zuki "只要我能赢得你的欢心，科坎就会对我展露笑容。"
+    zuki "你配得上。"
+    zuki "我请求你，在播撒种子的时候，让我成为为你孕育孩子的人。"
+    zuki "请把它深埋在我的子宫里，我会给你一个健康的孩子。"
+    zuki "一个配得上月之引者这个称号的孩子。"
+    y "我明白，但还是太让人意外了。" 
+    y "萨巴，你说她要跟你留下来的时候，我可没想到会是这样。" 
+    sab "对不起。我不是想骗你什么的。"
+    sab "我只是想至少让你听她说完。" 
+    y "这真的是你们大家想要的？" 
+    scene thebonadeans1_9
+    with dissolve
+    fati "祖基是萨巴的姐姐。要是她不在妹妹之前成为女人，那就是耻辱。" 
+    pria "哈哈哈！我的王子，金爪队又多一个！" 
+    scene thebonadeans1_10
+    with dissolve
+    isha "是的。这就是太阳与月的法则。"
+    isha "我说过了。祖基随她母亲，是博纳德族。"
+    isha "我只要宣布一声，她就和其他人一样了。"
+    isha "注定要为太阳孕育你的孩子。"
+    sab "别说得好像你没参与一样。你也和我们一起！" 
+    isha "当然。我会留在你身边，[player_name]。"
+    scene thebonadeans1_11
+    with dissolve
+    isha "如果你愿意，我这块田任你耕种。"
+    y "我怎么能拒绝你这些真心的请求？" 
+    pria "那你要把我们所有人都不放过？" 
+    sab "今、今晚？"
+    y "今晚？和我们五个一起？" 
+    y "我希望你考虑一件事：我只有一个。"
+    scene thebonadeans1_12
+    with dissolve
+    fati "啊——菲塔娜有办法应付。"
+    pria "更多的[player_name]？分身！？" 
+    fati "什么？不是。怎么做到的？说点合理的，姐姐。" 
+    fati "我听见她和乔茜提起过。" 
+    fati "一种她族人用来延长夜间活力的药剂。"
+    fati "按我的理解，它能让你多射好多次，多到不正常。"
+    sab "多到不正常？" 
+    scene thebonadeans1_13
+    with dissolve
+    pria "有兴趣了？" 
+    fati "我敢肯定他们在这帐篷里某处藏了一瓶，以防你选了她。" 
+    y "真的？菲塔娜要那东西做什么？"
+    scene thebonadeans1_14
+    with dissolve
+    isha "别担心。我们其余人不会贪心。今晚你只需照顾我们两个。"
+    zuki "嗯？"
+    pria "呵呵呵。没错。伊莎，你教教祖基规矩，让我们的王子先上道。"
+    pria "月亮的女孩热身的时候，法蒂玛，你和我来准备好我们的太阳之女。"
+    sab  "什、什么？"
+    isha "我完全明白。"
+    fati "是的，我想我也明白。"
+    sab "等等，我不懂！"
+    scene thebonadeans1_15
+    with dissolve
+    zuki "我该做什么？" 
+    isha "首先你得脱衣服。"
+    sab "啊——等等，我可以自己脱！" 
+    play music "audio/Ammil - The Tides.mp3" fadein 4.0
+    scene bg black
+    with fade
+    "..."
+    scene thebonadeans1_16
+    with dissolve
+    zuki "在伊迪思，人们都这样做吗？"
+    isha "这是女孩为了让男人准备好而做的事。"
+    y "你不自在吗，祖基？希望我们没有吓到你。"
+    scene thebonadeans1_17
+    with dissolve
+    zuki "不！完全没有！科嫩说我该尽一切所能去学。"
+    zuki "今晚，我是你的学生……"
+    scene thebonadeans1_18
+    with dissolve
+    isha "今晚你是我们的妹妹。而你会收获第一次。"
+    zuki "我该怎么做？"
+    scene thebonadeans1_19
+    with dissolve
+    isha "我这样做的话，你就还是女人……"
+    zuki "唔嗯~"
+    isha "你懂我的意思吧？"
+    scene thebonadeans1_vid1
+    with dissolve
+    isha "很好。"
+    isha "卡恩派不习惯前戏。让她兴奋起来应该费不了多少功夫。"
+    zuki "唔嗯——呃呵——唔嗯~"
+    y "哇……{w}她肯定很有经验。"
+    y "我没想到她会直接做到最后一步。"
+    zuki "呼呃~ 唔嗯嗯嗯——"
+    isha "这对她来说大概比慢慢鼓起勇气更舒服。"
+    zuki "唔呃呵~"
+    sab "哈啊！"
+    y "咦？那是什么声音？"
+    isha "其他人正在准备太阳之女。"
+    isha "我们也得尽自己的那份，把月之女准备好。"
+    isha "[player_name]，请躺到我身下。"
+    scene thebonadeans1_20
+    with dissolve
+    zuki "你、你为什么退开？"
+    zuki "我、我做错什么了吗？"
+    isha "祖基，没事的。我们只是换个姿势。"
+    isha "她们有机会就不会浪费。"
+    scene thebonadeans1_vid2
+    with dissolve
+    zuki "呃咕——呃咕——唔呃呵~"
+    y "卡恩派怎么做爱？他们的习俗是怎样的？"
+    isha "通常要快得多。一旦插进去，他们不会停，直到满足为止。"
+    isha "但他们整晚做这种事的次数更多。"
+    y "她真的想把我榨干。"
+    pria "法蒂玛，摸着这里。"
+    sab "姐、姐姐？呼呃！嘿——！"
+    fati "哦，那招真有效……"
+    isha "祖基，等等——"
+    y "我觉得她已经神志恍惚了。她是真的想让我射出来。"
+    isha "那么……"
+    scene thebonadeans1_22
+    with dissolve
+    isha "等等。"
+    zuki "！对、对不起……{w}我太投入了。"
+    scene thebonadeans1_21
+    with dissolve
+    sab "你们俩在打什么主意？"
+    zuki "那是……"
+    scene thebonadeans1_24
+    with dissolve
+    isha "[player_name]，别急……等听到萨巴的声音。"
+    zuki "太阳的姐姐？"
+    scene thebonadeans1_23
+    with dissolve
+    sab "法蒂玛——住、住手，你要让我——"
+    pria "这才是重点，姐姐~"
+    scene thebonadeans1_25
+    with dissolve
+    sab "呃啊啊！"
+    scene thebonadeans1_26
+    with dissolve
+    zuki "求、求你……别吊我胃口。"
+    sab "啊！哈啊！我要、要射了！"
+    scene thebonadeans1_vid3
+    with dissolve
+    zuki "啊啊啊！~"
+    sab "啊呃——哈啊？！"
+    zuki "姐、姐姐。你们到底在对她做什么？"
+    isha "别担心，你姐姐没事。很多个月以来我们都在照顾她。"
+    isha "再信我们一次。"
+    sab "呃呵~ 哈——啊呃！"
+    isha "专注于你自己的快感。"
+    zuki "这感、感觉——{w}太美妙了！~"
+    isha "就是这样……感受他把你填满。"
+    sab "呼哧！~"
+    isha "想象他的种子在你体内。"
+    zuki "是、是，我明白了！~"
+    isha "[player_name]，你能加速吗——不是，就是……"
+    isha "射出来？"
+    y "我试试。"
+    scene thebonadeans1_vid4
+    with dissolve
+    zuki "啊呃嗯~ 太阳行者？哈啊~"
+    y "你不想让我射出来？"
+    isha "还没。"
+    zuki "唔呼呜呜~ 唔嗯嗯！咳啊~"
+    y "你可让我不那么轻松。"
+    y "先让她含着，再把我放进去。"
+    isha "我们必须在巅峰与低谷都为他掀起帷幕。"
+    isha "这个就快到巅峰了。看。"
+    zuki "呃啊呵~"
+    isha "我们运气好，她没经验又敏感。请你务必全力以赴。普莉莎和我意见一致。"
+    y "我有一阵子没听到萨巴的声音了……"
+    isha "是的，快到了……"
+    isha "若拉姆庇佑，那就是福气了。"
+    isha "快了……"
+    zuki "呃啊啊~"
+    scene thebonadeans1_27
+    with vpunch
+    isha "住口！"
+    zuki "啊呃嗯……"
+    scene thebonadeans1_28
+    with dissolve
+    zuki "唔呃……"
+    zuki "嗯唔……"
+    isha "就这样吧。"
+    scene thebonadeans1_29
+    with dissolve
+    isha "法蒂玛，我们准备好了！"
+    scene thebonadeans1_30
+    with dissolve
+    fati "听见了吗，萨巴。好姑娘，你做到了！"
+    scene thebonadeans1_31
+    with dissolve
+    y "你们两个对这可怜姑娘做了什么？"
+    fati "我们只是帮她骑上巅峰。"
+    pria "她只是迎来了自己的日落。"
+    scene thebonadeans1_32
+    with dissolve
+    pria "那我们就把你们三个留在一起了。"
+    scene thebonadeans1_33
+    with dissolve
+    isha "太阳落下，月亮升起。"
+    isha "这场仪式将开启一个和谐的时代。"
+    scene thebonadeans1_34
+    with dissolve
+    isha "剩下的就是像萨巴那样，把她也带下来。"
+    zuki "姐姐？发、发生在她身上的那些事都是……"
+    isha "是的，轮到你了。"
+    scene thebonadeans1_35
+    with dissolve
+    zuki "唔嗯……"
+    sab "祖基……"
+    scene thebonadeans1_36
+    with dissolve
+    zuki "你、你没事吧？"
+    sab "我没事。听起来你受到的待遇比我更糟。"
+    scene thebonadeans1_37
+    with dissolve
+    zuki "他……{w}他对我很好……"
+    sab "那我们就是同一天的两个部分。"
+    scene thebonadeans1_38
+    with dissolve
+    pria "当太阳之女落下——"
+    fati "月之女升起。"
+    scene thebonadeans1_39
+    with dissolve
+    isha "剩下的就是让我们看看一次日出。"
+    scene thebonadeans1_40
+    with dissolve
+    isha "以及随之而来的，旧法则的最后一轮月亮。"
+    y "哦，这景色……"
+    scene thebonadeans1_46
+    with dissolve
+    pria "做得对吗？"
+    isha "我想是的。"
+    fati "也许她会潮吹？"
+    scene thebonadeans1_41
+    with dissolve
+    y "我明白了。我只要把祖基做到结束，对吧？"
+    sab "请给我妹妹一个满意的欢迎，[player_name]~"
+    zuki "我……{w}希望我能让你满意。"
+    scene thebonadeans1_vid5
+    with dissolve
+    zuki "呃呵呵！哈啊呵~"
+    y "祖基……"
+    isha "她的收获满满！"
+    scene thebonadeans1_vid6
+    with dissolve
+    zuki "啊啊啊呃呃~"
+    fati "一个完整的循环！从落日到升月——"
+    y "毕竟你才刚来，我会温柔一点。"
+    zuki "哈啊~ 温、温柔一点——好~"
+    pria "暗精灵不习惯男人做体贴的情人。女人不会让男人把自己摆成这种姿势。"
+    pria "要是有个暗精灵像祖基这样，他就不会这么老实~"
+    sab "[player_name]对我们很温柔。"
+    y "没、没错，可她……"
+    pria "呵呵呵——开始有感觉了吧？"
+    pria "暗精灵的发情期。"
+    y "抱歉，祖基，我撑不了那么久。"
+    scene thebonadeans1_vid7
+    with dissolve
+    zuki "啊呃——啊呵——哈啊——呃呵！~"
+    fati "暗精灵的身体更温暖，因为他们大多在夜里活动。"
+    fati "他们体内的温度能帮助他们保暖，也能很快完事。"
+    pria "但也会让他们有点精虫上脑，不是吗？"
+    zuki "哈啊——啊呃——哈啊啊~"
+    isha "你们两个！别再评论了！想想我们这么对你们会怎样。"
+    fati "对、对不起。伊莎。"
+    pria "抱歉。"
+    y "（不过她们说得对，我不记得小穴这么烫过。）"
+    y "（感觉我的鸡巴要融进她小穴的肉褶里了。）"
+    zuki "唔呃啊——呃——啊呃——求、求你——{w}快、快射~"
+    y "操——"
+    scene thebonadeans1_vid8
+    with dissolve
+    zuki "啊呃——尊、尊贵的男性……{w}干得好……"
+    scene thebonadeans1_42
+    with dissolve
+    zuki "哈啊——呃呵……"
+    scene thebonadeans1_47
+    with dissolve
+    zuki "真是莫大的荣幸……{w}能获赠如此丰厚的种子……"
+    pria "我们……{w}先放过她们吧。"
+    scene thebonadeans1_44
+    with dissolve
+    zuki "姐姐，你以前做过这个？"
+    sab "嗯……"
+    zuki "我想看看你感觉是不是一样。"
+    scene thebonadeans1_43
+    with dissolve
+    sab "我想[player_name]也是同样的想法。"
+    zuki "你能教我怎样取悦博纳德族的男人吗？"
+    scene thebonadeans1_44
+    with dissolve
+    sab "[player_name]其实不算博纳德族。倒不如说，我们是他的女人。"
+    zuki "女人属于男人？真是荒谬。"
+    sab "是、是啊。我觉得没人会真的去、去想——"
+    scene thebonadeans1_45
+    with vpunch
+    sab "去想这种事！~"
+    scene thebonadeans1_vid9
+    with dissolve
+    y "（我倒是有看法。不过我想她问萨巴，是因为萨巴是女孩吧？）"
+    sab "可、可是你让他射出来了~"
+    sab "你、你做得好棒，姐姐。妈！"
+    zuki "我……{w}我任由他摆布。那不是我们的做法。"
+    sab "我、我想确实如此，可是——"
+    sab "[player_name]，你会怎么说？"
+    y "操祖基的感觉棒极了。"
+    y "如果我想换个方式要她，我就那样要她。"
+    y "暗精灵翘着屁股献上？"
+    y "我觉得你表现得棒极了，祖基。"
+    sab "呵——是、是啊，就是这样~"
+    zuki "嗯……{w}我、我明白了，可是——"
+    zuki "我觉得你该停下了，[player_name]。"
+    sab "祖基？你、你在说什么？"
+    zuki "我是说，你不是也要射进她里面吗？"
+    sab "祖基？！啊啊~"
+    y "哈哈哈！你们暗精灵还真直接啊。"
+    zuki "我不想看到她受苦。"
+    zuki "她不该被逼得那么频繁地到巅峰。你隔着帷幕都听见她呻吟了。"
+    sab "姐姐求你了——唔嗯~你完全弄错了！"
+    sab "我没有受苦！~那你呢？"
+    zuki "嗯……{w}没有，但如果他下次也对我那样……"
+    y "我就打断你的腿。"
+    zuki "……{w}是的……"
+    scene thebonadeans1_vid10
+    with dissolve
+    sab "别、别担心，姐姐"
+    sab "能让他成为我的日落，是我的荣幸~"
+    sab "我来的那、那么多次……"
+    sab "全都是为了让他在我体内感觉更好~"
+    sab "啊啊！你不亲身体验就不知道那有多美妙~"
+    sab "向他献上自己……{w}让他掌控我的身体。"
+    sab "成为他的女人真正的幸福——"
+    zuki "姐姐……"
+    sab "谢、谢谢你，[player_name]，愿意把你的种子给我——"
+    y "萨巴……"
+    sab "求、求你……{w}射在我里面？"
+    y "你要是这么说——到底谁才是做主的那一方？"
+    scene thebonadeans1_vid11
+    with dissolve
+    y "那就来吧，你们这群贪心的姐妹。"
+    y "把我吸干。"
+    sab "啊啊啊啊！{w}谢、谢谢你，我的王子~"
+    scene thebonadeans1_48
+    with dissolve
+    zuki "能与你共享这一刻是我的荣幸，小妹妹。"
+    scene thebonadeans1_49
+    with dissolve
+    sab "祖基……{w}应该道谢的是我……"
+    scene bg black
+    with fade
+    "..."
+    jump theexposition1_1
+label thealchemist1_1:
+    play music "audio/Lovely Piano Song.mp3" fadein 4.0
+    scene thealchemist1_1
+    with fade
+    jos "主人？我听埃兹拉说您召我过来。是睡不着吗？"
+    y "乔茜，是的，大概吧。我想在今夜结束前和你谈谈。"
+    scene thealchemist1_2
+    with dissolve
+    y "庆典上我没看见你。"
+    scene thealchemist1_3
+    with dissolve
+    jos "对！我当时在和那对双胞胎姐妹一起布置你的帐篷和仪式场地。"
+    jos "狮鹫的飞行好看吗？"
+    y "好看。确实值得一看。狮鹫有时候很难预测。你为这个准备很久了吗？"
+    scene thealchemist1_4
+    with dissolve
+    jos "是啊。我跟双胞胎姐妹提了这个点子，她们很喜欢。"
+    jos "你能喜欢一切，我很高兴。"
+    y "谢谢你这些天的辛劳，乔茜。你一向做得比我要求的更多。"
+    y "你看起来有点不一样。"
+    scene thealchemist1_5
+    with dissolve
+    jos "啊，大概是妆的关系。我跟她们说过这不适合我。"
+    scene thealchemist1_6
+    with dissolve
+    jos "这样如何？好点了吗？"
+    y "我更想看你的脸。"
+    jos "这就是我的脸。"
+    y "你真正的脸。"
+    scene thealchemist1_7
+    with dissolve
+    jos "我真正的脸，对吧。"
+    y "你没戴眼镜。"
+    scene thealchemist1_8
+    with dissolve
+    y "你的疤……{w}会让你困扰吗？"
+    jos "不、不会的，主人。不是身体上的。我没事。"
+    scene thealchemist1_9
+    with dissolve
+    jos "您要是贴这么近盯着我看，我会不好意思的，陛下。"
+    y "能告诉我这道疤是怎么来的吗？"
+    jos "我不想拿这种故事来麻烦您……"
+    jos "你没——{w}你没在梦里见过吗？"
+    y "嗯……{w}倒没有明确看到过。我想应该是你被俘的时候留下的。"
+    y "乔茜，我很抱歉你经历了那些。"
+    scene thealchemist1_8
+    with dissolve
+    jos "不是你的错。这种事发生的人比我们希望的多得多。"
+    scene thealchemist1_9
+    with dissolve
+    jos "再说了，正因为那些事，我现在才会在这里。和你在一起！"
+    scene thealchemist1_10
+    with dissolve
+    jos "嘿，我知道。"
+    scene thealchemist1_11
+    with dissolve
+    jos "你说你睡不着，对吧？"
+    scene thealchemist1_12
+    with dissolve
+    jos "这个应该能帮上忙。"
+    scene thealchemist1_13
+    with dissolve
+    jos "其实我在这顶帐篷里放了些对其他女孩有用的补药。"
+    jos "滴一滴应该能让你放松下来。"
+    menu:
+        "睡觉？"
+        "{color=00ff00}不，我更想和乔茜共度今夜{/color}":
+            y "不用了，乔茜。我更想和你一起过夜。"
+            jump thealchemist1_2
+        "听起来是个好主意（睡觉）":
+            y "是啊。其实这确实是个好主意。"
+            scene thealchemist1_15
+            with dissolve
+            jos "很好。就一滴，好吗？喝多了对你不好。"
+            y "你要是不在这儿，我怎么会知道这些。"
+            jos "我只希望你别什么来路不明的液体都往嘴里灌……"
+            y "说得也对……"
+            scene thealchemist1_52
+            with dissolve
+            y "助眠？我其实从来没睡不好过。"
+            jos "只是让你明天好过一点的补药。毕竟今晚那么忙。"
+            scene thealchemist1_53
+            with dissolve
+            y "*咕嗯*"
+            scene thealchemist1_54
+            with dissolve
+            y "呃。真够呛的。不过味道其实挺甜的。"
+            y "但是是不是开始有点热了？"
+            scene thealchemist1_55
+            with dissolve
+            jos "小心点。"
+            scene thealchemist1_56
+            with dissolve
+            y "你、你这混蛋……{w}你……{w}给我下毒了？"
+            scene bg black
+            with fade
+            "..."
+            $ drank_poison = 1
+            jump theexposition2_1
+label thealchemist1_2:
+    play music "audio/Ammil - The Tides.mp3" fadein 4.0
+    scene thealchemist1_14
+    with dissolve
+    jos "哦，呃……{w}那个，也许我可以再给你拿一瓶，如果你还想继续找乐子的话？"
+    scene thealchemist1_15
+    with dissolve
+    jos "还剩下的女孩不多了，不过我或许能找埃兹拉来？"
+    y "不用了。我这就有一个。"
+    scene thealchemist1_16
+    with dissolve
+    jos "哇！等、等一下，别就这样把我抱起来啊！"
+    scene thealchemist1_17
+    with dissolve
+    jos "女神在上，你力气真大。这样我至少不用担心你会把我摔了。"
+    scene thealchemist1_18
+    with dissolve
+    y "不好！"
+    jos "哇啊啊！"
+    scene thealchemist1_19
+    with dissolve
+    y "开玩笑的。"
+    jos "你——真不敢相信你会这样。陛下。"
+    scene thealchemist1_20
+    with dissolve
+    y "乔茜，你想离开吗？我知道你没有义务留下。但我还是希望能和你相伴。"
+    y "虽然是自己找的，但这种孤独实在让人窒息。"
+    scene thealchemist1_21
+    with dissolve
+    jos "可恶啊，陛下……{w}您这样问太不公平了。"
+    jos "如果你想我留下，我就不会走。"
+    scene thealchemist1_22
+    with dissolve
+    jos "我永远不会离开你。"
+    y "……{w}现在谁不公平了？"
+    scene thealchemist1_23
+    with fade
+    jos "你真的没问题吗？只有我一个人，你知道吧？"
+    jos "其他任何一个女孩，你开口她们都会来的。"
+    y "我想要的确实是你。"
+    scene thealchemist1_24
+    with dissolve
+    jos "女神啊。这也太离谱了。"
+    y "你为什么这么说？"
+    scene thealchemist1_25
+    with dissolve
+    jos "不过——{w}我是说，一个主人和他的仆人？"
+    jos "这算是滥用职权吧？"
+    y "你说得也许没错。我该停下吗？"
+    jos "不不不。现在已经没别的选择了。反正我想我也没别的办法让你睡着。"
+    scene thealchemist1_vid1
+    with dissolve
+    jos "嗯……其他人都是怎么做这个的？"
+    jos "把这么异物的东西塞进别人体内，简直天理难容。"
+    y "你不喜欢？"
+    jos "喜、喜不喜欢它根本不是重点。"
+    y "喜不喜欢才是唯一的重点。如果你难受，我可以停下。"
+    jos "不……{w}继续。"
+    scene thealchemist1_vid2
+    with dissolve
+    jos "哈啊——操一个女孩，真的有那么舒服吗？"
+    y "你从来没试过？"
+    jos "当然不会。"
+    y "你把埃兹拉变成了女孩，我只是以为你试过反过来的。"
+    jos "那、那是我第一次试那种药。"
+    y "...."
+    jos "抱、抱歉，别告诉埃兹拉。"
+    y "你有时候真是个坏女孩。"
+    scene thealchemist1_vid3
+    with dissolve
+    jos "哦——请、请慢慢地惩罚我~"
+    y "恐怕那样算不上什么像样的惩罚。"
+    jos "我、我又不是故意拿她们当实验品。"
+    jos "我只是想在解决她们的病。"
+    jos "你、你能慢一点吗？"
+    y "还没。"
+    y "所以你会在别人主动要求的时候试新药？"
+    jos "是、是的。"
+    y "只在她们要求的时候？"
+    jos "一般——"
+    scene thealchemist1_vid4
+    with dissolve
+    y "答错了。"
+    jos "哈哈！我只是开玩笑——"
+    jos "你、你要是这样继续下去，那就不是惩罚了，陛下。"
+    y "操，乔茜。你怎么湿成这样？"
+    jos "我就有预感可能会这样。"
+    jos "所以我喝了一种能让你在我体内保持硬挺的药。"
+    jos "另一种让我的体液变得更黏稠~"
+    jos "还有一种能让我的肌肉放松，好让你随心所欲。"
+    y "我说过别在自己身上试那些东西。"
+    jos "对不起，陛下~"
+    y "你也太享受了……"
+    scene thealchemist1_26
+    with dissolve
+    jos "哦，换姿势？随您高兴吧，陛下。"
+    y "你那些药迟早会成为你的祸根。"
+    scene thealchemist1_vid5
+    with dissolve
+    jos "咳~"
+    jos "你在这方面挺有天赋的，不是吗？"
+    jos "你自己给自己造了把柄。我要是想不牺牲自己就摆脱这个，恐怕很难。"
+    y "你一边冷静地吞吐我的肉棒，一边分析自己的姿势……"
+    jos "会让您困扰吗，陛下？"
+    y "不会。这只意味着我得更努力一点。"
+    scene thealchemist1_vid6
+    with dissolve
+    y "你还喝了别的东西吗，乔茜？"
+    jos "您为什么这么问，陛下？"
+    y "从你的反应看出来的。"
+    jos "陛下，您也忒自恋了吧？也许我只是比别的女孩敏感得少一些。"
+    y "你把感觉弄钝了。那是作弊。"
+    jos "那种药本来就不是用来把感觉弄钝的。"
+    jos "事实上，它是用来让男人在女孩体内保持硬挺的。"
+    y "我明白了。就是把感觉钝化，好让男人持续下去。"
+    jos "还是一样敏锐。差不多是这个意思。"
+    y "好吧。"
+    scene thealchemist1_27
+    with dissolve
+    jos "啊？"
+    scene thealchemist1_28
+    with vpunch
+    jos "嘿嘿！"
+    scene thealchemist1_vid7
+    with dissolve
+    jos "你、你要干什么？！"
+    y "我专门在按这个点。"
+    jos "为、为什么？！"
+    y "你随便喝多少药都行。但当你这里有感觉的时候，你肯定会有反应，对吧？"
+    jos "太、太过了——你要是再那样揉我——"
+    y "（对我也有效。）"
+    jos "唔——诅咒这副敏感到极点的身体~"
+    jos "啧——至少让我喘口气！"
+    y "糟、糟了我要射了——"    
+    jos "哈！？"
+    scene thealchemist1_vid8
+    with dissolve
+    jos "等等，别那么——"
+    jos "这、这么快~"
+    scene thealchemist1_29
+    with dissolve
+    y "咦？乔茜，你说得对。射完之后我还是硬的。"
+    scene thealchemist1_30
+    with dissolve
+    jos "可恶……"
+    y "你没事吧？"
+    scene thealchemist1_31
+    with dissolve
+    y "如果你愿意，我们可以就到这里。"
+    scene thealchemist1_32
+    with dissolve
+    jos "好、好的。我想这样最好。"
+    scene thealchemist1_33
+    with dissolve
+    y "乔茜？"
+    jos "..."
+    scene thealchemist1_34
+    with dissolve
+    y "出什么事了吗？"
+    jos "*吸鼻子* 没、没什么。只是——有点疼。"
+    scene thealchemist1_35
+    with dissolve
+    y "哪里疼？"
+    jos "忘、忘了我刚才说的话吧。我很快就走，陛下。"
+    y "让我看看。"
+    jos "不、不，我-"
+    scene thealchemist1_36
+    with dissolve
+    y "乔茜。你的疤。"
+    scene thealchemist1_37
+    with dissolve
+    jos "没什么。我一直都有，现在已经习惯了。"
+    jos "抱歉给您看这么恶心的东西。我很快就走。"
+    y "..."
+    scene thealchemist1_38
+    with dissolve
+    jos "你要干什么？"
+    y "我想看你的脸。你真正的脸。"
+    jos "你应该知道我正藏着自己的真面目吧？"
+    jos "我的意思是——这道疤不是我身上最恶心的东西……"
+    jos "那样真的没问题吗？"
+    scene thealchemist1_39
+    with dissolve
+    y "如果我是在战斗中被打得毁容，你也一样会不要我吗？"
+    jos "如果是你，我会直接把你修好。"
+    y "就是这个道理。那我怎么可能做得不一样？"
+    jos "陛下……"
+    scene thealchemist1_40
+    with dissolve
+    jos "用你自己的方式来说，你跟她一模一样。"
+    y "你说的是谁？"
+    scene thealchemist1_41
+    with dissolve
+    jos "你的母亲。"
+    scene thealchemist1_42
+    with dissolve
+    y "什么？"
+    scene thealchemist1_43
+    with dissolve
+    jos "哈啊——就是她~"
+    scene thealchemist1_vid9
+    with dissolve
+    y "你认识我母亲？"
+    jos "我、我是认识。"
+    y "可你明明这么年轻……{w}你到底多大？"
+    jos "你现在也该知道，这对一位淑女来说不是个礼貌的问题。"
+    jos "不过话说回来——我从来就没当过什么淑女。"
+    jos "你知道我们认识，这就够了。"
+    jos "我居然在操她的儿子，本来就已经不对了。"
+    y "这么一来反而更火热，这有什么不对吗？"
+    jos "是那种药把你的鸡巴抵在我的子宫上。"
+    jos "它让你发热，让我湿润，还把我们的身体推离高潮。"
+    scene thealchemist1_vid10
+    with dissolve
+    jos "你为什么顶得更用力了？"
+    y "我不知道。大概是那样感觉有点刺激吧。"
+    jos "你果然是个变态的儿子。"
+    y "能跟我说说我的母亲吗？"
+    jos "现在真的是时候了吗？"
+    y "我刚知道她原来认识她。我很想知道。"
+    jos "直率又容易兴奋。"
+    jos "跟她一模一样。"
+    jos "我答应你，总有一天会把她的一切都告诉你。"
+    jos "毕竟她是对我非常重要的人。"
+    jos "可、可是你们两个有太多相似之处了。"
+    scene thealchemist1_vid11
+    with dissolve
+    jos "你、你知道这些就够了。"
+    y "我还有好多问题想问。你能帮我太多了。"
+    jos "我想不是的，陛下。我没有什么能满足您的。"
+    jos "至、至少不是那种意义上的。"
+    jos "或许我的骚穴正好能抵我的过错，交给您。"
+    y "什么过错？"
+    jos "别想太多。"
+    jos "继续用你的腰撞我，[player_name]。"
+    y "我会的……"
+    y "我……"
+    scene thealchemist1_44
+    with dissolve
+    jos "你怎么停了？出什么事了？"
+    y "我动不了了……"
+    scene thealchemist1_45
+    with dissolve
+    jos "太好了。我还以为自己搞砸了。"
+    jos "万一失败了，我可能就得整晚操你了。"
+    jos "那倒也是个不错的选择……"
+    y "乔茜？怎——"
+    scene thealchemist1_46
+    with vpunch
+    y "!"
+    jos "哇！你想用头撞我！？"
+    jos "你真够机灵的。这种时候还想反抗。从做爱到动手快得像翻书一样。"
+    scene thealchemist1_47
+    with dissolve
+    jos "你果然是你母亲的儿子。"
+    y "（乔茜你做了什么？乔茜？）"
+    y "..."
+    y "（我说不出话。）"
+    scene thealchemist1_48
+    with dissolve
+    jos "小心。"
+    y "（乔茜是内鬼？不。但她至少也牵扯其中了吧？）"
+    scene thealchemist1_49
+    with dissolve
+    y "（我坐不下去。）"
+    y "（一定就是她放的。但为什么？为什么要现在动手？）"
+    y "（她要是想杀我，早就有很多次机会了。）"
+    scene thealchemist1_50
+    with dissolve
+    y "（我的视线开始模糊了。）"
+    y "乔、乔茜……"
+    scene thealchemist1_51
+    with dissolve
+    jos "对不起，陛下。你只要知道……"
+    scene bg black
+    with fade
+    jos "我爱你。"
+    "..."
+    jump theexposition2_1
+label theemptyroom1_1:
+    scene thetwins1_1
+    with fade
+    jdy "请别再这样吓我了！"
+    jdy "你该庆幸我是专业的。不能这样吓观众，很可能会引起暴动，你懂吧？"
+    amy "饶了他吧，茱蒂。你又不是不懂。"
+    scene thetwins1_2
+    with dissolve
+    jdy "我是说，我挺庆幸我们平安撑过去了……"
+    jdy "我见过观众为更小的事就砸场子。"
+    menu:
+        "我没有选任何人……"
+        "道歉":
+            y "对不起……我不是故意那样扰乱场面的。"
+            y "我只是自己心里有点事。"
+            scene thetwins1_3
+            with dissolve
+            amy "瞧，他理解。我们不能指望他是个艺人。"
+            jdy "不过暴动还是很危险。"
+            scene thetwins1_4
+            with dissolve
+            amy "我想我们的王子只是想让我们休息，仅此而已。我很感激他。"
+            scene thetwins1_5
+            with dissolve
+            jdy "*叹气* 我想那种事难免会发生。"
+            jdy "怯场是真的问题。就连最优秀的人也会这样。"
+            scene thetwins1_6
+            with dissolve
+            jdy "去休息一会儿好吗？{w}真希望你感觉好些了。"
+            jdy "我只是庆幸似乎没人因为你刚才的迟疑而不满……"
+            scene thetwins1_7
+            with dissolve
+            jdy "至少观众们看上去是信了。"
+        "打消她的顾虑":
+            y "没什么大不了。你处理得很好，不是吗？"
+            scene thetwins1_3
+            with dissolve
+            amy "正是如此，茱蒂，演出必须继续！"
+            jdy "你知道我有多讨厌临场发挥！"
+            scene thetwins1_4
+            with dissolve
+            amy "没问题！王子就是让你别掉以轻心。这对你有好处。"
+            scene thetwins1_5
+            with dissolve
+            jdy "*叹气* 你今晚剩下的时间不用再做了。"
+            scene thetwins1_6
+            with dissolve
+            jdy "去好好休息吧，也许明早你会好一些，公主殿下。"
+        "就此结束今晚":
+            y "我累了。今晚就到这里吧。"
+            scene thetwins1_3
+            with dissolve
+            amy "这点我倒是同意。"
+            jdy "我想专业地收场。"
+            scene thetwins1_4
+            with dissolve
+            amy "那可不是每个人都做得到的，茱蒂~"
+            scene thetwins1_5
+            with dissolve
+            jdy "*叹气* 好吧。我懂了。"
+            jdy "我也没指望你解释什么。"
+            scene thetwins1_6
+            with dissolve
+            jdy "不管是什么，别让它变成我们的麻烦，好吗？"
+            scene thetwins1_7
+            with dissolve
+            jdy "晚安，[player_name]。"
+    scene thetwins1_8
+    with dissolve
+    jdy "缪斯在上……"
+    scene afterparty1_1
+    with dissolve
+    y "（没什么大不了的。）"
+    scene afterparty1_2
+    with dissolve
+    y "（我只是不想和任何人过夜。）"
+    scene afterparty1_3
+    with dissolve
+    y "又或者……谁都不要……"
+    menu:
+        "召唤……"
+        "{color=00ffff}乔茜{/color}":
+            y "乔茜……"
+            jump thealchemist1_1
+        "{color=00ffff}埃兹拉{/color}（内容提示：MMF）" if ezragirl == 2:
+            y "埃兹拉……"
+            jump thesoldier2_1
+        "{color=00ffff}茱娜{/color}":
+            y "茱娜……{w}已经不在这里了。"
+            y "如果我再见到她……{w}我一定要紧紧抱住她。"
+            scene afterparty1_5
+            with dissolve
+            y "咦？为什么今晚让我这么多愁善感？"
+            scene afterparty1_4
+            with dissolve
+            y "一定是累了。还是睡一会儿吧……"
+            scene bg black
+            with fade
+            "..."
+            jump theexposition1_1
+label theempath2_1:
+    scene theempath2_1
+    with fade
+    p "选中我们这一家人真是明智。"
+    p "是看中了我们的财富和影响力，对吧？"
+    p "我推测这桩婚配对努比利亚的未来而言将是完美的。"
+    y "谁说我选的是财富。我选的是你，普里西拉。"
+    scene theempath2_3
+    with dissolve
+    p "谢谢你的美言。"
+    y "你是个条件优越的候选人，能带来很多助益。"
+    y "我听说你学遍了我们部族所有流传下来的习俗。"
+    y "在才智和资源方面，你无人能及。" 
+    scene theempath2_2
+    with dissolve
+    p "我……不是人类，你真的不在意吗？"
+    p "本质而言我是亡灵，不能被算作人类。"
+    p "我能不能怀上你的孩子，仍是个谜。"
+    menu:
+        "{color=00ff00}温柔地安抚她 {/color}":
+            y "普里西拉，凡事都需要时间。"
+            y "如果你担心的话……"
+            jump theempath2_2
+        "安抚她并睡下（跳过）":
+            y "普里西拉，凡事都需要时间。"
+            scene theempath2_3
+            with dissolve
+            y "如果你担心的话……"
+            y "这是个我们必须解开的谜。"
+            scene bg black
+            with fade
+            "..."
+            jump theexposition1_1
+label theempath2_2:
+    play music "audio/Peaceful Mind - Astron.mp3" fadein 4.0
+    scene theempath2_3
+    with dissolve
+    y "这是个我们必须解开的谜。"
+    y "但要选的话，我绝不会选别人。"
+    y "独自做人类并没有多大意义。"
+    scene theempath2_2
+    with dissolve
+    y "你是什么样的人更加重要。"
+    y "而且你是个善良的人，普里西拉。"
+    scene theempath2_3
+    with dissolve
+    y "你没有你母亲那种冷漠，却把她丰厚的福泽都继承了下来。"
+    y "你会成为克莱斯特穆尔出色的队长。"
+    scene theempath2_4
+    with dissolve
+    p "谢、谢谢你。"
+    "一阵突如其来的狂喜淹没了你的意识。"
+    "就好像你这一辈子都在等着听到这句话。"
+    y "哇——咦？"
+    scene theempath2_5
+    with dissolve
+    p "啊，抱歉。如果我没弄错的话，看来我的感情传到你的意识里了。"
+    p "我不是故意的。"
+    y "不，没关系……{w}我们放松一下吧。"
+    scene theempath2_3
+    with dissolve
+    p "好啊。我想看看其他人给我们准备了什么。"
+    scene theempath2_6
+    with dissolve
+    p "这就是传统上战营的样子吗？"
+    y "差不多吧。通常没这么华丽。"
+    scene theempath2_7
+    with dissolve
+    p "哦，能给我一点时间吗？"
+    y "做什么？"
+    p "很快给你看。"
+    scene theempath2_8
+    with dissolve
+    p "别偷看。"
+    y "我不会。"
+    scene theempath2_9
+    with dissolve
+    p "好了。"
+    scene theempath2_10
+    with dissolve
+    p "你觉得呢？"
+    y "那是泳装吗？"
+    scene theempath2_11
+    with dissolve
+    p "我觉得不是。"
+    y "那……{w}那是用来做什么的？"
+    scene theempath2_12
+    with dissolve
+    p "母亲说过，突出身材的服装比整个露出来更好。"
+    y "所以这是为了勾引我啊。好吧——"
+    scene theempath2_13
+    with dissolve
+    y "我很满意——"
+    scene theempath2_14
+    with vpunch
+    p "唔唔唔——"
+    y "你是把那个穿在外衣里面的吗？"
+    scene theempath2_15
+    with dissolve
+    p "是的……{w}可以认为你是喜欢吗？"
+    y "很好看。现在让你看看我衣服底下穿的是什么。"
+    scene theempath2_vid1
+    with dissolve
+    y "（空气里有一种奇怪的酥麻感。）"
+    y "普里西拉……{w}你刚才说你死了？"
+    p "不、不是，我说的是不死……"
+    p "不死这个状态被很多种生物共享着。"
+    p "在恰、当的情况下，食尸鬼、幽灵和丧、丧尸都可以算是——"
+    y "那你是哪一种？"
+    y "我在自己帐篷里操的那个火辣的又是哪一种？"
+    p "我、我不清楚……"
+    p "哈啊~我、我不知道自己是什么——"
+    y "对我来说，你就是个女人，普里西拉。"
+    y "我知道你从没体会过被女人温热的小穴裹住鸡巴的滋味。"
+    y "要是你体会了这个，你就知道了。但你休想说服我你不是。"
+    p "我、我可以……"
+    p "我可以把你的感觉推进我的身体里。"
+    p "我就能感觉到你在我体内进出。"
+    p "就像是我在把自己的性器推进自己体内一样……"
+    y "那就做吧。"
+
+    scene bg black
+    with fade
+    "你帐篷的墙外……"
+    scene theempath2_16
+    with fade
+    nat "所以你还穿着那个呢，嗯？"
+    tal "我的很好穿。不像你那个。至少我的是舒服的。"
+    scene theempath2_17
+    with dissolve
+    tal "啊？"
+    nat "怎么了？"
+    tal "就是感觉——"
+    scene theempath2_18
+    with dissolve
+    tal "呀啊！" 
+    scene theempath2_19
+    with dissolve
+    tal "什、什么？！" 
+    nat "呃，你好？你以为你在干什么？"
+    tal "不是我啊，蠢货。有东西在碰我。是我身上有虫子还是怎么的？"
+    scene theempath2_20
+    with dissolve
+    tal "啊——好痒！"
+    nat "天上的女神啊，我妹妹真是个怪人！"
+    scene theempath2_21
+    with dissolve
+    tal "咦……{w}停下了？"
+    scene theempath2_21
+    with vpunch
+    tal "靠！什、什么鬼？！"
+    scene theempath2_vid2
+    with dissolve
+    tal "呃啊啊啊——"
+    tal "（这是怎么回事？感觉像有人在操我！）"
+    tal "啧——混蛋~"
+    tal "（这是某种魔法吗？）"
+    tal "（这样要持续多久？）"
+    tal "爽、爽死了，好舒服~"
+    tal "（等我找到对我干这事的人，我要把他的脑子操出来！）"
+    tal "可恶——"
+    scene theempath2_vid3
+    with dissolve
+    p "我感觉到了——"
+    p "感觉在我体内是什么滋味~"
+    p "我、我真的感觉是这、这样吗？就这么……{w}撩人？"
+    y "你会怎么形容？"
+    p "像是柔软又龌、龌龊的激情拥抱。"
+    p "好、好像你一样——好像是我自己在故意把自己吸进去~"
+    y "你不也是吗？"
+    p "我、我觉得你顶进来的时候我在后退，可同时又——"
+    scene theempath2_vid4
+    with dissolve
+    p "有、有什么东西在把我往里拉~"
+    y "没错。你在把我往里吸，普里西拉。"
+    y "就算你的腰往后撤，你的小穴还是在拉着我。"
+    p "我、我对不起~"
+    y "你为什么要道歉？"
+    p "我觉得好、好烦躁。这样还不够吗？"
+    p "我还想要更多！~"
+    y "就这样吧。"
+    scene theempath2_vid5
+    with dissolve
+    tal "（操！感觉有什么东西在撕扯我的骚穴！）"
+    tal "（还有人在抓着我的腰把我往里拉！）"
+    tal "（混蛋，至少当面来。）"
+    p "（有一根线在牵动我脑海深处。）"
+    p "（这是谁的想法？）"
+    p "（这不是我的。）"
+    tal "呼啊——！"
+    tal "操！"
+    scene theempath2_24
+    with fade
+    "外面……"
+    rummi "你不这么觉得？"
+    elf_ent "恐怕没那么可能。"
+    scene theempath2_25
+    with dissolve
+    rummi "但要是他们买下整个剧团，我们名义上不就成了他的仆人？"
+    elf_ent "即便如此，侍奉也是不一样的。"
+    shop1 "嗯？"
+    scene theempath2_26
+    with dissolve
+    shop1 "哈！"
+    elf_ent "出什么事了？"
+    scene theempath2_27
+    with dissolve
+    shop1 "哦哦哦！"
+    elf_ent "怎么了？抽筋了吗？"
+    scene theempath2_28
+    with dissolve
+    shop1 "不！有、有东西碰到我了！后、后面是什么？"
+    elf_ent "我什么也没看到。"
+    scene theempath2_vid6
+    with dissolve
+    elf_ent "你确定自己没事吗？"    
+    rummi "如果你觉得不舒服，我可以亲一下让它好起来？"
+    shop1 "等、等等，肯定有什么东西在、在动~"
+    elf_ent "你发情了吗？呃——"
+    rummi "哦，圣人们啊，你发情了？"
+    shop1 "不，我——我只是感觉怪怪的……"
+    shop1 "我——我会没事的。"
+    elf_ent "我们扶你坐下，喝点什么东西之类的吧……"
+    scene theempath2_vid7
+    with dissolve
+    p "[player_name]……我觉得还有别的事在发、生~"
+    y "好、好像。我也觉得感觉到了。"
+    y "是不是你把感觉散播出去的范围比你自己以为的更远？"
+    p "是、是的，我也觉得有可能。"
+    p "我要试着收回来吗？"
+    y "感受别人的情绪很舒服……"
+    y "但我们也许不该这样影响无辜的人。"
+    p "我想继续感受你的愉悦~"
+    y "你能控制吗？也许把焦点放到别人身上？"
+    p "嗯哼~那也许我可以提个建、建议？"
+    y "你心里有人选了？"
+    p "可、可能吧，但首先——"
+    scene theempath2_vid8
+    with fade
+    p "嗯~~~~，[player_name]~"
+    p "（我想把你的意识和我的融合在一起。）"
+    y "（什么？你能做到？）"
+    p "唔嗯嗯~"
+    y "（我在听你的想法吗？不，更像是我知道你的意图。）"
+    y "（你的舌头好舒服。像这样打转。）"
+    p "（对。再抓紧一点，我喜欢感受你的手指在那里~）"
+    y "（我想操你。）"
+    p "（我也想操你。）"
+    y "（那这样怎么帮到我们？）"
+    p "（你可以帮我集中精神。我想找一个能承受我们感应的容器。）"
+    y "（你认识的人，比如安娜？）"
+    p "（安娜和我关系固然紧密，但这次该找一个有血缘关系的人。）"
+    p "（但你会接受我母亲吗？）"
+    y "（她是个让人火大的人。）"
+    p "（她或许会喜欢。）"
+    p "（而且我想你也会喜欢。）"
+    scene theempath2_vid9
+    with fade
+    d_cm "呃啊——" 
+    d_cm "发、发生什么了？"
+    d_cm "呃——别让其他人靠近……"
+    servant "克莱斯特穆尔夫人？" 
+    d_cm "住、住手。别碰我。" 
+    d_cm "普里西拉身上出什么事了？"
+    d_cm "（我必须回我房间去。）"    
+    d_cm "感应缓和下来了。我有足够时间恢复吗？"
+    d_cm "共生本来就是噬魂怪的特质。"
+    d_cm "护送我回我的、我的寝殿——" 
+    scene theempath2_vid10
+    with fade
+    d_cm "呃啊~"
+    d_cm "住手——你们这群野兽！" 
+    d_cm "好色的公牛！~等、等一下！" 
+    d_cm "呃！"
+    d_cm "我没想到这个副作用会这么明显。"
+    d_cm "会不会是她在故意这么做？"
+    d_cm "但如果是真的，我就必须记录下来。" 
+    d_cm "一、一旦他们只停下一瞬间！"
+    scene theempath2_vid11
+    with dissolve
+    p "唔唔唔~ 母、母亲——"
+    y "（你感觉到她了。）"
+    p "（嗯。）"
+    y "（她很烦躁。）"
+    p "嗯唔~ [player_name] 我……"
+    p "（我想帮她获得满足。）"
+    y "（那通常可不是你的职责。）"
+    p "（母亲积压了很多怒气与紧张。也许我们能帮她释放出来。）"
+    y "（如果一直这样下去，我肯定我们会释放出什么。）"
+    p "我、我们跟她也连上吧。"
+    p "让她告诉我们她的感受。"
+    p "（她应该明白你正在借我的身体。）"
+    y "呵——只要你给我一个机会。"
+    p "Y-对……"
+    p "（我想让你也借她爽一把。）"
+    y "我们该怎么做？"
+    p "就要比这个更用力~"
+    scene theempath2_vid12
+    with dissolve
+    p "对、对了！（就是这样！）"
+    y "（你的愉悦感太强烈了。每一次顶弄我都能感觉到你的回响。）"
+    p "（别停。我要你保持硬挺。快一点。到我体内。）"
+    p "就、就是这样~（我知道这份感觉会传到她那里。）"
+    p "（会传到母亲那里。）"
+    scene theempath2_vid13
+    with dissolve
+    y "（你是个坏女孩，普里西拉。）"
+    y "（这不就等于我在操你母亲吗？）"
+    p "不、不是~母亲绝不会让、让你碰她的——"
+    p "（她觉得你很脏。）"
+    y "（我确实很脏。）"
+    p "（她把你当成牲畜。）"
+    y "（真没礼貌。我想让她知道自己的位置。）"
+    p "（我觉得她对你不公平。）"
+    y "（所以你是在帮我报复？）"
+    p "不、不是，才不是！~"
+    p "（我好想做点什么引起母亲的注意！）"
+    y "（你这是有恋母情结！）"
+    scene theempath2_vid14
+    with dissolve
+    p "（母亲！）"
+    d_cm "（真的就是你们两个！）"
+    d_cm "（普里西拉！控制住自己！）"
+    p "（母亲，求您别生气。）"
+    d_cm "（我不能对畜生抱什么期待，但我把你教得比这好。）"
+    p "（我想让他高兴～）"
+    d_cm "（用你自己的感觉去做吧，孩子！）"
+    y "（你并不诚实。）"
+    d_cm "（安静，害虫！）"
+    y "（你其实感觉好极了。）"
+    p "我、我要更多～"
+    d_cm "（才没有！）"
+    d_cm "（我的愉快跟这个毫无关系！）"
+    scene theempath2_vid15
+    with dissolve
+    p "妈、妈妈……我知道你的感受。"
+    d_cm "（普里西拉。不准。）"
+    p "（母亲，我现在没法对他隐瞒任何事。）"
+    d_cm "（我警告你。不准。）"
+    p "从来没人这样对我这、这样做过～"
+    d_cm "（我都不知道被操原来可以这么舒服！）"
+    y "啊？"
+    d_cm "（普里西拉！你把我脑子搅乱了！）"    
+    p "（对不起，母亲。请别生气。）"
+    d_cm "（我不是生气，我是不好意思竟然被这弄得这么想要高潮！）"
+    y "（你现在真够火辣的。）"
+    d_cm "（别再偷听我的心思了，你这个混蛋！你会让我把床单弄得一塌糊涂。）"
+    d_cm "（我会一直想着真做起来是什么感觉！）"
+    d_cm "（万一我喜欢上了呢？）"
+    y "（我听得清清楚楚，克莱斯特穆尔夫人。）"
+    d_cm "（万一我喜欢上了？停下！）"
+    d_cm "（万一我爱上它了呢？）"
+    p "我要你的鸡巴！～"
+    p "[player_name] 我、我要—— {w}母亲要高潮了！"
+    d_cm "（你们这些野兽！）"
+    scene theempath2_vid16
+    with dissolve
+    p "啊——！混、混蛋！（母亲要高潮了！）"
+    d_cm "（是的。是的。我要高潮了。让我更用力地高潮。更用力。）"
+    scene theempath2_vid17
+    with dissolve
+    p "[player_name]！～"
+    y "我知道。（她的思绪已经乱成一团。）"    
+    d_cm "（我讨厌这样。我讨厌自己是个软弱的婊子。）"
+    d_cm "（但我好喜欢。我喜欢你给我的这种关注。）"
+    d_cm "（我想当妈妈。让我怀上孩子。等等不对。）"
+    d_cm "（让我给你含吧。用你的鸡巴把我撑开。）"
+    d_cm "（一个儿子。我想要一个儿子。让我和女儿并排一起被你操。）"
+    y "（感觉她的意识整个涌进了我的脑子里。）"
+    d_cm "（射给我精。给我鸡巴。反正我也怀不上。）"
+    p "（她快要失去意识了。）"
+    d_cm "（给我一个儿子，我就让你每天操我。）"
+    d_cm "（让那群人在旁边看着吧。）"
+    d_cm "（让我的小穴流水。停下。停下。停下。）"
+    p "（这股思绪的洪流，感觉她就要坠进一场梦里。）"
+    d_cm "（我爱牛。我爱鸡巴。）"
+    d_cm "（我爱普里西拉。）"
+    scene theempath2_vid18
+    with dissolve
+    p "唔嗯—— [player_name]——"
+    y "靠、这就是连接断开时的感觉吗？"
+    p "母亲一定昏过去了。"
+    y "我们弄晕她的量已经够了。你还要继续？"
+    p "我、我快撑不住了。她高潮时的感觉——"
+    p "感觉就像我刚刚射了～"
+    p "求、求你让我这样——"
+    y "我最后一次？"
+    p "唔嗯嗯～"
+    scene theempath2_vid19
+    with dissolve
+    y "不客气。"
+    p "呃啊～ [player_name]……"
+    scene theempath2_30
+    with dissolve
+    p "你、你觉得母亲会生气吗？"
+    y "我觉得她会放下的。就算你真做了什么对不起她的事。"
+    scene theempath2_29
+    with dissolve
+    y "我想她心里总能找到原谅你的方式。"
+    p "是啊。我、我也这么觉得……"
+    scene theempath2_31
+    with fade
+    d_cm "嗯……"
+    y "（又或者她会假装这只是一场她做过的美梦。）"
+    scene bg black
+    with fade
+    "..."
+    jump theexposition1_1
+label thetwin_judy_1:
+    play music "audio/Lovely Piano Song.mp3" fadein 4.0
+    scene thetwin_judy_5
+    with fade
+    jdy "你真的非要选我吗？" 
+    y "这跟必要无关。"
+    y "我想选的就是你。"
+    scene thetwin_judy_4
+    with dissolve
+    jdy "*叹气* 我都说了多少遍了。我们长得一模一样。"
+    jdy "发型和妆容或许能骗过大多数人，但如果你想要我——"
+    scene thetwin_judy_5
+    with dissolve
+    jdy "你可以通过我妹妹得到我。"
+    jdy "我把知道的全都教给她了。"
+    y "不是。"
+    scene thetwin_judy_4
+    with dissolve
+    jdy "我跟你说了，你会有一模一样的感觉。她可以假扮成我。"
+    jdy "不管你对我有什么幻想，她都会乐意陪你演一遍。" 
+    jdy "我本该替我妹妹感到可惜，但这就是她的命，而这命比大多数人好。"
+    scene thetwin_judy_5
+    with dissolve
+    jdy "你不会从她嘴里听到一句抱怨。"
+    jdy "除非你偏偏就喜欢那样。" 
+    y "不。我要的是你，茱蒂。"
+    scene thetwin_judy_2
+    with dissolve
+    jdy "可是你——" 
+    scene thetwin_judy_3
+    with dissolve
+    jdy "..."
+    jdy "你和她简直是天造地设。"
+    scene thetwin_judy_1
+    with dissolve
+    jdy "两个人在无关紧要的事上都是那么固执。" 
+    scene thetwin_judy_5
+    with dissolve
+    jdy "算了。"
+    jdy "我会让艾米来照看你。"
+    scene thetwin_judy_4
+    with dissolve
+    jdy "我要去弄——" 
+    scene thetwin_judy_6
+    with dissolve
+    ange "呃！我真是受够了这种挑逗，快点到高潮行不行！" 
+    scene thetwin_judy_7
+    with dissolve
+    ange "你想要我女儿？让我来帮你。" 
+    scene thetwin_judy_8
+    with dissolve
+    y "是母亲。呃……茱蒂还好吗？"
+    scene thetwin_judy_9
+    with dissolve
+    ange "我在惩罚她不诚实。"
+    scene thetwin_judy_10
+    with dissolve
+    ange "以缪斯起誓，茱蒂·玛丽昂。我可没把你教成骗子。"
+    scene thetwin_judy_11
+    with dissolve
+    ange "分清演戏和放纵。"
+    scene thetwin_judy_12
+    with dissolve
+    ange "难的部分我来做。"
+    scene thetwin_judy_13
+    with dissolve
+    ange "你只要跟着享受就行。"
+    scene thetwin_judy_14
+    with dissolve
+    y "呃……你是说——"
+    ange "来吧，小子。还是说你不会用那玩意儿？"
+    menu:
+        "做茱蒂的……妈妈？"
+        "{color=00ff00}是的！{/color}":
+            y "..."
+            jump thetwin_judy_2
+        "等茱蒂回来（跳过）":
+            scene thetwin_judy_16
+            with dissolve
+            jdy "啊？母亲？我——"
+            scene thetwin_judy_17
+            with dissolve
+            jdy "什、什么？！[player_name]！"
+            scene bg black
+            with fade
+            "你俩慢慢探索茱蒂诚实的欲望吧……"
+            "..."
+            jump theexposition1_1
+label thetwin_judy_2:
+    play music "audio/Late Nights - Causmic.mp3" fadein 4.0
+    scene thetwin_judy_15
+    with dissolve
+    ange "哎呀。趁事情还没变得一团糟之前赶紧走吧。"
+    scene thetwin_judy_16
+    with dissolve
+    jdy "啊？母亲？我——"
+    scene thetwin_judy_17
+    with dissolve
+    jdy "什、什么？！[player_name]！"
+    scene thetwin_judy_18
+    with dissolve
+    jdy "我的天——母亲！？" 
+    jdy "不是你想的那样，我是说——" 
+    scene thetwin_judy_19
+    with dissolve
+    jdy "..."
+    jdy "好吧。有些晚上我会有点焦躁。这很正常。"
+    jdy "你只是我用那种方式独处最多的那个人。"
+    jdy "我偶尔会想起这件事，很自然。"
+    scene thetwin_judy_20
+    with dissolve
+    jdy "..."
+    jdy "可不只是偶尔……"
+    scene thetwin_judy_21
+    with dissolve
+    jdy "是、是时时刻刻……" 
+    y "没关系。你不用瞒我。"
+    scene thetwin_judy_22
+    with dissolve
+    y "我选的不就是你吗？" 
+    scene thetwin_judy_23
+    with dissolve
+    y "那就按你想要的方式享受这个夜晚吧。"
+    scene thetwin_judy_24
+    with dissolve
+    jdy "*叹气* 我想我们确实是有备而来……"
+    scene thetwin_judy_25
+    with dissolve
+    jdy "唔嗯~"
+    scene thetwin_judy_vid1
+    with dissolve
+    jdy "如果母亲在掌控，你会上我吗？"
+    y "她真会让我吗？"
+    jdy "我不知道……{w}但如果你操了我母亲，我不知道我们还能不能做朋友。"
+    y "我会记住这一点的。情人？"
+    jdy "搭档。"
+    y "有福利的搭档？"
+    jdy "……{w}也、也许吧～"
+    jdy "那、那你呢？有什么是我不该碰的底线吗？"
+    y "别上我父亲，这样吧。"
+    jdy "这听起来算公平的交换。"
+    scene thetwin_judy_vid2
+    with dissolve
+    jdy "[player_name]……"
+    y "怎么了，茱蒂？"
+    jdy "很高兴认识你……"
+    y "我也很高兴认识你。"
+    jdy "在到这儿之前，我一直很担心艾米。"
+    jdy "我甚至想过要是事情失控，就由我替她上。"
+    y "而现在并没有失控？"
+    jdy "这个嘛……{w}至少没在我想的地方失控。"
+    y "看来你最后还是顶上了她的位置。"
+    jdy "知道……"
+    jdy "等、等一下，我想为你做点事。"
+    scene thetwin_judy_26
+    with vpunch
+    jdy "啊啊！"
+    y "抱歉，弄疼你了吗？"
+    scene thetwin_judy_27
+    with dissolve
+    jdy "没、没有，只是你拔出来的时候我没想过会是那种感觉……"
+    scene thetwin_judy_28
+    with dissolve
+    jdy "这身衣服做这种事不太方便。"
+    scene thetwin_judy_29
+    with dissolve
+    jdy "像这种才更合适，对吧？"
+    y "这就是你里面穿的那件？"
+    scene thetwin_judy_30
+    with dissolve
+    jdy "……{w}你喜欢吗？" 
+    menu:
+        "我？喜欢？" 
+        "爱死了":
+            y "我爱它。"
+            jdy "我想它就是为了讨好众人设计的。"
+        "只要你喜欢" :
+            y "只要你喜欢，我就愿意。"
+            jdy "我不知道。这不是我最喜欢的。"
+        "算了，反正它也要脱下来了……":
+            y "算了，反正它也要脱下来了。"
+    scene thetwin_judy_31
+    with dissolve
+    y "你要干什么？"
+    jdy "我正式向你献上我自己。"
+    scene thetwin_judy_32
+    with dissolve
+    y "正式地……{w}这是塔哈拉的什么习俗吗？"
+    scene thetwin_judy_33
+    with dissolve
+    jdy "不、不，老板娘们告诉我这是游牧者的常事。什、什么关于分开之类的……"
+    scene thetwin_judy_34
+    with dissolve
+    jdy "那些婊子！她们骗了我！"
+    jdy "她们说自己跟某些[tribe_name]人睡过，是那些人要求她们那么做的！"
+    y "哈哈哈！真难得看到你这副傻样！"
+    jdy "她们才是专家。我当然信她们。什么特殊仪式，扯淡。"
+    scene thetwin_judy_35
+    with dissolve
+    y "来，我教你我们是怎么做的。"
+    y "比你想的简单多了。"
+    scene thetwin_judy_37
+    with vpunch
+    jdy "哈！"
+    scene thetwin_judy_36
+    with dissolve
+    y "游牧者会抓住任何机会留下一个孩子。"
+    scene thetwin_judy_38
+    with dissolve
+    jdy "啊……"
+    y "如果你那样张开自己给另一个男人，他们一定会让你永远记住。"
+    y "没有仪式。只有原始的性爱。"
+    scene thetwin_judy_36
+    with dissolve
+    y "所以，尽量小心点。"
+    scene thetwin_judy_37
+    with dissolve
+    jdy "给我看看。"
+    y "啊？"
+    scene thetwin_judy_38
+    with dissolve
+    jdy "一段剧情："
+    jdy "我是个不懂事的无知公主。"
+    jdy "你是个没有部族、没有家的游牧者。"
+    jdy "如果你让我生下你的孩子，你就有了家。"
+    scene thetwin_judy_39
+    with dissolve
+    jdy "让我看看像你这么蠢的人会落到什么地步。"
+    y "你……"
+    scene thetwin_judy_40
+    with dissolve
+    jdy "哈——"
+    y "呵，好吧。傻公主。既然你想这么玩～"
+    scene thetwin_judy_41
+    with dissolve
+    jdy "唔咕！～" 
+    scene thetwin_judy_vid3
+    with dissolve
+    jdy "「等、等等，高贵的勇士，我是公主！」"
+    jdy "「如果你停手，我、我家族会给你荣华富贵！」"
+    y "公主？"
+    y "哈！真是笑话。穿成这样？你剩下那身衣服哪儿去了，公主？"
+    jdy "「它们被、被你杀掉的强盗撕走了——」"
+    jdy "「求、求你饶了我。我值一个国王的赎金～」"
+    y "黄金和那些玩意儿一文不值。现在你这个小穴倒是值点钱。"
+    y "把你变成我的女人？那也值点钱。"
+    jdy "「我绝不会嫁给一个没有土地的人。」"
+    y "谁说要娶你了？"
+    scene thetwin_judy_vid4
+    with dissolve
+    jdy "「呃啊！住手！你会后悔的。」"
+    jdy "「作为我的救命恩人，你会得到丰厚的回报！土地——财、财富？任何你想要的东西！」"
+    y "什么事都可以？"
+    jdy "「什么都行～」"
+    y "我要你给我生个孩子。"
+    jdy "「什、什么？！那不是——」"
+    y "你说什么都行。"
+    jdy "「王室的法、法律不允许！」"
+    y "你们这些傻贵族小姐和你们那套法律。"
+    y "在这种地方，唯一的法则就是弱者淘汰。"
+    scene thetwin_judy_vid5
+    with dissolve
+    jdy "哈！[player_name]！"
+    jdy "我、我是说——「我绝不会让你得逞！」"
+    y "我就喜欢忠于自己的女孩。"
+    y "也喜欢能挨操还照样扛得住的女孩。"
+    jdy "「无礼的恶徒！」"
+    jdy "唔嗯！是、是的～"
+    jdy "「那就动手啊！快点解决掉！」"
+    y "哦，你这就想要了，嗯？"
+    jdy "「才不要！」"
+    y "呵——"
+    scene thetwin_judy_vid6
+    with dissolve
+    y "别担心。我会给你想要的。只是换个地方使力而已。"
+    jdy "唔嗯——唔嗯——呃啊～"
+    jdy "「你会后悔的——我父亲会派人来找你。」"
+    y "好啊。我也会请他们上你。"
+    y "那些人大概早就受够了照顾你！"
+    y "想象一下，为一个自己连味都没尝到的小穴送命。"
+    jdy "「可、可耻……没有荣誉。」"
+    jdy "「你这个懦夫～」"
+    scene thetwin_judy_43
+    with dissolve
+    jdy "什、什么？你怎么停了？"
+    scene thetwin_judy_44
+    with dissolve
+    jdy "你要干什么？"
+    scene thetwin_judy_45
+    with vpunch
+    jdy "呃啊！"
+    scene thetwin_judy_vid7
+    with dissolve
+    jdy "啊～慢、慢一点！"
+    y "你大概习惯了对那些骑士呼来喝去。"
+    y "但一个战士也不是你能随便推着走的。如果你想当婊子，我就当婊子对付你。"
+    jdy "「随、随你怎么来！」"
+    jdy "「等你睡着了我就宰了你！～」"
+    y "真、真的吗？"
+    jdy "不！操、操我！我是你的母狗～"
+    y "呵——"
+    jdy "「我、我父亲会惩罚你的！他会报仇！」"
+    y "我倒希望他真来。"
+    y "你父亲唯一会看到的，就是你和你的孕肚，赤身裸体躺在我地板上。"
+    jdy "「蠢、蠢母狗～只配给我鸡巴用！」"
+    y "（茱蒂开始变得虚弱了。）"
+    y "（也许我该对她手下留情一点。）"
+    y "（不，那样等于不尊重她的努力。真要说的话，我该更用力才对！）"
+    scene thetwin_judy_vid8
+    with dissolve
+    y "蠢公主。瞧不起我们？"
+    y "你知道吗？也许我该把你分给族里的其他人。"
+    y "你想要吗？"
+    jdy "「畜生！我说过了——随你怎么来！」"
+    jdy "哈！[player_name]——「去你的！～」"
+    y "（真是一如既往的专业。）"
+    y "你的身体天生就最适合当我的母狗。"
+    y "我们会一起玩得很开心。"
+    jdy "「真、真走运——走、走运～」"
+    jdy "哦、哦不——等、等一下等等——"
+    scene thetwin_judy_vid9
+    with dissolve
+    jdy "哦哦哦～ 噢啊～"
+    y "靠，你要是绷成这样——会让我也跟着射出来！"
+    scene thetwin_judy_46
+    with dissolve
+    y "这个嘛……{w}也许我对她太狠了。"
+    scene thetwin_judy_47
+    with dissolve
+    y "不过，她看起来玩得很开心。"
+    scene bg black
+    with fade
+    "..."
+    jump theexposition1_1
+label thetwin_amy_1:
+    play music "audio/Lovely Piano Song.mp3" fadein 4.0
+    scene thetwin_amy_1
+    with fade
+    y "汉姆内特·玛丽昂。感谢你今天的努力。"
+    scene thetwin_amy_2
+    with dissolve
+    amy "你喜欢这里的装潢吗？" 
+    amy "大部分家具都是克莱斯特穆尔家和子爵们提供的。"
+    amy "我和茱蒂打赌，看你会选谁。" 
+    y "哦，真的吗？你们俩都觉得我会选谁？"
+    scene thetwin_amy_3
+    with dissolve
+    amy "我可真是意外。我还以为你会选诺提卡夫人。" 
+    amy "她看起来跟你最合得来。"
+    y "我们认识也有些年头了。"
+    y "我想我们相处起来比较自在。" 
+    scene thetwin_amy_4
+    with dissolve
+    amy "那我也想认识你，还有你的家人。"
+    y "（那太好了。）我也希望如此。你这样可让我很吃亏。我对你家了解太少。"
+    y "我能问问他们的事吗？"
+    scene thetwin_amy_5
+    with dissolve
+    amy "当然。"
+    menu:
+        "问起……"
+        "茱蒂":
+            y "跟我说说茱蒂吧，在这一切之前她是什么样的人？"
+            scene thetwin_amy_6
+            with dissolve
+            amy "我妹妹？她和现在几乎一模一样。"
+            amy "是个严肃的人，一心想要撑起我们家族。"
+            amy "母亲让她做什么，她都会二话不说地去做。"
+            amy "跟她比，我肯定叛逆得多。"
+            scene thetwin_amy_7
+            with dissolve
+            amy "母亲以前常责骂父亲，说他没把我管好。"
+        "她的母亲":
+            y "跟我说说你母亲。"
+            amy "嗯……{w}如果你想问的是这个，她现在好像完全没有在往茱蒂身上留下什么坏影响。"
+            scene thetwin_amy_7
+            with dissolve
+            amy "但在当年我们还……完整的时候——"
+            amy "母亲和父亲把我们当成继承人来培养，满心期待。"
+            scene thetwin_amy_5
+            with dissolve
+            amy "茱蒂对母亲来说是个很用功的学生。母亲花了很多时间教她才艺和技艺。"
+        "她的父亲":
+            y "跟我说说你父亲。"
+            scene thetwin_amy_6
+            with dissolve
+            amy "父亲是最温柔的。他总是宠着母亲。"
+            amy "把她气得够呛！我觉得他叫她「祝她好运」的时候是真心的！"    
+            amy "不过我想学什么，父亲都会教我。"
+            scene thetwin_amy_7
+            with dissolve
+            amy "他给我一切机会去做自己想做的事。"
+            amy "最后我好像变得想变成他那样……"
+    scene thetwin_amy_2
+    with dissolve
+    amy "那些大概都不再重要了。"
+    scene thetwin_amy_5
+    with dissolve
+    amy "现在真正属于我的家人，也就只有茱蒂了。"
+    amy "就算这一切是我们父母安排的，我也已经喜欢上了这个局面，所以我们会支持你。"
+    scene thetwin_amy_4
+    with dissolve
+    amy "现在重要的不就是我们自己的选择吗？"
+    y "（艾米看起来很真诚。她确实是演员。但她说得有道理。）"
+    y "（就算玛丽昂家真的要为母亲的死负责，我们现在也不可能惩罚他们。）"
+    y "（艾米和她的家人似乎并没有恶意。也许今晚我还是放松点好。）"
+    scene thetwin_amy_3
+    with dissolve
+    amy "如果你不介意，我能换身更舒服的衣服吗？"
+    scene thetwin_amy_1
+    with dissolve
+    y "当然可以。"
+    scene thetwin_amy_8
+    with fade
+    y "唔嗯……"
+    scene thetwin_amy_12
+    with dissolve
+    y "玛丽昂夫人。要不是我还不够了解你，我都要以为你在勾引我了。"
+    amy "你怎么会这么想？"
+    amy "我只是不想让你后悔今晚做的选择。"
+    scene thetwin_amy_9
+    with dissolve
+    y "你说你以为我会选克莉奥。茱蒂觉得我会选谁？" 
+    amy "呵。{w} 我。"
+    scene thetwin_amy_10
+    with dissolve
+    amy "但要我说，你和茱蒂更合得来。"
+    y "是吗？也许你这么说是因为她和我有生意往来。" 
+    amy "你们做的可不只是这个吧。"
+    scene thetwin_amy_11
+    with dissolve
+    amy "你和我妹妹到底在搞什么？" 
+    y "她没告诉你？" 
+    amy "她说我不需要知道。"
+    scene thetwin_amy_13
+    with dissolve
+    amy "但我猜得到。两个人单独待的长夜？"
+    amy "眼神和手都会乱飘。"
+    y "我怕事实不是你想的那样。"
+    scene thetwin_amy_14
+    with dissolve
+    amy "你们俩不是一直在谋划着抬高我们两家的声望吗？" 
+    amy "我敢说你们两个都用的是下三滥的手段。" 
+    amy "她甚至会假扮成妓女。真不知道{i}你{/i}都在做什么。"
+    amy "杀人？间谍？" 
+    y "你真的不该被牵扯进来。" 
+    y "我尊重你妹妹想把你排除在外的意愿。"
+    scene thetwin_amy_15
+    with dissolve
+    amy "我也是玛丽昂家的人。我应付得来。"
+    amy "你该告诉我。"
+    amy "你一直瞒着我，让我很难受。" 
+    amy "我有权知道，不是吗？" 
+    y "对不起？你看起来一直都不像会——" 
+    y "等等，这是你在演戏吗？" 
+    y "这只是在假装。你是在开玩笑对吧？" 
+    amy "嗯，起初是有一点。"
+    scene thetwin_amy_16
+    with dissolve
+    amy "但我越来越喜欢逗你了。"
+    amy "你和妹妹瞒着我这件事，开始让我好奇了……"
+    amy "告诉我，我要怎么做才能像她那样满足你？" 
+    y "我可想象不出她会做这种事。"
+    amy "别小看她，也别小看我。站在你身边的是个玛丽昂。"
+    amy "我们就是幻想本身。"
+    amy "我可以是任何你想要的样子、任何你想要的人。何不让我演示给你看？"
+    scene thetwin_amy_15
+    with dissolve
+    amy "愿意陪我玩这个小游戏吗？男人都喜欢游戏，不是吗？"
+    menu:
+        "和艾米玩？"
+        "{color=00ff00}好{/color}":
+            y "好的。"
+            jump thetwin_amy_2
+        "不用了（跳过）":
+            y "没关系，艾米。你的魅力确实让人上瘾，不过我想睡了。"
+            scene thetwin_amy_14
+            with dissolve
+            amy "那好吧。那我们就稍微抱一会儿？"
+            y "遵命。"
+            scene bg black
+            with fade
+            jump theexposition1_1
+label thetwin_amy_2:
+    play music "audio/Late Nights - Causmic.mp3" fadein 4.0
+    scene thetwin_amy_17
+    with fade
+    y "你在找什么？"
+    scene thetwin_amy_18
+    with dissolve
+    amy "你现在已经见过微光指环了吧。它们通常只存一套衣服，办演出不划算。"
+    amy "我有一套比较实验性的，里面应该有多套衣服。"
+    scene thetwin_amy_19
+    with dissolve
+    amy "看看你能不能猜出哪套是谁的。"
+    scene thetwin_amy_20
+    with dissolve
+    y "所以你要用一枚戒指切换好几套衣服。"
+    scene thetwin_amy_21
+    with dissolve
+    amy "正是。"
+    scene thetwin_amy_22
+    with dissolve
+    y "我有一点提示吗？"
+    scene thetwin_amy_23
+    with dissolve
+    amy "衣服本身就是提示。"
+    scene thetwin_amy_24
+    with dissolve
+    amy "我觉得大多数时候它们在某些方面很显眼。"
+    scene thetwin_amy_25
+    with dissolve
+    amy "我还没全见过，不过那些女孩各有各的品味，不是吗？"
+    scene thetwin_amy_26
+    with dissolve
+    y "你说得对。那毫无疑问是玛格娜。我能想象她穿上那件。"
+    scene thetwin_amy_27
+    with dissolve
+    amy "是啊，看来我们开头太简单了。来猜下一套。"
+    scene thetwin_amy_28
+    with dissolve
+    amy "这套很不一样。相当有王室的感觉。"
+    scene thetwin_amy_29
+    with dissolve
+    amy "看着有点硬朗，其实很轻便。"
+    scene thetwin_amy_30
+    with dissolve
+    y "从颜色看，是诺提卡家的。水手的衣服当然要轻便。"
+    amy "这很说得通。"
+    y "微光指环连头发也会变？"
+    scene thetwin_amy_31
+    with dissolve
+    amy "有时候会。很好玩吧？来试下一套！"
+    scene thetwin_amy_32
+    with dissolve
+    amy "这套怎么样？"
+    y "那是菲塔娜的，对吧？"
+    scene thetwin_amy_33
+    with dissolve
+    amy "是的，希望这是这一套里唯一没人穿过的。"
+    amy "微光指环就是菲塔娜帮我们做的。"
+    scene thetwin_amy_34
+    with dissolve
+    amy "比我想的更紧身。挺显瘦的……"
+    amy "好，下一套！"
+    scene thetwin_amy_35
+    with dissolve
+    y "嗯，草裙是博纳德一族的传统。"
+    amy "一点没错。"
+    scene thetwin_amy_36
+    with dissolve
+    amy "这一套穿在我身上挺保守，但穿在它主人身上就相当火辣。"
+    y "我觉得穿在你身上至少有几分……大胆。"
+    scene thetwin_amy_37
+    with dissolve
+    amy "是吗？我觉得只是我的胸不如普莉莎的那么抢眼。"
+    scene thetwin_amy_38
+    with dissolve
+    amy "不过还是谢谢你的信任。"
+    scene thetwin_amy_39
+    with dissolve
+    y "这个……红配金。她家族的颜色是白的，不过克莱斯特穆尔家越来越喜欢红色了。"
+    amy "你很擅长这个。这是普里西拉的衣服。"
+    scene thetwin_amy_40
+    with dissolve
+    amy "它比其他的还紧。基本上就是紧贴着皮肤。"
+    scene thetwin_amy_41
+    with dissolve
+    amy "不过头发弄得很不对劲。"
+    scene thetwin_amy_42
+    with dissolve
+    amy "这个更像是蕾娅会穿的。"
+    y "你对这些还真是留意啊？"
+    amy "这是我的工作。"
+    scene thetwin_amy_43
+    with dissolve
+    y "哇……{w}这是……{w}莱奥娜？"
+    amy "是啊。想象一下她穿这套？跟没穿也差不多。"
+    scene thetwin_amy_44
+    with dissolve
+    amy "你、喂，呃。你在干什么？"
+    scene thetwin_amy_45
+    with dissolve
+    y "没什么。别担心我。只是让自己舒服点。这样没问题吧？"
+    scene thetwin_amy_45
+    with dissolve
+    amy "当、当然没问题。"
+    y "给我看下一套。"
+    scene thetwin_amy_47
+    with dissolve
+    amy "好吧。嗯，看来这枚微光指环开始显出缺点了。"
+    amy "我没想到它会这么明显地把衣服弄坏。"
+    y "别担心。我喜欢。"
+    scene thetwin_amy_48
+    with dissolve
+    amy "那、那很好。不过你觉得谁会穿这套？"
+    y "这不是你跟露丝表演时穿的那件吗？我记得那是她的衣服。"
+    amy "哦。你说得对……{w}你连这个都留意了？"
+    scene thetwin_amy_49
+    with dissolve
+    amy "我真是荣幸，你看得这么仔细。"
+    y "你是在嘲笑我，还是在假扮露丝？"
+    scene thetwin_amy_50
+    with dissolve
+    amy "天哪！怎么能说这么伤人的话？我可是认真的……"
+    y "真的？"
+    scene thetwin_amy_51
+    with dissolve
+    amy "没有，不是的。我当然认得出来。这套衣服是我特意设计的，好让这对奶子随时能跳出来。"
+    amy "我想那一定能让全场炸锅，对吧？"
+    y "你是个可怕的女人，艾米。"
+    scene thetwin_amy_52
+    with dissolve
+    amy "哦，最可怕的还没出场。"
+    scene thetwin_amy_53
+    with dissolve
+    amy "呃……"
+    y "这套是谁的？"
+    amy "我不太清楚。"
+    scene thetwin_amy_54
+    with dissolve
+    amy "大概只是巧合，我再试一次。"
+    y "等等。让我仔细看看。我想猜。"
+    scene thetwin_amy_55
+    with dissolve
+    y "嗯。我要说……{w}等等，还缺谁？"
+    scene thetwin_amy_56
+    with dissolve
+    amy "从颜色和身形来看，应该是蕾娅小姐。"
+    y "没错！那个女孩绝对会穿这种衣服。"
+    scene thetwin_amy_57
+    with dissolve
+    y "就是为了气我。"
+    scene thetwin_amy_58
+    with dissolve
+    amy "她经常气你吗？"
+    y "汉姆内特小姐，君子不在人前说嘴。再说，我看见你盯着看了。"
+    y "这一套完全是因为我面前这位美人。"
+    scene thetwin_amy_59
+    with dissolve
+    amy "回答得好。"
+    scene thetwin_amy_60
+    with dissolve
+    y "还有别的衣服？我以为就这些了。"
+    scene thetwin_amy_61
+    with dissolve
+    amy "不，我要把穿着者身上的衣服全部脱掉。"
+    amy "现在这只是我而已。"
+    scene thetwin_amy_62
+    with dissolve
+    amy "我想让你看看没有头饰、没有衣服、没有表演的我。"
+    amy "你……{w}满意吗？"
+    scene thetwin_amy_63
+    with dissolve
+    y "艾米，我当然满意。"
+    amy "看过其他人能给出什么之后，你还不怀疑自己的选择？"
+    y "一点也不。你才是我正确的选择。"
+    scene thetwin_amy_64
+    with dissolve
+    amy "[player_name]……"
+    scene thetwin_amy_vid1
+    with dissolve
+    "你把艾米的身体拉向自己，吻了上去。"
+    "她的双乳压在你胸前起伏着，回吻着你。"
+    "她仰起头看着你，双手抓紧你的身体。"
+    scene thetwin_amy_vid2
+    with dissolve
+    "你们的嘴唇与舌头激烈地纠缠在一起。"
+    "她用挺立的乳头和柔软的嘴唇回抱你的拥抱。"
+    "她似乎并不介意你托着她的后背，让她含住你的舌头。"
+    "她的双臂几乎挂在你身上，连腰身似乎也慢慢瘫软下去。"
+    scene thetwin_amy_vid3
+    with fade
+    "像过了很久一样，你把艾米放倒在床上。"
+    "她的目光似乎越过你看向别处……"
+    "但她的双腿却以一种迎合的姿态抬了起来。"
+    "即便心思还留在那个吻上，她的身体似乎已经迫不及待地接纳你的鸡巴。"
+    scene thetwin_amy_vid4
+    with dissolve
+    "插进去毫不费力。她的小穴尽可能深地吞吸着你。"
+    "但她似乎在忍着眼泪。"
+    y "疼吗？"
+    amy "呃——唔嗯。"
+    "你放轻动作，让这个可怜的女孩慢慢走向更多的快感。"
+    "她的腰肢似乎在随着你缓缓起伏。"
+    "而持续的湿润告诉你，她很享受。"
+    amy "唔嗯～"
+    scene thetwin_amy_vid5
+    with dissolve
+    "你更用力、更急切地顶了进去。"
+    amy "哈啊～好舒服——"
+    "艾米很快就扶住了自己的双腿，可惜这让你没法整根送进去。"
+    y "你在往回顶我。"
+    amy "我、我只是有点意外。继续……"
+    amy "咳～就这样继续，好吗？"
+    "她因这番冲撞而呻吟，嘴边漏出短促的喘息。"
+    "这样可满足不了你太久……"
+    "但你还是实打实地给了她足够几下顶弄。"
+    y "好吧。但接下来，你就归我了。"
+    amy "好、好的……{w}呃啊～"
+    amy "来吧……{w}要我。"
+    "你一把抱起这个纤巧的女孩，让她跨坐在你身上。"
+    scene thetwin_amy_65
+    with dissolve
+    amy "你要干什么？"
+    y "你看不出来吗？"
+    scene thetwin_amy_66
+    with dissolve
+    y "就当是仁慈吧。随你怎么骑。"
+    scene thetwin_amy_67
+    with dissolve
+    y "让我帮你坐上来。"
+    amy "我——"
+    scene thetwin_amy_68
+    with dissolve
+    amy "唔嗯~"
+    scene thetwin_amy_69
+    with dissolve
+    amy "哦——母亲大人、缪斯——"
+    scene thetwin_amy_vid6
+    with dissolve
+    y "我一直很好奇。玛丽昂家的人是怎么学会做爱的？"
+    y "你们家和那一行是隔壁吧？你学了什么窍门没有？"
+    amy "我母亲不让我和妹妹接触那一行。"
+    amy "可、可是……我偶尔还是会偷偷溜出去。"
+    y "哦，偷偷跑到你父母干活的地方去了？"
+    amy "不，我、呃——在知道她们是干那行的之前，年长的姐姐们会说些话。"
+    amy "比如怎么摸自己才能高潮，或者怎么跟男孩说话才能让他高兴。"
+    y "那些你也试过？"
+    amy "没、没试那些可怕的部分——"
+    scene thetwin_amy_vid7
+    with dissolve
+    amy "但我是个好学生，很能背台词。"
+    y "所以你都学了些什么？"
+    amy "她们会说些像「你不想把我这热腾腾的一股射进来吗？」这种话。"
+    y "她们对着一个孩子说这种话？"
+    amy "是、对其中一个客人说的……"
+    y "你在偷听她们做爱！"
+    amy "是、是的……{w}我只是好奇。"
+    y "你还做了什么？"
+    amy "我、我有时候也会照着她们的调教做——"
+    y "调教……"
+    scene thetwin_amy_vid8
+    with dissolve
+    y "告诉我她们都教了你什么。"
+    amy "哈！啊～咦？"
+    y "还会对男人说什么别的？尤其是当你那么拼命地骑着他鸡巴的时候？"
+    amy "「哦——求你了，主人，求、求你让我射出来！」"
+    amy "「我会用爸爸给我的这具身体，让你射个桶满～」"
+    amy "「你射在里面的话，我不会告诉任何人～」"
+    amy "「我比你姐姐强多了～」"
+    y "嗯……最后这句跟其他的听起来不太一样。"
+    amy "我要射了——"
+    scene thetwin_amy_vid9
+    with dissolve
+    amy "靠靠靠～"
+    amy "哦——你的鸡巴好大，[player_name]！"
+    amy "你要把我灌满对吧？"
+    amy "求你了求你了求你了——我真的好想要～"
+    y "这些也是那对姐妹会说的话吗？"
+    amy "她们可从没有过这么棒的鸡巴——快射进来吧~"
+    y "真是个好女孩。{w}我这就给你你想要的。"
+    amy "啊啊~ 操——我要射了，我要射了！"
+    scene thetwin_amy_vid10
+    with dissolve
+    amy "[player_name]！{w}哦，[player_name]，好！"
+    amy "噢噢噢……"
+    scene thetwin_amy_70
+    with dissolve
+    amy "真的好暖和……"
+    y "满足？"
+    scene thetwin_amy_71
+    with dissolve
+    amy "……{w}那对姐妹说得没错……"
+    amy "脑子昏昏沉沉的，像在雾里飘着要睡过去……"
+    y "那也太浪费了。"
+    scene thetwin_amy_72
+    with dissolve
+    amy "你、你摸哪儿呢，痒死了。"
+    y "都怪你把艾米射得太爽了，才会有这种事。"
+    scene thetwin_amy_73
+    with vpunch
+    amy "哈！那是我的——"
+    scene thetwin_amy_74
+    with vpunch
+    amy "啊啊啊！"
+    scene thetwin_amy_vid11
+    with dissolve
+    amy "哦哦哦！太粗了！你会把我撑坏的。"
+    y "我现在才只把龟头送进去而已，艾米。"
+    amy "什、什么？！这不可能~"
+    amy "哈啊~这也太淫荡了——"
+    y "艾米，你会练屁股吗？吞得我这么轻松。"
+    amy "哪有比下一个更会的！"
+    y "我觉得一般人可不会练那个。"
+    y "你那只是看着太招人了。"
+    scene thetwin_amy_vid12
+    with dissolve
+    amy "你就算这么说——也比我自己习惯的要大得多~！"
+    y "嗯？你以前做过这种事？"
+    amy "才、才不会！"
+    y "看来你确实自己练过！怎么练的？为什么？"
+    amy "姐妹俩有那种东西可以练，那种……珠、珠子？"
+    amy "我只用最小的号，太害怕换更大的了~"
+    y "你这样做了多久？"
+    amy "她、她们说应该每天练一点点。"
+    y "你就照做了？"
+    amy "什、什么事？"
+    y "（那对姐妹偷偷把这个玛丽昂调教成玩后庭的了？）"
+    y "操，那是——"
+    y "我要射进这高贵的屁眼里。"
+    amy "好、好的，求你了！在你再深入之前！"
+    amy "我可不想用后庭高潮~"
+    scene thetwin_amy_vid13
+    with dissolve
+    y "操，你紧得刚刚好！"
+    amy "噢噢……"
+    scene thetwin_amy_75
+    with dissolve
+    amy "噢噢噢……"
+    amy "哈啊……{w}太爽了……"
+    scene bg black
+    with fade
+    "..."
+    jump theexposition1_1
+label thesoldier1_1:
+    scene thesoldier1_8
+    with fade
+    y "埃兹拉，看来你特意为这个场合打扮过了。"
+    scene thesoldier1_7
+    with dissolve
+    ez "主人！是的，我——"
+    ez "但请不必担心！我会好好照看您的。"
+    scene thesoldier1_6
+    with dissolve
+    ez "今夜不会出任何差错。"
+    menu:
+        "告诉埃兹拉……"
+        "要保持警惕":
+            y "尽量留意有没有不寻常的情况。"
+            scene thesoldier1_2
+            with dissolve
+            ez "明白了，主人。我们许多客人都是生面孔，我会仔细观察他们。"
+            y "您只要留意营地范围内的人就够了。"
+            y "他们才是我关注的对象。"
+            scene thesoldier1_3
+            with dissolve
+            ez "我明白了，大人。"
+            y "换了这身衣服，你确实就像自己人了。"
+            scene thesoldier1_5
+            with dissolve
+            ez "如果您不喜欢，我可以换，主人。"
+            menu:
+                "这身衣服？"
+                "别浪费时间去换":
+                    y "别浪费时间换衣服。专心执行你的任务。"
+                    scene thesoldier1_1
+                    with dissolve
+                    ez "好的，少爷。"
+                    scene thesoldier1_3
+                    with dissolve
+                    ez "您不会失望的。"
+                "其实，我挺喜欢":
+                    y "其实，我挺喜欢的。"
+                    y "你不觉得难受吗？"
+                    scene thesoldier1_5
+                    with dissolve
+                    ez "完全不会。多亏了梅迪夫人的帮助，穿起来活动起来都很方便。"
+                    y "很好。你穿着很好看。"
+                    scene thesoldier1_7
+                    with dissolve
+                    ez "谢、谢谢您，少爷。"
+                    y "保持警觉，埃兹拉。"
+                    scene thesoldier1_3
+                    with dissolve
+                    ez "您不会失望的，主人。"
+        "放松一下":            
+            y "放松点，埃兹拉。你也该休息一会儿。"
+            scene thesoldier1_3
+            with dissolve
+            y "我们已经从城里调来了部队加强营地防御。"
+            y "多亏您的训练和市民的忠诚，我确信我们能避免正面开战。"
+            scene thesoldier1_2
+            with dissolve
+            ez "我怎么可能不加警惕。"
+            ez "这一小时里您要是出了什么事，我都无法原谅自己。"
+            scene thesoldier1_1
+            with dissolve
+            ez "我必须先确保您的安全！"
+            y "唔……好吧，既然能让您安心，就随您的意思吧。"
+            scene thesoldier1_4
+            with dissolve
+            ez "谢谢您，少爷。"
+    y "（埃兹拉始终忠心耿耿，但表象很少说真话。）"
+    y "（埃兹拉会不忠吗？）"
+    y "（我只能保持警惕。）"
+    scene bg black
+    with fade
+    jump festivalhub1_1
+label thesoldier2_1:
+    play music "audio/CCnight.mp3" fadein 4.0
+    scene thesoldier2_1
+    with fade
+    y "埃兹拉，你来了真好。有情报要报告吗？"
+    scene thesoldier2_2
+    with dissolve
+    ez "有的，主人。我的侦察没有发现任何敌人。"
+    scene thesoldier2_3
+    with dissolve
+    ez "有些客人看着不太顺眼，但整体上大家都很尊重这块圣域。"
+    scene thesoldier2_4
+    with dissolve
+    ez "不过，我还是会盯紧博纳德一族的什里和各家的家主们。"
+    scene thesoldier2_5
+    with dissolve
+    ez "!"
+    scene thesoldier2_6
+    with dissolve
+    ez "袭击？！"
+    scene thesoldier2_7
+    with dissolve
+    y "灯——"
+    scene thesoldier2_8
+    with dissolve
+    y "感觉像一阵风把它们全吹灭了……"
+    scene thesoldier2_9
+    with dissolve
+    y "哇哦。埃兹拉，那是什么？"
+    scene thesoldier2_10
+    with dissolve
+    ez "小心，主人。可能有敌人过来了。"
+    scene thesoldier2_11
+    with dissolve
+    y "那是……一把发光的、水做的剑？"
+    scene thesoldier2_12
+    with dissolve
+    y "又是那阵风？"
+    scene thesoldier2_13
+    with dissolve
+    ez "练了很久才做到的……"
+    scene thesoldier2_14
+    with dissolve
+    ez "别担心。我会用它好好侍奉您。"
+    scene thesoldier2_15
+    with dissolve
+    ez "等等——该死。"
+    scene thesoldier2_16
+    with dissolve
+    ez "对、对不起，我维持不了太久。"
+    scene thesoldier2_17
+    with water_dissolve
+    ez "呃啊？！"
+    scene thesoldier2_18
+    with dissolve
+    y "埃兹拉？！怎么了？"
+    scene thesoldier2_19
+    with dissolve
+    ez "啊啊啊——我感觉我……"
+    scene thesoldier2_20
+    with dissolve
+    und "哦，放心吧！"
+    scene thesoldier2_21
+    with dissolve
+    und "呼！这样好多了！" 
+    scene thesoldier2_22
+    with dissolve
+    y "你怎么——你刚从埃兹拉体内出来吗？"
+    und "是啊！" 
+    scene thesoldier2_23
+    with dissolve
+    und "哎呀，蓝。你简直像怕自己的影子似的。"
+    scene thesoldier2_24
+    with dissolve
+    ez "她对风的影响……{w}抱歉，主人。空气里的寒意，是我的错。"
+    und "不用道歉，只是别忘了。"
+    ez "我是在跟我的主人说话，[player_name]。"
+    und "噢噢噢！有些人真是厚颜无耻！"
+    scene thesoldier2_25
+    with dissolve
+    ez "我们把你的灯重新点上吧。"
+    scene thesoldier2_26
+    with fade
+    und "原来现在人类是这样过日子的？"
+    ez "这不是你的地盘。请对我的主人放尊重些。"
+    scene thesoldier2_27
+    with dissolve
+    und "你这么紧张干嘛，蓝。"
+    und "[player_name]不介意！你想放松还是放松！"
+    y "是啊，今天确实很长。我去休息了……"
+    scene thesoldier2_28
+    with dissolve
+    ez "抱歉，主人，我就不打扰您了。"
+    y "我只是想躺一下。你不用走。"
+    scene thesoldier2_29
+    with dissolve
+    und "噢噢噢，正合你意嘛！"
+    ez "请不要再缠着他了。"
+    scene thesoldier2_30
+    with dissolve
+    und "可你心里就是这么想的。你想让他开口留你下来。"
+    ez "等、等等，你知道我在想什么？"
+    scene thesoldier2_31
+    with dissolve
+    und "看吧？蓝承认了，她想让你灌满她！"
+    ez "主人，我错了我错了我错了我错了！求您忘掉刚才的话！" 
+    ez "她就是个疯子！" 
+    und "才不是。我很正常。精华液对你的变身大有好处，抹在你皮肤上还特别香。"
+    ez "不知羞耻！" 
+    ez "真的很抱歉，主人。"
+    scene thesoldier2_30
+    with dissolve
+    und "你们人类真奇怪。"
+    und "他的精华是最完美的催化剂。每次他的精华留在你体内、让你高潮时——" 
+    y "留在里面？" 
+    y "她在说什么？我的精液会让你变强？" 
+    ez "呃啊——"
+    und "好了！" 
+    y "那么，就只剩一件事可做了……"
+    menu:
+        "只有一件事……"
+        "{color=00ff00}也许是两件事……{/color}":
+            scene thesoldier2_31
+            with dissolve
+            y "埃兹拉，我们用我的精华把你灌满吧。"
+            ez "主人，我实在做不到——"
+            y "够了。我倒要看看温蒂妮说的是什么。"
+            scene thesoldier2_31
+            with dissolve
+            ez "当、当然，主人。"
+            jump thesoldier2_2
+        "出去，让我能休息":
+            scene thesoldier2_29
+            with dissolve
+            y "你们两个都出去，我要休息了。"
+            und "咦，这倒出乎意料……"
+            ez "听见了吧，快走！"
+            scene bg black
+            with fade
+label thesoldier2_2:
+    scene thesoldier2_33
+    with fade
+    play music "audio/Peaceful Mind - Astron.mp3" fadein 4.0 
+    y "说清楚。你的意思是，我的精华能让她变强？"
+    und "蓝的身体本来就像所有人类一样，绝大部分都是水。"
+    und "只要把我的东西混进她的身体，我就能给她换上可以随意变形的部件。"
+    ez "我现在已经能做到其中大部分了。"
+    scene thesoldier2_32
+    with dissolve
+    und "你根本不知道自己可以变成什么样。"
+    und "终有一天，你能彻底褪去现在的形体，换成完全不同的样子。"
+    und "和我的姐妹们不一样，要说的话，我更加「液态」。"    
+    ez "放开我。"
+    scene thesoldier2_34
+    with dissolve
+    y "埃兹拉，你觉得温蒂妮说的是真的吗？"
+    ez "嗯，是的。我以前确实感觉自己有变得更多的可能……"
+    ez "但我从来没觉得自己的力量足够，能真的做到。"
+    scene thesoldier2_36
+    with dissolve
+    und "但只要有正确的帮助和正确的心态，蓝就能解开她真正的潜力。"
+    und "你们两个之间沸腾的激情，会赋予她新的生命！"
+    y "唔……埃兹拉，你怎么看？"
+    ez "提议您帮我获取力量这种事，不在我的身份之列。"
+    scene thesoldier2_35
+    with dissolve
+    y "但有我的协助，您就能获得力量，不是吗？"
+    ez "是的，我想是这样。"
+    y "为什么？"
+    scene thesoldier2_39
+    with dissolve
+    ez "唔、那个是因为只要我在您身边，我就——"
+    scene thesoldier2_38
+    with dissolve
+    ez "我开始觉得，除非是你……否则什么都无法让我满足"
+    scene thesoldier2_37
+    with dissolve
+    ez "我、我只是不太好意思说出口。"
+    scene thesoldier2_40
+    with dissolve
+    und "她的意思就是「不太好说」。"
+    y "嗯？！（她动了我的鸡巴！这下子真够呛！）"    
+    y "那样很痛——"
+    ez "对、对不起，主人！"
+    scene thesoldier2_41
+    with dissolve
+    ez "你要干什么？"
+    und "怎么了？我只是让他硬起来给你而已。"
+    scene thesoldier2_42
+    with dissolve
+    und "你说话老是不利索，所以我想帮帮你。"
+    und "现在他知道了。你渴望感受到他进入你的身体，而这份渴望源于你对力量的欲望。"
+    scene thesoldier2_43
+    with dissolve
+    und "真傻。你想要力量，我想要精华液。可凑在一起，我们就都想要鸡巴。"
+    und "嗯，其实你也要。"
+    scene thesoldier2_44
+    with dissolve
+    und "我可不需要人类那种跳个不停的肉囊。"
+    und "说真的，你们人类干的事真是离谱。"
+    und "不过能看着你被灌得满满当当，就像看着一道美味点心一样，我倒是很享受。"
+    scene thesoldier2_45
+    with dissolve
+    und "?"
+    scene thesoldier2_vid1
+    with dissolve
+    und "为什么是我？！"
+    ez "你的身体由我而生，而我的身体属于我的主人。"
+    ez "也就是说，{i}你{/i}属于我的主人。"
+    und "呃啊啊~ 等等——"
+    y "你紧得不得了，又软得不得了。"
+    und "你太重了！"
+    y "那就变成更强大的形态啊。"    
+    und "这具身体没有我希望的那么好塑！{w}呃啊！"
+    und "你们人类真是野蛮——"
+    und "就、就会一个劲地抽插、顶弄、进出起伏~"
+    und "哈啊——我不需要这个，给你的被监护者吧！"
+    y "下一个是埃兹拉。不过现在，我要教会你为把我变成这副模样负起责任。"    
+    und "呃啊啊，要是我没这么弱就好了！"
+    scene thesoldier2_vid2
+    with dissolve
+    und "哦哦哦！纯粹的精、精华渗进来了~"
+    und "好厉害……"
+    und "哈啊……哈……"
+    ez "哇……"
+    y "下一个是你，埃兹拉。"
+    ez "主人，您确定吗？不如我先去站岗，您……"
+    ez "趁您继续和她的事……"
+    y "不用我说第二遍。"
+    ez "是，主人……是，[player_name]。"
+    und "唔姆姆~ 造小孩的汁液最棒了！"
+    und "不过你之前给我的那些汁液也不错~"
+    scene thesoldier2_57
+    with dissolve
+    ez "（我从没这么近地看过他的鸡巴。）"
+    ez "（这样看过去，还挺吓人的。）"
+    ez "（那玩意儿怼在脸上，简直疯了。）"
+    scene thesoldier2_59
+    with dissolve
+    ez "我从来没……"
+    y "嗯？"    
+    ez "我从来没把别的男人的……"
+    scene thesoldier2_58
+    with dissolve
+    ez "我以前从没做过这种事。"
+    y "我从来没让你给我口交过？"
+    scene thesoldier2_57
+    with dissolve
+    ez "不、没有……"
+    scene thesoldier2_58
+    with dissolve
+    ez "我甚至都不知道是什么感觉……"
+    y "说不定哪天我会让别人给你口交。"
+    y "那样你就知道怎么更好地侍奉我了。"
+    scene thesoldier2_59
+    with dissolve
+    y "现在，先尽力做好就行。"
+    ez "是，主人。"
+    scene thesoldier2_vid3
+    with dissolve
+    ez "（他一定不想惹出乱子。这一定让他压力很大。）"
+    ez "唔呃呃~"
+    ez "（希望我做对了。）"
+    y "小心牙齿。刮到我会疼的。"
+    ez "轻、轻一点！"
+    y "噢——疼。大概是我自己没提醒你。"
+    ez "（笨蛋，你不该弄疼他！）"
+    ez "（专心让他舒服就好。）"
+    ez "（别用牙齿。别说话。）"
+    ez "（也许我该多用点舌头？）"
+    scene thesoldier2_vid4
+    with dissolve
+    y "对，就是这样，埃兹拉。你学得很快。"
+    ez "（我真幸运，他没因为我这副身体而讨厌我。）"
+    ez "（主人叫来的是我，而不是别的女孩。）"
+    ez "（他想要我做什么我都愿意~）"
+    und "喂，别洒出来。"
+    und "你不喝下去就白费了！"
+    ez "闭、闭嘴~"
+    und "哼。"
+    y "埃兹拉。"
+    ez "呃呃呃~！（对不起，主人！）"
+    ez "（让他在他能放松的时候开心放松，本来就是我的工作。）"
+    y "好了，埃兹拉。够了。把这个女孩弄起来。"
+    und "啊？"
+    y "我要教训教训这位温蒂妮。"
+    scene thesoldier2_46
+    with fade
+    und "想两个人一起上我？"
+    und "喂，我可没准你对我用那个！"
+    scene thesoldier2_47
+    with dissolve
+    ez "我为什么需要许可？它一开始就是我的。"
+    ez "倒不如说，是你先把它夺走的。"
+    und "嗯，我可不一定要让你用。"
+    scene thesoldier2_48
+    with dissolve
+    und "你脸上那表情还挺吓人。"
+    ez "之前你也没给我多少选择，不是吗？"
+    scene thesoldier2_49
+    with dissolve
+    und "哦呵？我们还真勇敢啊？"
+    scene thesoldier2_50
+    with dissolve
+    und "嘿嘿嘿嘿~"
+    scene thesoldier2_vid5
+    with dissolve
+    und "哦~你进得好深！"
+    und "真意外啊，蓝。现在你还有体力继续吗？"
+    und "你这个小伙伴平时用得不多吧？"
+    und "更擅长被插，而不是插别人，对吧？"
+    ez "闭、闭嘴。"
+    und "只要我轻轻推你们几下，你们两个就会把那美味的蜜液灌满我。"
+    und "你们两个真好对付~"
+    ez "等我们狠狠干你的时候，看你还装不装得这么镇定。"
+    scene thesoldier2_vid6
+    with dissolve
+    und "那就来啊~ 把你俩那让我渴望的液体给我。"
+    und "反正我也会再喂回给你们~"
+    ez "啧——"
+    und "这件事最妙的是，你主人的鸡巴正插在我屁股里。"
+    und "那东西射进来的时候一定又舒服又新鲜。"
+    und "表现好的话，也许我会让你舔一点~"
+    ez "啧——"
+    y "别被她的气势吓住。"
+    ez "[player_name]……"
+    scene thesoldier2_vid7
+    with dissolve
+    und "哦～从你爸爸那儿求到支持了？"
+    und "现在别害羞。别留手。给我。"
+    und "两个像你们这样的强壮{i}男人{/i}。开始吧。"
+    und "我等不及要把你们两个都喝下去了。"
+    y "她说话越来越像魅魔了。"
+    ez "我知道。她真是让人火大，对吧？"
+    y "非常火大。我本来只想操她一次就收工了。"
+    y "可现在我真想狠狠收拾她。"
+    ez "很好。"
+    scene thesoldier2_vid8
+    with dissolve
+    und "就是这样——再用力点~"
+    und "试探我的斤两吧。我可是「液态」的哦，你知道吗？"
+    und "能屈能伸，柔软得很。你弄不坏我的~"
+    y "你还能感觉到这些快感。我看得出来。每一次顶到舒服的地方你都会发抖。"
+    und "然后呢？"
+    y "埃兹拉？"
+    ez "「哪怕防守上有一道裂缝，也能加以利用。」"
+    y "很好。"
+    ez "谢谢您，主人。可、可是我——"
+    y "别担心。去吧。"
+    ez "我、我可以吗？"
+    y "我允许了。灌满她。"
+    scene thesoldier2_vid9
+    with dissolve
+    ez "嗯姆姆姆~"
+    und "咦咦咦？~ 你是去求他，才得到的允许？"
+    und "你这个大变态！"
+    scene thesoldier2_52
+    with dissolve
+    und "你们两个凑一起还不错。"    
+    und "好了吗？要是你愿意，我可以再给你加点液体。"
+    scene thesoldier2_52
+    with dissolve
+    und "你想的话，可以从我骚穴里舔出来。"
+    y "埃兹拉，照我说的做。"
+    scene thesoldier2_54
+    with fade
+    y "还记得我说过让某人给你口交吗？"
+    y "让她替你含一含。"
+    scene thesoldier2_53
+    with dissolve
+    und "喂。你该不会真以为我会让你把那东西塞进我嘴里吧。"
+    ez "我觉得你还是会照主人说的做。"
+    und "你凭什么——"
+    scene thesoldier2_55
+    with dissolve
+    und "说……"
+    ez "照我说的做，温蒂妮。"
+    und "Y-对……"
+    scene thesoldier2_56
+    with vpunch
+    und "呃呃呃呃！"
+    scene thesoldier2_vid10
+    with dissolve
+    und "嗯姆？（我为什么会听蓝的？）"
+    und "呃呃~（他们对我的支配是不是越来越强了？）"
+    und "（我确实正在给蓝的鸡巴口交啊。）"
+    und "呃啊——呃啊——（味道真好。）"
+    y "别太用力。她可能需要喘气。"
+    und "唔唔唔~"
+    ez "她这样的时候就很难再显得那么讨厌了。"
+    und "呃呃呃~（我为什么还想继续含？）"
+    scene thesoldier2_vid11
+    with dissolve
+    und "（一方面，我得夸夸自己。我找了个相当好的宿主。）"
+    und "（可另一方面，我正像条湿骚婊子一样流着口水含他们的鸡巴。）"
+    und "呃呃——呃呃~（而他们的主人一直深埋在我骚穴里。）"
+    und "（主人？）"
+    ez "主人，[player_name]——我们可以换一下吗？我想……"
+    y "还没。"
+    und "呃呃~（换一下？他们以为自己在分什么好吃的吗？）"
+    und "呃啊呃！（为什么两个我都含不住？）"
+    scene thesoldier2_vid12
+    with dissolve
+    und "呃呃——（主人。这个人类也还不错。）"
+    und "呃呵呵~（其实他麻烦得很。）"
+    und "（他们要是继续这样，说不定真能把我弄坏。）"
+    y "她感觉怎么样？"
+    ez "美妙极了，主人。我完全不知道会是这种感、感觉。"
+    y "很好。下次记住。"
+    ez "好、好的，少爷！"
+    y "我要你能管住自己这份气势。"
+    y "下次我要是还得替你操她，我连你的屁股一起操。"
+    ez "当然，主人！"
+    y "好，我感觉她快撑不住了，我来帮你让她收场。"
+    scene thesoldier2_60
+    with dissolve
+    und "人、人类大人，能放过您的仆人吗。我知道错了。"
+    und "我行为不检，请原谅我。"
+    ez "哦？"
+    y "温蒂妮，很高兴你这么说。不过乖女孩做错了事，就要受罚。"
+    scene thesoldier2_62
+    with dissolve
+    ez "我和我的主人要把你操到翻白眼，温蒂妮。"
+    scene thesoldier2_61
+    with vpunch
+    und "哦啊啊！"
+    scene thesoldier2_vid13
+    with dissolve
+    und "[player_name]，等你再把蓝灌满的时候——"
+    und "我也可以一起射吗？"
+    y "别来问我。"
+    y "埃兹拉也许算是我的仆人，但你连仆人都不如。"
+    y "只有埃兹拉准许你操我，我才会操你。"
+    und "蓝？"
+    y "对。去请求许可。现在就去。问问埃兹拉你能不能射。"
+    und "是的——我、哈啊~我明白了……"
+    und "主人~" 
+    scene thesoldier2_vid14
+    with dissolve
+    und "蓝……{w}求你让我射吧？"
+    ez "终于肯老实了？"
+    und "嗯。蓝，你的主人——"
+    ez "放轻松，温蒂妮。我懂你的感觉。他插在你里面的时候，根本没法抵抗。"
+    und "你的主人也是我的主人~"
+    ez "我从一开始就是这么说的。"
+    und "你能保证也会让他上我吗？"
+    ez "你乖的话。"
+    und "承、保证？"
+    ez "你乖的话。"
+    scene thesoldier2_vid15
+    with dissolve
+    und "啊啊！他射给我了~这液体。"
+    ez "主人！"
+    und "蓝、蓝——你也射了……"
+    scene thesoldier2_63
+    with dissolve
+    und "蓝……"
+    ez "[player_name]……"
+    y "看到下属管教自己的下属，总是不错的。"
+
+    scene bg black
+    with fade
+    y "..."
+    y "床上全湿了……"
+    "..."
+    jump theexposition1_1
+label theexposition1_1:
+    y "今天真是疯狂。人真多……"
+    y "感觉就像战役第一晚的军营。"
+    if chose_ezra == 1:
+        scene theexposition1_33
+        with fade
+        y "还好我们没把这地方弄得一团糟。"
+        y "我可不想让埃兹拉来收拾今晚的残局……"
+    elif chose_cleo == 1:
+        scene theexposition1_27
+        with fade
+        y "[cf]……{w}要是学院比赛开始之前我们就在一起了呢？"
+    elif chose_leo == 1:
+        scene theexposition1_23
+        with fade
+        y "苍白者从那以后就一直不对劲……"
+    elif chose_luce == 1:
+        scene theexposition1_29
+        with fade
+        y "露丝真的很努力地让我放松下来。"
+        y "她确实是位得体、高尚又负责任的贵族。"
+    elif chose_pris == 1:
+        scene theexposition1_30
+        with fade
+        y "如果我叫醒普里西拉，会不会把别人也吵醒？"
+    elif chose_mag == 1:
+        scene theexposition1_28
+        with fade
+        y "玛格娜应该睡得像石头一样……{w}看来确实如此。"
+    elif chose_judy == 1:
+        scene theexposition1_32
+        with fade
+        y "她确实需要好好休息……"
+    elif chose_amy == 1:
+        scene theexposition1_31
+        with fade
+        y "……{w}（我们最后做的事可远不止是抱一抱。）"
+    elif chose_fea == 1:
+        scene theexposition1_21
+        with fade
+        y "我从没见过她这么安静。"
+    elif chose_rhea == 1:
+        scene theexposition1_22
+        with fade
+        y "蕾娅明明是魔族，睡起来却像天使一样……"
+    y "?"
+    y "我是不是听到什么声音了？"
+    if chose_ezra == 1:
+        y "唔嗯……"
+        y "今晚把我的护卫弄睡着，可能是个坏主意。"
+    elif chose_cleo == 1:
+        y "（[cf]正安静地睡着。我不该吵醒她。）"
+    elif chose_leo == 1:
+        scene theexposition1_24
+        with dissolve
+        leo "有什么事吗？"
+        y "你没睡？"
+        leo "魔族比大多数人睡得少。"
+        y "你听到什么声音了吗？"
+        leo "完全没有。"
+        y "唔……也许是我听错了。我就出去看一眼。"
+        leo "要我陪您去吗？"
+        y "不用。你休息，我马上就回来。"
+    elif chose_luce == 1:
+        y "（露丝还在睡。我不想吵醒她。）"
+    elif chose_bona == 1:
+        y "唔……我只是去查看一下周围。"
+    elif chose_pris == 1:
+        y "唔……我只是去查看一下周围。"
+    elif chose_mag == 1:
+        y "玛格娜还在休息……{w}就不打扰她了。"
+    elif chose_judy == 1:
+        y "（茱蒂睡得很熟。我不想吵醒她。）"
+    elif chose_amy == 1:
+        y "（艾米睡得很熟。我不想吵醒她。）"
+    elif chose_fea == 1:
+        y "菲塔娜看起来睡得很香……{w}我就不打扰她了。"
+    elif chose_rhea == 1:
+        y "唔……{w}不知道该不该让蕾娅出去把他们吓跑。"
+    scene bg black
+    with fade
+    y "（我就探个头出去看看。）"
+    scene theexposition1_1
+    with fade
+    jos "殿下？"
+    y "乔茜。我好像听到有人。有什么事吗？"
+    jos "没什么，不值得大惊小怪的事。"
+    y "不能等到明天再说吗？"
+    jos "恐怕时间不等人。"
+    jos "抱歉，我本来不想打扰你和你的客人，我们到别处去说。"
+    scene theexposition1_2
+    with dissolve
+    jos "我准备了各式各样的药水，想让你和你的客人今晚过得愉快。"
+    if chose_fea == 1:
+        y "是的，菲塔娜非常……感激。"
+        scene theexposition1_3
+        with dissolve
+        jos "那她这次就满意了？"
+        jos "嘿嘿嘿嘿——"
+    scene theexposition1_4
+    with dissolve
+    jos "嗯，我给你准备了点特别的东西。"
+    jos "就当是献给你这美好节庆的礼物，也是对明天的承诺。"
+    scene theexposition1_5
+    with dissolve
+    jos "这是一种能让你操控灵体的药水。"
+    y "灵体？像埃兹拉找到的那个？"
+    scene theexposition1_6
+    with dissolve
+    jos "全部。埃兹拉的、蒂玛的、菲尔的。还有那些小灵体以及诸如此类。"
+    y "你到底是什么意思？"
+    y "你是说我能把灵体抽出来操纵它们？还是操纵宿主？"
+    scene theexposition1_7
+    with dissolve
+    jos "第、第一个！"
+    y "能操控那类灵体的能力……在战斗中会是极大的助力。"
+    y "（而且总有什么在告诉我，和平不会永远持续下去。）"
+    scene theexposition1_6
+    with dissolve
+    jos "问题是，我得把它注射进你体内。"
+    jos "它必须与你的血液融合。"
+    y "唔嗯……"
+    menu:
+        "要用乔茜的药水吗？"
+        "好。这值得一试。":
+            y "动手吧。我必须尽全力变强。"
+            scene theexposition1_6
+            with dissolve
+            jos "没错！你不会后悔的。"
+            jump theexposition1_a
+        "我不喜欢":
+            scene theexposition1_14
+            with dissolve
+            y "我不知道。听起来不太安全。"
+            y "我不太喜欢这样。"
+            scene theexposition1_6
+            with dissolve
+            jos "你确定吗？唔……{w}嗯，药效确实在衰减。"
+            jos "我不知道这药水还能放多久。你可能再没有机会用到这个浓度了。"
+            menu:
+                "要使用操控灵体的药水吗？"
+                "现在就用吧":
+                    y "动手吧。我必须尽全力变强。"
+                    scene theexposition1_7
+                    with dissolve
+                    jos "没错！你不会后悔的。"
+                "不，留着以免变质":
+                    y "算了吧。我们改天再谈。"
+                    y "谢谢你把它带来，乔茜，不过我们晚点再谈。"
+                    scene theexposition1_7
+                    with dissolve
+                    jos "我明白了，陛下。"
+                    jump theexposition1_b                    
+                "我永远都不会用它":
+                    y "我不想用这种方式变强。我不打算用它，乔茜。"
+                    scene theexposition1_7
+                    with dissolve
+                    jos "真可惜，不过我明白了，陛下。"
+                    jump theexposition1_b
+label theexposition1_a:
+    $ injected_by_josie = 1
+    scene theexposition1_8
+    with dissolve
+    play music "audio/Black Swan - Quincas Moreira.mp3" fadein 4.0
+    jos "好，别动。会有点刺痛。"
+    y "..."
+    scene theexposition1_9
+    with dissolve
+    jos "好了。感觉怎么样？"
+    y "（感觉？）我感觉……"
+    scene theexposition1_10
+    with dissolve
+    y "说真的，我的四肢——"
+    jos "你不用回答。毕竟这是我先在自己身上试过的。"
+    scene theexposition1_11
+    with dissolve
+    y "你、你的脸……"
+    jos "我知道我知道。是不是在剥落？"
+    y "（我的指尖和双腿都感觉不到了？）"
+    jos "哇哦哇哦，别动。"
+    y "（乔茜？出问题了。她不对劲。）"
+    y "乔茜，你……{w}这是什么？"
+    jos "是的。抱歉我骗了你。那不是操控灵体的药水。"
+    jos "我需要你跟我走，没时间跟你争了。"
+    scene theexposition1_12
+    with dissolve
+    jos "会没事的。让它自己发作就好，抗拒也没用……"
+    jos "我会保护你。"
+    jos "你我之间……{w}终究是家人。"
+    scene theexposition1_13
+    with dissolve
+    "..."
+    scene bg black
+    with fade
+    "..."
+    jump theexposition2_1
+label theexposition1_b:
+    $ injected_by_juna = 1
+    play music "audio/Black Swan - Quincas Moreira.mp3" fadein 4.0
+    scene theexposition1_14
+    with dissolve
+    y "你打算怎么处理那瓶药水？"
+    scene theexposition1_15
+    with dissolve
+    jos "我、我不知道。*咳嗽* *咳嗽*。"
+    y "你还好吗？身上在滋滋冒烟？"
+    scene theexposition1_17
+    with dissolve
+    y "嗯？乔茜，你还好吗？你的脸……{w}在流血？"
+    scene theexposition1_16
+    with dissolve
+    jos "哦、哦。是啊。"
+    jos "没什么。只是——又一次没按计划进行的试验。"
+    scene theexposition1_18
+    with dissolve
+    jos "您完全不必担心，陛下。"
+    y "嗯，什么——那是——"
+    scene theexposition1_19
+    with dissolve
+    y "什、什么？帐篷！（着火了！出事了。）"
+    y "乔茜！我们遭到袭击了！快通知守卫！"
+    scene theexposition1_20
+    with dissolve
+    if chose_ezra == 1:
+        y "操——埃兹拉的灵体现在能派上大用场就好了！"
+    elif chose_cleo == 1:
+        y "（[cf]还在帐篷里！）"
+        y "[cf]！"
+    elif chose_leo == 1:
+        y "（另外两个还在帐篷里！）"
+        y "操！拜托一定要耐火——"
+    elif chose_luce == 1:
+        y "（露丝还在帐篷里！）"
+        y "我必须救露丝小姐！"
+    elif chose_bona == 1:
+        y "（女孩们还在帐篷里！）"
+        y "（我没法一个一个救出来！）"
+        y "别管那个——快去拿水！"
+    elif chose_pris == 1:
+        y "（普里西拉？我感应不到她。她没事吧？！）"
+    elif chose_mag == 1:
+        y "（玛格娜！她从睡梦中惊醒了吗？她没事吧？！）"
+    elif chose_judy == 1:
+        y "（茱蒂还在帐篷里！）"
+        y "我必须把玛丽昂小姐救出来！"
+    elif chose_amy == 1:
+        y "（艾米还在帐篷里！）"
+        y "我必须把玛丽昂小姐救出来！"
+    elif chose_fea == 1:
+        y "（菲塔娜还在帐篷里！）"
+        y "该死——我必须把她救出来！"
+    elif chose_rhea == 1:
+        y "（蕾娅还在帐篷里！）"
+        y "子爵夫人还在里面，我必须救她！"
+    scene theexposition1_34
+    with vpunch
+    y "！？ （有什么东西打中了我！）"
+    scene theexposition1_35
+    with dissolve
+    y "该、该死！（敌人已经靠得很近了！）"
+    y "（不管那东西是什么，造成的伤害并不算大。）"
+    y "（但那疼痛很尖锐，而且正在模糊我的视线。）"
+    y "（我得趁还站得住的时候试着制住她！）"
+    scene theexposition1_36
+    with dissolve
+    y "（他们太快了！？）"
+    y "（不——是我太慢了。）"
+    y "啊啊……（毒已经影响我的双腿了。）"
+    scene theexposition1_37
+    with dissolve
+    y "（嗯？被抓住了。我被人制住了？）"
+    scene theexposition1_38
+    with dissolve
+    y "（我认得这个气味。）"
+    scene theexposition1_39
+    with dissolve
+    y "像是……温暖……"
+    scene theexposition1_40
+    with dissolve
+    y "茱、茱娜？"
+    scene theexposition1_41
+    with dissolve
+    jos "喂！把他放到狮鹫背上。"
+    scene theexposition1_42
+    with dissolve
+    y "……{w}为什么？"
+    scene bg black
+    with fade
+    "..."
+label theexposition2_1:
+    "..."
+    scene theexposition2_1
+    with fade
+    jos "他……要去哪里！？" 
+    jos "喂——光是那份差事就够让人分心的了——！"
+    scene theexposition2_2
+    with dissolve
+    jos "我……本以为你们都是能理解的人。"
+    jos "啧——" 
+    scene theexposition2_4
+    with dissolve
+    jos "不……不要。没有我，他活不下去。"
+    jos "那要是他知道了，会把它带到哪里去……？"
+    scene theexposition2_3
+    with dissolve
+    j "..."
+    jos "我想也是……"
+    scene bg black
+    with fade
+    "..."
+    scene theexposition2_5
+    with fade
+    cor "你的手指这么细，真该多吃点。"
+    scene theexposition2_6
+    with dissolve
+    jos "是很普通的手指。倒是你该少吃点。"
+    cor "小气鬼。"
+    scene theexposition2_7
+    with dissolve
+    cor "要是你对我说的最后一句话就是这个，嗯？"
+    cor "过了明天，你可能再也见不到我了！"
+    scene theexposition2_8
+    with dissolve
+    jos "你要跟玛丽亚那伙人走？"
+    cor "她又不是领队什么的。我只是跟着商队走。"
+    jos "是吗？看着倒像是她的人。"
+    scene theexposition2_9
+    with dissolve
+    cor "哎，那你不会寂寞吗？"
+    scene theexposition2_10
+    with dissolve
+    jos "我不寂寞。我只是不想让你被她那堆鬼话困住。"
+    scene theexposition2_11
+    with dissolve
+    jos "我担心的是{i}你{/i}留在这儿。你知道她是什么德性。"
+    scene theexposition2_12
+    with dissolve
+    cor "她没那么坏。熟了以后你也许会喜欢她。"
+    cor "我觉得你们俩挺像的。"
+    scene theexposition2_13
+    with dissolve
+    jos "你把这句话收回去。"
+    cor "嘿嘿嘿！"
+    scene bg black
+    with fade
+    "..."
+    jos "（科尔蒂娜说得对。我确实寂寞了。）"
+    jos "（不过，要是她更喜欢和他们待在一起呢？）"
+    jos "（她完全可以交到新朋友，然后把我忘得一干二净。）"
+    jos "（那样反倒更好。）"
+    "..."
+label theexposition3_1:
+    stop music fadeout 4.0
+    scene theexposition3_1
+    with fade
+    y "..."
+    scene theexposition3_11
+    with dissolve
+    y "（我现在在哪儿？）"
+    "你所在的房间并不是什么破地方，反倒打理得很好，几乎称得上舒适。"
+    scene theexposition3_12
+    with dissolve
+    "房间里带着一丝凉意，隐约飘着一股花香。"
+    scene theexposition3_2
+    with dissolve
+    "你挣扎着撑起身子，但不管你身上出了什么事，你仍感到虚弱无力。" 
+    play music "audio/Mermaid - Kevin MacLeod.mp3" fadein 4.0
+    scene theexposition3_3
+    with dissolve
+    y "茱娜？"
+    if injected_by_juna == 1:
+        y "你捅了我——"
+    scene theexposition3_4
+    with dissolve
+    j "主人！"
+    scene theexposition3_5
+    with dissolve
+    j "你醒了！她说你身体没事。可我没能——"
+    scene theexposition3_6
+    with dissolve
+    j "太好了……真——太好了，[player_name]。"
+    y "你……你能说话了？*咳嗽*"
+    scene theexposition3_7
+    with dissolve
+    j "主人，我有水。"
+    if injected_by_juna == 1:
+        scene theexposition3_25
+        with dissolve
+        y "离我远点！*咳嗽* 真是场闹剧——"
+        scene theexposition3_19
+        with dissolve
+        j "不！求你了——我能……"
+        scene theexposition3_20
+        with vpunch
+        y "不！"
+        y "（他们肯定跟母亲有关。是不是他们杀了她？）" 
+        y "（不可能。他们不会的。父亲已经替茱娜说过了。）"
+        y "茱娜，是真的吗？你们两个？" 
+        y "（我真是失望到了极点。）"
+        y "呃——（胸口）你……你背叛了我？" 
+        scene theexposition3_21
+        with dissolve
+        j "不，主人！我绝不会！"
+        j "一如既往，我愿听命于你与你的裁决。我所做的一切，都是为了你，为了你的家族。"
+        y "可你一直在骗我。骗了多久？"
+        scene theexposition3_22
+        with dissolve
+        j "……{w}请原谅我。"
+        j "我本该告诉你的。可我要怎么说？" 
+        j "就算是我，不亲眼看到也不会相信。"
+        scene theexposition3_23
+        with dissolve
+        y "看到什么？你们两个做了什么？"     
+    if injected_by_josie == 1:
+        scene theexposition3_15
+        with dissolve
+        y "茱娜？我——很高兴再见到你，可我在哪儿？"
+        y "这里不像是学院……"
+        y "乔茜！{w}着火了！{w}发生什么事了？"
+        scene theexposition3_16
+        with dissolve
+        y "（不对劲。）"
+        y "茱娜？{w}你做了什么？"
+        y "学院——庆典。那座帐篷怎么了？"
+    if drank_poison == 1:
+        scene theexposition3_15
+        with dissolve
+        y "茱娜？我——很高兴再见到你，可我在哪儿？"
+        y "这里不像是学院……"
+        scene theexposition3_16
+        with dissolve
+        y "我最后的记忆是在喝酒……"
+        y "（不对劲。）"
+        y "茱娜？{w}你做了什么？"
+    scene theexposition3_24
+    with dissolve
+    j "别担心。没有人受伤。" 
+    j "主人，您必须休息。"
+    y "那我成了囚犯？我可不会坐以待毙——"
+    scene theexposition3_25
+    with dissolve
+    j "不。不是——"
+    scene theexposition3_26
+    with dissolve
+    y "呃啊！唔——" 
+    scene theexposition3_27
+    with dissolve
+    "你用力过猛了。胸中的热意涌上喉咙，你觉得自己快要喘不过气。" 
+    scene theexposition3_28
+    with dissolve
+    j "主人！"
+    "茱娜把你拉进她温暖的怀抱。"
+    "像是烤栗子和牛奶的味道……"
+    "你吸入她的气息，呼吸渐渐平稳下来。"
+    scene theexposition3_29
+    with dissolve
+    j "主人……{w}我是您的仆人。"
+    j "只要您开口，我愿献上性命。"
+    y "..."
+    y "（不管发生了什么，看来我除了相信茱娜也别无选择。）"
+    y "（可我真的能相信她吗？）"
+    menu:
+        "相信茱娜？"
+        "是":
+            jump theexposition3_a
+        "不（跳过）":
+            jump theexposition3_b
+label theexposition3_a:
+    $ theexposition3_a_q1 = 0
+    $ theexposition3_a_q2 = 0
+    $ theexposition3_a_q3 = 0
+    $ theexposition3_a_q4 = 0
+    scene theexposition3_30
+    with dissolve
+    y "*叹气* 靠……没关系，茱娜。"
+    y "我相信你……{w}告诉我发生了什么。"
+    j "大人……"
+    scene theexposition3_18
+    with dissolve
+label theexposition3_menu:
+    menu:
+        "问起……"
+        "乔茜" if theexposition3_a_q1 == 0:
+            $ theexposition3_a_q1 = 1
+            y "乔茜怎么了？"
+            y "她不是你的仆人、你所监护的人吗？我们怎么会让这种事发生？"
+            scene theexposition3_33
+            with dissolve
+            j "请主人恕罪。都怪我无能，没能识破此事。"
+            j "乔茜在我们中间假扮战族少女，已经五年了。"
+            y "她藏了这么久？为什么？"
+            scene theexposition3_32
+            with dissolve
+            j "她遇上米娜还在遇上我之前，为米娜效力时表现出色，之后才归我调遣。"
+            j "她的炼金术比我们所知道的更高明；她的容貌正是那门技艺的产物。"
+            scene theexposition3_31
+            with dissolve
+            j "我相信她把自己的年龄伪装成了少女。"
+            j "我还认为……{w}她认识你的母亲。"
+            y "你怎么知道？"
+            scene theexposition3_18
+            with dissolve
+            j "后来她也曾提起你和你家人……"
+            j "很明显，她和此事有某种关联。或许还有血缘关系。"
+            j "但她不肯再多说。"
+            scene theexposition3_16
+            with dissolve
+            j "她说只肯和你谈。"
+            jump theexposition3_menu
+        "我们现在所在之处" if theexposition3_a_q2 == 0:
+            $ theexposition3_a_q2 = 1
+            y "这是什么地方？"
+            scene theexposition3_16
+            with dissolve
+            j "我也不太确定。这里在珠登境内，不过再往下就不好说了——"
+            j "珠登许多地方的地貌都差不多。不把村子算进去的话，很难界定珠登……"
+            scene theexposition3_32
+            with dissolve
+            j "不过我很确定，这是乔茜熟悉的地方。"
+            j "她没用地图，骑狮鹫就把我们带到了这儿。"
+            scene theexposition3_31
+            with dissolve
+            y "等等，珠登？离学院可有几十里路！"
+            scene theexposition3_32
+            with dissolve
+            j "是的，主人。你已经昏睡将近两周了。"
+            y "什么？！"
+            y "两周？这两周发生了什么？"
+            scene theexposition3_18
+            with dissolve
+            j "我……我不知道……{w}我一直守在你身边。"
+            jump theexposition3_menu
+        "茱娜去了哪里" if theexposition3_a_q3 == 0:
+            $ theexposition3_a_q3 = 1
+            y "你去了哪里，茱娜？"
+            y "我以为你有离开的理由。算是某种任务吧。"
+            scene theexposition3_16
+            with dissolve
+            j "是的。确实是你父亲委托我去调查。"
+            j "但更重要的是——我受伤后是乔茜照顾我，她在我养伤时跟我说了话。"
+            j "她说如果我去追查耶诺斯，就能找到你在找的东西。"
+            j "我以为她又在装傻。"
+            scene theexposition3_33
+            with dissolve
+            j "但她是认真的。她保证你有危险，还说如果我想保住你，就得自己去追查耶诺斯。"
+            scene theexposition3_32
+            with dissolve
+            j "她没再多说什么，我当时也没太当真——"
+            j "但没过多久，米娜传话让我回去见你父亲，你父亲也派我去找这个耶诺斯。"
+            y "乔茜就是耶诺斯。她们是同一个人吗？"
+            scene theexposition3_18
+            with dissolve
+            j "不，主人。她肯定不是……"
+            j "我认为首领派我去找的，恰好是乔茜提到的那个人，绝非巧合。"
+            y "所以是乔茜把你父亲引向了耶诺斯？"
+            j "我相信米娜转达你的话，加上乔茜的话，足以说服你父亲。"
+            scene theexposition3_15
+            with dissolve
+            y "而且父亲肯定叫你别告诉我。"
+            scene theexposition3_18
+            with dissolve
+            j "是的。他确实……我不敢告诉你。"
+            j "我第一次见到他们时就明白，他们绝非普通人。"
+            scene theexposition3_32
+            with dissolve
+            j "在那些人当中，他们一直紧盯着我。"
+            j "他们了解我们的规矩和习俗，也清楚我会怎样着手调查。"
+            scene theexposition3_31
+            with dissolve
+            j "无论我走到哪里，都能感觉到他们的目光。"
+            j "他们似乎知道我想查到什么。"
+            y "你得出什么结论了？"
+            y "关于我们部族的事？关于我母亲的事？"
+            scene theexposition3_33
+            with dissolve
+            j "只是那个女孩……只是耶诺斯，主人。"
+            y "耶诺斯是个女孩？"
+            j "是的。"
+            jump theexposition3_menu
+        "学院" if theexposition3_a_q4 == 0:
+            $ theexposition3_a_q4 = 1
+            y "学院怎么了？"
+            scene theexposition3_18
+            with dissolve
+            j "我……我不知道，主人……我还没收到消息。"
+            y "那其他人呢？就没有一点消息，一点风声？"
+            scene theexposition3_16
+            with dissolve
+            j "没有……{w}但你失踪了，我想其他人肯定已经散了。"
+            j "按努比利亚的规矩，少女们一年后可以重新配对。"
+            scene theexposition3_32
+            with dissolve
+            j "外面大概已经有好几队在找你，主人。"
+            j "你仍然是第十号王子。"
+            j "或许事情只是暂时搁置了。"
+            j "只要你能安抚你不在时那些断裂的羁绊带来的痛楚……"
+            scene theexposition3_15
+            with dissolve
+            y "其他人……"
+            y "我不能就这样让事情悬在半空。"
+            scene theexposition3_16
+            with dissolve
+            j "我明白了，大人。"
+            j "我从没想过会变成这样。"
+            scene theexposition3_17
+            with dissolve
+            j "如果这是你的意愿，请让我第一个为你的目标献出生命。"
+            j "我会让你与你所爱之人重逢。"
+            jump theexposition3_menu
+        "耶诺斯（继续）":
+            scene theexposition3_16
+            with dissolve
+            y "那耶诺斯到底有什么重要的？"
+            y "难道……{w}是她杀了那个人吗？"
+            scene theexposition3_33
+            with dissolve
+            j "这……这我也不知道，主人。呃——"
+            y "茱娜？你没事吧？"
+            scene theexposition3_32
+            with dissolve
+            j "对……对不起，主人。我没事。"
+            y "你吃得好吗？"
+            j "勉强够活。"
+            scene theexposition3_18
+            with dissolve
+            j "主人，对不起让像我这样不知羞耻的人为你担心……"
+            scene theexposition3_16
+            with dissolve
+            y "别说了。吃点东西。来，这里好像有些吃的。我们先吃饭。"
+            jump theloyalelf1_1
+label theloyalelf1_1:
+    scene theexposition3_34
+    with dissolve
+    y "（对囚犯来说，这算不上什么像样的饭菜。）"
+    scene theexposition3_35
+    with dissolve
+    y "茱娜，只要你还侍奉我，我希望你照顾好自己。"
+    y "如果你对我忠心，我希望你变得更强。"
+    scene theexposition3_36
+    with dissolve
+    j "好、好的，主人。"
+    menu:
+        "现在我们俩都好些了……"
+        "{color=00ff00}我想茱娜了……{/color}":
+            jump theloyalelf2_1
+        "再问问耶诺斯的事（跳过）":
+            jump theexposition3_c
+label theloyalelf2_1:
+    play music "audio/Ammil - The Tides.mp3" fadein 4.0
+    scene theexposition3_37
+    with dissolve
+    y "茱娜，我想你了。"
+    j "大人？"
+    y "很多事我都说不准，局势、我的敌人、我的盟友。"
+    y "但我知道我有地方睡，有你在身边。"
+    scene theexposition3_38
+    with dissolve
+    j "主人，我……{w}我也想你。"
+    j "如果你愿意……{w}请让我成为你的慰藉。"
+    scene theloyalelf2_1
+    with dissolve
+    "你把茱娜抵在墙上。她身上几乎没有任何东西能挡下你的性器，而你毕竟还在克制。"
+    scene theloyalelf2_2
+    with dissolve
+    "你顺着她的背脊描摹下去，看见那道伤疤——它告诉你，这才是你的茱娜。"
+    scene theloyalelf2_vid1
+    with dissolve
+    "她明明还穿着衣服，你却照样贴着她蹭。感受她的肌肤隔着衣物摩擦，带来一点满足。"
+    j "唔唔~ 主人，我——"
+    y "嘘。别再提别的事。"
+    y "如果你觉得自己让我不快了，那就用身体来赎罪吧。"
+    j "嗯嗯~ 好……好的，主人。"
+    "发生了这么多事之后，感受茱娜光裸的臀肉挤压着你，就像冬日里的阳光。"
+    "她对这一点是真心的，你很确定。"
+    "不然不可能有人如此逼真地表现出欲望。"
+    "她想被触摸……{w}而你想触摸她。"
+    y "到床上去。"
+    j "是，主人。"
+    scene theloyalelf2_3
+    with dissolve
+    "死寂般的沉默提醒着你：学院已经不复存在。"
+    "没有风的低语，也没有城市的声响。"
+    scene theloyalelf2_4
+    with dissolve
+    "再没有在暗处许下的承诺。再没有小心谨慎交谈的恐惧。"
+    "只剩下茱娜被挑动着的呼吸轻轻呢喃。"
+    scene theloyalelf2_5
+    with dissolve
+    "你剥去她身上你需要剥的、也能剥的部分。"
+    scene theloyalelf2_6
+    with dissolve
+    "你和这女孩心里都清楚，此刻她只有一件用处。"
+    scene theloyalelf2_vid2
+    with dissolve
+    j "唔嗯~"
+    "当你滑入她的怀抱，茱娜抬眼看向你，寻求某种示意。"
+    "示意她可以尽管享受。"
+    "示意她可以更加放肆地迎合上来。"
+    "她的眼神哀求着你，让她享受你的怀抱。"
+    "学院开始的时候茱娜就在，如今走到尽头，她依然在。"
+    "这么一想，你难免觉得如今的局面，她也要负一份责任。"
+    "责任？{w}负什么责任？{w}好的那部分？{w}坏的那部分？"
+    "照这么说，你也该负责。你们两个真是天生一对。"
+    "都是你父亲一手掀起的这场风波的受害者。"
+    scene theloyalelf2_vid3
+    with dissolve
+    y "操——"
+    j "哼！~"
+    "一想起来就烦人。让人难受。那又有什么关系？"
+    "有什么事重要吗？这一切又有什么区别？"
+    j "主人~"
+    "她主动把自己送进你的鸡巴里，却还不够让你满足。"
+    "她一次又一次把你整根吞下，也似乎根本不够。"
+    "从根部一直到顶端，茱娜把她的骚穴抵在你的身上，只为讨你欢心。"
+    y "茱娜……"
+    y "你不必忍着。"
+    j "可是主人……"
+    y "你没必要叫我主人。我们之间不分尊卑。"
+    j "唔——对不起……"
+    y "不是你的错。"
+    y "眼下我们只是被局势困住的人。"
+    y "而我想操你。"
+    y "就像你的眼神告诉我你也想操我一样……"
+    j "嗯！？"
+    scene theloyalelf2_vid4
+    with dissolve
+    y "你想要什么，茱娜？"
+    j "请……请原谅我，主人——我——背叛了你——"
+    y "就这样？"
+    y "这里只有我们两个。你最想要什么？"
+    y "我的身心都在叫嚣，要操你操到你动不了。"
+    y "你想要那样吗？"
+    j "好、好的，主人。"
+    y "我说过了。没必要那么叫我。"
+    j "你……你永远都是我的主人……"
+    y "这样逗我……"
+    y "你就是想被操到失去神智。"
+    scene theloyalelf2_vid5
+    with dissolve
+    j "啊啊——啊啊~"
+    y "我以前是指挥官，不是吗？任何损失都是我的过错。"
+    j "不——不！我必须赎罪……请、请不要拒绝我。"
+    y "我一开始就说了。不是你的错。"
+    y "*叹气* 我这贪心的小姑娘……{w}好吧。"
+    y "既然你还想要赎罪，那就到我鸡巴的尽头去找吧。"
+    y "我之前说过，用身体来赎罪。"
+    j "唔嗯——{w}谢谢你……[player_name]。"
+    y "茱娜……那我可不会对你手下留情。"
+    j "我是你的……{w}用、用你最大的力气操我~"
+    
+    scene theloyalelf2_vid6
+    with dissolve
+    "茱娜的嘴把你吸了进去。"
+    "她的舌头一次又一次浇淋在你的鸡巴上……"
+    "你满脑子都是让她身体为你取悦的种种玩法。"
+    y "听清楚了。"
+    y "接下来我要从后面上你。"
+    j "唔呃~"
+    y "你要是不让我射出来，我就换个法子操你。"
+    y "我会把你丰满的乳房按在我的鸡巴上。"
+    y "你会把我的先走液一滴不剩地舔干净。"
+    y "等我玩腻了，我就把你折成两半，操你的屁股。"
+    y "你一直在为我省着这个？"
+    j "好、好的，主人。"
+    y "我休息的时候，你要抚弄我，舔我的身体。"
+    y "到时候你要还是让我射不出来，我就把你的脸按在我的鸡巴上。"
+    y "明白了吗？"
+    j "唔嗯~"
+    y "很好。如果你心里有愧，我今晚会把那些全都洗干净。"
+
+    scene theloyalelf2_vid7
+    with dissolve
+    "你剥掉她下身的衣物。"
+    j "哈啊！我、我要是承受不住怎么办？"
+    y "承受？能不能承受，茱娜，那都不重要。"
+    y "这件事已经在你身上发生了。"
+    j "哦——当然了——请原谅我问了这么不负责任的问题，主人~"
+    y "（我不知道是不是因为这个房间，但我憋得慌。）"
+    y "该、死。"
+    y "茱娜~"
+    j "[player_name]~"
+    y "不够。"
+
+    scene theloyalelf2_vid8
+    with dissolve
+    "你撕开她胸前的衣料……"
+    j "主人，我会没衣服穿的……"
+    y "那我们就用别的方式取暖。"
+    y "专心。"
+    j "呃、呃~ 好……好的……[player_name]……"
+    "茱娜的乳房软得过分，几乎太容易被那温柔的包裹吞没。"
+    "这位认真的精灵一心想让主人满意，指望能换回一点恩宠。"
+    "她半心半意地把胸中的愧疚输送到她的主人身上。"
+    "幻想着能让主人在自己身上射出来。"
+    "她的注意力飘远了……{w}她的表现也跟着垮了……"
+    y "啧——不够好……"
+
+    scene theloyalelf2_vid9
+    with dissolve
+    j "啊！对不起，主人！对、对不起！"
+    j "我会做得更好！我、我保证！"
+    j "请原谅我！~"
+    "茱娜的意识被肛门内壁的猛烈撞击轰然唤醒。"
+    y "我警告过你。让我射出来。"
+    y "我刚才说要怎么上你？"
+    j "你、你要把我折成两半，操——{w}操我的屁股！~"
+    y "然后呢？"
+    j "我、我会——{w}哈啊！我伺候你？"
+    y "别让我用脸操你，茱娜。"
+    j "唔嗯！"
+    y "（是因为分开太久了吗？我只想一次又一次地进入她的身体。）"
+    y "（不管用什么法子，我都要操她。）"
+    scene theloyalelf2_vid10
+    with dissolve
+    j "呃啊啊！~"
+    j "主、主人！你要射了吗？"
+    y "（奇怪的是，并没有。）"
+    y "啧，还是不够。"
+    j "再、再用力点，主人~"
+    y "我的意志还很坚定，可身体已经开始发酸……"
+    y "操。让我歇会儿。"
+    scene theloyalelf2_vid11
+    with dissolve
+    "茱娜用一条宠物母狗的眼神，重新专注地抚弄着你。"
+    "她贪恋你花在她身上的每一秒珍贵时光，也想回报这份恩情……"
+    "但出于敬畏，她那么拼命地想让你满足。"
+    "可就像神明挡在你面前一样，你就是找不到满足。"
+    j "对不起让你这么辛苦，主人[player_name]。"
+    j "我会做得更好。"
+    j "我会让你射出来的。"
+    y "我开始怀疑了。"
+    y "我开始觉得你是想被操到脑子开花。"
+    j "如果那能让你高兴的话——"
+    scene theloyalelf2_vid12
+    with dissolve
+    j "呃呃——呃噜——呃咕噜——"
+    "每一次挺进都截断了茱娜的呼吸。"
+    "她努力喘着气，维持着稳定的呼吸节奏。"
+    j "呃啊——呃咕——呃呜啊~"
+    "为了做到这点，她绷紧口腔和喉咙的肌肉，容不得自己对你有任何动作。"
+    "她的嘴变成了一个功能性的骚穴，等着你一次又一次地操它。"
+    scene theloyalelf2_vid13
+    with dissolve
+    "每当你一时滑出她的嘴，她发出的喘息不是为了换气，而是为了把你的鸡巴重新吸回嘴里。"
+    "她压下自己的本能，只为满足你的渴求。"
+    j "呃啊~ 唔嗯嗯——嗯嗯嗯~~ 唔嗯！"
+    "急切的情绪在你们两人之间弥漫开来。"
+    "茱娜只想让你射出来，好得到她的赎罪。"
+    "而你似乎一次次撞上一堵墙。"
+    y "操——到底怎么回事。"
+    j "唔哼！？"
+    y "我受不了了——"
+    scene theloyalelf2_vid14
+    with dissolve
+    j "啊啊啊！[player_name]！"
+    "茱娜尖细的叫声倒也为她的魅力添了一笔。"
+    "那叫声带来的急切感，让她在你眼里更显虔诚。"
+    "虔诚？{w}曾经有一段时间，茱娜的忠诚是不容置疑的。"
+    "这个愿意把身体和性命都交给你的女人……"
+    "是什么让你动摇了？"
+    j "主人……{w}我、我从没道过歉，操——"
+    y "你说了好多遍了，茱娜。多到我都烦了。"
+    scene theloyalelf2_vid15
+    with dissolve
+    j "不——不，我的意思是，呃啊~ {w}我从——从没说过我是在为什么道歉！"
+    j "我从来没有好好道过歉，为我不告而别地离开你！"
+    j "对——对不起，主人！~"
+    y "我没有……"
+    j "对不起，我没把我查到的一切都告诉你。我很害、害怕——"
+    j "呃啊！我——我是个懦夫！"
+    y "茱娜……"
+    j "我那么爱你——呃咕！"
+    j "求、求你了~ 我不想失去你，[player_name]！~"
+    j "所以惩罚我吧！让我清楚自己的位置！"
+    j "呃啊！我只想待在你身边！"
+    scene theloyalelf2_vid16
+    with vpunch
+    j "呃啊啊！？主、主人！？{w}你……你来了！"
+    scene theloyalelf2_7
+    with vpunch
+    y "操——"
+    scene theloyalelf2_8
+    with vpunch
+    y "说这种话——我当然就射了……"
+    scene theloyalelf2_9
+    with vpunch
+    j "唔嗯！"
+    "..."
+    scene theloyalelf2_10
+    with fade
+    jns "房间里满是做爱的气味……"
+    scene theloyalelf2_11
+    with vpunch
+    jns "他们说你食量大，倒是没骗人。"
+    y "谁在那里？{w}你是谁？"
+    jns "冷静点。我没有恶意。"
+    scene theexposition4_28
+    with dissolve
+    jns "茱娜肯定没提过我，她只是不想一下子让你承受太多。"
+    jns "我不能怪她。但我也不能再等了。"
+    scene theexposition4_29
+    with dissolve
+    jns "终于见到你了，哥哥。"
+    y "哥哥？你是说你是——"
+    y "等等——（那张脸，我认得吧？）"
+    scene theexposition4_30
+    with dissolve
+    pause 0.1
+    scene theexposition4_31
+    with dissolve
+    pause 0.1
+    scene theexposition4_30
+    with dissolve
+    pause 0.1
+    y "呃啊！"
+    scene bg black
+    with vpunch
+    jump theexposition4_1
+label theexposition3_b:
+    stop music fadeout 4.0
+    scene theexposition3_29
+    with dissolve
+    y "放开我。"
+    j "主、主人……"
+    scene theexposition4_26
+    with dissolve
+    jns "看来你没能说服他。"
+    j "等、等一下。再给我一点时间。"
+    scene theexposition4_27
+    with dissolve
+    y "这是谁？"
+    j "主人，我本来想解释得更清楚一些……"
+    j "这就是耶诺斯。{w}你的妹妹。"
+    scene theexposition4_28
+    with dissolve
+    y "什么？耶诺斯？！我们该——{w}等等，妹妹？！"
+    jns "同父异母的妹妹。"
+    scene theexposition4_29
+    with dissolve
+    y "可是你等等——（那张脸，我认得吧？）"
+    scene theexposition4_30
+    with vpunch
+    pause 0.1
+    scene theexposition4_31
+    with dissolve
+    pause 0.1
+    scene theexposition4_30
+    with dissolve
+    pause 0.1
+    y "呃啊！" 
+    j "大人？"
+    jump theexposition4_1
+label theexposition3_c:
+    stop music fadeout 4.0
+    scene theexposition4_22
+    with dissolve
+    y "那就告诉我关于耶诺斯的事。发生了什么？"
+    j "他——"
+    j "你和你父亲谈过了吗？"
+    y "没有。他本来应该在庆典后一周到达。"
+    scene theexposition4_21
+    with dissolve
+    j "我明白了。那你是得到了他打算动手的消息？"
+    y "（打算？茱娜知道他的阴谋？就连我也不知道父亲计划了什么。）"
+    y "你是说他打算对那些鸡舍奴隶动手？"
+    y "据我所知，他打算对学院发动袭击。"  
+    scene theexposition4_22
+    with dissolve
+    j "那不是说着玩的……{w}他是真的打算杀掉那些女孩。"
+    y "（这仍然让人无法相信。父亲是努比利亚的英雄。他绝不会做出如此卑劣的事。）"
+    scene theexposition4_21
+    with dissolve
+    j "就连子爵也没料到他会这么……{w}残忍。" 
+    j "可你父亲被始终缠身的悲痛蒙蔽了双眼。"
+    y "但他没有动手。是我阻止了它发生。也许他从一开始就打算让我来阻止。"
+    scene theexposition4_22
+    with dissolve
+    j "但他没有。"
+    y "你可不知道。"
+    j "..."
+    j "他已经失去了公义感。现在这是他为你母亲复仇的唯一手段。"
+    y "父亲不会那么做。"
+    scene theexposition4_23
+    with dissolve
+    j "要不是我去问他自己的影子，我也不会相信。"
+    j "庆典上要找她很不容易。我不知道你和我的妹妹已经动起手来了。"
+    scene theexposition4_21
+    with dissolve
+    j "发生了那种事，我很抱歉。"
+    y "（我真能这么轻易就相信她吗？父亲是英雄，是战士。）"
+    y "……{w}你得有证据。证明给我看。"
+    scene theexposition4_22
+    with dissolve
+    j "别急，我会尽力让你看见。"
+    scene theexposition4_23
+    with dissolve
+    j "你现在可以进来了。"
+    scene theexposition4_25
+    with dissolve
+    y "啊？" 
+    scene theexposition4_26
+    with dissolve
+    j "主人。这就是你父亲吩咐我去找的人。"
+    j "这就是耶诺斯……{w}你的妹妹。"
+    scene theexposition4_27
+    with dissolve
+    y "妹妹？！"
+    scene theexposition4_28
+    with dissolve
+    jns "同父异母的妹妹。"
+    scene theexposition4_29
+    with dissolve
+    y "你要做什——等等——（那张脸，我认得吧？）"
+    scene theexposition4_30
+    with dissolve
+    pause 0.1
+    scene theexposition4_31
+    with dissolve
+    pause 0.1
+    scene theexposition4_30
+    with dissolve
+    pause 0.1
+    y "呃啊！" 
+    y "（我喘不过气！）"
+    scene theexposition4_21
+    with dissolve
+    j "大人？"
+    scene bg black
+    with fade
+    y "（我需要空气，求你了！）"
+    j "主人！{w}快做点什么！"
+    y "（我就要这样死掉吗？）"
+    y "（不应该是这样的结局。）"
+    y "（我还有太多问题没有答案。）"
+    y "..."
+    "..."
+    jump theexposition4_1
+label theexposition4_1:
+    scene theexposition4_31
+    with fade
+    jos "{i}蒂娜！{/i}"
+    cor "{i}嘿嘿嘿，总是这么爱哭。我就在这儿！{/i}"
+    scene theexposition4_32
+    with dissolve
+    cor "{i}快走！{/i}"
+    scene theexposition4_33
+    with dissolve
+    mar "{i}我们必须走了！他们要来了——{/i}"
+    scene theexposition4_34
+    with dissolve
+    mar "{i}等安全了我们再来救她！{/i}"
+    scene theexposition4_35
+    with dissolve
+    cor "{i}菲娜！{/i}"
+    scene theexposition4_36
+    with dissolve
+    mar "我们必须走了！"
+    scene theexposition4_32
+    pause 0.1
+    scene theexposition4_31
+    pause 0.1
+    scene theexposition4_30
+    pause 0.1
+    scene theexposition4_38
+    with fade
+    jos "{i}不！——{/i}"
+    j "你做了什么？！救他啊！"    
+    jos "求你了！我再也不敢了——下次我一定好好做！"
+    "你的皮肤开始灼烧。你的视野闪烁起来，仿佛你的眼睛不受控制地乱窜。"
+    scene theexposition4_37
+    with dissolve
+    jns "{i}痛苦能庇护心神。用它让自己变强，孩子。{/i}" 
+    scene theexposition4_39
+    with dissolve
+    jos "{i}啊啊啊！住手！求你了！{/i}" 
+    y "啊啊啊呃啊！（好疼，我的头！）"
+    scene theexposition4_40
+    with dissolve
+    jos "{i}不——不不不，耶诺斯，求你了！{/i}"
+    jns "{i}你是个聪明绝顶的孩子。真希望你能学点规矩。{/i}"
+    scene theexposition4_39
+    pause 0.1
+    scene theexposition4_38
+    pause 0.1
+    scene theexposition4_37
+    pause 0.1
+    scene theexposition4_41
+    with fade
+    j "怎么了！？"
+    y "啊呃啊啊啊！" 
+    scene theexposition4_42
+    with dissolve
+    j "快做点什么！" 
+    y "呃啊啊啊呃啊——"
+    "..."
+    play music "audio/Oasis dreams - Patrick Patrikios.mp3" fadein 4.0
+    scene theexposition4_43
+    with dissolve    
+    mar "你以为你是谁？你不会这么容易脱身的。"
+    y "（母亲？）"
+    scene theexposition4_44
+    with dissolve 
+    jos "我终于找到你了。"
+    mar "你是谁？"
+    jos "你、你——{w}你不认识我了吗？……" 
+    scene theexposition4_46
+    with dissolve
+    mar "没有，不过你要是告诉我你想要什么——"
+    scene theexposition4_45
+    with vpunch
+    jos "看着我！"
+    scene theexposition4_44
+    with dissolve
+    mar "求你了，我不知道你是谁——"
+    mar "等等……"
+    scene theexposition4_46
+    with dissolve
+    mar "菲娜？{w}是你吗？"
+    mar "你、你怎么了？"
+    jos "闭嘴——"
+    scene theexposition4_47
+    with dissolve
+    mar "这些都是你做的？"
+    mar "我不知道你想要什么，但如果你以为我会求饶，那我不会。就算我死了，那也无所谓。"
+    jos "只要告诉我她在哪，不然你不会死得痛快。"
+    scene theexposition4_48
+    with dissolve
+    mar "哦，女神啊。{w}你说的是科尔蒂娜，对吧？"
+    mar "她大概已经死了。也许被关在哪个兽穴里？也许成了谁的玩物。"
+    scene theexposition4_47
+    with dissolve
+    mar "她对我做了那种事，这就是她应得的。"
+    lackey_say "有人跑了！"
+    jos "我得到了我想要的……{w}放了他们。"
+    scene theexposition4_49
+    with dissolve
+    jos "让我们好好享受这段时光吧，公主。"
+    scene theexposition4_50
+    with dissolve
+    stop music fadeout 5.0
+    mar "别碰我！"
+    jos "我会得到我需要的……{w}不择手段。"
+    scene theexposition4_18
+    with fade
+    "..."
+    scene theexposition4_19
+    with dissolve
+    "..."
+    scene theexposition4_20
+    with dissolve
+    jos "对不起，[player_name]。真的对不起。希望有一天你能原谅我。"
+    jos "我不能再把你留在学院了。而且不只是因为他就快到了。"    
+    jos "那瓶[potion_name]本来不是要把你的记忆给我，而是要把我的记忆给你。"
+    jos "我找到了暂时抑制它效果的办法，但在我彻底修好之前……"
+    scene theexposition4_19
+    with dissolve
+    jos "（如果记忆造就了我们是谁，而你的记忆被换成了我的……）"
+    scene theexposition4_18
+    with dissolve
+    jos "（那你就成了谁？）"
+    scene bg black
+    with fade
+    "..."
+    play music "audio/Lament Of The Ancients - Asher Fulero.mp3" fadein 4.0
+    scene theexposition4_4
+    with fade
+    cor_fa "约瑟芬？你不在广场上吗？"
+    scene theexposition4_5
+    with dissolve
+    jos "没有，长官。"
+    cor_fa "科尔蒂娜今天回来，不是吗？你不想去迎接她？"
+    scene theexposition4_6
+    with dissolve
+    jos "她大概正忙着应付其他人。我就在这儿等等。"
+    scene theexposition4_7
+    with vpunch
+    cor "菲娜！"
+    jos "啊啊！"
+    scene theexposition4_8
+    with dissolve
+    cor "你果然在这儿！"
+    cor "搞什么鬼？你不是好好的吗！我还以为你病了什么的。"
+    scene theexposition4_9
+    with dissolve
+    cor "你感冒了吗？"
+    jos "就像你说的，我很好。别来烦我！"
+    scene theexposition4_10
+    with dissolve
+    cor "怎么了？"
+    cor "哦——你真的很寂寞嘛，是不是？"
+    scene theexposition4_11
+    with dissolve
+    jos "我说了我没事。别再烦我了，我要出门。"
+    scene theexposition4_12
+    with dissolve
+    cor "嘿嘿嘿。在你看到我在城里给你弄到了什么之前，可不行！"
+    scene theexposition4_13
+    with dissolve
+    jos "啊？"
+    cor "你不会以为我跑那么远，就什么也不带回来吧？"
+    cor "给。试试看。我敢肯定很合身。"
+    scene theexposition4_14
+    with dissolve
+    cor "喜欢吗？"
+    scene theexposition4_15
+    with dissolve
+    jos "我……"
+    cor "摊主说那是「星尘」还是什么东西。"
+    cor "那个傻老头大概只是想抬抬价。"
+    scene theexposition4_16
+    with dissolve
+    cor "不过确实挺漂亮的，对吧？"
+    jos "真漂亮……"
+    cor "嘿嘿嘿。我就觉得你会喜欢。"
+    cor "不过多半只是些旧铜或者青铜。"
+    cor "可这是从城里带回来的！现在你必须跟我去，看看我是在哪儿弄到的。"
+    scene theexposition4_17
+    with dissolve
+    jos "你真的愿意跟我去吗？"
+    cor "我为什么不愿意？那就算是答应了？"
+    jos "好啊……{w}（真啰嗦。）"
+    scene bg black
+    with fade
+    jos "……{w}科尔蒂娜……"
+    "……{w}第一章 完……{w}战族学院。"
+    stop music fadeout 4.0
+
+label end_game:
+    if chose_cleo == 1:
+        $ chosen_girl = '克莉奥'
+    elif chose_pris == 1:
+        $ chosen_girl = '普里西拉'
+    elif chose_mag == 1:
+        $ chosen_girl = '玛格娜'
+    elif chose_luce == 1:
+        $ chosen_girl = '露丝'
+    elif chose_rhea == 1:
+        $ chosen_girl = '蕾娅'
+    elif chose_fea == 1:
+        $ chosen_girl = '菲塔娜'
+    elif chose_judy == 1:
+        $ chosen_girl = '茱蒂'
+    elif chose_amy == 1:
+        $ chosen_girl = '艾米'
+    elif chose_bona == 1:
+        $ chosen_girl = '博纳德一族'
+    elif chose_ezra == 1:
+        $ chosen_girl = '埃兹拉'
+    elif chose_leo == 1:
+        $ chosen_girl = '莱奥娜'
+    elif chose_none == 1:
+        $ chosen_girl = 'None'
+        
+#    if chosen_girl == 'Cleo':
+#    elif chosen_girl == 'Priscilla':
+#    elif chosen_girl == 'Magna':
+#    elif chosen_girl == 'Luce':
+#    elif chosen_girl == 'Rhea':
+#    elif chosen_girl == 'Featana':
+#    elif chosen_girl == 'Judith':
+#    elif chosen_girl =- 'Amy':
+#    elif chosen_girl =- 'Bonadeans':
+#    elif chosen_girl =- 'Ezra':
+#    elif chosen_girl =- 'Leona':
+#    elif chosen_girl =- 'None':
+
+    python:
+        new_end_game_save = {}
+        new_end_game_save["player_name"] = player_name
+        new_end_game_save["tribe_name"] = tribe_name
+        new_end_game_save["cat_n"] = cat_n
+        new_end_game_save["cleo_name"] = cleo_name
+        new_end_game_save["chosen_girl"] = chosen_girl
+
+        date = datetime.datetime.now().strftime('%Y-%m-%d')
+        shared_data.chapter_1_saves[player_name + " - " + date + " - " + chosen_girl]  = new_end_game_save
+        shared_data.save()
+        
+        #new_end_game_save = {}
+        #new_end_game_save.player_name = player_name
+        #new_end_game_save.tribe_name = tribe_name
+        #new_end_game_save.cat_n = cat_n
+        #new_end_game_save.cleo_name = cleo_name
+        #new_end_game_save.chosen_girl = chosen_girl
+        ##shared_data.player_name = player_name
+        ##shared_data.tribe_name = tribe_name
+        ##shared_data.cat_n = cat_n
+        ##shared_data.cleo_name = cleo_name
+        ##shared_data.chosen_girl = chosen_girl
+        #shared_data.chapter_1_saves[player_name + date] = new_end_game_save
+        #shared_data.save()
+        ##renpy.save_persistent()
+    "游戏已通关并保存！"
+    play sound "audio/sounds/freshring.ogg"
+
+    "感谢游玩……"
+    "未完待续……"
+    "……{w}荣耀归于[tribe_name]。"
+    return

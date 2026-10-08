@@ -1,0 +1,32 @@
+{
+  "slug": "wartribeacademy-0203",
+  "title": "Wartribe Academy 2.0.3",
+  "author": "3 Pood Productions",
+  "renpy_version": "8.3.4",
+  "language": "schinese",
+  "language_name": "简体中文",
+
+  "patch_version": 1,
+
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "coverage": { "translated": 61294, "total": 61417 },
+  "extra_checks": [["node", "tools/verify_patch.cjs"]],
+
+  "shim": "zz_zh_locale.rpy",
+  "font_strategy": "fallback",
+  "font_assets": [
+    { "path": "assets/fonts/MiSans-Regular.ttf", "names": ["MiSans-Regular.ttf"] },
+    { "path": "assets/fonts/MiSans-Bold.ttf", "names": ["MiSans-Bold.ttf"] },
+    { "path": "assets/fonts/DejaVuSans.ttf", "names": ["DejaVuSans.ttf"] }
+  ],
+  "font_license": "assets/fonts/LICENSE-CJK.txt",
+  "font_credit": "MiSans (c) 2020-2021 Beijing Xiaomi Mobile Software Co., Ltd.; DejaVu Sans fallback for two code points",
+
+  "_why_script_override": "The game ships no game/tl/<lang>/ translation templates -- only game/tl/None/common.rpym -- so tools/build_tl.py has nothing to compile and tools/install.py has nothing to place. The patch replaces 15 of the game's own .rpy files outright; patch/game/ mirrors the game's game/ directory one for one. There is no data/tl_trans.json, and nothing builds one.",
+  "_why_ps1": "tools/install.py only knows how to place a translation tree, a shim and fonts. This game needs a script-override installer, so it ships its own next to the patch.",
+  "_why_fallback": "The game has no {font=} tags anywhere and no hardcoded face outside gui.rpy, so there is nothing to shadow. patch/game/gui.rpy replaces the three gui.*_font defines with a FontGroup: MiSans is the default, and the only two code points MiSans lacks (U+25B8, the animated skip indicator, and U+266A, MUSIC NOTE) go to DejaVuSans. The game ships exactly one typeface of its own, gui/fonts/Nunito-Bold.ttf, and its cmap has zero codepoints in U+3400-U+9FFF -- Latin only, so Chinese drawn in it is tofu.",
+  "_coverage_note": "61,417 player-visible literals counted from the English originals, of which 61,294 carry Chinese: 99.79%. The counting rule is not a judgement call, it is data/en_masked/<file>.flags -- one flag per literal, written by the extraction pass that produced the translation, and verified by tools/verify_patch.cjs. The remaining 123 are registered by hand in docs/glossary.json _kept_verbatim, and the check fails if a new one appears that is neither registered nor made only of Ren'Py substitutions and tags. Those 123 are four kinds of thing: Ren'Py's own about screen and key labels, the save-directory name WartribeAcademy, stage directions in *ASTERISKS* form, and the tribal-syllable lines the script itself says nobody understands. Coverage is 61,294/61,417 rather than 100% because those are deliberate. replay_data.rpy is NOT in this figure: it was translated in place before this patch existed and no English baseline of it survives, so its titles cannot be counted against one. tools/verify_patch.cjs says so out loud rather than quietly counting it as zero.",
+  "_no_english_source_shipped": "data/en_masked/ holds the English scripts with every string literal replaced by a marker recording only its quote style, plus a sidecar of per-literal classification flags. The patch's code skeleton can therefore be proven identical to the original's from a clone of this repository alone, without shipping the game's prose a second time. 3,501,674 bytes of skeleton plus a 66,411-byte flags sidecar carry all of it.",
+  "_known_upstream_gap": "leona_locked.webp was never shipped with the game, English original included; Leona has leona_gallery and leona_replay_bg but no _locked. Hovering her locked replay card therefore reports a missing image in the English game too. tools/verify_patch.cjs deliberately reads only this repository -- patch/, data/en_masked/, assets/fonts/ and docs/glossary.json -- and never an installed game, so it cannot confirm or deny whether an asset exists and does not pretend to. The gap is recorded here and in README.md instead."
+}

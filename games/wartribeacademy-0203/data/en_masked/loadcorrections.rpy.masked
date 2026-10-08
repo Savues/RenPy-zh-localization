@@ -1,0 +1,48 @@
+
+label after_load:
+    
+    python:
+        try:
+            player_name
+        except NameError:
+            player_name = @S
+        try:
+            tribe_name
+        except NameError:
+            tribe_name = @S
+        
+        try:
+            cat_n
+        except NameError:
+            cat_n = @S
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        if renpy.seen_label(@S):
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+        if renpy.seen_label(@S):
+            renpy.mark_label_seen(@S)
+            renpy.mark_label_seen(@S)
+        if lovejuna == 23 and servants > 20:
+            servants = 20
+    return

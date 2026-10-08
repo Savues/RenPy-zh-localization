@@ -1,0 +1,3925 @@
+
+
+
+
+screen mainScreen():
+    imagemap:
+        ground @S
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.9
+        yalign 0.05
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+
+
+    if servants >= 3 and loveisha == 0:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 2:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 3:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 4:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 5:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants < 13 and loveisha == 6:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants >= 13 and loveisha == 6:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 7:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 8:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 9:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 10:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 11:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 12:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 13:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveisha == 14:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 15:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 16:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 17:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    
+    elif loveisha == 18:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 19:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 20:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 21:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 22:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 23:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 24:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 25:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 26:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 27:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 28:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 29:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 30:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 31:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 32:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 33:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 34:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 35:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 36:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 37:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 38:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 39:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+    elif loveisha == 40:
+        imagebutton:
+            xalign 0.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+
+    if lovecleo == 0:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S)
+            alt @S
+    elif lovecleo == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif cleopmag == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif cleopluce == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif cleoprhea == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif cleoppris == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 3 and cleopotion == 1 and metjosie == 0:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 3 and cleopotion == 1 and metjosie == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif cleoppris == 2 and cleoprhea == 2 and cleopmag == 2 and cleopluce == 2 and cleopotion == 2 and lovecleo == 3:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 4:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 5:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 6:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 7:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 8 and loveluce < 7:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 8 and loveluce >= 7:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 9:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 10:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    elif lovecleo == 11 and cleoroom == 1:
+            imagebutton:
+                xalign 0.0
+                yalign 0.9
+                idle @S
+                hover @S
+                focus_mask True
+                action Jump(@S) alt @S
+    elif lovecleo == 11 and cleoroom == 2:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 12:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea < 9 or lovepris < 16 or lovemag < 23 or loveluce < 14:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 13:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 14:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 15 and cleo_grat == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 15 and cleo_grat == 0:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 16 and cleo_grat == 0:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 16 and cleo_grat == 1:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 17 and cleo_grat == 0:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 18:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 19:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 20:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 21:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 22:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 23:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovecleo == 24 and servants >= 35:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants >= 16 and lovemarion >= 22 and glimmering == 0:
+        imagebutton:
+            xalign 0.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if loverhea == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 2:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 3:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+        
+    elif loverhea == 4 and joyhelps >= 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 5 and joyhelps >= 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 6 and joyhelps >= 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 7 and joyhelps >= 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 8:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 9 and joyhelps >= 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 10 and joyhelps >= 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+        
+    elif loverhea == 4 and joyhelps == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 5 and joyhelps == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 6 and joyhelps == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 7 and joyhelps == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 9 and joyhelps == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 10 and joyhelps == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+            
+    elif loverhea == 11:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 12:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 13:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    elif loverhea == 14 and servants >= 13:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 3:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 4:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 5:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 6:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 7:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 8:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 9:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 10:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 11:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 14 and servants == 12:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    elif loverhea == 15:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 16:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 17:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 18:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 19:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 20:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 21:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 22:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 23:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 24:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 25:
+        imagebutton:
+            xalign 0.25
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if lovemag == 0:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 1:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 2:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 3 and magroom == 1:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 3 and magroom == 2:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 3 and magroom == 10:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 4:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 5:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 6:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 7 and servants < 3:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 7 and servants >= 3:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 8:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    elif lovemag == 9:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 10:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 11:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 12:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 13:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 14:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 15:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 16:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 17:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 18:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 19:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 20:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 21:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 22:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 23 and servants >= 35:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 24:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 25:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea >= 24 and lovemag >= 21 and magdate == 0:
+        imagebutton:
+            xalign 0.5
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if lovepris == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 2 and prispotion == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 2 and prispotion == 1 and metjosie == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 2 and prispotion == 1 and metjosie == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 2 and prispotion == 2:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 3:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 4:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 5:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 6 and servants >= 3:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 6 and servants <= 2:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 7:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 8:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 9:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 11:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 12:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 13:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 14:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 15 and pris_grat == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 15 and pris_grat == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 16 and pris_grat == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 16 and pris_grat == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 17 and pris_grat == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 17 and pris_grat == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 18 and pris_grat == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 18 and pris_grat == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 19 and pris_grat == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 19 and pris_grat == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 20:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 21:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 22:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 23:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 24:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 25 and lovefea >= 4: 
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 26:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 27:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 28:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 29:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovepris == 30:
+        imagebutton:
+            xalign 0.75
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if loveluce == 0:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 1:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 2:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lucewrong == True and loveluce == 2:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 3:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 4:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 5:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    elif loveluce == 6:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 7 and luneparty1 == 1:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    elif loveluce >= 7 and loveluce <= 9 and luneparty1 == 0:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 10:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 11:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 12:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 13:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 14:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 15:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 16:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 17:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 18:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 19:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+        
+    elif loveluce == 20:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 21:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 22:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 23:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 24:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 25:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 26 and servants >= 35:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 27:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 28:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 29:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 30:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 31:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants >= 16 and lovemarion >= 22 and glimmering == 0:
+        imagebutton:
+            xalign 1.0
+            yalign 0.9
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if lovecleo >= 14 and servants >= 13 and checkpoint1 == 0:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 2:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 3:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 4:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 5:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 6 and truearj == 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 6 and trueleo == 1:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 7 and servants >= 16 and lovejuna >= 21:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 13:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 14 and loverhea >= 25:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 15:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S    
+    elif loveleo == 8:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 9:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 10:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 11:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 12:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 13:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 14:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 15:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 16:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 17 and elder_sword <= 9:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 17 and elder_sword == 10:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 17 and elder_sword == 11:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 17 and elder_sword == 12:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    elif loveleo == 17:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 18:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 19:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 20:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 21:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 22:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 23:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 24:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 25:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 26:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 27:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveleo == 28:
+        imagebutton:
+            xalign 0.25
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if loveezra == 1:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveezra == 2:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveezra == 3:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveezra == 4:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveezra == 5:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveezra == 6 and ezra_morph == 1:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if lovemarion == 0 and servants >= 16:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S 
+    elif lovemarion == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S 
+    elif lovemarion == 2:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S 
+    elif lovemarion == 3:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 4:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 5:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 6:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 7:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 8:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 9:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 10:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 11:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 12:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 13:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 14:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 15:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 16:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 17:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 18 and lovenatxtal == 0:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 18 and lovenatxtal == 1:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 18 and lovenatxtal == 2:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 18 and lovenatxtal >= 3 and lovenatxtal <= 4:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 18 and lovenatxtal == 5:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 18 and lovenatxtal >= 6:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 19:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 20:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 21:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 22:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 23:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 24:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 25:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 26:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 27:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 28:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 29:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 30:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 31:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 32:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 33:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 34:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 35:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 36:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 37:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemarion == 38:
+        imagebutton:
+            xalign 0.75
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+
+    if lovejuna == 0 and servants >= 16 and lovemarion >= 23:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 1:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 2:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 3:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 4:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 5:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 6:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 7:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 8:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 9:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 10:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 11:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 12:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 13:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 14:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 15:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 16:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 17:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 18:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 19:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 20:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 21:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 23 and servants == 20:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 19 and lovepris >= 30 and loveluce >= 25 and lovemag >= 22 and loverhea >= 26 and loveleo >= 29 and lovemarion >= 39 and lovefea >= 24 and lovecleo >= 23:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 20:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 21:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 22:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 23:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 24:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovejuna == 24 and servants == 25:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 35:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 36:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 37:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 38:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 39:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 40 and loveluce >= 31 and lovemag >= 26 and lovecleo >= 25:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 41:
+        imagebutton:
+            xalign 1.0
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if lovefea == 0 and servants >= 12:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 1 and servants >= 16:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 2 and servants >= 17:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 3:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 4:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 5:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 6:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 7:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 8:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 9:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 10:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 11:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 12:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 13:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 14:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 15:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 16:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 17:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 18:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 19:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 20:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 21:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 22:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 23:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovefea == 24 and servants == 20:
+        imagebutton:
+            xalign 0.5
+            yalign 0.7
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+
+
+
+screen exit1():
+    imagemap:
+        ground @S
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    if loveluce == 2:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveluce == 0:
+        imagebutton:
+            xalign 1.0
+            yalign 1.0
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    imagebutton:
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+
+screen mainmap():
+    imagemap:
+        ground @S
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    imagebutton:
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    if lovemag == 1:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovemag == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if lovecleo == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    imagebutton:
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+
+    if loverhea == 4 and joypotion == 2 and joyhelps == 1:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loverhea == 4 and joypotion == 2 and joyhelps == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    if lovecleo == 10:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    
+    imagebutton:
+        xalign 0.975
+        yalign 0.125
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+
+screen worldmap1():
+    imagemap:
+        ground @S
+        xalign 0.5
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    if lovejuna >= 6:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    if servants < 2 and lovecleo == 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants < 2 and lovecleo < 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 2 and lovecleo < 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif servants == 2 and lovecleo == 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif city_open == True:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+screen vil6_map():
+    imagemap:
+        ground @S
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    if mag6_vil == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif mag6_vil == 1:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    if mag6_girls == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif mag6_girls == 1:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    if mag6_ved == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif mag6_ved == 1:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    imagebutton:
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S)
+screen innmap1():
+    imagemap:
+        ground @S
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    if rdoor1 == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    if rdoor2 == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    if rdoor3 == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    if inn1 == 0:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    if inn1 == 1:
+        imagebutton:
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+screen brothel_entrance():
+    imagemap:
+        ground @S
+        xalign 0.5
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    if lovemag >= 6 and brothel == 1:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif brothel == 2:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif brothel == 3:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif brothel == 4:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif brothel >= 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+screen brothel_hall1():
+    imagemap:
+        ground @S
+        xalign 0.5
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    if cherry_bite == 8 and brothel >= 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+
+screen brothel_hall2():
+    imagemap:
+        ground @S
+        xalign 0.5
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.75
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    if cherry_bite == 8 and brothel >= 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+
+screen brothel_rooms1():
+    imagemap:
+        ground @S
+        xalign 0.5
+        hotspot(758, 335, 119, 47) action Jump(@S)
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.50
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    
+    if bastetopen == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 1:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 2:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 3:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 4:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    
+    if ingnopen == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 1:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 2:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 3:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 4:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    if yuelopen == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 1:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 2:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 3:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 4:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 6:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+
+screen brothel_rooms2():
+    imagemap:
+        ground @S
+        xalign 0.5
+        hotspot(758, 335, 119, 47) action NullAction()
+    imagebutton:
+        xalign 0.50
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    imagebutton:
+        xalign 1.0
+        yalign 0.0
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+
+    if bastetopen == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 1:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 2:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 3:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 4:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif lovebastet == 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if ingnopen == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 1:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 2:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 3:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveingn == 4:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    else:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+    if yuelopen == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 1:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 2:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 3:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 4:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif loveyuel == 5:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+
+
+screen p15_village():
+    imagemap:
+        ground @S
+        xalign 0.5
+        hotspot(758, 335, 119, 47) action NullAction()
+    
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    
+    imagebutton:
+        xalign 0.5
+        idle @S
+        hover @S
+        focus_mask True
+        action Jump(@S) alt @S
+    
+    if pris_15_woman == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    
+    if pris_15_gossip == 0:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif pris_15_gossip == 1:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+    elif pris_15_gossip == 2:
+        imagebutton:
+            xalign 0.5
+            idle @S
+            hover @S
+            focus_mask True
+            action Jump(@S) alt @S
+screen relation_up():
+    vbox:
+        text @S size 20 xalign 0.2 yalign 0.1
+screen relation_down():
+    vbox:
+        text @S size 20 xalign 0.2 yalign 0.1

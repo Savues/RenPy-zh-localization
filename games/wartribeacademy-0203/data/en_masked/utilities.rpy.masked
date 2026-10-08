@@ -1,0 +1,38 @@
+init -999 python:
+    @T3'
+    renpy.add_python_directory(@Q)
+
+    import json
+    import zipfile
+
+    
+    def unpickleable(cls):
+        def getstate(self):
+            raise Exception(@S)
+        cls.__getstate__ = getstate
+        return cls
+    
+    
+    def merge_dicts(first, *dicts):
+        ret = first.copy()
+        for d in dicts:
+            ret.update(d)
+        return ret
+
+
+    def saveWithNewName(slot, name):
+        page = persistent._file_page
+        slotname = str(page) + @Q + str(slot)
+        log = renpy.loadsave.location.load(slotname)
+        extra_info = name
+        screenshot = renpy.slot_screenshot(slotname)
+        with zipfile.ZipFile(screenshot.zipfilename, @Q) as zf:
+            screenshot = zf.read(screenshot.filename)
+
+        old_json = renpy.slot_json(slotname)
+        old_json[@Q] = name
+        json_str = json.dumps(old_json)
+
+        record = renpy.loadsave.SaveRecord(screenshot, extra_info, json_str, log)
+        renpy.loadsave.location.save(slotname, record)
+    

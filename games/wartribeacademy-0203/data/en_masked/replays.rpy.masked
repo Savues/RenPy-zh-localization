@@ -1,0 +1,210 @@
+init -99:
+    transform replay_control_temp(img, rotate=0.0):
+        transform_anchor True
+        rotate rotate
+        img
+        
+    image page_back = replay_control_temp(@Q)
+    image page_forward = replay_control_temp(@Q, 180.0)
+    image page_up = replay_control_temp(@Q, 90.0)
+    image cancel_btn = replay_control_temp(@Q)
+
+    transform greyscale_image:
+        matrixcolor SaturationMatrix(0.0)
+
+    transform dim_image(amount=-0.8):
+        matrixcolor BrightnessMatrix(amount)
+        
+    transform replay_control_hover:
+        matrixcolor TintMatrix(replay_control_hover_color)
+
+    transform do_nothing:
+        pass
+        
+    transform scene_thumbnail:
+        xysize (replay_scene_thumbnail_width, replay_scene_thumbnail_height)
+        fit @Q
+        
+    transform scene_locked(child):
+        contains:
+            child
+            blur 20.0
+            matrixcolor SaturationMatrix(0.0)
+        contains:
+            @Q
+            align (0.5, 0.5)    
+  
+    python:
+        import math
+        def dump_master_images():
+            active_title = persistent.active_title
+            active_label = persistent.active_label
+            ls = renpy.get_zorder_list(@Q)
+            tag = @Q
+            for l in ls:
+                if l[0] != @Q:
+                    tag = l[0]
+                    break
+            if tag and config.developer:
+                print(f@S)
+
+        replay_label_eq = {}
+        def unlock_label_if(label, label_set):
+            global replay_label_eq
+            if not renpy.has_label(label) or type(label) is not str:
+                raise ValueError(str(label) + @S)
+                return
+            if label in replay_label_eq:
+                replay_label_eq[label] |= label_set 
+                return
+            replay_label_eq[label] = label_set
+        
+        def assign_label_unlock(label, *args):
+            label_set = {label}
+            for l in args:
+                unlock_label_if(l, label_set)
+
+        def assign_labels_eq(*args):
+            label_set = set(args)
+            for label in label_set:
+                unlock_label_if(label, label_set)
+
+        @renpy.pure
+        class EquivilantReplay(SensitiveIf, DictEquality):
+            def __init__(self, selected_item):
+                self.label = selected_item.id
+                self.scope = selected_item.extra or {}
+                self.title = selected_item.name
+
+            def __call__(self):
+                if self.locked():
+                    return
+                persistent.active_title = self.title
+                persistent.active_label = self.label
+
+                if config.enter_replay_transition:
+                    renpy.transition(config.enter_replay_transition)
+
+                renpy.call_replay(self.label, self.scope)
+
+                if config.exit_replay_transition:
+                    renpy.transition(config.exit_replay_transition)
+
+            def get_sensitive(self):
+                return not self.locked()
+
+            def locked(self):
+                global replay_label_eq
+                if renpy.seen_label(self.label):
+                    return False
+                if self.label in replay_label_eq:
+                    for label in replay_label_eq[self.label]:
+                        if renpy.seen_label(label):
+                            return False
+                return True
+                
+        def get_tv_actions(title_var, title_page, page):
+            def func(obj):
+                return [SetScreenVariable(title_var, obj), SetScreenVariable(title_page, page), SetScreenVariable(@Q, 0)]
+            return func
+        
+                
+        class ReplayMetaData(object):
+            def __init__(self, id, name, icon, idle, lock, extra=None):
+                self.id = id
+                self.name = name
+                self.icon = icon
+                self.idle = idle
+                self.lock = lock
+                self.extra = extra
+
+            def __repr__(self):
+                return f@Q
+            
+        @renpy.pure
+        def replay_subcat_actions(title_var, title_page_var, page):
+            return [SetScreenVariable(title_var, cat_sel), SetScreenVariable(title_page_var, page), SetScreenVariable(@Q, 0)]
+
+        @renpy.pure
+        def character_replays_visible(char):
+            char_scenes = replay_scenes[char.id]
+            for scene in char_scenes:
+                if renpy.seen_label(scene.id):
+                    return True
+            return False
+
+screen keymap_screen():
+    key @S action dump_master_images
+    
+screen ReplayGallery():
+    tag menu
+    default page = 0
+    default char_page = 0
+    default cate_page = 0
+    
+    default character = None
+    default category = None
+
+    if not category:
+        use ReplayItemSelect(page, replay_categories, replay_root_obj, get_tv_actions(@Q, @Q, page))
+        use ReplayControlPanel(page, 0, @Q, math.ceil(len(replay_categories) / float(replay_max_width)))
+    elif not character:
+        use ReplayItemSelect(page, replay_characters[category.id], category, get_tv_actions(@Q, @Q, page), check_fun=character_replays_visible)
+        use ReplayControlPanel(page, cate_page, @Q, math.ceil(len(replay_characters[category.id]) / float(replay_max_width)))
+    else:
+        use ReplayItemSelect(page, replay_scenes[character.id], character, EquivilantReplay, replay_max_height)
+        use ReplayControlPanel(page, char_page, @Q, math.ceil(len(replay_scenes[character.id]) / replay_max_per_page_f))
+
+screen ReplayControlPanel(page, home_page, clear_var, max_pages):
+    vbox:
+        xpos 0.9
+        ypos 0.22
+        spacing 5
+        
+        use ReplayControlButton(@Q, page < max_pages - 1, SetScreenVariable(@Q, page + 1))
+        use ReplayControlButton(@Q, page > 0, SetScreenVariable(@Q, page - 1))
+        use ReplayControlButton(@Q, True, [SetScreenVariable(@Q, home_page), SetScreenVariable(clear_var, None)])
+        use ReplayControlButton(@Q, True, Return())
+            
+screen ReplayControlButton(img, is_sensitive, actions):
+    imagebutton:
+        idle img
+        insensitive At(img, dim_image)
+        hover At(img, replay_control_hover)
+        focus_mask True
+        sensitive is_sensitive
+        action actions
+
+
+screen ReplayItemSelect(page, title_coll, title, actions, grid_rows=1, check_fun=None):
+    $ total = len(title_coll)
+    add title.extra
+    text title.name size replay_title_size align (0.05, 0.04)
+    vpgrid:
+        rows grid_rows
+        cols replay_max_width
+        xalign replay_x_align
+        yalign replay_y_align
+        spacing replay_item_spacing
+        for w in range(grid_rows):
+            for h in range(replay_max_width):
+                $ idx = (page * replay_max_width * grid_rows) + w*replay_max_width + h
+                if idx < total:
+                    $ cat_sel = title_coll[idx]
+                    vbox:
+                        xsize replay_scene_thumbnail_width
+                        if grid_rows > 1:
+                            ysize replay_scene_thumbnail_height
+                        imagebutton:
+                            idle cat_sel.idle
+                            hover cat_sel.icon
+                            insensitive cat_sel.lock
+                            if check_fun:
+                                sensitive check_fun(cat_sel)
+                            action actions(cat_sel)
+                        if not check_fun or check_fun(cat_sel):
+                            text cat_sel.name xalign 0.5
+                        else:
+                            text @S xalign 0.5
+                else:
+                    add Null()
