@@ -1,0 +1,152 @@
+{
+  "_comment": "Terminology for The Inn 1.02.01-2, read out of theinn_work/zh/GLOSSARY.txt -- the file the translation was written against -- so this repository cannot quietly disagree with it. Nothing is listed as banned: check.py matches banned forms as plain substrings, and these are ordinary Chinese words (叔叔, 镇长, 修女, 旅店, 猫) that would fire on correct prose. The translator's own glossary is the enforcement point for this game; this file records it so a later pass has one place to look. See _names_are_not_translated for what this table cannot do yet.",
+  "_names_are_not_translated": "Speaker names reach the screen as variables -- char_map.json has lm as \"[linda.name]\", gy as \"[gyna.name]\", kuro as \"[lu_cat.name]\" -- and the game's own English tl/None has no bare-name string to translate. So no line in this patch carries Linda or Valentina: the character-select screen is Chinese (its labels live in ui/characters/*.rpy) but the nameplate over a line of dialogue is still English. The zh column below is therefore the wording a future pass has to wire up, not a record of what the patch currently shows. Adding it means rewriting the name variables rather than translating a string, which is the same job Por(n)tals' shim does for Character(); it was not done here because it changes the running game's behaviour and could not be verified on this machine.",
+  "_kept_verbatim": [
+    "$: {:,}",
+    "[gametime.weekday_name!t] / {:02d}:{:02d}",
+    "{}",
+    "{}-{}!",
+    "{}{}!",
+    "DejaVu Sans",
+    "Opendyslexic",
+    "I",
+    "V",
+    "{#auto_page}A",
+    "{#quick_page}Q"
+  ],
+  "_why_kept_verbatim": "Eleven entries, and reading them as they stand is correct in every case. The five format templates ($, {:,}, [gametime.weekday_name!t], {}, {}-{}!, {}{}!) are interpolation skeletons: the words around them are translated, the {:02d} and [gametime...] inside them are not words. DejaVu Sans and Opendyslexic are the two families in the font picker; renaming a typeface would break every other tool that looks it up. I, V, {#auto_page}A and {#quick_page}Q are the key hints on the save-metadata screen -- a letter shown where the player is being told which key to press, and translating the letter tells them nothing.",
+  "_tag_exempt": [
+    "# Calibrating [name] ([i]/[total])",
+    "old \"Calibrating [name] ([i]/[total])\"",
+    "new \"正在校准 [name]（[i]/[total]）\""
+  ],
+  "_why_tag_exempt": "Three lines, one defect, and it is the developer's. The game's own English is `Calibrating [name] ([i]/[total])`, where [i] is a counter variable rather than an italics tag: Ren'Py reads it as the opening of italics, never finds a [/i], and warns. The translation cannot drop it -- Ren'Py matches a `strings:` block by its `old` line verbatim, so `old` has to stay the game's own text, and `new` has to interpolate the same variable the original does. Leaving [i] alone is what renders the counter as intended. The comment line is listed too because pack.py writes the English back above every translated line.",
+  "_glossary_terms_absent_from_the_patch": [
+    [
+      "Agronopolos",
+      "阿格罗诺波洛斯"
+    ],
+    [
+      "Betty Lou",
+      "贝蒂·卢"
+    ],
+    [
+      "Chad",
+      "查德"
+    ],
+    [
+      "Enzo",
+      "恩佐"
+    ],
+    [
+      "Gyna",
+      "姬娜（人形机娘）"
+    ],
+    [
+      "Jeb",
+      "杰布（琳达叔叔）"
+    ],
+    [
+      "Kuro",
+      "库罗（黑猫）"
+    ],
+    [
+      "Ricardo",
+      "里卡多"
+    ],
+    [
+      "Ricky",
+      "里奇"
+    ]
+  ],
+  "_why_those_terms_are_absent": "Terms from the same glossary that appear in no translated string. Most are side characters the script only ever mentions by a code or a nickname. They are listed so the table is not read as complete.",
+  "characters": {
+    "Blackwood Mansion": {
+      "zh": "布莱克伍德宅邸"
+    },
+    "Carie": {
+      "zh": "卡莉"
+    },
+    "Cindy": {
+      "zh": "辛迪"
+    },
+    "Cletus Broderick": {
+      "zh": "克莱图斯·布罗德里克"
+    },
+    "Cudomundópolis": {
+      "zh": "库多蒙多波利斯"
+    },
+    "Daigo": {
+      "zh": "达戈"
+    },
+    "Don Malaugurio": {
+      "zh": "唐·马拉乌吉里奥"
+    },
+    "Jacob Wallace Smith": {
+      "zh": "雅各布·华莱士·史密斯"
+    },
+    "Jess": {
+      "zh": "杰西"
+    },
+    "Jessica": {
+      "zh": "杰西卡"
+    },
+    "Joana": {
+      "zh": "乔安娜"
+    },
+    "John": {
+      "zh": "约翰"
+    },
+    "Kiyana": {
+      "zh": "奇雅娜"
+    },
+    "Linda": {
+      "zh": "琳达"
+    },
+    "Livya": {
+      "zh": "莉芙娅"
+    },
+    "Luana": {
+      "zh": "卢安娜"
+    },
+    "Minister Belleforth": {
+      "zh": "贝勒福斯部长"
+    },
+    "Minister Monstrello": {
+      "zh": "蒙斯特雷洛部长"
+    },
+    "Miss Hardmead": {
+      "zh": "哈德米德小姐"
+    },
+    "Miss Mann": {
+      "zh": "曼恩小姐"
+    },
+    "Mário": {
+      "zh": "马里奥"
+    },
+    "Ouran High School and College": {
+      "zh": "欧兰高中暨学院"
+    },
+    "Peccati family": {
+      "zh": "佩卡蒂家族"
+    },
+    "Sister Gianna": {
+      "zh": "詹娜修女"
+    },
+    "Sister Margaret": {
+      "zh": "玛格丽特修女"
+    },
+    "The Inn": {
+      "zh": "旅店"
+    },
+    "Val": {
+      "zh": "瓦伦"
+    },
+    "Valentina": {
+      "zh": "瓦伦蒂娜"
+    },
+    "WWD Machine": {
+      "zh": "WWD 机器"
+    }
+  }
+}

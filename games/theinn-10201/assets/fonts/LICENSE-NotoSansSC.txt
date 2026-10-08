@@ -1,0 +1,35 @@
+Noto Sans SC (Simplified Chinese) -- variable weight, regular default
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/noto-cjk)
+Upstream: https://github.com/notofonts/noto-cjk
+Licence: SIL Open Font License, Version 1.1
+        https://scripts.sil.org/OFL
+File: NotoSansSC-Regular.ttf
+
+This is a MODIFIED copy, and the modification is one number:
+
+    the fvar table's default value for the wght axis was changed from 100 to 400
+
+Everything else -- the glyph outlines, the gvar deltas, the metrics, every
+table other than fvar -- is byte for byte the upstream variable font. The file
+is still a variable font: the fvar/gvar tables are still there, so the whole
+weight axis still works. Pinning the default to 400 makes the face draw at
+Regular weight when a style asks for it without naming an axis coordinate,
+which is what every one of the game's 39 font names ends up doing.
+
+Upstream ships no Reserved Font Name, so OFL 1.1 clause 3 does not require this
+modified copy to be renamed. It is distributed here bundled inside a patch,
+which clause 1 and clause 2 permit, together with this notice.
+
+The full OFL 1.1 text is published at the URL above; it is reproduced here in
+summary only.
+
+On install it is written to a single new path:
+
+    game/fonts/NotoSansSC-Regular.ttf
+
+No file the game ships is overwritten. tl/simplified_chinese/zzz_fonts.rpy
+registers it through renpy.config.font_name_map, replacing the mapping of all
+39 western font names the game uses; see that file.
+
+To go back to the original English, delete game/zz_zh_locale.rpy. Everything
+else can stay where it is without taking effect.

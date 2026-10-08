@@ -1,0 +1,37 @@
+{
+  "slug": "theinn-10201",
+  "title": "The Inn 1.02.01-2",
+  "author": "theinn",
+  "renpy_version": "8.5.0",
+  "language": "simplified_chinese",
+  "language_name": "简体中文",
+  "patch_version": 1,
+  "patch_layout": "tl-blocks",
+  "installer": "py",
+  "shim": "zz_zh_locale.rpy",
+  "font_strategy": "fallback",
+  "font_assets": [
+    {
+      "path": "assets/fonts/NotoSansSC-Regular.ttf",
+      "names": [
+        "NotoSansSC-Regular.ttf"
+      ]
+    }
+  ],
+  "font_license": "assets/fonts/LICENSE-NotoSansSC.txt",
+  "font_credit": "Noto Sans SC (c) 2022 The Noto Project Authors (https://github.com/notofonts/noto-cjk)",
+  "_shim_split": "The patch is two files in two different places, deliberately. zz_zh_locale.rpy (game/zzz_schinese_language.rpy as shipped) pins the language; tl/simplified_chinese/zzz_fonts.rpy maps the game's font names to the CJK face. The font half has to stay a translate <lang> python: block inside the tl tree: renpy.change_language() clears config.font_name_map, so a mapping installed from a plain init block is wiped the moment the language is (re)applied. A translate block is re-executed on every language load, which is exactly what is needed here. It also means games.patch_entries() has only one file to write, so nothing is silently dropped.",
+  "_language_pinned": "No usable language selector exists in this game and config.enable_language_autodetect is off, so the language has to be pinned. config.default_language alone is not enough, for two reasons the shim handles separately. First, _apply_default_preferences() (init 1500) only writes default_language into _preferences.language on a player's first run; a save that already recorded 'english' ignores it, so init 1999 writes _preferences.language directly. Second, label _start reaches the splashscreen after _init_language(), and game/game_splashscreen.rpy:9 calls auto_lang(), which runs renpy.change_language('english') and reverts everything -- all 1,761 translated strings go back to English and the font map empties. init 2999 wraps renpy.change_language to rewrite that request back to simplified_chinese.",
+  "_font_strategy_note": "font_strategy is 'fallback' because nothing the game ships is overwritten and the face is registered through renpy.config.font_name_map. It is not the FontGroup arrangement the other fallback games use, though. zzz_fonts.rpy maps all 39 western font names the game references to the one CJK face outright, so Latin is drawn by Noto Sans SC as well -- the game has no CJK glyphs to fall back from, and its decorative faces (LEMONMILK, COMPUTERRobot, digital-7) have no business drawing a Chinese dialogue line. The list of 39 names was audited against the game rather than guessed; two entries the first pass missed, fonts/computer_pixel-7.ttf and fonts/SawarabiMincho-Regular.ttf, are in it.",
+  "_font_modified": "assets/fonts/NotoSansSC-Regular.ttf is a modified copy of the upstream variable font: the fvar default for the wght axis was changed from 100 to 400 and nothing else was touched. It is still variable. Upstream declares no Reserved Font Name, so OFL 1.1 clause 3 does not require it to be renamed. See the licence file.",
+  "_font_path_note": "zzz_fonts.rpy referenced the face as tl/simplified_chinese/NotoSansSC-Regular.ttf, where it shipped inside the translation tree. tools/install.py and tools/package_release.py can only write game/fonts/, and adding a game must not change tools/, so the reference is now fonts/NotoSansSC-Regular.ttf. Same file, different directory; Ren'Py resolves both against game/.",
+  "_restored_english_comments": "The tl tree as built had every English comment above a dialogue line stripped, so 4,001 translated lines had no source string to pair with. The English was recovered from theinn_work/dialogue.json, which holds one entry per translate block id with the original file and line, and written back into the usual position. All 3,957 dialogue blocks matched by id, all 3,957 speakers matched the English speaker, and the rebuild only ever inserted lines: every original line is still present in order.",
+  "_do_not_run_build_tl": "patch/tl/simplified_chinese/ is the shipped patch, not the output of tools/build_tl.py. 61 English sources legitimately need two renderings depending on context -- 'What?' is 什么？ answering a stranger and 什么话？ answering an accusation, 'Sure!' is 好啊！ agreeing enthusiastically and 好！ acknowledging -- and data/tl_trans.json is a flat dictionary keyed on the English source, so it holds one form per key. Measured: rebuilding changes the text of 190 patch lines and 10 more by spacing alone. Edit patch/tl/simplified_chinese/ directly and re-run python tools/check.py --game theinn-10201.",
+  "_build_tl_harmless_failures": "tools/build_tl.py exits 1 on this game with 'still untranslated: 40'. All 40 are quoted strings inside the translate simplified_chinese python: block of zzz_fonts.rpy -- the game's list of 39 western font names plus the CJK path. They have no English source and are not dialogue, so tl_trans.json deliberately does not carry them; build_tl skips an unresolvable edit and leaves the line as the template has it, which is already the finished list. pack.py reports the same block as 44 'unpaired lines' because it also counts the four quote-free lines around the list.",
+  "_conflicts_measured": {
+    "english_sources_with_two_renderings": 61,
+    "patch_lines_that_change_text_on_rebuild": 190,
+    "patch_lines_that_change_spacing_on_rebuild": 10,
+    "edits_build_tl_cannot_resolve": 40
+  }
+}
