@@ -27820,7 +27820,7 @@ translate schinese Emiko_Virginity_Scene_Shared_0_b85d9ec2:
 translate schinese Emiko_Virginity_Scene_Shared_0_bd8a0e8d:
 
     # em "O-okay, but what if I... can't hold it and... finish before we do it properly?"
-    em "因为现在的情况让你有点僵硬，这样能让你放松一些，也能消除最初的紧张。"
+    em "好、好吧……可是……万一我撑不住，在好好做完之前就……射了呢？"
 
 # game/events.rpy:19169
 translate schinese Emiko_Virginity_Scene_Shared_0_0dc05b73:
