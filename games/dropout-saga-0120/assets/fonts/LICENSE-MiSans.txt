@@ -10,11 +10,11 @@ Both files are byte-identical to the copies already in this repository, SHA-256
 verified rather than assumed:
 
   MiSans-Regular.ttf  8,073,152 bytes  6aa32ded55e110a9...
-    games/clownsquad/, games/cosycafe-0142/,
+    games/clownsquad-01-part1/, games/cosycafe-0142/,
     games/sinfulsummer-chapter36/, games/scionsofthedivine-01/,
     games/toxicity-0220/
   MiSans-Bold.ttf     7,959,920 bytes  c01078cf5e0ca166...
-    games/clownsquad/, games/cosycafe-0142/,
+    games/clownsquad-01-part1/, games/cosycafe-0142/,
     games/scionsofthedivine-01/, games/toxicity-0220/
 
 games/eden-chapter5/assets/fonts/MiSans-Regular.ttf is a DIFFERENT build

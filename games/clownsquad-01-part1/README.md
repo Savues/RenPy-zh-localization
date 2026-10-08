@@ -1,8 +1,8 @@
-# Clown Squad 简体中文补丁
+# Clown Squad 0.1 Part 1 — 简体中文
 
 | | |
 |---|---|
-| 游戏 | Clown Squad（中文译名《弄臣本色》） |
+| 游戏 | Clown Squad 0.1 Part 1（中文译名《弄臣本色》） |
 | 原作 | Astreon |
 | 引擎 | Ren'Py 8.3.4 |
 | 语言 | 简体中文（启动时自动启用，不需要在设置里切换） |
@@ -49,8 +49,8 @@ game/fonts/MiSans-Bold.ttf         →    <游戏目录>/game/fonts/
 也提供脚本版：
 
 ```bash
-python tools/install.py   "<游戏目录>" --game clownsquad
-python tools/uninstall.py "<游戏目录>" --game clownsquad
+python tools/install.py   "<游戏目录>" --game clownsquad-01-part1
+python tools/uninstall.py "<游戏目录>" --game clownsquad-01-part1
 ```
 
 想退回英文版：删掉 `game/zz_zh_locale.rpy`，或者把里面的 `zh_language` 改成 `None`。
@@ -72,7 +72,7 @@ python tools/uninstall.py "<游戏目录>" --game clownsquad
   `translations.add()` 遇到已存在的键会抛同一个错。
 - **装补丁前必须先删掉旧补丁。** 再打一份会重复注册 `schinese`。
 - **`tools/template.py` 导不进这个游戏。** 它看到中文就报错退出（那是防止把打过补丁的
-  游戏当模板导进来）。英文模板是用 `games/clownsquad/tools/make_template.py` 从注释里
+  游戏当模板导进来）。英文模板是用 `games/clownsquad-01-part1/tools/make_template.py` 从注释里
   还原出来的，过程见 [`docs/approach.md`](docs/approach.md)。
 
 ### 2. 字体必须走 `font_name_map`，不能覆盖字体文件
@@ -108,9 +108,9 @@ Ren'Py 本身其实能表达一句英文在不同块里译得不同（游戏自�
 ## 校验
 
 ```bash
-python tools/build_tl.py  --game clownsquad   # 从模板 + 译文库重建补丁，5408/5408
-python tools/check.py     --game clownsquad   # 译文库 + 补丁 + 术语表
-python tools/selftest.py  --game clownsquad   # 证明上面这些检查真的会报错
+python tools/build_tl.py  --game clownsquad-01-part1   # 从模板 + 译文库重建补丁，5408/5408
+python tools/check.py     --game clownsquad-01-part1   # 译文库 + 补丁 + 术语表
+python tools/selftest.py  --game clownsquad-01-part1   # 证明上面这些检查真的会报错
 python tools/check_links.py
 ```
 

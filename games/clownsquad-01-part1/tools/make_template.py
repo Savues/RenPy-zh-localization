@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Rebuild Clown Squad's *English* tl_template/ from the one the game ships.
 
-    python games/clownsquad/tools/make_template.py "<path-to-the-game>"
+    python games/clownsquad-01-part1/tools/make_template.py "<path-to-the-game>"
 
 Why this game needs its own template builder
 --------------------------------------------
@@ -309,7 +309,7 @@ def main(argv):
     for key in sorted(NVL_SPLITS):
         print("  %-24s %s" % (key, NVL_SPLITS[key][2]))
     print("")
-    print("Now: python tools/build_tl.py --game clownsquad")
+    print("Now: python tools/build_tl.py --game clownsquad-01-part1")
     return 0
 
 

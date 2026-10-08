@@ -27,8 +27,8 @@ Ren'Py 的语言工具在它生成的每一个块上方都留了一行**翻译�
 `tools/make_template.py` 干的就是这件事：
 
 ```bash
-python games/clownsquad/tools/make_template.py "<游戏目录>"
-python tools/build_tl.py --game clownsquad
+python games/clownsquad-01-part1/tools/make_template.py "<游戏目录>"
+python tools/build_tl.py --game clownsquad-01-part1
 ```
 
 配对时比对的不是行号，是**字符串前面那段文字**（说话人 / 关键字）。注释和语句的
@@ -140,10 +140,10 @@ A translation for "..." already exists
 ## 校验
 
 ```bash
-python games/clownsquad/tools/make_template.py "<干净的游戏目录>"
-python tools/build_tl.py --game clownsquad     # applied 5408 / 5408，退出码 0
-python tools/check.py    --game clownsquad     # all checks passed
-python tools/selftest.py --game clownsquad     # 101 / 101 条守卫都会报错
+python games/clownsquad-01-part1/tools/make_template.py "<干净的游戏目录>"
+python tools/build_tl.py --game clownsquad-01-part1     # applied 5408 / 5408，退出码 0
+python tools/check.py    --game clownsquad-01-part1     # all checks passed
+python tools/selftest.py --game clownsquad-01-part1     # 101 / 101 条守卫都会报错
 ```
 
 游戏侧另外跑一次 Ren'Py 自带 lint，`tl/schinese` 的问题数必须是 0。
