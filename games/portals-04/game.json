@@ -1,0 +1,33 @@
+{
+  "slug": "portals-04",
+  "title": "Por(n)tals 0.4",
+  "author": "onehend",
+  "renpy_version": "8.2.0",
+  "language": "schinese",
+  "language_name": "简体中文",
+  "patch_version": 1,
+  "patch_layout": "tl-blocks",
+  "installer": "py",
+  "shim": "zz_zh_locale.rpy",
+  "font_strategy": "fallback",
+  "font_assets": [
+    {
+      "path": "assets/fonts/NotoSansSC-VF.ttf",
+      "names": [
+        "NotoSansSC-VF.ttf"
+      ]
+    }
+  ],
+  "font_license": "assets/fonts/LICENSE-NotoSansSC.txt",
+  "font_credit": "Noto Sans SC (c) 2022 The Noto Project Authors (https://github.com/notofonts/noto-cjk)",
+  "_shim_merged": "The patch shipped as two files, zz_zh_setup.rpy and zz_zh_names.rpy. games.patch_entries() reads one `shim` from game.json and package_release.py writes that one file, so the pair was concatenated into patch/zz_zh_locale.rpy. Straight concatenation is order-safe: both files used `init 999 python:`, which Ren'Py allows more than once and runs in file order, and every other priority is distinct (-4000 setup, -300 names, -100 setup).",
+  "_font_path_note": "The tested patch referenced the bundled face as `Fonts/NotoSansSC-VF.ttf`. tools/install.py and tools/package_release.py can only write game/fonts/, and adding a game must not change tools/, so the shim now says `fonts/NotoSansSC-VF.ttf`. Same file one directory up in case; Ren'Py resolves both against game/.",
+  "_distribution_boot_bug": "This distribution does not boot as shipped, with or without this patch: renpy/common/00layout.rpy:124 calls renpy.has_screen(), and in this build `renpy` resolves to the renpy PACKAGE rather than renpy.exports, so the call raises AttributeError. Section 0 of zz_zh_locale.rpy copies every missing export onto the package and then overrides the three names where a submodule shadows an exported function. That block is a fix for the distribution, not for localisation -- delete it if the engine is ever swapped for a stock Ren'Py 8.2.",
+  "_name_mapping": "Ren'Py does not route Character(\"Mom\") through the translation system, so names are remapped instead: every ADVCharacter is rewritten as it is constructed at init -300, and anything already in the store is swept afterwards. Names that are expressions (\"[mc_name]\", the player's own name) are deliberately absent so they keep evaluating.",
+  "_do_not_run_build_tl": "patch/tl/schinese/ is the shipped patch, not the output of tools/build_tl.py. 1,790 English source lines here legitimately translate two ways depending on context -- 'What?' is 什么？ answering a non-question and 怎么了？ answering a repetition. data/tl_trans.json is a flat dictionary keyed on the English source, so it holds only one form per key. Measured: rebuilding changes the text of 2,397 patch lines and no line differs by spacing alone. Edit patch/tl/schinese/ directly and re-run python tools/check.py --game portals-04.",
+  "_conflicts_measured": {
+    "english_sources_with_two_renderings": 1790,
+    "patch_lines_that_change_text_on_rebuild": 2397,
+    "edits_build_tl_cannot_resolve": 0
+  }
+}

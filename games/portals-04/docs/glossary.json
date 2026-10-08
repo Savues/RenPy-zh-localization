@@ -1,0 +1,383 @@
+{
+  "_comment": "Character names for Por(n)tals 0.4, read out of the ZH_CHARACTER_NAMES table in patch/zz_zh_locale.rpy so the two cannot drift. Nothing is listed as banned: check.py matches banned forms as plain substrings, and most of these names are also ordinary Chinese words (女孩, 学生, 老师, 人群), which would make a ban fire on correct prose. The table in the shim is the enforcement point for this game; check_glossary only fails if that file is missing.",
+  "_kept_verbatim": [
+    "Kinetic Text Tags Ren'Py Module 2021 Daniel Westfall <SoDaRa2595@gmail.com>",
+    "Wyr nyat dyunn yeth...",
+    "{sc=2}{size=*1.2}KURWAAAAAAAAAAA!"
+  ],
+  "_why_kept_verbatim": "Three entries, all of which reading as English is correct: the Kinetic Text Tags module credit, which is the library's own copyright line and belongs to its author; 'Wyr nyat dyunn yeth...', which is Cornish and is the joke -- the characters around it react to the language, not to the words; and '{sc=2}{size=*1.2}KURWAAAAAAAAAAA!', a shouted line whose value is the spelling.",
+  "characters": {
+    "Mom": {
+      "zh": "妈妈"
+    },
+    "Dad": {
+      "zh": "爸爸"
+    },
+    "Riley's mom": {
+      "zh": "莱莉的妈妈"
+    },
+    "Riley's dad": {
+      "zh": "莱莉的爸爸"
+    },
+    "Mr. Bradford": {
+      "zh": "布拉德福德先生"
+    },
+    "Bodyguard": {
+      "zh": "保镖"
+    },
+    "Dave": {
+      "zh": "戴夫"
+    },
+    "Kate": {
+      "zh": "凯特"
+    },
+    "Alice": {
+      "zh": "爱丽丝"
+    },
+    "Riley": {
+      "zh": "莱莉"
+    },
+    "Vanessa": {
+      "zh": "瓦妮莎"
+    },
+    "Chad": {
+      "zh": "查德"
+    },
+    "Chad's sister": {
+      "zh": "查德的妹妹"
+    },
+    "Mr. Dyck": {
+      "zh": "戴克先生"
+    },
+    "Elliot": {
+      "zh": "埃利奥特"
+    },
+    "Ms. Bowers": {
+      "zh": "鲍尔斯女士"
+    },
+    "Samantha": {
+      "zh": "萨曼莎"
+    },
+    "Classmates": {
+      "zh": "同学们"
+    },
+    "Man": {
+      "zh": "男人"
+    },
+    "Woman": {
+      "zh": "女人"
+    },
+    "Boy": {
+      "zh": "男孩"
+    },
+    "Girl": {
+      "zh": "女孩"
+    },
+    "Girls": {
+      "zh": "女孩们"
+    },
+    "Shirtless guy": {
+      "zh": "光膀子男人"
+    },
+    "Pantsless guy": {
+      "zh": "光屁股男人"
+    },
+    "Fatty": {
+      "zh": "死胖子"
+    },
+    "Horny guy": {
+      "zh": "色狼"
+    },
+    "Eira": {
+      "zh": "艾拉"
+    },
+    "Hostess": {
+      "zh": "女招待"
+    },
+    "Host": {
+      "zh": "主持人"
+    },
+    "Silver hair girl": {
+      "zh": "银发女孩"
+    },
+    "Black hair girl": {
+      "zh": "黑发女孩"
+    },
+    "Purple hair girl": {
+      "zh": "紫发女孩"
+    },
+    "Green hair girl": {
+      "zh": "绿发女孩"
+    },
+    "Blue hair woman": {
+      "zh": "蓝发女人"
+    },
+    "Black hair woman": {
+      "zh": "黑发女人"
+    },
+    "Middle-aged woman": {
+      "zh": "中年妇女"
+    },
+    "Running girl": {
+      "zh": "跑步的女孩"
+    },
+    "Pretty girl": {
+      "zh": "漂亮女孩"
+    },
+    "Man with a dog": {
+      "zh": "牵狗的男人"
+    },
+    "Man in hoodie": {
+      "zh": "连帽衫男人"
+    },
+    "Man in red shirt": {
+      "zh": "红衬衫男人"
+    },
+    "Bookworm": {
+      "zh": "书虫"
+    },
+    "Student": {
+      "zh": "学生"
+    },
+    "Teacher": {
+      "zh": "老师"
+    },
+    "Merchant": {
+      "zh": "商人"
+    },
+    "Beggar": {
+      "zh": "乞丐"
+    },
+    "Nobleman": {
+      "zh": "贵族"
+    },
+    "Prostitute": {
+      "zh": "妓女"
+    },
+    "Knight 1": {
+      "zh": "骑士1"
+    },
+    "Knight 2": {
+      "zh": "骑士2"
+    },
+    "Sir Allone": {
+      "zh": "阿隆爵士"
+    },
+    "Sir Enolla": {
+      "zh": "伊诺拉爵士"
+    },
+    "Driver": {
+      "zh": "司机"
+    },
+    "Crowd": {
+      "zh": "人群"
+    },
+    "Hayden": {
+      "zh": "海登"
+    },
+    "Drunk guy": {
+      "zh": "醉汉"
+    },
+    "Drunkard": {
+      "zh": "酒鬼"
+    },
+    "Fae": {
+      "zh": "仙灵"
+    },
+    "Boss": {
+      "zh": "老板"
+    },
+    "Valen": {
+      "zh": "瓦伦"
+    },
+    "Tom": {
+      "zh": "汤姆"
+    },
+    "Painter": {
+      "zh": "画家"
+    },
+    "Both": {
+      "zh": "两人"
+    },
+    "Porter": {
+      "zh": "搬运工"
+    },
+    "Gangster 1": {
+      "zh": "混混1"
+    },
+    "Gangster 2": {
+      "zh": "混混2"
+    },
+    "Device": {
+      "zh": "设备"
+    },
+    "Lucy": {
+      "zh": "露西"
+    },
+    "Angel 1": {
+      "zh": "天使1"
+    },
+    "Angel 2": {
+      "zh": "天使2"
+    },
+    "Angel 3": {
+      "zh": "天使3"
+    },
+    "Angel 4": {
+      "zh": "天使4"
+    },
+    "Angel 5": {
+      "zh": "天使5"
+    },
+    "Ad": {
+      "zh": "广告"
+    },
+    "Muscular guy": {
+      "zh": "肌肉男"
+    },
+    "Registrar": {
+      "zh": "教务处"
+    },
+    "Guardian": {
+      "zh": "守护者"
+    },
+    "Wizard": {
+      "zh": "巫师"
+    },
+    "Theron": {
+      "zh": "西隆"
+    },
+    "Adora": {
+      "zh": "阿多拉"
+    },
+    "Jenna": {
+      "zh": "珍娜"
+    },
+    "Troy": {
+      "zh": "特洛伊"
+    },
+    "Marie": {
+      "zh": "玛丽"
+    },
+    "Azalea": {
+      "zh": "杜鹃"
+    },
+    "Primrose": {
+      "zh": "樱草"
+    },
+    "Junkie": {
+      "zh": "瘾君子"
+    },
+    "Ethan": {
+      "zh": "伊森"
+    },
+    "Josh": {
+      "zh": "乔什"
+    },
+    "Freddie": {
+      "zh": "弗雷迪"
+    },
+    "Lexi": {
+      "zh": "莱克西"
+    },
+    "Selena": {
+      "zh": "赛琳娜"
+    },
+    "Ashley": {
+      "zh": "阿什莉"
+    },
+    "Chester": {
+      "zh": "切斯特"
+    },
+    "Emily": {
+      "zh": "艾米莉"
+    },
+    "Kimberly": {
+      "zh": "金伯莉"
+    },
+    "Maya": {
+      "zh": "玛雅"
+    },
+    "Caleb": {
+      "zh": "凯莱布"
+    },
+    "Olivia": {
+      "zh": "奥利维亚"
+    },
+    "Mysterious man": {
+      "zh": "神秘男子"
+    },
+    "Jayden": {
+      "zh": "杰登"
+    },
+    "Adam": {
+      "zh": "亚当"
+    },
+    "Police officer": {
+      "zh": "警察"
+    },
+    "Candice": {
+      "zh": "坎迪斯"
+    },
+    "Diana": {
+      "zh": "黛安娜"
+    },
+    "Waitress": {
+      "zh": "女服务员"
+    },
+    "Mage": {
+      "zh": "法师"
+    },
+    "Mage 1": {
+      "zh": "法师1"
+    },
+    "Mage 2": {
+      "zh": "法师2"
+    },
+    "Eagle statue": {
+      "zh": "鹰雕像"
+    },
+    "Human statue": {
+      "zh": "人雕像"
+    },
+    "Ms. Korrin": {
+      "zh": "科林女士"
+    },
+    "Ms. Lunareth": {
+      "zh": "露娜瑞丝女士"
+    },
+    "Mr. Varyn": {
+      "zh": "瓦林先生"
+    },
+    "Mr. Morgrave": {
+      "zh": "莫格瑞夫先生"
+    },
+    "Mr. Bumblewise": {
+      "zh": "邦布尔怀斯先生"
+    },
+    "Demon": {
+      "zh": "恶魔"
+    },
+    "Elaris": {
+      "zh": "艾拉里斯"
+    },
+    "Hero": {
+      "zh": "英雄"
+    },
+    "Daphne": {
+      "zh": "达芙妮"
+    },
+    "Andy": {
+      "zh": "安迪"
+    },
+    "Mark": {
+      "zh": "马克"
+    },
+    "Max": {
+      "zh": "马克斯"
+    },
+    "Question [test_question_number]": {
+      "zh": "问题 [test_question_number]"
+    }
+  }
+}

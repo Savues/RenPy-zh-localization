@@ -1,0 +1,18 @@
+Noto Sans SC (Simplified Chinese) -- variable weight
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/noto-cjk)
+Upstream: https://github.com/notofonts/noto-cjk
+Licence: SIL Open Font License, Version 1.1
+        https://scripts.sil.org/OFL
+File: NotoSansSC-VF.ttf (variable, wght axis)
+
+Shipped unmodified, byte for byte as downloaded from the upstream release.
+OFL 1.1 permits bundling and redistribution inside a patch provided the font
+is not sold on its own and is not modified under the Reserved Font Name.
+
+On install it is written to:
+
+    game/fonts/NotoSansSC-VF.ttf
+
+No file the game ships is overwritten. The patch registers this face through
+renpy.config.font_replacement_map so the game's hardcoded western filenames
+resolve to it; see zz_zh_locale.rpy.
