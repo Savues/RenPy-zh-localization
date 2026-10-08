@@ -42,31 +42,57 @@ style skip_triangle:
     font "DejaVuSans.ttf"
 
 # =============================================================================
-#  引擎内置字符串（renpy/common/00gui.rpy）的中文化。
+#  引擎内置确认框文案的中文化。
 #
-#  这些字符串写死在引擎里，不在 scripts.rpa 中，改不了源码，
-#  所以在比引擎 init 块（init -1150）更晚的优先级里直接覆盖变量。
-#  覆盖的是"确定吗？"这类确认框提示，配合 screens.rpy 里已汉化的
-#  是/否按钮，整个 confirm 对话框就都是中文了。
+#  这些字符串写死在引擎里，不在 scripts.rpa 中，改不了源码，只能在比引擎
+#  init 块更晚的优先级里覆盖变量。关键在于它们挂在两个不同的对象上：
+#
+#      renpy/common/00layout.rpy:449-459   layout.ARE_YOU_SURE / DELETE_SAVE /
+#                                          OVERWRITE_SAVE / LOADING / QUIT /
+#                                          MAIN_MENU / CONTINUE / END_REPLAY /
+#                                          SLOW_SKIP / FAST_SKIP_SEEN /
+#                                          FAST_SKIP_UNSEEN        （init -1400）
+#      renpy/common/00gui.rpy:459-460      gui.UNKNOWN_TOKEN / TRUST_TOKEN
+#                                                           （init -1150）
+#
+#  00action_file.rpy:408 把 layout.OVERWRITE_SAVE 交给 layout.yesno_screen，
+#  游戏自己的 screen confirm（screens.rpy:1200）再用 label _(message) 显示；
+#  是/否按钮在 screens.rpy:1208-1209 已经翻好。所以这里只需要换文案。
+#
+#  覆盖 gui.<确认框文案> 是没有效果的 —— 引擎一处都不读 gui 上的那十一个值，
+#  只读 layout 上的同名副本。这就是它们之前一直是英文的原因。
+#  两个 ARE_YOU_SURE（gui 和 layout 各一份）同样全引擎无读取点，
+#  覆盖它们不会有任何效果，所以不覆盖。
+#
+#  优先级取 -999：比 layout 的 -1400 和 gui 的 -1150 都晚，同时落在 lint 认可的
+#  -999..999 区间内（原来的 -1149 会让 lint 报优先级越界）。这些串只在运行时
+#  被屏幕读取，不需要比引擎更早生效。
 # =============================================================================
 
-init -1149 python:
+init -999 python:
 
-    import store.gui as _gui
+    import store.gui as _zh_gui
 
-    _gui.ARE_YOU_SURE = "确定吗？"
-    _gui.DELETE_SAVE = "确定要删除这个存档吗？"
-    _gui.OVERWRITE_SAVE = "确定要覆盖这个存档吗？"
-    _gui.LOADING = "读取存档会丢失尚未保存的进度。\n确定要继续吗？"
-    _gui.QUIT = "确定要退出游戏吗？"
-    _gui.MAIN_MENU = "确定要返回主菜单吗？\n这会丢失尚未保存的进度。"
-    _gui.CONTINUE = "确定要从上次的地方继续吗？"
-    _gui.END_REPLAY = "确定要结束回放吗？"
-    _gui.SLOW_SKIP = "确定要开始快进吗？"
-    _gui.FAST_SKIP_SEEN = "确定要快进到下一个选项吗？"
-    _gui.FAST_SKIP_UNSEEN = "确定要跳过未读对话直到下一个选项吗？"
-    _gui.UNKNOWN_TOKEN = "此存档来自另一台设备。恶意伪造的存档可能损坏你的电脑。你信任这个存档的作者，以及所有可能改动过它的人吗？"
-    _gui.TRUST_TOKEN = "你信任创建此存档时所用的设备吗？只有当这台设备的使用者只有你时，才应选择「是」。"
+    _zh_layout = store.layout
+    _zh_layout.DELETE_SAVE = "确定要删除这个存档吗？"
+    _zh_layout.OVERWRITE_SAVE = "确定要覆盖这个存档吗？"
+    _zh_layout.LOADING = "读取存档会丢失尚未保存的进度。\n确定要继续吗？"
+    _zh_layout.QUIT = "确定要退出游戏吗？"
+    _zh_layout.MAIN_MENU = "确定要返回主菜单吗？\n这会丢失尚未保存的进度。"
+    _zh_layout.CONTINUE = "确定要从上次的地方继续吗？"
+    _zh_layout.END_REPLAY = "确定要结束回放吗？"
+    _zh_layout.SLOW_SKIP = "确定要开始快进吗？"
+    _zh_layout.FAST_SKIP_SEEN = "确定要快进到下一个选项吗？"
+    _zh_layout.FAST_SKIP_UNSEEN = "确定要跳过未读对话直到下一个选项吗？"
+
+    # 这两个确实有人读：renpy/savetoken.py:164,169 在校验存档令牌时弹确认框。
+    _zh_gui.UNKNOWN_TOKEN = "此存档来自另一台设备。恶意伪造的存档可能损坏你的电脑。你信任这个存档的作者，以及所有可能改动过它的人吗？"
+    _zh_gui.TRUST_TOKEN = "你信任创建此存档时所用的设备吗？只有当这台设备的使用者只有你时，才应选择「是」。"
+
+    # 别把这两个临时名留在 store 里，也别去 del 引擎的 _layout：
+    # renpy/common/00layout.rpy:41 是 layout = _layout = Layout()，
+    # renpy/common/00themes.rpy:1247 的 init 1400 还要读它。
+    del _zh_gui, _zh_layout
 # =============================================================================
 #  Shawn's Mod 自带字体 -> MiSans
 #

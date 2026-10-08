@@ -94,15 +94,33 @@ day1_update.rpy:1324   if corruption_sophia < 2: <- 黑化路线专属
 
 ## 已知的坑
 
-### 覆盖确认框改不动
+### 覆盖确认框：改的是 layout，不是 gui
 
-`gui.ARE_YOU_SURE` 这类字符串在 `init -1149` 覆盖没有效果。全引擎没有任何地方
-读 `gui` 上的这六个值；真正传给屏幕的是 `00action_file.rpy:408` 的
-`layout.OVERWRITE_SAVE`，而 `layout` 是 `00layout.rpy:41` 建的
-`Layout()` 实例 —— 和 `gui` 不是同一个命名空间。
-要修就把那六个字符串再覆盖一次 `layout.*`。
-同一个 `init -1149` 也可以挪到 `init -999`（引擎是 -1150，这些串只在运行时被读），
-消掉唯一一条自有 lint 警告。
+确认框文案在引擎里有两套，名字部分重合，挂在不同对象上。哪些有人读、哪些是死代码，grep 全部读取点才分得清：
+
+| 对象 | 定义处 | init | 引擎读它吗 |
+|---|---|---|---|
+| `layout.DELETE_SAVE` / `OVERWRITE_SAVE` / `LOADING` / `QUIT` / `MAIN_MENU` / `CONTINUE` / `END_REPLAY` / `SLOW_SKIP` / `FAST_SKIP_SEEN` / `FAST_SKIP_UNSEEN` | `00layout.rpy:450-459` | -1400 | 读。`00action_file.rpy:408,496,551`、`00action_menu.rpy:168,235,271,311,313,315`、`00action_other.rpy:464`、`00layout.rpy:79,88` |
+| `layout.ARE_YOU_SURE` | `00layout.rpy:449` | -1400 | **不读** |
+| `gui.UNKNOWN_TOKEN` / `gui.TRUST_TOKEN` | `00gui.rpy:459-460` | -1150 | 读。`renpy/savetoken.py:164,169` 校验存档令牌时弹框 |
+| `gui.ARE_YOU_SURE` | `00gui.rpy:448` | -1150 | **不读** |
+
+早先的 shim 把十个确认框文案全都覆盖到了 `gui` 上，于是确认框一直是英文：
+那十个名字在 `gui` 上根本不存在（`00gui.rpy` 一共只定义了这三个），
+真正被引擎读的是 `layout` 上的同名副本。覆盖写在对的优先级上、语法也完全合法，
+只是改了一个没人读的对象 —— 这类错误任何检查都看不见，只有把读取点 grep 出来才知道。
+
+修法是覆盖 `layout.*`，另外两个 `UNKNOWN_TOKEN` / `TRUST_TOKEN` 保持覆盖
+`gui.*` —— 只有它们真的有人读。两个 `ARE_YOU_SURE`（`gui` 和 `layout` 各一份）
+全引擎都没有读取点，所以一个都不覆盖。
+
+顺带把 `init -1149` 挪到 `init -999`：`layout` 的 -1400 和 `gui` 的 -1150 都比它早，
+这些串只在运行时被屏幕读取，不需要比引擎更早生效，而 -999 落在 lint 认可的区间内，
+消掉了补丁唯一一条自有 lint 警告。
+
+写这段注释时还踩了一次：临时变量原本叫 `_layout`，而 `00layout.rpy:41` 是
+`layout = _layout = Layout()` —— 收尾那句 `del` 把引擎的变量删了，
+`00themes.rpy:1247` 的 `init 1400` 立刻 `NameError`。lint 当场退出码 1。
 
 ### 屏幕探针不覆盖模态屏
 

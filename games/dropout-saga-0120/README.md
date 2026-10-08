@@ -79,9 +79,6 @@ TOXICity）的 Regular 完全同一份字节；Eden Chapter 5 的 Regular 是另
 
 ## 已知问题
 
-- **覆盖确认框仍是英文。** 覆盖 `gui.ARE_YOU_SURE` 之类的字符串没有作用：
-  全引擎没人读 `gui` 上的这六个值，真正显示的是 `layout.*`，而 `layout` 是
-  `00layout.rpy` 建的 `Layout()` 实例，和 `gui` 不是同一个命名空间。
 - **主菜单没有背景。** 发布包缺 `gui/main_menu.png`，`images.rpa` 的 6,279 个条目里也没有。
   这是发行包的缺陷，不是补丁造成的。
 - **MOD 的 `meeting_1_m` 支线没翻。** 那 1,028 句是作者为 0.6.9a 写的 Day 1 替代线，
