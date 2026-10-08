@@ -1,0 +1,20 @@
+Noto Sans SC (Simplified Chinese) -- variable weight
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/noto-cjk)
+Upstream: https://github.com/notofonts/noto-cjk
+Licence: SIL Open Font License, Version 1.1
+        https://scripts.sil.org/OFL
+File: NotoSansSC-VF.ttf (variable, wght axis)
+
+Shipped unmodified, byte for byte as downloaded from the upstream release.
+OFL 1.1 permits bundling and redistribution inside a patch provided the font is
+not sold on its own and is not modified under the Reserved Font Name.
+
+On install it is written to:
+
+    game/fonts/NotoSansSC-VF.ttf
+
+MiSans is NOT bundled with this patch. The shim prefers MiSans when the player
+has placed it in the game's own game/Fonts/ directory, and falls back to this
+Noto face otherwise. MiSans's name table carries no licence description and no
+licence URL and its copyright line ends in "All Rights Reserved", so it grants
+no written redistribution right.

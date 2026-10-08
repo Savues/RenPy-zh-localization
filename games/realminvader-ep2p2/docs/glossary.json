@@ -1,0 +1,255 @@
+{
+  "_comment": "Character names for Realm Invader Episode 2 Part 2, read out of the _realm_invader_name_replacements table in patch/tl/schinese/characters.rpy so the two cannot drift. This game has no name table in its shim -- unlike Por(n)tals, whose shim owns ZH_CHARACTER_NAMES -- because the developer already shipped the replacement tuple inside the translation file itself, where Ren'Py applies it to every speaker name. Nothing is listed as banned: check.py matches banned forms as plain substrings, and most of these names are also ordinary Chinese words (孩子, 学生, 老师, 陌生人, 安保人员), which would make a ban fire on correct prose.",
+  "_kept_verbatim": [
+    "DejaVu Sans",
+    "Opendyslexic",
+    "a",
+    "q",
+    "★.",
+    "♥♥♥",
+    "♥♥♥♥♥♥♥"
+  ],
+  "_why_kept_verbatim": "Seven entries, all of which reading as English (or as no language at all) is correct. 'DejaVu Sans' and 'Opendyslexic' are font family names printed in the font-picker and credits screens; translating a typeface's name would break every other tool that looks it up. 'a' and 'q' are single keystrokes in the key-binding and quick-save prompts, where the surrounding sentence already carries the meaning. '★.', '♥♥♥' and '♥♥♥♥♥♥♥' are decorative filler made of symbols and no letters: the player reads the rhythm, not words, so there is nothing to translate.",
+  "characters": {
+    "Kid that only says goon shit like \\\"I dunno about this one, boss\\\"": {
+      "zh": "只会说“我不知道这个，老板”这种蠢话的孩子"
+    },
+    "Kid that might be some kind of gangster": {
+      "zh": "可能是某种黑帮分子的孩子"
+    },
+    "Kid that looks like the boss": {
+      "zh": "看起来像老板的孩子"
+    },
+    "Home Economics Teacher": {
+      "zh": "家政课老师"
+    },
+    "Disgruntled Employee": {
+      "zh": "不满的职员"
+    },
+    "DJ with unspecified name": {
+      "zh": "姓名不详的 DJ"
+    },
+    "Animal Handler": {
+      "zh": "动物管理员"
+    },
+    "Young Elf Girl": {
+      "zh": "年轻精灵女孩"
+    },
+    "Female voice": {
+      "zh": "女声"
+    },
+    "Male voice": {
+      "zh": "男声"
+    },
+    "Good Grace": {
+      "zh": "善良的格蕾丝"
+    },
+    "Evil Grace": {
+      "zh": "邪恶的格蕾丝"
+    },
+    "Big Kelly": {
+      "zh": "大凯莉"
+    },
+    "Slobby Bobby": {
+      "zh": "邋遢鲍比"
+    },
+    "Bumzilla Gumz": {
+      "zh": "布姆吉拉·古姆兹"
+    },
+    "Samuel Harper": {
+      "zh": "塞缪尔·哈珀"
+    },
+    "Dr. Bashford": {
+      "zh": "巴什福德博士"
+    },
+    "Miss. Greenslade": {
+      "zh": "格林斯莱德小姐"
+    },
+    "Mr. Stewart": {
+      "zh": "斯图尔特先生"
+    },
+    "Shady Guy": {
+      "zh": "可疑男子"
+    },
+    "Marcello": {
+      "zh": "马尔切洛"
+    },
+    "Marcus": {
+      "zh": "马库斯"
+    },
+    "Meryl": {
+      "zh": "梅瑞尔"
+    },
+    "Mikey": {
+      "zh": "迈基"
+    },
+    "Vineeta": {
+      "zh": "维妮塔"
+    },
+    "Cadence": {
+      "zh": "凯登丝"
+    },
+    "Clement": {
+      "zh": "克莱门特"
+    },
+    "Doomchild": {
+      "zh": "末日之子"
+    },
+    "Guillaume": {
+      "zh": "纪尧姆"
+    },
+    "Liliana": {
+      "zh": "莉莉安娜"
+    },
+    "Noelle": {
+      "zh": "诺艾尔"
+    },
+    "Philica": {
+      "zh": "菲莉卡"
+    },
+    "Ronald": {
+      "zh": "罗纳德"
+    },
+    "Sandrelle": {
+      "zh": "桑德雷尔"
+    },
+    "Security": {
+      "zh": "安保人员"
+    },
+    "Selvo": {
+      "zh": "塞尔沃"
+    },
+    "Stranger": {
+      "zh": "陌生人"
+    },
+    "Student": {
+      "zh": "学生"
+    },
+    "Teacher": {
+      "zh": "老师"
+    },
+    "Cashier": {
+      "zh": "收银员"
+    },
+    "Kid": {
+      "zh": "孩子"
+    },
+    "Bumzilla": {
+      "zh": "布姆吉拉"
+    },
+    "Gumz": {
+      "zh": "古姆兹"
+    },
+    "Ashley": {
+      "zh": "阿什莉"
+    },
+    "Butler": {
+      "zh": "管家"
+    },
+    "Cardi": {
+      "zh": "卡迪"
+    },
+    "Chase": {
+      "zh": "蔡斯"
+    },
+    "Chloe": {
+      "zh": "克洛伊"
+    },
+    "Croupier": {
+      "zh": "荷官"
+    },
+    "Developer": {
+      "zh": "开发者"
+    },
+    "Doctor": {
+      "zh": "医生"
+    },
+    "Freda": {
+      "zh": "芙蕾达"
+    },
+    "Grace": {
+      "zh": "格蕾丝"
+    },
+    "Hannah": {
+      "zh": "汉娜"
+    },
+    "Helga": {
+      "zh": "海尔加"
+    },
+    "Hobo": {
+      "zh": "流浪汉"
+    },
+    "Hugo": {
+      "zh": "雨果"
+    },
+    "Kelly": {
+      "zh": "凯莉"
+    },
+    "Lecturer": {
+      "zh": "讲师"
+    },
+    "Lexi": {
+      "zh": "莱克西"
+    },
+    "Miya": {
+      "zh": "米娅"
+    },
+    "Philly": {
+      "zh": "菲利"
+    },
+    "Radio": {
+      "zh": "电台"
+    },
+    "Ricky": {
+      "zh": "瑞奇"
+    },
+    "Staff": {
+      "zh": "店员"
+    },
+    "Stella": {
+      "zh": "斯特拉"
+    },
+    "Stewart": {
+      "zh": "斯图尔特"
+    },
+    "T-Dot": {
+      "zh": "泰·多特"
+    },
+    "Tisha": {
+      "zh": "蒂莎"
+    },
+    "Trent": {
+      "zh": "特伦特"
+    },
+    "Woman": {
+      "zh": "女人"
+    },
+    "Zoe": {
+      "zh": "佐伊"
+    },
+    "[name] (Past)": {
+      "zh": "[name]（过去）"
+    },
+    "[name] (Present)": {
+      "zh": "[name]（现在）"
+    },
+    "???": {
+      "zh": "？？？"
+    },
+    "Ron": {
+      "zh": "罗纳德"
+    },
+    "Carlos": {
+      "zh": "卡洛斯"
+    },
+    "Nala": {
+      "zh": "娜拉"
+    },
+    "Clarissa": {
+      "zh": "克拉丽莎"
+    },
+    "Neeta": {
+      "zh": "维妮塔"
+    }
+  }
+}

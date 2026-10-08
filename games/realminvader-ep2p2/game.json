@@ -1,0 +1,36 @@
+{
+  "slug": "realminvader-ep2p2",
+  "title": "Realm Invader Episode 2 Part 2",
+  "author": "Realm Invader",
+  "renpy_version": "7.4.11",
+  "language": "schinese",
+  "language_name": "简体中文",
+  "patch_version": 1,
+  "patch_layout": "tl-blocks",
+  "installer": "py",
+  "shim": "zz_zh_locale.rpy",
+  "font_strategy": "fallback",
+  "font_assets": [
+    {
+      "path": "assets/fonts/NotoSansSC-VF.ttf",
+      "names": [
+        "NotoSansSC-VF.ttf"
+      ]
+    }
+  ],
+  "font_license": "assets/fonts/LICENSE-NotoSansSC.txt",
+  "font_credit": "Noto Sans SC (c) 2022 The Noto Project Authors (https://github.com/notofonts/noto-cjk)",
+  "_shim_merged": "The patch shipped as zz_zh_cn.rpy (language, font group, font_transform) and zz_zh_cn_menu.rpy (main-menu text). games.patch_entries() reads one `shim` from game.json and package_release.py writes that one file, so the two were concatenated. Order-safe: init 100 and 1501 appear only in the first file, and the second declares no init block at all -- only a transform and screen main_menu(), which Ren'Py evaluates lazily on first display, well after init 100 has bound _ZH_CN_FONT.",
+  "_font_path_note": "The bundled face is referenced as `fonts/NotoSansSC-VF.ttf` rather than `Fonts/NotoSansSC-VF.ttf`, because tools/install.py and tools/package_release.py can only write game/fonts/. Same file, one directory; Ren'Py resolves both against game/.",
+  "_misans_not_redistributed": "The shim prefers MiSans when the player supplies it, and Noto Sans SC as the fallback face. Only Noto is bundled: MiSans carries no written redistribution grant (its name table has no licence description and no licence URL, and the copyright line ends in 'All Rights Reserved'), so shipping the file inside a public release would be a judgement call this repository does not make on the publisher's behalf. The MiSans branches are kept verbatim -- drop MiSans-Regular.ttf and MiSans-Bold.ttf into the game's own game/Fonts/ and the shim picks them up with no further change.",
+  "_menu_shader_note": "zz_zh_cn_menu.rpy exists because the original main menu draws its title and buttons through the custom MakeVisualNormals.SimulatedLighting shader, which rendered the glyphs almost white on the menu's white panel -- invisible text over clickable buttons, and alpha 0 for the first two seconds. The replacement keeps the layout, artwork and actions and draws plain high-contrast text instead. It is a rendering workaround, not a layout change.",
+  "_renpy_7_note": "This game runs Ren'Py 7.4.11, the oldest engine in this repository. The shim relies on config.font_transforms and config.change_language_callbacks, both present in 7.4; do not assume 8.x-only APIs here.",
+  "_do_not_run_build_tl": "patch/tl/schinese/ is the shipped patch, not the output of tools/build_tl.py. 174 English sources legitimately need two renderings depending on context -- 'I knew it.' concedes to a prediction, 'Wouldn't expect anything less.' concedes to a rival -- and data/tl_trans.json is a flat dictionary keyed on the English source, so it can hold only one form per key. Measured: rebuilding changes the text of 420 patch lines and no line differs by spacing alone. Edit patch/tl/schinese/ directly and re-run python tools/check.py --game realminvader-ep2p2.",
+  "_build_tl_harmless_failures": "tools/build_tl.py exits 1 on this game with 'still untranslated: 167'. All 167 are the quoted strings inside translate schinese python: in characters.rpy -- the _realm_invader_name_replacements tuple, 80 English keys and their 80 Chinese values. They are not dialogue, tl_trans.json deliberately does not carry them, and build_tl skips an unresolvable edit and leaves the line exactly as the template has it, which is already the finished Chinese table. The one line build_tl does rewrite there is (\"???\", \"？？？\"): it replaces the English key too, so the table would stop matching Character(\"???\", ...) and that one speaker name would revert to '???'.",
+  "_conflicts_measured": {
+    "english_sources_with_two_renderings": 174,
+    "patch_lines_that_change_text_on_rebuild": 420,
+    "patch_lines_that_change_spacing_on_rebuild": 0,
+    "edits_build_tl_cannot_resolve": 167
+  }
+}
