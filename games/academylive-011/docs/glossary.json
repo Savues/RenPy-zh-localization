@@ -1,0 +1,365 @@
+{
+  "_comment": "Canonical Chinese renderings for AcademyLive 0.11, fixed before the translation batches were written and enforced afterwards. banned lists the alternates cleaned out of the shipped patch; check.py matches them as plain substrings against data/tl_trans.json, so a banned form may not also be an ordinary Chinese word. Grade and Attendance carry no banned list on purpose: the patch legitimately uses 评分 alongside 成绩 and 出席 for 'attend a meeting', and banning either would flag correct text. Names are not assigned Chinese values -- the game compares names against their English forms -- see game.json _name_mapping.",
+  "characters": {
+    "Ayumi": {
+      "zh": "亚由美",
+      "banned": [
+        "亚由美子"
+      ]
+    },
+    "Emiko": {
+      "zh": "惠美子",
+      "banned": [
+        "惠美"
+      ]
+    },
+    "Haruka": {
+      "zh": "春香"
+    },
+    "Maiya": {
+      "zh": "舞",
+      "banned": [
+        "舞依",
+        "舞衣"
+      ]
+    },
+    "Kiyomi": {
+      "zh": "清美",
+      "banned": [
+        "清実"
+      ]
+    },
+    "Kaito": {
+      "zh": "海斗"
+    },
+    "Kaori": {
+      "zh": "佳织",
+      "banned": [
+        "佳織"
+      ]
+    },
+    "Masayuki": {
+      "zh": "正幸"
+    },
+    "Genpachi": {
+      "zh": "源八",
+      "banned": [
+        "源吧"
+      ]
+    },
+    "Hiroshige": {
+      "zh": "博重"
+    },
+    "Izo": {
+      "zh": "伊藏",
+      "banned": [
+        "伊蔵"
+      ]
+    },
+    "Miyako": {
+      "zh": "美夜子",
+      "banned": [
+        "美夜"
+      ]
+    },
+    "Nanako": {
+      "zh": "七菜子",
+      "banned": [
+        "七莱子"
+      ]
+    },
+    "Natsuha": {
+      "zh": "菜摘"
+    },
+    "Rina": {
+      "zh": "莉奈"
+    },
+    "Ryoichi": {
+      "zh": "亮一"
+    },
+    "Satsuki": {
+      "zh": "皐月",
+      "banned": [
+        "皋月"
+      ]
+    },
+    "Sayoko": {
+      "zh": "沙织子",
+      "banned": [
+        "沙織子"
+      ]
+    },
+    "Suzu": {
+      "zh": "铃"
+    },
+    "Soushi": {
+      "zh": "宗士",
+      "banned": [
+        "宗土"
+      ]
+    },
+    "Sotaro": {
+      "zh": "悟太郎",
+      "banned": [
+        "悟太朗"
+      ]
+    },
+    "Yoko": {
+      "zh": "洋子"
+    },
+    "Yuna": {
+      "zh": "优奈"
+    },
+    "Masaru": {
+      "zh": "雅春"
+    },
+    "Koji": {
+      "zh": "浩二",
+      "banned": [
+        "浩治"
+      ]
+    },
+    "Hidetoshi": {
+      "zh": "秀俊"
+    },
+    "Satoe": {
+      "zh": "里惠",
+      "banned": [
+        "理惠"
+      ]
+    },
+    "Eiichi": {
+      "zh": "英一"
+    },
+    "Marcus": {
+      "zh": "马库斯"
+    }
+  },
+  "places_and_roles": {
+    "Academy": {
+      "zh": "学院",
+      "banned": [
+        "学园"
+      ]
+    },
+    "Academy President": {
+      "zh": "理事长",
+      "banned": [
+        "园长",
+        "学院长",
+        "校长"
+      ]
+    },
+    "Chief Academic Officer": {
+      "zh": "教务主任"
+    },
+    "Executive Assistant": {
+      "zh": "事务主任"
+    },
+    "Student": {
+      "zh": "学生"
+    },
+    "Classroom": {
+      "zh": "教室"
+    },
+    "Hallways": {
+      "zh": "走廊"
+    },
+    "Pool": {
+      "zh": "泳池",
+      "banned": [
+        "游泳池"
+      ]
+    },
+    "Teacher's Room": {
+      "zh": "教员室"
+    },
+    "Library": {
+      "zh": "图书室",
+      "banned": [
+        "图书馆"
+      ]
+    },
+    "Infirmary": {
+      "zh": "医务室"
+    },
+    "Rooftop": {
+      "zh": "天台"
+    },
+    "Club Room": {
+      "zh": "社团教室"
+    },
+    "Student Council": {
+      "zh": "学生会"
+    },
+    "Restroom": {
+      "zh": "洗手间",
+      "banned": [
+        "化妆室"
+      ]
+    },
+    "Side Entrance": {
+      "zh": "侧门"
+    },
+    "School Grounds": {
+      "zh": "校园"
+    }
+  },
+  "game_terms": {
+    "Strike": {
+      "zh": "记过"
+    },
+    "Bounty": {
+      "zh": "悬赏"
+    },
+    "Favor": {
+      "zh": "好感"
+    },
+    "Affection": {
+      "zh": "好感度"
+    },
+    "Corruption": {
+      "zh": "堕落值",
+      "banned": [
+        "腐化值"
+      ]
+    },
+    "Panty": {
+      "zh": "内裤"
+    },
+    "Replay": {
+      "zh": "回放"
+    },
+    "Salary": {
+      "zh": "工资",
+      "banned": [
+        "薪资"
+      ]
+    },
+    "Allowance": {
+      "zh": "零花钱"
+    },
+    "Shareholder": {
+      "zh": "股东"
+    },
+    "Share": {
+      "zh": "共有"
+    },
+    "Exhibition": {
+      "zh": "展示"
+    },
+    "Brainwashing": {
+      "zh": "洗脑"
+    },
+    "Hypnosis": {
+      "zh": "催眠"
+    },
+    "Virginity": {
+      "zh": "处女"
+    },
+    "NTR": {
+      "zh": "NTR"
+    },
+    "Prostitute": {
+      "zh": "风俗娘",
+      "banned": [
+        "妓女"
+      ]
+    },
+    "Grade": {
+      "zh": "成绩"
+    },
+    "Attendance": {
+      "zh": "出席"
+    },
+    "Exam": {
+      "zh": "考试"
+    },
+    "Principal": {
+      "zh": "理事长",
+      "banned": [
+        "园长",
+        "校长"
+      ]
+    },
+    "Student Council President": {
+      "zh": "学生会长"
+    }
+  },
+  "_doubling_exempt": [
+    "学生会",
+    "学生会长",
+    "洗手间",
+    "教室",
+    "学院",
+    "理事长",
+    "事务主任",
+    "教务主任",
+    "学生",
+    "会议",
+    "任务",
+    "工资",
+    "股票",
+    "内裤",
+    "好感",
+    "好感度",
+    "考试",
+    "成绩",
+    "出勤",
+    "出席",
+    "回放",
+    "展示",
+    "催眠",
+    "洗脑",
+    "风俗娘",
+    "处女",
+    "教职员工",
+    "考试"
+  ],
+  "_kept_verbatim": [
+    "!!",
+    "!!!",
+    "!?",
+    "5!",
+    "???",
+    "Academy: Live!",
+    "Cosplay",
+    "DejaVu Sans",
+    "Opendyslexic",
+    "Students",
+    "[ay]?",
+    "[em]?!!",
+    "[ha]!",
+    "[ha]?",
+    "[ha]?!",
+    "[k]!!",
+    "[k]?",
+    "[k]?!",
+    "[k]?!?",
+    "[ma]?",
+    "[mc]!",
+    "[mc]!!",
+    "[mc]?",
+    "[mc]?!",
+    "[nan]?!",
+    "[ri]!",
+    "[v2]!!",
+    "[yo]!",
+    "[yo]?",
+    "a",
+    "q",
+    "transition",
+    "{#auto_page}A",
+    "{#quick_page}Q",
+    "{color=#b85dec}??",
+    "{size=+4}[ri]!!",
+    "{size=44}{color=[em.who_args[color]]}*♥*",
+    "{size=44}{color=[em.who_args[color]]}♥",
+    "{xpr}♥~~",
+    "♥",
+    "♥ ♥",
+    "✔ ",
+    "✘ "
+  ],
+  "_why_kept_verbatim": "Four kinds of thing, none of them prose: pure punctuation and hearts used as stage punctuation (!!, ??, ♥ ♥); a speaker tag followed by punctuation ([mc]!!, [k]?); a key name or page-turn shortcut (a, q, {#auto_page}A, {#quick_page}Q, transition); and proper names that stay in their own script -- the typeface names DejaVu Sans and Opendyslexic, the loanword Cosplay, and the product name 'Academy: Live!', which is config.name and so renames the game itself if translated."
+}

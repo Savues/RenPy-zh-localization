@@ -1,0 +1,35 @@
+{
+  "slug": "academylive-011",
+  "title": "AcademyLive 0.11",
+  "author": "passhonQ",
+  "renpy_version": "8.1.3",
+  "language": "schinese",
+  "language_name": "简体中文",
+  "patch_version": 1,
+  "patch_layout": "tl-blocks",
+  "installer": "py",
+  "shim": "zh_patch.rpy",
+  "font_strategy": "fallback",
+  "font_assets": [
+    {
+      "path": "assets/fonts/NotoSansSC-VariableFont_wght.ttf",
+      "names": [
+        "NotoSansSC-VariableFont_wght.ttf"
+      ]
+    }
+  ],
+  "font_license": "assets/fonts/LICENSE-NotoSansSC.txt",
+  "font_credit": "Noto Sans SC (c) 2022 The Noto Project Authors (https://github.com/notofonts/noto-cjk)",
+  "_font_mechanism": "zh_patch.rpy points gui.text_font / gui.name_text_font / gui.interface_text_font / gui.button_text_font / gui.choice_button_text_font at the bundled face, and then remaps every western font filename the game hardcodes (DejaVuSans.ttf, gui/fonts/AtkinsonHyperlegible-Bold.ttf, CrimsonText-SemiBold.ttf, JosefinSans-SemiBold.ttf, YsabeauOffice-Regular.ttf) onto the same face through config.font_replacement_map. No file the game ships is overwritten -- the western faces stay in fonts.rpa and the patch adds one new file under game/fonts/. font_strategy is declared 'fallback' because that is the registration-map half of the repo's two labels; the map used is font_replacement_map, not font_name_map/FontGroup. See README.md for why init -1 is the only priority that works.",
+  "_font_path_note": "The tested in-game patch shipped the face at gui/fonts/NotoSansSC-VariableFont_wght.ttf. tools/install.py and tools/package_release.py can only write to game/fonts/, and adding a game must not change tools/, so the patch in this repository points the shim at fonts/NotoSansSC-VariableFont_wght.ttf instead. Same file, different directory; Ren'Py resolves both against game/.",
+  "_name_mapping": "The game compares character variables against their English names (events.rpy: `if em.name == \"Emiko\":`), so name cannot simply be assigned a Chinese value. zh_patch.rpy swaps in a str subclass that displays Chinese while still comparing equal to the English name, which leaves equality tests, dict lookups and interpolation untouched.",
+  "_conflict_note": "513 English source lines in this game legitimately translate two different ways depending on context (of course. -> 不客气。 / 好的。). data/tl_trans.json is a flat dictionary keyed on the English source, so it can only hold one of them. patch/ holds the shipped translation verbatim and is what players install; build_tl.py regenerates from the dictionary and will resolve those 513 keys to whichever form was seen last. docs/translation-log.md records this.",
+  "_do_not_run_build_tl": "patch/tl/schinese/ is the shipped, in-game-tested translation and is NOT the output of tools/build_tl.py for this game. Two reasons, both measured on this tree: (1) 513 English source lines legitimately translate two different ways depending on context -- of course. is 不客气。 when it answers a thank-you and 好的。 when it answers an offer. data/tl_trans.json is a flat dictionary keyed on the English source, so it can only hold one of them, and a rebuild collapses all of them onto whichever form was seen last: 1,317 lines of patch/tl change text, e.g. ay \"不客气。\" becomes ay \"当然。\". (2) The shipped lines are missing the space before a trailing attribute -- k \"……\"with d -- because the Chinese was substituted into the string without it; build_tl.py rebuilds from the English template and restores the space, which changes 247 more lines. Neither difference is visible to the player: Ren'Py parses \"x\"with d the same as \"x\" with d. The patch is kept as shipped because it is what was tested in the game. To change a line, edit patch/tl/schinese/ directly and re-run tools/check.py --game academylive-011. data/tl_trans.json still grades the patch's vocabulary, tag balance, glossary and line widths, so nothing is unchecked -- but it is a vocabulary index here, not a build input.",
+  "_conflicts_measured": {
+    "english_sources_with_two_renderings": 513,
+    "patch_lines_that_change_text_on_rebuild": 1317,
+    "patch_lines_that_change_spacing_on_rebuild": 247,
+    "edits_build_tl_cannot_resolve": 2
+  },
+  "_packaging_fixes_applied": "Bringing the in-game patch up to what tools/check.py enforces changed it in three ways, all recorded in docs/translation-log.md: 130 speaker names and stage directions left in English (Student/Man/Perv/School Staff/...), three on-screen exclamations, four sex-interjection lines, one line that outgrew its box by two columns, and a terminology sweep that settled 学院 / 理事长 / 风俗娘 on the single rendering GLOSSARY.md had chosen but the text did not follow (学园 28, 校长 126, 园长 14, 妓女 3)."
+}
