@@ -154,6 +154,32 @@ SHAPE_LABEL = {"tl-blocks": "translate 块",
                "script-override": "脚本覆盖"}
 
 
+def patch_version(manifest):
+    """-> this game's own package version, as an int. Absent means 1.
+
+    Deliberately not the release tag. A release collects every game in the
+    repository, so its tag moves whenever any one of them changes; stamping
+    that number on every package would rename and rebuild all of them each
+    time, including the ones whose bytes did not move at all. The batch lives
+    in the release, the version lives here, and nothing inside a package is
+    allowed to depend on the batch.
+    """
+    raw = manifest.get("patch_version", 1)
+    try:
+        v = int(raw)
+    except (TypeError, ValueError):
+        v = 0
+    if v < 1:
+        sys.exit("%s: patch_version must be an integer >= 1, not %r"
+                 % (manifest.get("slug", "?"), raw))
+    return v
+
+
+def package_version(manifest):
+    """-> "v3": the label that goes into the package name and its README."""
+    return "v%d" % patch_version(manifest)
+
+
 def layout(manifest):
     """-> 'tl-blocks' or 'script-override'. Exits on anything undeclared."""
     v = manifest.get("patch_layout", "tl-blocks")

@@ -6,6 +6,8 @@
   "language": "schinese",
   "language_name": "简体中文",
 
+  "patch_version": 3,
+
   "patch_layout": "script-override",
   "installer": "ps1",
   "coverage": { "translated": 28524, "total": 28524 },

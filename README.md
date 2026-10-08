@@ -143,7 +143,7 @@ python tools/uninstall.py "C:\Games\Eden-Chapter5-pc" --game eden-chapter5
 | `python tools/check.py --game <slug>` | 校验译文库与补丁（按方案选检查集） |
 | `python tools/selftest.py --game <slug>` | 反向验证 `check.py` 的每一项检查都会真的报错 |
 | `python tools/games.py [--readme]` | 列出仓库里的游戏；`--readme` 重写本文件的「已收录」表格（不需要 `--game`） |
-| `python tools/package_release.py --game <slug> [--version v1.0.0]` | 生成单个游戏的覆盖安装包（写到 `dist/`） |
+| `python tools/package_release.py --game <slug>` | 生成单个游戏的覆盖安装包（写到 `dist/`，版本号取自 `game.json` 的 `patch_version`） |
 | `python tools/publish_release.py [--version v1.0.0] [--dry-run]` | 打包全部游戏并挂到同一个 GitHub Release（不需要 `--game`） |
 | `python tools/check_links.py` | 检查文档里的相对链接，以及本文件「已收录」表格有没有过期（不需要 `--game`） |
 

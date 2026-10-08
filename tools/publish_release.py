@@ -91,6 +91,27 @@ class GitHub(object):
             except ValueError:
                 return e.code, body
 
+    def releases(self):
+        st, data = self._call("%s/repos/%s/releases?per_page=100"
+                              % (API, self.repo))
+        return data if st == 200 else []
+
+    def previous_assets(self, tag):
+        """-> {asset name: size} from the newest release that is not `tag`.
+
+        This is what makes a per-game version worth trusting. Editing a
+        game's patch without moving its patch_version leaves the package under
+        the file name a player already bookmarked while the bytes behind that
+        name change -- exactly the churn the per-game version exists to stop,
+        and invisible from the release page alone.
+        """
+        others = [r for r in self.releases()
+                  if not r["draft"] and r["tag_name"] != tag]
+        if not others:
+            return {}
+        others.sort(key=lambda r: r["created_at"])
+        return {a["name"]: a["size"] for a in others[-1]["assets"]}
+
     def release_by_tag(self, tag):
         return self._call("%s/repos/%s/releases/tags/%s"
                           % (API, self.repo, tag))
@@ -163,17 +184,15 @@ def render_body(rows, version, repo):
         "一个 Release 收录**全部**已收录游戏的汉化补丁，每个游戏一个独立压缩包。",
         "新增游戏只会往这个列表里加一行，不会多出一个 Release。",
         "",
-        "| 类型 | 游戏 | 内容 | 语言 | 压缩包 |",
+        "| 类型 | 游戏 | 内容 | 版本 | 压缩包 |",
         "|---|---|---|---|---|",
     ]
     for r in rows:
-        if r["kind"] == "patch":
-            lines.append("| 主包 | %s | 完整汉化补丁 | %s | `%s` |"
-                         % (r["title"], r["language_name"], r["asset"]))
-        else:
-            lines.append("| 可选包 | %s | %s | %s | `%s` |"
-                         % (r["for_title"], r["label"], r["language_name"],
-                            r["asset"]))
+        game = r["title"] if r["kind"] == "patch" else r["for_title"]
+        what = "完整汉化补丁" if r["kind"] == "patch" else r["label"]
+        lines.append("| %s | %s | %s | **%s** | `%s` |"
+                     % ("主包" if r["kind"] == "patch" else "可选包",
+                        game, what, r["version"], r["asset"]))
 
     optional = any(r["kind"] == "extra" for r in rows)
     lines += [
@@ -193,6 +212,15 @@ def render_body(rows, version, repo):
             "",
         ]
     lines += [
+        "### 版本号怎么读",
+        "",
+        "标题里的 **%s** 是**发布批次**，只表示这一批一起发。" % version,
+        "每个压缩包文件名里的 **v2 / v4** 才是**这个汉化包自己的版本**——它变了，",
+        "才说明这个游戏的汉化动过。",
+        "",
+        "补丁没动的游戏，文件名和字节都不会变，也**不会重新上传**，旧的下载链接",
+        "一直有效。想确认哪个游戏更新了，看表格里的版本号。",
+        "",
         "### 版权与免责",
         "",
         "游戏版权归各自作者所有。本仓库收录的汉化补丁均为**非官方的同人翻译作品**，",
@@ -228,7 +256,7 @@ def main():
     rows = []
     for slug in slugs:
         _, m = games.manifest(slug)
-        out, entries, _ = package_release.build(slug, args.version)
+        out, entries, _ = package_release.build(slug)
         with io.open(out, "rb") as f:
             data = f.read()
         rows.append({
@@ -238,6 +266,7 @@ def main():
             "language_name": m["language_name"],
             "sha256": hashlib.sha256(data).hexdigest(),
             "size": len(data), "files": len(entries),
+            "version": games.package_version(m),
             "kind": "patch",
         })
         print("built %-42s %8.2f MB  %s"
@@ -245,7 +274,7 @@ def main():
 
         # Optional packages ride along in the same release: a player who wants
         # the mod translation should not have to find a second page.
-        for extra in package_release.build_extras(slug, args.version):
+        for extra in package_release.build_extras(slug):
             with io.open(extra["path"], "rb") as f:
                 edata = f.read()
             rows.append({
@@ -255,6 +284,7 @@ def main():
                 "language_name": m["language_name"],
                 "sha256": hashlib.sha256(edata).hexdigest(),
                 "size": len(edata), "files": len(extra["entries"]),
+                "version": games.package_version(m),
                 "kind": "extra",
             })
             print("opt    %-42s %8.2f MB  %s"
@@ -272,6 +302,19 @@ def main():
 
     gh = GitHub(repo, read_token())
     sha = head_sha()
+
+    # Same name, different bytes: the patch moved but patch_version did not.
+    # The package would keep the file name a player already has saved while
+    # the content behind it changed, which is the one thing the per-game
+    # version is supposed to make impossible.
+    prev = gh.previous_assets(tag)
+    for r in rows:
+        old = prev.get(r["asset"])
+        if old is not None and old != r["size"]:
+            print("  !! %s 的内容变了（%d -> %d 字节），patch_version 还是 %s"
+                  % (r["asset"], old, r["size"], r["version"]))
+            print("     改过补丁就把 game.json 的 patch_version 加一，否则"
+                  "玩家存着的旧链接会指向不同的内容")
 
     st, rel = gh.release_by_tag(tag)
     if st == 200:

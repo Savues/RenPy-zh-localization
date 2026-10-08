@@ -16,6 +16,9 @@ CPython（如 Ren'Py 自带的那份）既没有 CA 文件也不读 Windows 证�
 一个 Release 收录**全部**已收录游戏，每个游戏一个独立压缩包。新增游戏只会往资产列表里
 加一项，不会多出一个 Release。
 
+`--version` 是**发布批次**（也就是 tag），只出现在 Release 的标题和正文里，**不进压缩包**。
+每个游戏压缩包用的是自己 `game.json` 里的 `patch_version`，见下面一节。
+
 ```bash
 # 1. 先只构建、不联网，确认包的内容和体积
 python tools/publish_release.py --version v1.0.0 --dry-run
@@ -27,10 +30,32 @@ python tools/publish_release.py --version v1.0.0
 只需要某一个游戏的包时，走 `package_release.py`：
 
 ```bash
-python tools/package_release.py --game <slug> --version v1.0.0
+python tools/package_release.py --game <slug>
 ```
 
 写到 `dist/`，不联网。
+
+### 版本号：批次 vs 汉化包
+
+仓库里有**两个**版本号，别混：
+
+| | 在哪 | 什么时候变 |
+|---|---|---|
+| 发布批次 | Release 标题、tag、`publish_release.py --version` | 一批一起发 |
+| 汉化包版本 | `game.json` 的 `patch_version`，进压缩包文件名和包内 README | **只**在这个游戏的补丁动过时才变 |
+
+这么分是因为一个 Release 收全部游戏：批次号一动，**每个**包的字节都会跟着变（包内 README
+印着版本号和包名），于是每个游戏每次都被改名 + 重新上传，哪怕它一个字都没改。历史上
+`sinfulsummer-chapter36` 的包连续四个 Release 字节完全相同，纯粹是被迫换个文件名重传。
+
+现在的规则：
+
+- **改了某个游戏的补丁，就把它的 `patch_version` 加一。** 别的游戏不动。
+- 补丁没动的游戏，文件名和字节都不变，`publish_release.py` 判定为 unchanged，
+  **一个字节都不上传**，旧下载链接继续有效。
+- 漏加的情况工具会报：同名包和上一个 Release 里的字节数对不上时，打印 `!!` 警告。
+- **`package_release.py` 故意没有 `--version`。** 它没有批次可读；给这个开关等于
+  留一个把批次号打进包里的入口。
 
 ### 可选包（`extras`）
 
@@ -59,6 +84,7 @@ python tools/package_release.py --game <slug> --version v1.0.0
 ### 重跑是安全的
 
 - 资产按**文件名**匹配：内容一样就跳过（判定看的是文件大小），不一样就替换。
+- 文件名里带的是**汉化包自己的版本**，所以「换名」= 「这个游戏的补丁更新了」，「同名换内容」会被当成漏改版本号报出来。
 - 仓库里删掉的游戏，对应资产会被从 Release 上摘掉。
 - **tag 只在不存在时创建**。已存在的 tag 不会被移动，所以一个已发布的版本永远指向它
   当时发布的那次提交。确实要让 tag 跟到最新提交，得自己动手：

@@ -32,6 +32,13 @@ stay in the repository -- a player has no use for the original strings, and
 shipping them would blur the line between "a patch" and "a derivative of the
 game script".
 
+The version in the file name is the game's own `patch_version` from game.json,
+-- never the release tag. A release is a batch that collects every game, so
+its tag moves whenever any one of them changes; putting that number into the
+packages would rename and rebuild all of them each batch, including the ones
+whose bytes did not move. Nothing in here may read the batch: a package whose
+contents depend on it churns even when its own patch is untouched.
+
 A game may also declare `extras`: optional packages that ship as their own
 zip beside the patch, so the player takes them or leaves them. Nothing in the
 patch needs them -- a third-party mod's translation is exactly the sort of
@@ -203,7 +210,7 @@ def extras_of(manifest):
     return manifest.get("extras") or []
 
 
-def extra_bits(manifest, slug, version):
+def extra_bits(manifest, slug):
     """-> the player-README fragments that introduce the optional packages.
 
     Both fragments come back as empty strings for a game with no extras, so
@@ -215,6 +222,7 @@ def extra_bits(manifest, slug, version):
         return {"{{extranote}}": "", "{{extratree}}": ""}
 
     lang = manifest["language"]
+    version = games.package_version(manifest)
     note = []
     tree = []
     for e in extras:
@@ -316,7 +324,7 @@ def _write_zip(path, entries):
             z.writestr(info, data)
 
 
-def build_extras(slug, version):
+def build_extras(slug):
     """Build every optional package a game declares.
 
     -> [{path, entries, meta}]; an empty list for a game without extras, so
@@ -325,6 +333,7 @@ def build_extras(slug, version):
     repo, manifest = games.manifest(slug)
     slug = os.path.basename(repo)
     lang = manifest["language"]
+    version = games.package_version(manifest)
 
     out_dir = os.path.join(games.ROOT, "dist")
     os.makedirs(out_dir, exist_ok=True)
@@ -369,7 +378,7 @@ def render_readme(manifest, slug, version, count):
     names = [n for _, ns in games.font_plan(manifest) for n in ns]
     note, tree, trouble = font_bits(manifest)
     fields.update(layout_bits(manifest))
-    fields.update(extra_bits(manifest, slug, version))
+    fields.update(extra_bits(manifest, slug))
     # {{fontnote}} and {{packtree}} embed {{fonttree}} / {{patchfont}}, and the
     # loop below substitutes in insertion order, so those have to come first.
     fields.update({
@@ -470,12 +479,13 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 """
 
 
-def build(slug, version):
+def build(slug):
     repo, manifest = games.manifest(slug)
     # games.manifest() tolerates slug=None and picks the only game in the
     # repository; from here on the resolved folder name is what we need.
     slug = os.path.basename(repo)
     lang = manifest["language"]
+    version = games.package_version(manifest)
 
     # A script-override game has no build input to count: its data/tl_trans.json
     # is reverse-derived from the finished scripts, so its size says nothing
@@ -502,11 +512,9 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--game", default=None,
                     help="games/ subfolder name; omit when there is only one")
-    ap.add_argument("--version", default="v1.0.0",
-                    help="version label embedded in the zip file name")
     args = ap.parse_args()
 
-    out, entries, manifest = build(args.game, args.version)
+    out, entries, manifest = build(args.game)
     with io.open(out, "rb") as f:
         digest = hashlib.sha256(f.read()).hexdigest()
 
@@ -520,7 +528,7 @@ def main():
     print("  path:   %s" % os.path.relpath(out, games.ROOT))
     print("  sha256: %s" % digest)
 
-    for extra in build_extras(args.game, args.version):
+    for extra in build_extras(args.game):
         with io.open(extra["path"], "rb") as f:
             data = f.read()
         print("optional %-38s %8.2f MB  %s"

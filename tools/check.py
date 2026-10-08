@@ -376,6 +376,8 @@ def main(argv):
         cov = manifest.get("coverage")
         print("coverage:     %s (asserted in game.json, not re-derived here)"
               % ("%d / %d" % (cov["translated"], cov["total"]) if cov else "n/a"))
+    print("package:      %s (this game's own version, not the release tag)"
+          % games.package_version(manifest))
     print("patch files:  %d" % nfiles)
     print("patch lines:  %d" % nlines)
     print("")

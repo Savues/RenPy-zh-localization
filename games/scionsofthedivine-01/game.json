@@ -5,6 +5,7 @@
   "renpy_version": "8.4.1",
   "language": "schinese",
   "language_name": "简体中文",
+  "patch_version": 3,
   "patch_layout": "script-override",
   "installer": "ps1",
   "coverage": {
