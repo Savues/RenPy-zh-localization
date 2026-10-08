@@ -310,6 +310,18 @@ powershell -NoProfile -ExecutionPolicy Bypass `
 两个汉字的术语还会撞上叠字检查（`校长 长得` 读起来就是 `校长长`），这类写进
 `_doubling_exempt`。
 
+**`check.py` 报 unbalanced `[i]` tags，但 `[i]` 明明是个变量**
+游戏自己的英文里就有这个毛病。The Inn 有一句
+`old "Calibrating [name] ([i]/[total])"`，`[i]` 是计数器不是斜体标签，Ren'Py 把它
+当成斜体开头、找不到 `[/i]`、报一次警告。译文去不掉：Ren'Py 按 `old` 行**逐字**
+匹配 `strings:` 块，`old` 必须是游戏自己的原文，`new` 也得代入同一个变量。
+
+照 `_doubling_exempt` 的体例把**那一行**（以及 pack.py 写在译文上方、同样带
+`[i]` 的英文注释行、`new` 行）逐字写进 `glossary.json` 的 `_tag_exempt`，`check.py`
+统计标签时跳过它们。**写逐行，不要整文件豁免**——`selftest.py` 会往补丁里最大的
+那个文件追加一行 `[i]probe` 并要求守卫仍然报错，整文件豁免会把探针一起吞掉，
+那道守卫就再也没被测到。
+
 **中文显示成方块**
 `shadow` 策略下是 `font_shadow` 漏了某个字体文件名；`fallback` 策略下检查 `<shim>` 有没有
 复制到游戏的 `game/` 目录、以及 `game/fonts/` 里的字体在不在。先用

@@ -284,8 +284,15 @@ def check_doubling(scan, glossary, skip=()):
                     % (tail, en, hits, where[0]))
 
 
-def check_patch(entries):
-    """Tag balance over the patch tree, whichever layout produced it."""
+def check_patch(entries, exempt=()):
+    """Tag balance over the patch tree, whichever layout produced it.
+
+    Lines listed in the game's _tag_exempt are left out of the tally, so what
+    is reported is the imbalance the patch introduced rather than the one the
+    game's own English shipped with. Counting stays whole-file: a tag opened on
+    one line and closed on another still balances.
+    """
+    skip = set(exempt)
     nfiles = nlines = 0
     for src, rel in entries:
         if not src.endswith(".rpy"):
@@ -295,7 +302,9 @@ def check_patch(entries):
             text = f.read()
         nlines += text.count("\n")
         for tag in TAGS:
-            n = len(re.findall(r"\[/?%s\]" % tag, text))
+            pattern = re.compile(r"\[/?%s\]" % tag)
+            n = sum(len(pattern.findall(line)) for line in text.split("\n")
+                    if line.strip() not in skip)
             if n % 2:
                 bad("%s: unbalanced [%s] tags (%d)" % (rel, tag, n))
     return nfiles, nlines
@@ -362,7 +371,7 @@ def main(argv):
         scan = script_corpus(scripts)
         ntr = 0
 
-    nfiles, nlines = check_patch(entries)
+    nfiles, nlines = check_patch(entries, games.tag_exempt(game))
     check_glossary(scan, games.path_of(game, "docs", "glossary.json"))
     check_doubling(scan, games.path_of(game, "docs", "glossary.json"),
                    games.doubling_exempt(game))

@@ -119,6 +119,17 @@ def kept_verbatim(game_dir):
     return _list_section(game_dir, "_kept_verbatim")
 
 
+def tag_exempt(game_dir):
+    """-> exact patch lines whose unbalanced tags are the game's own fault.
+
+    The Inn ships `old "Calibrating [name] ([i]/[total])"`: [i] there is a
+    variable, not italics, and the warning it produces cannot be removed from
+    the translation without breaking the match. Lines are listed verbatim,
+    stripped, so the exemption is as narrow as the defect.
+    """
+    return _list_section(game_dir, "_tag_exempt")
+
+
 def doubling_exempt(game_dir):
     """-> canonical terms whose "<term><last char>" shape is ordinary prose.
 
