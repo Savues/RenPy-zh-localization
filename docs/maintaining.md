@@ -32,6 +32,30 @@ python tools/package_release.py --game <slug> --version v1.0.0
 
 写到 `dist/`，不联网。
 
+### 可选包（`extras`）
+
+`game.json` 里可以给游戏加 `extras`，为它额外打一个**独立压缩包**，和主包一起挂到同一个 Release。第三方 MOD 的汉化就该走这条路：主补丁不能依赖它，玩家装不装 MOD 都得是一个完整可用的游戏。
+
+```json
+"extras": [
+  {
+    "id": "mod-zh",
+    "label": "Shawn's Mod 汉化（可选）",
+    "readme": "docs/mod-readme.md",
+    "flat": true,
+    "counts": { "pairs": 1273, "modfiles": 6 },
+    "files": ["data/mod_zh.json", "tools/mod_translate.py", "tools/translate_mod.bat"]
+  }
+]
+```
+
+- `readme` 是一份 `{{token}}` 模板，玩家拿到的 README 从它渲染；哪个 token 没填上，打包就直接失败，不会把 `{{...}}` 发出去。
+- `counts.pairs` 会和实际打进去的那个 `.json` 的条数**对账**，对不上直接失败——那个数字是要印给玩家看的。
+- `flat: true` 表示文件平铺到压缩包根目录。`.bat` 靠 `%~dp0` 找同目录的脚本和译文表，所以这类包必须平铺。
+- `.bat` / `.cmd` 会检查行尾是不是 CRLF：cmd 读 LF 的批处理会把 `rem` / `echo` 的后半句当命令执行，玩家那边看到的是一串莫名其妙的报错。
+
+没有 `extras` 的游戏走的是同一条路径，`package_release.py` 只是什么都不打。
+
 ### 重跑是安全的
 
 - 资产按**文件名**匹配：内容一样就跳过（判定看的是文件大小），不一样就替换。

@@ -18,6 +18,23 @@
       "tools/verify_patch.py"
     ]
   ],
+  "extras": [
+    {
+      "id": "mod-zh",
+      "label": "Shawn's Mod 汉化（可选）",
+      "readme": "docs/mod-readme.md",
+      "flat": true,
+      "counts": {
+        "pairs": 1273,
+        "modfiles": 6
+      },
+      "files": [
+        "data/mod_zh.json",
+        "tools/mod_translate.py",
+        "tools/translate_mod.bat"
+      ]
+    }
+  ],
   "shim": "000_zh_fonts.rpy",
   "font_strategy": "fallback",
   "font_assets": [

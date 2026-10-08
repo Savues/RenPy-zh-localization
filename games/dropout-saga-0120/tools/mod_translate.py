@@ -475,11 +475,26 @@ def main():
     shutil.copytree(MOD, OUT)
     total = {}
     for path in sources:
-        dst = os.path.join(OUT, os.path.basename(path))
-        counts = apply_to(path, table, dst)
+        name = os.path.basename(path)
+        dst = os.path.join(OUT, name)
+        try:
+            counts = apply_to(path, table, dst)
+        except Exception as e:
+            # A mod compiled by another Ren'Py cannot always be read
+            # back here: its AST pickles carry state this version's
+            # renpy/ast.py has nowhere to put (PyExpr is a str subclass with
+            # __slots__, so there is no __dict__ for the unpickler to fill).
+            # That is a build mismatch, not a broken patch, and it is worth
+            # saying in words rather than as a traceback -- the caller is a
+            # player double-clicking a .bat.
+            sys.stderr.write(
+                "cannot read %s: %s\n"
+                "this mod build was compiled by a different Ren'Py than "
+                "the game and its scripts cannot be unpacked here\n" % (name, e))
+            sys.exit(3)
         for k, v in counts.items():
             total[k] = total.get(k, 0) + v
-        print("  %-26s %s" % (os.path.basename(path), counts or "-"))
+        print("  %-26s %s" % (name, counts or "-"))
     print("total rewritten:", total)
     print("built ->", OUT)
 

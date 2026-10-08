@@ -3,6 +3,11 @@
 # built patch no longer matches what tools/build_tl.py emits.
 * text=auto eol=lf
 
+# cmd.exe cannot parse a batch file whose lines end in bare LF: it drops the
+# rem/echo prefix and runs the rest of the line as a command. These ship to
+# players inside a release zip, so they have to survive the checkout.
+*.bat text eol=crlf
+
 *.ttf   binary
 *.otf   binary
 *.ttc   binary

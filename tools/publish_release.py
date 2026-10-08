@@ -163,20 +163,36 @@ def render_body(rows, version, repo):
         "一个 Release 收录**全部**已收录游戏的汉化补丁，每个游戏一个独立压缩包。",
         "新增游戏只会往这个列表里加一行，不会多出一个 Release。",
         "",
-        "| 游戏 | 原作 | 语言 | 压缩包 |",
-        "|---|---|---|---|",
+        "| 类型 | 游戏 | 内容 | 语言 | 压缩包 |",
+        "|---|---|---|---|---|",
     ]
     for r in rows:
-        lines.append("| %s | %s | %s | `%s` |"
-                     % (r["title"], r["author"], r["language_name"], r["asset"]))
+        if r["kind"] == "patch":
+            lines.append("| 主包 | %s | 完整汉化补丁 | %s | `%s` |"
+                         % (r["title"], r["language_name"], r["asset"]))
+        else:
+            lines.append("| 可选包 | %s | %s | %s | `%s` |"
+                         % (r["for_title"], r["label"], r["language_name"],
+                            r["asset"]))
+
+    optional = any(r["kind"] == "extra" for r in rows)
     lines += [
         "",
         "### 安装",
         "",
-        "每个压缩包都是**直接覆盖**用的：解压后把里面的 `game/` 文件夹内容复制到游戏的",
+        "**主包**是直接覆盖用的：解压后把里面的 `game/` 文件夹内容复制到游戏的",
         "`game/` 文件夹，选择覆盖即可。不需要 Python、安装器或联网，中文字体已包含在",
         "包内。每个包里的 `README.md` 写有该游戏的详细步骤与常见问题。",
         "",
+    ]
+    if optional:
+        lines += [
+            "**可选包**是第三方 MOD 的汉化，与主补丁**没有依赖关系**，装不装都行，",
+            "各装各的。它们不是让你覆盖 `game/` 的，解压后按里面 `README.md` 的说明",
+            "操作即可；没装对应 MOD 的玩家直接忽略。",
+            "",
+        ]
+    lines += [
         "### 版权与免责",
         "",
         "游戏版权归各自作者所有。本仓库收录的汉化补丁均为**非官方的同人翻译作品**，",
@@ -222,13 +238,33 @@ def main():
             "language_name": m["language_name"],
             "sha256": hashlib.sha256(data).hexdigest(),
             "size": len(data), "files": len(entries),
+            "kind": "patch",
         })
         print("built %-42s %8.2f MB  %s"
               % (rows[-1]["asset"], len(data) / 1048576, rows[-1]["sha256"][:16]))
 
+        # Optional packages ride along in the same release: a player who wants
+        # the mod translation should not have to find a second page.
+        for extra in package_release.build_extras(slug, args.version):
+            with io.open(extra["path"], "rb") as f:
+                edata = f.read()
+            rows.append({
+                "slug": slug, "manifest": m, "path": extra["path"],
+                "data": edata, "asset": extra["meta"]["asset"],
+                "for_title": m["title"], "label": extra["meta"]["label"],
+                "language_name": m["language_name"],
+                "sha256": hashlib.sha256(edata).hexdigest(),
+                "size": len(edata), "files": len(extra["entries"]),
+                "kind": "extra",
+            })
+            print("opt    %-42s %8.2f MB  %s"
+                  % (rows[-1]["asset"], len(edata) / 1048576,
+                     rows[-1]["sha256"][:16]))
+
     body = render_body(rows, args.version, repo)
     tag = args.version
-    print("\nrelease %s -> %d game(s)" % (tag, len(rows)))
+    print("\nrelease %s -> %d game(s), %d package(s)"
+          % (tag, len(slugs), len(rows)))
 
     if args.dry_run:
         print("\n--- body ---\n" + body)

@@ -32,6 +32,12 @@ stay in the repository -- a player has no use for the original strings, and
 shipping them would blur the line between "a patch" and "a derivative of the
 game script".
 
+A game may also declare `extras`: optional packages that ship as their own
+zip beside the patch, so the player takes them or leaves them. Nothing in the
+patch needs them -- a third-party mod's translation is exactly the sort of
+thing that has to be a separate download the player opts into. Extras are
+built by the same script and attached to the same release; see build_extras().
+
 Output is deterministic: files are added in sorted order with a fixed
 timestamp, so the same tree always produces a byte-identical archive.
 """
@@ -53,6 +59,10 @@ FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 
 def zip_name(slug, lang, version):
     return "%s-%s-patch-%s.zip" % (slug, lang, version)
+
+
+def extra_zip_name(slug, lang, extra, version):
+    return "%s-%s-%s-%s.zip" % (slug, lang, extra["id"], version)
 
 
 
@@ -187,6 +197,154 @@ def layout_bits(manifest):
                               "原版游戏不会有这个问题。" % lang),
     }
 
+
+def extras_of(manifest):
+    """The optional packages a game declares, or [] when it has none."""
+    return manifest.get("extras") or []
+
+
+def extra_bits(manifest, slug, version):
+    """-> the player-README fragments that introduce the optional packages.
+
+    Both fragments come back as empty strings for a game with no extras, so
+    PLAYER_README can name the tokens unconditionally: it is shared by every
+    game in the collection and a per-game template would drift.
+    """
+    extras = extras_of(manifest)
+    if not extras:
+        return {"{{extranote}}": "", "{{extratree}}": ""}
+
+    lang = manifest["language"]
+    note = []
+    tree = []
+    for e in extras:
+        label = e.get("label") or e["id"]
+        zipn = extra_zip_name(slug, lang, e, version)
+        note.append(
+            "### 可选：%s\n\n"
+            "另有一个**独立**的压缩包 `%s`。它和主补丁没有任何依赖关系，"
+            "不装它主补丁照样完整可用；只有你装了对应 MOD 的玩家才需要它。\n\n"
+            "解压后照里面 `README.md` 的说明操作即可。\n" % (label, zipn))
+        tree.append(
+            "可选包不在本包内，是一个独立压缩包：\n\n"
+            "- `%s` —— %s" % (zipn, label))
+    return {"{{extranote}}": "\n\n".join(note),
+            "{{extratree}}": "\n\n".join(tree)}
+
+
+def render_extra_readme(repo, manifest, slug, extra, version):
+    """Fill an optional package's own README from its template.
+
+    Same literal {{token}} substitution as render_readme, and the same reason
+    for it.
+    """
+    counts = extra.get("counts") or {}
+
+    # The pair count is cross-checked against the table actually shipped in
+    # the zip rather than trusted from game.json. This README tells a player
+    # how much is in the package; the package is the table. If the two drift,
+    # the honest thing is to fail the build.
+    table = next((f for f in extra.get("files", [])
+                  if f.endswith(".json")), None)
+    if table and "pairs" in counts:
+        db = games.path_of(repo, table.replace("/", os.sep))
+        actual = len(json.load(io.open(db, encoding="utf-8")))
+        if actual != int(counts["pairs"]):
+            raise SystemExit("%s: %s holds %d pairs but game.json says %s"
+                             % (slug, table, actual, counts["pairs"]))
+
+    fields = {
+        "{{title}}": manifest["title"],
+        "{{author}}": manifest["author"],
+        "{{renpy}}": manifest["renpy_version"],
+        "{{lang}}": manifest["language"],
+        "{{langname}}": manifest["language_name"],
+        "{{slug}}": slug,
+        "{{version}}": version,
+        "{{zipname}}": extra_zip_name(slug, manifest["language"], extra,
+                                      version),
+        "{{batname}}": extra.get("bat", "translate_mod.bat"),
+        "{{modcount}}": "{:,}".format(int(counts.get("pairs", 0))),
+        "{{modfiles}}": str(counts.get("modfiles", "")),
+    }
+
+    tpl = games.path_of(repo, extra["readme"].replace("/", os.sep))
+    text = io.open(tpl, encoding="utf-8").read()
+    for token, value in fields.items():
+        text = text.replace(token, value)
+    if "{{" in text:
+        raise SystemExit("unfilled token left in %s" % extra["readme"])
+    return text
+
+
+def collect_extra(repo, manifest, slug, extra, version):
+    """-> [(arcname, source_path_or_None, bytes)] in a stable order.
+
+    A "flat" extra is laid out at the zip root instead of under a folder. Its
+    README tells the player to drag the game's .exe onto the .bat, and a .bat
+    locates its own translator and table with %~dp0 -- which only works if
+    they sit beside it.
+    """
+    out = [("README.md", None,
+            render_extra_readme(repo, manifest, slug, extra, version)
+            .encode("utf-8"))]
+    for rel in extra["files"]:
+        src = games.path_of(repo, rel.replace("/", os.sep))
+        if not os.path.isfile(src):
+            raise SystemExit("%s: extra file %s is missing" % (slug, rel))
+        arc = os.path.basename(rel) if extra.get("flat") else rel
+        if arc.lower().endswith((".bat", ".cmd")):
+            # cmd.exe cannot reliably parse a batch file whose lines end in
+            # bare LF: it drops the "rem"/"echo" prefix and tries to run the
+            # rest of the line as a command. Catch it here rather than let a
+            # player find it.
+            blob = io.open(src, "rb").read()
+            if b"\n" in blob.replace(b"\r\n", b""):
+                raise SystemExit("%s: %s needs CRLF line endings"
+                                 % (slug, rel))
+        out.append((arc.replace(os.sep, "/"), src, None))
+    return sorted(out, key=lambda r: r[0])
+
+
+def _write_zip(path, entries):
+    with zipfile.ZipFile(path, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
+        for arc, src, blob in entries:
+            data = blob if blob is not None else io.open(src, "rb").read()
+            info = zipfile.ZipInfo(arc, date_time=FIXED_TIME)
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o644 << 16
+            z.writestr(info, data)
+
+
+def build_extras(slug, version):
+    """Build every optional package a game declares.
+
+    -> [{path, entries, meta}]; an empty list for a game without extras, so
+    the caller can handle one shape across the whole collection.
+    """
+    repo, manifest = games.manifest(slug)
+    slug = os.path.basename(repo)
+    lang = manifest["language"]
+
+    out_dir = os.path.join(games.ROOT, "dist")
+    os.makedirs(out_dir, exist_ok=True)
+
+    built = []
+    for extra in extras_of(manifest):
+        entries = collect_extra(repo, manifest, slug, extra, version)
+        path = os.path.join(out_dir,
+                            extra_zip_name(slug, lang, extra, version))
+        _write_zip(path, entries)
+        built.append({
+            "path": path,
+            "entries": entries,
+            "meta": {"id": extra["id"],
+                     "label": extra.get("label") or extra["id"],
+                     "asset": os.path.basename(path)},
+        })
+    return built
+
+
 def render_readme(manifest, slug, version, count):
     """Fill the player README from the manifest.
 
@@ -211,6 +369,7 @@ def render_readme(manifest, slug, version, count):
     names = [n for _, ns in games.font_plan(manifest) for n in ns]
     note, tree, trouble = font_bits(manifest)
     fields.update(layout_bits(manifest))
+    fields.update(extra_bits(manifest, slug, version))
     # {{fontnote}} and {{packtree}} embed {{fonttree}} / {{patchfont}}, and the
     # loop below substitutes in insertion order, so those have to come first.
     fields.update({
@@ -224,6 +383,10 @@ def render_readme(manifest, slug, version, count):
         text = text.replace(token, value)
     if "{{" in text:
         raise SystemExit("unfilled token left in the player README")
+    # A game with no extras leaves {{extranote}} empty, which would otherwise
+    # leave a blank line where that section would have been.
+    while "\n\n\n" in text:
+        text = text.replace("\n\n\n", "\n\n")
     return text
 
 
@@ -258,6 +421,8 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 
 {{fontnote}}
 
+{{extranote}}
+
 ---
 
 ## 常见问题
@@ -290,6 +455,8 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 └── game/                  ← 把这个文件夹里的内容复制到游戏的 game/ 里
 {{packtree}}
 ```
+
+{{extratree}}
 
 ## 版权与免责
 
@@ -326,13 +493,7 @@ def build(slug, version):
     os.makedirs(out_dir, exist_ok=True)
     out = os.path.join(out_dir, zip_name(slug, lang, version))
 
-    with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as z:
-        for arc, src, blob in entries:
-            data = blob if blob is not None else io.open(src, "rb").read()
-            info = zipfile.ZipInfo(arc, date_time=FIXED_TIME)
-            info.compress_type = zipfile.ZIP_DEFLATED
-            info.external_attr = 0o644 << 16
-            z.writestr(info, data)
+    _write_zip(out, entries)
 
     return out, entries, manifest
 
@@ -358,6 +519,14 @@ def main():
     print("    ... (%d more)" % max(0, len(entries) - 4))
     print("  path:   %s" % os.path.relpath(out, games.ROOT))
     print("  sha256: %s" % digest)
+
+    for extra in build_extras(args.game, args.version):
+        with io.open(extra["path"], "rb") as f:
+            data = f.read()
+        print("optional %-38s %8.2f MB  %s"
+              % (extra["meta"]["asset"], len(data) / 1048576,
+                 hashlib.sha256(data).hexdigest()[:16]))
+        print("         %d entries" % len(extra["entries"]))
     return 0
 
 
