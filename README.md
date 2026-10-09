@@ -15,6 +15,7 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 <!-- games:start -->
 | 游戏 | 原作 | 语言 | 方案 | 状态 | 译文量 |
 |---|---|---|---|---|---|
+| [60 Days Of Us 3.1.3 (EarlyAccess)](games/60daysofus-0313/) | 60 Days Of Us | 简体中文 | 脚本覆盖 † | ✅ 100%（13 条保留原文） | 4,944 条 |
 | [AcademyLive 0.11](games/academylive-011/) | passhonQ | 简体中文 | translate 块 | ✅ 100% | 24,002 条 |
 | [Between Humanity 0.3.3](games/between-humanity-033/) | Between Humanity | 简体中文 | 脚本覆盖 † | ✅ 100%（6 条保留原文） | 9,926 条 |
 | [City Devil: Restart 0.4.0](games/citydevilrestart-040/) | Sabirow | 简体中文 | 脚本覆盖 | ✅ 100%（10 条保留原文） | 7,792 条 |

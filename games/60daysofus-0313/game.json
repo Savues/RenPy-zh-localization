@@ -1,0 +1,38 @@
+{
+  "slug": "60daysofus-0313",
+  "title": "60 Days Of Us 3.1.3 (EarlyAccess)",
+  "author": "60 Days Of Us",
+  "renpy_version": "8.5.4",
+  "language": "Chinese",
+  "language_name": "简体中文",
+  "base_translation": "修订自发行方自带的中文",
+  "patch_version": 1,
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "extra_checks": [
+    [
+      "node",
+      "tools/verify_patch.cjs"
+    ]
+  ],
+  "shim": "zz_zh_locale.rpy",
+  "font_strategy": "game-bundled",
+  "font_assets": [],
+  "archive_prefix_removed": "tl/Chinese/",
+  "archive_prefix_entries": 24,
+  "coverage": {
+    "translated": 4931,
+    "total": 4944,
+    "verbatim": 13,
+    "punctuation_only": 3
+  },
+  "_coverage_note": "4,944 player-visible strings, counted by taking the English from the # comment above each line inside every `translate Chinese <id>:` block and the old/new pair out of every `translate Chinese strings:` block. 4,931 are localised: 4,928 contain a Han character, 3 are punctuation-only ('A.J...' became 'A.J……'). A string counts as localised whenever its value differs from the English source, the same rule tools/check.py uses to call a tl-blocks entry 'still in English'. The 13 left byte-identical are registered by hand in docs/glossary.json _kept_verbatim and are all identifiers rather than prose: the title string in its own markup, a font file name, a typeface name, CIA, A.J., the arrows, bare numbers and the ??? beat. Note the denominator is what this extraction can pair a comment with; the tree holds 7,801 translate blocks and roughly 515 of them are engine boilerplate, tag-only fragments or multi-line statements with no English comment above them, so they contribute no pair and are not counted. tools/verify_patch.cjs re-derives the same figure on every run and fails if game.json disagrees.",
+  "_why_archive_surgery": "This is the only game in the repository whose patch cannot be delivered by copying files. The download ships its own Simplified Chinese *inside* archive.rpa at tl/Chinese/, and Ren'Py collects translations from the filesystem and from archives independently, so adding game/tl/Chinese/*.rpy on top registers every `translate Chinese strings:` pair twice and TranslationStringRegistry.add() raises 'A translation for ... already exists' at startup. Overwriting does not help -- a loose foo.rpy does not shadow an archived foo.rpy, both are read. The retail build ships no `archive` subcommand to delete entries, so tools/rpa_drop_prefix.py does the RPA-3 index surgery directly: it drops the 24 tl/Chinese/* entries from the index, appends the rebuilt index at the end of the file and patches the 34-byte header. Every surviving entry keeps its original offset, so none of the 2.5 GB of assets moves, and the whole operation costs about 84 KB of appended index.",
+  "_why_bundled_python": "The surgery needs zlib and Python's pickle, and PowerShell has neither in a form that can round-trip a binary pickle safely. Requiring the player to install Python would break the promise this repository makes to every other game, so install.ps1 locates the interpreter the game already ships -- lib/py3-windows-x86_64/python.exe, which is where Ren'Py keeps its own runtime -- and hands it tools/rpa_drop_prefix.py. Verified present in this release: Python 3.12.7 with zlib and pickle. If that interpreter is missing the installer stops and says so rather than guessing.",
+  "_provenance": "This is a revision of the translation the developer already ships, not a fresh translation of the English. The base text is tl/Chinese/ as it came inside archive.rpa (the tree is stamped 'Translation updated at 2026-09-18'); this patch revises it in place, fixing errors, unifying terminology and polishing tone, and does not retranslate the corpus from scratch. 1,376 of the tree's 16,922 active lines differ from the download, spread over 9 of the 12 files, and every one of them is a line the player reads. The work was done in two passes -- an error-and-terminology pass over all 7,801 translate blocks, then a tone pass and a polish pass over the lines that were still weak -- and the second pass reintroduced a rank error the first had fixed, which is why the shipped text was re-settled against the game's own data before release. See docs/translation-log.md.",
+  "_why_script_override": "The 12 files are the game's own translation scripts, revised, written back to the paths they already occupy. There is no data/tl_trans.json: a reverse-derived dictionary would be the patch grading its own homework, so game.json carries the coverage number and tools/verify_patch.cjs re-derives it on every run.",
+  "_why_ps1": "This patch needs two things no shared installer does: it must edit a 2.5 GB archive, and it must remove the archive's copy of a translation tree before writing its own. tools/install.ps1 does both, and takes a full backup of archive.rpa first.",
+  "_why_no_fonts": "The game's own th_font_map[\"Chinese\"] points at a Source Han Serif CJK face that ships with it. Redistributing it would add weight and a licence for nothing.",
+  "_uninstall_note": "Uninstall restores archive.rpa from the backup install.ps1 took and deletes game/tl/Chinese/. The archive grows by the size of its new index (~84 KB on this release); restoring the backup returns the file to its original length exactly.",
+  "_patch_note": "The patch ships .rpy only. game/tl/Chinese/ ships with a .rpyc next to every .rpy and Ren'Py prefers bytecode, so install.ps1 removes them before writing."
+}

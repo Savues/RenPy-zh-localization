@@ -107,6 +107,11 @@ def width(s):
     return sum(2 if CJK.match(ch) else 1 for ch in str(s))
 
 
+# scan() collects every hit so a game can exempt specific places by name;
+# this bounds the list when a banned variant has gone badly wrong.
+WHERE_CAP = 2000
+
+
 def keep(k, v, exact=()):
     """True when k == v reads as a decision instead of an unfinished line."""
     if k != v:
@@ -139,8 +144,8 @@ def db_corpus(tr):
                 text = text.replace(strip, "")
             if needle in text:
                 hits += 1
-                if not where:
-                    where.append(k[:60])
+                if len(where) < WHERE_CAP:
+                    where.append(k)
         return hits, where
     return scan
 
@@ -153,9 +158,14 @@ def script_corpus(scripts):
             if strip:
                 text = text.replace(strip, "")
             hits += text.count(needle)
-            i = text.find(needle)
-            if i >= 0:
-                where.append("%s:%d" % (rel, text.count("\n", 0, i) + 1))
+            at = 0
+            while True:
+                i = text.find(needle, at)
+                if i < 0:
+                    break
+                if len(where) < WHERE_CAP:
+                    where.append("%s:%d" % (rel, text.count("\n", 0, i) + 1))
+                at = i + len(needle)
         return hits, where
     return scan
 
@@ -235,11 +245,18 @@ def check_glossary(scan, glossary):
     The game script itself calls Divinarch and Celestiarch by two different
     English names for the same six beings; nothing but a pinned glossary stops
     a future pass from splitting them into two Chinese words again.
+
+    A banned variant is matched as a bare substring, so it also fires on a
+    longer correct term that merely contains it -- 军士长 inside 一级军士长
+    (Command Sergeant Major, a different rank) is the case that needed it. Such
+    a game lists the exact places under _banned_exempt, keyed by the variant,
+    each with the reason; anywhere else still fails.
     """
     if not os.path.isfile(glossary):
         bad("%s is missing" % os.path.relpath(glossary, games.ROOT))
         return
     g = json.load(open(glossary, encoding="utf-8-sig"))
+    exempt = g.get("_banned_exempt") or {}
     for section, terms in g.items():
         if section.startswith("_") or not isinstance(terms, dict):
             continue
@@ -251,6 +268,10 @@ def check_glossary(scan, glossary):
                 # "熟女少妇" would be reduced to "少妇" and never match.
                 strip = None if canonical in variant else canonical
                 hits, where = scan(variant, strip)
+                allow = set(exempt.get(variant, {}).get("at", ()))
+                if allow and hits <= len(where):
+                    if len([w for w in where if w in allow]) == hits:
+                        continue
                 if hits:
                     bad("%s: %r should be %r, found %r in %d place(s) (e.g. %s)"
                         % (section, variant, canonical, variant, hits, where[0]))

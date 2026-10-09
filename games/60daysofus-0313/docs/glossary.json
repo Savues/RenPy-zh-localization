@@ -1,0 +1,201 @@
+{
+  "_about": "角色名、军衔、专有名词与地名。zh 是本作采用的定译；banned 列出这一版统一掉的错译。banned 是纯子串匹配，所以只放真正该禁的写法；禁不住的合法长词在 _banned_exempt 里逐处登记。",
+  "人物": {
+    "Bess": {
+      "zh": "贝丝",
+      "banned": []
+    },
+    "A.J.": {
+      "zh": "AJ",
+      "banned": []
+    },
+    "Evie": {
+      "zh": "伊薇",
+      "banned": []
+    },
+    "Evelyn": {
+      "zh": "伊芙琳",
+      "banned": []
+    },
+    "Virginia": {
+      "zh": "弗吉尼亚",
+      "banned": []
+    },
+    "Yumiko": {
+      "zh": "由美子",
+      "banned": []
+    },
+    "Eileen": {
+      "zh": "艾琳",
+      "banned": []
+    },
+    "Reya": {
+      "zh": "瑞亚",
+      "banned": []
+    },
+    "Diane": {
+      "zh": "戴安",
+      "banned": []
+    },
+    "Molly": {
+      "zh": "莫莉",
+      "banned": []
+    },
+    "Craig": {
+      "zh": "克莱格",
+      "banned": [
+        "克雷格"
+      ]
+    },
+    "Greg": {
+      "zh": "格雷格",
+      "banned": []
+    },
+    "Sayid": {
+      "zh": "萨伊德",
+      "banned": [
+        "赛义德"
+      ]
+    }
+  },
+  "军衔": {
+    "Sergeant": {
+      "zh": "中士",
+      "banned": [
+        "军士长"
+      ]
+    },
+    "Sarge.": {
+      "zh": "中士",
+      "banned": []
+    },
+    "Sergeant Major": {
+      "zh": "一级军士长",
+      "banned": []
+    },
+    "Staff Sergeant": {
+      "zh": "上士",
+      "banned": [
+        "军士长"
+      ]
+    },
+    "SSG": {
+      "zh": "上士",
+      "banned": []
+    },
+    "Command Sergeant Major": {
+      "zh": "一级军士长",
+      "banned": []
+    },
+    "CSM": {
+      "zh": "一级军士长",
+      "banned": []
+    },
+    "Cpl.": {
+      "zh": "下士",
+      "banned": []
+    },
+    "LTG": {
+      "zh": "中将",
+      "banned": []
+    },
+    "Col.": {
+      "zh": "上校",
+      "banned": []
+    },
+    "Sergeant Major Graves": {
+      "zh": "格雷夫斯一级军士长",
+      "banned": [
+        "格雷夫斯军士长"
+      ]
+    }
+  },
+  "地名与组织": {
+    "Los Suenos": {
+      "zh": "洛斯苏埃诺斯",
+      "banned": [
+        "洛圣都"
+      ]
+    },
+    "Syntrox": {
+      "zh": "合成粉",
+      "banned": []
+    },
+    "Vatos": {
+      "zh": "兄弟帮",
+      "banned": []
+    },
+    "Greyhound": {
+      "zh": "灵缇",
+      "banned": [
+        "灰犬"
+      ]
+    },
+    "soldier boy": {
+      "zh": "大兵仔",
+      "banned": []
+    },
+    "PTSD": {
+      "zh": "创伤后应激障碍",
+      "banned": []
+    },
+    "squad": {
+      "zh": "班",
+      "banned": []
+    }
+  },
+  "敌人称谓": {
+    "zombie": {
+      "zh": "丧尸",
+      "banned": []
+    },
+    "infected": {
+      "zh": "感染者",
+      "banned": []
+    },
+    "vampire": {
+      "zh": "吸血鬼",
+      "banned": []
+    }
+  },
+  "_kept_verbatim": [
+    "???",
+    "A.J.",
+    "CIA",
+    "DejaVu Sans",
+    "Opendyslexic",
+    "⬆",
+    "⬇",
+    "60",
+    "30",
+    "A.J. -",
+    "{font=ConduitITC-Medium.ttf}{color=#67b166}{size=+10}60 DAYS OF US",
+    "<",
+    ">"
+  ],
+  "_kept_verbatim_why": {
+    "count": "13 of 4,944 player-visible strings are byte-identical to their English source. None is a sentence: the title drawn in its own markup, a font file name (ConduitITC-Medium.ttf), a typeface name (DejaVu Sans, Opendyslexic), the CIA acronym, the handle A.J., the up/down arrows, bare numbers 60 and 30, the ??? beat, and the < > comparison glyphs. Transliterating a font filename or an acronym changes nothing the player reads. tools/verify_patch.cjs re-derives this list from the patch and fails on anything untranslated that is not registered here.",
+    "A.J.": "The game itself mixes A.J. and AJ in the English. The patch mirrors the English per line rather than normalising it, except at one spot where the two got crossed over."
+  },
+  "_variant_names": {
+    "_why": "Two pairs are deliberately kept distinct and cannot be expressed as a banned variant, because each half is the correct spelling of its own name.",
+    "伊薇 / 伊芙琳": "Evie is a nickname and Evelyn the full name -- 50 and 31 occurrences in the original English. The patch keeps the distinction rather than collapsing them.",
+    "达斯汀 / 达斯特": "Dustin and Dust. The line at #1543 in the English says so outright: '我叫达斯汀，大伙儿都叫我达斯特'."
+  },
+  "_doubling_exempt": [],
+  "_variants_allowed": {
+    ".223 / 5.56 / MAC-10 / 7-亚当-16": "Calibre and model designations keep their half-width characters. They are identifiers, and the half-width dot and hyphen are part of them.",
+    "班 / 小队": "squad is 班 and is deliberately not merged with the single 小队 at tl/Chinese/script.rpy:1537 -- the English there is \"Irene's team\", a team and not a squad, so the two Chinese words are both right."
+  },
+  "_banned_exempt": {
+    "军士长": {
+      "why": "The check is a bare substring, and 一级军士长 (Command Sergeant Major, Graves) ends in it. Those three lines are the only places in the patch where the longer term is correct; every other Sergeant has to read 中士 or 上士, so the variant still fails anywhere else.",
+      "at": [
+        "tl/Chinese/Define.rpy:139",
+        "tl/Chinese/script.rpy:769",
+        "tl/Chinese/script.rpy:1477"
+      ]
+    }
+  },
+  "_why_this_glossary": "Three of these entries exist because the shipped Chinese disagreed with itself and had to be settled against evidence rather than taste. The ranks come from the game's own name boxes: old \"SSG.Turner\" is 特纳上士 and old \"CSM Graves\" is 格雷夫斯一级军士长, so \"Staff Sergeant Joseph Turner.\" is 上士 and \"Yes, Sergeant Major.\" -- addressed to Graves -- is 一级军士长. A polish pass had flattened all of them to 军士长, which is neither: it is the informal reading of Sergeant that the machine translation had used, and on screen it contradicted the name box. Craig's name box said 克雷格 while all four dialogue lines said 克莱格; the dialogue won, because 克雷格 and 格雷格 (Greg) are easy to confuse and 克莱格 is not."
+}
