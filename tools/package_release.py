@@ -84,6 +84,16 @@ FONT_STRATEGY = {
                  "`game/fonts/`\n（共 {n} 个文件），游戏自带的同名西文字体会被替换掉。"),
         "tree": "中文字体（同一份字体的 {n} 个副本）",
     },
+    "game-bundled": {
+        "note": ("**这个补丁不附带任何字体，也不需要。** 游戏原版就带着能用的简体中文字体，\n"
+                 "它自己的字体映射已经指向那份字库了。补丁不重新分发字体文件，\n"
+                 "省下的体积正好用来装汉化脚本。"),
+        "tree": "（没有 fonts/ —— 字体由游戏自带）",
+        "trouble": ("原版游戏的中文本来就是好的，所以出现方块说明**装坏了**，不是缺字体。\n"
+                    "先确认 `game/` 下的脚本被完整覆盖（同名逐个覆盖、别漏目录），\n"
+                    "再确认 `game/cache/` 里的 `bytecode-*.rpyb` 和 `screens.rpyb` 已删。\n"
+                    "仍然方块的话，卸载后在一份干净的原版上重装一次。"),
+    },
     "fallback": {
         "note": ("中文字体已经在包里了，共 {n} 个字体文件。本补丁通过\n"
                  "`renpy.config.font_name_map` 把它们注册为**回退**字体：游戏原有的"
@@ -105,15 +115,118 @@ def font_bits(manifest):
     names = [n for _, ns in plan for n in ns]
     primary = names[0] if names else ""
     style = FONT_STRATEGY[manifest.get("font_strategy", "shadow")]
-    trouble = (
-        "`game/fonts/` 没复制全。确认那 %d 个字体文件都在、大小一致（约 8 MB）。"
-        % len(names) if len(names) > 1 else
-        "`game/fonts/` 没复制全。确认 `%s` 在（约 7.7 MB）。"
-        "若仍显示方块，请检查 `%s` 是否放在游戏的 `game/` 目录下。"
-        % (primary, manifest["shim"]))
+    # A strategy that ships no font has to answer the "boxes instead of Han"
+    # question differently: telling such a player to check game/fonts/ would
+    # send them looking for a directory that was never in the zip.
+    trouble = style.get("trouble")
+    if trouble is None:
+        trouble = (
+            "`game/fonts/` 没复制全。确认那 %d 个字体文件都在、大小一致（约 8 MB）。"
+            % len(names) if len(names) > 1 else
+            "`game/fonts/` 没复制全。确认 `%s` 在（约 7.7 MB）。"
+            "若仍显示方块，请检查 `%s` 是否放在游戏的 `game/` 目录下。"
+            % (primary, manifest["shim"]))
     return (style["note"].format(n=len(names)),
             style["tree"].format(n=len(names)),
             trouble)
+
+
+def fontrow_bits(manifest):
+    """-> the two README claims that only some games can make."""
+    shipped = games.font_plan(manifest)
+    if shipped:
+        return {
+            "{{fontrow}}": "%s（已打包）" % manifest.get("font_credit", ""),
+            "{{fontfaq}}": (
+                "**启动时报 `Could not find font`**\n"
+                "`game/fonts/` 被删过或没复制全。把包里的 `game/fonts/` 整个再复制一次。"),
+            "{{fontclose}}": "中文字体的版权与授权见 `FONT-LICENSE.txt`。",
+            "{{packcontains}}": (
+                "本包**不包含**任何游戏程序文件、图像、音频或原始脚本，"
+                "只包含翻译补丁与中文字体。"),
+            "{{fontlicenserow}}": ("├── FONT-LICENSE.txt       "
+                                   "中文字体的版权声明\n"
+                                   if manifest.get("font_license") else ""),
+        }
+    return {
+        "{{fontrow}}": "游戏自带，补丁不附带任何字体文件",
+        "{{fontfaq}}": "",
+        "{{fontclose}}": "",
+        "{{packcontains}}": (
+            "本包**不包含**任何游戏程序文件、图像、音频、原始脚本或字体，"
+            "只包含汉化脚本。"),
+        "{{fontlicenserow}}": "",
+    }
+
+
+def howtranslated_bits(manifest):
+    """-> {{howtranslated}}, which is not the same sentence for every game.
+
+    Most of the collection is translated from the English. Some entries are
+    revisions of a translation the developer already ships, and claiming those
+    were written from the English would be a provenance claim the repository
+    does not stand behind.
+    """
+    base = manifest.get("base_translation")
+    if base:
+        return ("**%s** —— 不是从英文重新翻译，改动是在发行方那一版上做的。"
+                % base)
+    return "逐条人工翻译，没有使用任何机器翻译或在线翻译 API"
+
+
+def installer_bits(manifest, fields):
+    """-> how the player actually installs, which is not always "copy".
+
+    A ps1 game needs its own installer in the zip and a PowerShell command
+    instead of a copy table; sending such a player through the generic three
+    steps would leave them with a patch half-installed and no clue why.
+
+    fields is passed in because these fragments quote {{zipname}} and
+    {{copylist}}: render_readme substitutes in insertion order, so a nested
+    token spelled literally here would already have been consumed and would
+    ship to the player as the text "{{copylist}}". Embedding the rendered
+    values instead keeps the one-pass substitution correct.
+    """
+    zipname = fields["{{zipname}}"]
+    copylist = fields.get("{{copylist}}", "")
+    if manifest.get("installer") == "ps1":
+        return {
+            "{{installintro}}": (
+                "**需要 PowerShell（Windows 自带），不需要自己装 Python，也不需要联网。**\n"
+                "解压后在解压出来的目录里跑安装器，把游戏目录作为参数传进去："),
+            "{{installsteps}}": (
+                "1. 把游戏**完全关闭**\n"
+                "2. 解压 `%s`，在解压出来的目录里打开 PowerShell\n"
+                "3. 跑这一条：\n"
+                "\n"
+                "```\n"
+                "powershell -NoProfile -ExecutionPolicy Bypass "
+                "-File tools\\install.ps1 \"<游戏目录>\"\n"
+                "```\n"
+                "\n"
+                "安装器会先做一次**什么都不写**的试运行，再把要改动的文件完整备份到\n"
+                "`<游戏目录>/game/.zh_patch_backup/`，最后才落盘。\n"
+                "\n"
+                "删掉这个补丁就跑卸载器，它把备份原样盖回去：\n"
+                "\n"
+                "```\n"
+                "powershell -NoProfile -ExecutionPolicy Bypass "
+                "-File tools\\uninstall.ps1 \"<游戏目录>\"\n"
+                "```" % zipname),
+        }
+    return {
+        "{{installintro}}": (
+            "**不需要 Python，不需要安装器，不需要联网，也不用自己找字体。** 三步："),
+        "{{installsteps}}": (
+            "1. 把游戏**完全关闭**\n"
+            "2. 解压 `%s`\n"
+            "3. 把解压出来的 `game` 文件夹里的**全部内容**复制到游戏的 `game` 文件夹里，\n"
+            "   选择**覆盖**\n"
+            "\n"
+            "```\n"
+            "%s\n"
+            "```" % (zipname, copylist)),
+    }
 
 
 def _tree_row(glyph, name, desc, col=36):
@@ -145,7 +258,42 @@ def collect(repo, slug, manifest, version, count):
         for name in names:
             out.append(("game/fonts/" + name, src, None))
 
+    out.extend(installer_entries(repo, manifest))
+
     return sorted(out, key=lambda r: r[0])
+
+
+def installer_of(manifest):
+    """How this game is installed: a script the player runs, or a plain copy."""
+    return manifest.get("installer") or "py"
+
+
+def installer_entries(repo, manifest):
+    """-> [(arcname, source, None)] for the files a ps1 installer needs.
+
+    Shipping the scripts is not optional for an installer game: the player
+    README tells them to run tools/install.ps1, so a zip without tools/ is a
+    README pointing at nothing. The repo-side checkers named in extra_checks
+    are the one thing left out -- they need node and a checkout, and a player
+    has neither.
+    """
+    if installer_of(manifest) != "ps1":
+        return []
+    skip = set()
+    for _cmd, script in (manifest.get("extra_checks") or ()):
+        skip.add(os.path.basename(script))
+    out = []
+    tdir = os.path.join(repo, "tools")
+    if not os.path.isdir(tdir):
+        raise SystemExit("%s: installer is ps1 but tools/ is missing"
+                         % os.path.basename(repo))
+    for name in sorted(os.listdir(tdir)):
+        if name in skip:
+            continue
+        src = os.path.join(tdir, name)
+        if os.path.isfile(src):
+            out.append(("tools/" + name, src, None))
+    return out
 
 
 def layout_bits(manifest):
@@ -157,33 +305,61 @@ def layout_bits(manifest):
     """
     lang = manifest["language"]
     shim = manifest["shim"]
+    has_font = bool(games.font_plan(manifest))
+
+    # The tree is assembled as a list and only then given its branch
+    # characters, so dropping the fonts row (a game-bundled game has none) or
+    # adding the tools row (a ps1 game has one) leaves the last row last.
+    def tree(rows):
+        return "\n".join(
+            _tree_row("    %s " % ("\u2514\u2500\u2500" if n == len(rows) - 1
+                                   else "\u251c\u2500\u2500"),
+                      name, desc)
+            for n, (name, desc) in enumerate(rows))
+
+    tool_rows = ([("tools/", "安装器与卸载器（需要 PowerShell）")]
+                 if installer_of(manifest) == "ps1" else [])
+    font_rows = [("fonts/", "{{fonttree}}")] if has_font else []
+
+    def toolrow():
+        return ("\u251c\u2500\u2500 tools/                 安装器与卸载器\n"
+                if tool_rows else "")
+
+    def gamehint():
+        return ("\u2190 安装器会把这里的内容装进游戏的 game/ 里" if tool_rows
+                else "\u2190 把这个文件夹里的内容复制到游戏的 game/ 里")
 
     if games.layout(manifest) == "script-override":
         return {
             "{{countlabel}}": "个玩家可见字面量",
-            "{{conflictfaq}}": (
-                "**启动时报 `Parsing the script failed` 或 "
-                "`The label X is defined twice`**\n"
-                "游戏里已经打过另一份汉化补丁，两套脚本同时躺在 `game/` 里。先卸载那一份，\n"
-                "或者在一份干净的原版上重新复制。本补丁整体替换脚本、不注册 translate 块，\n"
-                "所以冲突时报的不是 `A translation for \"X\" already exists`。"),
+            "{{toolrow}}": toolrow(),
+            "{{gamehint}}": gamehint(),
+            # tools/ is a sibling of game/, not one of its children, so it
+            # comes from {{toolrow}} above and stays out of this list.
+            "{{packtree}}": tree(
+                [("scripts/、gui.rpy 等", "中文脚本，覆盖游戏自带的同名文件"),
+                   (shim, "语言与字体补丁")]
+                + font_rows),
+            "{{conflictfaq}}": conflict_faq(manifest),
             "{{copylist}}": (
                 "要复制的东西                        复制到哪里\n"
                 "game/ 里的全部内容                  <游戏目录>/game/"
-                "   （逐个覆盖同名文件）\n"
-                "game/fonts/*                        <游戏目录>/game/fonts/"),
-            "{{packtree}}": "\n".join((
-                _tree_row("    ├── ", "scripts/、gui.rpy 等",
-                          "chinese 脚本，覆盖游戏自带的同名文件"),
-                _tree_row("    ├── ", shim, "语言与字体补丁"),
-                _tree_row("    └── ", "fonts/", "{{fonttree}}"),
-            )),
+                "   （逐个覆盖同名文件）"
+                + ("\n"
+                   "game/fonts/*                        <游戏目录>/game/fonts/"
+                   if has_font else "")),
             "{{stalebytecode}}": ("删掉 `game/` 下与包内脚本同名的所有 `.rpyc` 再启动。"
                                   "原版游戏不会有这个问题。"),
         }
 
     return {
         "{{countlabel}}": "条",
+        "{{toolrow}}": toolrow(),
+        "{{gamehint}}": gamehint(),
+        "{{packtree}}": tree(
+            [("tl/%s/" % lang, "translate 翻译块"),
+               (shim, "语言与字体补丁")]
+            + font_rows),
         "{{conflictfaq}}": (
             "**启动时报 `A translation for \"X\" already exists`**\n"
             "游戏里已经打过别的汉化补丁，两份翻译冲突。先卸载那个补丁，或者在一份干净的"
@@ -191,18 +367,37 @@ def layout_bits(manifest):
         "{{copylist}}": (
             "要复制的东西                        复制到哪里\n"
             "game/tl/%s/%s<游戏目录>/game/tl/%s/\n"
-            "game/%s%s<游戏目录>/game/%s\n"
-            "game/fonts/*%s<游戏目录>/game/fonts/"
-            % (lang, " " * 21, lang, shim, " " * max(1, 26 - len(shim)), shim,
-               " " * 24)),
-        "{{packtree}}": "\n".join((
-            _tree_row("    ├── ", "tl/%s/" % lang, "translate 翻译块"),
-            _tree_row("    ├── ", shim, "语言与字体补丁"),
-            _tree_row("    └── ", "fonts/", "{{fonttree}}"),
-        )),
+            "game/%s%s<游戏目录>/game/%s"
+            % (lang, " " * 21, lang, shim, " " * max(1, 26 - len(shim)), shim)
+        ) + (
+            "\ngame/fonts/*%s<游戏目录>/game/fonts/" % (" " * 24)
+            if has_font else ""),
         "{{stalebytecode}}": ("删掉 `game/tl/%s/` 里所有 `.rpyc` 再启动。"
                               "原版游戏不会有这个问题。" % lang),
     }
+
+
+def conflict_faq(manifest):
+    """-> the failure a script-override player is most likely to actually hit.
+
+    A game whose translation also lives inside an archive has a failure mode
+    that no amount of copying fixes, and it is the one thing worth warning
+    about up front: hand-copying the files leaves both copies registered.
+    """
+    if manifest.get("archive_prefix_removed"):
+        return (
+            "**启动时报 `A translation for \"X\" already exists`**\n"
+            "这个游戏的简体中文**打包在 `game/archive.rpa` 里**，而不是散在 `game/tl/`。\n"
+            "Ren'Py 会同时收集磁盘上的文件和归档里的条目，两份都收，所以手动复制\n"
+            "翻译文件只会让每一对 `old`/`new` 都被注册两遍，启动时直接抛这个异常——\n"
+            "游戏连主菜单都进不去。**必须跑 `tools/install.ps1`**：它先从归档索引里\n"
+            "摘掉自带的那一份，再放本补丁的文件。散落的 `foo.rpy` 也不会遮住归档里的\n"
+            "同名文件，两个都会被读。")
+    return (
+        "**启动时报 `Parsing the script failed` 或 `The label X is defined twice`**\n"
+        "游戏里已经打过另一份汉化补丁，两套脚本同时躺在 `game/` 里。先卸载那一份，\n"
+        "或者在一份干净的原版上重新复制。本补丁整体替换脚本、不注册 translate 块，\n"
+        "所以冲突时报的不是 `A translation for \"X\" already exists`。")
 
 
 def extras_of(manifest):
@@ -378,7 +573,12 @@ def render_readme(manifest, slug, version, count):
     names = [n for _, ns in games.font_plan(manifest) for n in ns]
     note, tree, trouble = font_bits(manifest)
     fields.update(layout_bits(manifest))
+    fields.update(fontrow_bits(manifest))
     fields.update(extra_bits(manifest, slug))
+    # {{howtranslated}} and the install sentences come last: they are the ones
+    # that embed tokens filled in above.
+    fields["{{howtranslated}}"] = howtranslated_bits(manifest)
+    fields.update(installer_bits(manifest, fields))
     # {{fontnote}} and {{packtree}} embed {{fonttree}} / {{patchfont}}, and the
     # loop below substitutes in insertion order, so those have to come first.
     fields.update({
@@ -408,23 +608,16 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 | 引擎 | Ren'Py {{renpy}} |
 | 语言 | {{langname}}（启动时自动启用，不需要在设置里切换） |
 | 译文 | {{count}} {{countlabel}}，覆盖率 100%，没有未译条目 |
-| 翻译方式 | 逐条人工翻译，没有使用任何机器翻译或在线翻译 API |
-| 中文字体 | {{fontcredit}}（已打包） |
+| 翻译方式 | {{howtranslated}} |
+| 中文字体 | {{fontrow}} |
 
 ---
 
 ## 安装
 
-**不需要 Python，不需要安装器，不需要联网，也不用自己找字体。** 三步：
+{{installintro}}
 
-1. 把游戏**完全关闭**
-2. 解压 `{{zipname}}`
-3. 把解压出来的 `game` 文件夹里的**全部内容**复制到游戏的 `game` 文件夹里，
-   选择**覆盖**
-
-```
-{{copylist}}
-```
+{{installsteps}}
 
 装完直接启动游戏，{{langname}}会自动启用。
 
@@ -445,8 +638,7 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 
 {{conflictfaq}}
 
-**启动时报 `Could not find font`**
-`game/fonts/` 被删过或没复制全。把包里的 `game/fonts/` 整个再复制一次。
+{{fontfaq}}
 
 **启动时报 `config.say_arguments_callback` 相关错误**
 本补丁的语言脚本依赖 Ren'Py 8.x 的回调接口。原版游戏用的是 {{renpy}}，其它版本
@@ -460,8 +652,7 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 {{zipname}}
 ├── README.md              本文件
 ├── LICENSE                汉化补丁的许可
-├── FONT-LICENSE.txt       中文字体的版权声明
-└── game/                  ← 把这个文件夹里的内容复制到游戏的 game/ 里
+{{fontlicenserow}}{{toolrow}}└── game/                  {{gamehint}}
 {{packtree}}
 ```
 
@@ -472,10 +663,10 @@ PLAYER_README = """# {{title}} — {{langname}}汉化补丁 {{version}}
 游戏版权归 {{author}} 所有。本汉化补丁是**非官方的同人翻译作品**，与原作方无任何
 关联，仅供学习交流使用。请自行确认当地法律与原作方的授权状况。
 
-本包**不包含**任何游戏程序文件、图像、音频或原始脚本，只包含翻译补丁与中文字体。
+{{packcontains}}
 请勿将本补丁与游戏本体一同分发。
 
-中文字体的版权与授权见 `FONT-LICENSE.txt`。
+{{fontclose}}
 """
 
 

@@ -57,6 +57,35 @@ python tools/package_release.py --game <slug>
 - **`package_release.py` 故意没有 `--version`。** 它没有批次可读；给这个开关等于
   留一个把批次号打进包里的入口。
 
+### 压缩包里装不装安装器：`installer` 字段
+
+`game.json` 的 `installer` 有两个值，玩家拿到的压缩包因此不一样：
+
+| | `installer: "py"`（默认） | `installer: "ps1"` |
+|---|---|---|
+| 安装方式 | 手动把 `game/` 的内容复制进游戏目录 | 跑压缩包里的 `tools/install.ps1` |
+| 压缩包里有 `tools/` | 否 | **是**（安装器、卸载器、以及它需要的辅助脚本） |
+| 玩家 README 的安装段 | 复制表 | PowerShell 命令 |
+
+`installer: "ps1"` 的游戏**必须**把 `tools/` 打进包里：README 让玩家跑
+`tools\install.ps1`，包里没有 `tools/` 就是一份指向空处的说明。`tools/` 里唯一不打进去的
+是 `game.json` 的 `extra_checks` 点名的校验脚本——那东西要 node 和一份仓库，玩家两样都没有。
+
+`font_strategy: "game-bundled"` 的游戏同样要留意：它不带字体，所以压缩包里没有
+`fonts/`、没有 `FONT-LICENSE.txt`，README 也不能再说「中文字体已打包」。这类游戏
+的 README 还得按 `base_translation` 改口径：写明是**修订发行方自带的中文**，
+而不是从英文重译。仓库自己的根 `README.md` 用 ` †` 标的就是这些。
+
+这三段（安装方式、字体、翻译口径）都是 `PLAYER_README` 里的 `{{...}}`，
+由 `layout_bits()` / `installer_bits()` / `fontrow_bits()` / `font_bits()` 渲染。
+改模板会影响**所有**游戏的压缩包字节：改完先确认只想变的那些变了——
+
+```python
+# 改模板前后各跑一次，比对 renderer 的输出
+import hashlib, package_release
+print(hashlib.sha256(package_release.render_readme(m, slug, v, n).encode()).hexdigest())
+```
+
 ### 可选包（`extras`）
 
 `game.json` 里可以给游戏加 `extras`，为它额外打一个**独立压缩包**，和主包一起挂到同一个 Release。第三方 MOD 的汉化就该走这条路：主补丁不能依赖它，玩家装不装 MOD 都得是一个完整可用的游戏。
