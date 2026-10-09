@@ -312,9 +312,17 @@ def row(slug):
         state = "⚠️ %d 条未译" % left
     else:
         state = "✅ 100%"
+    # A patch that revises a translation the publisher already ships is not
+    # the same thing as one translated from the English, and a table that calls
+    # both "100%" says nothing about which is which. Game.json opts in with
+    # base_translation; games without it render exactly as before.
+    shape_label = SHAPE_LABEL[shape]
+    base = m.get("base_translation")
+    if base:
+        shape_label += " †"
     return "| [%s](games/%s/) | %s | %s | %s | %s | %s 条 |" % (
         m["title"], slug, m["author"], m["language_name"],
-        SHAPE_LABEL[shape], state, "{:,}".format(total))
+        shape_label, state, "{:,}".format(total))
 
 
 def table():

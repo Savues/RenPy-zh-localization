@@ -1,0 +1,36 @@
+{
+  "slug": "between-humanity-033",
+  "title": "Between Humanity 0.3.3",
+  "author": "Between Humanity",
+  "renpy_version": "8.3.7",
+  "language": "chinese",
+  "language_name": "简体中文",
+  "base_translation": "修订自发行方自带的中文",
+  "patch_version": 1,
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "extra_checks": [
+    [
+      "node",
+      "tools/verify_patch.cjs"
+    ]
+  ],
+  "shim": "zz_zh_locale.rpy",
+  "font_strategy": "game-bundled",
+  "font_assets": [],
+  "coverage": {
+    "translated": 9920,
+    "total": 9926,
+    "verbatim": 6,
+    "punctuation_only": 73
+  },
+  "_coverage_note": "9,926 player-visible strings, counted by taking the English from the # comment above each line inside every translate chinese block and the old/new pair out of every translate chinese strings: block. 9,920 are localised: 9,847 contain a Han character and 73 are punctuation-only ('[mc.ColoredName]...' became '[mc.ColoredName]……'). Those 73 are invisible to a plain Han test because a Ren'Py attribute reference puts ASCII back into the line; a string counts as localised whenever its value differs from the English source, the same rule tools/check.py uses to call a tl-blocks entry 'still in English'. The 6 left byte-identical are registered by hand in docs/glossary.json _kept_verbatim and are all Ren'Py phone-text substitutions ([_text], [random_whisper], [_naomiText._text!i]) -- there is no English in them to translate. tools/verify_patch.cjs re-derives all of it on every run and fails if game.json disagrees.",
+  "_provenance": "This is a revision of the translation the publisher already ships, not a fresh translation of the English. The base text is game/tl/chinese/ as it came in the download; this patch revises 4,208 of its 21,108 active lines across 105 of 134 files (19.9%) and leaves the rest as the publisher had them. The publisher says so in the game itself -- game/scripts/screens/languageSelection.rpy reads '有些语言是部分或全部使用AI翻译的，所以可能不完美' -- and credits contributors including 予澈 in the About screen. The shim deliberately does not touch that notice. See docs/translation-log.md.",
+  "_why_script_override": "Same reasoning as the other revision-of-a-shipped-translation patch (newteacher-090): the tree is hand-maintained, not generated from a dictionary, so a reverse-derived data/tl_trans.json would be the patch grading its own homework. check.py checks the 134 scripts the patch actually ships instead, and game.json's coverage carries the number, which tools/verify_patch.cjs re-derives rather than trusts.",
+  "_why_ps1": "tools/install.py insists on a font asset (this patch ships none -- the game's own CJK faces already work) and recognises a game by a loose game/options.rpy, which this one keeps inside scripts.rpa. It also deletes game/tl/<lang> wholesale before copying. tools/install.ps1 copies file by file instead, and moves the stale .rpyc aside -- Ren'Py prefers bytecode, so leaving it in place runs the publisher's text with no error anywhere.",
+  "_why_chinese_not_schinese": "The game already ships its own Simplified Chinese under game/tl/chinese/ and this patch revises that tree in place. Ren'Py keys a translation directory off the language code, so writing game/tl/schinese/ instead would leave the player's language picker showing the publisher's text under 中文 while the revised text sat unused beside it.",
+  "_why_no_fonts": "game/tl/chinese/ already works in the stock download, so the CJK faces are already in place. Shipping a font would add weight and a licence to account for without changing a glyph on screen.",
+  "_complete_tree": "All 134 files under game/tl/chinese/ are shipped, not only the 105 this patch revises. The other 29 are byte-identical to what the download contains; shipping them keeps the tree complete so the installer can overwrite in place without having to reason about what the player already had.",
+  "_dead_entry_removed": "scripts/functions/enums.rpy shipped with old \"Acqu机翻ntance\" in its first strings block -- a machine translation that injected the two characters 机翻 into the middle of the English word Acquaintance. The key can never match the game's English, so the entry was dead. The same file has the correct old \"Acquaintance\" 160 lines further down, so repairing the broken one would have produced two identical keys and crashed the game at startup with 'A translation for \"Acquaintance\" already exists'. The dead entry was deleted, not repaired. tools/verify_patch.cjs now fails if any old key contains a Han character, which is what keeps the same mistake from coming back as a repair instead of a deletion.",
+  "_patch_note": "The patch ships .rpy only. The download carries a compiled .rpyc next to every one of them and Ren'Py prefers bytecode, so tools/install.ps1 moves those aside before writing the .rpy."
+}

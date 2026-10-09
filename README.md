@@ -2,7 +2,13 @@
 
 Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立目录，共用同一套工具链。
 
-所有译文均由人工逐条撰写，**未使用任何机器翻译或在线翻译 API**。
+本仓库自己写下的每一句译文都由人工逐条撰写，**未使用任何机器翻译或在线翻译 API**。
+
+多数游戏的译文是从英文重译的。有两款不同：表中标 † 的 **That New Teacher** 和
+**Between Humanity** 是**发行方自带中文的修订版**——它们的基线是发行方自己随包发布的
+中文，本仓库做的是在基线上改错、统一术语和润色，不是从零重译。发行方对这两份基线的
+说法也不一样（That New Teacher 标了机翻图标，Between Humanity 自己标 `HUMAN_100`），
+两个补丁都照原样记录、各自的 `docs/translation-log.md` 里写清楚，**都不替发行方改口**。
 
 ## 已收录
 
@@ -10,12 +16,13 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 | 游戏 | 原作 | 语言 | 方案 | 状态 | 译文量 |
 |---|---|---|---|---|---|
 | [AcademyLive 0.11](games/academylive-011/) | passhonQ | 简体中文 | translate 块 | ✅ 100% | 24,002 条 |
+| [Between Humanity 0.3.3](games/between-humanity-033/) | Between Humanity | 简体中文 | 脚本覆盖 † | ✅ 100%（6 条保留原文） | 9,926 条 |
 | [City Devil: Restart 0.4.0](games/citydevilrestart-040/) | Sabirow | 简体中文 | 脚本覆盖 | ✅ 100%（10 条保留原文） | 7,792 条 |
 | [Clown Squad 0.1 Part 1](games/clownsquad-01-part1/) | Astreon | 简体中文 | translate 块 | ✅ 100% | 5,034 条 |
 | [Cosy Cafe 0.14.2](games/cosycafe-0142/) | Cosy Creator | 简体中文 | 脚本覆盖 | ✅ 100% | 32,639 条 |
 | [DropOut Saga 0.12.0b](games/dropout-saga-0120/) | LazyBloodLines | 简体中文 | 脚本覆盖 | ✅ 100%（273 条保留原文） | 15,214 条 |
 | [Eden Chapter 5](games/eden-chapter5/) | FnB Productions | 简体中文 | translate 块 | ✅ 100% | 15,713 条 |
-| [That New Teacher 0.9.0](games/newteacher-090/) | RogueOne | 简体中文 | 脚本覆盖 | ✅ 100%（123 条保留原文） | 19,112 条 |
+| [That New Teacher 0.9.0](games/newteacher-090/) | RogueOne | 简体中文 | 脚本覆盖 † | ✅ 100%（123 条保留原文） | 19,112 条 |
 | [Por(n)tals 0.4](games/portals-04/) | onehend | 简体中文 | translate 块 | ✅ 100% | 23,910 条 |
 | [Realm Invader Episode 2 Part 2](games/realminvader-ep2p2/) | Realm Invader | 简体中文 | translate 块 | ✅ 100% | 16,183 条 |
 | [Scions of the Divine 0.1](games/scionsofthedivine-01/) | Dark Seraph Productions | 简体中文 | 脚本覆盖 | ✅ 100% | 5,094 条 |
@@ -34,6 +41,8 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 >
 > 两种都是这个仓库认的方案，不存在哪条是标准、哪条是例外。新游戏选哪条，见
 > [`docs/adding-a-game.md`](docs/adding-a-game.md)。
+>
+> † 方案列带 † 的两款不是重译，是发行方自带中文的修订版。覆盖率的分母是那棵
 >
 > 上面这张表由 `python tools/games.py --readme` 从 `games/` 生成，两个标记之间的内容不要手改。
 > `check_links.py` 会核对它有没有过期。

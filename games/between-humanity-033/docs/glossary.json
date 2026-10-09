@@ -1,0 +1,68 @@
+{
+  "_about": "角色名与专有名词。zh 是本作采用的定译；banned 列出的是这一版修掉的错译。banned 是纯子串匹配，所以只放真正该禁的写法 —— 一个同时也是普通中文词的字样放进去会误伤整库。",
+  "人物": {
+    "Mrs. Parker": {
+      "zh": "帕克夫人",
+      "banned": [
+        "帕克太太"
+      ]
+    },
+    "Ms. Tailor": {
+      "zh": "泰勒老师",
+      "banned": []
+    },
+    "Lucy": {
+      "zh": "露西",
+      "banned": []
+    },
+    "Anya": {
+      "zh": "安雅",
+      "banned": []
+    },
+    "Claire": {
+      "zh": "克莱尔",
+      "banned": []
+    },
+    "Simon": {
+      "zh": "西蒙",
+      "banned": []
+    },
+    "Lilith": {
+      "zh": "莉莉丝",
+      "banned": [
+        "莉莉"
+      ]
+    },
+    "Naomi": {
+      "zh": "内奥米",
+      "banned": []
+    },
+    "Marcus": {
+      "zh": "马库斯",
+      "banned": []
+    },
+    "Leo": {
+      "zh": "里奥",
+      "banned": []
+    }
+  },
+  "_kept_verbatim": [
+    "[lilithShort]-{w=1.5}{nw}",
+    "[_gt!t]",
+    "[_naomiText._text!i]{w=3}{nw}",
+    "[random_whisper]",
+    "[_text]",
+    "[_text2]"
+  ],
+  "_kept_verbatim_why": {
+    "count": "6 of 9,926 player-visible strings are byte-identical to their English source, and all six are Ren'Py phone-text substitutions -- the phone's message bubble interpolates [_text], [_text2], [_gt], [random_whisper], [_naomiText._text!i] and [lilithShort]-{w=1.5}{nw}. There is no English in them at all; the sentence arrives already assembled at runtime. tools/verify_patch.cjs re-derives this list from the patch and fails on anything untranslated that is not in it."
+  },
+  "_variant_names": {
+    "_why": "These are the near-collisions the revision pass had to settle. They are recorded rather than banned because the blunt substring rule cannot express them: 莉莉 is a prefix of the correct 莉莉丝, and 帕-帕克夫人 is Mrs. Parker stuttering on purpose.",
+    "Lili-": "The Lilith stutter appears as both 莉莉丝- and Lili- in the shipped text. This patch keeps 莉莉丝- so the stutter stays a stutter instead of turning into English.",
+    "Siiiimon": "Simon stutters as 西-蒙, matching how the other characters stutter in Chinese.",
+    "帕-帕克夫人": "Mrs. Parker stuttering. The non-stuttering form is 帕克夫人 and it must stay the more common one."
+  },
+  "_doubling_exempt": [],
+  "_variants_allowed": {}
+}

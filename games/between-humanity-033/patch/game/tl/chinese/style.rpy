@@ -1,0 +1,11 @@
+translate chinese python:
+    gui.text_font = "tl/chinese/font/JiYingHuiPianHeYuan.ttf"
+    gui.name_text_font = "tl/chinese/font/JiYingHuiPianHeYuan.ttf"
+    gui.interface_text_font = "tl/chinese/font/JiYingHuiPianHeYuan.ttf"
+    gui.button_text_font = gui.interface_text_font
+    gui.choice_button_text_font = gui.text_font
+    gui.system_font = "tl/chinese/font/JiYingHuiPianHeYuan.ttf"
+    gui.default_name_text_font = "tl/chinese/font/JiYingHuiPianHeYuan.ttf"
+    gui.default_text_font = "tl/chinese/font/JiYingHuiPianHeYuan.ttf"
+    gui.phone_text_font = "tl/chinese/font/JiYingHuiPianHeYuan.ttf"
+    gui.default_interface_text_font = "tl/chinese/font/JiYingHuiPianHeYuan.ttf"
