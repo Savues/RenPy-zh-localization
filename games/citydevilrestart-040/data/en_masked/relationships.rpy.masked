@@ -1,0 +1,2259 @@
+
+image girls_bg = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image girls_bg_others = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_may_1 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_may_2 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_may_3 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_lillian_1 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_lillian_2 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_lillian_3 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_minami_1 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_minami_2 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_minami_3 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_izumi_1 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_izumi_2 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_izumi_3 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_asami_1 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_asami_2 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+image rs_asami_3 = Movie(size=(1920,1080), channel =@S, play=@S, loop=True)
+
+
+
+screen girls_menu:
+    tag menu
+    add @Q at alpha_dissolve
+    add @Q at alpha_dissolve
+    
+    modal True
+    zorder 2
+    
+    imagebutton idle @S hover @S focus_mask True hover_sound @S action Return() activate_sound @S at rs_return_nav
+    
+    imagebutton auto @S hover_sound @S action Show(@S) activate_sound @S at bright_button_main
+    imagebutton auto @S hover_sound @S action Show(@S) activate_sound @S at bright_button_others
+    
+    
+    imagebutton auto @S focus_mask True hover_sound @S action Show(@S) activate_sound @S at rs_button_may:
+        sensitive may_unlock == 1
+        
+    imagebutton auto @S focus_mask True hover_sound @S action Show(@S) activate_sound @S at rs_button_lillian:
+            sensitive lillian_unlock == 1
+        
+    imagebutton auto @S focus_mask True hover_sound @S action Show(@S) activate_sound @S at rs_button_minami:
+        sensitive minami_unlock == 1
+        
+    imagebutton auto @S focus_mask True hover_sound @S action Show(@S) activate_sound @S at rs_button_izumi:
+        sensitive izumi_unlock == 1
+
+    imagebutton auto @S focus_mask True hover_sound @S action Show(@S) activate_sound @S at rs_button_asami:
+        sensitive asami_unlock == 1
+
+    imagebutton auto @S focus_mask True hover_sound @S action Show(@S) activate_sound @S at rs_button_nao:
+        sensitive nao_unlock == 1     
+
+
+
+screen girls_menu_others:
+    tag menu
+    add @Q at alpha_dissolve
+    add @Q at alpha_dissolve
+    add @Q at others_bright
+    
+    modal True
+    zorder 2
+    
+    imagebutton idle @S hover @S focus_mask True hover_sound @S action Return() activate_sound @S at rs_return_nav
+    
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S)] activate_sound @S at bright_button_main
+    imagebutton auto @S hover_sound @S action Show(@S) activate_sound @S at bright_button_others
+    
+    
+    
+    hbox:
+        spacing 0
+        ypos 265
+        xpos 92
+        ysize 680
+        xsize 450
+        viewport id @S:
+            yfill False
+            xfill False
+            draggable True
+            mousewheel True
+            at others_bright
+            vbox:
+                spacing 20
+                hbox:
+                    spacing 12
+                    imagebutton auto @S focus_mask True hover_sound @S action[Show(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S)] activate_sound @S at others_bright:
+                        sensitive leah_unlock == True
+                    imagebutton auto @S focus_mask True hover_sound @S action[Hide(@S), Show(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S)] activate_sound @S at others_bright:
+                        sensitive sophia_unlock == True
+                    imagebutton auto @S focus_mask True  hover_sound @S action[Hide(@S), Hide(@S), Show(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S)] activate_sound @S at others_bright:
+                        sensitive olivia_unlock == True
+                hbox:
+                    spacing 12
+                    imagebutton auto @S focus_mask True hover_sound @S action[Hide(@S), Hide(@S), Hide(@S), Show(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S)] activate_sound @S at others_bright:
+                        sensitive yumiko_unlock == True
+                    imagebutton auto @S focus_mask True hover_sound @S action[Hide(@S), Hide(@S), Hide(@S), Hide(@S), Show(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S)] activate_sound @S at others_bright:
+                        sensitive carmen_unlock == True
+                    imagebutton auto @S focus_mask True hover_sound @S action[Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Show(@S), Hide(@S), Hide(@S), Hide(@S)] activate_sound @S at others_bright:
+                        sensitive emma_unlock == True
+                hbox:
+                    spacing 12
+                    imagebutton auto @S focus_mask True hover_sound @S action[Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Show(@S), Hide(@S), Hide(@S)] activate_sound @S at others_bright:
+                        sensitive grace_unlock == True
+                    imagebutton auto @S focus_mask True hover_sound @S action[Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Show(@S), Hide(@S)] activate_sound @S at others_bright:
+                        sensitive chloe_unlock == True
+                    imagebutton auto @S focus_mask True hover_sound @S action[Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Hide(@S), Show(@S)] activate_sound @S at others_bright:
+                        sensitive scarlett_unlock == True
+                hbox:
+                    spacing 12
+                    imagebutton auto @S focus_mask True  hover_sound @S  activate_sound @S at others_bright
+                    imagebutton auto @S focus_mask True hover_sound @S  activate_sound @S at others_bright
+                    imagebutton auto @S focus_mask True  hover_sound @S  activate_sound @S at others_bright
+                hbox:
+                    spacing 12
+                    imagebutton auto @S focus_mask True hover_sound @S  activate_sound @S at others_bright
+                    imagebutton auto @S focus_mask True hover_sound @S  activate_sound @S at others_bright
+                    imagebutton auto @S focus_mask True  hover_sound @S  activate_sound @S at others_bright
+                    
+    hbox:
+        ypos 265
+        xpos 582
+        ysize 680
+        xsize 10
+        vbar:
+            xysize(6, 680)
+            bottom_bar @S
+            top_bar @S
+            thumb @S
+            value YScrollValue (@S)
+            at others_bright
+    
+screen girls_others_leah:
+    modal False
+    zorder 3
+    add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_leah == True
+    
+screen girls_others_sophia:
+    modal False
+    zorder 3
+    add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_alexxis == 11
+    
+screen girls_others_olivia:
+    modal False
+    zorder 3
+    add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_olivia_unlock_1 == True
+    
+screen girls_others_yumiko:
+    modal False
+    zorder 3
+    add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_yumiko_unlock_1 == True
+        
+screen girls_others_carmen:
+    modal False
+    zorder 3
+    add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_carmen == True
+        
+screen girls_others_emma:
+    modal False
+    zorder 3
+    add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_emma_parking == True
+        
+screen girls_others_grace:
+    modal False
+    zorder 3
+    add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_grace_wc1 == True
+        
+screen girls_others_chloe:
+    modal False
+    zorder 3
+    if chloe_warn == True:
+        add @Q at others_bright
+    elif chloe_date_bar or chloe_date_fake == True:
+        add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_chloe == True
+        
+screen girls_others_scarlett:
+    modal False
+    zorder 3
+    add @Q at others_bright
+    add @Q at others_bright
+    imagebutton auto @S hover_sound @S action[Show(@S), Hide(@S)] activate_sound @S at others_gallery:
+        sensitive persistent.gallery_chloe == True
+
+
+    
+    
+    
+ 
+
+
+
+    
+screen girls_may_profile:
+    modal False
+    zorder 3
+    imagebutton idle @S focus_mask True
+    add @S at alpha_dissolve
+    
+    if rs_text_block_may_hobbie_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_hobbie_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_hobbie_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_hobbie_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+        
+    if rs_text_block_may_preferences_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_preferences_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_preferences_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_preferences_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    
+screen girls_may_events:
+    modal False
+    zorder 3
+    add @S at alpha_dissolve
+    add @S at alpha_dissolve
+    imagebutton idle @S focus_mask True
+    
+    if date_event_1_may == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_events_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_events_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_events_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_events_5 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_events_6 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_events_7 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_may_events_8 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+
+    
+
+
+
+
+screen girls_may:
+    tag menu
+    modal True
+    zorder 3
+    
+    if love_may >= 100:
+        add @Q at rs_bg_dissolve
+    elif love_may >= 45:
+        add @Q at rs_bg_dissolve
+    else:
+        add @Q at rs_bg_dissolve
+
+
+    imagebutton auto @S focus_mask True xpos 70 ypos 220 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive nao_unlock == 1
+        
+    imagebutton idle @S focus_mask True xpos 70 ypos 420 hover_sound @S action Show(@S) activate_sound @S at rs_icon:
+        sensitive may_unlock == 1
+
+    imagebutton auto @S focus_mask True xpos 70 ypos 620 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive lillian_unlock == 1
+
+
+
+    add @Q at alpha_dissolve
+    add @Q at rs_dissolve
+        
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+
+
+    imagebutton idle @S hover @S focus_mask True hover_sound @S action Return() activate_sound @S at rs_return
+    
+    if love_may == 100:
+        add @Q at rs_dissolve
+    elif love_may >= 70:
+        add @Q at rs_dissolve
+    elif love_may >= 45:
+        add @Q at rs_dissolve
+    elif love_may >= 25:
+        add @Q at rs_dissolve
+    elif love_may >= 10:
+        add @Q at rs_dissolve
+    else:
+        add @Q at rs_dissolve
+    
+    add @Q at rs_dissolve
+    
+
+    if love_may == 1:
+        add @Q at rs_dissolve
+    if love_may == 2:
+        add @Q at rs_dissolve
+    if love_may == 3:
+        add @Q at rs_dissolve
+    if love_may == 4:
+        add @Q at rs_dissolve
+    if love_may == 5:
+        add @Q at rs_dissolve
+    if love_may == 6:
+        add @Q at rs_dissolve
+    if love_may == 7:
+        add @Q at rs_dissolve
+    if love_may == 8:
+        add @Q at rs_dissolve
+    if love_may == 9:
+        add @Q at rs_dissolve
+
+    if love_may == 11:
+        add @Q at rs_dissolve
+    if love_may == 12:
+        add @Q at rs_dissolve
+    if love_may == 13:
+        add @Q at rs_dissolve
+    if love_may == 14:
+        add @Q at rs_dissolve
+    if love_may == 15:
+        add @Q at rs_dissolve
+    if love_may == 16:
+        add @Q at rs_dissolve
+    if love_may == 17:
+        add @Q at rs_dissolve
+    if love_may == 18:
+        add @Q at rs_dissolve
+    if love_may == 19:
+        add @Q at rs_dissolve
+    if love_may == 20:
+        add @Q at rs_dissolve
+    if love_may == 21:
+        add @Q at rs_dissolve
+    if love_may == 22:
+        add @Q at rs_dissolve
+    if love_may == 23:
+        add @Q at rs_dissolve
+    if love_may == 24:
+        add @Q at rs_dissolve
+
+    if love_may == 26:
+        add @Q at rs_dissolve
+    if love_may == 27:
+        add @Q at rs_dissolve
+    if love_may == 28:
+        add @Q at rs_dissolve
+    if love_may == 29:
+        add @Q at rs_dissolve
+    if love_may == 30:
+        add @Q at rs_dissolve
+    if love_may == 31:
+        add @Q at rs_dissolve
+    if love_may == 32:
+        add @Q at rs_dissolve
+    if love_may == 33:
+        add @Q at rs_dissolve
+    if love_may == 34:
+        add @Q at rs_dissolve
+    if love_may == 35:
+        add @Q at rs_dissolve
+    if love_may == 36:
+        add @Q at rs_dissolve
+    if love_may == 37:
+        add @Q at rs_dissolve
+    if love_may == 38:
+        add @Q at rs_dissolve
+    if love_may == 39:
+        add @Q at rs_dissolve
+    if love_may == 40:
+        add @Q at rs_dissolve
+    if love_may == 41:
+        add @Q at rs_dissolve
+    if love_may == 42:
+        add @Q at rs_dissolve
+    if love_may == 43:
+        add @Q at rs_dissolve
+    if love_may == 44:
+        add @Q at rs_dissolve
+
+    if love_may == 46:
+        add @Q at rs_dissolve
+    if love_may == 47:
+        add @Q at rs_dissolve
+    if love_may == 48:
+        add @Q at rs_dissolve
+    if love_may == 49:
+        add @Q at rs_dissolve
+    if love_may == 50:
+        add @Q at rs_dissolve
+    if love_may == 51:
+        add @Q at rs_dissolve
+    if love_may == 52:
+        add @Q at rs_dissolve
+    if love_may == 53:
+        add @Q at rs_dissolve
+    if love_may == 54:
+        add @Q at rs_dissolve
+    if love_may == 55:
+        add @Q at rs_dissolve
+    if love_may == 56:
+        add @Q at rs_dissolve
+    if love_may == 57:
+        add @Q at rs_dissolve
+    if love_may == 58:
+        add @Q at rs_dissolve
+    if love_may == 59:
+        add @Q at rs_dissolve
+    if love_may == 60:
+        add @Q at rs_dissolve
+    if love_may == 61:
+        add @Q at rs_dissolve
+    if love_may == 62:
+        add @Q at rs_dissolve
+    if love_may == 63:
+        add @Q at rs_dissolve
+    if love_may == 64:
+        add @Q at rs_dissolve
+    if love_may == 65:
+        add @Q at rs_dissolve
+    if love_may == 66:
+        add @Q at rs_dissolve
+    if love_may == 67:
+        add @Q at rs_dissolve
+    if love_may == 68:
+        add @Q at rs_dissolve
+    if love_may == 69:
+        add @Q at rs_dissolve
+
+    if love_may == 71:
+        add @Q at rs_dissolve
+    if love_may == 72:
+        add @Q at rs_dissolve
+    if love_may == 73:
+        add @Q at rs_dissolve
+    if love_may == 74:
+        add @Q at rs_dissolve
+    if love_may == 75:
+        add @Q at rs_dissolve
+    if love_may == 76:
+        add @Q at rs_dissolve
+    if love_may == 77:
+        add @Q at rs_dissolve
+    if love_may == 78:
+        add @Q at rs_dissolve
+    if love_may == 79:
+        add @Q at rs_dissolve
+    if love_may == 80:
+        add @Q at rs_dissolve
+    if love_may == 81:
+        add @Q at rs_dissolve
+    if love_may == 82:
+        add @Q at rs_dissolve
+    if love_may == 83:
+        add @Q at rs_dissolve
+    if love_may == 84:
+        add @Q at rs_dissolve
+    if love_may == 85:
+        add @Q at rs_dissolve
+    if love_may == 86:
+        add @Q at rs_dissolve
+    if love_may == 87:
+        add @Q at rs_dissolve
+    if love_may == 88:
+        add @Q at rs_dissolve
+    if love_may == 89:
+        add @Q at rs_dissolve
+    if love_may == 90:
+        add @Q at rs_dissolve
+    if love_may == 91:
+        add @Q at rs_dissolve
+    if love_may == 92:
+        add @Q at rs_dissolve
+    if love_may == 93:
+        add @Q at rs_dissolve
+    if love_may == 94:
+        add @Q at rs_dissolve
+    if love_may == 95:
+        add @Q at rs_dissolve
+    if love_may == 96:
+        add @Q at rs_dissolve
+    if love_may == 97:
+        add @Q at rs_dissolve
+    if love_may == 98:
+        add @Q at rs_dissolve
+    if love_may == 99:
+        add @Q at rs_dissolve
+
+    if love_may == 100:
+        add @Q at rs_dissolve
+
+
+
+
+
+
+
+
+
+screen girls_lillian_profile:
+    modal False
+    zorder 3
+    imagebutton idle @S focus_mask True
+    add @S at alpha_dissolve
+    
+    if rs_text_block_lillian_hobbie_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_hobbie_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_hobbie_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_hobbie_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+        
+    if rs_text_block_lillian_preferences_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_preferences_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_preferences_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_preferences_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    
+screen girls_lillian_events:
+    modal False
+    zorder 3
+    add @S at alpha_dissolve
+    add @S at alpha_dissolve
+    imagebutton idle @S focus_mask True
+    
+    if date_event_1_lillian == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_events_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_events_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_events_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_events_5 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_events_6 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_events_7 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_lillian_events_8 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+
+
+
+
+
+screen girls_lillian:
+    tag menu
+    modal True
+    zorder 3
+    if love_li >= 100:
+        add @Q at rs_bg_dissolve
+    elif love_li >= 45:
+        add @Q at rs_bg_dissolve
+    else:
+        add @Q at rs_bg_dissolve
+        
+
+    imagebutton auto @S focus_mask True xpos 70 ypos 220 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive may_unlock == 1
+        
+    imagebutton idle @S focus_mask True xpos 70 ypos 420 hover_sound @S action Show(@S) activate_sound @S at rs_icon:
+        sensitive lillian_unlock == 1
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 620 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive minami_unlock == 1
+
+
+
+    add @Q at alpha_dissolve
+    add @Q at rs_dissolve
+        
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+
+    imagebutton idle @S hover @S focus_mask True hover_sound @S action Return() activate_sound @S at rs_return
+    
+    if love_li == 100:
+        add @Q at rs_dissolve
+    elif love_li >= 70:
+        add @Q at rs_dissolve
+    elif love_li >= 45:
+        add @Q at rs_dissolve
+    elif love_li >= 25:
+        add @Q at rs_dissolve
+    elif love_li >= 10:
+        add @Q at rs_dissolve
+    else:
+        add @Q at rs_dissolve
+    
+    add @Q at rs_dissolve
+    
+
+    if love_li == 1:
+        add @Q at rs_dissolve
+    if love_li == 2:
+        add @Q at rs_dissolve
+    if love_li == 3:
+        add @Q at rs_dissolve
+    if love_li == 4:
+        add @Q at rs_dissolve
+    if love_li == 5:
+        add @Q at rs_dissolve
+    if love_li == 6:
+        add @Q at rs_dissolve
+    if love_li == 7:
+        add @Q at rs_dissolve
+    if love_li == 8:
+        add @Q at rs_dissolve
+    if love_li == 9:
+        add @Q at rs_dissolve
+
+    if love_li == 11:
+        add @Q at rs_dissolve
+    if love_li == 12:
+        add @Q at rs_dissolve
+    if love_li == 13:
+        add @Q at rs_dissolve
+    if love_li == 14:
+        add @Q at rs_dissolve
+    if love_li == 15:
+        add @Q at rs_dissolve
+    if love_li == 16:
+        add @Q at rs_dissolve
+    if love_li == 17:
+        add @Q at rs_dissolve
+    if love_li == 18:
+        add @Q at rs_dissolve
+    if love_li == 19:
+        add @Q at rs_dissolve
+    if love_li == 20:
+        add @Q at rs_dissolve
+    if love_li == 21:
+        add @Q at rs_dissolve
+    if love_li == 22:
+        add @Q at rs_dissolve
+    if love_li == 23:
+        add @Q at rs_dissolve
+    if love_li == 24:
+        add @Q at rs_dissolve
+
+    if love_li == 26:
+        add @Q at rs_dissolve
+    if love_li == 27:
+        add @Q at rs_dissolve
+    if love_li == 28:
+        add @Q at rs_dissolve
+    if love_li == 29:
+        add @Q at rs_dissolve
+    if love_li == 30:
+        add @Q at rs_dissolve
+    if love_li == 31:
+        add @Q at rs_dissolve
+    if love_li == 32:
+        add @Q at rs_dissolve
+    if love_li == 33:
+        add @Q at rs_dissolve
+    if love_li == 34:
+        add @Q at rs_dissolve
+    if love_li == 35:
+        add @Q at rs_dissolve
+    if love_li == 36:
+        add @Q at rs_dissolve
+    if love_li == 37:
+        add @Q at rs_dissolve
+    if love_li == 38:
+        add @Q at rs_dissolve
+    if love_li == 39:
+        add @Q at rs_dissolve
+    if love_li == 40:
+        add @Q at rs_dissolve
+    if love_li == 41:
+        add @Q at rs_dissolve
+    if love_li == 42:
+        add @Q at rs_dissolve
+    if love_li == 43:
+        add @Q at rs_dissolve
+    if love_li == 44:
+        add @Q at rs_dissolve
+
+    if love_li == 46:
+        add @Q at rs_dissolve
+    if love_li == 47:
+        add @Q at rs_dissolve
+    if love_li == 48:
+        add @Q at rs_dissolve
+    if love_li == 49:
+        add @Q at rs_dissolve
+    if love_li == 50:
+        add @Q at rs_dissolve
+    if love_li == 51:
+        add @Q at rs_dissolve
+    if love_li == 52:
+        add @Q at rs_dissolve
+    if love_li == 53:
+        add @Q at rs_dissolve
+    if love_li == 54:
+        add @Q at rs_dissolve
+    if love_li == 55:
+        add @Q at rs_dissolve
+    if love_li == 56:
+        add @Q at rs_dissolve
+    if love_li == 57:
+        add @Q at rs_dissolve
+    if love_li == 58:
+        add @Q at rs_dissolve
+    if love_li == 59:
+        add @Q at rs_dissolve
+    if love_li == 60:
+        add @Q at rs_dissolve
+    if love_li == 61:
+        add @Q at rs_dissolve
+    if love_li == 62:
+        add @Q at rs_dissolve
+    if love_li == 63:
+        add @Q at rs_dissolve
+    if love_li == 64:
+        add @Q at rs_dissolve
+    if love_li == 65:
+        add @Q at rs_dissolve
+    if love_li == 66:
+        add @Q at rs_dissolve
+    if love_li == 67:
+        add @Q at rs_dissolve
+    if love_li == 68:
+        add @Q at rs_dissolve
+    if love_li == 69:
+        add @Q at rs_dissolve
+
+    if love_li == 71:
+        add @Q at rs_dissolve
+    if love_li == 72:
+        add @Q at rs_dissolve
+    if love_li == 73:
+        add @Q at rs_dissolve
+    if love_li == 74:
+        add @Q at rs_dissolve
+    if love_li == 75:
+        add @Q at rs_dissolve
+    if love_li == 76:
+        add @Q at rs_dissolve
+    if love_li == 77:
+        add @Q at rs_dissolve
+    if love_li == 78:
+        add @Q at rs_dissolve
+    if love_li == 79:
+        add @Q at rs_dissolve
+    if love_li == 80:
+        add @Q at rs_dissolve
+    if love_li == 81:
+        add @Q at rs_dissolve
+    if love_li == 82:
+        add @Q at rs_dissolve
+    if love_li == 83:
+        add @Q at rs_dissolve
+    if love_li == 84:
+        add @Q at rs_dissolve
+    if love_li == 85:
+        add @Q at rs_dissolve
+    if love_li == 86:
+        add @Q at rs_dissolve
+    if love_li == 87:
+        add @Q at rs_dissolve
+    if love_li == 88:
+        add @Q at rs_dissolve
+    if love_li == 89:
+        add @Q at rs_dissolve
+    if love_li == 90:
+        add @Q at rs_dissolve
+    if love_li == 91:
+        add @Q at rs_dissolve
+    if love_li == 92:
+        add @Q at rs_dissolve
+    if love_li == 93:
+        add @Q at rs_dissolve
+    if love_li == 94:
+        add @Q at rs_dissolve
+    if love_li == 95:
+        add @Q at rs_dissolve
+    if love_li == 96:
+        add @Q at rs_dissolve
+    if love_li == 97:
+        add @Q at rs_dissolve
+    if love_li == 98:
+        add @Q at rs_dissolve
+    if love_li == 99:
+        add @Q at rs_dissolve
+
+    if love_li == 100:
+        add @Q at rs_dissolve
+
+
+
+
+
+
+
+
+
+
+
+screen girls_minami_profile:
+    modal False
+    zorder 3
+    imagebutton idle @S focus_mask True
+    add @S at alpha_dissolve
+    
+    if date_event_1_minami == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_hobbie_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_hobbie_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_hobbie_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+        
+    if rs_text_block_minami_preferences_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_preferences_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_preferences_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_preferences_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    
+screen girls_minami_events:
+    modal False
+    zorder 3
+    add @S at alpha_dissolve
+    add @S at alpha_dissolve
+    imagebutton idle @S focus_mask True
+    
+    if date_event_1_minami == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_events_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_events_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_events_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_events_5 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_events_6 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_events_7 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_minami_events_8 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+
+
+
+
+
+screen girls_minami:
+    tag menu
+    modal True
+    zorder 3
+    
+    if love_mi >= 100:
+        add @Q at rs_bg_dissolve
+    elif love_mi >= 45:
+        add @Q at rs_bg_dissolve
+    else:
+        add @Q at rs_bg_dissolve
+        
+
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 220 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive lillian_unlock == 1
+        
+    imagebutton idle @S focus_mask True xpos 70 ypos 420 hover_sound @S action Show(@S) activate_sound @S at rs_icon:
+        sensitive minami_unlock == 1
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 620 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive izumi_unlock == 1
+
+
+
+    add @Q at alpha_dissolve
+    add @Q at rs_dissolve
+        
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+
+    imagebutton idle @S hover @S focus_mask True hover_sound @S action Return() activate_sound @S at rs_return
+    
+    if love_mi == 100:
+        add @Q at rs_dissolve
+    elif love_mi >= 70:
+        add @Q at rs_dissolve
+    elif love_mi >= 45:
+        add @Q at rs_dissolve
+    elif love_mi >= 25:
+        add @Q at rs_dissolve
+    elif love_mi >= 10:
+        add @Q at rs_dissolve
+    else:
+        add @Q at rs_dissolve
+    
+    add @Q at rs_dissolve
+    
+
+    if love_mi == 1:
+        add @Q at rs_dissolve
+    if love_mi == 2:
+        add @Q at rs_dissolve
+    if love_mi == 3:
+        add @Q at rs_dissolve
+    if love_mi == 4:
+        add @Q at rs_dissolve
+    if love_mi == 5:
+        add @Q at rs_dissolve
+    if love_mi == 6:
+        add @Q at rs_dissolve
+    if love_mi == 7:
+        add @Q at rs_dissolve
+    if love_mi == 8:
+        add @Q at rs_dissolve
+    if love_mi == 9:
+        add @Q at rs_dissolve
+
+    if love_mi == 11:
+        add @Q at rs_dissolve
+    if love_mi == 12:
+        add @Q at rs_dissolve
+    if love_mi == 13:
+        add @Q at rs_dissolve
+    if love_mi == 14:
+        add @Q at rs_dissolve
+    if love_mi == 15:
+        add @Q at rs_dissolve
+    if love_mi == 16:
+        add @Q at rs_dissolve
+    if love_mi == 17:
+        add @Q at rs_dissolve
+    if love_mi == 18:
+        add @Q at rs_dissolve
+    if love_mi == 19:
+        add @Q at rs_dissolve
+    if love_mi == 20:
+        add @Q at rs_dissolve
+    if love_mi == 21:
+        add @Q at rs_dissolve
+    if love_mi == 22:
+        add @Q at rs_dissolve
+    if love_mi == 23:
+        add @Q at rs_dissolve
+    if love_mi == 24:
+        add @Q at rs_dissolve
+
+    if love_mi == 26:
+        add @Q at rs_dissolve
+    if love_mi == 27:
+        add @Q at rs_dissolve
+    if love_mi == 28:
+        add @Q at rs_dissolve
+    if love_mi == 29:
+        add @Q at rs_dissolve
+    if love_mi == 30:
+        add @Q at rs_dissolve
+    if love_mi == 31:
+        add @Q at rs_dissolve
+    if love_mi == 32:
+        add @Q at rs_dissolve
+    if love_mi == 33:
+        add @Q at rs_dissolve
+    if love_mi == 34:
+        add @Q at rs_dissolve
+    if love_mi == 35:
+        add @Q at rs_dissolve
+    if love_mi == 36:
+        add @Q at rs_dissolve
+    if love_mi == 37:
+        add @Q at rs_dissolve
+    if love_mi == 38:
+        add @Q at rs_dissolve
+    if love_mi == 39:
+        add @Q at rs_dissolve
+    if love_mi == 40:
+        add @Q at rs_dissolve
+    if love_mi == 41:
+        add @Q at rs_dissolve
+    if love_mi == 42:
+        add @Q at rs_dissolve
+    if love_mi == 43:
+        add @Q at rs_dissolve
+    if love_mi == 44:
+        add @Q at rs_dissolve
+
+    if love_mi == 46:
+        add @Q at rs_dissolve
+    if love_mi == 47:
+        add @Q at rs_dissolve
+    if love_mi == 48:
+        add @Q at rs_dissolve
+    if love_mi == 49:
+        add @Q at rs_dissolve
+    if love_mi == 50:
+        add @Q at rs_dissolve
+    if love_mi == 51:
+        add @Q at rs_dissolve
+    if love_mi == 52:
+        add @Q at rs_dissolve
+    if love_mi == 53:
+        add @Q at rs_dissolve
+    if love_mi == 54:
+        add @Q at rs_dissolve
+    if love_mi == 55:
+        add @Q at rs_dissolve
+    if love_mi == 56:
+        add @Q at rs_dissolve
+    if love_mi == 57:
+        add @Q at rs_dissolve
+    if love_mi == 58:
+        add @Q at rs_dissolve
+    if love_mi == 59:
+        add @Q at rs_dissolve
+    if love_mi == 60:
+        add @Q at rs_dissolve
+    if love_mi == 61:
+        add @Q at rs_dissolve
+    if love_mi == 62:
+        add @Q at rs_dissolve
+    if love_mi == 63:
+        add @Q at rs_dissolve
+    if love_mi == 64:
+        add @Q at rs_dissolve
+    if love_mi == 65:
+        add @Q at rs_dissolve
+    if love_mi == 66:
+        add @Q at rs_dissolve
+    if love_mi == 67:
+        add @Q at rs_dissolve
+    if love_mi == 68:
+        add @Q at rs_dissolve
+    if love_mi == 69:
+        add @Q at rs_dissolve
+
+    if love_mi == 71:
+        add @Q at rs_dissolve
+    if love_mi == 72:
+        add @Q at rs_dissolve
+    if love_mi == 73:
+        add @Q at rs_dissolve
+    if love_mi == 74:
+        add @Q at rs_dissolve
+    if love_mi == 75:
+        add @Q at rs_dissolve
+    if love_mi == 76:
+        add @Q at rs_dissolve
+    if love_mi == 77:
+        add @Q at rs_dissolve
+    if love_mi == 78:
+        add @Q at rs_dissolve
+    if love_mi == 79:
+        add @Q at rs_dissolve
+    if love_mi == 80:
+        add @Q at rs_dissolve
+    if love_mi == 81:
+        add @Q at rs_dissolve
+    if love_mi == 82:
+        add @Q at rs_dissolve
+    if love_mi == 83:
+        add @Q at rs_dissolve
+    if love_mi == 84:
+        add @Q at rs_dissolve
+    if love_mi == 85:
+        add @Q at rs_dissolve
+    if love_mi == 86:
+        add @Q at rs_dissolve
+    if love_mi == 87:
+        add @Q at rs_dissolve
+    if love_mi == 88:
+        add @Q at rs_dissolve
+    if love_mi == 89:
+        add @Q at rs_dissolve
+    if love_mi == 90:
+        add @Q at rs_dissolve
+    if love_mi == 91:
+        add @Q at rs_dissolve
+    if love_mi == 92:
+        add @Q at rs_dissolve
+    if love_mi == 93:
+        add @Q at rs_dissolve
+    if love_mi == 94:
+        add @Q at rs_dissolve
+    if love_mi == 95:
+        add @Q at rs_dissolve
+    if love_mi == 96:
+        add @Q at rs_dissolve
+    if love_mi == 97:
+        add @Q at rs_dissolve
+    if love_mi == 98:
+        add @Q at rs_dissolve
+    if love_mi == 99:
+        add @Q at rs_dissolve
+
+    if love_mi == 100:
+        add @Q at rs_dissolve
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
+
+
+screen girls_izumi_profile:
+    modal False
+    zorder 3
+    imagebutton idle @S focus_mask True
+    add @S at alpha_dissolve
+    
+    if rs_text_block_izumi_hobbie_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_hobbie_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_hobbie_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_hobbie_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+        
+    if rs_text_block_izumi_preferences_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_preferences_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_preferences_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_preferences_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    
+screen girls_izumi_events:
+    modal False
+    zorder 3
+    add @S at alpha_dissolve
+    add @S at alpha_dissolve
+    imagebutton idle @S focus_mask True
+    
+    if rs_text_block_izumi_events_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_events_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_events_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_events_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_events_5 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_events_6 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_events_7 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_izumi_events_8 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+
+
+
+
+
+screen girls_izumi:
+    tag menu
+    modal True
+    zorder 3
+    
+    if love_iz >= 100:
+        add @Q at rs_bg_dissolve
+    elif love_iz >= 45:
+        add @Q at rs_bg_dissolve
+    else:
+        add @Q at rs_bg_dissolve
+        
+
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 220 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive minami_unlock == 1
+        
+    imagebutton idle @S focus_mask True xpos 70 ypos 420 hover_sound @S action Show(@S) activate_sound @S at rs_icon:
+        sensitive izumi_unlock == 1
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 620 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive asami_unlock == 1
+
+
+
+    add @Q at alpha_dissolve
+    add @Q at rs_dissolve
+        
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+
+    imagebutton idle @S hover @S focus_mask True hover_sound @S action Return() activate_sound @S at rs_return
+    
+    if love_iz == 100:
+        add @Q at rs_dissolve
+    elif love_iz >= 70:
+        add @Q at rs_dissolve
+    elif love_iz >= 45:
+        add @Q at rs_dissolve
+    elif love_iz >= 25:
+        add @Q at rs_dissolve
+    elif love_iz >= 10:
+        add @Q at rs_dissolve
+    else:
+        add @Q at rs_dissolve
+    
+    add @Q at rs_dissolve
+    
+
+    if love_iz == 1:
+        add @Q at rs_dissolve
+    if love_iz == 2:
+        add @Q at rs_dissolve
+    if love_iz == 3:
+        add @Q at rs_dissolve
+    if love_iz == 4:
+        add @Q at rs_dissolve
+    if love_iz == 5:
+        add @Q at rs_dissolve
+    if love_iz == 6:
+        add @Q at rs_dissolve
+    if love_iz == 7:
+        add @Q at rs_dissolve
+    if love_iz == 8:
+        add @Q at rs_dissolve
+    if love_iz == 9:
+        add @Q at rs_dissolve
+
+    if love_iz == 11:
+        add @Q at rs_dissolve
+    if love_iz == 12:
+        add @Q at rs_dissolve
+    if love_iz == 13:
+        add @Q at rs_dissolve
+    if love_iz == 14:
+        add @Q at rs_dissolve
+    if love_iz == 15:
+        add @Q at rs_dissolve
+    if love_iz == 16:
+        add @Q at rs_dissolve
+    if love_iz == 17:
+        add @Q at rs_dissolve
+    if love_iz == 18:
+        add @Q at rs_dissolve
+    if love_iz == 19:
+        add @Q at rs_dissolve
+    if love_iz == 20:
+        add @Q at rs_dissolve
+    if love_iz == 21:
+        add @Q at rs_dissolve
+    if love_iz == 22:
+        add @Q at rs_dissolve
+    if love_iz == 23:
+        add @Q at rs_dissolve
+    if love_iz == 24:
+        add @Q at rs_dissolve
+
+    if love_iz == 26:
+        add @Q at rs_dissolve
+    if love_iz == 27:
+        add @Q at rs_dissolve
+    if love_iz == 28:
+        add @Q at rs_dissolve
+    if love_iz == 29:
+        add @Q at rs_dissolve
+    if love_iz == 30:
+        add @Q at rs_dissolve
+    if love_iz == 31:
+        add @Q at rs_dissolve
+    if love_iz == 32:
+        add @Q at rs_dissolve
+    if love_iz == 33:
+        add @Q at rs_dissolve
+    if love_iz == 34:
+        add @Q at rs_dissolve
+    if love_iz == 35:
+        add @Q at rs_dissolve
+    if love_iz == 36:
+        add @Q at rs_dissolve
+    if love_iz == 37:
+        add @Q at rs_dissolve
+    if love_iz == 38:
+        add @Q at rs_dissolve
+    if love_iz == 39:
+        add @Q at rs_dissolve
+    if love_iz == 40:
+        add @Q at rs_dissolve
+    if love_iz == 41:
+        add @Q at rs_dissolve
+    if love_iz == 42:
+        add @Q at rs_dissolve
+    if love_iz == 43:
+        add @Q at rs_dissolve
+    if love_iz == 44:
+        add @Q at rs_dissolve
+
+    if love_iz == 46:
+        add @Q at rs_dissolve
+    if love_iz == 47:
+        add @Q at rs_dissolve
+    if love_iz == 48:
+        add @Q at rs_dissolve
+    if love_iz == 49:
+        add @Q at rs_dissolve
+    if love_iz == 50:
+        add @Q at rs_dissolve
+    if love_iz == 51:
+        add @Q at rs_dissolve
+    if love_iz == 52:
+        add @Q at rs_dissolve
+    if love_iz == 53:
+        add @Q at rs_dissolve
+    if love_iz == 54:
+        add @Q at rs_dissolve
+    if love_iz == 55:
+        add @Q at rs_dissolve
+    if love_iz == 56:
+        add @Q at rs_dissolve
+    if love_iz == 57:
+        add @Q at rs_dissolve
+    if love_iz == 58:
+        add @Q at rs_dissolve
+    if love_iz == 59:
+        add @Q at rs_dissolve
+    if love_iz == 60:
+        add @Q at rs_dissolve
+    if love_iz == 61:
+        add @Q at rs_dissolve
+    if love_iz == 62:
+        add @Q at rs_dissolve
+    if love_iz == 63:
+        add @Q at rs_dissolve
+    if love_iz == 64:
+        add @Q at rs_dissolve
+    if love_iz == 65:
+        add @Q at rs_dissolve
+    if love_iz == 66:
+        add @Q at rs_dissolve
+    if love_iz == 67:
+        add @Q at rs_dissolve
+    if love_iz == 68:
+        add @Q at rs_dissolve
+    if love_iz == 69:
+        add @Q at rs_dissolve
+
+    if love_iz == 71:
+        add @Q at rs_dissolve
+    if love_iz == 72:
+        add @Q at rs_dissolve
+    if love_iz == 73:
+        add @Q at rs_dissolve
+    if love_iz == 74:
+        add @Q at rs_dissolve
+    if love_iz == 75:
+        add @Q at rs_dissolve
+    if love_iz == 76:
+        add @Q at rs_dissolve
+    if love_iz == 77:
+        add @Q at rs_dissolve
+    if love_iz == 78:
+        add @Q at rs_dissolve
+    if love_iz == 79:
+        add @Q at rs_dissolve
+    if love_iz == 80:
+        add @Q at rs_dissolve
+    if love_iz == 81:
+        add @Q at rs_dissolve
+    if love_iz == 82:
+        add @Q at rs_dissolve
+    if love_iz == 83:
+        add @Q at rs_dissolve
+    if love_iz == 84:
+        add @Q at rs_dissolve
+    if love_iz == 85:
+        add @Q at rs_dissolve
+    if love_iz == 86:
+        add @Q at rs_dissolve
+    if love_iz == 87:
+        add @Q at rs_dissolve
+    if love_iz == 88:
+        add @Q at rs_dissolve
+    if love_iz == 89:
+        add @Q at rs_dissolve
+    if love_iz == 90:
+        add @Q at rs_dissolve
+    if love_iz == 91:
+        add @Q at rs_dissolve
+    if love_iz == 92:
+        add @Q at rs_dissolve
+    if love_iz == 93:
+        add @Q at rs_dissolve
+    if love_iz == 94:
+        add @Q at rs_dissolve
+    if love_iz == 95:
+        add @Q at rs_dissolve
+    if love_iz == 96:
+        add @Q at rs_dissolve
+    if love_iz == 97:
+        add @Q at rs_dissolve
+    if love_iz == 98:
+        add @Q at rs_dissolve
+    if love_iz == 99:
+        add @Q at rs_dissolve
+
+    if love_iz == 100:
+        add @Q at rs_dissolve
+
+
+
+
+
+
+
+
+
+
+
+
+screen girls_asami_profile:
+    modal False
+    zorder 3
+    imagebutton idle @S focus_mask True
+    add @S at alpha_dissolve
+    
+    if rs_text_block_asami_hobbie_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_hobbie_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_hobbie_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_hobbie_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+        
+    if rs_text_block_asami_preferences_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_preferences_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_preferences_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_preferences_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    
+screen girls_asami_events:
+    modal False
+    zorder 3
+    add @S at alpha_dissolve
+    add @S at alpha_dissolve
+    imagebutton idle @S focus_mask True
+    
+    if rs_text_block_asami_events_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_events_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_events_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_events_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_events_5 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_events_6 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_events_7 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_asami_events_8 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+
+
+
+
+
+screen girls_asami:
+    tag menu
+    modal True
+    zorder 3
+    
+    if love_asami >= 100:
+        add @Q at rs_bg_dissolve
+    elif love_asami >= 45:
+        add @Q at rs_bg_dissolve
+    else:
+        add @Q at rs_bg_dissolve
+        
+
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 220 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive izumi_unlock == 1
+        
+    imagebutton idle @S focus_mask True xpos 70 ypos 420 hover_sound @S action Show(@S) activate_sound @S at rs_icon:
+        sensitive asami_unlock == 1
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 620 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive nao_unlock == 1
+
+
+
+    add @Q at alpha_dissolve
+    add @Q at rs_dissolve
+        
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+
+    imagebutton idle @S hover @S focus_mask True hover_sound @S action Return() activate_sound @S at rs_return
+    
+    if love_asami == 100:
+        add @Q at rs_dissolve
+    elif love_asami >= 70:
+        add @Q at rs_dissolve
+    elif love_asami >= 45:
+        add @Q at rs_dissolve
+    elif love_asami >= 25:
+        add @Q at rs_dissolve
+    elif love_asami >= 10:
+        add @Q at rs_dissolve
+    else:
+        add @Q at rs_dissolve
+    
+    add @Q at rs_dissolve
+    
+
+    if love_asami == 1:
+        add @Q at rs_dissolve
+    if love_asami == 2:
+        add @Q at rs_dissolve
+    if love_asami == 3:
+        add @Q at rs_dissolve
+    if love_asami == 4:
+        add @Q at rs_dissolve
+    if love_asami == 5:
+        add @Q at rs_dissolve
+    if love_asami == 6:
+        add @Q at rs_dissolve
+    if love_asami == 7:
+        add @Q at rs_dissolve
+    if love_asami == 8:
+        add @Q at rs_dissolve
+    if love_asami == 9:
+        add @Q at rs_dissolve
+
+    if love_asami == 11:
+        add @Q at rs_dissolve
+    if love_asami == 12:
+        add @Q at rs_dissolve
+    if love_asami == 13:
+        add @Q at rs_dissolve
+    if love_asami == 14:
+        add @Q at rs_dissolve
+    if love_asami == 15:
+        add @Q at rs_dissolve
+    if love_asami == 16:
+        add @Q at rs_dissolve
+    if love_asami == 17:
+        add @Q at rs_dissolve
+    if love_asami == 18:
+        add @Q at rs_dissolve
+    if love_asami == 19:
+        add @Q at rs_dissolve
+    if love_asami == 20:
+        add @Q at rs_dissolve
+    if love_asami == 21:
+        add @Q at rs_dissolve
+    if love_asami == 22:
+        add @Q at rs_dissolve
+    if love_asami == 23:
+        add @Q at rs_dissolve
+    if love_asami == 24:
+        add @Q at rs_dissolve
+
+    if love_asami == 26:
+        add @Q at rs_dissolve
+    if love_asami == 27:
+        add @Q at rs_dissolve
+    if love_asami == 28:
+        add @Q at rs_dissolve
+    if love_asami == 29:
+        add @Q at rs_dissolve
+    if love_asami == 30:
+        add @Q at rs_dissolve
+    if love_asami == 31:
+        add @Q at rs_dissolve
+    if love_asami == 32:
+        add @Q at rs_dissolve
+    if love_asami == 33:
+        add @Q at rs_dissolve
+    if love_asami == 34:
+        add @Q at rs_dissolve
+    if love_asami == 35:
+        add @Q at rs_dissolve
+    if love_asami == 36:
+        add @Q at rs_dissolve
+    if love_asami == 37:
+        add @Q at rs_dissolve
+    if love_asami == 38:
+        add @Q at rs_dissolve
+    if love_asami == 39:
+        add @Q at rs_dissolve
+    if love_asami == 40:
+        add @Q at rs_dissolve
+    if love_asami == 41:
+        add @Q at rs_dissolve
+    if love_asami == 42:
+        add @Q at rs_dissolve
+    if love_asami == 43:
+        add @Q at rs_dissolve
+    if love_asami == 44:
+        add @Q at rs_dissolve
+
+    if love_asami == 46:
+        add @Q at rs_dissolve
+    if love_asami == 47:
+        add @Q at rs_dissolve
+    if love_asami == 48:
+        add @Q at rs_dissolve
+    if love_asami == 49:
+        add @Q at rs_dissolve
+    if love_asami == 50:
+        add @Q at rs_dissolve
+    if love_asami == 51:
+        add @Q at rs_dissolve
+    if love_asami == 52:
+        add @Q at rs_dissolve
+    if love_asami == 53:
+        add @Q at rs_dissolve
+    if love_asami == 54:
+        add @Q at rs_dissolve
+    if love_asami == 55:
+        add @Q at rs_dissolve
+    if love_asami == 56:
+        add @Q at rs_dissolve
+    if love_asami == 57:
+        add @Q at rs_dissolve
+    if love_asami == 58:
+        add @Q at rs_dissolve
+    if love_asami == 59:
+        add @Q at rs_dissolve
+    if love_asami == 60:
+        add @Q at rs_dissolve
+    if love_asami == 61:
+        add @Q at rs_dissolve
+    if love_asami == 62:
+        add @Q at rs_dissolve
+    if love_asami == 63:
+        add @Q at rs_dissolve
+    if love_asami == 64:
+        add @Q at rs_dissolve
+    if love_asami == 65:
+        add @Q at rs_dissolve
+    if love_asami == 66:
+        add @Q at rs_dissolve
+    if love_asami == 67:
+        add @Q at rs_dissolve
+    if love_asami == 68:
+        add @Q at rs_dissolve
+    if love_asami == 69:
+        add @Q at rs_dissolve
+
+    if love_asami == 71:
+        add @Q at rs_dissolve
+    if love_asami == 72:
+        add @Q at rs_dissolve
+    if love_asami == 73:
+        add @Q at rs_dissolve
+    if love_asami == 74:
+        add @Q at rs_dissolve
+    if love_asami == 75:
+        add @Q at rs_dissolve
+    if love_asami == 76:
+        add @Q at rs_dissolve
+    if love_asami == 77:
+        add @Q at rs_dissolve
+    if love_asami == 78:
+        add @Q at rs_dissolve
+    if love_asami == 79:
+        add @Q at rs_dissolve
+    if love_asami == 80:
+        add @Q at rs_dissolve
+    if love_asami == 81:
+        add @Q at rs_dissolve
+    if love_asami == 82:
+        add @Q at rs_dissolve
+    if love_asami == 83:
+        add @Q at rs_dissolve
+    if love_asami == 84:
+        add @Q at rs_dissolve
+    if love_asami == 85:
+        add @Q at rs_dissolve
+    if love_asami == 86:
+        add @Q at rs_dissolve
+    if love_asami == 87:
+        add @Q at rs_dissolve
+    if love_asami == 88:
+        add @Q at rs_dissolve
+    if love_asami == 89:
+        add @Q at rs_dissolve
+    if love_asami == 90:
+        add @Q at rs_dissolve
+    if love_asami == 91:
+        add @Q at rs_dissolve
+    if love_asami == 92:
+        add @Q at rs_dissolve
+    if love_asami == 93:
+        add @Q at rs_dissolve
+    if love_asami == 94:
+        add @Q at rs_dissolve
+    if love_asami == 95:
+        add @Q at rs_dissolve
+    if love_asami == 96:
+        add @Q at rs_dissolve
+    if love_asami == 97:
+        add @Q at rs_dissolve
+    if love_asami == 98:
+        add @Q at rs_dissolve
+    if love_asami == 99:
+        add @Q at rs_dissolve
+
+    if love_asami == 100:
+        add @Q at rs_dissolve
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+screen girls_nao_profile:
+    modal False
+    zorder 3
+    imagebutton idle @S focus_mask True
+    add @S at alpha_dissolve
+    
+    if rs_text_block_nao_hobbie_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_hobbie_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_hobbie_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_hobbie_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+        
+    if rs_text_block_nao_preferences_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_preferences_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_preferences_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_preferences_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    
+screen girls_nao_events:
+    modal False
+    zorder 3
+    add @S at alpha_dissolve
+    add @S at alpha_dissolve
+    imagebutton idle @S focus_mask True
+    
+    if rs_text_block_nao_events_1 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_events_2 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_events_3 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_events_4 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_events_5 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_events_6 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_events_7 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+    if rs_text_block_nao_events_8 == True:
+        add @S at alpha_dissolve
+    else:
+        add @S at alpha_dissolve
+
+
+
+
+
+screen girls_nao:
+    tag menu
+    modal True
+    zorder 3
+    
+    if love_nao >= 100:
+        add @Q at rs_bg_dissolve
+    elif love_nao >= 70:
+        add @Q at rs_bg_dissolve
+    elif love_nao >= 45:
+        add @Q at rs_bg_dissolve
+    elif love_nao >= 10:
+        add @Q at rs_bg_dissolve
+    else:
+        add @Q at rs_bg_dissolve
+        
+
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 220 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive lillian_unlock == 1
+        
+    imagebutton idle @S focus_mask True xpos 70 ypos 420 hover_sound @S action Show(@S) activate_sound @S at rs_icon:
+        sensitive nao_unlock == 1
+        
+    imagebutton auto @S focus_mask True xpos 70 ypos 620 hover_sound @S action[Hide(@S), Hide(@S), Show(@S)] activate_sound @S at rs_icon:
+        sensitive nao_unlock == 1
+
+
+
+    add @Q at alpha_dissolve
+    add @Q at rs_dissolve
+        
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+    imagebutton idle @S focus_mask True hover_sound @S action[Hide(@S), Show(@S)] activate_sound @S at rs_bright
+
+    imagebutton idle @S hover @S focus_mask True hover_sound @S action Return() activate_sound @S at rs_return
+    
+    if love_nao == 100:
+        add @Q at rs_dissolve
+    elif love_nao >= 70:
+        add @Q at rs_dissolve
+    elif love_nao >= 45:
+        add @Q at rs_dissolve
+    elif love_nao >= 25:
+        add @Q at rs_dissolve
+    elif love_nao >= 10:
+        add @Q at rs_dissolve
+    else:
+        add @Q at rs_dissolve
+    
+    add @Q at rs_dissolve
+    
+
+    if love_nao == 1:
+        add @Q at rs_dissolve
+    if love_nao == 2:
+        add @Q at rs_dissolve
+    if love_nao == 3:
+        add @Q at rs_dissolve
+    if love_nao == 4:
+        add @Q at rs_dissolve
+    if love_nao == 5:
+        add @Q at rs_dissolve
+    if love_nao == 6:
+        add @Q at rs_dissolve
+    if love_nao == 7:
+        add @Q at rs_dissolve
+    if love_nao == 8:
+        add @Q at rs_dissolve
+    if love_nao == 9:
+        add @Q at rs_dissolve
+
+    if love_nao == 11:
+        add @Q at rs_dissolve
+    if love_nao == 12:
+        add @Q at rs_dissolve
+    if love_nao == 13:
+        add @Q at rs_dissolve
+    if love_nao == 14:
+        add @Q at rs_dissolve
+    if love_nao == 15:
+        add @Q at rs_dissolve
+    if love_nao == 16:
+        add @Q at rs_dissolve
+    if love_nao == 17:
+        add @Q at rs_dissolve
+    if love_nao == 18:
+        add @Q at rs_dissolve
+    if love_nao == 19:
+        add @Q at rs_dissolve
+    if love_nao == 20:
+        add @Q at rs_dissolve
+    if love_nao == 21:
+        add @Q at rs_dissolve
+    if love_nao == 22:
+        add @Q at rs_dissolve
+    if love_nao == 23:
+        add @Q at rs_dissolve
+    if love_nao == 24:
+        add @Q at rs_dissolve
+
+    if love_nao == 26:
+        add @Q at rs_dissolve
+    if love_nao == 27:
+        add @Q at rs_dissolve
+    if love_nao == 28:
+        add @Q at rs_dissolve
+    if love_nao == 29:
+        add @Q at rs_dissolve
+    if love_nao == 30:
+        add @Q at rs_dissolve
+    if love_nao == 31:
+        add @Q at rs_dissolve
+    if love_nao == 32:
+        add @Q at rs_dissolve
+    if love_nao == 33:
+        add @Q at rs_dissolve
+    if love_nao == 34:
+        add @Q at rs_dissolve
+    if love_nao == 35:
+        add @Q at rs_dissolve
+    if love_nao == 36:
+        add @Q at rs_dissolve
+    if love_nao == 37:
+        add @Q at rs_dissolve
+    if love_nao == 38:
+        add @Q at rs_dissolve
+    if love_nao == 39:
+        add @Q at rs_dissolve
+    if love_nao == 40:
+        add @Q at rs_dissolve
+    if love_nao == 41:
+        add @Q at rs_dissolve
+    if love_nao == 42:
+        add @Q at rs_dissolve
+    if love_nao == 43:
+        add @Q at rs_dissolve
+    if love_nao == 44:
+        add @Q at rs_dissolve
+
+    if love_nao == 46:
+        add @Q at rs_dissolve
+    if love_nao == 47:
+        add @Q at rs_dissolve
+    if love_nao == 48:
+        add @Q at rs_dissolve
+    if love_nao == 49:
+        add @Q at rs_dissolve
+    if love_nao == 50:
+        add @Q at rs_dissolve
+    if love_nao == 51:
+        add @Q at rs_dissolve
+    if love_nao == 52:
+        add @Q at rs_dissolve
+    if love_nao == 53:
+        add @Q at rs_dissolve
+    if love_nao == 54:
+        add @Q at rs_dissolve
+    if love_nao == 55:
+        add @Q at rs_dissolve
+    if love_nao == 56:
+        add @Q at rs_dissolve
+    if love_nao == 57:
+        add @Q at rs_dissolve
+    if love_nao == 58:
+        add @Q at rs_dissolve
+    if love_nao == 59:
+        add @Q at rs_dissolve
+    if love_nao == 60:
+        add @Q at rs_dissolve
+    if love_nao == 61:
+        add @Q at rs_dissolve
+    if love_nao == 62:
+        add @Q at rs_dissolve
+    if love_nao == 63:
+        add @Q at rs_dissolve
+    if love_nao == 64:
+        add @Q at rs_dissolve
+    if love_nao == 65:
+        add @Q at rs_dissolve
+    if love_nao == 66:
+        add @Q at rs_dissolve
+    if love_nao == 67:
+        add @Q at rs_dissolve
+    if love_nao == 68:
+        add @Q at rs_dissolve
+    if love_nao == 69:
+        add @Q at rs_dissolve
+
+    if love_nao == 71:
+        add @Q at rs_dissolve
+    if love_nao == 72:
+        add @Q at rs_dissolve
+    if love_nao == 73:
+        add @Q at rs_dissolve
+    if love_nao == 74:
+        add @Q at rs_dissolve
+    if love_nao == 75:
+        add @Q at rs_dissolve
+    if love_nao == 76:
+        add @Q at rs_dissolve
+    if love_nao == 77:
+        add @Q at rs_dissolve
+    if love_nao == 78:
+        add @Q at rs_dissolve
+    if love_nao == 79:
+        add @Q at rs_dissolve
+    if love_nao == 80:
+        add @Q at rs_dissolve
+    if love_nao == 81:
+        add @Q at rs_dissolve
+    if love_nao == 82:
+        add @Q at rs_dissolve
+    if love_nao == 83:
+        add @Q at rs_dissolve
+    if love_nao == 84:
+        add @Q at rs_dissolve
+    if love_nao == 85:
+        add @Q at rs_dissolve
+    if love_nao == 86:
+        add @Q at rs_dissolve
+    if love_nao == 87:
+        add @Q at rs_dissolve
+    if love_nao == 88:
+        add @Q at rs_dissolve
+    if love_nao == 89:
+        add @Q at rs_dissolve
+    if love_nao == 90:
+        add @Q at rs_dissolve
+    if love_nao == 91:
+        add @Q at rs_dissolve
+    if love_nao == 92:
+        add @Q at rs_dissolve
+    if love_nao == 93:
+        add @Q at rs_dissolve
+    if love_nao == 94:
+        add @Q at rs_dissolve
+    if love_nao == 95:
+        add @Q at rs_dissolve
+    if love_nao == 96:
+        add @Q at rs_dissolve
+    if love_nao == 97:
+        add @Q at rs_dissolve
+    if love_nao == 98:
+        add @Q at rs_dissolve
+    if love_nao == 99:
+        add @Q at rs_dissolve
+
+    if love_nao == 100:
+        add @Q at rs_dissolve

@@ -1,0 +1,26 @@
+label cdr_4:
+    
+    scene black with Dissolve(1.0)
+    play music2 mystery_loop fadein 2
+    hide screen girls with dissolve
+    $ quick_menu = False
+    pause 2.0
+    show end_continue with dissolve
+    pause 5.0
+    hide end_continue with dissolve
+    pause 2.0
+    show end_thanks with dissolve
+    stop music2 fadeout 6.6
+    pause 5.0
+    hide end_thanks with dissolve
+    pause 2.0
+    play music lofi_sadness_by_ramol volume 0.7
+    show end_ver with dissolve
+    show end_credits:
+        ypos 1080
+        linear 80 ypos -11000
+    pause 66
+    show screen end_patreon with dissolve
+    hide end_credits with dissolve
+    pause
+    return

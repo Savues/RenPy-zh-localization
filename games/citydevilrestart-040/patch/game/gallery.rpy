@@ -1,0 +1,2206 @@
+screen gallery_list_all:
+    modal True
+    zorder 2
+    tag menu
+    add 'girls_bg' at alpha_dissolve
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return_nav
+
+    
+    vbox:
+        anchor (1, 1)
+        spacing 0
+        ypos 140
+        ysize 1080
+        xsize 2250
+        viewport:
+            edgescroll (500, 1000)
+            area 0,0,2000,1080
+            yfill False
+            xfill False
+            draggable True
+            #mousewheel True
+            ysize 1080
+            xsize 1920
+            
+            hbox:
+                spacing 40
+            
+                ############## OLIVIA
+                button at gallery_button_1:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    hover_background "gui/gallery/gallery_1_hover.png"
+                    background "gui/gallery/gallery_1_idle.png"
+                    insensitive_background "gui/gallery/gallery_1_insensitive.png"
+                    
+                    if persistent.gallery_olivia_unlock_1 == True:
+                        foreground "gui/gallery/gallery_1_text.png"
+                    
+                    sensitive persistent.gallery_olivia_unlock_1 == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    action ShowMenu("gallery_alexxis_olivia")
+                    
+                ############## YUMIKO
+                button at gallery_button_2:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    hover_background "gui/gallery/gallery_2_hover.png"
+                    background "gui/gallery/gallery_2_idle.png"
+                    insensitive_background "gui/gallery/gallery_2_insensitive.png"
+                    
+                    if persistent.gallery_yumiko_unlock_1 == True:
+                        foreground "gui/gallery/gallery_2_text.png"
+                    
+                    sensitive persistent.gallery_yumiko_unlock_1 == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    
+                    action ShowMenu("gallery_alexxis_yumiko")
+                    
+                        ############## LILLIAN
+                button at gallery_button_3:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    
+                    hover_background "gui/gallery/gallery_3_hover.png"
+                    background "gui/gallery/gallery_3_idle.png" 
+                    insensitive_background "gui/gallery/gallery_3_insensitive.png"
+                    
+                    if persistent.gallery_lillian == True:
+                        foreground "gui/gallery/gallery_3_text.png"
+                    
+                    sensitive persistent.gallery_lillian == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    action ShowMenu("gallery_lillian")
+                    
+                ############## GRACE
+                button at gallery_button_4:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    hover_background "gui/gallery/gallery_4_hover.png"
+                    background "gui/gallery/gallery_4_idle.png"
+                    insensitive_background "gui/gallery/gallery_4_insensitive.png"
+                    
+                    if persistent.gallery_grace_unlock_1 == True:
+                        foreground "gui/gallery/gallery_4_text.png"
+                    
+                    sensitive persistent.gallery_grace_unlock_1 == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    
+                    action ShowMenu("gallery_grace")
+                    
+                ############## EMMA
+                button at gallery_button_5:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    hover_background "gui/gallery/gallery_5_hover.png"
+                    background "gui/gallery/gallery_5_idle.png"
+                    insensitive_background "gui/gallery/gallery_5_insensitive.png"
+                    
+                    if persistent.gallery_emma_unlock_1 == True:
+                        foreground "gui/gallery/gallery_5_text.png"
+                    
+                    sensitive persistent.gallery_emma_unlock_1 == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    
+                    action ShowMenu("gallery_emma")
+                    
+                ############## DE1 - LILLIAN
+                
+                button at gallery_button_6:
+                
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    
+                    hover_background "gui/gallery/gallery_6_hover.png"
+                    background "gui/gallery/gallery_6_idle.png" 
+                    insensitive_background "gui/gallery/gallery_6_insensitive.png"
+                    
+                    if persistent.gallery_de1_lillian == True:
+                        foreground "gui/gallery/gallery_6_text.png"
+                    
+                    sensitive persistent.gallery_de1_lillian == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    action ShowMenu("gallery_de1_lillian")
+                
+                ############## EMPTY 1
+                
+                button at gallery_button_7:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+
+    imagebutton:
+        
+        idle "gui/gallery/buttons/selected_all.png"
+        hover_sound "audio/menu/buttonhoversound.ogg"
+        activate_sound "audio/menu/buttonactionsound.ogg"
+        at choice_bright
+        xpos 1520
+        ypos 54
+        
+        action ToggleFocus('list')
+ 
+    nearrect:
+        
+        focus "list"
+        has vbox at gallery_list_buttons
+        dismiss action ClearFocus("list")
+        
+        imagebutton idle "gui/gallery/buttons/main.png" action [ShowMenu('gallery_list_main'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+        imagebutton idle "gui/gallery/buttons/others.png" action [ShowMenu('gallery_list_others'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+        imagebutton idle "gui/gallery/buttons/lillian.png" action [ShowMenu('gallery_list_lillian'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+
+
+#######   GALLERY - MAIN  #######   GALLERY - MAIN  #######   GALLERY - MAIN  #######
+screen gallery_list_main:
+    modal True
+    zorder 2
+    tag menu
+    add 'girls_bg' at alpha_dissolve
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return_nav
+
+    
+    vbox:
+        anchor (1, 1)
+        spacing 0
+        ypos 140
+        ysize 1080
+        xsize 2250
+        viewport:
+            edgescroll (500, 1000)
+            area 0,0,2000,1080
+            yfill False
+            xfill False
+            draggable True
+            #mousewheel True
+            ysize 1080
+            xsize 1920
+            
+            hbox:
+                spacing 40
+                                
+                        ############## LILLIAN
+                button at gallery_button_1:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    
+                    hover_background "gui/gallery/gallery_3_hover.png"
+                    background "gui/gallery/gallery_3_idle.png" 
+                    insensitive_background "gui/gallery/gallery_3_insensitive.png"
+                    
+                    if persistent.gallery_lillian == True:
+                        foreground "gui/gallery/gallery_3_text.png"
+                    
+                    sensitive persistent.gallery_lillian == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    action ShowMenu("gallery_lillian")
+                    
+                    ############## EMPTY 1
+                button at gallery_button_2:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    
+                    hover_background "gui/gallery/gallery_6_hover.png"
+                    background "gui/gallery/gallery_6_idle.png" 
+                    insensitive_background "gui/gallery/gallery_6_insensitive.png"
+                    
+                    if persistent.gallery_de1_lillian == True:
+                        foreground "gui/gallery/gallery_6_text.png"
+                    
+                    sensitive persistent.gallery_de1_lillian == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    action ShowMenu("gallery_de1_lillian")
+                    
+                    ############## EMPTY 2
+                button at gallery_button_3:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+                    
+                    ############## EMPTY 3
+                button at gallery_button_4:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+                    
+                    ############## EMPTY 4
+                button at gallery_button_5:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+                    ############## EMPTY 5
+                button at gallery_button_6:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+                    
+    imagebutton:
+        
+        idle "gui/gallery/buttons/selected_main.png"
+        hover_sound "audio/menu/buttonhoversound.ogg"
+        activate_sound "audio/menu/buttonactionsound.ogg"
+        at choice_bright
+        xpos 1520
+        ypos 54
+        
+        action ToggleFocus('list')
+ 
+    nearrect:
+        
+        focus "list"
+        has vbox at gallery_list_buttons
+        dismiss action ClearFocus("list")
+        
+        imagebutton idle "gui/gallery/buttons/all.png" action [ShowMenu('gallery_list_all'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+        imagebutton idle "gui/gallery/buttons/others.png" action [ShowMenu('gallery_list_others'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+        imagebutton idle "gui/gallery/buttons/lillian.png" action [ShowMenu('gallery_list_lillian'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+
+
+#######   GALLERY - OTHERS  #######   GALLERY - OTHERS  #######   GALLERY - OTHERS  #######
+screen gallery_list_others:
+    modal True
+    zorder 2
+    tag menu
+    add 'girls_bg' at alpha_dissolve
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return_nav
+
+    
+    vbox:
+        anchor (1, 1)
+        spacing 0
+        ypos 140
+        ysize 1080
+        xsize 2250
+        viewport:
+            edgescroll (500, 1000)
+            area 0,0,2000,1080
+            yfill False
+            xfill False
+            draggable True
+            #mousewheel True
+            ysize 1080
+            xsize 1920
+            
+            hbox:
+                spacing 40
+            
+                ############## OLIVIA
+                button at gallery_button_1:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    hover_background "gui/gallery/gallery_1_hover.png"
+                    background "gui/gallery/gallery_1_idle.png"
+                    insensitive_background "gui/gallery/gallery_1_insensitive.png"
+                    
+                    if persistent.gallery_olivia_unlock_1 == True:
+                        foreground "gui/gallery/gallery_1_text.png"
+                    
+                    sensitive persistent.gallery_olivia_unlock_1 == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    action ShowMenu("gallery_alexxis_olivia")
+                    
+                ############## YUMIKO
+                button at gallery_button_2:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    hover_background "gui/gallery/gallery_2_hover.png"
+                    background "gui/gallery/gallery_2_idle.png"
+                    insensitive_background "gui/gallery/gallery_2_insensitive.png"
+                    
+                    if persistent.gallery_yumiko_unlock_1 == True:
+                        foreground "gui/gallery/gallery_2_text.png"
+                    
+                    sensitive persistent.gallery_yumiko_unlock_1 == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    
+                    action ShowMenu("gallery_alexxis_yumiko")
+                    
+                ############## GRACE
+                button at gallery_button_4:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    hover_background "gui/gallery/gallery_4_hover.png"
+                    background "gui/gallery/gallery_4_idle.png"
+                    insensitive_background "gui/gallery/gallery_4_insensitive.png"
+                    
+                    if persistent.gallery_yumiko_unlock_1 == True:
+                        foreground "gui/gallery/gallery_4_text.png"
+                    
+                    sensitive persistent.gallery_yumiko_unlock_1 == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    
+                    action ShowMenu("gallery_grace")
+                    
+                ############## EMMA
+                button at gallery_button_5:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    hover_background "gui/gallery/gallery_5_hover.png"
+                    background "gui/gallery/gallery_5_idle.png"
+                    insensitive_background "gui/gallery/gallery_5_insensitive.png"
+                    
+                    if persistent.gallery_yumiko_unlock_1 == True:
+                        foreground "gui/gallery/gallery_5_text.png"
+                    
+                    sensitive persistent.gallery_yumiko_unlock_1 == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    
+                    action ShowMenu("gallery_emma")
+                    
+                    ############## EMPTY 1
+                button at gallery_button_2:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+                    
+                    ############## EMPTY 2
+                button at gallery_button_3:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+
+    imagebutton:
+        
+        idle "gui/gallery/buttons/selected_others.png"
+        hover_sound "audio/menu/buttonhoversound.ogg"
+        activate_sound "audio/menu/buttonactionsound.ogg"
+        at choice_bright
+        xpos 1520
+        ypos 54
+        
+        action ToggleFocus('list')
+ 
+    nearrect:
+        
+        focus "list"
+        has vbox at gallery_list_buttons
+        dismiss action ClearFocus("list")
+
+        imagebutton idle "gui/gallery/buttons/all.png" action [ShowMenu('gallery_list_all'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+        imagebutton idle "gui/gallery/buttons/main.png" action [ShowMenu('gallery_list_main'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+        imagebutton idle "gui/gallery/buttons/lillian.png" action [ShowMenu('gallery_list_lillian'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+
+
+#######   GALLERY - LILLIAN  #######   GALLERY - LILLIAN  #######   GALLERY - LILLIAN  #######
+screen gallery_list_lillian:
+    modal True
+    zorder 2
+    tag menu
+    add 'girls_bg' at alpha_dissolve
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return_nav
+
+    
+    vbox:
+        anchor (1, 1)
+        spacing 0
+        ypos 140
+        ysize 1080
+        xsize 2250
+        viewport:
+            edgescroll (500, 1000)
+            area 0,0,2000,1080
+            yfill False
+            xfill False
+            draggable True
+            #mousewheel True
+            ysize 1080
+            xsize 1920
+            
+            hbox:
+                spacing 40
+            
+                        ############## LILLIAN
+                button at gallery_button_1:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    
+                    hover_background "gui/gallery/gallery_3_hover.png"
+                    background "gui/gallery/gallery_3_idle.png" 
+                    insensitive_background "gui/gallery/gallery_3_insensitive.png"
+                    
+                    if persistent.gallery_lillian == True:
+                        foreground "gui/gallery/gallery_3_text.png"
+                    
+                    sensitive persistent.gallery_lillian == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    action ShowMenu("gallery_lillian")
+                    
+                    ############## EMPTY 1
+                button at gallery_button_2:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    
+                    hover_background "gui/gallery/gallery_6_hover.png"
+                    background "gui/gallery/gallery_6_idle.png" 
+                    insensitive_background "gui/gallery/gallery_6_insensitive.png"
+                    
+                    if persistent.gallery_de1_lillian == True:
+                        foreground "gui/gallery/gallery_6_text.png"
+                    
+                    sensitive persistent.gallery_de1_lillian == True
+                    
+                    hover_sound "audio/menu/buttonhoversound.ogg"
+                    activate_sound "audio/menu/buttonactionsound.ogg"
+
+                    action ShowMenu("gallery_de1_lillian")
+                    
+                    ############## EMPTY 2
+                button at gallery_button_3:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+                    
+                    ############## EMPTY 3
+                button at gallery_button_4:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+                    
+                    ############## EMPTY 4
+                button at gallery_button_5:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+                    ############## EMPTY 5
+                button at gallery_button_6:
+                    
+                    anchor (0.5, 0.5)
+                    xysize (390, 660)
+                    ypos 400
+                    background "gui/gallery/gallery_empty.png"
+          
+
+    imagebutton:
+        
+        idle "gui/gallery/buttons/selected_lillian.png"
+        hover_sound "audio/menu/buttonhoversound.ogg"
+        activate_sound "audio/menu/buttonactionsound.ogg"
+        at choice_bright
+        xpos 1520
+        ypos 54
+        
+        action ToggleFocus('list')
+ 
+    nearrect:
+        
+        focus "list"
+        has vbox at gallery_list_buttons
+        dismiss action ClearFocus("list")
+        
+        imagebutton idle "gui/gallery/buttons/all.png" action [ShowMenu('gallery_list_all'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+        imagebutton idle "gui/gallery/buttons/main.png" action [ShowMenu('gallery_list_main'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+        imagebutton idle "gui/gallery/buttons/others.png" action [ShowMenu('gallery_list_others'), ClearFocus("list")] hover_sound "audio/menu/buttonhoversound.ogg" activate_sound "audio/menu/buttonactionsound.ogg" at choice_bright
+
+
+
+
+label credits:
+    play music lofi_sadness_by_ramol volume 0.7
+    show end_ver with dissolve
+    show end_credits:
+        ypos 1080
+        linear 80 ypos -11000
+    pause 66
+    scene black with dissolve
+    stop music fadeout 1
+    pause 1.0
+    play music the_suspence_mainmenu fadein 1
+    call screen extras
+    return
+
+screen end_patreon:
+    modal True
+    add 'gui/end_patreon/header.png'
+    
+    imagebutton auto "gui/end_patreon/patreon_%s.png" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action OpenURL("https://www.patreon.com/sabirow") activate_sound "audio/menu/buttonactionsound.ogg"
+    imagebutton auto "gui/end_patreon/mainmenu_%s.png" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action MainMenu() activate_sound "audio/menu/buttonactionsound.ogg"
+    imagebutton auto "gui/end_patreon/quit_%s.png" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Quit(confirm=not main_menu) activate_sound "audio/menu/buttonactionsound.ogg"
+    
+############################# GALLERY - CHOICE SCREEN
+
+screen gallery_alexxis_olivia:
+    tag menu
+    modal True
+    add 'girls_bg_others' at alpha_dissolve
+    add "gui/gallery/gallery_1_bg.webp"
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return
+    
+    imagebutton auto "images/alexxis/olivia/olivia_sex_0_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump("gallery_alexxis_olivia_1") activate_sound "audio/menu/buttonactionsound.ogg" at gallery_choice_sex_1:
+        sensitive persistent.gallery_olivia_unlock_1 == True
+        ypos 300
+        
+    imagebutton auto "images/alexxis/olivia/olivia_sex_1_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump("gallery_alexxis_olivia_2") activate_sound "audio/menu/buttonactionsound.ogg" at gallery_choice_sex_2:
+        sensitive persistent.gallery_olivia_unlock_2 == True
+        ypos 520
+        
+    imagebutton auto "images/alexxis/olivia/olivia_sex_2_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump("gallery_alexxis_olivia_3") activate_sound "audio/menu/buttonactionsound.ogg" at gallery_choice_sex_3:
+        sensitive persistent.gallery_olivia_unlock_3 == True
+        ypos 740
+        
+screen gallery_alexxis_yumiko:
+    tag menu
+    modal True
+    add 'girls_bg_others' at alpha_dissolve
+    add "gui/gallery/gallery_2_bg.webp"
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return
+    
+    imagebutton auto "images/alexxis/yumiko/yumiko_sex_0_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump("gallery_alexxis_yumiko_1") activate_sound "audio/menu/buttonactionsound.ogg" at gallery_choice_sex_1:
+        sensitive persistent.gallery_yumiko_unlock_1 == True
+        ypos 300
+    
+    imagebutton auto "images/alexxis/yumiko/yumiko_sex_1_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump("gallery_alexxis_yumiko_2") activate_sound "audio/menu/buttonactionsound.ogg" at gallery_choice_sex_2:
+        sensitive persistent.gallery_yumiko_unlock_2 == True
+        ypos 520
+        
+    imagebutton auto "images/alexxis/yumiko/yumiko_sex_2_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump("gallery_alexxis_yumiko_3") activate_sound "audio/menu/buttonactionsound.ogg" at gallery_choice_sex_3:
+        sensitive persistent.gallery_yumiko_unlock_3 == True
+        ypos 740
+
+screen gallery_lillian:
+    tag menu
+    modal True
+    add 'girls_bg_others' at alpha_dissolve
+    add "gui/gallery/gallery_3_bg.webp"
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return
+    
+    imagebutton auto "images/lillian_hotel/choice/choice_boobs_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_lillian_hotel_sex_boobs') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_1:
+        ypos 120
+        sensitive persistent.gallery_lillian_boobs == True
+    
+    imagebutton auto "images/lillian_hotel/choice/choice_lick_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_lillian_hotel_sex_lick') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_2:
+        ypos 240
+        sensitive persistent.gallery_lillian_lick == True
+            
+    imagebutton auto "images/lillian_hotel/choice/choice_fingering_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_lillian_hotel_sex_fingering') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_3:
+        ypos 360
+        sensitive persistent.gallery_lillian_fingering == True
+            
+    imagebutton auto "images/lillian_hotel/choice/choice_handjob_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_lillian_hotel_sex_handjob') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_4:
+        ypos 480
+        sensitive persistent.gallery_lillian_handjob == True
+            
+    imagebutton auto "images/lillian_hotel/choice/choice_footjob_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_lillian_hotel_sex_footjob') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_5:
+        ypos 600
+        sensitive persistent.gallery_lillian_footjob == True
+            
+    imagebutton auto "images/lillian_hotel/choice/choice_blowjob_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_lillian_hotel_sex_blowjob') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_6:
+        ypos 720
+        sensitive persistent.gallery_lillian_blowjob == True
+            
+    imagebutton auto "images/lillian_hotel/choice/choice_sex1_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_lillian_hotel_sex_1') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_7:
+        ypos 840
+        sensitive persistent.gallery_lillian_sex1 == True
+
+screen gallery_grace:
+    tag menu
+    modal True
+    add 'girls_bg_others' at alpha_dissolve
+    add "gui/gallery/gallery_4_bg.webp"
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return
+    
+    imagebutton auto "images/bar_night2/grace/grace_sex_1_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_grace_wc1_1') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_1:
+        ypos 390
+        sensitive persistent.gallery_grace_wc1_1 == True
+    
+    imagebutton auto "images/bar_night2/grace/grace_sex_2_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_grace_wc1_2') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_2:
+        ypos 610
+        sensitive persistent.gallery_grace_wc1_2 == True
+
+screen gallery_emma:
+    tag menu
+    modal True
+    add 'girls_bg_others' at alpha_dissolve
+    add "gui/gallery/gallery_5_bg.webp"
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return
+    
+    imagebutton auto "images/bar_night2/emma/emma_sex_1_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_emma_parking_1') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_1:
+        ypos 290
+        sensitive persistent.gallery_emma_parking_1 == True
+    
+    imagebutton auto "images/bar_night2/emma/emma_sex_2_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_emma_parking_2') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_2:
+        ypos 510
+        sensitive persistent.gallery_emma_parking_2 == True
+        
+    imagebutton auto "images/bar_night2/emma/emma_sex_3_%s.jpg" hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_emma_parking_3') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_3:
+        ypos 730
+        sensitive persistent.gallery_emma_parking_3 == True
+
+screen gallery_de1_lillian:
+    tag menu
+    modal True
+    add 'girls_bg_others' at alpha_dissolve
+    add "gui/gallery/gallery_6_bg.webp"
+    add 'gui/gallery/menu.png' at alpha_dissolve
+    imagebutton idle "gui/button/back/back_1.png" hover "back_return" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Return() activate_sound "audio/menu/buttonactionsound.ogg" at rs_return
+    
+    imagebutton auto "images/04_date_event_1_lillian/choice/choice_kiss_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_de1_lillian_kiss') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_1:
+        ypos 190
+        sensitive persistent.gallery_date_event_1_lillian_sex_kiss == True
+    
+    imagebutton auto "images/04_date_event_1_lillian/choice/choice_lick_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_de1_lillian_lick') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_2:
+        ypos 370
+        sensitive persistent.gallery_date_event_1_lillian_sex_lick == True
+            
+    imagebutton auto "images/04_date_event_1_lillian/choice/choice_sex1_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_de1_lillian_sex1') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_3:
+        ypos 550
+        sensitive persistent.gallery_date_event_1_lillian_sex_1 == True
+            
+    imagebutton auto "images/04_date_event_1_lillian/choice/choice_sex2_%s.jpg" focus_mask True hover_sound "audio/menu/buttonhoversound.ogg" action Jump('gallery_de1_lillian_sex2') activate_sound "audio/menu/buttonactionsound.ogg" at choice_sex_4:
+        ypos 730
+        sensitive persistent.gallery_date_event_1_lillian_sex_2 == True
+
+############################# GALLERY - ACTION
+
+###### ALEXXIS - OLIVIA & YUMIKO
+
+label gallery_alexxis_olivia_1:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    play music3 erotic_by_frank_schroeter fadein 5 volume 0.5
+    
+    scene alexxis_o_74 with dissolve
+    pause
+    scene alexxis_o_75 with dissolve
+    pause
+    scene alexxis_o_81 with dissolve
+    pause
+    scene alexxis_o_82 with dissolve
+    pause
+    scene alexxis_o_83 with dissolve
+    pause
+    scene alexxis_o_84 with dissolve
+    pause
+    scene alexxis_o_85 with dissolve
+    pause 3.5
+    show alexxis_o_86  with Dissolve(0.3)
+    pause 3.5
+    stop music3 fadeout 1
+    scene black with dissolve
+    pause 1.0
+    call screen gallery_alexxis_olivia
+    return
+    
+label gallery_alexxis_olivia_2:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    play music3 erotic_by_frank_schroeter fadein 5 volume 0.5
+    
+    scene alexxis_o_sex1_1 with dissolve
+    pause
+    scene alexxis_o_sex1_2 with dissolve
+    pause
+    scene alexxis_o_sex1_3 with dissolve
+    pause
+    scene alexxis_o_sex1_4 with dissolve
+    pause
+    scene alexxis_o_sex1_5 with dissolve
+    pause
+    scene alexxis_o_sex1_6 with dissolve
+    pause
+    scene alexxis_o_sex1_7 with dissolve
+    pause 1
+    scene alexxis_o_sex1_8 with dissolve
+    pause
+    stop music3 fadeout 1
+    scene black with dissolve
+    pause 1.0
+    call screen gallery_alexxis_olivia
+    return
+    
+label gallery_alexxis_olivia_3:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    play music3 erotic_by_frank_schroeter fadein 5 volume 0.5
+    
+    scene alexxis_o_sex2_1 with dissolve
+    pause
+    scene alexxis_o_sex2_2 with dissolve
+    pause
+    scene alexxis_o_sex2_3 with dissolve
+    pause
+    scene alexxis_o_sex2_4 with dissolve
+    pause
+    scene alexxis_o_sex2_5 with dissolve
+    pause
+    scene alexxis_o_sex2_6 with dissolve
+    pause
+    scene alexxis_o_sex2_7 with dissolve
+    pause
+    scene alexxis_o_sex2_8 with dissolve
+    pause
+    scene alexxis_o_sex2_9 with dissolve
+    pause
+    scene alexxis_o_sex2_10 with dissolve
+    pause
+    scene alexxis_o_sex2_11 with dissolve
+    pause 2.8
+    show alexxis_o_sex2_12 with Dissolve(0.3)
+    pause
+    stop music3 fadeout 1
+    scene black with dissolve
+    pause 1.0
+    call screen gallery_alexxis_olivia
+    return
+    
+label gallery_alexxis_yumiko_1:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    play music3 erotic_by_frank_schroeter fadein 5 volume 0.5
+    scene alexxis_y_104 with dissolve
+    pause
+    scene alexxis_y_105 with dissolve
+    pause
+    scene alexxis_y_106 with dissolve
+    pause
+    scene alexxis_y_107 with dissolve
+    pause
+    scene alexxis_y_108 with dissolve
+    pause
+    scene alexxis_y_109 with dissolve
+    pause
+    scene alexxis_y_110 with dissolve
+    pause
+    show alexxis_y_111 with Dissolve(0.2)
+    pause 3.0
+    stop music3 fadeout 1
+    scene black with Dissolve(0.2)
+    pause 1.0
+    call screen gallery_alexxis_yumiko
+    return
+    
+label gallery_alexxis_yumiko_2:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    play music3 erotic_by_frank_schroeter fadein 5 volume 0.5
+    scene alexxis_y_sex1_20 with dissolve
+    pause
+    scene alexxis_y_sex1_21 with dissolve
+    pause
+    scene alexxis_y_sex1_22 with dissolve
+    pause
+    scene alexxis_y_sex1_23 with dissolve
+    pause
+    scene alexxis_y_sex1_24 with dissolve
+    pause
+    scene alexxis_y_sex1_25 with dissolve
+    pause
+    scene alexxis_y_sex1_26 with dissolve
+    pause
+    scene alexxis_y_sex1_27 with dissolve
+    pause
+    scene alexxis_y_sex1_28 with dissolve
+    pause
+    scene alexxis_y_sex1_29 with dissolve
+    pause
+    scene alexxis_y_sex1_30 with dissolve
+    pause
+    scene alexxis_y_sex1_31 with dissolve
+    pause
+    scene alexxis_y_sex1_32 with dissolve
+    pause
+    scene alexxis_y_sex1_33 with dissolve
+    pause
+    scene alexxis_y_sex1_34 with dissolve
+    pause
+    menu:
+        '射在里面':
+            scene alexxis_y_sex1_35 with dissolve
+            pause 3.5
+            scene alexxis_y_sex1_36 with dissolve
+            pause
+        '射在小腹上':
+            scene alexxis_y_sex1_37 with dissolve
+            pause 0.5
+            scene alexxis_y_sex1_38 with dissolve
+            pause
+    stop music3 fadeout 1
+    scene black with dissolve
+    pause 1.0
+    call screen gallery_alexxis_yumiko
+    return
+    
+label gallery_alexxis_yumiko_3:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    play music3 erotic_by_frank_schroeter fadein 5 volume 0.5
+    
+    scene alexxis_y_sex2_11 with dissolve
+    pause
+    scene alexxis_y_sex2_12 with dissolve
+    pause
+    scene alexxis_y_sex2_13 with dissolve
+    pause
+    scene alexxis_y_sex2_14 with dissolve
+    pause
+    scene alexxis_y_sex2_15 with dissolve
+    pause
+    scene alexxis_y_sex2_16 with dissolve
+    pause
+    scene alexxis_y_sex2_17 with dissolve
+    pause
+    show alexxis_y_sex2_18 with Dissolve(0.2)
+    pause 5.5
+    show alexxis_y_sex2_19 with Dissolve(0.3)
+    hide alexxis_y_sex2_18
+    pause
+    stop music3 fadeout 1
+    scene black with dissolve
+    pause 1.0
+    call screen gallery_alexxis_yumiko
+    return
+
+
+###### LILLIAN - HOTEL
+
+###### BOOBS
+    
+label gallery_lillian_hotel_sex_boobs:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    show lillian_hotel_40 with dissolve
+    ''
+    show lillian_hotel_41 with dissolve
+    hide lillian_hotel_40
+    ''
+    show lillian_hotel_42 with dissolve
+    hide lillian_hotel_41
+    ''
+    show lillian_hotel_43 with dissolve
+    hide lillian_hotel_42
+    ''
+    call screen gallery_lillian
+    return
+    
+###### LICK
+    
+label gallery_lillian_hotel_sex_lick:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    show lillian_hotel_44 with dissolve
+    ''
+    show lillian_hotel_45 with dissolve
+    hide lillian_hotel_44
+    ''
+    show lillian_hotel_46 with dissolve
+    hide lillian_hotel_45
+    ''
+    show lillian_hotel_47 with dissolve
+    hide lillian_hotel_46
+    ''
+    show lillian_hotel_48 with dissolve
+    hide lillian_hotel_47
+    ''
+    call screen gallery_lillian
+    return
+    
+###### FINGERING
+    
+label gallery_lillian_hotel_sex_fingering:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    pause 0.5
+    scene lillian_hotel_98 with vpunch
+    ''
+    scene lillian_hotel_99 with dissolve
+    ''
+    scene lillian_hotel_100 with dissolve
+    ''
+    scene lillian_hotel_101 with dissolve
+    ''
+    scene lillian_hotel_102 with dissolve
+    ''
+    scene lillian_hotel_103 with dissolve
+    ''
+    show lillian_hotel_104 with Dissolve(0.1)
+    $ renpy.pause(3.9,hard=True)
+    show lillian_hotel_105 with Dissolve(0.3):
+        top
+        zoom 1.1
+        ease 0.6 zoom 1
+    hide lillian_hotel_104
+    ''
+    show lillian_hotel_106 with Dissolve(0.1)
+    hide lillian_hotel_105
+    ''
+    show lillian_hotel_107 with Dissolve(0.1)
+    hide lillian_hotel_106
+    $ renpy.pause(3.9, hard=True)
+    ''
+    show lillian_hotel_108 with Dissolve(0.1)
+    hide lillian_hotel_107
+    $ renpy.pause(0.9, hard=True)
+    ''
+    show lillian_hotel_109 with Dissolve(0.1)
+    hide lillian_hotel_108
+    ''
+    show lillian_hotel_110 with Dissolve(0.1)
+    hide lillian_hotel_109
+    ''
+    show lillian_hotel_111 with Dissolve(0.1)
+    hide lillian_hotel_110
+    ''
+    show lillian_hotel_112 with Dissolve(0.3)
+    hide lillian_hotel_111
+    $ renpy.pause(3.1,hard=True)
+    show lillian_hotel_113 with Dissolve(0.1)
+    hide lillian_hotel_112
+    call screen gallery_lillian
+    return
+
+    
+###### HANDJOB
+    
+label gallery_lillian_hotel_sex_handjob:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    pause 0.5
+    show lillian_hotel_49 with Dissolve(0.3)
+    $ renpy.pause(3.5,hard=True)
+    show lillian_hotel_50 with dissolve
+    hide lillian_hotel_49
+    pause 0.5
+    ''
+    show lillian_hotel_51 with dissolve
+    hide lillian_hotel_50
+    ''
+    show lillian_hotel_52 with dissolve
+    hide lillian_hotel_51
+    ''
+    show lillian_hotel_53 with dissolve
+    hide lillian_hotel_52
+    ''
+    show lillian_hotel_54 with dissolve
+    hide lillian_hotel_53
+    ''
+    show lillian_hotel_55 with dissolve
+    hide lillian_hotel_54
+    ''
+    call screen gallery_lillian
+    return
+    
+###### HANDJOB
+    
+label gallery_lillian_hotel_sex_footjob:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    pause 0.5
+    show lillian_hotel_56 with dissolve
+    pause 0.5
+    ''
+    show lillian_hotel_57 with dissolve
+    hide lillian_hotel_56
+    ''
+    show lillian_hotel_58 with dissolve
+    hide lillian_hotel_57
+    ''
+    show lillian_hotel_59 with dissolve
+    hide lillian_hotel_58
+    ''
+    show lillian_hotel_60 with dissolve
+    hide lillian_hotel_59
+    ''
+    show lillian_hotel_61 with dissolve
+    hide lillian_hotel_60
+    ''
+    show lillian_hotel_62 with dissolve
+    hide lillian_hotel_61
+    ''
+    show lillian_hotel_63 with dissolve
+    hide lillian_hotel_62
+    ''
+    show lillian_hotel_64 with dissolve
+    hide lillian_hotel_63
+    ''
+    show lillian_hotel_65 with dissolve
+    hide lillian_hotel_64
+    ''
+    show lillian_hotel_66 with dissolve
+    hide lillian_hotel_65
+    ''
+    show lillian_hotel_67 with dissolve
+    hide lillian_hotel_66
+    ''
+    show lillian_hotel_68 with dissolve
+    hide lillian_hotel_67
+    ''
+    show lillian_hotel_69 with dissolve
+    hide lillian_hotel_68
+    ''
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    show black with Dissolve(0.5)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    show black with Dissolve(0.3)
+    pause 0.1
+    hide black with Dissolve(0.2)
+    show black with Dissolve(0.3)
+    pause 0.1
+    hide black with Dissolve(0.2)
+    show black with Dissolve(0.2)
+    pause 0.8
+    play sound cumming
+    show lillian_hotel_70 with Dissolve(0.3)
+    hide black
+    hide lillian_hotel_69
+    pause 0.5
+    ''
+    call screen gallery_lillian
+    return
+    
+    
+###### BLOWJOB
+    
+label gallery_lillian_hotel_sex_blowjob:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    pause 0.5
+    show lillian_hotel_77 with Dissolve(0.5)
+    $ renpy.pause(8.5,hard=True)
+    show lillian_hotel_78 with Dissolve(0.1)
+    hide lillian_hotel_77
+    ''
+    show lillian_hotel_79 with Dissolve(0.5)
+    hide lillian_hotel_78
+    $ renpy.pause(9.5,hard=True)
+    show lillian_hotel_80 with Dissolve(0.1)
+    hide lillian_hotel_79
+    ''
+    show lillian_hotel_81 with Dissolve(0.3)
+    hide lillian_hotel_80
+    $ renpy.pause (5.5,hard=True)
+    show lillian_hotel_82 with Dissolve(0.1)
+    hide lillian_hotel_81
+    ''
+    show lillian_hotel_83 with Dissolve(0.3)
+    hide lillian_hotel_82
+    ''
+    call screen gallery_lillian_hotel_sex_blowjob_cum
+    
+label gallery_lillian_hotel_sex_blowjob_cum_mouth:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    show lillian_hotel_84 with Dissolve(0.3)
+    hide lillian_hotel_83
+    $ renpy.pause (5.5,hard=True)
+    show lillian_hotel_92 with Dissolve(0.3)
+    pause 0.5
+    call screen gallery_lillian
+    return
+    
+label gallery_lillian_hotel_sex_blowjob_cum_face:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    show lillian_hotel_85 with Dissolve(0.3)
+    hide lillian_hotel_83
+    $ renpy.pause (5.2,hard=True)
+    show lillian_hotel_97 with Dissolve(0.3)
+    pause 0.5
+    call screen gallery_lillian
+    return
+    
+###### SEX 1
+    
+label gallery_lillian_hotel_sex_1:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    pause 1.5
+    show lillian_hotel_114 with Dissolve(0.3)
+    $ renpy.pause(5.3, hard=True)
+    show lillian_hotel_115 with Dissolve(0.3)
+    hide lillian_hotel_114
+    li 3 "小心点……" with dissolve
+    li 3 "你这个尺寸，我怕会很痛。"
+    show lillian_hotel_116 with Dissolve(0.3)
+    hide lillian_hotel_115
+    $ renpy.pause(5.3, hard=True)
+    show lillian_hotel_117 with Dissolve(0.3)
+    hide lillian_hotel_116
+    "你的小乳已经湿了，不会痛的。" with dissolve
+    "放松一点，会很舒服的。"
+    show lillian_hotel_118 with Dissolve(0.3)
+    hide lillian_hotel_117
+    $ renpy.pause(2.8, hard=True)
+    show lillian_hotel_119 with Dissolve(0.2)
+    hide lillian_hotel_118
+    "（好软……）" with dissolve
+    show lillian_hotel_120 with Dissolve(0.3)
+    hide lillian_hotel_119
+    $ renpy.pause(2.0, hard=True)
+    show lillian_hotel_121 with Dissolve(0.2)
+    hide lillian_hotel_120
+    "我要来了。" with dissolve
+    show lillian_hotel_122 with Dissolve(0.2)
+    hide lillian_hotel_121
+    $ renpy.pause(2.0, hard=True)
+    show lillian_hotel_123 with Dissolve(0.2)
+    hide lillian_hotel_122
+    ''        
+    show lillian_hotel_124 with Dissolve(0.1)
+    hide lillian_hotel_123
+    $ renpy.pause(4.9, hard=True)
+    show lillian_hotel_125 with Dissolve(0.3)
+    hide lillian_hotel_124
+    ''
+    $ persistent.gallery_lillian_sex1 = True
+    $ lillian_hotel_choice_sex1_complete = True
+    show lillian_hotel_126 with Dissolve(0.1)
+    hide lillian_hotel_125
+    $ renpy.pause(0.9, hard=True)
+    show lillian_hotel_127 with Dissolve(0.3)
+    hide lillian_hotel_126
+    ''
+    scene black with Dissolve(0.5)
+    pause 0.5
+    show lillian_hotel_128 with Dissolve(0.3)
+    ''
+    show lillian_hotel_129 with Dissolve(0.3)
+    hide lillian_hotel_128
+    ''
+    show lillian_hotel_130 with Dissolve(0.3)
+    hide lillian_hotel_129
+    ''
+    show lillian_hotel_131 with Dissolve(0.3)
+    hide lillian_hotel_130
+    ''
+    scene black with Dissolve(0.5)
+    pause 0.3
+    show lillian_hotel_132 with Dissolve(0.3)
+    hide lillian_hotel_131
+    ''
+    show lillian_hotel_133 with Dissolve(0.3)
+    hide lillian_hotel_132
+    $ renpy.pause(4.5,hard=True)
+    scene black with Dissolve(0.5)
+    pause 0.3
+    show lillian_hotel_134 with Dissolve(0.3)
+    $ renpy.pause(2.1,hard=True)
+    show lillian_hotel_135 with Dissolve(0.1)
+    hide lillian_hotel_134
+    ''
+    call screen gallery_lillian
+    return
+    
+###### GRACE - WC1
+    
+label gallery_grace_wc1_1:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    play music2 balearic_nights_sascha_ende_sab_loop_2 volume 0.6 fadein 1
+    scene black with Dissolve(1.0)
+    pause 1.5
+    play voice1 grace_voice_1 loop fadein 1
+    play sound5 pussy_1 loop fadein 1
+    show bar_night_2_grace_sex_26 with Dissolve(1.0)
+    ''
+    show bar_night_2_grace_sex_27 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_26 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_28 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_27 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_29 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_28 with Dissolve(0.3)
+    ''
+    stop voice1 fadeout 1
+    play voice2 grace_voice_2 loop fadein 1
+    show bar_night_2_grace_sex_30 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_29 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_31 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_30 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_32 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_31 with Dissolve(0.3)
+    ''
+    stop sound5 fadeout 1
+    play sound6 pussy_2 fadein 1 loop
+    show bar_night_2_grace_sex_33 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_32 with Dissolve(0.3)
+    ''
+    stop voice2 fadeout 1
+    play voice3 grace_voice_4 loop fadein 1
+    show bar_night_2_grace_sex_34 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_33 with Dissolve(0.3)
+    ''
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    pause 0.5
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    pause 0.4
+    show black with Dissolve(0.2)
+    pause 0.2
+    hide black with Dissolve(0.2)
+    pause 0.3
+    stop voice3 fadeout 1
+    stop sound6 fadeout 1
+    scene black with Dissolve(0.5)
+    play sound cumming
+    pause 1.5
+    call screen gallery_grace
+    return
+    
+label gallery_grace_wc1_2:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    play music balearic_nights_sascha_ende_sab_loop_3 volume 0.6 fadein 1
+    scene black with Dissolve(1.0)
+    pause 1.5
+    scene bar_night_2_grace_sex_36 with Dissolve(0.5):
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 3 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_37 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 3 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_38 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 3 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_39 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 3 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_40 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 3 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_41 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 3 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_42 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 2 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_43 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 2 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_44 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 2 zoom 1 rotate 0
+    ''
+    scene bar_night_2_grace_sex_45 with Dissolve(0.3):
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 1 zoom 1
+    pause 1.5
+    scene bar_night_2_grace_sex_46 with Dissolve(0.3)
+    pause 1.5
+    scene bar_night_2_grace_sex_47 with Dissolve(0.3):
+        rotate -3
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 1 zoom 1 rotate 0
+    ''
+    play voice1 grace_voice_2 loop fadein 1
+    play sound5 pussy_1 fadein 1 loop
+    show bar_night_2_grace_sex_48 with Dissolve(0.3):
+        xalign 0.5
+        yalign 0.5
+        zoom 1.1
+        ease 1 zoom 1
+    ''
+    show bar_night_2_grace_sex_49 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_48 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_50 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_49 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_51 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_50 with Dissolve(0.3)
+    ''
+    stop voice1 fadeout 1
+    play voice2 grace_voice_3 loop fadein 1
+    stop sound5 fadeout 1
+    play sound6 pussy_2 fadein 1 loop
+    show bar_night_2_grace_sex_52 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_51 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_53 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_52 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_54 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_53 with Dissolve(0.3)
+    ''
+    show bar_night_2_grace_sex_55 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_54 with Dissolve(0.3)
+    ''
+    stop voice2 fadeout 1
+    play voice3 grace_voice_5
+    show bar_night_2_grace_sex_56 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_55 with Dissolve(0.3)
+    $ renpy.pause(7.5, hard=True)
+    play sound cumming
+    stop voice3 fadeout 1
+    stop sound6 fadeout 1
+    $ renpy.pause(2.0, hard=True)
+    show bar_night_2_grace_sex_57 with Dissolve(0.3)
+    hide bar_night_2_grace_sex_56 with Dissolve(0.3)
+    stop music fadeout 2
+    pause 2
+    call screen gallery_grace
+    return
+    
+###### EMMA - PARKING
+    
+label gallery_emma_parking_1:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    scene black with Dissolve(1.0)
+    play music3 balearic_nights_sascha_ende_sab_loop_2 fadein 3 volume 0.6
+    pause 1.5
+    show bar_night_2_emma_sex_20 with Dissolve(0.5)
+    play sound5 pussy_1 fadein 1 volume 1.5 loop
+    ''
+    show bar_night_2_emma_sex_21 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_20 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_22 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_21 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_23 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_22 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_24 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_23 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_25 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_24 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_26 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_25 with Dissolve(0.3)
+    ''
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    pause 0.5
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    pause 0.4
+    show black with Dissolve(0.2)
+    pause 0.2
+    hide black with Dissolve(0.2)
+    pause 0.3
+    scene black with Dissolve(0.5)
+    stop sound5 fadeout 1
+    pause 1
+    play sound6 cumming
+    pause 1
+    call screen gallery_emma
+    return
+
+label gallery_emma_parking_2:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    scene black with Dissolve(1.0)
+    play voice1 emma_voice_1 loop fadein 1
+    play sound6 pussy_1 loop fadein 1
+    play sound5 hc_1 loop fadein 1
+    play music3 balearic_nights_sascha_ende_sab_loop_3 fadein 1
+    pause 1.5
+    show bar_night_2_emma_sex_6 with Dissolve(0.5)
+    ''
+    show bar_night_2_emma_sex_7 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_6 with Dissolve(0.3)
+    ''
+    stop voice1 fadeout 1
+    play voice2 emma_voice_2 loop fadein 1
+    show bar_night_2_emma_sex_8 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_7 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_9 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_8 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_10 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_9 with Dissolve(0.3)
+    ''
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    pause 0.5
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    pause 0.4
+    show black with Dissolve(0.2)
+    pause 0.2
+    hide black with Dissolve(0.2)
+    pause 0.3
+    stop voice2 fadeout 1
+    play voice3 emma_voice_4
+    stop sound5 fadeout 1
+    stop sound6 fadeout 1
+    show bar_night_2_emma_sex_11 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_9 with Dissolve(0.3)
+    $ renpy.pause (3.6, hard=True)
+    scene black with Dissolve(0.3)
+    play sound cumming
+    stop voice3 fadeout 1
+    pause 2
+    call screen gallery_emma
+    return
+
+label gallery_emma_parking_3:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    scene black with Dissolve(1.0)
+    play voice1 emma_voice_1 loop fadein 1
+    play sound5 pussy_2 loop
+    play music3 balearic_nights_sascha_ende_sab_loop_3 fadein 3 volume 0.6
+    pause 1.5
+    show bar_night_2_emma_sex_12 with Dissolve(0.5)
+    ''
+    show bar_night_2_emma_sex_13 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_12 with Dissolve(0.3)
+    ''
+    stop voice1 fadeout 1
+    play voice2 emma_voice_2 loop fadein 1
+    show bar_night_2_emma_sex_14 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_13 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_15 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_14 with Dissolve(0.3)
+    ''
+    stop voice2 fadeout 1
+    play voice3 emma_voice_3 loop fadein 1
+    show bar_night_2_emma_sex_16 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_15 with Dissolve(0.3)
+    ''
+    show bar_night_2_emma_sex_17 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_16 with Dissolve(0.3)
+    ''
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    pause 0.5
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    pause 0.4
+    show black with Dissolve(0.2)
+    pause 0.2
+    hide black with Dissolve(0.2)
+    pause 0.3
+    play sound cumming
+    stop voice3 fadeout 1
+    play voice1 emma_voice_5 noloop
+    stop sound5 fadeout 1
+    show bar_night_2_emma_sex_18 with Dissolve(0.3)
+    hide bar_night_2_emma_sex_17 with Dissolve(0.3)
+    $ renpy.pause (5.5, hard=True)
+    scene black with Dissolve(0.3)
+    pause 1
+    play voice1 emma_voice_6 fadein 1 noloop
+    pause 1
+    
+    stop music3 fadeout 0.3
+    play music2 balearic_nights_sascha_ende_sab_loop_4 volume 0.6
+    
+    show bar_night_2_emma_sex_19 with Dissolve(0.3)
+    $ renpy.pause (3.6, hard=True)
+    call screen gallery_emma
+    return
+  
+  
+###### DE1 - LILLIAN - HOME
+
+###### KISS
+
+label gallery_de1_lillian_kiss:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    
+    play music3 lillian_chill_beat fadein 3
+    
+    scene black with Dissolve(1.0)
+    
+    show date_event_1_lillian_155 with Dissolve(0.3)
+    $ renpy.pause (9, hard=True)
+    
+    play sound kiss_1
+    
+    $ renpy.pause (0.5, hard=True)
+    
+    show date_event_1_lillian_156 with Dissolve(0.3)
+    ''
+    scene date_event_1_lillian_157 with Dissolve(0.5)
+    ''
+    scene date_event_1_lillian_158 with Dissolve(0.5)
+    ''
+    
+    stop music3 fadeout 2
+    
+    scene black with Dissolve(1.0)
+    pause 0.5
+    
+    return
+    
+###### LICK
+
+label gallery_de1_lillian_lick:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    
+    play music3 lillian_chill_beat fadein 3
+    
+    scene black with Dissolve(1.0)
+    
+    show date_event_1_lillian_159 with Dissolve(0.3)
+    $ renpy.pause (8.3, hard=True)
+    show date_event_1_lillian_160 with Dissolve(0.3)
+    hide date_event_1_lillian_159
+    ''
+    
+    scene black with Dissolve(0.3)
+    pause 0.3
+    
+    play voice1 voice_lillian_hotel_moan1 volume 0.5
+    
+    show date_event_1_lillian_161 with Dissolve(0.3)
+    hide date_event_1_lillian_160
+    ''
+    show date_event_1_lillian_162 with Dissolve(0.3)
+    hide date_event_1_lillian_161
+    ''
+    show date_event_1_lillian_163 with Dissolve(0.3)
+    hide date_event_1_lillian_162
+    
+    stop voice1 fadeout 1
+    play voice1 voice_lillian_hotel_moan2 volume 0.4
+    
+    ''
+    show date_event_1_lillian_164 with Dissolve(0.3)
+    hide date_event_1_lillian_163
+    ''
+    show date_event_1_lillian_165 with Dissolve(0.3)
+    hide date_event_1_lillian_164
+    ''
+    
+    stop voice1 fadeout 1
+    
+    show date_event_1_lillian_166 with Dissolve(0.3)
+    hide date_event_1_lillian_165
+    
+    $ renpy.pause (2, hard=True)
+    
+    play voice1 voice_lillian_hotel_orgasm noloop
+    
+    $ renpy.pause (2.5, hard=True)
+    
+    scene black with Dissolve(0.3)
+    pause 0.6
+    
+    show date_event_1_lillian_167 with Dissolve(1)
+    ''
+    
+    stop music3 fadeout 2
+    
+    scene black with Dissolve(1.0)
+    pause 0.5
+    
+    return
+    
+###### SEX_1
+
+label gallery_de1_lillian_sex1:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    
+    play music3 lillian_chill_beat fadein 3
+    
+    scene black with Dissolve(1.0)
+    
+    show date_event_1_lillian_168 with Dissolve(0.5)
+    $renpy.pause(8, hard=True)
+    
+    play sound2 lillian_hotel_109_sound loop
+    
+    show date_event_1_lillian_169 with Dissolve(0.3)
+    hide date_event_1_lillian_168
+    ''
+    show date_event_1_lillian_170 with Dissolve(0.3)
+    hide date_event_1_lillian_169
+    ''
+    show date_event_1_lillian_171 with Dissolve(0.3)
+    hide date_event_1_lillian_170
+    ''
+    show date_event_1_lillian_172 with Dissolve(0.3)
+    hide date_event_1_lillian_171
+    ''
+    show date_event_1_lillian_173 with Dissolve(0.3)
+    hide date_event_1_lillian_172
+    ''
+    show date_event_1_lillian_174 with Dissolve(0.3)
+    hide date_event_1_lillian_173
+    ''
+    
+    play sound2 lillian_hotel_110_sound loop
+    
+    show date_event_1_lillian_175 with Dissolve(0.3)
+    hide date_event_1_lillian_174
+    ''
+    show date_event_1_lillian_176 with Dissolve(0.3)
+    hide date_event_1_lillian_175
+    ''
+    show date_event_1_lillian_177 with Dissolve(0.3)
+    hide date_event_1_lillian_176
+    ''
+    
+    stop sound2 fadeout 1
+    
+    show date_event_1_lillian_178 with Dissolve(0.3)
+    hide date_event_1_lillian_177
+    
+    play sound cumming
+    
+    $ renpy.pause (3.5, hard=True)
+    
+    scene black with Dissolve(0.3)
+    
+    show date_event_1_lillian_179 with Dissolve(1)
+    ''
+    
+    stop music3 fadeout 2
+    
+    scene black with Dissolve(1.0)
+    pause 0.5
+    
+    return
+    
+###### SEX_2
+
+label gallery_de1_lillian_sex2:
+    stop music fadeout 0.3
+    stop music2 fadeout 0.3
+    stop music3 fadeout 0.3
+    stop music4 fadeout 0.3
+    stop music5 fadeout 0.3
+    stop sound fadeout 0.3
+    stop sound2 fadeout 0.3
+    stop sound3 fadeout 0.3
+    stop sound4 fadeout 0.3
+    stop sound5 fadeout 0.3
+    stop sound6 fadeout 0.3
+    stop sound7 fadeout 0.3
+    stop sound8 fadeout 0.3
+    stop voice1 fadeout 0.3
+    stop voice2 fadeout 0.3
+    stop voice3 fadeout 0.3
+    
+    play music3 lillian_chill_beat fadein 3
+    
+    scene black with Dissolve(1.0)
+    
+    play sound2 lillian_hotel_109_sound loop
+    
+    show date_event_1_lillian_180 with Dissolve(0.3)
+    ''
+    
+    play sound2 lillian_hotel_110_sound loop
+    
+    show date_event_1_lillian_181 with Dissolve(0.3)
+    hide date_event_1_lillian_180
+    ''
+    show date_event_1_lillian_182 with Dissolve(0.3)
+    hide date_event_1_lillian_181
+    ''
+    show date_event_1_lillian_183 with Dissolve(0.3)
+    hide date_event_1_lillian_182
+    ''
+    show date_event_1_lillian_184 with Dissolve(0.3)
+    hide date_event_1_lillian_183
+    ''
+    show date_event_1_lillian_185 with Dissolve(0.3)
+    hide date_event_1_lillian_184
+    ''
+    show date_event_1_lillian_186 with Dissolve(0.3)
+    hide date_event_1_lillian_185
+    ''
+    show date_event_1_lillian_187 with Dissolve(0.3)
+    hide date_event_1_lillian_186
+    ''
+    show date_event_1_lillian_188 with Dissolve(0.3)
+    hide date_event_1_lillian_187
+    ''
+    
+    stop sound2 fadeout 1
+    
+    show date_event_1_lillian_189 with Dissolve(0.3)
+    hide date_event_1_lillian_188
+    
+    play sound cumming
+    
+    $ renpy.pause (3.4, hard=True)
+    
+    scene black with Dissolve(0.3)
+    pause 1
+    
+    show date_event_1_lillian_190 with Dissolve(0.3)
+    $ renpy.pause (7.2, hard=True)
+    
+    scene black with Dissolve(0.3)
+    pause 0.5
+    
+    show date_event_1_lillian_191 with Dissolve(0.5)
+    ''
+    
+    stop music3 fadeout 2
+    
+    scene black with Dissolve(1.0)
+    pause 0.5
+    
+    return

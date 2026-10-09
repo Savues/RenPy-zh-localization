@@ -1,0 +1,204 @@
+
+
+
+screen home_night_free_1_floor:
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+
+
+screen home_night_free_livingroom:
+    if home_night_free_living_room_with_may and home_night_free_living_room_with_may_covered == True:
+    
+        
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S
+        
+    elif home_night_free_living_room_with_may == True:
+    
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S
+        
+    else:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S
+        
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at leave_right:
+        ypos 140
+        xpos 1520
+
+
+screen home_night_free_livingroom_phone:
+    add @S at game_help
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+        ypos 860
+        xpos 100
+        
+    vbox:
+        spacing 0
+        xpos 806 
+        ypos 298 
+        ysize 3293 
+        xsize 298 
+        viewport:
+            yfill False
+            xfill False
+            draggable True
+            ysize 502 
+            xsize 298
+            
+            hbox:
+            
+                button:
+                    
+                    yanchor 1
+                    xysize (270, 3293)
+                    xpos 14
+                    
+                    foreground @S
+                    
+
+screen home_night_2_floor:
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+
+
+screen home_night_2_floor_corridor:
+    if home_night_free_living_room_with_may == True:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at leave_right:
+        ypos 860
+        xpos 1520
+        
+
+screen home_night_free_may_room:
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at leave_right:
+        ypos 860
+        xpos 1520
+        
+        
+
+
+
+screen school_stolen_free_outside:
+    if school_stolen_free_f1_visited == False:
+        add @S at game_help
+    if school_stolen_locker_daimez == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    
+
+screen school_stolen_free_f1:
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    
+
+screen school_stolen_free_f2:
+    if school_stolen_locker_ry == False:
+        imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    
+
+screen school_stolen_free_roof:
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    
+
+screen school_stolen_free_c1:
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    
+
+screen school_stolen_free_c2:
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    
+
+screen school_stolen_free_classroom1:
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at leave_left:
+        ypos 840
+        xpos 1520
+    
+
+screen school_stolen_free_classroom2:
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at just_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at leave_left:
+        ypos 840
+        xpos 1520
+
+
+
+
+
+
+
+screen ds_corridor_w1:
+    
+    if ds_corridor_w1_l == False:
+        imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+            ypos 810
+            xpos 683
+    imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+        ypos 742
+        xpos 911
+        
+screen ds_corridor_w2:
+
+    if ds_corridor_w2_l == False:
+        imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+            ypos 810
+            xpos 683
+    imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+        ypos 742
+        xpos 911
+    if ds_corridor_w2_r == False:
+        imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+            ypos 810
+            xpos 1057
+            
+screen ds_corridor_w3:
+
+    if ds_corridor_w3_l == False:
+        imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+            ypos 810
+            xpos 683
+    imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+        ypos 742
+        xpos 911
+        
+screen ds_corridor_w5:
+
+    imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+        ypos 810
+        xpos 683
+    imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+        ypos 742
+        xpos 911
+        
+screen ds_corridor_w5_l:
+
+    imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+        ypos 742
+        xpos 911
+        
+    imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+        ypos 810
+        xpos 1057
+        
+screen ds_corridor_w6:
+
+    if ds_corridor_w6_l == False:
+        imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+            ypos 810
+            xpos 683
+    imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+        ypos 742
+        xpos 911
+    if ds_corridor_w6_r == False:
+        imagebutton idle @S focus_mask None hover_sound @S action Jump(@Q) activate_sound @S at just_bright:
+            ypos 810
+            xpos 1057

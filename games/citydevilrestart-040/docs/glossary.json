@@ -1,0 +1,344 @@
+{
+  "_about": "角色名与专有名词一览。zh 是本作采用的定译；banned 列出的是容易顺手写出来的错译，check.py 会在补丁里扫到它们时报错。",
+  "人物": {
+    "May": {
+      "zh": "芽衣",
+      "banned": [
+        "美波莉",
+        "芽衣奈"
+      ]
+    },
+    "Lillian": {
+      "zh": "莉莲",
+      "banned": [
+        "莉莉安",
+        "莉莲娜"
+      ]
+    },
+    "Izumi": {
+      "zh": "泉",
+      "banned": [
+        "和泉"
+      ]
+    },
+    "Minami": {
+      "zh": "美波",
+      "banned": [
+        "南波",
+        "美奈"
+      ]
+    },
+    "Asami": {
+      "zh": "亚纱美",
+      "banned": [
+        "亚沙美",
+        "麻美"
+      ]
+    },
+    "Leah": {
+      "zh": "莉娅",
+      "banned": [
+        "莉亚"
+      ]
+    },
+    "Sophia": {
+      "zh": "索菲娅",
+      "banned": [
+        "苏菲亚"
+      ]
+    },
+    "Olivia": {
+      "zh": "奥莉维",
+      "banned": [
+        "奥莉维亚",
+        "奥莉薇"
+      ]
+    },
+    "Yumiko": {
+      "zh": "由美子",
+      "banned": [
+        "由美"
+      ]
+    },
+    "Carmen": {
+      "zh": "卡门",
+      "banned": [
+        "卡曼"
+      ]
+    },
+    "Emma": {
+      "zh": "艾玛",
+      "banned": [
+        "爱玛"
+      ]
+    },
+    "Grace": {
+      "zh": "格蕾丝",
+      "banned": [
+        "格蕾斯",
+        "葛瑞丝"
+      ]
+    },
+    "Chloe": {
+      "zh": "克洛伊",
+      "banned": [
+        "蔻依"
+      ]
+    },
+    "Scarlett": {
+      "zh": "斯嘉丽",
+      "banned": [
+        "斯嘉莉"
+      ]
+    },
+    "Ken": {
+      "zh": "健",
+      "banned": [
+        "健太"
+      ]
+    },
+    "Ryushi": {
+      "zh": "龙司",
+      "banned": [
+        "龙史"
+      ]
+    },
+    "Jabrayil": {
+      "zh": "贾布赖尔",
+      "banned": [
+        "贾布拉伊尔"
+      ]
+    },
+    "Shiro": {
+      "zh": "四郎",
+      "banned": [
+        "白郎"
+      ]
+    },
+    "Mezehiro": {
+      "zh": "麦兹",
+      "banned": [
+        "麦泽希罗"
+      ]
+    },
+    "Dai": {
+      "zh": "大辉",
+      "banned": [
+        "大輝"
+      ]
+    },
+    "Uncle Kazama": {
+      "zh": "风间叔叔",
+      "banned": [
+        "风间叔"
+      ]
+    },
+    "Jarab-Ja": {
+      "zh": "贾拉布-贾",
+      "banned": [
+        "贾拉布贾"
+      ]
+    },
+    "Yuto": {
+      "zh": "悠人",
+      "banned": [
+        "优人"
+      ]
+    },
+    "Antony": {
+      "zh": "安东尼",
+      "banned": [
+        "安东尼尼"
+      ]
+    },
+    "Hayato": {
+      "zh": "隼斗",
+      "banned": [
+        "隼人"
+      ]
+    },
+    "Yamamoto Kengo": {
+      "zh": "山本健吾",
+      "banned": [
+        "山本贤悟"
+      ]
+    },
+    "Hound": {
+      "zh": "猎犬",
+      "banned": [
+        "猎狗"
+      ]
+    },
+    "Tatsumi": {
+      "zh": "辰己",
+      "banned": [
+        "辰巳"
+      ]
+    },
+    "Sotaro": {
+      "zh": "悟郎",
+      "banned": [
+        "悟良"
+      ]
+    },
+    "Takeo": {
+      "zh": "武雄",
+      "banned": [
+        "武夫"
+      ]
+    },
+    "Daniella": {
+      "zh": "丹妮拉",
+      "banned": [
+        "丹妮菈"
+      ]
+    },
+    "Reina": {
+      "zh": "玲奈",
+      "banned": [
+        "玲奈美"
+      ]
+    },
+    "Kyoko": {
+      "zh": "京子",
+      "banned": [
+        "京子老师"
+      ]
+    },
+    "Carl": {
+      "zh": "卡尔",
+      "banned": [
+        "卡尔文"
+      ]
+    },
+    "Monica": {
+      "zh": "莫妮卡",
+      "banned": [
+        "莫妮迦"
+      ]
+    },
+    "Evan": {
+      "zh": "埃文",
+      "banned": [
+        "艾文"
+      ]
+    },
+    "Kaito": {
+      "zh": "海斗",
+      "banned": [
+        "凯斗"
+      ]
+    },
+    "Souta": {
+      "zh": "草太",
+      "banned": [
+        "奏太"
+      ]
+    },
+    "Itsuki": {
+      "zh": "一树",
+      "banned": [
+        "一樹"
+      ]
+    },
+    "Jae Wook": {
+      "zh": "在旭",
+      "banned": [
+        "在旭俊"
+      ]
+    },
+    "Do Hyun": {
+      "zh": "道贤",
+      "banned": [
+        "道铉"
+      ]
+    },
+    "Kang Seok": {
+      "zh": "康石",
+      "banned": [
+        "康硕"
+      ]
+    },
+    "Kang-hyung": {
+      "zh": "康哥",
+      "banned": [
+        "康炯"
+      ]
+    },
+    "Teacher": {
+      "zh": "老师",
+      "banned": []
+    },
+    "Classmate": {
+      "zh": "同学",
+      "banned": [
+        "同班同学"
+      ]
+    },
+    "Wandering Merchant": {
+      "zh": "流浪商人",
+      "banned": [
+        "行商"
+      ]
+    },
+    "Sireneyes": {
+      "zh": "Sireneyes",
+      "banned": [
+        "海妖",
+        "塞壬"
+      ]
+    }
+  },
+  "场所与组织": {
+    "Sireneyes": {
+      "zh": "Sireneyes",
+      "banned": [
+        "海妖俱乐部"
+      ]
+    },
+    "Club Steward": {
+      "zh": "亲乐部管事",
+      "banned": [
+        "亲乐部管理员"
+      ]
+    },
+    "Club Girls": {
+      "zh": "亲乐部的姓娘们",
+      "banned": [
+        "亲乐部的女孩们"
+      ]
+    },
+    "Demian": {
+      "zh": "迪米安",
+      "banned": [
+        "德米安",
+        "德米亚"
+      ]
+    }
+  },
+  "_kept_verbatim": [
+    "Sireneyes。",
+    "https://www.patreon.com/sabirow",
+    "https://sabirow.itch.io/cdr",
+    "https://discord.gg/kSREGQuhht",
+    "[gui.about!t]\\n",
+    "Shift+A",
+    "Меня зовут...",
+    "Демиан"
+  ],
+  "_kept_verbatim_why": {
+    "Sireneyes。": "夜店名，玩家和角色都说英文；译成「海妖」反而不像招牌。",
+    "https://...": "Patreon / itch.io / Discord 三个链接，翻译它们只会让地址失效。",
+    "[gui.about!t]\\n": "Ren'Py 自己的文本插值：!t 让引擎在运行时按当前语言查表，再拼上换行。写成中文反而绕开了引擎的翻译流程。",
+    "Shift+A": "按键名，下面一行「打开无障碍菜单。」已经是中文。",
+    "Меня зовут...": "script.rpy:36 起是原作自带的俄语分支，只有玩家在语言菜单里主动选俄语才会走到；它是游戏的，不是本补丁漏译的。",
+    "Демиан": "同上，script.rpy:36 与 :38 两处俄语分支的默认名。"
+  },
+  "_names_are_not_translated": "角色名确实被译了（见上表），但只出现在 init.rpy 的 Character(_('…')) 里；正文对白一律用代号而不用名字，所以名字不会在正文里再出现一次。",
+  "_suspected_typo": "init.rpy 里 jae_wook0 = Long-haired Gangster 译作「长发司转」、do_hyun0 = Bald Gangster 译作「秃头司转」。「司转」不是词，看着像「司机」手误。两处写法一致，像是统一选定的译名而不是随手打错，因此本补丁原样保留，等作者定夺。",
+  "_doubling_exempt": [],
+  "_variants_allowed": {
+    "游商": "cdr_3.rpy 里流浪商人自报家门时用「游商」，init.rpy 的名牌用「流浪商人」。两种都在补丁里，是作者自己的取舍，不当作错译。",
+    "青年教师": "script.rpy:1710 的「young teachers」是普通名词短语，不是 Teacher 这个角色的名牌，所以「教师」在这里不算漂移。"
+  }
+}

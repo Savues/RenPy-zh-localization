@@ -1,0 +1,79 @@
+{
+  "slug": "citydevilrestart-040",
+  "title": "City Devil: Restart 0.4.0",
+  "author": "Sabirow",
+  "renpy_version": "8.3.4",
+  "language": "schinese",
+  "language_name": "简体中文",
+  "patch_version": 1,
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "extra_checks": [
+    [
+      "node",
+      "tools/verify_patch.cjs"
+    ]
+  ],
+  "shim": "zz_zh_ui.rpy",
+  "coverage": {
+    "translated": 7782,
+    "total": 7792,
+    "verbatim": 10
+  },
+  "font_strategy": "game-bundled",
+  "font_assets": [],
+  "archive_fonts": [
+    "tl/schinese/schinese2.ttf",
+    "tl/schinese/schinese.ttf"
+  ],
+  "archive_shadowed": [
+    "cdr_1.rpy",
+    "cdr_2.rpy",
+    "cdr_3.rpy",
+    "gallery.rpy",
+    "init.rpy",
+    "options.rpy",
+    "screens.rpy",
+    "script.rpy"
+  ],
+  "structure_exceptions": [
+    {
+      "file": "options.rpy",
+      "line": 126,
+      "en": "default preferences.text_cps = 33",
+      "zh": "default preferences.text_cps = 45",
+      "why": "characters per second, raised from the English 33 because a Chinese line is about twice as wide per character and the English rate makes the text scroll away before it can be read"
+    },
+    {
+      "file": "options.rpy",
+      "line": 132,
+      "en": "default preferences.afm_time = 15",
+      "zh": "default preferences.afm_time = 12",
+      "why": "auto-forward delay in seconds, shortened from 15 because Chinese is read faster than English"
+    },
+    {
+      "file": "script.rpy",
+      "line": 40,
+      "en": "        $ ggname = renpy.input(@Q, length=13, default=@Q, allow=@Q).strip()",
+      "zh": "        $ ggname = renpy.input(@Q, length=13, default=@Q).strip()",
+      "why": "the allow= clause, a character whitelist of Latin and Cyrillic letters, is dropped from the branch that actually runs, so renpy.input accepts Chinese characters. The publisher's own schinese arm further down has no allow= either."
+    }
+  ],
+  "_why_script_override": "The patch replaces the game's own scripts outright. patch/game/ mirrors game/ one for one, eight files, and there is no data/tl_trans.json because nothing builds one: this game does have game/tl/ trees, but they live inside archive.rpa and only load when a language other than the default is selected. Replacing the English scripts is what makes the game run Chinese without touching that machinery.",
+  "_why_ps1": "tools/install.py knows how to place a translation tree, a shim and fonts. This game needs something it has no concept of: a .rpyc shadow file next to every overridden script, so tools/install.ps1 ships next to the patch.",
+  "_why_no_fonts": "The shim points gui at tl/schinese/schinese.ttf and tl/schinese/schinese2.ttf. Those paths resolve out of archive.rpa, where the publisher put them with the official Chinese, so the patch ships none and needs none. One of the two (schinese2.ttf, 平方造字) is not under an open licence, and neither face is this patch's to redistribute; pointing at the game's own copy is both smaller and cleaner than shipping one.",
+  "_why_unity": "gui.rpy is the only script this patch does not touch, and that is deliberate: it defines no prose, only styles and fonts. The shim rewires the fonts from init 999 instead, because gui.rpy runs at init offset = -2 and a gui.*_font assignment at any earlier init is overwritten by it -- including a @gui.variant of the same name. See docs/approach.md.",
+  "_provenance": "These are the user's own translations, worked on outside this repository (cdr_zh/). The publisher's own Simplified Chinese is also present inside archive.rpa at tl/schinese/ and is not shipped here, not merged, and not redistributed. The two are different work: only about 1% of lines coincide.",
+  "_coverage_note": "7,792 player-visible literals counted from the English originals, of which 7,782 carry Chinese: 99.87%. The counting rule is not a judgement call, it is data/en_masked/<file>.flags -- one flag per literal, written by the extraction pass that produced the baseline -- and tools/verify_patch.cjs recomputes the figure from that file rather than trusting this number. The remaining 10 are registered by hand in docs/glossary.json _kept_verbatim and the check fails if a new one appears that is neither registered nor made only of Ren'Py substitutions and tags. They are: four URLs, a keybinding label, Ren'Py's own [gui.about!t] interpolation, a proper noun that is spelled in Latin on purpose, and the game's own Russian branch of the name prompt, which only runs if the player picks Russian in the language menu. Asset paths, build.classify() globs, Preference() keys and other identifiers are not player-visible and are not in the denominator at all -- the flags file says which is which, per literal.",
+  "audit_only": [
+    "cdr_4.rpy",
+    "fight_screens.rpy",
+    "freeroam_screens.rpy",
+    "gui.rpy",
+    "parallax.rpy",
+    "relationships.rpy",
+    "relupdown.rpy"
+  ],
+  "_audit_only_note": "archive.rpa holds fifteen scripts. Eight of them carry every player-visible string in the game and the patch replaces all eight. The other seven -- styles, screen wiring, parallax, a fight mini-game's layout, relationship bookkeeping -- are shipped as English baselines too, under data/en_masked/, and tools/verify_patch.cjs holds them to a stricter rule: not one of their 3,300 literals may be classified player-visible. Right now not one is. That is what makes the coverage figure mean 'all of it' rather than 'all of it that happened to be in the eight files we looked at': move a paragraph into relationships.rpy and the build fails until someone decides what to do about it.",
+  "_no_prose_audit": "Verified once by hand against the English originals before the baselines were committed: relationships.rpy, fight_screens.rpy, freeroam_screens.rpy, gui.rpy, parallax.rpy, cdr_4.rpy and relupdown.rpy contain no English prose at all -- only asset paths, style names, store keys and substitution tags. The flags files now say so per literal, so the claim is re-checked rather than re-asserted."
+}

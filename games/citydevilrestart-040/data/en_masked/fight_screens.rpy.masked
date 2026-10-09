@@ -1,0 +1,523 @@
+screen school_roof_boi_1():
+    zorder 2
+    imagebutton:
+        xalign 0.2
+        yalign 0.7
+        at alpha_dissolve
+        focus_mask True
+        idle @Q
+        hover @Q 
+        action [Hide(@Q), Play(@Q, @Q), Jump(@Q)]
+    
+screen school_roof_boi_2():
+    zorder 2
+    imagebutton:
+        xalign 0.85
+        yalign 0.2
+        at alpha_dissolve
+        focus_mask True
+        idle @Q
+        hover @Q
+        action [Hide(@Q), Play(@Q, @Q), Jump(@Q)]
+
+
+screen schoolcanteen_start_screen:
+    zorder 2
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at alpha_dissolve
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at alpha_dissolve
+
+  
+image fight_block:
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020 
+image fight_punch:
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+    @S
+    pause 0.020
+
+
+
+
+
+
+screen sweethome_jo:
+    zorder 2
+    if sweethome_jo1_complete == True:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 165
+    elif sweethome_jo1_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 165
+            
+    if sweethome_jo2_complete >= True:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 375
+    elif sweethome_jo2_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 375
+            
+    if sweethome_jo3_complete >= True:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 585
+    elif sweethome_jo3_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_3:
+            ypos 585
+            
+    if sweethome_jo4_complete >= True:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 795
+    elif sweethome_jo4_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_4:
+            ypos 795
+            
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+        ypos 860
+        xpos 100
+    
+
+screen olivia_or_yumiko:
+    add @Q
+    zorder 2
+    imagebutton:
+        xpos -525
+        
+        focus_mask True
+        idle @Q
+        hover @Q
+        action [Play(@Q, @Q), Jump(@Q)]
+    imagebutton:
+        xpos 525
+        
+        focus_mask True
+        idle @Q
+        hover @Q
+        action [Play(@Q, @Q), Jump(@Q)]
+        
+
+screen olivia_sex_choice:
+    zorder 2
+    if alexxis_olivia_choice_sex_1 >= 1:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 390
+    elif alexxis_olivia_choice_sex_1 == 0:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 390
+            
+    if alexxis_olivia_choice_sex_2 >= 1:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 610
+    elif alexxis_olivia_choice_sex_2 == 0:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 610
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+        ypos 860
+        xpos 100
+        
+
+screen yumiko_sex_choice:
+    zorder 2
+    if alexxis_yumiko_choice_sex_1 >= 1:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 390
+    elif alexxis_yumiko_choice_sex_1 == 0:
+        imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 390
+            
+    if alexxis_yumiko_choice_sex_2 >= 1:
+        imagebutton idle @S action() at choice_sex_2:
+            ypos 610
+    elif alexxis_yumiko_choice_sex_2 == 0:
+        imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 610
+        
+    imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+        ypos 860
+        xpos 100
+ 
+
+screen lillian_hotel_choice_1:
+    zorder 2
+    imagebutton idle @S hover @Q focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_bright
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_bright
+
+
+
+screen lillian_hotel_choice_start:
+    if lillian_hotel_choice_boobs_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_1:
+            ypos 120
+    elif lillian_hotel_choice_boobs_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 120
+            
+    if lillian_hotel_choice_lick_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_2:
+            ypos 240
+    elif lillian_hotel_choice_lick_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 240
+            
+    if lillian_hotel_choice_fingering_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_3:
+            ypos 360
+    elif lillian_hotel_choice_fingering_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_3:
+            ypos 360
+            
+    if lillian_hotel_choice_handjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_4:
+            ypos 480
+    elif lillian_hotel_choice_handjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_4:
+            ypos 480
+            sensitive lillian_hotel_choice_handjob_unlock == True
+            
+    if lillian_hotel_choice_footjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_5:
+            ypos 600
+    elif lillian_hotel_choice_footjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_5:
+            ypos 600
+            sensitive lillian_hotel_choice_footjob_unlock == True
+            
+    if lillian_hotel_choice_blowjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_6:
+            ypos 720
+    elif lillian_hotel_choice_blowjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_6:
+            ypos 720
+            sensitive lillian_hotel_choice_blowjob_unlock == True
+            
+    if lillian_hotel_choice_sex1_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_7:
+            ypos 840
+    elif lillian_hotel_choice_sex1_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_7:
+            ypos 840
+
+
+screen lillian_hotel_choice_from_footjob:
+    if lillian_hotel_choice_boobs_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_1:
+            ypos 120
+    elif lillian_hotel_choice_boobs_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 120
+            
+    if lillian_hotel_choice_lick_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_2:
+            ypos 240
+    elif lillian_hotel_choice_lick_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 240
+            
+    if lillian_hotel_choice_fingering_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_3:
+            ypos 360
+    elif lillian_hotel_choice_fingering_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_3:
+            ypos 360
+            
+    if lillian_hotel_choice_handjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_4:
+            ypos 480
+    elif lillian_hotel_choice_handjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_4:
+            ypos 480
+            sensitive lillian_hotel_choice_handjob_unlock == True
+            
+    if lillian_hotel_choice_footjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_5:
+            ypos 600
+    elif lillian_hotel_choice_footjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_5:
+            ypos 600
+            sensitive lillian_hotel_choice_footjob_unlock == True
+            
+    if lillian_hotel_choice_blowjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_6:
+            ypos 720
+    elif lillian_hotel_choice_blowjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_6:
+            ypos 720
+            sensitive lillian_hotel_choice_blowjob_unlock == True
+            
+    if lillian_hotel_choice_sex1_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_7:
+            ypos 840
+    elif lillian_hotel_choice_sex1_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_7:
+            ypos 840
+
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+        ypos 860
+        xpos 100
+
+screen lillian_hotel_choice_from_blowjob:
+    if lillian_hotel_choice_boobs_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_1:
+            ypos 120
+    elif lillian_hotel_choice_boobs_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 120
+            
+    if lillian_hotel_choice_lick_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_2:
+            ypos 240
+    elif lillian_hotel_choice_lick_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 240
+            
+    if lillian_hotel_choice_fingering_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_3:
+            ypos 360
+    elif lillian_hotel_choice_fingering_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_3:
+            ypos 360
+            
+    if lillian_hotel_choice_handjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_4:
+            ypos 480
+    elif lillian_hotel_choice_handjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_4:
+            ypos 480
+            sensitive lillian_hotel_choice_handjob_unlock == True
+            
+    if lillian_hotel_choice_footjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_5:
+            ypos 600
+    elif lillian_hotel_choice_footjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_5:
+            ypos 600
+            sensitive lillian_hotel_choice_footjob_unlock == True
+            
+    if lillian_hotel_choice_blowjob_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_6:
+            ypos 720
+    elif lillian_hotel_choice_blowjob_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_6:
+            ypos 720
+            sensitive lillian_hotel_choice_blowjob_unlock == True
+            
+    if lillian_hotel_choice_sex1_complete == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_7:
+            ypos 840
+    elif lillian_hotel_choice_sex1_complete == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_7:
+            ypos 840
+
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+        ypos 860
+        xpos 100
+        
+screen lillian_hotel_sex_blowjob_cum:
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_cum_1:
+        ypos 280
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_cum_2:
+        ypos 390
+        
+screen gallery_lillian_hotel_sex_blowjob_cum:
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_cum_1:
+        ypos 280
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_cum_2:
+        ypos 390
+        
+        
+screen bar_emma_sex_choice:
+    zorder 2
+    if bar_emma_sex1 == True:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 290
+    elif bar_emma_sex1 == False:
+        imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 290
+            
+    if bar_emma_sex2 == True:
+        imagebutton idle @S action() at choice_sex_2:
+            ypos 510
+    elif bar_emma_sex2 == False:
+        imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 510
+            
+    if bar_emma_sex3 == True:
+        imagebutton idle @S action() at choice_sex_2:
+            ypos 730
+    elif bar_emma_sex3 == False:
+        imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_3:
+            ypos 730
+        
+    imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+        ypos 860
+        xpos 100
+        
+screen bar_grace_sex_doors:
+    zorder 2
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_bright
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_bright
+        
+screen bar_grace_sex_choice:
+    zorder 2
+    if bar_grace_sex1 == True:
+        imagebutton idle @S action() at choice_sex_1:
+            ypos 390
+    elif bar_grace_sex1 == False:
+        imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 390
+            
+    if bar_grace_sex2 == True:
+        imagebutton idle @S action() at choice_sex_2:
+            ypos 610
+    elif bar_grace_sex2 == False:
+        imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 610
+            sensitive bar_grace_sex1 == True
+        
+    if grace_voyeurism == True:
+        imagebutton auto @S hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+            ypos 860
+            xpos 100
+            
+screen izumi_pawnshop_choice_dom_sub:
+    add @S at alpha_dissolve
+    
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at date_choice_button_1
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at date_choice_button_2
+
+screen date_event_1_choice_day:
+    add @S at alpha_dissolve
+    add @S at date_choice_line_1
+    add @S at date_choice_line_2
+    add @S at date_choice_line_3
+    
+    add @S at date_choice_title 
+    if date_event_1_day == 1:
+        add @S at date_choice_title 
+    else:
+        add @S at date_choice_title
+
+    
+
+    if date_event_1_may == True:
+        imagebutton idle @S action () at date_choice_button_1
+    elif date_event_1_after_minami == True:
+        imagebutton idle @S action () at date_choice_button_1
+    else:
+        imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at date_choice_button_1
+            
+    
+
+    if date_event_1_minami == True:
+        imagebutton idle @S action () at date_choice_button_2
+    else:
+        imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at date_choice_button_2
+            
+    
+
+    if date_event_1_lillian == True:
+        imagebutton idle @S action () at date_choice_button_3
+    else:
+        imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at date_choice_button_3
+            
+    imagebutton idle @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at date_choice_nextday
+    
+screen de1_lillian_sex:
+    if de1_lillian_sex_kiss == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_1:
+            ypos 190
+    elif de1_lillian_sex_kiss_lock == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_1:
+            ypos 190
+    elif de1_lillian_sex_kiss == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_1:
+            ypos 190
+            
+    if de1_lillian_sex_lick == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_2:
+            ypos 370
+    elif de1_lillian_sex_lick_lock == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_1:
+            ypos 370
+    elif de1_lillian_sex_lick == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_2:
+            ypos 370
+            
+    if de1_lillian_sex_1 == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_3:
+            ypos 550
+    elif de1_lillian_sex_1 == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_3:
+            ypos 550
+            
+    if de1_lillian_sex_2 == True:
+        imagebutton idle @S focus_mask True action() activate_sound @S at choice_sex_4:
+            ypos 730
+    elif de1_lillian_sex_2 == False:
+        imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_4:
+            ypos 730
+            sensitive lillian_hotel_choice_handjob_unlock == True
+            
+    imagebutton auto @S focus_mask True hover_sound @S action Jump(@Q) activate_sound @S at choice_sex_leave:
+        ypos 860
+        xpos 100
+        
+
+

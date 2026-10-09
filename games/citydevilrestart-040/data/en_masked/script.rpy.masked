@@ -1,0 +1,4060 @@
+label splashscreen:
+    scene black
+    pause 0.3
+    play music mystic_horror_full
+    show sabirowgames
+    $renpy.pause(1.5, hard=True)
+    pause 8
+    pause 1
+    hide sabirowgames with dissolve
+    show adult_warning with dissolve
+    pause 7
+    hide adult_warning with dissolve
+    pause 0.3
+    show gamename
+    pause 5
+    stop music fadeout 0.3
+    return
+
+
+
+label start:
+    $ quick_menu = False
+    
+    
+    scene menu_transitions with Dissolve(0.3)
+    $ renpy.pause(2.8, hard=True)
+    show menu_gg with Dissolve(0.1)
+    
+    @Q with Dissolve(0.3)
+
+    if _preferences.language == @Q:
+        $ ggname = renpy.input(@Q, length=13, default=@Q).strip()
+        if ggname == @Q:
+            $ ggname = @Q
+    elif _preferences.language == @Q:
+        $ ggname = renpy.input(@Q, length=13, default=@Q, allow=@Q).strip()
+        if ggname == @Q:
+            $ ggname = @Q
+    else:
+        $ ggname = renpy.input(@Q, length=13, default=@Q, allow=@Q).strip()
+        if ggname == @Q:
+            $ ggname = @Q
+            
+    scene black with dissolve
+    pause 1
+    
+    play sound2 glitch_4
+    show wear_headphones
+    $ renpy.pause(0.5,hard=True)
+    stop sound2 fadeout 0.3
+    $ renpy.pause(0.2,hard=True)
+    play sound3 glitch_1 volume 0.7
+    $ renpy.pause(0.5,hard=True)
+    stop sound3 fadeout 0.3
+    pause 3.8
+    
+    scene black with dissolve
+    @Q with Dissolve(0.3)
+    @Q
+    stop music fadeout 5
+
+
+    show zasel_1 with dissolve
+    $ renpy.pause(13,hard=True)
+    pause 0.5
+    play music w205
+    scene zasel_2 with Dissolve(1.0)
+    show screen girls with dissolve
+    $ quick_menu = True
+    ka 1 @S with Dissolve(0.3)
+    scene zasel_3
+    may 1 @Q with Dissolve(0.3)
+    scene zasel_4
+    ka 1 @S with Dissolve(0.3)
+    scene zasel_5
+    with Dissolve(0.2)
+    ka 1 @S with Dissolve(0.3)
+    ka 1 @S
+    scene zasel_6
+    may 1 @Q
+    play sound keys_drop
+    scene zasel_10
+    ka 1 @Q with Dissolve(0.3)
+    scene zasel_11
+    ka 1 @Q with Dissolve(0.3)
+    scene zasel_12
+    gg 1 @S with Dissolve(0.3)
+    scene zasel_13 with Dissolve(0.3)
+    may 1 @Q with Dissolve(0.3)
+    scene zasel_14
+    with Dissolve(0.2)
+    may 1 @S with Dissolve(0.3)
+    ka 1 @Q with Dissolve(0.3)
+    scene zasel_15
+    pause 2.0
+    
+    scene zasel_17 with Dissolve(0.3)
+    ka 1 @S with Dissolve(0.3)
+    ka 1 @S
+    scene zasel_16 with Dissolve(0.3)
+    gg 1 @S with Dissolve(0.3)
+    scene zasel_17 with Dissolve(0.3)
+    ka 1 @S with Dissolve(0.3)
+    scene zasel_16 with Dissolve(0.3)
+    gg 1 @S with Dissolve(0.3)
+    scene zasel_17 with Dissolve(0.3)
+    ka 1 @S with Dissolve(0.3)
+    scene zasel_16 with Dissolve(0.3)
+    gg 1 @S with Dissolve(0.3)
+    scene zasel_17 with Dissolve(0.3)
+    ka 1 @S with Dissolve(0.3)
+    scene zasel_9 with Dissolve(0.3)
+    ka 1 @S with Dissolve(0.3)
+    
+    scene zasel_18 with dissolve
+    gg 1 @S with Dissolve(0.3)
+    
+    ka 1 @S with Dissolve(0.3)
+    ka 1 @S
+    ka 1 @S
+    
+    gg 1 @S with Dissolve(0.3)
+    
+    scene zasel_20 with Dissolve(0.3)
+    gg 1 @S with Dissolve(0.3)
+    scene zasel_19 with Dissolve(0.3)
+    ka 1 @S with Dissolve(0.3)
+    ka 1 @S
+    ka 1 @S
+    scene zasel_20 with Dissolve(0.3)
+    gg 1 @S with Dissolve(0.3)
+    scene zasel_19 with Dissolve(0.3)
+    ka 1 @S with Dissolve(0.3)
+    scene zasel_20 with Dissolve(0.3)
+    gg 1 @S with Dissolve(0.3)
+    scene zasel_19 with Dissolve(0.3)
+    ka 1 @S with Dissolve(0.3)
+    ka 1 @S
+    show black with dissolve
+    stop music fadeout 2
+    pause 2.0
+    play sound door_close
+    pause 1.0
+
+
+    show zahod_1 with dissolve
+    $ renpy.pause(4, hard=True)
+    pause 18.0
+
+    show zahod_may_say_wait with Dissolve(0.2)
+    pause 1.0
+
+    $ athomewithmay = []
+    menu athomewithmay:
+        set athomewithmay
+        @Q:
+            show zahod_may_say_yes with Dissolve(0.2)
+            may 1 @Q with Dissolve(0.3)
+            scene zahod_3 with Dissolve(0.3)
+            may 1 @Q with Dissolve(0.3)
+            scene zahod_4 with Dissolve(0.3)
+            may 1 @S with Dissolve(0.3)
+            show zahod_may_say_wait with Dissolve(0.2)
+            gg 1 @S with Dissolve(0.3)
+            gg 1 @S
+            gg 1 @S
+            scene zahod_5 with Dissolve(0.3)
+            may 1 @S with Dissolve(0.3)
+            scene zahod_6 with Dissolve(0.3)
+            may 1 @S with Dissolve(0.3)
+            $ athomewithmay_point += 1
+            show zahod_may_say_wait with Dissolve(0.2)
+            jump athomewithmay
+
+        @Q:
+            show zahod_may_say_wait with Dissolve(0.2)
+            show zahod_may_say_no with Dissolve(0.2)
+            may 1 @S with Dissolve(0.3)
+            gg 1 @S with Dissolve(0.3)
+            may @S with Dissolve(0.3)
+            $ athomewithmay_point += 1
+            show zahod_may_say_wait with Dissolve(0.2)
+            jump athomewithmay
+            
+        @Q if athomewithmay_point == 2:
+            scene zahod_7 with Dissolve(0.3)
+            may 1 @Q with Dissolve(0.3)
+            show zahod_may_say_wait2 with Dissolve(0.2)
+            gg 1 @S with Dissolve(0.3)
+            gg 1 @S
+            gg 1 @S
+            scene zahod_4 with Dissolve(0.3)
+            may 1 @S with Dissolve(0.3)
+            show zahod_may_say_wait2 with Dissolve(0.2)
+            gg 1 @S with Dissolve(0.3)
+            scene zahod_8 with Dissolve(0.3)
+            may 1 @S with Dissolve(0.3)
+            show zahod_may_say_wait2 with Dissolve(0.2)
+            gg 1 @S with Dissolve(0.3)
+            scene zahod_9 with Dissolve(0.3)
+            may 1 @S with Dissolve(0.3)
+            show zahod_may_say_wait2 with Dissolve(0.2)
+            gg 1 @S with Dissolve(0.3)
+            gg 1 @S
+            scene zahod_10 with Dissolve(0.3)
+            may 1 @S with Dissolve(0.3)
+            show zahod_may_say_wait with Dissolve(0.2)
+
+        @Q:
+            pause 1.0
+    
+    scene zahod_11 with Dissolve(0.2)
+    may 1 @S with Dissolve(0.3)
+    $ may_unlock += 1
+    show screen rel_open_may
+    scene zahod_12 with dissolve
+    may 1 @S with Dissolve(0.3)
+    scene zahod_13 with Dissolve(0.1)
+    pause 0.5
+    scene zahod_13_1 with Dissolve(2.0)
+    pause 2.0
+    may 1 @S with Dissolve(0.3)
+    gg 1 @S with Dissolve(0.3)
+    scene zahod_14 with dissolve
+    may 1 @S with Dissolve(0.3)
+    scene zahod_15 with Dissolve(0.1)
+    pause 2.0
+    gg 1 @S with Dissolve(0.3)
+    scene zahod_16 with Dissolve(0.1)
+    pause 3.0
+    gg 1 @Q with Dissolve(0.3)
+    gg @S
+    show zahod_17 with Dissolve(0.1)
+    $ renpy.pause(2, hard=True)
+    pause 5.0
+    scene zahod_17_1 with Dissolve(0.1)
+    gg 1 @S with Dissolve(0.3)
+    gg @S
+    gg @Q
+    menu:
+        @S:
+            scene zahod_18 with Dissolve(0.1)
+            pause 3.0
+            gg 1 @Q with Dissolve(0.3)
+            pause 0.3
+
+        @S:
+            pause 0.3
+    show zahod_19 with Dissolve(0.1)
+    $ renpy.pause(2, hard=True)
+    pause 5.0
+    scene zahod_19_1
+    gg 1 @S with Dissolve(0.3)
+    gg @S
+    menu:
+        @S:
+            scene zahod_20 with dissolve
+            @Q
+            scene zahod_21 with Dissolve(0.3)
+            pause 1.6
+            scene zahod_21_1 with Dissolve(0.3)
+            gg 1 @Q with Dissolve(0.3)
+            pause 0.3
+            show zahod_22 with Dissolve(0.1)
+            $ renpy.pause(2, hard=True)
+            pause 5.0
+
+        @S:
+            pause 0.3
+            show zahod_23 with Dissolve(0.1)
+            $ renpy.pause(2, hard=True)
+            pause 5.0
+
+    scene zahod_24 with Dissolve(0.3)
+    pause 0.6
+    gg 1 @Q with Dissolve(0.3)
+    scene black with dissolve
+    play sound clothes_1
+    pause 2.0
+    scene zahod_25 with dissolve
+    pause 1.0
+    gg 0 @Q with Dissolve(0.3)
+    scene zahod_26 with dissolve
+    pause 2.0
+    gg 0 @S with Dissolve(0.3)
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg @Q
+    pause 1.0
+    gg 0 @S with Dissolve(0.3)
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    scene black with dissolve
+    play music rain_street_01 fadein 13
+    pause 3.0
+    
+
+    play music2 call_start
+    scene nightmare1_1 with dissolve
+    @Q
+    scene nightmare1_2 with dissolve
+    gg 6 @Q
+    scene nightmare1_3 with dissolve
+    pause 2.0
+    scene nightmare1_4 with dissolve
+    pause 1.0
+    gg 6 @Q
+    stop music2
+    scene nightmare1_5 with dissolve
+    pause 1.0
+    scene nightmare1_6 with Dissolve(0.3)
+    gg 6 @Q with dissolve
+    scene nightmare1_5 with Dissolve(0.3)
+    play music2 happy_memory_loopable_by_chilledmusic volume 0.6
+    show nightmare1_21 with easeinright
+    may 4 @S with dissolve
+    scene nightmare1_22 with Dissolve(0.3)
+    gg 6 @S with dissolve
+    scene nightmare1_23 with Dissolve(0.3)
+    may 4 @S with dissolve
+    may 4 @S
+    scene nightmare1_24 with Dissolve(0.3)
+    gg 6 @S with dissolve
+    scene nightmare1_25 with Dissolve(0.3)
+    may 4 @S with dissolve
+    scene nightmare1_26 with Dissolve(0.3)
+    gg 6 @S with dissolve
+    gg 6 @S with dissolve
+    scene nightmare1_27 with Dissolve(0.3)
+    may 4 @S with dissolve
+    may 4 @S
+    stop music2 fadeout 13
+    show nightmare1_7 with dissolve
+    gg 6 @S with dissolve
+    may 4 @S with dissolve
+    gg 6 @S with dissolve
+    gg @S
+    gg 6 @S with dissolve
+    gg 6 @S with dissolve
+    may 4 @S with dissolve
+    scene nightmare1_8 with dissolve
+    gg 6 @S with dissolve
+    scene nightmare1_9 with dissolve
+    gg 6 @S with dissolve
+    scene nightmare1_8 with Dissolve(0.3)
+    may 4 @S with dissolve
+    scene nightmare1_6 with Dissolve(0.3)
+    gg 6 @S with dissolve
+    scene nightmare1_5 with Dissolve(0.3)
+    may 4 @S with dissolve
+    scene nightmare1_6 with Dissolve(0.3)
+    gg 6 @S with dissolve
+    scene nightmare1_5 with Dissolve(0.3)
+    may 4 @S with dissolve
+    play music2 ingestion_of_sorrows_by_tim_kulig
+    $ renpy.pause(1.8,hard=True)
+    scene nightmare1_10 with hpunch
+    pause 0.1
+    scene nightmare1_11 with dissolve
+    pause 0.1
+    scene black with Dissolve(0.2)
+    pause 1.0
+    show nightmare1_12 with dissolve
+    pause 1.0
+    gg 6 @Q with Dissolve(0.3)
+    scene nightmare1_13 with dissolve
+    gg 6 @Q with Dissolve(0.3)
+    scene nightmare1_14 with dissolve
+    gg 6 @Q with Dissolve(0.3)
+    scene nightmare1_15 with vpunch
+    may 5 @Q with Dissolve(0.3)
+    scene nightmare1_16 with dissolve
+    may 5 @Q with Dissolve(0.3)
+    scene nightmare1_14 with dissolve
+    gg 6 @S with Dissolve(0.3)
+    scene nightmare1_16 with dissolve
+    pause 1.6
+    scene nightmare1_14 with vpunch
+    gg 6 @Q with Dissolve(0.3)
+    scene nightmare1_16 with dissolve
+    play sound call_end volume 0.6
+    gg 6 @Q
+    @Q
+    scene nightmare1_15 with dissolve
+    pause 2.0
+    show nightmare1_12 with dissolve
+    pause 1.0
+    gg 6 @S with Dissolve(0.3)
+    gg @S
+    scene nightmare1_17 with dissolve
+    gg 6 @Q
+    stop music fadeout 10
+    show nightmare1_18 with Dissolve(0.1)
+    $ renpy.pause(24,hard=True)
+    show nightmare1_19 with Dissolve(0.1)
+    hide nightmare1_18
+    pause 1.0
+    gg 0 @S with Dissolve(0.3)
+    pause 1.0
+    gg 0 @S with Dissolve(0.3)
+    pause 1.0
+    menu:
+        @Q:
+            pause 1.0
+            gg 0 @S with Dissolve(0.3)
+            pause 1.0
+            gg 0 @S with Dissolve(0.3)
+            pause 1.0
+            
+            menu:
+                @Q:
+                    pause 1.0
+                    show nightmare1_20 with Dissolve(0.1)
+                    hide nightmare1_19
+                    $ renpy.pause(18.7,hard=True)
+                    
+                    stop music2 fadeout 1.6
+                    scene nightmare_sbor_1 with hpunch
+                    play music3 city_bird fadein 10 volume 0.7
+                    pause 0.6
+                    play sound clothes_2 volume 0.5
+                    scene nightmare_sbor_2 with hpunch
+                    gg 0 @S
+                    scene nightmare_sbor_3 with Dissolve(0.2)
+                    gg 0 @S with Dissolve(0.2)
+                    scene nightmare_sbor_4
+                    gg 0 @S with Dissolve(0.3)
+                    scene nightmare_sbor_5
+                    with Dissolve(0.2)
+                    gg 0 @Q with Dissolve(0.3)
+                    scene sbor_school_1
+                    pause 1.6
+                    gg 0 @S with Dissolve(0.3)
+                    gg 0 @S
+                    scene sbor_school_2 with Dissolve(0.3)
+                    pause 1.0
+                    
+                @S:
+                    pause 1.0
+                    gg 0 @S
+                    scene black with dissolve
+                    pause 3.0
+                    
+                    stop music2 fadeout 1.6
+                    scene nightmare_sbor_1_1 with dissolve
+                    play music3 city_bird fadein 10 volume 0.7
+                    pause 1.6
+                    gg 0 @Q
+                    play sound clothes_2 volume 0.5
+                    scene nightmare_sbor_2 with dissolve
+                    gg 0 @S with dissolve
+                    gg 0 @S
+                    scene nightmare_sbor_5
+                    with Dissolve(0.2)
+                    gg 0 @Q with Dissolve(0.3)
+                    scene sbor_school_1 with dissolve
+                    gg 0 @S
+                    scene sbor_school_2 with Dissolve(0.3)
+                    pause 1.0
+            
+        @Q:
+            pause 1.0
+            show nightmare1_20 with Dissolve(0.1)
+            hide nightmare1_19
+            $ renpy.pause(18.7,hard=True)
+            
+            stop music2 fadeout 1.6
+            scene nightmare_sbor_1 with hpunch
+            play music3 city_bird fadein 10 volume 0.7
+            pause 0.6
+            play sound clothes_2 volume 0.5
+            scene nightmare_sbor_2 with hpunch
+            gg 0 @S
+            scene nightmare_sbor_3 with Dissolve(0.2)
+            gg 0 @S with Dissolve(0.2)
+            scene nightmare_sbor_4
+            gg 0 @S with Dissolve(0.3)
+            scene nightmare_sbor_5
+            with Dissolve(0.2)
+            gg 0 @Q with Dissolve(0.3)
+            scene sbor_school_1
+            pause 1.6
+            gg 0 @S with Dissolve(0.3)
+            gg 0 @S
+            scene sbor_school_2 with Dissolve(0.3)
+            pause 1.0
+    
+
+    scene black with dissolve
+    stop music3 fadeout 3
+    play music happy_memory_loopable_by_chilledmusic fadein 13 volume 0.6
+    pause 1.6
+    scene sbor_school_3 with dissolve
+    pause 1.0
+    scene sbor_school_4 with dissolve
+    gg 2 @S with dissolve
+    scene sbor_school_5 with dissolve
+    pause 0.6
+    gg 2 @S with dissolve
+    pause 0.6
+    menu:
+        @Q:
+            scene sbor_school_8 with dissolve
+            gg 2 @S with dissolve
+            scene sbor_school_9 with dissolve
+            may 2 @S with dissolve
+            scene sbor_school_10 with dissolve
+            pause 1.6
+
+        @S:
+            scene sbor_school_6 with dissolve
+            pause 2.6
+            scene sbor_school_7 with dissolve
+            pause 1.0
+            scene sbor_school_8 with dissolve
+            pause 1.6
+            scene sbor_school_9 with dissolve
+            may 2 @S with dissolve
+            scene sbor_school_10 with dissolve
+            gg 2 @S with dissolve
+          
+    scene sbor_school_9 with dissolve
+    may 2 @S with dissolve
+    scene sbor_school_10 with dissolve
+    gg 2 @S with dissolve
+    scene sbor_school_9 with dissolve
+    may 2 @S with dissolve
+    scene sbor_school_10 with dissolve
+    gg 2 @S with dissolve
+    scene sbor_school_9 with dissolve
+    may 2 @S with dissolve
+    scene sbor_school_11 with dissolve
+    may 2 @S with dissolve
+    scene sbor_school_12 with Dissolve(0.3)
+    may 2 @S with dissolve
+    pause 1.0
+    $ renpy.music.set_volume(1, delay=0, channel=u@Q)
+    scene sbor_school_13 with fade
+    $ renpy.music.set_volume(0.5, delay=0, channel=u@Q)
+    play music2 city_bird fadein 0.6
+    pause
+    stop music2 fadeout 6
+    $ renpy.music.set_volume(1, delay=0, channel=u@Q)
+    scene sbor_school_14
+    @Q
+    scene sbor_school_15 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg @S
+    scene sbor_school_16 with Dissolve(0.3)
+    may 3 @S with dissolve
+    pause 1.0
+    may 3 @S with dissolve
+    show sbor_school_17 with Dissolve(0.3)
+    $ renpy.pause(7.7, hard=True)
+    show sbor_school_18 with Dissolve(0.1)
+    hide sbor_school_17
+    @Q
+    scene sbor_school_20 with Dissolve(0.1)
+    show sbor_school_19 with Dissolve(0.1)
+    hide sbor_school_18
+    $ renpy.pause(2, hard=True)
+    may 3 @Q with dissolve
+    pause 0.6
+    menu:
+        @Q:
+            show sbor_school_21 with Dissolve(0.1)
+            hide sbor_school_19
+            hide sbor_school_20
+            $ love_may = love_may + 1
+            show screen rel_up_may
+            may 3 @Q with Dissolve(0.3)
+        @Q:
+            show sbor_school_22 with Dissolve(0.1)
+            hide sbor_school_19
+            hide sbor_school_20
+            may 3 @S with Dissolve(0.3)
+            may 3 @S with Dissolve(0.3)
+            gg 3 @S with Dissolve(0.3)
+
+    scene sbor_school_23 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene sbor_school_24
+    may 3 @S with Dissolve(0.3)
+    scene sbor_school_25 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene sbor_school_23 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene sbor_school_25 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene sbor_school_26 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    stop music fadeout 3
+    stop music2 fadeout 3
+    scene black with dissolve
+    pause 2.6
+    
+
+    play music city_bird volume 0.8 fadein 5
+    scene school_start_1 with dissolve
+    pause 2.0
+    scene school_start_2 with dissolve
+    pause 2.0
+    scene school_start_3 with Dissolve(0.1)
+    may 3 @S with Dissolve(0.3)
+    may @S
+    scene school_start_4 with Dissolve(0.1)
+    pause 1.0
+    may 3 @S with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    may @S with Dissolve(0.3)
+    scene school_start_5 with Dissolve(0.1)
+    may 3 @S with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene school_start_6 with Dissolve(0.1)
+    pause 1.6
+    may 3 @S with Dissolve(0.3)
+    scene school_start_7 with Dissolve(0.3)
+    pause 1.6
+    gg 3 @Q with Dissolve(0.3)
+    scene school_start_8
+    gg 3 @S with Dissolve(0.3)
+    gg @S
+    scene school_start_9
+    may 3 @Q with Dissolve(0.3)
+    stop music fadeout 2
+    scene black with dissolve
+    pause 1.6
+    
+
+    play sound schooldoor
+    scene school_class_start_door_1 with dissolve
+    pause 0.6
+    scene school_class_start_door_2 with dissolve
+    pause 1.0
+    play music school_fon fadein 5 volume 0.8
+    scene school_class_start_1 with vpunch
+    fcm1 @S with Dissolve(0.3)
+    scene school_class_start_2
+    teacher 1 @S with Dissolve(0.3)
+    scene school_class_start_3 with dissolve
+    teacher 1 @S with Dissolve(0.3)
+    scene school_class_start_4 with dissolve
+    teacher 1 @S with Dissolve(0.3)
+    teacher 1 @S
+    scene school_class_start_5 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    show school_class_start_video with Dissolve(0.2)
+    pause 6.3
+    scene school_class_start_6 with Dissolve(0.2)
+    teacher 1 @S with Dissolve(0.3)
+    play music jailbreak_whispers_by_john_bartmann
+    scene school_class_start_7
+    me0 1 @S with Dissolve(0.3)
+    scene school_class_start_8 with dissolve
+    dai0 1 @S with Dissolve(0.3)
+    scene school_class_start_9
+    dai0 1 @S with Dissolve(0.3)
+    scene school_class_start_10 with Dissolve(0.2)
+    dai0 1 @S with Dissolve(0.3)
+    scene school_class_start_11
+    menu:
+        @Q:
+            scene school_class_start_11_1_1 with hpunch
+            play sound kabluk
+            play sound2 perelom volume 3
+            @Q
+            scene school_class_start_11_1_2
+            dai0 1 @Q
+            scene school_class_start_11_1_3 with hpunch
+            dai0 1 @Q
+            $ nastupil_nogu = True
+        @Q:
+            play sound kabluk
+            scene school_class_start_11_2_1
+            @Q
+            scene school_class_start_11_2_2
+            dai0 1 @S
+            dai0 @Q
+            scene school_class_start_11_2_3 with hpunch
+            dai0 1 @Q
+
+    scene school_class_start_12
+    teacher 1 @S
+    play music2 school_fon fadein 5 volume 0.7
+    stop music fadeout 5
+    scene school_class_start_13
+    play sound skrip_stula volume 0.6
+    pause 0.3
+    scene school_class_start_14 with dissolve
+    dai0 1 @S with Dissolve(0.3)
+    scene school_class_start_15
+    teacher 1 @S with Dissolve(0.3)
+    scene school_class_start_16
+    li 1 @S with Dissolve(0.3)
+    scene school_class_start_17
+    li 1 @S with Dissolve(0.3)
+    scene school_class_start_18 with dissolve
+    li 1 @S with Dissolve(0.3)
+    scene school_class_start_19 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene school_class_start_20 with dissolve
+    pause 1.6
+    scene school_class_start_21 with dissolve
+    li 1 @S with Dissolve(0.3)
+    li 1 @S
+    scene school_class_start_22 with dissolve
+    li 1 @S with Dissolve(0.3)
+    scene school_class_start_dai_1
+    pause 1.0
+    scene school_class_start_dai_2 with dissolve
+    pause 0.6
+    scene school_class_start_dai_4 with vpunch
+    pause 0.6
+    scene school_class_start_dai_3 with Dissolve(0.3)
+    pause 0.4
+    scene school_class_start_dai_4 with Dissolve(0.3)
+    pause 0.6
+    if nastupil_nogu:
+        scene school_class_start_18
+        li 1 @S  with Dissolve(0.3)
+    else:
+        scene school_class_start_18
+        li 1 @S with Dissolve(0.3)
+    
+    scene school_class_start_22 with dissolve
+    li 1 @S with Dissolve(0.3)
+    scene school_class_start_me_1
+    pause 0.6
+    scene school_class_start_me_2 with dissolve
+    pause 1.6
+    scene school_class_start_21
+    li 1 @S with Dissolve(0.3)
+    scene school_class_start_18 with dissolve
+    li 1 @S with Dissolve(0.3)
+    scene school_class_start_19 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene school_class_start_18 with dissolve
+    li 1 @S with Dissolve(0.3)
+    stop music2 fadeout 1
+    play sound kinkonkankon_outin volume 0.7
+    play sound3 city_bird fadein 1 volume 0.6
+    scene school_zvonok_1
+    $ renpy.pause(5.5, hard=True)
+    scene school_class_start_23
+    stop sound3 fadeout 2
+    teacher 1 @S with dissolve
+    stop sound fadeout 1
+    scene black with dissolve
+    pause 1.0
+    play sound schooldoor
+    pause 2.0
+    
+
+    scene schoolcanteen_start_1 with dissolve
+    play music fromage_by_steven_obrien fadein 13 volume 0.5
+    pause 1.6
+    scene schoolcanteen_start_2 with dissolve
+    pause 0.8
+    scene schoolcanteen_start_3 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_4 with dissolve
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene schoolcanteen_start_5 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_6 with dissolve
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene schoolcanteen_start_7 with dissolve
+    li 1 @S with dissolve
+    scene black with dissolve
+    pause 2.3
+    play music2 schoolcanteen fadein 3 volume 0.5
+    scene schoolcanteen_start_8 with dissolve
+    pause 1.6
+    scene schoolcanteen_start_9 with dissolve
+    pause 2.0
+    scene schoolcanteen_start_10 with dissolve
+    @Q
+    scene schoolcanteen_start_11 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_12 with dissolve
+    li 1 @Q
+    li @S
+    scene schoolcanteen_start_13 with Dissolve(0.3)
+    pause 1.0
+    gg 3 @S with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_14 with dissolve
+    li 1 @S
+    scene schoolcanteen_start_15 with dissolve
+    li 1 @S
+    scene schoolcanteen_start_16 with dissolve
+    li 1 @S
+    scene schoolcanteen_start_17 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_14 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_16 with dissolve
+    li 1 @S
+    scene schoolcanteen_start_17 with dissolve
+    gg 3 @S with dissolve
+    scene black with dissolve
+    pause 0.6
+    scene schoolcanteen_start_18 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_19 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_20 with Dissolve(0.3)
+    gg 3 @Q with dissolve
+    gg @S
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_21 with dissolve
+    leah 1 @S
+    scene schoolcanteen_start_22 with dissolve
+    pause 1.6
+    scene schoolcanteen_start_23 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_24 with dissolve
+    leah 1 @S with dissolve
+    $ leah_unlock = True
+    scene schoolcanteen_start_25 with Dissolve(0.3)
+    li 1 @S with dissolve
+    scene schoolcanteen_start_26 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_27 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_28 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_26 with dissolve
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene schoolcanteen_start_29 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_30 with dissolve
+    li 1 @S
+    $ lillian_unlock += 1
+    show screen rel_open_lillian
+    scene schoolcanteen_start_26 with dissolve
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene schoolcanteen_start_28 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_27 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_28 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_26 with dissolve
+    $ leah_unlock = True
+    leah 1 @S with Dissolve(0.3)
+    menu:
+        @Q:
+            gg 3 @S with dissolve
+            scene schoolcanteen_start_27 with dissolve
+            leah 1 @S with dissolve
+        @Q:
+            gg 3 @Q
+    scene schoolcanteen_start_25 with dissolve
+    li 1 @S with dissolve
+    li 1 @S
+    scene schoolcanteen_start_26 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_25 with dissolve
+    li 1@S with dissolve
+    scene schoolcanteen_start_29 with dissolve
+    li 1 @S
+    scene schoolcanteen_start_28 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_26 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_31 with dissolve
+    pause 2.0
+    scene schoolcanteen_start_32 with dissolve
+    li 1 @S with dissolve
+    show schoolcanteen_start_33 with Dissolve(0.1)
+    $ renpy.pause(1,hard=True)
+    scene schoolcanteen_start_34 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    call screen schoolcanteen_start_screen
+
+label schoolcanteen_start_choice_1:
+    scene schoolcanteen_start_35 with Dissolve(0.1)
+    @Q
+    show schoolcanteen_start_36 with Dissolve(0.1)
+    $ renpy.pause(1.5,hard=True)
+    jump after_schoolcanteen
+    
+label schoolcanteen_start_choice_2:
+    play sound energy_vzal
+    scene schoolcanteen_start_37 with Dissolve(0.1)
+    pause 0.6
+    leah 1 @Q with dissolve
+    scene schoolcanteen_start_38 with Dissolve(0.1)
+    leah 1 @Q with dissolve
+    scene schoolcanteen_start_39 with dissolve
+    pause 1.6
+    scene schoolcanteen_start_40 with Dissolve(0.1)
+    @Q
+    show schoolcanteen_start_41 with Dissolve(0.1)
+    $ renpy.pause(1.5,hard=True)
+    jump after_schoolcanteen
+    
+label after_schoolcanteen:
+    scene black with dissolve
+    pause 2.0
+    show schoolcanteen_start_42 with dissolve
+    @Q
+    show schoolcanteen_start_43 with Dissolve(0.1)
+    $ renpy.pause(6.5,hard=True)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    scene schoolcanteen_start_44 with dissolve
+    gg 3 @S with dissolve
+    gg 3 @S
+    pause 1.0
+    menu:
+        @S:
+            scene schoolcanteen_start_45 with dissolve
+            gg 3 @S
+            scene schoolcanteen_start_46 with dissolve
+            gg 3 @S
+            scene schoolcanteen_start_47 with dissolve
+            pause 1.0
+            gg 3 @S
+            scene schoolcanteen_start_48 with dissolve
+            li 1 @S with dissolve
+            scene schoolcanteen_start_45 with dissolve
+            gg 3 @S
+            scene schoolcanteen_start_48 with dissolve
+            li 1 @S with dissolve
+        
+        @S:
+            show schoolcanteen_start_49 with Dissolve(0.1)
+            $ renpy.pause(11,hard=True)
+            show schoolcanteen_start_50 with Dissolve(0.1)
+            hide schoolcanteen_start_49
+            pause 1.0
+            gg 3 @S with Dissolve(0.3)
+            show schoolcanteen_start_51 with Dissolve(0.1)
+            hide schoolcanteen_start_50
+            pause 1.0
+            gg 3 @S with Dissolve(0.3)
+            gg 3 @S
+            li 1 @S with dissolve
+            scene schoolcanteen_start_52 with Dissolve(0.1)
+            li 1 @S with Dissolve(0.3)
+            scene schoolcanteen_start_53 with dissolve
+            gg 3 @S with Dissolve(0.3)
+            li 1 @S with dissolve
+            scene schoolcanteen_start_54 with dissolve
+            li 1 @S
+    
+    scene schoolcanteen_start_53 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_55 with dissolve
+    li 1 @S with dissolve
+    li 1 @S
+    li 1 @S
+    scene schoolcanteen_start_53 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_54 with dissolve
+    li 1 @S with dissolve
+    li 1 @S
+    scene schoolcanteen_start_55 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_53 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_56 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_57 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_58 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_59 with dissolve
+    li 1 @S with dissolve
+    scene schoolcanteen_start_60 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_61 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_62 with dissolve
+    li 1 @S with dissolve
+    gg 3 @S
+    scene schoolcanteen_start_56 with dissolve
+    leah 1 @S with dissolve
+    
+    
+    li 1 @S with dissolve
+    leah 1 @S with dissolve
+    
+    menu:
+        @Q:
+            scene schoolcanteen_start_63 with dissolve
+            gg 3 @S with dissolve
+            show screen rel_up_lillian
+            $ love_li += 1
+            scene schoolcanteen_start_64 with dissolve
+            li 1 @S with dissolve
+            scene schoolcanteen_start_65 with dissolve
+            pause 2.6
+            scene schoolcanteen_start_66 with dissolve
+            gg 3 @Q
+            scene schoolcanteen_start_67 with dissolve
+            li 1 @Q
+            scene schoolcanteen_start_68 with dissolve
+            li 1 @S with dissolve
+            menu:
+                @Q:
+                    scene schoolcanteen_start_69 with dissolve
+                    gg 3 @S with dissolve
+                    scene schoolcanteen_start_70 with dissolve
+                    li 1 @S with dissolve
+                    scene schoolcanteen_start_71 with dissolve
+                    gg 3 @S with dissolve
+                    
+                    li 1 @Q
+                    
+                @Q:
+                    scene schoolcanteen_start_73 with dissolve
+                    gg 3 @S with dissolve
+                    scene schoolcanteen_start_74 with dissolve
+                    li 1 @S with dissolve
+                    show screen rel_up_lillian
+                    $ love_li += 2
+                    scene schoolcanteen_start_75 with dissolve
+                    li 1 @Q
+                    scene schoolcanteen_start_76 with dissolve
+                    leah 1 @S with dissolve
+                    
+                    
+        @Q:
+            scene schoolcanteen_start_73 with dissolve
+            gg 3 @S with dissolve
+            gg 3 @S
+            show screen rel_up_lillian
+            $ love_li += 3
+            scene schoolcanteen_start_74 with dissolve
+            li 1 @S with dissolve
+            scene schoolcanteen_start_75 with dissolve
+            li 1 @Q
+            scene schoolcanteen_start_76 with dissolve
+            leah 1 @S with dissolve
+            scene schoolcanteen_start_77 with dissolve
+            pause 2.0
+    
+    scene schoolcanteen_start_78 with dissolve
+    leah 1 @S with dissolve
+    scene schoolcanteen_start_79 with dissolve
+    li 1 @S with dissolve
+    li 1 @S
+    scene schoolcanteen_start_80 with dissolve
+    gg 3 @S with dissolve
+    scene schoolcanteen_start_81 with dissolve
+    li 1 @S with dissolve
+    stop music fadeout 3
+    stop music2 fadeout 3
+    
+
+    scene black with dissolve
+    pause 1.0
+    play sound2 schooldoor volume 0.5
+    pause 2.0
+    scene school_class_teacher_0 with dissolve
+    pause 2.0
+    play sound woosh3 volume 0.3
+    scene school_class_teacher_1 with PushMove(0.2, @Q)
+    pause 2.0
+    play sound2 kinkonkankon_outin
+    play sound3 city_bird fadein 1 volume 0.6
+    scene school_zvonok_2
+    $ renpy.pause(5.5, hard=True)
+    stop sound3 fadeout 2
+    play sound kabluk
+    play music school_fon fadein 5
+    scene school_class_teacher_2 with Dissolve(0.3)
+    pause 2.0
+    scene school_class_teacher_3 with Dissolve(0.3)
+    mi0 1 @S with Dissolve(0.3)
+    scene school_class_teacher_4 with Dissolve(0.3)
+    pause 0.6
+    gg 3 @S with Dissolve(0.3)
+    scene school_class_teacher_5 with Dissolve(0.3)
+    pause 0.6
+    scene school_class_teacher_6 with dissolve
+    mi0 1 @S with Dissolve(0.3)
+    mi0 1 @S
+    stop music fadeout 2
+    scene black with dissolve
+    pause 1.6
+    scene school_class_teacher_7 with dissolve
+    pause 1.6
+    scene school_class_teacher_8 with Dissolve(0.3)
+    pause 1.6
+    play music school_fon fadein 5
+    scene school_class_teacher_9 with Dissolve(0.3)
+    cm1 1 @S with Dissolve(0.3)
+    scene school_class_teacher_10 with dissolve
+    cm1 1 @S with Dissolve(0.3)
+    scene school_class_teacher_11 with dissolve
+    pause 1.0
+    scene school_class_teacher_12 with hpunch
+    cm1 1 @S
+    scene school_class_teacher_13 with Dissolve(0.3)
+    pause 1.6
+    scene school_class_teacher_14 with dissolve
+    cm1 1 @S with Dissolve(0.3)
+    scene school_class_teacher_15 with Dissolve(0.3)
+    pause 0.8
+    scene school_class_teacher_16 with Dissolve(0.3)
+    with Dissolve(0.3)
+    pause 1.0
+    scene school_class_teacher_17 with Dissolve(0.3)
+    with Dissolve(0.3)
+    mi 1 @S with Dissolve(0.3)
+    scene school_class_teacher_18 with Dissolve(0.3)
+    cm2 1 @S with Dissolve(0.3)
+    cm2 1 @S
+    scene school_class_teacher_19 with Dissolve(0.3)
+    cm1 1 @S
+    scene school_class_teacher_20 with hpunch
+    play music deadly_roulette_by_kevin_macleod
+    da 1 @S
+    scene school_class_teacher_4
+    pause 0.5
+    gg 3 @S with Dissolve(0.3)
+    scene school_class_teacher_21
+    @Q
+    scene school_class_teacher_22 with hpunch
+    mi 1 @S
+    scene school_class_teacher_23 with Dissolve(0.3)
+    da 1 @S with Dissolve(0.3)
+    scene school_class_teacher_24 with Dissolve(0.3)
+    mi 1 @S with Dissolve(0.3)
+    scene school_class_teacher_25 with Dissolve(0.3)
+    da 1 @S with Dissolve(0.3)
+    sh0 1 @S with Dissolve(0.3)
+    scene school_class_teacher_26 with Dissolve(0.3)
+    mi 1 @S with Dissolve(0.3)
+    scene school_class_teacher_27 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene school_class_teacher_28 with dissolve
+    li 1 @S with Dissolve(0.3)
+    scene school_class_teacher_29 with dissolve
+    li 1 @S with Dissolve(0.3)
+    scene school_class_teacher_28 with dissolve
+    li 1 @S with Dissolve(0.3)
+    scene school_class_teacher_30 with dissolve
+    li 1 @S with Dissolve(0.3)
+    li 1 @S
+    scene school_class_teacher_31 with PushMove(0.2, @Q)
+    da 1 @S with Dissolve(0.3)
+    scene school_class_teacher_32 with Dissolve(0.2)
+    da 1 @S with Dissolve(0.3)
+    scene school_class_teacher_33 with Dissolve(0.2)
+    da 1 @S
+    scene school_class_teacher_34
+    ken 1 @Q
+    scene school_class_teacher_35 with Dissolve(0.2)
+    da 1 @S with Dissolve(0.3)
+    play sound skrip_stula volume 0.2
+    scene school_class_teacher_36 with Dissolve(0.2)
+    da 1 @S with Dissolve(0.3)
+    scene school_class_teacher_37 with dissolve
+    pause 1.6
+    scene school_class_teacher_38 with vpunch
+    da 1 @S with Dissolve(0.3)
+    if nastupil_nogu:
+        scene school_class_teacher_38_1
+        da 1 @S with Dissolve(0.3)
+        dai 1 @Q with Dissolve(0.3)
+        scene school_class_teacher_39 with dissolve
+        da 1 @S with Dissolve(0.3)
+    else:
+        scene school_class_teacher_38_2
+        da 1 @S with Dissolve(0.3)
+        scene school_class_teacher_39 with dissolve
+        da 1 @S with Dissolve(0.3)
+    menu:
+        @Q:
+            scene school_class_teacher_40
+            gg 3 @S with Dissolve(0.3)
+            scene school_class_teacher_41
+            pause 0.3
+            play sound padenie_hlama volume 0.6
+            pause 0.3
+            scene school_class_teacher_42 with vpunch
+            da 1 @S with Dissolve(0.1)
+            scene school_class_teacher_43
+            pause 0.5
+            play sound zahvat_1 volume 0.4
+            scene school_class_teacher_44 with dissolve
+            da 1 @S with Dissolve(0.1)
+        @Q:
+            scene school_class_teacher_40
+            gg 3 @S with Dissolve(0.3)
+            scene school_class_teacher_41
+            pause 0.3
+            play sound padenie_hlama volume 0.6
+            pause 0.3
+            scene school_class_teacher_42 with vpunch
+            da 1 @S with Dissolve(0.1)
+            scene school_class_teacher_43
+            pause 0.5
+            play sound zahvat_1 volume 0.4
+            scene school_class_teacher_44 with dissolve
+            da 1 @S with Dissolve(0.1)
+    play sound zahvat_2 volume 0.4
+    scene school_class_teacher_45 with hpunch
+    gg 3 @S with Dissolve(0.1)
+    play sound zahvat_2 volume 0.3
+    scene school_class_teacher_46 with hpunch
+    gg 3 @S with Dissolve(0.1)
+    scene school_class_teacher_47
+    iz 1 @S with Dissolve(0.1)
+    scene school_class_teacher_48
+    li 1 @S with Dissolve(0.1)
+    scene school_class_teacher_49
+    pause 1
+    scene school_class_teacher_50 with dissolve
+    pause 1
+    scene school_class_teacher_51 with dissolve
+    da 1 @S with Dissolve(0.3)
+    scene school_class_teacher_52
+    li 1 @S with Dissolve(0.3)
+    scene school_class_teacher_53
+    da 1 @S with Dissolve(0.3)
+    scene school_class_teacher_54
+    iz 1 @Q
+    scene school_class_teacher_55
+    li 1 @S with Dissolve(0.3)
+    scene school_class_teacher_56
+    da 1 @S with Dissolve(0.1)
+    play sound zahvat_2 volume 0.2
+    scene school_class_teacher_57 with Dissolve(0.2)
+    gg 3 @Q with Dissolve(0.3)
+    scene school_class_teacher_58
+    with Dissolve(0.2)
+    gg 3 @S with Dissolve(0.3)
+    scene school_class_teacher_59 with dissolve
+    da 1 @Q
+    scene school_class_teacher_60 with dissolve
+    da 1 @S with Dissolve(0.3)
+    scene school_class_teacher_61
+    mi 1 @Q with Dissolve(0.3)
+    mi @S
+    stop music fadeout 10
+    show black with dissolve
+    pause 1.6
+    
+
+    play music3 city_bird fadein 6
+    scene school_roof_da_0 with dissolve
+    pause 2.0
+    scene school_roof_da_1
+    pause 2.0
+    scene school_roof_da_2
+    da 1 @S with Dissolve(0.1)
+    scene school_roof_da_3 with Dissolve(0.3)
+    sh 1 @S with Dissolve(0.1)
+    scene school_roof_da_4 with Dissolve(0.3)
+    da 1 @S with Dissolve(0.3)
+    scene school_roof_da_5
+    da 1 @S with Dissolve(0.1)
+    scene school_roof_da_6 with Dissolve(0.3)
+    da 1 @S with Dissolve(0.1)
+    scene school_roof_da_7
+    ken 1 @S with Dissolve(0.3)
+    scene school_roof_da_8 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene school_roof_da_9 with Dissolve(0.3)
+    ken 1 @S with Dissolve(0.3)
+    scene school_roof_da_10
+    gg 3 @S with Dissolve(0.3)
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    $ renpy.music.set_volume(1, delay=3, channel=u@Q)
+    scene school_roof_da_11 with hpunch
+    bully1 1 @S
+    $ renpy.music.set_volume(0.3, delay=6, channel=u@Q)
+    play music march_on_utopia_loop_by_troyificus fadein 6 volume 0.7
+    show school_roof_da_12
+    bully1 1 @S with Dissolve(0.1)
+    bully1 1 @S
+    gg 3 @S with Dissolve(0.3)
+    gg 3 @S
+    bully1 1 @S
+    
+    $ timer_range = 10
+    $ timez = 10
+    $ timer_jump = @Q
+    show screen countdown
+    $ timeout_label = @Q
+    $ timeout = 10
+    menu:
+        bully1 1 @Q with Dissolve(0.3)
+        @Q:
+            hide screen countdown
+            bully1 1 @S with Dissolve(0.3)
+            bully1 1 @S
+        @Q:
+            hide screen countdown
+            bully1 1 @S with Dissolve(0.3)
+            bully1 1 @S
+            
+        @Q:
+            hide screen countdown
+            show school_roof_ebanat_win
+            pause 4.7
+            jump roof_boi
+
+label school_roof_ebanat_loose:
+    show school_roof_ebanat_loose
+    pause 5.0
+    jump roof_proebal
+    
+
+label roof_boi:
+
+    scene school_roof_boi_1 with Dissolve(0.2)
+    @Q
+    scene school_roof_boi_2 with hpunch
+    gg 3 @S
+    scene school_roof_boi_3
+    pause 1.6
+    scene school_roof_boi_4 with Dissolve(0.2)
+    da 1 @S with Dissolve(0.1)
+    scene school_roof_boi_5
+    gg 3 @S with Dissolve(0.3)
+    gg @S
+    gg @S
+    show fight_start
+    stop music fadeout 1.5
+    play music2 last_minute_failure_loop_by_troyificus fadein 2
+    play sound @Q volume 0.7
+    pause 1.2
+    
+
+label school_roof_boi_start:
+    $ timer_range = 3
+    $ timez = 3
+    $ timer_jump = @Q
+    
+    show screen countdown
+    call screen school_roof_boi_1()
+    jump roof_proebal
+
+
+label school_roof_boi_block:
+    $ timer_range = 1.5
+    $ timez = 1.5
+    $ timer_jump = @Q
+    
+    show fight_block
+    show screen countdown
+    call screen school_roof_boi_2()
+    
+    jump roof_proebal
+    
+
+label school_roof_boi_punch:
+    show fight_punch:
+        xalign 0.5 yalign 0.5
+        zoom 1.0
+        ease 2.0 zoom 1.02
+    pause 2.0
+    stop music2 fadeout 6
+    play music march_on_utopia_loop_by_troyificus fadein 13 volume 0.5
+    scene school_roof_boi_7 with vpunch
+    da 1 @S
+    scene school_roof_boi_8 with Dissolve(0.3)
+    da 1 @S with Dissolve(0.1)
+    scene school_roof_boi_9 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    play sound snial_obuv
+    scene school_roof_boi_10
+    @Q
+    scene school_roof_boi_9
+    gg 3 @S with Dissolve(0.1)
+    scene school_roof_boi_11
+    da 1 @S with Dissolve(0.1)
+    scene school_roof_boi_12
+    gg 3 @S with Dissolve(0.3)
+    gg @S
+    play sound2 whatsapp_roof
+    scene school_roof_boi_13
+    pause 1.6
+    scene school_roof_boi_14 with Dissolve(0.3)
+    pause 1.6
+    scene school_roof_boi_15 with Dissolve(0.3)
+    da 1 @S with Dissolve(0.3)
+    scene school_roof_boi_16
+    da 1 @S with Dissolve(0.3)
+    scene school_roof_boi_12
+    gg 3 @Q with Dissolve(0.3)
+    stop music fadeout 5
+    
+    jump roof_win
+
+
+label roof_proebal:
+
+    stop music fadeout 3
+    stop music2 fadeout 3
+    stop music3 fadeout 3
+    play sound @Q
+    scene black with dissolve
+    pause 1.6
+    $ draka_roof_loose = True
+    pause 1.0
+    show school_roof_loose_nm_1
+    pause 5.0
+    scene black with dissolve
+    mi 1 @Q with Dissolve(0.3)
+    pause 2.0
+    show school_roof_loose_nm_2
+    pause 5.0
+    pause 2.0
+    $ renpy.music.set_volume(0.3, delay=1, channel=u@Q)
+    play music3 city_bird volume 0.7 fadein 1
+    scene school_roof_loose_1 with dissolve
+    mi 1 @Q with Dissolve(0.3)
+    scene school_roof_loose_2 with dissolve
+    mi 1 @Q with Dissolve(0.3)
+    scene black with dissolve
+    $ renpy.music.set_volume(0, delay=3, channel=u@Q)
+    pause 1.6
+    gg 3 @Q with Dissolve(0.3)
+    pause 1.6
+    gg 3 @S with Dissolve(0.3)
+    $ renpy.music.set_volume(0.3, delay=1, channel=u@Q)
+    scene school_roof_loose_3 with dissolve
+    mi 1 @S with Dissolve(0.3)
+    scene school_roof_loose_4 with dissolve
+    mi 1 @S with Dissolve(0.3)
+    scene black with dissolve
+    $ renpy.music.set_volume(0, delay=1, channel=u@Q)
+    pause 1.6
+    $ renpy.music.set_volume(0.3, delay=1, channel=u@Q)
+    scene school_roof_loose_5 with vpunch
+    mi 1 @S with Dissolve(0.3)
+    $ renpy.music.set_volume(1, delay=3, channel=u@Q)
+    scene school_roof_loose_6 with dissolve
+    mi 1 @S with Dissolve(0.3)
+    scene school_roof_loose_7 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene school_roof_loose_8 with dissolve
+    mi 1 @S with Dissolve(0.3)
+    scene school_roof_loose_7 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene school_roof_loose_9
+    pause 1.3
+    scene school_roof_loose_10 with dissolve
+    pause 0.3
+    scene school_roof_loose_11 with dissolve
+    pause 1.3
+    scene school_roof_loose_12
+    pause 0.6
+    scene school_roof_loose_13 with dissolve
+    pause 1.3
+    scene school_roof_loose_14
+    pause 1.6
+    scene school_roof_loose_15 with dissolve
+    mi 1 @S with Dissolve(0.3)
+    stop music3 fadeout 2
+    scene black with dissolve
+    pause 2.0
+    play music japan_streets_2 volume 5.0 fadein 3
+    pause 1.0
+    scene outside_ken_0 with dissolve
+    @Q
+    scene outside_ken_1
+    play music japan_streets_1 volume 3.0
+    play sound @Q
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_2 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_3 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    play sound @Q
+    pause 1.0
+    scene outside_ken_4 with dissolve
+    play sound @Q
+    pause 2.3
+    scene outside_ken_5 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_6_loose with dissolve
+    gg 3 @S with Dissolve(0.3)
+
+    jump sujet_1
+
+
+
+label roof_win:
+
+    scene school_roof_pobedili_1 with fade
+    pause 2.0
+    $ renpy.music.set_volume(1, delay=3, channel=u@Q)
+    scene school_roof_pobedili_2 with fade
+    pause 2.0
+    scene school_roof_pobedili_3
+    mi 1 @S with Dissolve(0.1)
+    scene school_roof_pobedili_4 with dissolve
+    mi 1 @Q with Dissolve(0.3)
+    stop music3 fadeout 2
+    scene black with dissolve
+    pause 3.0
+    play music japan_streets_2 volume 5.0 fadein 3
+    pause 1.0
+    scene outside_ken_0 with dissolve
+    @Q
+    scene outside_ken_1
+    play music japan_streets_1 volume 3.0
+    play sound @Q
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_2 with dissolve
+    gg 3 @Q with Dissolve(0.3)
+    scene outside_ken_3 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    play sound @Q
+    pause 1.0
+    scene outside_ken_4 with dissolve
+    play sound @Q
+    pause 2.3
+    scene outside_ken_5 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_6_win with dissolve
+    gg 3 @S with Dissolve(0.3)
+    jump sujet_1
+
+
+label sujet_1:
+
+    scene outside_ken_7 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_8 with dissolve
+    gg 3 @Q with Dissolve(0.3)
+    scene outside_ken_9 with dissolve
+    pause 1.6
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_9_1 with dissolve
+    gg 3 @S
+    scene outside_ken_10 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_11 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_12 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    gg 3 @S
+    scene outside_ken_13 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_14 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_14_1
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_14_2
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_14_3
+    @Q
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_15
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_16 with dissolve
+    ken 2 @Q with Dissolve(0.3)
+    scene outside_ken_17 with dissolve
+    gg 3 @Q with Dissolve(0.3)
+    scene outside_ken_18 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_19 with dissolve
+    $ kens_question_about_girls = []
+    menu kens_question_about_girls:
+        set kens_question_about_girls
+        @Q:
+            gg 3 @S with Dissolve(0.3)
+            scene outside_ken_20 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_21 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_18 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_21 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_22 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_20 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_18 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_19 with dissolve
+            gg 3 @S with Dissolve(0.3)
+            scene outside_ken_22 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_21 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_18 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            $ kens_question_about_girls_point += 1
+            scene outside_ken_19 with dissolve
+            
+            jump kens_question_about_girls
+            
+        @Q:
+            gg 3 @S with Dissolve(0.3)
+            scene outside_ken_23 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_24 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_22 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            scene outside_ken_23 with dissolve
+            gg 3 @S with Dissolve(0.3)
+            scene outside_ken_25 with dissolve
+            ken 2 @S with Dissolve(0.3)
+            $ kens_question_about_girls_point += 1
+            scene outside_ken_19 with dissolve
+            
+            jump kens_question_about_girls
+        
+        @Q if kens_question_about_girls_point == 1:
+            pause 1.0
+    
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_23 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    
+    scene outside_ken_19 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_21 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_23 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_22 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_19 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    
+    scene outside_ken_26 with vpunch
+    may 3 @Q
+    scene outside_ken_27 with dissolve
+    may 3 @S with Dissolve(0.3)
+    scene outside_ken_28 with dissolve
+    pause 1
+    ken 2@S with Dissolve(0.3)
+    scene outside_ken_29
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_30 with dissolve
+    may 3 @S with Dissolve(0.3)
+    show outside_ken_29 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_31
+    pause 1.3
+    scene outside_ken_32 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_31 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_33 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_34 with dissolve
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_35 with Dissolve(0.3)
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_36 with dissolve
+    may 3 @S with Dissolve(0.3)
+    scene outside_ken_37 with Dissolve(0.3)
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_30 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene outside_ken_29 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_38 with Dissolve(0.3)
+    ken 2 @S with Dissolve(0.3)
+    scene outside_ken_39 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    scene outside_ken_40 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    stop music fadeout 5
+    scene black with dissolve
+    pause 2.0
+    play sound door_close
+    pause 1.0
+    play sound divan_sit
+    pause 1.0
+    scene sweethome_1 with Dissolve(2.0):
+        center
+        yalign 0.1
+        ease 5.0 yalign 0.8
+    play music love_ballad_2_by_frank_schroeter fadein 8
+    pause 2.0
+    scene sweethome_2 with Dissolve(1.0)
+    pause 1.0
+    scene sweethome_3 with Dissolve(0.3)
+    pause 1.0
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene sweethome_4 with Dissolve(0.3)
+    gg 3 @S
+    gg 3 @S
+    scene sweethome_l_1 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    
+    gg 3 @S
+    
+    gg 3 @S
+    scene sweethome_m_1 with Dissolve(0.3)
+    gg 3 @S with dissolve  
+    
+    gg 3 @S
+    gg 3 @S
+    
+    gg 3 @S
+    gg 3 @S
+    scene sweethome_5 with Dissolve(1.0):
+        xalign 0.5
+        yalign 0.3
+        zoom 1.2
+        ease 4.0 zoom 1
+    gg 3 @S with dissolve
+    scene sweethome_6 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene sweethome_7 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene sweethome_8 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    gg  3 @S
+
+    gg 3 @S
+    gg @S
+    
+    gg 3 @S
+    gg 3 @S
+    
+    gg 3 @S
+    gg 3 @S
+    
+    gg 3 @S
+    gg 3 @S
+    scene sweethome_8 with Dissolve(1.0)
+    pause 1.0
+    gg 3 @S with Dissolve(0.3)
+    scene sweethome_9 with Dissolve(0.3)
+    gg 3 @S
+    scene sweethome_10 with Dissolve(0.3)
+    gg 3 @S
+    scene sweethome_11 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene sweethome_12 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene sweethome_13 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene sweethome_12 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene sweethome_14 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene sweethome_15 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene sweethome_16 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    gg 3 @S
+    scene sweethome_17 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    may 3 @S
+    scene sweethome_18 with Dissolve(0.3)
+    may 3 @Q with Dissolve(0.3)
+    scene sweethome_19 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene sweethome_20 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.3)
+    scene sweethome_21 with Dissolve(0.3)
+    stop music
+    play sound oblom volume 0.3
+    may 3 @S
+    scene sweethome_22 with Dissolve(0.3)
+    gg 3 @S with Dissolve(0.1)
+    scene sweethome_23 with Dissolve(0.3)
+    may 3 @Q with Dissolve(0.3)
+    scene sweethome_24 with Dissolve(0.3)
+    may 3 @S with Dissolve(0.3)
+    scene sweethome_25 with Dissolve(0.3)
+    pause 1.6
+    gg 3 @S with Dissolve(0.3)
+    gg 3 @S
+    scene sweethome_26 with Dissolve(0.3)
+    play music may_shower_afterdoor
+    gg 3 @S
+    gg 3 @S
+    menu:
+        @S:
+            show sweethome_27 with Dissolve(0.1)
+            $ renpy.pause(7,hard=True)
+            play music2 may_shower_beforedoor fadein 3
+            $ renpy.pause(3,hard=True)
+            stop music fadeout 2
+            gg 3 @S with Dissolve(0.3)
+            gg 3 @S
+            menu:
+                @S:
+                    stop music
+                    show sweethome_shower_1 with dissolve
+                    $ renpy.pause(4.5, hard=True)
+                    show sweethome_shower_2 with dissolve
+                    gg 3 @S with Dissolve(0.3)
+                    gg 3 @S
+                    play music may_shower_close
+                    scene sweethome_shower_3 with Dissolve(0.5)
+                    gg 3 @S with Dissolve(0.3)
+                    scene sweethome_shower_4 with Dissolve(0.5)
+                    gg 3 @S with Dissolve(0.3)
+                    scene sweethome_shower_5 with Dissolve(0.5)
+                    gg 3 @S with Dissolve(0.3)
+                    scene sweethome_shower_6 with Dissolve(0.5)
+                    gg 3 @S with Dissolve(0.3)
+                    scene sweethome_shower_7 with Dissolve(0.5)
+                    gg 3 @S with Dissolve(0.3)
+                    gg 3 @S
+                    stop music
+                    show sweethome_shower_2 with dissolve
+                    gg 3 @S with Dissolve(0.3)
+                    gg 3 @S
+                    gg 3 @S
+                @Q:
+                    gg @S with Dissolve(0.3)
+                    gg @S
+                    gg @Q
+        @Q:
+            pause 0.1
+    gg 3 @S with Dissolve(0.3)
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    menu:
+        @S:
+            pause 0.1
+            jump home_go_alexxis
+        @S:
+            $ not_know_alexxis = True
+            $ jerkoffer = True
+            pause 0.1
+            scene black with dissolve
+            pause 2.0
+            jump sweethome_jo
+            
+        @S:
+            $ not_know_alexxis = True
+            gg 3 @S with Dissolve(0.3)
+            pause 0.1
+            scene black with dissolve
+            pause 2.0
+            jump home_gg_shower
+
+
+label sweethome_jo:
+    stop music fadeout 2
+    stop music2 fadeout 2
+    scene sweethome_jo_1 with dissolve:
+        center
+        zoom 1.2
+        ease 2 zoom 1
+    gg 3 @S with Dissolve(0.3)
+    scene sweethome_jo_2 with dissolve
+    gg 3 @S with Dissolve(0.3)
+    play music3 erotic_by_frank_schroeter volume 0.4
+    call screen sweethome_jo
+    jump home_gg_shower
+    
+label sweethome_jo1:
+    scene black with Dissolve(1.0)
+    show sweethome_jo1_1 with Dissolve(1.0)
+    play sound2 @S loop
+    @Q
+    show sweethome_jo1_2 with Dissolve(0.3)
+    hide sweethome_jo1_1
+    stop sound2 fadeout 1
+    play sound3 @S loop
+    @Q
+    show sweethome_jo1_3 with Dissolve(0.3)
+    hide sweethome_jo1_2
+    @Q
+    show sweethome_jo1_4 with Dissolve(0.3)
+    hide sweethome_jo1_3
+    stop sound3 fadeout 1
+    play sound2 @S loop
+    @Q
+    show sweethome_jo1_5 with Dissolve(0.3)
+    hide sweethome_jo1_4
+    @Q
+    show sweethome_jo1_6 with Dissolve(0.3)
+    hide sweethome_jo1_5
+    @Q
+    scene black with Dissolve(0.2)
+    show sweethome_jo1_6 with Dissolve(0.2)
+    $ renpy.pause(0.2, hard=True)
+    scene black with Dissolve(0.3)
+    show sweethome_jo1_6 with Dissolve(0.3)
+    $ renpy.pause(0.2, hard=True)
+    scene black with Dissolve(0.4)
+    $ renpy.pause(0.5, hard=True)
+    stop sound2 fadeout 1
+    show sweethome_jo1_7 with Dissolve(1.5)
+    $ renpy.pause(0.5, hard=True)
+    
+    $ sweethome_jo1_complete = True
+    $ persistent.sweethome_jo = True
+    $ persistent.sweethome_jo1 = True 
+    call screen sweethome_jo
+
+label sweethome_jo2:
+    scene black with Dissolve(1.0)
+    show sweethome_jo2_1 with Dissolve(1.0)
+    play sound2 @S loop
+    @Q
+    show sweethome_jo2_2 with Dissolve(0.3)
+    hide sweethome_jo2_1
+    @Q
+    show sweethome_jo2_3 with Dissolve(0.3)
+    hide sweethome_jo2_2
+    @Q
+    show sweethome_jo2_4 with Dissolve(0.3)
+    hide sweethome_jo2_3
+    @Q
+    show sweethome_jo2_5 with Dissolve(0.3)
+    hide sweethome_jo2_4
+    @Q
+    show sweethome_jo2_6 with Dissolve(0.3)
+    hide sweethome_jo2_5
+    stop sound2 fadeout 1
+    play sound3 @S loop
+    @Q
+    show sweethome_jo2_7 with Dissolve(0.3)
+    hide sweethome_jo2_6
+    @Q
+    stop sound3 fadeout 1
+    scene black with Dissolve(0.5)
+    $ renpy.pause(0.5, hard=True)
+    
+    show sweethome_jo2_8 with Dissolve(1.5)
+    $ renpy.pause(0.5, hard=True)
+    
+    $ sweethome_jo2_complete = True
+    $ persistent.sweethome_jo = True
+    $ persistent.sweethome_jo2 = True 
+    call screen sweethome_jo
+
+label sweethome_jo3:
+
+    scene black with Dissolve(1.0)
+    play music2 japan_streets_1 volume 0.4
+    play sound3 @S loop
+    show sweethome_jo3_1 with Dissolve(1.0)
+    @Q
+    show sweethome_jo3_2 with Dissolve(0.3)
+    hide sweethome_jo3_1
+    @Q
+    show sweethome_jo3_3 with Dissolve(0.3)
+    hide sweethome_jo3_2
+    @Q
+    show sweethome_jo3_4 with Dissolve(0.3)
+    hide sweethome_jo3_3
+    stop sound2 fadeout 1
+    play sound3 @S loop
+    @Q
+    show sweethome_jo3_5 with Dissolve(0.1)
+    hide sweethome_jo3_4
+    $ renpy.pause(5.0, hard=True)
+    scene black with Dissolve(0.2)
+    stop sound3 fadeout 1
+    $ renpy.pause(1.0, hard=True)
+    show sweethome_jo3_6 with Dissolve(1.5)
+    $ renpy.pause(0.5, hard=True)
+
+    $ sweethome_jo3_complete = True
+    $ persistent.sweethome_jo = True
+    $ persistent.sweethome_jo3 = True 
+    stop music2 fadeout 5
+    call screen sweethome_jo
+
+label sweethome_jo4:
+    play music2 japan_streets_1 volume 0.4
+    scene black with Dissolve(1.0)
+    play sound2 sweethome_jo4 loop
+    show sweethome_jo4_1 with Dissolve(1.0)
+    @Q
+    show sweethome_jo4_2 with Dissolve(0.3)
+    hide sweethome_jo4_1
+    @Q
+    show sweethome_jo4_3 with Dissolve(0.3)
+    hide sweethome_jo4_2
+    @Q
+    show sweethome_jo4_4 with Dissolve(0.3)
+    hide sweethome_jo4_3
+    @Q
+    scene black with Dissolve(0.5)
+    stop sound2 fadeout 1
+    $ renpy.pause(1.0, hard=True)
+    show sweethome_jo4_5 with Dissolve(1.5)
+    $ renpy.pause(0.5, hard=True)
+
+    $ sweethome_jo4_complete = True
+    $ persistent.sweethome_jo = True
+    $ persistent.sweethome_jo4 = True 
+    stop music2 fadeout 5
+    call screen sweethome_jo
+    
+
+label home_go_alexxis:
+    gg 3 @S with Dissolve(0.3)
+    gg 3 @S
+    gg 3 @S
+    stop music fadeout 4
+    stop music2 fadeout 4
+    scene black with dissolve
+    pause 2.0
+    play music japan_streets_1 volume 3.0 fadein 3
+    pause 1.0
+   
+    scene home_go_alexxis_1 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    gg 4 @S
+    scene home_go_alexxis_2 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    gg 4 @S
+    play sound car_signal_1
+    scene home_go_alexxis_3 with hpunch
+    taxidriver 1 @S
+    gg 4 @S with vpunch
+    scene home_go_alexxis_4 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene home_go_alexxis_5 with dissolve
+    taxidriver 1 @S with Dissolve(0.3)
+    taxidriver 1 @S
+    taxidriver 1 @S
+    scene home_go_alexxis_4 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene home_go_alexxis_6 with vpunch
+    taxidriver 1 @S
+    scene home_go_alexxis_4 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene home_go_alexxis_7 with dissolve
+    taxidriver 1 @S with Dissolve(0.3)
+    scene home_go_alexxis_8 with dissolve
+    taxidriver 1 @S with Dissolve(0.3)
+    scene home_go_alexxis_9 with dissolve
+    taxidriver 1 @S with Dissolve(0.3)
+    scene home_go_alexxis_4 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene home_go_alexxis_6 with vpunch
+    taxidriver 1 @S
+    play sound cardoor_closed
+    scene home_go_alexxis_10 with hpunch
+    play sound car_taxi_starter
+    pause 1.0
+    scene home_go_alexxis_11 with dissolve
+    pause 1.0
+    scene home_go_alexxis_12 with dissolve
+    pause 1.0
+    scene home_go_alexxis_13 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene home_go_alexxis_14 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene home_go_alexxis_15 with dissolve
+    play sound2 camaro_1969 volume 0.2
+    pause 1.0
+    scene home_go_alexxis_16 with dissolve
+    stop sound
+    play sound2 camaro_1969 volume 0.4
+    pause 1.0
+    play sound3 car_signal_2
+    scene home_go_alexxis_17 with vpunch
+    pause 2.0
+    scene home_go_alexxis_18
+    play music2 camaro_1969
+    pause 1.0
+    scene home_go_alexxis_19 with dissolve
+    pause 1.3
+    scene home_go_alexxis_20 with Dissolve(0.3)
+    pause 0.3
+    scene home_go_alexxis_21 with Dissolve(0.3)
+    pause 0.2
+    scene home_go_alexxis_22 with Dissolve(0.3)
+    pause 0.3
+    scene home_go_alexxis_21 with Dissolve(0.3)
+    pause 0.2
+    scene home_go_alexxis_22 with Dissolve(0.3)
+    pause 1.3
+    stop music
+    show home_go_alexxis_23 with Dissolve(0.1)
+    $ renpy.pause(10,hard=True)
+    play music2 camaro_1969
+    ja0 1 @Q with Dissolve(0.3)
+    scene home_go_alexxis_23_1
+    gg 4 @S with Dissolve(0.3)
+    ja0 1 @Q with Dissolve(0.3)
+    gg @S with Dissolve(0.3)
+    scene home_go_alexxis_24 with dissolve
+    ja0 1 @S with Dissolve(0.3)
+    stop music2 fadeout 3.2
+    play sound car_sit
+    scene black with dissolve
+    pause 1.6
+    play music camaro_1969 volume 0.5
+    scene home_go_alexxis_25 with dissolve
+    pause 2.0
+    scene home_go_alexxis_26 with dissolve
+    ja0 1 @S with Dissolve(0.3)
+    scene home_go_alexxis_27 with dissolve
+    ja0 1 @S with Dissolve(0.3)
+    scene home_go_alexxis_28 with dissolve
+    ja0 1 @S with Dissolve(0.3)
+    
+    scene home_go_alexxis_26 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    ja0 1 @S with Dissolve(0.3)
+    scene home_go_alexxis_29 with dissolve
+    pause 1.0
+    scene home_go_alexxis_30 with dissolve
+    pause 1.0
+    scene home_go_alexxis_31 with dissolve
+    ja0 1 @S with Dissolve(0.3)
+    menu:
+        @Q:
+            $ salam_jarabja = True
+            scene home_go_alexxis_32 with dissolve
+            gg 4 @S
+            scene home_go_alexxis_33 with dissolve
+            pause 0.3
+            play sound demon_moment
+            scene home_go_alexxis_34_1 with Dissolve(0.2)
+            pause 0.2
+            scene home_go_alexxis_34_2 with Dissolve(0.1)
+            pause 0.03
+            scene home_go_alexxis_34 with Dissolve(0.1)
+            pause 0.1
+            stop sound fadeout 6
+            scene home_go_alexxis_33 with dissolve
+            pause 0.3
+            scene home_go_alexxis_35 with Dissolve(0.2)
+            pause 1.0
+            gg 4 @S with Dissolve(0.1)
+            play sound heart_bass
+            scene home_go_alexxis_36 with dissolve
+            ja 1 @S with Dissolve(0.3)
+            scene home_go_alexxis_37 with dissolve
+            gg 4 @S with Dissolve(0.3)
+            stop sound fadeout 6
+            gg @S with Dissolve(0.3)
+        @Q:
+            gg 4 @Q
+            scene home_go_alexxis_38 with dissolve
+            ja 1 @Q with Dissolve(0.3)
+            gg 4 @S with Dissolve(0.3)
+    scene home_go_alexxis_39 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene home_go_alexxis_40 with dissolve
+    ja 1 @Q with Dissolve(0.3)
+    scene home_go_alexxis_41 with dissolve
+    ja 1 @S with Dissolve(0.3)
+    stop music fadeout 5
+    scene black with dissolve
+    pause 2.6
+    
+    
+    play music camaro_1969
+    scene alexxis_1 with dissolve
+    pause 1.0
+    gg 4 @S with Dissolve(0.3)
+    ja 1 @S with Dissolve(0.3)
+    gg @S with Dissolve(0.3)
+    ja @S with Dissolve(0.3)
+    gg @S with Dissolve(0.3)
+    stop music fadeout 5
+    play sound car_sit
+    scene black with dissolve
+    pause 5.0
+    play music cocktails_and_lobsters_by_alexander_nakarada
+    scene alexxis_2 with dissolve
+    pause 1.0
+    gg 4 @S with dissolve
+    gg 4 @S
+    show alexxis_3 with Dissolve(0.1)
+    $ renpy.pause(8,hard=True)
+    scene alexxis_4 with dissolve
+    gg 4 @S with dissolve
+    gg @S with dissolve
+    gg @S with dissolve
+    show alexxis_5 with Dissolve(0.1)
+    $ renpy.pause(1,hard=True)
+    scene alexxis_7 with Dissolve(0.6)
+    so 1 @S with dissolve
+    scene alexxis_8 with dissolve
+    so 1 @S with dissolve
+    show alexxis_9 with Dissolve(0.3)
+    gg 4 @S with dissolve
+    gg 4 @S
+    scene alexxis_10 with dissolve
+    so 1 @S with dissolve
+    scene alexxis_11 with dissolve
+    so 1 @S with dissolve
+    scene alexxis_12 with dissolve
+    so 1 @S with dissolve
+    gg 4 @S with dissolve
+    gg @S
+    gg @S
+    scene alexxis_13 with dissolve
+    so 1 @S with dissolve
+    scene alexxis_14 with dissolve
+    pause 0.6
+    scene alexxis_14_1 with Dissolve(0.3)
+    so 1 @S with dissolve
+    show alexxis_9 with dissolve
+    gg 4 @S with dissolve
+    gg 4 @S with dissolve
+    scene alexxis_15 with dissolve
+    so 1 @S with dissolve
+    scene alexxis_16 with dissolve
+    so 1 @S with dissolve
+    scene alexxis_10 with dissolve
+    so 1 @S with dissolve
+    scene alexxis_17 with dissolve
+    so 1 @S with dissolve
+    $ sophia_unlock = True
+    scene black with dissolve
+    pause 1.0
+    so 1 @S with dissolve
+    scene alexxis_18 with dissolve
+    show alexxis_19 with Dissolve(0.1)
+    $ renpy.pause(8,hard=True)
+    scene alexxis_20 with dissolve
+    scene alexxis_20 with dissolve
+    so 1 @Q with dissolve
+    scene alexxis_21 with dissolve
+    so 1 @Q with dissolve
+    scene alexxis_22 with dissolve
+    so 1 @S with dissolve
+    $ persistent.gallery_alexxis = True 
+    scene alexxis_23
+    so 1 @S with dissolve
+    scene alexxis_24
+    olivia 1 @S with dissolve
+    scene alexxis_25 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_26 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_27 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_24 with dissolve
+    olivia 1 @S with dissolve
+    $ olivia_unlock = True
+    scene alexxis_28 with dissolve
+    yumiko 1 @S with dissolve
+    scene alexxis_29 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_30 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_31 with dissolve
+    yumiko 1 @S with dissolve
+    scene alexxis_32 with dissolve
+    yumiko 1 @S with dissolve
+    scene alexxis_33 with dissolve
+    yumiko 1 @S with dissolve
+    scene alexxis_34 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_35 with dissolve
+    yumiko 1 @S with dissolve
+    $ yumiko_unlock = True
+    gg 4 @S with dissolve
+    call screen olivia_or_yumiko with dissolve
+
+label alexxis_olivia:
+
+    scene alexxis_o_1
+    gg 4 @Q with dissolve
+    scene alexxis_o_2 with dissolve
+    gg 4 @Q with dissolve
+    scene alexxis_o_3 with dissolve
+    olivia 1 @Q with dissolve
+    scene alexxis_o_4 with dissolve
+    olivia 1 @Q with dissolve
+    scene alexxis_o_5
+    so 1 @Q with dissolve
+    scene alexxis_o_6 with dissolve
+    so 1 @Q with dissolve
+    scene alexxis_o_7
+    olivia 1 @Q with dissolve
+    stop music fadeout 3
+    scene black with dissolve
+    pause 3.3
+    jump alexxis_olivia_1
+
+label alexxis_olivia_1:
+
+    scene alexxis_o_8 with dissolve
+    play music erotic_by_frank_schroeter volume 0.5
+    olivia 1 @S with dissolve
+    scene alexxis_o_9 with dissolve
+    olivia 1 @S with dissolve
+    play sound divan_sit
+    scene alexxis_o_10 with dissolve
+    gg 4 @S with dissolve
+    scene alexxis_o_11 with dissolve
+    olivia 1 @Q with dissolve
+    scene alexxis_o_12 with dissolve
+    gg 4 @Q with dissolve
+    scene alexxis_o_13 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_o_14 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_o_12 with dissolve
+    gg 4 @S with dissolve
+    scene alexxis_o_15 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_o_16 with dissolve
+    gg 4 @S with dissolve
+    scene alexxis_o_17 with dissolve
+    olivia 1 @Q with dissolve
+    scene alexxis_o_18 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_o_19 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_o_20 with dissolve
+    pause 1.0
+    gg 4 @S with dissolve
+    scene alexxis_o_21 with dissolve
+    gg 4 @S with dissolve
+    show alexxis_o_22 with Dissolve(0.1)
+    @Q
+    scene alexxis_o_23 with Dissolve(0.1)
+    olivia 1 @S with dissolve
+    scene alexxis_o_24 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_o_25 with dissolve
+    pause 1.0
+    gg 4 @S with dissolve
+    scene alexxis_o_26 with dissolve
+    pause 1.0
+    scene alexxis_o_27 with dissolve
+    pause 1.0
+    gg 4 @S with dissolve
+    show alexxis_o_28 with Dissolve(0.3)
+    pause 1.0
+    gg 4 @S with dissolve
+    scene alexxis_o_27 with dissolve
+    pause 1.0
+    gg 4 @S with dissolve
+    show alexxis_o_28 with Dissolve(0.3)
+    pause 0.6
+    gg 4 @S  with dissolve
+    scene alexxis_o_29 with dissolve
+    pause 0.6
+    gg 4 @S with dissolve
+    show alexxis_o_30 with Dissolve(0.3)
+    pause 0.6
+    olivia 1 @Q with dissolve
+    scene alexxis_o_24 with dissolve
+    olivia 1 @Q with dissolve
+    scene alexxis_o_31 with dissolve
+    olivia 1 @Q with dissolve
+    scene alexxis_o_32 with dissolve
+    olivia 1 @S with dissolve
+    scene alexxis_o_33 with dissolve
+    pause 1.0
+    gg 4 @S with dissolve
+    scene alexxis_o_34 with dissolve
+    olivia 1 @S with dissolve
+    play sound clothes_1
+    scene black with dissolve
+    pause 2.0
+    play sound clothes_2
+    show alexxis_o_35 with dissolve
+    olivia 0 @S with dissolve
+    show alexxis_o_36 with Dissolve(0.1)
+    $ renpy.pause(2.9,hard=True)
+    scene alexxis_o_37 with Dissolve(0.6)
+    olivia 0 @S
+    scene alexxis_o_38 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_o_39 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_40 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_o_41 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_42 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_43 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_o_44 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_45 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_46 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_47 with dissolve
+    olivia 0 @S with dissolve
+    show alexxis_o_48 with Dissolve(0.1)
+    @Q
+    show alexxis_o_48_1 with Dissolve(0.1)
+    hide alexxis_o_48
+    @Q
+    show alexxis_o_48_2 with Dissolve(0.1)
+    hide alexxis_o_48_1
+    @Q
+    show alexxis_o_49 with Dissolve(0.1)
+    hide alexxis_o_48_2
+    @Q
+    gg 0 @S with dissolve
+    @Q
+    gg 0 @S with dissolve
+    pause 1.0
+    scene black with dissolve
+    pause 0.3
+    show alexxis_o_50 with dissolve
+    @Q
+    gg 0 @S with dissolve
+    @Q
+    gg 0 @S with dissolve
+    scene black with dissolve
+    pause 0.3
+    show alexxis_o_50 with dissolve
+    pause 0.3
+    scene black with dissolve
+    pause 0.6
+    play sound cumming
+    scene alexxis_o_51 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_52 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_53 with dissolve
+    pause 1.6
+    scene alexxis_o_54 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_55 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_56 with dissolve
+    pause 1.0
+    gg 0 @S with dissolve
+    scene alexxis_o_52 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_57 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_58 with dissolve
+    olivia 0 @Q with dissolve
+    scene alexxis_o_59 with dissolve
+    pause 1.0
+    scene alexxis_o_60 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_o_61 with dissolve
+    pause 1.0
+    scene alexxis_o_62 with dissolve
+    gg 0 @S
+    scene alexxis_o_63 with dissolve
+    pause 1.0
+    scene alexxis_o_64 with dissolve
+    olivia 0 @Q with dissolve
+    scene alexxis_o_65 with dissolve
+    gg 0 @Q with dissolve
+    scene alexxis_o_66 with dissolve
+    pause 2.0
+    scene alexxis_o_67 with dissolve
+    pause 1.0
+    scene alexxis_o_68 with dissolve
+    pause 1.0
+    olivia 0 @S with dissolve
+    scene alexxis_o_69 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_o_70 with dissolve
+    pause 1.0
+    scene alexxis_o_71 with dissolve
+    pause 1.6
+    scene alexxis_o_72 with dissolve
+    pause 1.0
+    show alexxis_o_73 with Dissolve(0.1)
+    @Q
+    gg 0 @S with dissolve
+    @Q
+    show alexxis_o_74 with Dissolve(0.1)
+    hide alexxis_o_73
+    gg 0 @S with dissolve
+    pause 1.0
+    olivia 0 @Q with dissolve
+    pause 1.0
+    show alexxis_o_75 with Dissolve(0.1)
+    hide alexxis_o_74
+    @Q
+    gg 0 @S with dissolve
+    @Q
+    gg 0 @S with dissolve
+    @Q
+    scene black with dissolve
+    pause 0.6
+    play sound divan_vstal volume 0.7
+    pause 1.6
+    
+    scene alexxis_o_76 with Dissolve(0.1)
+    gg 0 @S with Dissolve(0.1)
+    olivia 0 @Q with dissolve
+    scene alexxis_o_77 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_78 with dissolve
+    gg 0 @S with dissolve
+    pause 1.0
+    olivia 0 @Q with dissolve
+    scene alexxis_o_79 with dissolve
+    pause 1.6
+    scene alexxis_o_80 with dissolve
+    pause 0.6
+    show alexxis_o_81 with Dissolve(0.1)
+    @Q
+    olivia 0 @Q
+    @Q
+    show alexxis_o_82 with Dissolve(0.1)
+    hide alexxis_o_81
+    pause 1.0
+    gg 0 @S with dissolve
+    @Q
+    gg 0 @Q with dissolve
+    pause 0.6
+    show alexxis_o_83 with Dissolve(0.1)
+    hide alexxis_o_82
+    @Q
+    show alexxis_o_84 with Dissolve(0.1)
+    hide alexxis_o_83
+    @Q
+    gg 0 @S with dissolve
+    @Q
+    show alexxis_o_83 with Dissolve(0.1)
+    hide alexxis_o_84
+    pause 2.0
+    gg 0 @S with dissolve
+    scene black with dissolve
+    pause 0.3
+    show alexxis_o_83 with dissolve
+    pause 0.6
+    scene black with dissolve
+    pause 1.0
+    show alexxis_o_85 with Dissolve(0.1)
+    play sound cumming
+    pause 5.0
+    show alexxis_o_86 with Dissolve(0.1)
+    play sound cumming
+    pause 5.0
+    scene black with dissolve
+    pause 0.3
+    scene alexxis_o_87 with dissolve
+    olivia 0 @S with dissolve
+    pause 1.0
+    scene alexxis_o_88 with dissolve
+    olivia 0 @S with dissolve
+    pause 1.0
+    scene alexxis_o_89 with dissolve
+    olivia 0 @Q with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_o_90 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_91 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_92 with dissolve
+    olivia 0 @S with dissolve
+    scene black with dissolve
+    play sound divan_sit
+    pause 1.0
+    scene alexxis_o_93 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_o_94 with dissolve
+    olivia 0 @S with dissolve
+    scene alexxis_o_95 with dissolve
+    olivia 0 @S with dissolve
+    $ persistent.gallery_olivia_unlock_1 = True 
+    show alexxis_o_93
+    call screen olivia_sex_choice
+    
+label alexxis_olivia_sex_1:
+
+    $ alexxis_olivia_choice_sex_1 += 1
+
+    if alexxis_olivia_choice_sex_2 == 0: 
+        gg 0 @S with dissolve
+        scene black with dissolve
+        pause 2.0
+        show alexxis_o_sex1_1 with Dissolve(0.1)
+        olivia 0 @Q with dissolve
+        show alexxis_o_sex1_2 with Dissolve(0.1)
+        hide alexxis_o_sex1_1
+        gg 0 @S with dissolve
+        olivia @Q with dissolve
+        show alexxis_o_sex1_3 with Dissolve(0.1)
+        hide alexxis_o_sex1_2
+        gg 0 @S with dissolve
+        show alexxis_o_sex1_4 with Dissolve(0.1)
+        hide alexxis_o_sex1_3
+        olivia 0 @S with dissolve
+        gg 0 @S with dissolve
+        gg 0 @S with dissolve
+        show alexxis_o_sex1_5 with Dissolve(0.1)
+        hide alexxis_o_sex1_4
+        @Q
+        show alexxis_o_sex1_1 with Dissolve(0.1)
+        hide alexxis_o_sex1_5
+        @Q
+        gg 0 @S with dissolve
+        show alexxis_o_sex1_6 with Dissolve(0.1)
+        hide alexxis_o_sex1_1
+        olivia 0 @Q with dissolve
+        @Q
+        olivia 0 @Q with dissolve
+        gg 0 @S with dissolve
+        show alexxis_o_sex1_7 with Dissolve(0.1)
+        hide alexxis_o_sex1_6
+        pause 0.4
+        play sound cumming
+        scene black with Dissolve(0.1)
+        pause 0.6
+        show alexxis_o_sex1_8 with Dissolve(0.3)
+        @Q
+        $ persistent.gallery_olivia_unlock_2 = True 
+        call screen olivia_sex_choice
+    
+    if alexxis_olivia_choice_sex_2 == 1:
+
+        scene black with dissolve
+        pause 2.0
+        
+        show alexxis_o_sex1_1
+        olivia 0 @S with dissolve
+        show alexxis_o_sex1_2 with Dissolve(0.1)
+        hide alexxis_o_sex1_1
+        gg 0 @S with dissolve
+        olivia 0 @S with dissolve
+        show alexxis_o_sex1_3 with Dissolve(0.1)
+        hide alexxis_o_sex1_2
+        @Q
+        show alexxis_o_sex1_4 with Dissolve(0.1)
+        hide alexxis_o_sex1_3
+        olivia 0 @Q with dissolve
+        gg 0 @Q with dissolve
+        @Q
+        show alexxis_o_sex1_5 with Dissolve(0.1)
+        hide alexxis_o_sex1_4
+        @Q
+        show alexxis_o_sex1_1 with Dissolve(0.1)
+        hide alexxis_o_sex1_5
+        @Q
+        gg 0 @S with dissolve
+        show alexxis_o_sex1_6 with Dissolve(0.1)
+        hide alexxis_o_sex1_1
+        olivia 0 @S with dissolve
+        @Q
+        olivia 0 @S with dissolve
+        gg 0 @Q with dissolve
+        show alexxis_o_sex1_7 with Dissolve(0.1)
+        hide alexxis_o_sex1_6
+        pause 0.5
+        play sound cumming
+        scene black with Dissolve(0.1)
+        pause 0.6
+        show alexxis_o_sex1_8 with Dissolve(0.3)
+        @Q
+        $ persistent.gallery_olivia_unlock_2 = True 
+        jump alexxis_olivia_exit
+        
+    
+label alexxis_olivia_sex_2:
+
+    $ alexxis_olivia_choice_sex_2 += 1
+    
+    if alexxis_olivia_choice_sex_1 == 0:
+        gg 0 @Q with dissolve
+        scene black with dissolve
+        pause 2.0
+        show alexxis_o_sex2_1 with Dissolve(0.1)
+        olivia 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_2 with Dissolve(0.1)
+        hide alexxis_o_sex2_1
+        gg 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_3 with Dissolve(0.1)
+        hide alexxis_o_sex2_2
+        gg 0 @S with dissolve
+        @Q
+        olivia 0 @S with dissolve
+        show alexxis_o_sex2_4 with Dissolve(0.1)
+        hide alexxis_o_sex2_3
+        gg 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_5 with Dissolve(0.1)
+        hide alexxis_o_sex2_4
+        olivia 0 @Q with dissolve
+        @Q
+        show alexxis_o_sex2_1 with Dissolve(0.1)
+        hide alexxis_o_sex2_5
+        gg 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_6 with Dissolve(0.1)
+        hide alexxis_o_sex2_1
+        pause 2.0
+        gg 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_7 with Dissolve(0.1)
+        hide alexxis_o_sex2_6
+        gg 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_8 with Dissolve(0.1)
+        hide alexxis_o_sex2_7
+        olivia 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_9 with Dissolve(0.1)
+        hide alexxis_o_sex2_8
+        @Q
+        show alexxis_o_sex2_10 with Dissolve(0.1)
+        hide alexxis_o_sex2_9
+        @Q
+        show alexxis_o_sex2_6 with Dissolve(0.1)
+        hide alexxis_o_sex2_10
+        pause 2.0
+        olivia 0 @S with dissolve
+        gg 0 @S with dissolve
+        @Q
+        olivia 0 @S
+        gg 0 @S
+        olivia 0 @S
+        @Q
+        gg 0 @S with dissolve
+        show alexxis_o_sex2_11 with Dissolve(0.1)
+        hide alexxis_o_sex2_6
+        pause 3.0
+        show alexxis_o_sex2_12 with Dissolve(0.1)
+        hide alexxis_o_sex2_11
+        @Q
+        $ persistent.gallery_olivia_unlock_3 = True 
+        call screen olivia_sex_choice
+        
+    if alexxis_olivia_choice_sex_1 == 1:
+        scene black with dissolve
+        pause 2.0
+        show alexxis_o_sex2_1_1 with Dissolve(0.1)
+        olivia 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_2 with Dissolve(0.1)
+        hide alexxis_o_sex2_1_1
+        gg 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_3 with Dissolve(0.1)
+        hide alexxis_o_sex2_2
+        gg 0 @S with dissolve
+        @Q
+        olivia 0 @Q with dissolve
+        show alexxis_o_sex2_4 with Dissolve(0.1)
+        hide alexxis_o_sex2_3
+        @Q
+        show alexxis_o_sex2_5 with Dissolve(0.1)
+        hide alexxis_o_sex2_4
+        olivia 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_1_1 with Dissolve(0.1)
+        hide alexxis_o_sex2_5
+        @Q
+        gg 0 @Q with dissolve
+        show alexxis_o_sex2_6_1 with Dissolve(0.1)
+        hide alexxis_o_sex2_1_1
+        pause 2.0
+        gg 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_7 with Dissolve(0.1)
+        hide alexxis_o_sex2_6_1
+        @Q
+        show alexxis_o_sex2_8 with Dissolve(0.1)
+        hide alexxis_o_sex2_7
+        olivia 0 @S with dissolve
+        pause 1.0
+        olivia 0 @S with dissolve
+        @Q
+        show alexxis_o_sex2_9_1 with Dissolve(0.1)
+        hide alexxis_o_sex2_8
+        @Q
+        show alexxis_o_sex2_10 with Dissolve(0.1)
+        hide alexxis_o_sex2_9_1
+        @Q
+        show alexxis_o_sex2_6_1 with Dissolve(0.1)
+        hide alexxis_o_sex2_10
+        pause 2.0
+        @Q
+        gg 0 @S
+        show alexxis_o_sex2_11_1 with Dissolve(0.1)
+        hide alexxis_o_sex2_6_1
+        pause 3.0
+        show alexxis_o_sex2_12_1 with Dissolve(0.1)
+        hide alexxis_o_sex2_11_1
+        @Q
+        $ persistent.gallery_olivia_unlock_3 = True 
+        jump alexxis_olivia_exit
+    
+label alexxis_olivia_exit:
+
+    scene black with dissolve
+    stop music fadeout 6.0
+    pause 3.6
+    scene alexxis_olivia_exit_1 with dissolve
+    pause 0.6
+    scene alexxis_olivia_exit_2 with dissolve
+    olivia 0 @S with Dissolve(0.3)
+    scene alexxis_olivia_exit_3 with dissolve
+    olivia 0 @S with Dissolve(0.3)
+    scene black with dissolve
+    pause 1.0
+    
+            
+    jump sujet_2
+
+label alexxis_yumiko:
+
+    scene alexxis_y_1
+    gg 4 @S
+    scene alexxis_y_2 with dissolve
+    gg 4 @S
+    scene alexxis_y_3
+    so 1 @S
+    scene alexxis_y_4 with dissolve
+    so 1 @S
+    scene alexxis_y_5
+    so 1 @S
+    scene alexxis_y_6
+    yumiko 1 @S
+    scene alexxis_y_7 with dissolve
+    yumiko 1 @S
+    scene alexxis_y_8
+    so 1 @S
+    scene alexxis_y_9 with dissolve
+    so 1 @S
+    scene alexxis_y_10 with dissolve
+    gg 4 @S
+    scene black with dissolve
+    pause 1.0
+    scene alexxis_y_11 with dissolve
+    pause 2.6
+    scene alexxis_y_12
+    so 1 @S
+    scene alexxis_y_13
+    so 1 @S
+    stop music fadeout 3
+    scene black with dissolve
+    pause 3.0
+    scene alexxis_y_14 with dissolve
+    play music erotic_by_frank_schroeter volume 0.4
+    yumiko 2 @S with dissolve
+    show alexxis_y_15 with Dissolve(0.1)
+    $ renpy.pause(2.7,hard=True)
+    scene alexxis_y_16 with dissolve
+    yumiko 2 @S with dissolve
+    play sound oblom volume 0.2
+    stop music
+    scene alexxis_y_17 with hpunch
+    ry0 0 @S
+    scene alexxis_y_18 with Dissolve(0.1)
+    play music marty_gots_a_plan_by_kevin_macleod volume 0.7
+    ry0 1 @S with Dissolve(0.3)
+    scene black with dissolve
+    pause .3
+    show alexxis_y_19 with Dissolve(0.3)
+    gg 4 @S with Dissolve(0.3)
+    gg 4 @S
+    show alexxis_y_20 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    hide alexxis_y_20 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    show alexxis_y_21 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene alexxis_y_22 with dissolve
+    ry 1 @S with Dissolve(0.3)
+    scene alexxis_y_23 with dissolve
+    ry 1 @S with Dissolve(0.3)
+    scene alexxis_y_24 with dissolve
+    ry 1 @S with Dissolve(0.3)
+    show alexxis_y_25 with Dissolve(0.1)
+    $ renpy.pause(1,hard=True)
+    scene alexxis_y_26 with dissolve
+    yumiko 2 @Q with dissolve
+    gg 4 @S with dissolve
+    show alexxis_y_27 with Dissolve(0.1)
+    $ renpy.pause(0.5,hard=True)
+    ry 1 @S with Dissolve(0.1)
+    scene alexxis_y_28 with dissolve
+    ry 1 @S with Dissolve(0.3)
+    show alexxis_y_29 with dissolve
+    menu:
+        @Q:
+            $ renpy.notify(@Q)
+            scene alexxis_y_30_1 with dissolve
+            ry 1 @S with Dissolve(0.3)
+            $ aksha += 1000
+            scene alexxis_y_31_1 with dissolve
+            ry 1 @S with Dissolve(0.3)
+            scene black with dissolve
+            stop music fadeout 5
+            pause 2.0
+            scene alexxis_y_32_1 with dissolve
+            ry 1 @S with Dissolve(0.3)
+            scene alexxis_y_33_1 with dissolve
+            gg 4 @S with Dissolve(0.3)
+            gg 4 @S
+            gg 4 @S
+            pause 1.0
+            scene alexxis_y_34_1 with dissolve
+            gg 4 @S with Dissolve(0.3)
+            scene black with dissolve
+            pause 2.0
+            scene alexxis_yo_1 with dissolve
+            pause 0.6
+            gg 4 @S with Dissolve(0.3)
+            jump alexxis_olivia_1
+            
+        @Q:
+            $ yumiko_ry = True
+            scene alexxis_y_30 with vpunch
+            gg 4 @S with dissolve
+            show alexxis_y_19 with dissolve
+            gg 4 @S with Dissolve(0.3)
+            show alexxis_y_21 with dissolve
+            gg 4 @S with Dissolve(0.3)
+            hide alexxis_y_21 with dissolve
+            ry 1 @Q with dissolve
+            scene alexxis_y_31 with dissolve
+            ry 1 @S with Dissolve(0.3)
+            scene alexxis_y_32 with dissolve
+            ry 1 @S with Dissolve(0.3)
+            scene black with dissolve
+            pause 1.0
+            scene alexxis_y_33 with dissolve
+            ry 1 @S with Dissolve(0.3)
+            play sound door_close_power
+            scene alexxis_y_34 with vpunch
+            stop music fadeout 5
+            gg 4 @S
+    scene black with dissolve
+    pause 1.0
+    scene alexxis_y_35 with dissolve
+    play music erotic_by_frank_schroeter fadein 5 volume 0.4
+    yumiko 2 @S with dissolve
+    scene alexxis_y_36 with dissolve
+    yumiko 2 @S with dissolve
+    scene alexxis_y_37 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_38 with dissolve
+    gg 4 @S with dissolve
+    scene alexxis_y_39 with dissolve
+    yumiko 2 @S with dissolve
+    scene alexxis_y_40 with dissolve
+    pause 1.0
+    scene alexxis_y_41 with dissolve
+    pause 2.0
+    scene alexxis_y_42 with dissolve
+    pause 2.0
+    scene black with dissolve
+    pause 1.0
+    scene alexxis_y_43 with dissolve
+    pause 1.0
+    yumiko 2 @S with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_y_44 with Dissolve(0.1)
+    yumiko 2 @S with dissolve
+    scene alexxis_y_45 with Dissolve(0.1)
+    yumiko 2 @S with dissolve
+    scene alexxis_y_46 with dissolve
+    yumiko 2 @S with dissolve
+    scene alexxis_y_47 with Dissolve(0.1)
+    yumiko 2 @S with dissolve
+    scene alexxis_y_48 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_y_49 with dissolve
+    pause 1.6
+    scene alexxis_y_50 with dissolve
+    pause 1.6
+    scene alexxis_y_51 with dissolve
+    pause 1.6
+    scene alexxis_y_52 with dissolve
+    pause 1.6
+    scene alexxis_y_53 with dissolve
+    yumiko 2 @S with dissolve
+    scene alexxis_y_54 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_y_55 with dissolve
+    yumiko 2 @S with dissolve
+    scene black with dissolve
+    pause 1.0
+    scene alexxis_y_56 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_57 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_58 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_59 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_60 with dissolve
+    pause 1.0
+    scene alexxis_y_59 with dissolve
+    pause 1.0
+    scene alexxis_y_61 with dissolve
+    yumiko 2 @S with dissolve
+    scene alexxis_y_62 with dissolve
+    gg 0 @S with dissolve
+    scene alexxis_y_63 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_64 with dissolve
+    pause 1.0
+    show alexxis_y_65 with dissolve
+    gg 0 @Q with dissolve
+    @Q
+    show alexxis_y_66 with dissolve
+    hide alexxis_y_65
+    @Q
+    gg 0 @Q with dissolve
+    @Q
+    show alexxis_y_67 with dissolve
+    hide alexxis_y_66
+    pause 1.0
+    @Q
+    gg 0 @Q with dissolve
+    @Q
+    gg 0 @S with dissolve
+    show alexxis_y_68 with dissolve
+    hide alexxis_y_67
+    yumiko 2 @S with dissolve
+    @Q
+    gg 0 @Q with dissolve
+    scene black with dissolve
+    pause 0.1
+    show alexxis_y_68 with dissolve
+    pause 0.5
+    scene black with dissolve
+    pause 0.3
+    show alexxis_y_68 with dissolve
+    pause 0.2
+    scene black with dissolve
+    play sound cumming
+    scene alexxis_y_69 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_70 with dissolve
+    @Q
+    scene alexxis_y_71 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_72 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_73 with dissolve
+    pause 0.6
+    scene alexxis_y_74 with dissolve
+    pause 0.6
+    scene alexxis_y_75 with dissolve
+    pause 0.6
+    scene alexxis_y_76 with dissolve
+    pause 0.6
+    gg 0 @Q with dissolve
+    scene alexxis_y_77 with dissolve
+    pause 0.6
+    gg 0 @Q with dissolve
+    scene alexxis_y_78 with dissolve
+    yumiko 2 @Q with dissolve
+    scene alexxis_y_79 with dissolve
+    gg 0 @Q with dissolve
+    scene alexxis_y_80 with dissolve
+    pause 0.3
+    scene alexxis_y_79 with dissolve
+    pause 0.2
+    scene alexxis_y_80 with dissolve
+    pause 0.1
+    scene alexxis_y_79 with dissolve
+    pause 0.2
+    scene alexxis_y_81 with dissolve
+    pause 1.0
+    gg 0 @Q with dissolve
+    scene alexxis_y_82 with dissolve
+    pause 1.0
+    scene alexxis_y_83 with dissolve
+    pause 1.0
+    scene alexxis_y_84 with dissolve
+    pause 0.3
+    scene alexxis_y_85 with dissolve
+    pause 1.0
+    scene alexxis_y_86 with dissolve
+    pause 0.6
+    scene alexxis_y_87 with dissolve
+    pause 1.0
+    scene alexxis_y_88 with dissolve
+    gg 0 @Q with dissolve
+    scene alexxis_y_89 with dissolve
+    pause 1.0
+    scene alexxis_y_90 with dissolve
+    pause 1.0
+    scene alexxis_y_91 with dissolve
+    pause 0.6
+    scene alexxis_y_92 with dissolve
+    pause 0.3
+    gg 0 @Q with dissolve
+    scene alexxis_y_93 with dissolve
+    pause 0.6
+    yumiko 2 @Q with dissolve
+    gg 0 @Q with dissolve
+    scene alexxis_y_94 with dissolve
+    yumiko 2 @Q with dissolve
+    pause 1.0
+    scene alexxis_y_95 with dissolve
+    pause 1.0
+    scene alexxis_y_96 with dissolve
+    @Q
+    scene black with dissolve
+    pause 1.0
+    scene alexxis_y_97 with dissolve
+    @Q
+    scene alexxis_y_98 with dissolve
+    pause 1.6
+    scene alexxis_y_99 with dissolve
+    pause 1.0
+    scene alexxis_y_100 with dissolve
+    pause 0.7
+    scene alexxis_y_101 with dissolve
+    pause 1.0
+    gg 0 @S with dissolve
+    scene alexxis_y_102 with dissolve
+    pause 1.0
+    scene alexxis_y_103 with dissolve
+    pause 0.3
+    show alexxis_y_104 with dissolve
+    @Q
+    show alexxis_y_105 with dissolve
+    hide alexxis_y_104
+    gg 0 @Q
+    show alexxis_y_106 with dissolve
+    hide alexxis_y_105
+    gg 0 @Q with dissolve
+    pause 0.3
+    gg 0 @Q
+    show alexxis_y_104 with dissolve
+    hide alexxis_y_106
+    @Q
+    show alexxis_y_107 with dissolve
+    hide alexxis_y_104
+    pause 0.6
+    gg 0 @Q
+    show alexxis_y_106 with dissolve
+    hide alexxis_y_107
+    gg 0 @Q
+    gg @Q
+    show alexxis_y_108 with dissolve
+    hide alexxis_y_106
+    gg 0 @Q
+    @Q
+    gg 0 @Q
+    show alexxis_y_109 with dissolve
+    hide alexxis_y_108
+    pause 0.3
+    gg 0 @Q
+    @Q
+    gg 0 @Q with dissolve
+    show alexxis_y_110 with dissolve
+    hide alexxis_y_109
+    @Q
+    gg 0 @Q with dissolve
+    scene black with dissolve
+    pause 0.3
+    show alexxis_y_110
+    pause 0.2
+    scene black with dissolve
+    play sound cumming
+    pause 0.6
+    show alexxis_y_111 with dissolve
+    $ renpy.pause(3.5,hard=True)
+    scene alexxis_y_112 with dissolve
+    pause 1.0
+    gg 0 @Q with dissolve
+    pause 1.0
+    show alexxis_y_113 with Dissolve(0.6)
+    $ renpy.pause(2.4,hard=True)
+    show alexxis_y_114 with Dissolve(0.1)
+    hide alexxis_y_113
+    pause 1.0
+    gg 0 @S with dissolve
+    gg 0 @S
+    gg 0 @S
+    scene alexxis_y_115 with dissolve
+    yumiko 2 @S with dissolve
+    scene alexxis_y_116 with dissolve
+    yumiko 2 @S with dissolve
+    show alexxis_y_114 with Dissolve(0.6)
+    pause 0.3
+    gg 0 @S with dissolve
+    $ persistent.gallery_yumiko_unlock_1 = True 
+    pause 0.6
+    call screen yumiko_sex_choice
+
+label alexxis_yumiko_sex_1:
+
+    $ alexxis_yumiko_choice_sex_1 += 1
+    scene black with dissolve
+    
+    if alexxis_yumiko_choice_sex_2 == 0:
+        show alexxis_y_sex1_1 with dissolve
+        pause 2.0
+        gg 0 @Q with dissolve
+        @Q
+        scene alexxis_y_sex1_2 with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_3 with dissolve
+        pause 0.6
+        gg 0 @S with dissolve
+        scene alexxis_y_sex1_4 with dissolve
+        pause 0.6
+        gg 0 @Swith dissolve
+        scene black with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_5 with dissolve
+        pause 2.0
+        scene alexxis_y_sex1_5_1 with dissolve
+        gg 0 @Q with dissolve
+        scene alexxis_y_sex1_6 with dissolve
+        pause 1.6
+        scene alexxis_y_sex1_6_1 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_7 with dissolve
+        gg 0 @Q with dissolve
+        gg @Q with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_8 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_9 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_10 with dissolve
+        gg 0 @S with dissolve
+        yumiko 3 @S with dissolve
+        gg 0 @S with dissolve
+        scene alexxis_y_sex1_11 with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_12 with dissolve
+        pause 0.3
+        scene alexxis_y_sex1_11 with dissolve
+        pause 0.1
+        scene alexxis_y_sex1_12 with dissolve
+        yumiko 3 @Q with dissolve
+        gg 0 @S with dissolve
+        scene alexxis_y_sex1_13 with dissolve
+        yumiko 3 @S with dissolve
+        scene alexxis_y_sex1_14 with dissolve
+        yumiko 3 @S with dissolve
+        scene alexxis_y_sex1_13 with dissolve
+        gg 0 @Q with dissolve
+        scene alexxis_y_sex1_15 with dissolve
+        yumiko 3 @Q with dissolve
+        play sound cumming
+        scene alexxis_y_sex1_16 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_17 with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_18 with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_19 with dissolve
+        pause 1.0
+        gg 0 @S with dissolve
+        show alexxis_y_sex1_20 with Dissolve(0.6)
+        gg 0 @Q with dissolve
+        show alexxis_y_sex1_21 with Dissolve(0.1)
+        hide alexxis_y_sex1_20
+        gg 0 @Q with dissolve
+        show alexxis_y_sex1_22 with Dissolve(0.1)
+        hide alexxis_y_sex1_21
+        $ renpy.pause(3.96,hard=True)
+        show alexxis_y_sex1_23 with Dissolve(0.1)
+        hide alexxis_y_sex1_22
+        @Q
+        show alexxis_y_sex1_24 with Dissolve(0.1)
+        hide alexxis_y_sex1_23
+        pause 1.0
+        yumiko 3 @Q with dissolve
+        pause 1.0
+        yumiko 3 @Q with dissolve
+        @Q
+        show alexxis_y_sex1_25 with Dissolve(0.6)
+        hide alexxis_y_sex1_24
+        @Q
+        show alexxis_y_sex1_26 with Dissolve(0.1)
+        hide alexxis_y_sex1_25
+        @Q
+        show alexxis_y_sex1_27 with Dissolve(0.1)
+        hide alexxis_y_sex1_26
+        @Q
+        show alexxis_y_sex1_28 with dissolve
+        hide alexxis_y_sex1_27
+        @Q
+        show alexxis_y_sex1_29 with Dissolve(0.6)
+        hide alexxis_y_sex1_28
+        @Q
+        show alexxis_y_sex1_30 with Dissolve(0.1)
+        hide alexxis_y_sex1_29
+        @Q
+        show alexxis_y_sex1_31 with Dissolve(0.6)
+        hide alexxis_y_sex1_30
+        yumiko 3 @Q with dissolve
+        @Q
+        show alexxis_y_sex1_32 with Dissolve(0.1)
+        hide alexxis_y_sex1_31
+        pause 1.0
+        yumiko 3 @S with dissolve
+        gg 0 @S with dissolve
+        show alexxis_y_sex1_33 with Dissolve(0.1)
+        hide alexxis_y_sex1_32
+        yumiko 3 @S with dissolve
+        gg 0 @Q with dissolve
+        show alexxis_y_sex1_34 with Dissolve(0.1)
+        hide alexxis_y_sex1_33
+        @Q
+        gg 0 @S with dissolve
+        $ persistent.gallery_yumiko_unlock_2 = True 
+        menu:
+            @S:
+                show alexxis_y_sex1_35 with dissolve
+                hide alexxis_y_sex1_34
+                $ renpy.pause(3.5,hard=True)
+                show alexxis_y_sex1_36 with Dissolve(0.6)
+                hide alexxis_y_sex1_35
+                
+                pause 2.0
+                call screen yumiko_sex_choice
+            
+            @S:
+                show alexxis_y_sex1_37 with dissolve
+                hide alexxis_y_sex1_34
+                $ renpy.pause(0.4,hard=True)
+                scene black with Dissolve(0.2)
+                $ alexxis_yumiko_outcumming = True
+                play sound cumming
+                pause 0.6
+                show alexxis_y_sex1_38 with dissolve
+                
+                pause 2.0
+                call screen yumiko_sex_choice
+        
+    if alexxis_yumiko_choice_sex_2 == 1:
+        
+        scene black with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_5 with dissolve
+        pause 2.0
+        scene alexxis_y_sex1_5_1 with dissolve
+        gg 0 @Q with dissolve
+        scene alexxis_y_sex1_6 with dissolve
+        pause 1.6
+        scene alexxis_y_sex1_6_1 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_7 with dissolve
+        gg 0 @S with dissolve
+        gg 0 @Q with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_8 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_9 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_10 with dissolve
+        gg 0 @S with dissolve
+        yumiko 3 @Q with dissolve
+        gg 0 @S with dissolve
+        scene alexxis_y_sex1_11 with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_12 with dissolve
+        pause 0.3
+        scene alexxis_y_sex1_11 with dissolve
+        pause 0.1
+        scene alexxis_y_sex1_12 with dissolve
+        yumiko 3 @Q with dissolve
+        gg 0 @S with dissolve
+        scene alexxis_y_sex1_13 with dissolve
+        yumiko 3 @S with dissolve
+        scene alexxis_y_sex1_14 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_13 with dissolve
+        gg 0 @Q with dissolve
+        scene alexxis_y_sex1_15 with dissolve
+        yumiko 3 @Q with dissolve
+        play sound cumming
+        scene alexxis_y_sex1_16 with dissolve
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_17 with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_18 with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_19 with dissolve
+        pause 1.0
+        gg 0 @Q with dissolve
+        show alexxis_y_sex1_20 with Dissolve(0.6)
+        gg 0 @S with dissolve
+        show alexxis_y_sex1_21 with Dissolve(0.1)
+        hide alexxis_y_sex1_20
+        gg 0 @S with dissolve
+        show alexxis_y_sex1_22 with Dissolve(0.1)
+        hide alexxis_y_sex1_21
+        $ renpy.pause(3.96,hard=True)
+        show alexxis_y_sex1_23 with Dissolve(0.1)
+        hide alexxis_y_sex1_22
+        @Q
+        show alexxis_y_sex1_24 with Dissolve(0.1)
+        hide alexxis_y_sex1_23
+        pause 1.0
+        yumiko 3 @Q with dissolve
+        pause 1.0
+        yumiko 3 @Q with dissolve
+        @Q
+        show alexxis_y_sex1_25 with Dissolve(0.6)
+        hide alexxis_y_sex1_24
+        @Q
+        show alexxis_y_sex1_26 with Dissolve(0.1)
+        hide alexxis_y_sex1_25
+        @Q
+        show alexxis_y_sex1_27 with Dissolve(0.1)
+        hide alexxis_y_sex1_26
+        @Q
+        show alexxis_y_sex1_28 with dissolve
+        hide alexxis_y_sex1_27
+        @Q
+        show alexxis_y_sex1_29 with Dissolve(0.6)
+        hide alexxis_y_sex1_28
+        @Q
+        show alexxis_y_sex1_30 with Dissolve(0.1)
+        hide alexxis_y_sex1_29
+        @Q
+        show alexxis_y_sex1_31 with Dissolve(0.6)
+        hide alexxis_y_sex1_30
+        yumiko 3 @Q with dissolve
+        @Q
+        show alexxis_y_sex1_32 with Dissolve(0.1)
+        hide alexxis_y_sex1_31
+        pause 1.0
+        yumiko 3 @S with dissolve
+        gg 0 @S with dissolve
+        show alexxis_y_sex1_33 with Dissolve(0.1)
+        hide alexxis_y_sex1_32
+        yumiko 3 @Q with dissolve
+        gg 0 @Q with dissolve
+        show alexxis_y_sex1_34 with Dissolve(0.1)
+        hide alexxis_y_sex1_33
+        @Q
+        gg 0 @S with dissolve
+        $ persistent.gallery_yumiko_unlock_2 = True 
+        menu:
+            @S:
+                show alexxis_y_sex1_35 with dissolve
+                hide alexxis_y_sex1_34
+                $ renpy.pause(3.5,hard=True)
+                show alexxis_y_sex1_36 with Dissolve(0.6)
+                hide alexxis_y_sex1_35
+                @Q
+                pause 0.6
+            
+            @S:
+                show alexxis_y_sex1_37 with dissolve
+                hide alexxis_y_sex1_34
+                $ renpy.pause(0.4,hard=True)
+                scene black with Dissolve(0.2)
+                play sound cumming
+                pause 0.6
+                show alexxis_y_sex1_38 with dissolve
+                @Q
+                pause 0.6
+        
+        jump alexxis_yumiko_exit
+
+label alexxis_yumiko_sex_2:
+
+    $ alexxis_yumiko_choice_sex_2 += 1
+    scene black with dissolve
+    
+    if alexxis_yumiko_choice_sex_1 == 0:
+    
+        show alexxis_y_sex1_1 with dissolve
+        pause 2.0
+        gg 0 @Q with dissolve
+        @Q
+        scene alexxis_y_sex1_2 with dissolve
+        pause 1.0
+        scene alexxis_y_sex1_3 with dissolve
+        pause 0.6
+        yumiko 3 @Q with dissolve
+        scene alexxis_y_sex1_4 with dissolve
+        pause 0.6
+        yumiko 3 @S with dissolve
+        scene black with dissolve
+        pause 1.0
+        
+        scene alexxis_y_sex2_1 with dissolve
+        pause 2.0
+        scene alexxis_y_sex2_2 with dissolve
+        pause 1.6
+        scene alexxis_y_sex2_3 with dissolve
+        yumiko 3 @S with dissolve
+        scene alexxis_y_sex2_4 with dissolve
+        pause 2.0
+        scene alexxis_y_sex2_5 with dissolve
+        pause 2.0
+        gg 0 @S with dissolve
+        scene alexxis_y_sex2_6 with Dissolve(0.3)
+        play sound cumming
+        yumiko 3 @Q with dissolve
+        gg 0 @S with dissolve
+        scene alexxis_y_sex2_7 with Dissolve(0.3)
+        yumiko 3 @S with dissolve
+        scene alexxis_y_sex2_8 with Dissolve(0.3)
+        gg 0 @S with dissolve
+        scene alexxis_y_sex2_9 with Dissolve(0.3)
+        yumiko 3 @S with dissolve
+        scene alexxis_y_sex2_10 with dissolve
+        yumiko 3 @Q with dissolve
+        gg 0 @Q with dissolve
+        show alexxis_y_sex2_11 with dissolve
+        @Q
+        show alexxis_y_sex2_12 with dissolve
+        hide alexxis_y_sex2_11
+        @Q
+        show alexxis_y_sex2_13 with dissolve
+        hide alexxis_y_sex2_12
+        yumiko 3 @Q with dissolve
+        yumiko 3 @Q with dissolve
+        show alexxis_y_sex2_14 with Dissolve(0.3)
+        hide alexxis_y_sex2_13
+        gg 0 @Q with dissolve
+        gg 0 @Q with dissolve
+        show alexxis_y_sex2_15 with Dissolve(0.3)
+        hide alexxis_y_sex2_14
+        yumiko 3 @Q with dissolve
+        yumiko 3 @Q with dissolve
+        show alexxis_y_sex2_16 with Dissolve(0.3)
+        hide alexxis_y_sex2_15
+        @Q
+        gg 0 @Q with dissolve
+        show alexxis_y_sex2_17 with Dissolve(0.3)
+        hide alexxis_y_sex2_16
+        gg 0 @Q with dissolve
+        @Q
+        gg 0 @S with dissolve
+        scene black with dissolve
+        pause 1.0
+        show alexxis_y_sex2_18 with Dissolve(0.3)
+        hide alexxis_y_sex2_17
+        $ renpy.pause(5.9,hard=True)
+        show alexxis_y_sex2_19 with Dissolve(0.3)
+        hide alexxis_y_sex2_18
+        pause 1.0
+        yumiko 3 @S with Dissolve(0.3)
+        $ persistent.gallery_yumiko_unlock_3 = True 
+        pause 1.6
+        
+        call screen yumiko_sex_choice
+    
+    if alexxis_yumiko_choice_sex_1 == 1:
+
+        if alexxis_yumiko_outcumming == False:
+        
+            scene alexxis_y_sex2_1 with dissolve
+            pause 2.0
+            scene alexxis_y_sex2_2 with dissolve
+            pause 1.6
+            scene alexxis_y_sex2_3 with dissolve
+            yumiko 3 @Q with dissolve
+            yumiko 3 @S with dissolve
+            scene alexxis_y_sex2_4 with dissolve
+            pause 2.0
+            scene alexxis_y_sex2_5 with dissolve
+            pause 2.0
+            gg 0 @S with dissolve
+            scene alexxis_y_sex2_6 with Dissolve(0.3)
+            play sound cumming
+            yumiko 3 @Q with dissolve
+            gg 0 @S with dissolve
+            scene alexxis_y_sex2_7 with Dissolve(0.3)
+            yumiko 3 @S with dissolve
+            scene alexxis_y_sex2_8 with Dissolve(0.3)
+            gg 0 @S with dissolve
+            scene alexxis_y_sex2_9 with Dissolve(0.3)
+            yumiko 3 @S with dissolve
+            scene alexxis_y_sex2_10 with dissolve
+            yumiko 3 @Q with dissolve
+            gg 0 @Q with dissolve
+            show alexxis_y_sex2_11 with dissolve
+            @Q
+            show alexxis_y_sex2_12 with dissolve
+            hide alexxis_y_sex2_11
+            @Q
+            show alexxis_y_sex2_13 with dissolve
+            hide alexxis_y_sex2_12
+            yumiko 3 @S with dissolve
+            show alexxis_y_sex2_14 with Dissolve(0.3)
+            hide alexxis_y_sex2_13
+            gg 0 @S with dissolve
+            show alexxis_y_sex2_15 with Dissolve(0.3)
+            hide alexxis_y_sex2_14
+            yumiko 3 @S with dissolve
+            yumiko 3 @S with dissolve
+            show alexxis_y_sex2_16 with Dissolve(0.3)
+            hide alexxis_y_sex2_15
+            @Q
+            gg 0 @S with dissolve
+            show alexxis_y_sex2_17 with Dissolve(0.3)
+            hide alexxis_y_sex2_16
+            gg 0 @Q with dissolve
+            @Q
+            gg 0 @S with dissolve
+            scene black with dissolve
+            pause 1.0
+            show alexxis_y_sex2_18 with Dissolve(0.3)
+            hide alexxis_y_sex2_17
+            $ renpy.pause(5.9,hard=True)
+            show alexxis_y_sex2_19 with Dissolve(0.3)
+            hide alexxis_y_sex2_18
+            @Q
+            pause 0.6
+            
+        if alexxis_yumiko_outcumming == True:
+        
+            scene alexxis_y_sex2_1 with dissolve
+            pause 2.0
+            scene alexxis_y_sex2_2_outcum with dissolve
+            pause 1.6
+            scene alexxis_y_sex2_3_outcum with dissolve
+            yumiko 3 @Q with dissolve
+            yumiko 3 @S
+            scene alexxis_y_sex2_4_outcum with dissolve
+            pause 2.0
+            scene alexxis_y_sex2_5_outcum with dissolve
+            pause 2.0
+            gg 0 @S with dissolve
+            scene alexxis_y_sex2_6_outcum with Dissolve(0.3)
+            play sound cumming
+            yumiko 3 @Q with dissolve
+            gg 0 @S with dissolve
+            scene alexxis_y_sex2_7_outcum with Dissolve(0.3)
+            yumiko 3 @S with dissolve
+            scene alexxis_y_sex2_8_outcum with Dissolve(0.3)
+            gg 0 @S with dissolve
+            scene alexxis_y_sex2_9_outcum with Dissolve(0.3)
+            yumiko 3 @S with dissolve
+            scene alexxis_y_sex2_10_outcum with dissolve
+            yumiko 3 @Q with dissolve
+            gg 0 @Q with dissolve
+            show alexxis_y_sex2_11_outcum with dissolve
+            @Q
+            show alexxis_y_sex2_12_outcum with dissolve
+            hide alexxis_y_sex2_11_outcum
+            @Q
+            show alexxis_y_sex2_13_outcum with dissolve
+            hide alexxis_y_sex2_12_outcum
+            yumiko 3 @S with dissolve
+            show alexxis_y_sex2_14_outcum with Dissolve(0.3)
+            hide alexxis_y_sex2_13_outcum
+            gg 0 @S with dissolve
+            show alexxis_y_sex2_15_outcum with Dissolve(0.3)
+            hide alexxis_y_sex2_14_outcum
+            yumiko 3 @S with dissolve
+            show alexxis_y_sex2_16_outcum with Dissolve(0.3)
+            hide alexxis_y_sex2_15_outcum
+            @Q
+            gg 0 @S with dissolve
+            show alexxis_y_sex2_17_outcum with Dissolve(0.3)
+            hide alexxis_y_sex2_16_outcum
+            gg 0 @Q with dissolve
+            yumiko @Q 
+            gg 0 @Q 
+            @Q
+            gg 0 @S with dissolve
+            scene black with dissolve
+            pause 1.0
+            show alexxis_y_sex2_18 with Dissolve(0.3)
+            hide alexxis_y_sex2_17_outcum
+            $ renpy.pause(5.9,hard=True)
+            show alexxis_y_sex2_19 with Dissolve(0.3)
+            hide alexxis_y_sex2_18
+            @Q
+            pause 0.6
+        
+        $ persistent.gallery_yumiko_unlock_3 = True 
+        jump alexxis_yumiko_exit
+
+label alexxis_yumiko_exit:
+
+    scene black with dissolve
+    stop music fadeout 5
+    pause 5.0
+    
+    jump sujet_2
+
+
+label sujet_2:
+
+    scene black with dissolve
+    pause 1.0
+    play music3 cocktails_and_lobsters_by_alexander_nakarada volume 0.6
+    show alexxis_exit_1 with Dissolve(0.6)
+    $ renpy.pause(5.9,hard=True)
+    scene alexxis_exit_2 with dissolve
+    so 1 @S with Dissolve(0.3)
+    show alexxis_exit_3 with Dissolve(0.6)
+    gg 4 @S with Dissolve(0.3)
+    scene alexxis_exit_4 with dissolve
+    so 1 @S with dissolve
+    scene alexxis_exit_5 with dissolve
+    so 1 @S with Dissolve(0.3)
+    scene alexxis_exit_6 with dissolve
+    so 1 @S with Dissolve(0.3)
+    show alexxis_exit_3 with Dissolve(0.6)
+    gg 4 @S with Dissolve(0.3)
+    
+    if aksha >= 800:
+        gg 4 @S
+        pause 0.1
+        
+        menu:
+            @S if aksha >= 800:
+                gg 4 @S with Dissolve(0.3)
+                gg @S
+                show alexxis_exit_pay_1 with Dissolve(0.6)
+                gg 4 @S with Dissolve(0.3)
+                hide alexxis_exit_pay_1 with Dissolve(0.6)
+                show alexxis_exit_pay_2 with Dissolve(0.6)
+                hide alexxis_exit_3
+                $ renpy.notify(@Q)
+                $ aksha -= 800
+                gg 4 @S with Dissolve(0.3)
+                gg 4 @S
+                scene alexxis_exit_pay_3 with dissolve
+                so 1 @S with Dissolve(0.3)
+                scene alexxis_exit_pay_4 with dissolve
+                so 1 @S with Dissolve(0.3)
+                scene alexxis_exit_pay_5 with dissolve
+                gg 4 @S with Dissolve(0.3)
+                scene alexxis_exit_pay_6 with dissolve
+                so 1 @S with Dissolve(0.3)
+                
+                jump home_gg_shower
+                
+            @S:
+                gg 4 @S with Dissolve(0.3)
+                gg 4 @S
+                scene alexxis_exit_7 with dissolve
+                gg 4 @S with Dissolve(0.3)
+                $ dolg_alexxis = True
+                scene alexxis_exit_8 with dissolve
+                so 1 @S with Dissolve(0.3)
+                scene alexxis_exit_9 with dissolve
+                so 1 @Q with Dissolve(0.3)
+                scene alexxis_exit_10 with dissolve
+                so 1 @S with Dissolve(0.3)
+                scene alexxis_exit_11 with dissolve
+                so 1 @S with Dissolve(0.3)
+                scene alexxis_exit_12 with dissolve
+                gg 4 @S with Dissolve(0.3)
+                scene alexxis_exit_13 with dissolve
+                so 1 @S with Dissolve(0.3)
+                scene alexxis_exit_14 with dissolve
+                so 1 @S with Dissolve(0.3)
+                show alexxis_exit_15 with Dissolve(0.6)
+                gg 4 @S with Dissolve(0.3)
+                gg 4 @S
+                gg 4 @S
+                
+    else:
+        gg 4 @S
+        gg 4 @S
+        scene alexxis_exit_7 with dissolve
+        gg 4 @S with dissolve
+        $ dolg_alexxis = True
+        scene alexxis_exit_8 with dissolve
+        so 1 @S with Dissolve(0.3)
+        scene alexxis_exit_9 with dissolve
+        so 1 @Q with Dissolve(0.3)
+        scene alexxis_exit_10 with dissolve
+        so 1 @S with Dissolve(0.3)
+        scene alexxis_exit_11 with dissolve
+        so 1 @S with Dissolve(0.3)
+        scene alexxis_exit_12 with dissolve
+        gg 4 @S with Dissolve(0.3)
+        scene alexxis_exit_13 with dissolve
+        so 1 @S with Dissolve(0.3)
+        scene alexxis_exit_14 with dissolve
+        so 1 @S with Dissolve(0.3)
+        show alexxis_exit_15 with Dissolve(0.6)
+        gg 4 @S with Dissolve(0.3)
+        gg 4 @S
+        
+    gg 4 @S
+    scene alexxis_exit_9 with dissolve
+    so 1 @Q with Dissolve(0.3)
+    scene alexxis_exit_10 with dissolve
+    so 1 @S with Dissolve(0.3)
+    show alexxis_exit_15 with Dissolve(0.6)
+    gg 4 @S with Dissolve(0.3)
+    gg 4 @Q
+    $ renpy.music.set_volume(1, delay=3, channel=u@Q)
+    gg @S with Dissolve(0.3)
+    $ renpy.music.set_volume(0.3, delay=3, channel=u@Q)
+    scene alexxis_exit_16 with dissolve
+    pause 0.6
+    play sound2 dm2
+    play sound heart_bass volume 1.6
+    scene alexxis_exit_16_1 with dissolve
+    pause 0.6
+    scene alexxis_exit_17 with dissolve
+    pause 0.6
+    scene alexxis_exit_18_1 with dissolve
+    pause 0.3
+    scene alexxis_exit_18 with dissolve
+    pause 0.3
+    scene alexxis_exit_18_1 with dissolve
+    pause 0.3
+    scene alexxis_exit_18 with dissolve
+    pause 1.0
+    gg 4 @S with Dissolve(0.3)
+    scene alexxis_exit_19 with dissolve
+    $ renpy.music.set_volume(1, delay=3, channel=u@Q)
+    so 1 @S with Dissolve(0.3)
+    scene alexxis_exit_13 with dissolve
+    so 1 @S with Dissolve(0.3)
+    scene alexxis_exit_20 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene alexxis_exit_21 with dissolve
+    so 1 @S with Dissolve(0.3)
+    gg 4 @S
+    scene alexxis_exit_22 with dissolve
+    so 1 @S with Dissolve(0.3)
+    scene alexxis_exit_23 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene alexxis_exit_24 with dissolve
+    so 1 @S with Dissolve(0.3)
+    scene alexxis_exit_25 with hpunch
+    so 1 @S with Dissolve(0.3)
+    gg 4 @S with Dissolve(0.3)
+    scene alexxis_exit_26 with dissolve
+    so 1 @S with Dissolve(0.3)
+    scene alexxis_exit_27 with dissolve
+    gg 4 @S with Dissolve(0.3)
+    scene alexxis_exit_28 with dissolve
+    so 1 @S with Dissolve(0.3)
+    
+    jump home_gg_shower
+
+
+label home_gg_shower:
+    stop music fadeout 4
+    stop music2 fadeout 4
+    stop music3 fadeout 5
+    scene black with dissolve
+    pause 5.0
+    play music may_shower_close
+    show sweethome_end_1 with dissolve
+    pause 1.6
+    if not_know_alexxis == True:
+        pause 0.1
+    if not_know_alexxis == False:
+        gg 0 @S with dissolve
+        if dolg_alexxis:
+            gg 0 @S
+            gg 0 @S
+        else:
+            gg 0 @S with Dissolve(0.3)
+            gg 0 @S
+        if yumiko_ry:
+            gg 0 @S
+            gg 0 @S
+    gg 0 @S with Dissolve(0.3)
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    show sweethome_end_2 with dissolve
+    hide sweethome_end_1
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+
+    if draka_roof_loose == False:
+        gg 0 @S
+    if draka_roof_loose == True:
+        gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    play sound demon_moment volume 0.5
+    show sweethome_end_3 with vpunch
+    hide sweethome_end_2
+    pause 2.0
+    asami0 0 @S with Dissolve(0.3)
+    show sweethome_end_4 with Dissolve(0.6)
+    hide sweethome_end_3
+    $ renpy.pause(3.9,hard=True)
+    play sound woosh0
+    stop music fadeout 5
+    
+label sujet_3:
+    play sound2 heart_bass volume 2.0
+    play music2 ancient_basement_by_tim_kulig fadein 6 volume 0.5
+    scene black with Dissolve(0.3)
+    stop sound2 fadeout 13
+    pause 3.0
+    scene sweethome_end_5 with Dissolve(2.0)
+    @Q
+    scene sweethome_end_6 with dissolve
+    pause 1.6
+    scene sweethome_end_7 with dissolve
+    @Q
+    scene sweethome_end_8 with dissolve
+    pause 1.0
+    scene sweethome_end_9 with dissolve
+    gg 0 @Q with dissolve
+    scene sweethome_end_10 with dissolve
+    pause 1.6
+    gg 0 @Q
+    scene sweethome_end_11 with dissolve
+    asami0 1 @S with Dissolve(0.3)
+    show sweethome_end_12 with Dissolve(0.3)
+    $ renpy.pause(3.9,hard=True)
+    show sweethome_end_12_1 with Dissolve(0.3)
+    asami0 1 @S with Dissolve(0.3)
+    pause 1.6
+    gg 0 @Q with dissolve
+    scene sweethome_end_13 with dissolve
+    gg 0 @S
+    
+    scene sweethome_end_15 with vpunch
+    asami0 1 @S
+    scene sweethome_end_16 with dissolve
+    gg 0 @S
+    scene sweethome_end_17 with dissolve
+    asami0 1 @S
+    gg 0 @S
+    show sweethome_end_18 with Dissolve(0.1)
+    $ renpy.pause(3.5,hard=True)
+    scene sweethome_end_19 with dissolve
+    asami 1 @S with dissolve
+    scene sweethome_end_20 with dissolve
+    gg 0 @S
+    gg 0 @S
+    scene sweethome_end_23 with dissolve
+    asami 1 @S
+    
+    scene sweethome_end_24 with dissolve
+    gg 0 @S
+    scene sweethome_end_21 with dissolve
+    asami 1 @S
+
+    
+    scene sweethome_end_22 with dissolve
+    asami 1 @S
+    asami 1 @S
+    scene sweethome_end_23 with dissolve
+    asami 1 @S
+    scene sweethome_end_24 with dissolve
+    gg 0 @S
+    stop music2 fadeout 3
+    scene sweethome_end_25 with dissolve
+    asami 1 @S
+    scene sweethome_end_26 with dissolve
+    pause 1.6
+    play sound dm3
+    scene sweethome_end_27 with Dissolve(0.1)
+    play music rain_street_01
+    play music2 leaving_home_by_kevin_macleod fadein 8 volume 0.8
+    pause 0.06
+    show sweethome_end_28 with Dissolve(0.2)
+    $ renpy.pause(13,hard=True)
+    show sweethome_end_29 with Dissolve(0.6)
+    gg 5 @S with Dissolve(0.3)
+    gg 5 @S
+    asami 2 @S with Dissolve(0.6)
+    asami 2 @S
+    asami 2 @S
+    asami 2 @S
+    asami 2 @S
+    asami 2 @S
+    show sweethome_end_30 with Dissolve(0.6)
+    hide sweethome_end_29
+    pause 0.6
+    asami 2 @S with Dissolve(0.6)
+    asami 2 @S
+    asami 2 @S
+    show sweethome_end_31 with Dissolve(0.6)
+    hide sweethome_end_30
+    pause 0.6
+    asami 2 @S with Dissolve(0.6)
+    asami 2 @S
+    asami 2 @S
+    asami 2 @S
+    show sweethome_end_32 with Dissolve(0.6)
+    hide sweethome_end_31
+    pause 0.6
+    asami 2 @S with Dissolve(0.6)
+    pause 1.0
+    pause 0.6
+    gg 5 @S with Dissolve(0.6)
+    gg 5 @S
+    show sweethome_end_33 with Dissolve(0.6)
+    hide sweethome_end_32
+    gg 5 @S with Dissolve(0.6)
+    gg 5 @S
+    asami @S
+    show sweethome_end_29 with Dissolve(0.6)
+    hide sweethome_end_33
+    asami @S with Dissolve(0.3)
+    asami @S
+    gg 5 @S with Dissolve(0.3)
+    asami 2 @S with Dissolve(0.3)
+    asami 2 @S
+    gg 5 @S with Dissolve(0.3)
+    asami 2 @S with Dissolve(0.3)
+    show sweethome_end_34 with Dissolve(0.6)
+    hide sweethome_end_29
+    gg 5 @S  with Dissolve(0.3)
+    gg 5 @S
+    gg 5 @S
+    show sweethome_end_29 with Dissolve(0.6)
+    hide sweethome_end_34
+    gg 5 @S with Dissolve(0.3)
+    asami 2 @S with Dissolve(0.3)
+    pause 1.0
+    gg 5 @S with Dissolve(0.3)
+    asami 2 @S with Dissolve(0.3)
+    gg 5 @S with Dissolve(0.3)
+    asami 2 @S with Dissolve(0.3)
+    asami 2 @S
+    gg 5 @S with Dissolve(0.3)
+    asami 2 @S with Dissolve(0.3)
+    gg 5 @S with Dissolve(0.3)
+    asami 2 @S with Dissolve(0.3)
+    asami 2 @S
+    show sweethome_end_34 with Dissolve(0.6)
+    hide sweethome_end_29
+    gg 5 @S with Dissolve(0.3)
+    gg 5 @S
+    show sweethome_end_35 with Dissolve(0.1)
+    hide sweethome_end_34
+    $ renpy.pause(1,hard=True)
+    show sweethome_end_36 with Dissolve(0.1)
+    hide sweethome_end_35
+    $ renpy.pause(5,hard=True)
+    show sweethome_end_37 with Dissolve(0.1)
+    hide sweethome_end_35
+    asami 2 @S with Dissolve(0.3)
+    $ renpy.force_autosave()
+    asami 2 @S with Dissolve(0.3)
+    gg 5 @S with Dissolve(0.3)
+    asami @Q with Dissolve(0.3)
+    $ renpy.music.set_volume(1, delay=0, channel=u@Q)
+    gg @Q with Dissolve(0.3)
+    stop music fadeout 5
+    show sweethome_end_38 with Dissolve(0.1)
+    hide sweethome_end_37
+    $ renpy.music.set_volume(0, delay=5, channel=u@Q)
+    $ renpy.pause(5.1,hard=True)
+    jump cdr_1

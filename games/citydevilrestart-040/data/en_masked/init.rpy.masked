@@ -1,0 +1,1774 @@
+
+define gg = Character(@Q, color=@S, image=@Q)
+define gm = Character(@Q, color=@S)
+
+define may = Character(_(@Q), color=@S, image=@Q)
+define li = Character(_(@Q), color=@S, image=@Q)
+define iz = Character(_(@Q), color=@S, image=@Q)
+define mi = Character(_(@Q), color=@S, image=@Q)
+define mi0 = Character(_(@Q), color=@S, image=@Q)
+define asami = Character(_(@Q), color=@S, image=@Q)
+define asami0 = Character(@Q, color=@S, image=@Q)
+
+
+define leah = Character(_(@Q), color=@S, image=@Q)
+define so = Character(_(@Q), color=@S, image=@Q)
+define so0 = Character(_(@Q), color=@S, image=@Q)
+define olivia = Character(_(@Q), color=@S, image=@Q)
+define yumiko = Character(_(@Q), color=@S, image=@Q)
+define carmen = Character(_(@Q), color=@S, image=@Q)
+define emma = Character(_(@Q), color=@S, image=@Q)
+define grace = Character(_(@Q), color=@S, image=@Q)
+define chloe0 = Character(_(@Q), color=@S, image=@Q)
+define chloe = Character(_(@Q), color=@S, image=@Q)
+define scarlett = Character(_(@Q), color=@S, image=@Q) 
+
+
+define ken = Character(_(@Q), color=@S, image=@Q)
+define ry = Character(_(@Q), color=@S, image=@Q)
+define ry0 = Character(@Q, color=@S, image=@Q)
+define da = Character(_(@Q), color=@S, image=@Q)
+define sh = Character(_(@Q), color=@S, image=@Q)
+define sh0 = Character(@Q, color=@S, image=@Q)
+define me = Character(_(@Q), color=@S, image=@Q)
+define me0 = Character(_(@Q), color=@S, image=@Q)
+define dai = Character(_(@Q), color=@S, image=@Q)
+define dai0 = Character(_(@Q), color=@S, image=@Q)
+define ka = Character(_(@Q), color=@S, image=@Q)
+define ja = Character(_(@Q), color=@S, image=@Q)
+define ja0 = Character(@Q, color=@S, image=@Q)
+
+define fcm1 = Character(@Q, color=@S, image=@Q)
+define teacher = Character(_(@Q), color=@S, image=@Q)
+define cm1 = Character(_(@Q), color=@S, image=@Q)
+define cm2 = Character(_(@Q), color=@S, image=@Q)
+define cm3 = Character(_(@Q), color=@S, image=@Q)
+define bully1 = Character(@Q, color=@S, image=@Q)
+define taxidriver = Character(_(@Q), color=@S, image=@Q)
+define mob = Character(_(@Q), color=@S, image=@Q)
+define cm_barmen = Character(_(@Q), color=@S, image=@Q)
+define waitress = Character(_(@Q), color=@S, image=@Q)
+
+define sideman1 = Character(_(@Q), color=@S, image=@Q)
+define sideman2 = Character(_(@Q), color=@S, image=@Q)
+define sideman3 = Character(_(@Q), color=@S, image=@Q)
+define sidegirl1 = Character(_(@Q), color=@S, image=@Q)
+define robber0 = Character(_(@Q), color=@S, image=@Q)
+define robber1 = Character(_(@Q), color=@S, image=@Q)
+define robber2 = Character(_(@Q), color=@S, image=@Q)
+
+define clubsteward = Character(_(@Q), color=@S, image=@Q)
+define saguard1 = Character(_(@Q), color=@S, image=@Q)
+define saguard2 = Character(_(@Q), color=@S, image=@Q)
+define saguard3 = Character(_(@Q), color=@S, image=@Q)
+define clubgirls = Character(_(@Q), color=@S, image=@Q)
+define waitressbar1 = Character(_(@Q), color=@S, image=@Q)
+define yuto = Character(_(@Q), color=@S, image=@Q)
+define antony0 = Character(_(@Q), color=@S, image=@Q)
+define antony = Character(_(@Q), color=@S, image=@Q)
+define hayato = Character(_(@Q), color=@S, image=@Q)
+define kengo = Character(_(@Q), color=@S, image=@Q)
+define hellhound = Character(_(@Q), color=@S, image=@Q)
+define taxidriver2 = Character(_(@Q), color=@S, image=@Q)
+define stranger1 = Character(_(@Q), color=@S, image=@Q)
+define stranger2 = Character(_(@Q), color=@S, image=@Q)
+define stranger3 = Character(_(@Q), color=@S, image=@Q)
+define stranger4 = Character(_(@Q), color=@S, image=@Q)
+
+define taxidriver3 = Character(_(@Q), color=@S, image=@Q)
+define waitressbar2 = Character(_(@Q), color=@S, image=@Q)
+define newsanchor = Character(_(@Q), color=@S, image=@Q)
+define mayor = Character(_(@Q), color=@S, image=@Q)
+define tatsumi = Character(_(@Q), color=@S, image=@Q)
+define sotaro = Character(_(@Q), color=@S, image=@Q)
+define takeo = Character(_(@Q), color=@S, image=@Q)
+define daniella = Character(_(@Q), color=@S, image=@Q)
+define reina = Character(_(@Q), color=@S, image=@Q)
+define kyoko = Character(_(@Q), color=@S, image=@Q)
+define psclerk = Character(_(@Q), color=@S, image=@Q)
+define psguard = Character(_(@Q), color=@S, image=@Q)
+define carl = Character(_(@Q), color=@S, image=@Q)
+define psmonica = Character(_(@Q), color=@S, image=@Q)
+define ds_stranger1 = Character(_(@Q), color=@S, image=@Q)
+define wanchan = Character(_(@Q), color=@S, image=@Q)
+define evan = Character(_(@Q), color=@S, image=@Q)
+define kaito = Character(_(@Q), color=@S, image=@Q)
+define souta = Character(_(@Q), color=@S, image=@Q)
+define itsuki = Character(_(@Q), color=@S, image=@Q)
+define player_prisoner = Character(_(@Q), color=@S, image=@Q)
+define player_woman1 = Character(_(@Q), color=@S, image=@Q)
+define player_woman2 = Character(_(@Q), color=@S, image=@Q)
+define player_liam = Character(_(@Q), color=@S, image=@Q)
+define player_nerd = Character(_(@Q), color=@S, image=@Q)
+define player_silentguy = Character(_(@Q), color=@S, image=@Q)
+define figure = Character(_(@Q), color=@S, image=@Q)
+define beardedman = Character(_(@Q), color=@S, image=@Q)
+define jae_wook = Character(_(@Q), color=@S, image=@Q)
+define jae_wook0 = Character(_(@Q), color=@S, image=@Q)
+define do_hyun = Character(_(@Q), color=@S, image=@Q)
+define do_hyun0 = Character(_(@Q), color=@S, image=@Q)
+define kang_seok = Character(_(@Q), color=@S, image=@Q)
+define kang_seok0 = Character(_(@Q), color=@S, image=@Q)
+define sebas0 = Character(_(@Q), color=@S, image=@Q)
+
+
+
+
+define aksha = 240
+
+
+define may_unlock = 0
+define lillian_unlock = 0
+define izumi_unlock = 0
+define minami_unlock = 0
+define asami_unlock = 0
+define nao_unlock = 0
+
+define leah_unlock = False
+define sophia_unlock = False
+define olivia_unlock = False
+define yumiko_unlock = False
+
+define carmen_unlock = False
+define emma_unlock = False
+define grace_unlock = False
+define chloe_unlock = False
+define scarlett_unlock = False
+
+
+define love_may = 0
+define love_li = 0
+define love_iz = 0
+define love_mi = 0
+define love_asami = 0
+define love_nao = 0
+
+
+
+define rs_text_block_may_hobbie_1 = True
+define rs_text_block_may_hobbie_2 = True
+define rs_text_block_may_hobbie_3 = True
+define rs_text_block_may_hobbie_4 = True
+define rs_text_block_may_preferences_1 = False
+define rs_text_block_may_preferences_2 = False
+define rs_text_block_may_preferences_3 = False
+define rs_text_block_may_preferences_4 = False
+
+define rs_text_block_lillian_hobbie_1 = False
+define rs_text_block_lillian_hobbie_2 = False
+define rs_text_block_lillian_hobbie_3 = False
+define rs_text_block_lillian_hobbie_4 = False
+define rs_text_block_lillian_preferences_1 = False
+define rs_text_block_lillian_preferences_2 = False
+define rs_text_block_lillian_preferences_3 = False
+define rs_text_block_lillian_preferences_4 = False
+
+define rs_text_block_minami_hobbie_1 = False
+define rs_text_block_minami_hobbie_2 = False
+define rs_text_block_minami_hobbie_3 = False
+define rs_text_block_minami_hobbie_4 = False
+define rs_text_block_minami_preferences_1 = False
+define rs_text_block_minami_preferences_2 = False
+define rs_text_block_minami_preferences_3 = False
+define rs_text_block_minami_preferences_4 = False
+
+define rs_text_block_asami_hobbie_1 = False
+define rs_text_block_asami_hobbie_2 = False
+define rs_text_block_asami_hobbie_3 = False
+define rs_text_block_asami_hobbie_4 = False
+define rs_text_block_asami_preferences_1 = False
+define rs_text_block_asami_preferences_2 = False
+define rs_text_block_asami_preferences_3 = False
+define rs_text_block_asami_preferences_4 = False
+
+define rs_text_block_izumi_hobbie_1 = False
+define rs_text_block_izumi_hobbie_2 = False
+define rs_text_block_izumi_hobbie_3 = False
+define rs_text_block_izumi_hobbie_4 = False
+define rs_text_block_izumi_preferences_1 = False
+define rs_text_block_izumi_preferences_2 = False
+define rs_text_block_izumi_preferences_3 = False
+define rs_text_block_izumi_preferences_4 = False
+
+define rs_text_block_nao_hobbie_1 = False
+define rs_text_block_nao_hobbie_2 = False
+define rs_text_block_nao_hobbie_3 = False
+define rs_text_block_nao_hobbie_4 = False
+define rs_text_block_nao_preferences_1 = False
+define rs_text_block_nao_preferences_2 = False
+define rs_text_block_nao_preferences_3 = False
+define rs_text_block_nao_preferences_4 = False
+
+
+
+define rs_text_block_may_events_1 = False
+define rs_text_block_may_events_2 = False
+define rs_text_block_may_events_3 = False
+define rs_text_block_may_events_4 = False
+define rs_text_block_may_events_5 = False
+define rs_text_block_may_events_6 = False
+define rs_text_block_may_events_7 = False
+define rs_text_block_may_events_8 = False
+
+define rs_text_block_lillian_events_1 = False
+define rs_text_block_lillian_events_2 = False
+define rs_text_block_lillian_events_3 = False
+define rs_text_block_lillian_events_4 = False
+define rs_text_block_lillian_events_5 = False
+define rs_text_block_lillian_events_6 = False
+define rs_text_block_lillian_events_7 = False
+define rs_text_block_lillian_events_8 = False
+
+define rs_text_block_minami_events_1 = False
+define rs_text_block_minami_events_2 = False
+define rs_text_block_minami_events_3 = False
+define rs_text_block_minami_events_4 = False
+define rs_text_block_minami_events_5 = False
+define rs_text_block_minami_events_6 = False
+define rs_text_block_minami_events_7 = False
+define rs_text_block_minami_events_8 = False
+
+define rs_text_block_asami_events_1 = False
+define rs_text_block_asami_events_2 = False
+define rs_text_block_asami_events_3 = False
+define rs_text_block_asami_events_4 = False
+define rs_text_block_asami_events_5 = False
+define rs_text_block_asami_events_6 = False
+define rs_text_block_asami_events_7 = False
+define rs_text_block_asami_events_8 = False
+
+define rs_text_block_izumi_events_1 = False
+define rs_text_block_izumi_events_2 = False
+define rs_text_block_izumi_events_3 = False
+define rs_text_block_izumi_events_4 = False
+define rs_text_block_izumi_events_5 = False
+define rs_text_block_izumi_events_6 = False
+define rs_text_block_izumi_events_7 = False
+define rs_text_block_izumi_events_8 = False
+
+define rs_text_block_nao_events_1 = False
+define rs_text_block_nao_events_2 = False
+define rs_text_block_nao_events_3 = False
+define rs_text_block_nao_events_4 = False
+define rs_text_block_nao_events_5 = False
+define rs_text_block_nao_events_6 = False
+define rs_text_block_nao_events_7 = False
+define rs_text_block_nao_events_8 = False
+
+
+
+define love_leah = 0
+define love_emma = 0
+define love_grace = 0
+
+
+define may_gallery_unlock = False
+define lillian_gallery_unlock = False
+define minami_gallery_unlock = False
+define asami_gallery_unlock = False
+define izumi_gallery_unlock = False
+define nao_gallery_unlock = False
+
+define chloe_warn = False
+
+
+
+image sabirowgames = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image adult_warning = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image gamename = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image menu_transitions = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image menu_gg = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image wear_headphones = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image end_ver = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+
+
+
+
+
+image menu_play_hover:
+    @S
+    .04
+    @S
+    .03
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .03
+
+image menu_load_hover:
+    @S
+    .04
+    @S
+    .03
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .03
+    
+image menu_options_hover:
+    @S
+    .04
+    @S
+    .03
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .025
+    
+image menu_extras_hover:
+    @S
+    .04
+    @S
+    .03
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .025
+
+image menu_quit_hover:
+    @S
+    .04
+    @S
+    .03
+    @S
+    .023
+    @S
+    .023
+    @S
+    .023
+    @S
+    .03
+
+
+image skip_dialogue_hover:
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    @S
+    .02
+    repeat
+
+image back_return:
+    @S
+    .06
+    @S
+    .03
+    @S
+    .03
+    @S
+    .06
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .06
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .06
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    @S
+    .03
+    repeat
+
+
+image navmenu:
+    @S
+    .06
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .05
+    @S
+    .05
+    @S
+    .05
+
+    repeat
+    
+image tasksmenu:
+    @S
+    .06
+    @S
+    .05
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .04
+    @S
+    .05
+
+
+    repeat
+
+
+image zasel_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+
+
+image zahod_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image zahod_may_say_wait = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image zahod_may_say_yes = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image zahod_may_say_no = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image zahod_may_say_wait2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image zahod_17 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image zahod_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image zahod_22 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image zahod_23 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+
+
+image nightmare1_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nightmare1_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nightmare1_18 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image nightmare1_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nightmare1_20 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image sbor_school_17 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image sbor_school_18 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sbor_school_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image sbor_school_20 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sbor_school_21 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image sbor_school_22 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image school_class_start_video = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+image schoolcanteen_start_33 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image schoolcanteen_start_36 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image schoolcanteen_start_41 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image schoolcanteen_start_42 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image schoolcanteen_start_43 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image schoolcanteen_start_49 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image schoolcanteen_start_50 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image schoolcanteen_start_51 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image school_roof_da_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_roof_ebanat_win = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image school_roof_ebanat_loose = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image school_roof_loose_nm_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image school_roof_loose_nm_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+image fight_start = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image draka_head = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image draka_grud = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image draka_tors_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image draka_tors_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+image sweethome_27 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image sweethome_shower_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image sweethome_shower_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image sweethome_jo1_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo1_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo1_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo1_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo1_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo1_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo1_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image sweethome_jo2_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo2_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo2_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo2_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo2_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo2_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo2_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo2_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image sweethome_jo3_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo3_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo3_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo3_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo3_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo3_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image sweethome_jo4_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo4_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo4_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo4_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_jo4_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+image home_go_alexxis_23 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image alexxis_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image olivia_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image olivia_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image yumiko_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image yumiko_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image alexxis_o_22 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_28 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_o_30 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_o_36 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_o_48 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_48_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_48_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_49 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_50 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_73 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_74 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_75 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_81 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_82 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_83 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_84 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_85 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_86 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_93 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image alexxis_o_sex1_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex1_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex1_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex1_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex1_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex1_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex1_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_o_sex1_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image alexxis_o_sex2_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_1_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_4_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_6_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_9_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_10 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_o_sex2_11_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_o_sex2_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_o_sex2_12_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image alexxis_y_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_25 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_27 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_29 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_65 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_66 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_67 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_68 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_104 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_105 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_106 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_107 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_108 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_109 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_110 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_111 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_113 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_114 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image alexxis_y_sex1_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_20 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_21 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_22 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_sex1_23 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_24 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_25 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_26 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_27 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_28 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_29 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_30 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_30 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_31 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_32 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_33 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_34 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_35 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_sex1_36 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex1_37 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_sex1_38 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image alexxis_y_sex2_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_14 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_16 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_17 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_11_outcum = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_12_outcum = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_13_outcum = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_14_outcum = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_15_outcum = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_16_outcum = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_17_outcum = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_y_sex2_18 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_y_sex2_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image alexxis_exit_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image alexxis_exit_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_exit_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image alexxis_exit_pay_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image sweethome_end_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image sweethome_end_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image sweethome_end_18 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image sweethome_end_28 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image sweethome_end_29 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_30 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_31 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_32 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_33 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_34 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_35 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image sweethome_end_36 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image sweethome_end_37 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome_end_38 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+
+image timetravel_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+
+image awoke_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image awoke_9:
+    @S
+    pause .4
+    @S
+    pause .6
+    repeat 
+
+image school_corrior_dolg_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image school_corrior_dolg_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corrior_dolg_44 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corrior_dolg_46 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corrior_dolg_54 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image school_corrior_dolg_66 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image school_corrior_dolg_67 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corrior_dolg_68 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image school_corrior_dolg_69 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corrior_dolg_70 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+
+image school_dolg_minami_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_dolg_minami_16 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_dolg_minami_23 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+
+image school_dolg_dm_24 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+
+image home_dolg_may_0 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image home_dolg_may_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image home_dolg_may_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image home_dolg_may_34 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image home_dolg_may_53 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image home_dolg_may_54 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image home_dolg_may_61 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image home_dolg_may_62 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image home_dolg_may_71 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image home_dolg_may_87 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image home_dolg_may_88 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+image cm_party_0 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image cm_party_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_152 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_163 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_165 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_172 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_175 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_180 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_197 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_206 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image cm_party_37:
+    @S with Dissolve(0.3)
+    pause .6
+    @S with Dissolve(0.3)
+    pause .6
+    @S with Dissolve(0.3)
+    pause .6
+    @S with Dissolve(0.3)
+    pause .6
+
+image cm_party_88:
+    @S
+    pause .46
+    @S
+    pause .46
+    repeat
+    
+image cm_party_118 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cm_party_122 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image cm_party_127:
+    @S
+    pause .46
+    @S
+    pause .46
+    repeat
+    
+image cm_party_136:
+    @S
+    pause .2
+    @S
+    pause .2
+    repeat
+
+
+image party_to_hotel_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+
+image lillian_hotel_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_39 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_40 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_41 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_42 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_43 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_44 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_45 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_46 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_47 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_48 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_49 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image lillian_hotel_50 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_51 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_52 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_53 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_54 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_55 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_56 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_57 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_58 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_59 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_60 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_61 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_62 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_63 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_64 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_65 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_66 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_67 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_68 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_69 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_70 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image lillian_hotel_77 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_78 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_79 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_80 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_81 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_82 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_83 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_84 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image lillian_hotel_85 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image lillian_hotel_88 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_90 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_92 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_97 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image lillian_hotel_104 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image lillian_hotel_105 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_106 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_107 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image lillian_hotel_108 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image lillian_hotel_109 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_110 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_111 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_112 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_113 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image lillian_hotel_114 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_116 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_118 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_120 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_122 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_124 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_125 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_126 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_127 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_128 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_129 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_130 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_131 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_132 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image lillian_hotel_133 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_134 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image lillian_hotel_135 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image choice_1_leave:
+    @S
+    .08
+    @S
+    .08
+    @S
+    .08
+    @S
+    .08
+    @S
+    .08
+    @S
+    repeat
+
+
+image school_lillian_missing_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image school_lillian_missing_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_lillian_missing_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_lillian_missing_27 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_lillian_missing_44 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+image cafe_minami_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image cafe_minami_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image cafe_minami_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image cafe_minami_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image cafe_minami_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image cafe_minami_10 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image cafe_minami_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image cafe_minami_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_25 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image cafe_minami_26 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_27 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_30 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_34 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_35 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_36 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_37 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_38 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_44 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_45 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_57 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cafe_minami_74 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+
+image after_cafe_minami_24 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image after_cafe_minami_47 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image after_cafe_minami_49 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image after_cafe_minami_51 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image after_cafe_minami_53 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image after_cafe_minami_55 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image after_cafe_minami_57 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image after_cafe_minami_59 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image after_cafe_minami_61 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+
+image cdr_2_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image cdr_2_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_10 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_14 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_16 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_17 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_18 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_20 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_21 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_22 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image cdr_2_23 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+image home_night_free_livingroom_may_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+
+image outside_night_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image outside_night_18 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+image alexxis_work_18:
+    @S
+    .2
+    @S
+    .1
+    @S
+    .1
+    @S
+    .1
+    @S
+    .1
+    @S
+    .1
+    @S
+    .6
+    
+image alexxis_work_58:
+    @S
+    .8
+    @S
+    .4
+    @S
+    .3
+    @S
+    .4
+    repeat
+
+
+
+image subway_night1_21 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+
+
+
+image bar_night1_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image bar_night1_22 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image bar_night1_26 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image bar_night1_23:
+    @S
+    .15
+    @S
+    .15
+    repeat
+    
+image bar_night1_43 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_44 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_78 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_79 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_133 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_134 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_145 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_146 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_147 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_148 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_156 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image bar_night1_158 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_163 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_164 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_165 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_166 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night1_168 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+
+
+image school_corridor_ken_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corridor_ken_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corridor_ken_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corridor_ken_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corridor_ken_14 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corridor_ken_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_corridor_ken_16 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+
+image school_fe_1_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_fe_1_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_fe_1_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_fe_1_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_fe_1_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image school_stolen_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image school_stolen_71 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_72 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_73 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_74 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_75 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image school_stolen_free_outside_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_free_classroom1_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_free_classroom2_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image school_stolen_leah_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image school_stolen_free_da_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image school_stolen_end_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_end_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_end_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_end_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_end_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_end_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_end_10 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_end_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image school_stolen_end_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image sweethome2_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image sweethome2_38 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_39 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_40 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_41 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_42 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_43 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_45 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_46 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_47 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_48 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image sweethome2_49 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+
+
+image bar_night_2_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_10 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_14 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_26 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image bar_night_2_29 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image bar_night_2_grace_sex_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image bar_night_2_grace_sex_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+image bar_night_2_grace_sex_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image bar_night_2_grace_sex_14 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image bar_night_2_grace_sex_25 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_26 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_27 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_28 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_29 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_30 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_31 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_32 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_33 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_34 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_35 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image bar_night_2_grace_sex_48 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_49 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_50 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_51 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_52 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_53 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_54 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_55 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_grace_sex_56 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+
+
+image bar_night_2_emma_sex_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image bar_night_2_emma_sex_5 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image bar_night_2_emma_sex_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_10 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image bar_night_2_emma_sex_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_14 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_16 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_17 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_18 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image bar_night_2_emma_sex_20 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_21 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_22 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_23 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_24 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_25 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_26 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image bar_night_2_emma_sex_27 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_28 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night_2_emma_sex_29 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+
+image outside_night2_19 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image outside_night2_32 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image outside_night2_33 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image outside_night2_59 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image outside_night2_61 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image outside_night2_83 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image outside_night2_86 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+
+
+image regressedtoschool_33 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image regressedtoschool_34 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image regressedtoschool_35 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image regressedtoschool_36 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image regressedtoschool_37 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image regressedtoschool_38 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image regressedtoschool_39 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image regressedtoschool_40 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image bar_night2_again_10 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night2_again_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night2_again_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night2_again_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night2_again_14 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night2_again_15 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night2_again_16 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night2_again_17 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image bar_night2_again_25 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+
+image bar_night2_again_93:
+    @S
+    pause .2
+    @S
+    pause .2
+    repeat
+
+image bar_night2_again_94:
+    @S
+    pause .2
+    @S
+    pause .2
+    repeat
+
+
+
+image maybar_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_36 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_64 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_71 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_72 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False, image=@S)
+image maybar_164 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_165 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_166 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_167 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_168 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_169 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image maybar_170 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image nighthome_21 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nighthome_58 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nighthome_60 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nighthome_61 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nighthome_62 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nighthome_90 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nighthome_91 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image nighthome_92 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image schooltest_40 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image schooltest_41 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image izpawnshop_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image izpawnshop_8 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image izpawnshop_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image izpawnshop_10 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image izpawnshop_11 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image izpawnshop_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image izpawnshop_13 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image izpawnshop_14 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image izpawnshop_109 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image vishome_minami_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_34 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_35 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_36 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_37 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_38 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_39 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_40 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_90 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_91 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_92 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_93 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_94 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_95 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_96 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_97 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_98 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image vishome_minami_99 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image meeting_asami_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_7 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_9 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_24 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_25 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_26 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_27 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_28 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_29 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_30 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_31 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_32 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_35 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image meeting_asami_41 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image darkside1_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_6 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_50 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_53 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_55 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_72 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_87 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_96 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_97 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_103 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_106 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_111 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_132 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_139 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_151 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_221 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_223 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_225 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_295 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image darkside1_corridor_w1_1 = Movie(size=(1920,1080), fps=60, channel=@S, play=@S, loop=True)
+image darkside1_corridor_w1_l_1 = Movie(size=(1920,1080), fps=60, channel=@S, play=@S, loop=False)
+image darkside1_corridor_w1_l_2 = Movie(size=(1920,1080), fps=60, channel=@S, play=@S, loop=True)
+image darkside1_corridor_w1_l_3 = Movie(size=(1920,1080), fps=60, channel=@S, play=@S, loop=False)
+image darkside1_corridor_w1_2 = Movie(size=(1920,1080), fps=60, channel=@S, play=@S, loop=False)
+
+image darkside1_corridor_w2_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w2_l_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w2_l_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w2_l_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w2_r_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w2_r_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w2_r_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w2_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+image darkside1_corridor_w3_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w3_l_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w3_l_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w3_l_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w3_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+image darkside1_corridor_w4_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w4_r_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w4_r_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w4_r_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w4_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+image darkside1_corridor_w4_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w4_4 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+image darkside1_corridor_w5_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w5_l_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w5_l_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w5_l_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w5_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w5_l2_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w5_l2_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w5_l2_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image darkside1_corridor_w6_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w6_l_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w6_l_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w6_l_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w6_r_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w6_r_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w6_r_3 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w6_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+image darkside1_corridor_w7_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image darkside1_corridor_w7_2 = Movie(size=(1920,1080), channel=@S, play=@S, loop=False)
+
+
+
+image evan_story_ds_49 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_151 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_211 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_294 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_295 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_296 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_297 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_460 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_526 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image evan_story_ds_527 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image date_event_1_intro_18 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image date_event_1_may_20 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_may_71 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_may_72 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_may_73 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_may_74 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_may_84 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_may_85 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_may_129 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_may_130 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image date_event_1_minami_28 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_29 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_30 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_31 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_32 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_33 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_34 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_44 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_50 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_51 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_64 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_105 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_minami_106 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+image date_event_1_lillian_after_minami_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_12 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_52 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_53 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_54 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_55 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_56 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_57 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_58 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_120 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_128 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_129 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_130 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_131 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_132 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_133 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_134 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_135 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_136 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_137 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_138 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_153 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_154 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_155 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_159 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_160 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_161 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_162 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_163 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_164 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_165 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_166 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_167 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_168 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_169 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_170 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_170 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_171 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_172 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_173 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_174 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_175 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_176 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_177 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_178 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_179 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_180 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_181 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_182 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_183 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_184 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_185 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_186 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_187 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_188 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_189 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_190 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+image date_event_1_lillian_191 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+
+image end_tatsumi_1 = Movie(size=(1920,1080), channel=@S, play=@S, loop=True)
+
+
+
+define skip_dialogue = False
+
+define athomewithmay_point = 0
+define nastupil_nogu = False
+define draka_roof_loose = False
+define kens_question_about_girls_point = 0
+define salam_jarabja = False
+define yumiko_ry = False 
+
+define smoking = False
+define ishti = False
+
+
+
+
+define sweethome_jo1_complete = False
+define sweethome_jo2_complete = False
+define sweethome_jo3_complete = False
+define sweethome_jo4_complete = False
+
+
+
+define not_know_alexxis = False
+define alexxis_olivia_choice_sex_1 = 0 
+define alexxis_olivia_choice_sex_2 = 0 
+
+
+define alexxis_yumiko_choice_sex_1 = 0 
+define alexxis_yumiko_choice_sex_2 = 0 
+define alexxis_yumiko_outcumming = False 
+define dolg_alexxis = False 
+
+
+
+define minami_know_superpower = False 
+define may_know_asami = False 
+define may_know_lillian = False 
+define may_thanks_night = False
+define juice_apple = False 
+define juice_orange = False 
+define juice_pineapple = False 
+define juice_cherry = False 
+
+
+
+define lillian_compliment_appearance = False 
+define lillian_choice_brunet = False
+define lillian_choice_blond = False
+define lillian_choice_allhaircolors = False
+define lillian_choice_sunset = False
+
+
+
+define lillian_hotel_choice_leave = False
+define lillian_hotel_choice_boobs_complete = False
+define lillian_hotel_choice_lick_complete = False
+define lillian_hotel_choice_fingering_complete = False
+define lillian_hotel_choice_handjob_complete = False
+define lillian_hotel_choice_footjob_complete = False
+define lillian_hotel_choice_blowjob_complete = False
+define lillian_hotel_choice_sex1_complete = False
+
+define lillian_hotel_choice_handjob_unlock = False
+define lillian_hotel_choice_footjob_unlock = False
+define lillian_hotel_choice_blowjob_unlock = False
+
+
+
+define school_lillian_missing_phone_leah_know = False
+define school_lillian_missing_phone_leah_rude = False
+define school_lillian_missing_phone_leah_took = False
+define school_lillian_missing_phone_lillian_talk = False
+
+
+
+define cafe_minami_look_cm = False
+define cafe_minami_choice_1_value = 0
+define cafe_minami_choice_2_value = 0
+
+define cafe_minami_choice_flashback = False
+
+define minami_my_girl = False
+
+
+
+define home_night_free_1_floor_told = False
+define home_night_free_living_room_visited = False
+define home_night_free_living_room_saw = False
+define home_night_free_may_room_visited = False
+define home_night_free_lr_blanket_visited = False
+
+define home_night_free_living_room_with_may = True
+define home_night_free_living_room_with_may_covered = False
+
+define home_night_free_lr_phone = False 
+
+define home_night_free_may_room_tookcare = False
+
+
+
+define bartender_traits_point = 0
+define bartender_traits_point_w = 0
+
+define bar_gg_verified = False
+define sireneyes_work_1_emma = False
+define sireneyes_work_2_emma = False
+
+
+
+define school_stolen_time = 0
+define school_stolen_chara_daimez = False
+define school_stolen_chara_leah = False
+define school_stolen_chara_ken = False
+define school_stolen_chara_ry = False
+define school_stolen_chara_da = False
+
+define school_stolen_locker = False
+define school_stolen_locker_daimez = False
+define school_stolen_locker_ry = False
+
+
+
+define school_stolen_free_outside_visited = False
+define school_stolen_free_f1_visited = False
+define school_stolen_free_f2_visited = False
+define school_stolen_free_c1_visited = False
+define school_stolen_free_c2_visited = False
+define school_stolen_free_classroom1_visited = False
+define school_stolen_free_classroom2_visited = False
+define gg_findsout_about_rymay = False
+
+
+
+
+define grace_voyeurism = False
+define grace_voyeurism_fail = False
+
+define bar_grace_sex1 = False
+define bar_grace_sex2 = False
+
+define bar_emma_sex1 = False
+define bar_emma_sex2 = False
+define bar_emma_sex3 = False
+
+
+
+define karma = 0
+define chloe_saved = False
+define chloe_date_bar = False
+define chloe_date_fake = False
+define pawnshop_paid = False
+define izumi_earrings_lost = False
+define pawnshop_resolve = False
+define darkside1_stranger_talk = False
+define darkside1_approach_wanchan = False
+define darkside1_wanchan_leave = False
+
+
+
+define ds_corridor_w1_l = False
+define ds_corridor_w2_l = False
+define ds_corridor_w2_r = False
+define ds_corridor_w3_l = False
+define ds_corridor_w5_l = False
+define ds_corridor_w6_l = False
+define ds_corridor_w6_r = False
+
+
+
+define date_event_1_day = 1
+define date_event_1_may = False
+define date_event_1_minami = False
+define date_event_1_lillian = False
+define date_event_1_after_minami = False
+
+define de1_lillian_sex_kiss = False
+define de1_lillian_sex_lick = False
+define de1_lillian_sex_1 = False
+define de1_lillian_sex_2 = False
+define de1_lillian_sex_kiss_lock = False
+define de1_lillian_sex_lick_lock = False
+
+
+
+init:
+    $ timer_range = 0
+    $ timer_jump = 0
+    $ timez = 0
+    
+    $ timeout = 0
+    $ timeout_label = None
+    
+    $ skip_dialogue_label = None 
+
+
+transform alpha_dissolve:
+    alpha 0.0
+    linear 0.5 alpha 1.0
+    on hide:
+        linear 0.5 alpha 0
+        
+transform rs_dissolve:
+    top
+    alpha 0.0
+    ypos 100
+    zoom 1.5
+    ease 0.6 ypos 0 zoom 1 alpha 1.0
+    on hide:
+        ease 0.5 ypos -100 zoom 1.5 alpha 0
+        
+transform rs_bg_dissolve:
+    top
+    alpha 0
+    zoom 1.5
+    ease 0.5 ypos 0 zoom 1.0 alpha 1.0
+    on hide:
+        ease 0.5 zoom 1.5 alpha 0
+        

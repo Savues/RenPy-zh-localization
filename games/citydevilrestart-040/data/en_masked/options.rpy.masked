@@ -1,0 +1,276 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define config.name = _(@S)
+
+
+
+
+
+define gui.show_name = True
+
+
+
+
+define config.version = @S
+
+
+
+
+
+define gui.about = _p(@T3)
+
+
+
+
+
+
+define build.name = @S
+
+
+
+
+
+
+
+
+define config.has_music = True
+define config.has_sound = True
+define config.has_voice = True
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define config.main_menu_music = @S 
+
+
+
+define config.mouse = { @Q : [ (@Q, 0, 0)] }
+
+
+
+
+
+
+
+
+
+define config.enter_transition = dissolve
+define config.exit_transition = dissolve
+
+
+
+
+define config.intra_transition = dissolve
+
+
+
+
+define config.after_load_transition = Dissolve(0.6)
+
+
+
+
+define config.end_game_transition = Dissolve(1.0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define config.window = @S
+
+
+
+
+define config.window_show_transition = Dissolve(.2)
+define config.window_hide_transition = Dissolve(.2)
+
+
+
+
+
+
+
+default preferences.text_cps = 33
+
+
+
+
+
+default preferences.afm_time = 15
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+define config.save_directory = @S
+
+
+
+
+
+
+define config.window_icon = @S
+define config.windows_icon = @S
+
+
+
+
+
+
+init python:
+
+    renpy.music.register_channel(@Q, loop=True, mixer=@S)
+    renpy.music.register_channel(@Q, loop=True, mixer=@S)
+    renpy.music.register_channel(@Q, loop=True, mixer=@S)
+    renpy.music.register_channel(@Q, loop=True, mixer=@S)
+    
+    renpy.music.register_channel(@Q, loop=False, mixer=@S)
+    renpy.music.register_channel(@Q, loop=False, mixer=@S)
+    renpy.music.register_channel(@Q, loop=False, mixer=@S)
+    renpy.music.register_channel(@Q, loop=False, mixer=@S)
+    renpy.music.register_channel(@Q, loop=False, mixer=@S)
+    renpy.music.register_channel(@Q, loop=False, mixer=@S)
+    renpy.music.register_channel(@Q, loop=False, mixer=@S)
+    
+    renpy.music.register_channel(@Q, loop=True, mixer=@S)
+    renpy.music.register_channel(@Q, loop=True, mixer=@S)
+    renpy.music.register_channel(@Q, loop=True, mixer=@S)
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+    build.classify(@Q, None)
+    build.classify(@Q, None)
+    build.classify(@Q, None)
+    build.classify(@Q, None)
+    build.classify(@Q, None)
+
+    
+
+    build.classify(@Q, @Q)
+    build.classify(@Q, @Q)
+    
+    build.classify(@Q, @Q)
+
+    
+    
+
+    build.documentation(@Q)
+    build.documentation(@Q)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+translate japanese python:
+    gui.system_font = gui.main_font =  gui.interface_text_font = gui.button_text_font = gui.choice_button_text_font = @S
+    gui.text_font = @S
+    gui.name_text_font =  @S
+    
+    @gui.variant
+    def small():
+        gui.system_font = gui.main_font =  gui.interface_text_font = gui.button_text_font = gui.choice_button_text_font = @S
+        gui.text_font = @S
+        gui.name_text_font =  @S
+        
+translate korean python:
+    gui.system_font = gui.main_font =  gui.interface_text_font = gui.button_text_font = gui.choice_button_text_font = @S
+    gui.text_font = @S
+    gui.name_text_font =  @S
+    
+    @gui.variant
+    def small():
+        gui.system_font = gui.main_font =  gui.interface_text_font = gui.button_text_font = gui.choice_button_text_font = @S
+        gui.text_font = @S
+        gui.name_text_font =  @S
+        
+translate thai python:
+    gui.system_font = gui.main_font =  gui.interface_text_font = gui.button_text_font = gui.choice_button_text_font = @S
+    gui.text_font = @S
+    gui.name_text_font =  @S
+    
+    @gui.variant
+    def small():
+        gui.system_font = gui.main_font =  gui.interface_text_font = gui.button_text_font = gui.choice_button_text_font = @S
+        gui.text_font = @S
+        gui.name_text_font =  @S
+        
+translate vietnamese python:
+    gui.system_font = gui.main_font =  gui.interface_text_font = gui.button_text_font = gui.choice_button_text_font = @S
+    gui.text_font = @S
+    gui.name_text_font =  @S
+    
+    @gui.variant
+    def small():
+        gui.system_font = gui.main_font =  gui.interface_text_font = gui.button_text_font = gui.choice_button_text_font = @S
+        gui.text_font = @S
+        gui.name_text_font =  @S

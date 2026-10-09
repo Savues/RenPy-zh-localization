@@ -1,0 +1,4373 @@
+label cdr_1:
+    stop music2
+    $ renpy.music.set_volume(1, delay=0, channel=u@Q)
+    scene black
+    hide screen girls with dissolve
+    $ quick_menu = False
+    pause 3.0
+    show timetravel_1
+    $ renpy.pause(5,hard=True)
+    pause 1.0
+    scene black
+    pause 1.0
+    show screen girls with dissolve
+    $ quick_menu = True
+    gg t0 @S with dissolve
+    gg t0 @S
+    gg t0 @S
+    show awoke_1
+    $ renpy.pause(4,hard=True)
+    scene awoke_2 with dissolve
+    play music2 clouds_above_the_oceanloopable_by_chilledmusic fadein 20 volume 0.6
+    gg 0 @S  with dissolve
+    scene awoke_3 with dissolve
+    may 6 @S with dissolve
+    scene awoke_4 with dissolve
+    may 6 @S with dissolve
+    scene awoke_5 with dissolve
+    may 6 @S with dissolve
+    may 6 @S
+    scene awoke_6 with fade
+    may 6 @S with dissolve
+    gg 0 @S with dissolve
+    scene awoke_7 with dissolve
+    may 6 @S with dissolve
+    gg 0 @S with dissolve
+    scene awoke_8 with dissolve
+    may 6 @S with dissolve
+    may 6 @S
+    scene awoke_9 with dissolve
+    may 6 @S with dissolve
+    scene awoke_10 with dissolve
+    may 6 @S with dissolve
+    scene awoke_11 with dissolve
+    may 6 @S with dissolve
+    scene awoke_12 with dissolve
+    may 6 @S with dissolve
+    scene awoke_13 with dissolve
+    may 6 @S with dissolve
+    scene awoke_14 with dissolve
+    may 6 @S with dissolve
+    may 6 @S
+    gg 0 @S with dissolve
+
+    scene awoke_8 with dissolve
+    may 6 @S with dissolve
+    may 6 @S
+    scene awoke_14 with dissolve
+    gg 0 @S with dissolve
+    may 6 @S with dissolve
+
+    scene awoke_15 with dissolve
+    may 6 @S with dissolve
+    scene awoke_16 with dissolve
+    gg 0 @S with dissolve
+    gg 0 @S
+    scene awoke_17 with fade
+    $ renpy.music.set_volume(0.3, delay=3, channel=u@Q)
+    pause 0.3
+    scene awoke_17_1 with dissolve
+    gg 0 @S with dissolve
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    gg 0 @S
+    $ renpy.music.set_volume(1, delay=5, channel=u@Q)
+    scene awoke_16 with fade
+    gg 0 @S with dissolve
+    gg 0 @S
+    scene awoke_18 with dissolve
+    @Q
+    play sound pat_cloth_1
+    scene awoke_19 with dissolve
+    @Q
+    scene awoke_20 with dissolve
+    may 6 @S with dissolve
+    may 6 @S
+    play sound pat_cloth_2
+    scene awoke_21 with dissolve
+    gg 0 @S with dissolve
+    gg t0 @S
+    scene awoke_22 with dissolve
+    gg 0 @S with dissolve
+    
+
+
+    stop music2 fadeout 3
+    play music3 call_start
+    scene awoke_23 with Dissolve(0.1)
+    @S with dissolve
+    scene awoke_24 with Dissolve(0.1)
+    gg 0 @S with dissolve
+    stop music3
+    scene awoke_25 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    scene awoke_26 with Dissolve(0.3)
+    ka 2 @S with dissolve
+    scene awoke_25 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    scene awoke_26 with Dissolve(0.3)
+    play music2 dark_secrets_decision_by_sascha_ende fadein 5 volume 0.3
+    ka 2 @S with dissolve
+    ka 2 @S
+    ka 2 @S
+    scene awoke_25 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    scene awoke_26 with Dissolve(0.3)
+    ka 2 @S with dissolve
+    scene awoke_27 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    scene awoke_28 with Dissolve(0.3)
+    ka 2 @S with dissolve
+    scene awoke_27 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    scene awoke_28 with Dissolve(0.3)
+    ka 2 @S with dissolve
+    ka 2 @S
+    scene awoke_29 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    gg 0 @S
+    scene awoke_30 with Dissolve(0.3)
+    ka 2 @S with dissolve
+    scene awoke_29 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    scene awoke_30 with Dissolve(0.3)
+    ka 2 @S with dissolve
+    ka 2 @S
+    scene awoke_29 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    scene awoke_30 with Dissolve(0.3)
+    ka 2 @S with dissolve
+    gg 0 @S with dissolve
+    scene awoke_29 with dissolve
+    gg 0 @S
+    scene awoke_30 with dissolve
+    ka 2 @S with dissolve
+    ka 2 @S
+    gg 0 @S with dissolve
+    ka 2 @S with dissolve
+    ka 2 @S
+    scene awoke_31 with dissolve
+    gg 0 @S
+    
+    scene awoke_32 with dissolve
+    gg 0 @S with dissolve
+    stop music2 fadeout 5
+    gg 0 @S
+    scene black with Dissolve(1.5)
+    pause 2.0
+    
+
+label school_corrior_dolg:
+    play music3 city_bird volume 0.6
+    show school_corrior_dolg_1 with dissolve
+    $ renpy.pause(3, hard=True)
+    pause 1.0
+    gg 3 @S with dissolve
+    play music2 sweet_benjamin_tissot fadein 5 volume 0.5
+    stop music3 fadeout 5
+    scene school_corrior_dolg_2 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_3 with Dissolve(0.3)
+    may 7 @S with dissolve
+
+    scene school_corrior_dolg_33 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_23 with Dissolve(0.3)
+    may 7 @S with dissolve
+    scene school_corrior_dolg_9 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_10 with Dissolve(0.3)
+    may 7 @S with dissolve
+    
+    scene school_corrior_dolg_4 with Dissolve(0.3)
+    may 7 @S with dissolve
+    may 7 @S
+    show school_corrior_dolg_5 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_6 with Dissolve(0.3)
+    may 7 @S with dissolve
+    scene school_corrior_dolg_7 with Dissolve(0.3)
+    may 7 @S with dissolve
+    may 7 @S
+    scene school_corrior_dolg_8 with Dissolve(0.3)
+    may 7 @S
+
+    menu:
+        @Q:
+            scene school_corrior_dolg_5 with Dissolve(0.3)
+            gg 3 @S with dissolve
+            gg 3 @S
+            gg 3 @S
+            
+            scene school_corrior_dolg_9 with Dissolve(0.3)
+            may 7 @S with dissolve
+            scene school_corrior_dolg_10 with Dissolve(0.3)
+            may 7 @S with dissolve
+            
+        @Q:
+        
+            show school_corrior_dolg_5 with Dissolve(0.3)
+            gg 3 @S with dissolve
+
+            scene school_corrior_dolg_11 with Dissolve(0.3)
+            may 7 @S with dissolve
+            scene school_corrior_dolg_12 with Dissolve(0.3)
+            may 7 @S with dissolve
+
+    scene school_corrior_dolg_3 with Dissolve(0.3)
+    may 7 @S with dissolve
+
+    menu:
+        @Q:
+            show school_corrior_dolg_5 with Dissolve(0.3)
+            gg 3 @S with dissolve
+            scene school_corrior_dolg_6 with Dissolve(0.3)
+            may 7 @S with dissolve
+            
+            menu:
+                @S:
+                    show school_corrior_dolg_5 with Dissolve(0.3)
+                    gg 3 @S with dissolve
+                    gg 3 @S
+
+                    scene school_corrior_dolg_13 with Dissolve(0.3)
+                    show screen rel_up_may
+                    $ love_may += 3
+                    may 7 @S with dissolve
+                    scene school_corrior_dolg_14 with Dissolve(0.3)
+                    may 7 @S with dissolve
+                    scene school_corrior_dolg_15 with Dissolve(0.3)
+                    may 7 @S with dissolve
+                    scene school_corrior_dolg_16 with Dissolve(0.3)
+                    may 7 @S with dissolve
+                    
+                    menu:
+                        @S:
+                            scene school_corrior_dolg_17 with Dissolve(0.3)
+                            gg 3 @S with dissolve
+                            scene school_corrior_dolg_18 with Dissolve(0.3)
+                            gg 3 @S with dissolve
+                            show screen rel_up_may
+                            $ love_may += 3
+                            scene school_corrior_dolg_19 with Dissolve(0.3)
+                            may 7 @S with dissolve
+                            may 7 @S
+                            
+                            menu:
+                                @S:
+                                    show school_corrior_dolg_34 with Dissolve(0.3)
+                                    gg 3 @S with dissolve
+                                    gg 3 @S
+                                    
+                                    scene school_corrior_dolg_35 with Dissolve(0.3)
+                                    show screen rel_up_may
+                                    may 7 @S with dissolve
+                                    $ love_may += 1
+                                    
+                                    menu:
+                                        @S:
+                                            scene school_corrior_dolg_25 with Dissolve(0.3)
+                                            gg 3 @S with dissolve
+                                            scene school_corrior_dolg_26 with Dissolve(0.3)
+                                            gg 3 @S with dissolve
+                                            scene school_corrior_dolg_27 with Dissolve(0.3)
+                                            gg 3 @S with dissolve
+                                            
+                                            scene school_corrior_dolg_28 with Dissolve(0.3)
+                                            show screen rel_up_may
+                                            may 7 @S with dissolve
+                                            $ love_may += 5
+                                            scene school_corrior_dolg_30 with Dissolve(0.3)
+                                            may 7 @S with dissolve
+                                            scene school_corrior_dolg_31 with Dissolve(0.3)
+                                            gg 3 @S with dissolve
+                                            scene school_corrior_dolg_32 with Dissolve(0.3)
+                                            may 7 @S with dissolve
+                                            scene black with Dissolve(0.6)
+                                            pause 0.1
+                                            
+                                        @S:
+                                            pause 0.3
+                                            scene black with Dissolve(0.6)
+                                            pause 0.1
+                                            
+                                @S:
+                                    pause 0.3
+                                    scene black with Dissolve(0.6)
+                                    pause 0.1
+                        
+                        @S:
+                            show school_corrior_dolg_5 with Dissolve(0.3)
+                            gg 3 @S with dissolve
+                            gg 3 @S
+                            
+                            scene school_corrior_dolg_24 with Dissolve(0.3)
+                            show screen rel_up_may
+                            may 7 @S with dissolve
+                            $ love_may += 1
+                            
+                            menu:
+                                @S:
+                                    scene school_corrior_dolg_25 with Dissolve(0.3)
+                                    gg 3 @S with dissolve
+                                    scene school_corrior_dolg_26 with Dissolve(0.3)
+                                    gg 3 @S with dissolve
+                                    scene school_corrior_dolg_27 with Dissolve(0.3)
+                                    gg 3 @S with dissolve
+                                    
+                                    scene school_corrior_dolg_28 with Dissolve(0.3)
+                                    show screen rel_up_may
+                                    may 7 @S with dissolve
+                                    $ love_may += 5
+                                    scene school_corrior_dolg_29 with Dissolve(0.3)
+                                    may 7 @S with dissolve
+                                    may 7 @S
+                                    scene black with Dissolve(0.6)
+                                    pause 0.1
+                                    
+                                @S:
+                                    pause 0.5
+                                    scene school_corrior_dolg_23 with Dissolve(0.3)
+                                    may 7 @S with dissolve
+                                    may 7 @S
+                        
+                        @S:
+                            pause 0.3
+                            scene school_corrior_dolg_23 with Dissolve(0.3)
+                            may 7 @S with dissolve
+                            may 7 @S
+                
+                @S:
+                    show school_corrior_dolg_5 with Dissolve(0.3)
+                    gg 3 @S with dissolve
+                    gg 3 @S
+                    
+                    scene school_corrior_dolg_24 with Dissolve(0.3)
+                    show screen rel_up_may
+                    may 7 @S with dissolve
+                    $ love_may += 1
+                    
+                    menu:
+                        @S:
+                            scene school_corrior_dolg_25 with Dissolve(0.3)
+                            gg 3 @S with dissolve
+                            scene school_corrior_dolg_26 with Dissolve(0.3)
+                            gg 3 @S with dissolve
+                            scene school_corrior_dolg_27 with Dissolve(0.3)
+                            gg 3 @S with dissolve
+                            
+                            scene school_corrior_dolg_28 with Dissolve(0.3)
+                            show screen rel_up_may
+                            may 7 @S with dissolve
+                            $ love_may += 5
+                            scene school_corrior_dolg_29 with Dissolve(0.3)
+                            may 7 @S with dissolve
+                            may 7 @S
+                            
+                            menu:
+                                @Q:
+                                    show school_corrior_dolg_37 with Dissolve(0.3)
+                                    gg 3 @S with dissolve
+                                    gg 3 @S
+
+                                    scene school_corrior_dolg_38 with Dissolve(0.3)
+                                    show screen rel_up_may
+                                    $ love_may += 3
+                                    may 7 @S with dissolve
+                                    scene school_corrior_dolg_39 with Dissolve(0.3)
+                                    may 7 @S with dissolve
+                                    scene school_corrior_dolg_40 with Dissolve(0.3)
+                                    may 7 @S with dissolve
+                                    scene school_corrior_dolg_41 with Dissolve(0.3)
+                                    may 7 @S with dissolve
+                                    
+                                    menu:
+                                        @S:
+                                            scene school_corrior_dolg_17 with Dissolve(0.3)
+                                            gg 3 @S with dissolve
+                                            scene school_corrior_dolg_18 with Dissolve(0.3)
+                                            gg 3 @S with dissolve
+                                            $ love_may += 3
+                                            show screen rel_up_may
+                                            scene school_corrior_dolg_20 with Dissolve(0.3)
+                                            may 7 @S with dissolve
+                                            scene school_corrior_dolg_21 with Dissolve(0.3)
+                                            gg 3 @S with dissolve
+                                            scene school_corrior_dolg_22 with Dissolve(0.3)
+                                            may 7 @S with dissolve
+                                            scene black with Dissolve(0.6)
+                                            pause 0.1
+                                        
+                                        @S:
+                                            pause 0.3
+                                            scene black with Dissolve(0.6)
+                                            pause 0.1
+                                            
+                                @S:
+                                    pause 0.3
+                                    scene black with Dissolve(0.6)
+                                    pause 0.1
+                            
+                        @S:
+                            show school_corrior_dolg_5 with Dissolve(0.3)
+                            gg 3 @S with dissolve
+                            gg 3 @S
+
+                            scene school_corrior_dolg_13 with Dissolve(0.3)
+                            may 7 @S with dissolve
+                            scene school_corrior_dolg_14 with Dissolve(0.3)
+                            may 7 @S with dissolve
+                            scene school_corrior_dolg_15 with Dissolve(0.3)
+                            may 7 @S with dissolve
+                            scene school_corrior_dolg_16 with Dissolve(0.3)
+                            may 7 @S with dissolve
+                            $ love_may += 3
+                            
+                            menu:
+                                @S:
+                                    scene school_corrior_dolg_17 with Dissolve(0.3)
+                                    gg 3 @S with dissolve
+                                    scene school_corrior_dolg_18 with Dissolve(0.3)
+                                    gg 3 @S with dissolve
+                                    $ love_may += 3
+                                    scene school_corrior_dolg_19 with Dissolve(0.3)
+                                    may 7 @S with dissolve
+                                    may 7 @S
+                                    scene black with Dissolve(0.6)
+                                    pause 0.1
+                                    
+                                @S:
+                                    pause 0.3
+                                    scene school_corrior_dolg_23 with Dissolve(0.3)
+                                    may 7 @S with dissolve
+                                    may 7 @S
+                        
+                        @S:
+                            pause 0.5
+                            scene school_corrior_dolg_23 with Dissolve(0.3)
+                            may 7 @S with dissolve
+                            may 7 @S
+                    
+                @S:
+                    show school_corrior_dolg_5 with Dissolve(0.3)
+                    gg 3 @S with dissolve
+                    scene school_corrior_dolg_33 with Dissolve(0.3)
+                    may 7 @S with dissolve
+                        
+        @Q:
+            gg 3 @S with dissolve
+            
+    show school_corrior_dolg_5 with Dissolve(0.3)
+    stop music2 fadeout 15
+    play music3 city_bird fadein 8 volume 0.3
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_42 with Dissolve(0.3)
+    may 7 @S with dissolve
+    show school_corrior_dolg_44 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_corrior_dolg_43 with Dissolve(0.3)
+    may 7 @S with dissolve
+    may 7 @S
+    show school_corrior_dolg_44 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    scene school_corrior_dolg_45 with Dissolve(0.3)
+    may 7 @S with dissolve
+    may 7 @S
+    show school_corrior_dolg_46 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    scene school_corrior_dolg_47 with Dissolve(0.3)
+    may 7 @S with dissolve
+    show school_corrior_dolg_44 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    may 7 @S with dissolve
+    scene school_corrior_dolg_48 with Dissolve(0.3)
+    may 7 @S with dissolve
+    show school_corrior_dolg_46 with Dissolve(0.3)
+    may 7 @S with dissolve
+    scene school_corrior_dolg_50 with Dissolve(0.3)
+    may 7 @S with dissolve
+    show school_corrior_dolg_44 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_corrior_dolg_45 with Dissolve(0.3)
+    may 7 @S with dissolve
+    scene school_corrior_dolg_23 with Dissolve(0.3)
+    may 7 @S with dissolve
+    show school_corrior_dolg_5 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    scene school_corrior_dolg_51 with Dissolve(0.3)
+    may 7 @S with dissolve
+    scene school_corrior_dolg_52 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_53 with Dissolve(0.3)
+    may 7 @S with dissolve
+    
+    scene school_corrior_dolg_49 with dissolve
+    gg 3 @S with dissolve
+    ken 3 @S with dissolve
+    show school_corrior_dolg_54
+    $ renpy.pause(1, hard=True)
+    pause
+    scene school_corrior_dolg_55 with dissolve
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_56 with Dissolve(0.3)
+    ken 3 @S with dissolve
+    scene school_corrior_dolg_57 with Dissolve(0.3)
+    ken 3 @S with dissolve
+    scene school_corrior_dolg_58 with Dissolve(0.3)
+    ken 3 @S with dissolve
+    ken 3 @S
+    scene school_corrior_dolg_55 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_59 with Dissolve(0.3)
+    ken 3 @S with dissolve
+    scene school_corrior_dolg_60 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_61 with Dissolve(0.3)
+    ken 3 @S with dissolve
+    scene school_corrior_dolg_62 with Dissolve(0.3)
+    ken 3 @S with dissolve
+    play sound as1 volume 0.8
+    scene school_corrior_dolg_63 with Dissolve(0.1)
+    @Q
+    play sound zahvat_2 volume 0.6
+    scene school_corrior_dolg_64 with vpunch
+    @Q
+    scene school_corrior_dolg_65 with Dissolve(0.1)
+    pause 0.1
+    show school_corrior_dolg_66
+    $ renpy.pause(1.96, hard=True)
+    stop music3 fadeout 1
+    scene black
+    pause 2.0
+    show school_corrior_dolg_67 with Dissolve(0.8)
+    play music2 missing_loopable_by_dave_deville fadein 6 volume 0.6
+    pause 0.5
+    play sound2 heart_bass fadein 2 volume 3
+    gg 3 @S with dissolve
+    da 1 @S with dissolve
+    scene black with Dissolve(0.5)
+    pause 0.5
+    gg 3 @S with dissolve
+    stop sound2 fadeout 6
+    show school_corrior_dolg_68 with Dissolve(0.5)
+    $ renpy.pause(4.6, hard=True)
+    show school_corrior_dolg_69 with Dissolve(0.1)
+    hide school_corrior_dolg_68
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    scene black with dissolve
+    pause 0.4
+    show school_corrior_dolg_70 with Dissolve(0.3)
+    $ renpy.pause(28, hard=True)
+    stop music2 fadeout 10
+    play music3 city_bird fadein 8 volume 0.3
+    $ renpy.pause(4, hard=True)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_corrior_dolg_71 with Dissolve(0.3)
+    pause 1.0
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_72 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_corrior_dolg_73 with Dissolve(0.3)
+    da 1 @S with vpunch
+    scene school_corrior_dolg_74 with Dissolve(0.3)
+    da 1 @S with dissolve
+    scene school_corrior_dolg_75 with Dissolve(0.1)
+    bully1 1 @S
+    mob 1 @S
+    play sound zahvat_1 volume 0.6
+    stop music3 fadeout 3
+    play music2 the_show_must_be_go_by_kevin_macleod fadein 0 volume 0.6
+    scene school_corrior_dolg_76 with hpunch
+    gg 3 @S
+    scene school_corrior_dolg_77 with Dissolve(0.1)
+    da 2 @S
+    scene school_corrior_dolg_78 with vpunch
+    gg 3 @S
+    play sound woosh1 volume 0.6
+    scene school_corrior_dolg_79 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    play sound woosh2 volume 0.6
+    scene school_corrior_dolg_80 with PushMove(0.1, @Q)
+    ken 3 @S
+    play sound woosh3 volume 0.6
+    scene school_corrior_dolg_81 with PushMove(0.1, @Q)
+    da 2 @S
+    play sound woosh2 volume 0.6
+    scene school_corrior_dolg_79 with vpunch
+    gg 3 @S
+    play sound woosh3 volume 0.6
+    scene school_corrior_dolg_80 with PushMove(0.1, @Q)
+    ken 3 @S
+    play sound woosh2 volume 0.6
+    scene school_corrior_dolg_79 with PushMove(0.1, @Q)
+    gg 3 @S
+    play sound woosh3 volume 0.6
+    scene school_corrior_dolg_80 with PushMove(0.1, @Q)
+    ken 3 @S
+    play sound woosh2 volume 0.6
+    scene school_corrior_dolg_78 with hpunch
+    gg 3 @S
+    play sound woosh3 volume 0.6
+    scene school_corrior_dolg_82 with PushMove(0.1, @Q)
+    ken 3 @S
+    scene school_corrior_dolg_83 with vpunch
+    ken 3 @S
+    play sound woosh2 volume 0.6
+    scene school_corrior_dolg_81 with vpunch
+    da 2 @S
+    scene school_corrior_dolg_84:
+        xalign 0.5 yalign 0.5
+        zoom 0.8
+        ease 4.0 zoom 1.0
+    pause 1.0
+    play sound punch
+    scene school_corrior_dolg_85 with hpunch:
+        xalign 0.5 yalign 0.5
+        zoom 1.0
+        linear 4.0 zoom 0.8
+    pause 1.5
+    play sound as1 volume 0.8
+    scene school_corrior_dolg_86 with Dissolve(0.1):
+        xalign 0.5 yalign 0.5
+        zoom 1.1
+        linear 2.8 zoom 1.0
+    pause 2.0
+    play sound body_fell volume 1
+    scene school_corrior_dolg_87 with vpunch
+    pause 1.0
+    ken 3 @S with dissolve
+    scene school_corrior_dolg_88 with Dissolve(0.1)
+    @Q
+    scene school_corrior_dolg_89 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    play sound as2 volume 0.8
+    scene school_corrior_dolg_90 with vpunch:
+        xalign 0.5 yalign 0.5
+        zoom 1.1
+        linear 4.0 zoom 1.0
+    ken 3 @S
+    scene school_corrior_dolg_91 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    stop music2 fadeout 6
+    play music3 city_bird fadein 8 volume 0.3
+    scene school_corrior_dolg_92 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    mob 1 @S
+    scene school_corrior_dolg_93 with dissolve
+    pause 1.0
+    scene school_corrior_dolg_94 with dissolve
+    mi 1 @S with dissolve
+    scene school_corrior_dolg_95 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    scene black with Dissolve(1.3)
+    play sound schooldoor
+    pause 2.0
+    stop music3 fadeout 6
+    
+
+label school_dolg_minami:
+    
+    play music2 timeslip_by_phat_sounds volume 0.6 fadein 3
+    scene school_dolg_minami_1 with dissolve
+    pause 0.3
+    mi 1 @S with dissolve
+    mi 1 @S
+    scene school_dolg_minami_2 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_3 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_4 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_5 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_6 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    mi 1 @S
+    scene school_dolg_minami_7 with Dissolve(0.3)
+    mi 1 @S with dissolve
+    show school_dolg_minami_8 with Dissolve(0.3)
+    pause 0.3
+    play sound woosh2 volume 0.3
+    show school_dolg_minami_8 with Dissolve(0.1):
+        top
+        zoom 1
+        ease 0.3 zoom 1.1
+    mi 1 @S with dissolve
+    scene school_dolg_minami_9 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_2 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_3 with Dissolve(0.3)
+    gg 3 @S
+    play sound woosh3 volume 0.3
+    show school_dolg_minami_13 with Dissolve(0.2):
+        zoom 0.8 xalign 0.5 yalign 0.5
+        easein 0.2 zoom 1.0
+    mi 1 @S with dissolve
+    scene school_dolg_minami_14 with Dissolve(0.3)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_12 with Dissolve(0.1)
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    scene school_dolg_minami_6 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    if draka_roof_loose == True:
+        scene school_dolg_minami_8 with Dissolve(0.3)
+        mi 1 @S with dissolve
+    if draka_roof_loose == False:
+        scene school_dolg_minami_8 with Dissolve(0.3)
+        mi 1 @S with dissolve
+        scene school_dolg_minami_7 with Dissolve(0.3)
+        mi 1 @S with dissolve
+        
+    scene school_dolg_minami_1 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    mi 1 @S
+    mi 1 @S
+    show school_dolg_minami_15 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    scene school_dolg_minami_2 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    mi 1 @S
+    show school_dolg_minami_15 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    scene school_dolg_minami_8 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    mi 1 @S
+    scene school_dolg_minami_7 with Dissolve(0.3)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_6 with Dissolve(0.3)
+    mi 1 @S with dissolve
+    show school_dolg_minami_16 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    gg 3 @S
+    scene school_dolg_minami_17 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_18 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_4 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_10 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    mi 1 @S      
+    scene school_dolg_minami_11 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    show school_dolg_minami_16 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_dolg_minami_19 with Dissolve(0.2)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_20 with Dissolve(0.3)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_3 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_dolg_minami_2 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_1 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    mi 1 @S
+    stop music2 fadeout 6
+    play music3 breathe_easy_and_relax_by_musiclfiles volume 0.6 fadein 6
+    scene school_dolg_minami_21 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_22 with Dissolve(0.1)
+    pause 0.3
+    show school_dolg_minami_23
+    $ renpy.pause(4, hard=True)
+    pause 0.5
+    mi 1 @S with dissolve
+    scene school_dolg_minami_24 with Dissolve(0.3)
+    mi 1 @S
+    scene school_dolg_minami_25 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_26 with Dissolve(0.1)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_27 with Dissolve(0.3)
+    mi 1 @S with dissolve
+    scene school_dolg_minami_28 with Dissolve(0.3)
+    mi 1 @S with dissolve
+    gg 3 @S with dissolve
+    scene school_dolg_minami_29 with Dissolve(0.3)
+    mi 1 @S with dissolve
+    play sound skrip_stula volume 0.6
+    scene school_dolg_minami_30 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    scene school_dolg_minami_31 with Dissolve(0.3)
+    $ minami_know_superpower = True
+    mi 1 @S with dissolve
+    stop music3 fadeout 3
+    
+    scene black with dissolve
+    pause 3.0
+
+label school_dolg_dm:
+
+    play music3 city_bird fadein 1 volume 0.5
+    
+    scene school_dolg_dm_1 with Dissolve(1.0)
+    gg t3 @S with dissolve
+    scene school_dolg_dm_2 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_dolg_dm_3 with Dissolve(0.1)
+    me 1 @S with dissolve
+    scene school_dolg_dm_4 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    scene school_dolg_dm_5 with Dissolve(0.1)
+    gg 3 @S with dissolve
+    
+    $ renpy.music.set_volume(0.3, delay=3, channel=u@Q)
+    play music2 marty_gots_a_plan_by_kevin_macleod volume 0.6 fadein 3
+    
+    scene school_dolg_dm_6 with dissolve
+    me 1 @S with dissolve
+    scene school_dolg_dm_7 with Dissolve(0.3)
+    me 1 @S with dissolve
+    scene school_dolg_dm_8 with Dissolve(0.3)
+    pause 1.0
+    play sound swing6
+    scene school_dolg_dm_9 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    
+    menu:
+        @S:
+            scene school_dolg_dm_13 with Dissolve(0.3)
+            pause 1.0
+            scene school_dolg_dm_14 with Dissolve(0.3)
+            pause 1.0
+            play sound zajigalka
+            scene school_dolg_dm_15 with Dissolve(0.3)
+            $ smoking = True
+            pause 1.5
+        
+        @Q:
+            scene school_dolg_dm_10 with Dissolve(0.3)
+            gg 3 @S with dissolve
+            scene school_dolg_dm_11 with Dissolve(0.3)
+            dai 1 @S with dissolve
+            scene school_dolg_dm_12 with Dissolve(0.3)
+            dai 1 @S
+            
+    scene school_dolg_dm_16 with Dissolve(0.3)
+    me 1 @S with dissolve
+    scene school_dolg_dm_17 with Dissolve(0.3)
+    me 1 @S with dissolve
+    scene school_dolg_dm_18 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    scene school_dolg_dm_19 with Dissolve(0.3)
+    me 1 @S with dissolve
+    play sound2 swing4 volume 0.5
+    scene school_dolg_dm_20 with Dissolve(0.3)
+    dai 1 @S
+    scene school_dolg_dm_16 with Dissolve(0.3)
+    me 1 @S with dissolve
+    scene school_dolg_dm_17 with Dissolve(0.3)
+    me 1 @S with dissolve
+    scene school_dolg_dm_21 with Dissolve(0.3)
+    me 1 @S with dissolve
+    scene school_dolg_dm_22 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    scene school_dolg_dm_23 with Dissolve(0.3)
+    li 1 @S
+    
+    stop music2 fadeout 1
+    $ renpy.music.set_volume(1, delay=1, channel=u@Q)
+    
+    show school_dolg_dm_24 with Dissolve(0.1)
+    $ renpy.pause(2.5, hard=True)
+    play sound woosh2
+    scene school_dolg_dm_25 with hpunch
+    li 1 @S
+    play sound2 swing3 volume 0.5
+    scene school_dolg_dm_26 with Dissolve(0.3)
+    li 1 @S with dissolve
+    scene school_dolg_dm_27 with Dissolve(0.1)
+    $ renpy.music.set_volume(0.3, delay=1, channel=u@Q)
+    play music2 marty_gots_a_plan_by_kevin_macleod volume 0.6 fadein 1
+    dai 1 @S with dissolve
+    
+    if love_li >= 3:
+        scene school_dolg_dm_28 with Dissolve(0.3)
+        gg 3 @S with dissolve
+    if love_li < 3:
+        scene school_dolg_dm_29 with Dissolve(0.3)
+        gg 3 @S with dissolve
+    
+    scene school_dolg_dm_30 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    scene school_dolg_dm_31 with Dissolve(0.3)
+    me 1 @S with dissolve
+    play sound zahvat_2 volume 0.3
+    scene school_dolg_dm_32 with hpunch
+    dai 1 @S
+    
+    if love_li >= 3:
+        scene school_dolg_dm_33 with Dissolve(0.3)
+    if love_li < 3:
+        scene school_dolg_dm_34 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    
+    scene school_dolg_dm_35 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    scene school_dolg_dm_36 with Dissolve(0.3)
+    me 1 @Swith dissolve 
+    me 1 @S
+    scene school_dolg_dm_37 with Dissolve(0.3)
+    dai 1 @S with dissolve
+
+    if love_li >= 3:
+        scene school_dolg_dm_33 with Dissolve(0.3)
+    else:
+        scene school_dolg_dm_34 with Dissolve(0.3)
+        
+    gg 3 @S with dissolve
+    
+    if love_li >= 3:
+        scene school_dolg_dm_38 with Dissolve(0.3)
+    else:
+        scene school_dolg_dm_39 with Dissolve(0.3)
+        
+    li 1 @S
+    
+    scene school_dolg_dm_40 with Dissolve(0.3)
+    me 1 @S with dissolve
+    play sound swing4 volume 0.5
+    scene school_dolg_dm_41 with hpunch
+    dai 1 @S
+    play sound2 swing1 volume 0.5
+    scene school_dolg_dm_42 with hpunch
+    me 1 @S
+    play sound3 swing2 volume 0.5
+    scene school_dolg_dm_43 with hpunch
+    dai 1 @S
+    play sound zahvat_2 volume 0.5
+    scene school_dolg_dm_44 with hpunch
+    me 1 @S
+    scene school_dolg_dm_45 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    scene school_dolg_dm_46 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_dolg_dm_47 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_dolg_dm_48 with Dissolve(0.3)
+    li 1 @S with dissolve
+    scene school_dolg_dm_49 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    scene school_dolg_dm_50 with Dissolve(0.3)
+    li 1 @S with dissolve
+    scene school_dolg_dm_51 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    play sound zahvat_1 volume 0.5
+    scene school_dolg_dm_52 with vpunch
+    da 2 @S
+    scene school_dolg_dm_53 with Dissolve(0.3)
+    da 2 @S
+    play sound woosh1 volume 0.5
+    scene school_dolg_dm_54 with PushMove(0.1, @Q)
+    li 1 @S
+    play sound2 woosh2 volume 0.5
+    scene school_dolg_dm_55 with PushMove(0.1, @Q)
+    da 2 @S
+    menu:
+        @Q:
+            scene school_dolg_dm_56 with Dissolve(0.3)
+            gg 3 @S
+            play sound2 swing2 volume 0.5
+            scene school_dolg_dm_58 with hpunch
+            da 2 @S
+            play sound slap1
+            scene school_dolg_dm_59 with hpunch
+            da 2 @S
+            play sound2 swing1 volume 0.5
+            scene school_dolg_dm_60 with Dissolve(0.3)
+            da 2 @S with dissolve
+            
+        @Q:
+            scene school_dolg_dm_56 with Dissolve(0.3)
+            gg 3 @S
+            scene school_dolg_dm_57 with Dissolve(0.3)
+            da 2 @S with dissolve
+     
+    scene school_dolg_dm_61 with Dissolve(0.3)
+    me 1 @S with dissolve
+    scene school_dolg_dm_62 with Dissolve(0.3)
+    da 2 @S with dissolve
+    scene school_dolg_dm_63 with Dissolve(0.3)
+    dai 1 @S with dissolve
+    scene school_dolg_dm_64 with Dissolve(0.3)
+    da 2 @S with dissolve
+    scene school_dolg_dm_65 with Dissolve(0.3)
+    me 1 @S with dissolve
+    scene school_dolg_dm_66 with Dissolve(0.3)
+    me 1  @S with dissolve
+    stop music2 fadeout 3
+    scene black with Dissolve(1.0)
+    pause 3.0
+    
+
+
+label home_dolg_may:
+    
+    $ renpy.music.set_volume(1, delay=0, channel=u@Q)
+    play music3 scott_buckley_the_long_dark volume 0.5 fadein 6
+    show home_dolg_may_0 with Dissolve(0.5)
+    $ renpy.pause(3, hard=True)
+    gg t8 @S with dissolve
+    scene home_dolg_may_1 with dissolve
+    gg t8 @S
+    gg t8 @S with dissolve
+    gg t8 @S
+    gg t8 @S
+    scene home_dolg_may_2 with Dissolve(0.3)
+    gg t8 @S with dissolve
+    gg t8 @S
+    gg t8 @S
+    gg t8 @S
+    gg t8 @S
+    gg t8 @S
+    stop music3 fadeout 1
+    play sound woosh3
+    scene home_dolg_may_3 with hpunch
+    may 8 @S
+    scene home_dolg_may_4 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_5 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    play sound box1
+    show home_dolg_may_6  with Dissolve(0.3):
+        zoom 1.2 xalign 0.5 yalign 0.5
+        easein 1.0 zoom 1.0
+    pause 1.0
+    menu:
+        @S:
+            pause 0.6
+    show home_dolg_may_7 with Dissolve(0.1)
+    hide home_dolg_may_6
+    $ renpy.pause(1.0, hard=True)
+    play sound box2 volume 0.2
+    $ renpy.pause(0.5, hard=True)
+    play sound2 dm2
+    $ renpy.pause(2.5, hard=True)
+    play music3 unseen_by_phat_sounds volume 0.6 fadein 1
+    gg 8 @S with dissolve
+    scene home_dolg_may_8 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_9 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_10 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_11 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_12 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_13 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_14 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_10 with Dissolve(0.3)
+    may 8 @S with dissolve
+    play sound woosh2
+    show home_dolg_may_15:
+        zoom 0.8 xalign 0.5 yalign 0.1
+        easein 0.1 zoom 1
+    may 8 @S with Dissolve(0.1)
+    scene home_dolg_may_16 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    gg 8 @S
+    scene home_dolg_may_17 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_8 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_9 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_18 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    play sound woosh2
+    scene home_dolg_may_19:
+        zoom 1.2 xalign 0.5 yalign 0.5
+        easein 0.2 zoom 1
+    may 8 @S with Dissolve(0.3)
+    scene home_dolg_may_20 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_21 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_22 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    gg 8 @S
+    $ renpy.music.set_volume(0.3, delay=1, channel=u@Q)
+    scene black with Dissolve(1.0)
+    pause 0.5
+    scene home_dolg_may_23 with Dissolve(1.6):
+        center
+        zoom 1.2
+        ease 2 zoom 1
+    scene home_dolg_may_24 with Dissolve(1.8)
+    @Q
+    $ renpy.music.set_volume(1, delay=3, channel=u@Q)
+    scene home_dolg_may_22 with Dissolve(2.0)
+    gg 8 @S with dissolve
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    scene home_dolg_may_25 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_26 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    play sound3 box1 volume 0.3
+    scene home_dolg_may_27 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_28 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_29 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    gg 8 @S
+    scene home_dolg_may_30 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    gg 8 @S
+    scene home_dolg_may_31 with Dissolve(0.3)
+    may 8 @S
+    scene home_dolg_may_32 with Dissolve(0.3)
+    pause 1.0
+    play sound gloves
+    scene home_dolg_may_33 with Dissolve(0.3):
+        pause 1.8
+        zoom 1.0 xalign 0.5 yalign 0.1
+        easein 0.3 zoom 1.5
+    pause 1.5
+    play sound2 woosh2 volume 0.5
+    show home_dolg_may_34 with fade
+    $ renpy.pause(13,hard=True)
+    scene home_dolg_may_35 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_36 with Dissolve(0.3)
+    may 8 @S with dissolve
+    play sound gloves volume 0.5
+    scene home_dolg_may_37 with Dissolve(0.3)
+    pause 1.0
+    play sound box1 volume 0.5
+    scene home_dolg_may_38 with Dissolve(0.3)
+    pause 1.8
+    play sound paper1 volume 0.5
+    scene home_dolg_may_39 with Dissolve(0.3)
+    pause 1.5
+    play sound swing6 volume 0.5
+    show home_dolg_may_40 with Dissolve(0.2):
+        zoom 0.8 xalign 0.5 yalign 0.5
+        easein 0.2 zoom 1
+    gg 8 @S with dissolve
+    play sound woosh1 volume 0.5
+    show home_dolg_may_41 with Dissolve(0.2):
+        zoom 1.3 xalign 0.5 yalign 0.5
+        easein 0.2 zoom 1
+    gg 8 @S with dissolve
+    scene home_dolg_may_42 with fade
+    @S with dissolve
+    scene home_dolg_may_43 with Dissolve(0.3)
+    @S with dissolve
+    @S
+    @S
+    scene home_dolg_may_44 with Dissolve(0.3)
+    @S with dissolve
+    pause 0.5
+    may 8 @S with dissolve
+    scene home_dolg_may_45 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_46 with Dissolve(0.3)
+    may 8 @S with dissolve
+    scene home_dolg_may_47 with Dissolve(0.3)
+    
+    $ choice_var = 1
+    menu:
+        @S:
+            play sound paper1 volume 0.5
+            scene home_dolg_may_48 with fade
+            may 8 @S with dissolve
+            scene home_dolg_may_49 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_50 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_51 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_52 with Dissolve(0.3)
+            may 8 @S with dissolve
+            $ may_know_asami = True
+            show home_dolg_may_53 with Dissolve(0.3)
+            pause 0.5
+            gg 8 @S with dissolve
+            gg 8 @S
+            gg 8 @S
+            
+        @Q:
+            show home_dolg_may_54 with fade
+            gg 8 @S with dissolve
+            scene home_dolg_may_55 with Dissolve(0.3)
+            may 8 @S with dissolve
+            show home_dolg_may_54 with Dissolve(0.3)
+            
+            $ choice_var = 0
+            menu:
+                @S:
+                    show home_dolg_may_54 with Dissolve(0.3)
+                    gg 8 @S with dissolve
+                    scene home_dolg_may_56 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    show home_dolg_may_54 with Dissolve(0.3)
+                    gg 8 @S with dissolve
+                    
+                @Q:
+                    show home_dolg_may_54 with Dissolve(0.3)
+                    gg 8 @S with dissolve
+                    scene home_dolg_may_57 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    show home_dolg_may_54 with Dissolve(0.3)
+                    
+                @S:
+                    gg 8 @S with dissolve
+                    
+            may 8 @S with dissolve
+    $ choice_var = 0
+    scene home_dolg_may_58 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene home_dolg_may_59 with Dissolve(1.3)
+    may 8 @S with dissolve
+    stop music3 fadeout 8
+    pause 1.5
+    play music2 a_nice_dream_by_frank_schroeter fadein 8 volume 0.8
+    gg 8 @S with dissolve
+    scene home_dolg_may_60 with Dissolve(1.3)
+    gg 8 @S with dissolve
+    may 8 @S with dissolve
+    may 8 @S with dissolve
+    show home_dolg_may_61 with Dissolve(0.3)
+    $ renpy.pause(5.9,hard=True)
+    show home_dolg_may_62 with Dissolve(0.1)
+    hide home_dolg_may_61
+    $ choice_var = 1
+    $ home_dolg_may_choices = []
+    menu home_dolg_may_choices:
+        set home_dolg_may_choices
+        @S:
+            gg 8 @S with dissolve
+            scene home_dolg_may_63 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_64 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            scene home_dolg_may_65 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_66 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_67 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_68 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_69 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            pause .5
+            scene home_dolg_may_70 with Dissolve(0.3)
+            may 8 @S with dissolve
+            show home_dolg_may_71 with Dissolve(0.3)
+            menu:
+                @S:
+                    gg 8 @S with dissolve
+                    $ may_know_lillian = True
+                    scene home_dolg_may_72 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    scene home_dolg_may_73 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    scene home_dolg_may_74 with Dissolve(0.3)
+                    gg 8 @S with dissolve
+                    scene home_dolg_may_75 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    may 8 @S
+                    scene home_dolg_may_76 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    scene home_dolg_may_77 with Dissolve(0.3)
+                    gg 8 @S with dissolve
+                    scene home_dolg_may_78 with Dissolve(0.3)
+                    may 8 @S
+                    scene home_dolg_may_79 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    scene home_dolg_may_80 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    scene home_dolg_may_81 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    scene home_dolg_may_82 with Dissolve(0.3)
+                    gg 8 @S with dissolve
+                    scene home_dolg_may_83 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    scene home_dolg_may_84 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    scene home_dolg_may_85 with Dissolve(0.3)
+                    gg 8 @S with dissolve
+                    scene home_dolg_may_86 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    show home_dolg_may_87 with Dissolve(0.01)
+                    $ renpy.pause(1.499,hard=True)
+                    show home_dolg_may_88 with Dissolve(0.01)
+                    menu:
+                        @Q:
+                            gg 8 @S with dissolve
+                            scene home_dolg_may_89 with Dissolve(0.3)
+                            may 8 @S with dissolve
+                            scene home_dolg_may_90 with Dissolve(0.3)
+                            gg 8 @S with dissolve
+                            scene home_dolg_may_91 with Dissolve(0.3)
+                            may 8 @S
+                                        
+                        @S:
+                            gg 8 @S with dissolve
+                            scene home_dolg_may_91 with Dissolve(0.3)
+                            may 8 @S with dissolve
+                            
+                        @Q:
+                            pause 0.3
+                            
+                    show home_dolg_may_88 with Dissolve(0.3)
+                    
+                @Q:
+                    gg 8 @S
+                    scene home_dolg_may_92 with Dissolve(0.3)
+                    may 8 @S with dissolve
+                    show home_dolg_may_71 with Dissolve(0.3)
+                    gg 8 @S with dissolve
+                    
+            jump home_dolg_may_choices
+
+        @Q:
+            gg 8 @S with dissolve
+            scene home_dolg_may_93 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_94 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            gg 8 @S with dissolve
+            scene home_dolg_may_95 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            gg 8 @S with dissolve
+            gg 8 @S with dissolve
+            scene home_dolg_may_96 with Dissolve(0.3)
+            may 8 @S with dissolve
+            scene home_dolg_may_97 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            scene home_dolg_may_98 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            scene home_dolg_may_99 with Dissolve(0.3)
+            may 8 @S with dissolve
+            may 8 @S
+            may 8 @S
+            show home_dolg_may_62 with Dissolve(0.3)
+            $ may_thanks_night = True
+            gg 8 @S with dissolve
+            jump home_dolg_may_choices
+
+        @S:
+            pause 0.1
+    $ choice_var = 0
+    gg 8 @S with dissolve
+    scene home_dolg_may_100 with Dissolve(0.3)
+    may 8 @S with dissolve
+    stop music2 fadeout 3
+    play music3 japan_streets_2 fadein 6
+    jump classmates_party_1
+
+
+label classmates_party_1:
+    scene black with Dissolve(0.5)
+    pause 2.0
+    show cm_party_0 with Dissolve(0.5)
+    play sound cm_party_0_sound
+    $ aksha -= 19
+    $ renpy.pause(5.5,hard=True)
+    scene cm_party_1 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    gg 8 @S
+    scene cm_party_2 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_3 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_4 with Dissolve(0.3)
+    li 2 @S with dissolve
+    scene cm_party_5 with Dissolve(0.3)
+    li 2 @S with dissolve
+    scene cm_party_6 with Dissolve(0.3)
+    li 2 @S with dissolve
+    scene cm_party_7 with Dissolve(0.3)
+    li 2 @S with dissolve
+    show cm_party_8 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_15 with Dissolve(0.3)
+    li 2 @S with dissolve
+    show cm_party_8 with Dissolve(0.3)
+    
+    menu:
+        @S:
+            gg 8 @S with dissolve
+            $ love_li += 1
+            show screen rel_up_lillian
+            $ lillian_compliment_appearance = True
+            scene cm_party_9 with Dissolve(0.3)
+            li 2 @S with dissolve
+            scene cm_party_10 with Dissolve(0.3)
+            li 2 @S with dissolve
+            scene cm_party_11 with Dissolve(0.3)            
+            li 2 @S with dissolve
+            scene cm_party_12 with Dissolve(0.3)
+            li 2 @S with dissolve
+            show cm_party_13 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            gg 8 @S
+            scene cm_party_14 with Dissolve(0.3)
+            li 2 @S with dissolve
+            scene cm_party_15 with Dissolve(0.3)
+            li 2 @S with dissolve
+            show cm_party_13 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            scene cm_party_16 with Dissolve(0.3)
+            li 2 @S with dissolve
+            show cm_party_13 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            gg 8 @S
+            scene cm_party_17 with Dissolve(0.3)
+            li 2 @S with dissolve
+        @S:
+            gg 8 @S with dissolve
+            scene cm_party_17 with Dissolve(0.3)
+            li 2 @S with dissolve
+            show cm_party_13 with Dissolve(0.3)
+            gg 8 @S with dissolve
+
+    scene black with dissolve
+    stop music3 fadeout 6
+    pause 0.5
+    play music2 fsm_team_escp_midnight_room volume 0.5 fadein 8
+    play sound swing3
+    scene cm_party_18 with hpunch
+    me 2 @S
+    scene cm_party_19 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_20 with Dissolve(0.3)
+    me 2 @S with dissolve
+    scene cm_party_21 with Dissolve(0.3)
+    me 2 @S
+    scene cm_party_22 with Dissolve(0.3)
+    me 2 @S with dissolve
+    dai 2 @S with dissolve
+    scene cm_party_23 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_24 with Dissolve(0.3)
+    me 2 @S with dissolve
+    play sound swing1 volume 0.4
+    scene cm_party_25 with Dissolve(0.3)
+    me 2 @S with dissolve
+    scene cm_party_26 with Dissolve(0.3)
+    cm_barmen @S with dissolve
+    scene cm_party_27 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    play sound2 swing3 volume 0.5
+    scene cm_party_28 with Dissolve(0.3)
+    play sound2 swing5 volume 0.5
+    
+    menu:
+        @Q:
+            gg 8 @S
+            $ ishti = True
+            scene cm_party_29 with Dissolve(0.3)
+            me 2 @S with dissolve
+            cm_barmen @S with dissolve
+            scene cm_party_30 with Dissolve(0.3)
+            gg 8 @S with dissolve
+            scene cm_party_31 with Dissolve(0.3)
+            li 2 @S with dissolve
+            play sound woosh2 volume 0.8
+            scene cm_party_32 with vpunch
+            da 3 @S with dissolve
+            
+        @Q:
+            gg 8 @S
+            $ ishti = False
+            scene cm_party_31 with Dissolve(0.3)
+            li 2 @S with dissolve
+            play sound woosh2 volume 0.8
+            scene cm_party_32 with vpunch
+            da 3 @S with dissolve
+    
+    gg t8 @S with dissolve
+    scene cm_party_33 with Dissolve(0.3)
+    da 3 @S with dissolve
+    da 3 @S
+    scene cm_party_34 with Dissolve(0.3)
+    pause 1.5
+    scene cm_party_35 with Dissolve(0.3)
+    pause 1
+    scene cm_party_36 with Dissolve(0.3)
+    pause 1.0
+    scene cm_party_37 with Dissolve(0.3)
+    pause 2.6
+    scene cm_party_38 with Dissolve(0.3)
+    li 2 @S with dissolve
+    play sound glass_bottles_1 volume 0.5
+    scene cm_party_39 with Dissolve(0.3)
+    me 2 @S with dissolve
+    if ishti == True:
+        scene cm_party_40 with Dissolve(0.3)
+        li 2 @S with dissolve
+        gg 8 @S with dissolve
+    else:
+        scene cm_party_41 with Dissolve(0.3)
+        dai 2 @S with dissolve
+        scene cm_party_42 with Dissolve(0.3)
+        da 3 @S with dissolve
+        scene cm_party_43 with Dissolve(0.3)
+        pause 1.0
+        scene cm_party_44 with Dissolve(0.3)
+        gg 8 @S with dissolve
+        scene cm_party_45 with Dissolve(0.3)
+        me 2 @S with dissolve
+        cm_barmen @S with dissolve
+        me 2 @S with dissolve
+        cm_barmen @S with dissolve
+        cm_barmen @S
+        me 2 @S with dissolve
+        cm_barmen @S with dissolve
+        scene cm_party_46 with Dissolve(0.3)
+        me 2 @S with dissolve
+        scene cm_party_47 with Dissolve(0.3)
+        menu:
+            @Q:
+                gg 8 @S with dissolve
+                $ juice_apple = True
+                scene cm_party_45 with Dissolve(0.3)
+                me 2 @S with dissolve
+                
+            @Q:
+                gg 8 @S with dissolve
+                $ juice_orange = True
+                scene cm_party_45 with Dissolve(0.3)
+                me 2 @S with dissolve
+                
+            @Q:
+                gg 8 @S with dissolve
+                $ juice_pineapple = True
+                scene cm_party_45 with Dissolve(0.3)
+                me 2 @S with dissolve
+                
+            @Q:
+                gg 8 @S with dissolve
+                $ juice_cherry = True
+                scene cm_party_45 with Dissolve(0.3)
+                me 2 @S with dissolve
+    
+    scene cm_party_41 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_48 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    gg 8 @S
+    scene cm_party_49 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    if ishti == False:
+        play sound glass_bottles_2 volume 0.5
+        if juice_apple == True:
+            scene cm_party_50 with Dissolve(0.3)
+        elif juice_orange == True:
+            scene cm_party_51 with Dissolve(0.3)
+        elif juice_pineapple == True:
+            scene cm_party_52 with Dissolve(0.3)
+        else:
+            scene cm_party_53 with Dissolve(0.3)
+        pause 1.5
+        li 2 @S with dissolve
+        play sound poured
+        scene cm_party_54 with Dissolve(0.3)
+        pause 2.0
+        if juice_apple == True:
+            scene cm_party_55 with Dissolve(0.3)
+        elif juice_orange == True:
+            scene cm_party_56 with Dissolve(0.3)
+        elif juice_pineapple == True:
+            scene cm_party_57 with Dissolve(0.3)
+        else:
+            scene cm_party_58 with Dissolve(0.3)
+            
+        li 2 @S with dissolve
+        gg 8 @S with dissolve
+        scene cm_party_59 with Dissolve(0.3)
+        da 3 @S with dissolve
+        if juice_apple == True:
+            scene cm_party_60 with Dissolve(0.3)
+        elif juice_orange == True:
+            scene cm_party_61 with Dissolve(0.3)
+        elif juice_pineapple == True:
+            scene cm_party_62 with Dissolve(0.3)
+        else:
+            scene cm_party_63 with Dissolve(0.3)
+        li 2 @S with dissolve
+        scene cm_party_64 with Dissolve(0.3)
+        dai 2 @S with dissolve
+        scene cm_party_65 with Dissolve(0.3)
+        da 3 @S with dissolve
+        play sound as3 volume 0.4
+        scene cm_party_66 with Dissolve(0.3)
+        @S
+        scene cm_party_67 with Dissolve(0.3)
+        pause 1.5
+    
+    if juice_pineapple == True:
+        scene cm_party_68 with Dissolve(0.3)
+        da 3 @S with dissolve
+        play sound2 energy_glot volume 0.5
+        scene cm_party_69 with Dissolve(0.3)
+        pause 2.0
+        stop sound2 fadeout 1
+        play sound woosh1 volume 0.8
+        scene cm_party_70 with Dissolve(0.1):
+            zoom 1.2 xalign 0.5 yalign 0.5
+            easein 0.3 zoom 1
+        da 3 @S with dissolve
+        scene cm_party_65 with Dissolve(0.3)
+        dai 2 @S with dissolve
+        scene cm_party_71 with Dissolve(0.3)
+        da 3 @S with dissolve
+        scene cm_party_72 with Dissolve(0.3)
+        gg 8 @S with dissolve
+        scene cm_party_73 with Dissolve(0.3)
+        da 3 @S with dissolve
+        play sound2 energy_glot volume 0.5
+        scene cm_party_69 with Dissolve(0.3)
+        pause 2.0
+        stop sound2 fadeout 1
+        play sound dm1 volume 0.8
+        scene cm_party_74 with vpunch
+        da 3 @S with dissolve
+        scene cm_party_75 with Dissolve(0.3)
+        gg 8 @S with dissolve
+        scene cm_party_76 with Dissolve(0.3)
+        li 2 @S with dissolve
+        scene cm_party_77 with Dissolve(0.3)
+        gg 8 @S with dissolve
+        
+    scene cm_party_78 with Dissolve(0.3)
+    me 2 @S with dissolve
+    scene cm_party_79 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_80 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_81 with Dissolve(0.3)
+    me 2 @S with dissolve
+    scene cm_party_82 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_83 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_84 with Dissolve(0.3)
+    me 2 @S with dissolve
+    if ishti == True:
+        scene cm_party_85 with Dissolve(0.3)
+    if ishti == False:
+        scene cm_party_86 with Dissolve(0.3)
+    gg 8 @S
+    dai 2 @S with dissolve
+    scene cm_party_78 with Dissolve(0.3)
+    me 2 @S with dissolve
+    me 2 @S
+    scene cm_party_79 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_80 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_84 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_79 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_88 with Dissolve(0.3)
+    pause 1.5
+    li 2 @S with dissolve
+    scene cm_party_79 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_87 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_79 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_87 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_79 with Dissolve(0.3)
+    if not not_know_alexxis:
+        gg 8 @S with dissolve
+    gg 8 @S
+    scene cm_party_80 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    dai 2 @S with dissolve
+    scene cm_party_84 with Dissolve(0.3)
+    me 2 @S with dissolve
+    scene cm_party_87 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    if ishti == True:
+        scene cm_party_89 with Dissolve(0.3)
+    if juice_apple == True:
+        scene cm_party_90 with Dissolve(0.3)
+    if juice_orange == True:
+        scene cm_party_91 with Dissolve(0.3)
+    if juice_pineapple == True:
+        scene cm_party_92 with Dissolve(0.3)
+    if juice_cherry == True:
+        scene cm_party_93 with Dissolve(0.3)
+    li 2 @S with dissolve
+    li 2 @S
+    li 2 @S
+    scene cm_party_94 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    dai 2 @S
+    dai 2 @S
+    scene cm_party_95 with Dissolve(0.3)
+    me 2 @S with dissolve
+    scene cm_party_96 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    if ishti == True:
+        scene cm_party_97 with Dissolve(0.3)
+    if juice_apple == True:
+        scene cm_party_98 with Dissolve(0.3)
+    if juice_orange == True:
+        scene cm_party_99 with Dissolve(0.3)
+    if juice_pineapple == True:
+        scene cm_party_76 with Dissolve(0.3)
+    if juice_cherry == True:
+        scene cm_party_100 with Dissolve(0.3)
+    li 2 @S with dissolve
+    li 2 @S
+    if ishti == True:
+        scene cm_party_101 with Dissolve(0.3)
+    if juice_apple == True:
+        scene cm_party_102 with Dissolve(0.3)
+    if juice_orange == True:
+        scene cm_party_103 with Dissolve(0.3)
+    if juice_pineapple == True:
+        scene cm_party_77 with Dissolve(0.3)
+    if juice_cherry == True:
+        scene cm_party_104 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    gg 8 @S
+    dai 2 @S with dissolve
+    if ishti == False:
+        scene cm_party_105 with Dissolve(0.3)
+    if ishti == True:
+        scene cm_party_106 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_107 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    scene cm_party_108 with Dissolve(0.3)
+    pause 1.5
+    scene cm_party_109 with Dissolve(0.3)
+    pause 0.5
+    da 3 @S
+    dai 2 @S
+    scene cm_party_110 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    play sound zahvat_1 volume 0.3
+    scene cm_party_111 with vpunch
+    da 3 @S with dissolve
+    play sound woosh2 volume 0.3
+    scene cm_party_112 with Dissolve(0.3)
+    me 2 @S with dissolve
+    da 3 @S with dissolve
+    dai 2 @S with dissolve
+    $ renpy.music.set_volume(0.3, delay=2, channel=u@Q)
+    scene black with Dissolve(1.0)
+    pause 1.0
+    $ renpy.music.set_volume(1, delay=3, channel=u@Q)
+    pause 1.0
+
+    if ishti == True:
+
+        scene cm_party_113 with Dissolve(1.0)
+        pause 2.0
+        scene cm_party_114 with Dissolve(0.5)
+        gg t8 @S with dissolve
+        scene cm_party_115 with Dissolve(0.3)
+        gg 8 @S with dissolve
+        show cm_party_118 with Dissolve(0.3)
+
+    if ishti == False:
+        scene cm_party_116 with Dissolve(1.0)
+        pause 2.0
+        scene cm_party_117 with Dissolve(0.5)
+        pause 0.5
+        gg 8 @S with dissolve
+        show cm_party_118 with Dissolve(0.3)
+        gg 8 @S with dissolve
+        gg 8 @S
+        li 2 @S with dissolve
+        gg 8 @S with dissolve
+
+    pause 1.5
+    gg 8 @S with dissolve
+    gg 8 @S
+    li 2 @S with dissolve
+    menu:
+        @S:
+            pause 1.0
+            gg 8 @S with vpunch
+    li 2 @S with dissolve
+    gg 8 @S with dissolve
+    li 2 @S with dissolve
+    scene cm_party_119 with Dissolve(0.3)
+    li 2 @S with dissolve
+    scene cm_party_120 with Dissolve(0.3)
+    li 2 @S with dissolve
+    scene cm_party_121 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    da 3 @S with dissolve
+    show cm_party_122 with Dissolve(0.1)
+    $ renpy.pause(2,hard=True)
+    $ skip_dialogue_label = @S
+    $ skip_dialogue = True
+    scene cm_party_123 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_124 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_125 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_126 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_127 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_128 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_129 with Dissolve(0.3)
+    da 3 @S with dissolve
+    da 3 @S
+    da 3 @S
+    scene cm_party_130 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_131 with Dissolve(0.3)
+    da 3 @S
+    play sound swing2 volume 0.5
+    show cm_party_132 with Dissolve(0.2):
+        zoom 1.2 xalign 0.5 yalign 0.5
+        easein 0.2 zoom 1.0
+    da 3 @S with dissolve
+    scene cm_party_133 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_134 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_135 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_136 with vpunch
+    da 3 @S
+    play sound3 woosh2 volume 0.8
+    scene cm_party_137 with PushMove(0.1, @Q)
+    dai 2 @S with dissolve
+    play sound2 woosh3 volume 0.8
+    scene cm_party_138 with PushMove(0.1, @Q)
+    da 3 @S with dissolve
+    play sound3 woosh2 volume 0.8
+    scene cm_party_139 with PushMove(0.1, @Q)
+    dai 2 @S with dissolve
+    play sound2 woosh3 volume 0.8
+    scene cm_party_140 with PushMove(0.1, @Q)
+    da 3 @S with dissolve
+    play sound3 woosh2 volume 0.8
+    scene cm_party_141 with PushMove(0.1, @Q)
+    dai 2 @S with dissolve
+    play sound2 woosh3 volume 0.8
+    scene cm_party_138 with PushMove(0.1, @Q)
+    da 3 @S with dissolve
+    scene cm_party_142 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_140 with Dissolve(0.3)
+    da 3 @S with dissolve
+    scene cm_party_143 with Dissolve(0.3)
+    da 3 @S with dissolve
+    play sound3 woosh2 volume 0.8
+    scene cm_party_144 with PushMove(0.1, @Q)
+    dai 2 @S with dissolve
+    play sound2 woosh3 volume 0.8
+    scene cm_party_145 with PushMove(0.1, @Q)
+    da 3 @S with dissolve
+    play sound3 woosh2 volume 0.8
+    scene cm_party_139 with PushMove(0.1, @Q)
+    dai 2 @S with dissolve
+    play sound2 woosh3 volume 0.8
+    scene cm_party_146 with PushMove(0.1, @Q)
+    da 3 @S with dissolve
+    scene cm_party_147 with vpunch
+    da 3 @S
+    play sound3 woosh2 volume 0.8
+    scene cm_party_137 with PushMove(0.1, @Q)
+    dai 2 @S with dissolve
+    play sound2 woosh3 volume 0.8
+    scene cm_party_145 with PushMove(0.1, @Q)
+    da 3 @S with dissolve
+    play sound3 woosh2 volume 0.8
+    scene cm_party_139 with PushMove(0.1, @Q)
+    dai 2 @S with dissolve
+    play sound2 woosh3 volume 0.8
+    scene cm_party_143 with PushMove(0.1, @Q)
+    da 3 @S with dissolve
+    play sound as1 volume 0.8
+    scene cm_party_148 with vpunch
+    me 2 @S
+    me 2 @S
+    play sound3 swing1 volume 0.5
+    scene cm_party_142 with vpunch
+    da 3 @S with dissolve
+    play sound2 woosh3 volume 0.8
+    scene cm_party_139 with PushMove(0.1, @Q)
+    dai 2 @S with dissolve
+    $ skip_dialogue = False
+    play sound3 woosh2 volume 0.8
+    scene cm_party_147 with PushMove(0.1, @Q)
+    da 3 @S with dissolve
+    jump classmates_party_2
+    
+label classmates_party_2:
+    $ skip_dialogue = False
+    scene cm_party_149 with Dissolve(1.0)
+    gg 8 @S
+    scene cm_party_150 with Dissolve(0.3)
+    li 2 @S with dissolve
+    scene cm_party_151 with Dissolve(0.3)
+    li 2 @S with dissolve
+    show cm_party_152 with Dissolve(0.3)
+    $ choice_var = 1
+    $ classmates_party_choice_1 = []
+    menu classmates_party_choice_1:
+        set classmates_party_choice_1
+        @S:
+            gg 8 @S
+            gg 8 @S
+            $ love_li -= 2
+            gg 8 @S
+            scene cm_party_153 with Dissolve(0.3)
+            li 2 @S
+            show cm_party_152 with Dissolve(0.3)
+            gg 8 @S
+            scene cm_party_153 with Dissolve(0.3)
+            li 2 @S
+            pause 1.0
+
+        @S:
+            gg 8 @S
+            gg 8 @S
+            gg 8 @S
+            $ love_li += 2
+            show screen rel_up_lillian
+            scene cm_party_154 with Dissolve(0.3)
+            li 2 @S
+
+        @S:
+            gg 8 @S
+            gg 8 @S
+            gg 8 @S
+            gg 8 @S
+            scene cm_party_155 with Dissolve(0.3)
+            li 2 @S
+
+        @S:
+            gg 8 @S
+            scene cm_party_156 with Dissolve(0.3)
+            li 2 @S
+            show cm_party_152 with Dissolve(0.3)
+            gg 8 @S
+            scene cm_party_157 with Dissolve(0.3)
+            li 2 @S
+            scene cm_party_158 with Dissolve(0.3)
+            li 2 @S
+            scene cm_party_159 with Dissolve(0.3)
+            li 2 @S
+            show cm_party_152 with Dissolve(0.3)
+            jump classmates_party_choice_1
+
+    scene cm_party_151 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    gg 8 @S
+    scene cm_party_156 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    scene cm_party_159 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    scene cm_party_154 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    gg 8 @S
+    scene cm_party_156 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    scene cm_party_153 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_162 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_155 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    gg 8 @S
+    scene cm_party_159 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_155 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    gg 8 @S
+    scene cm_party_160 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_156 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_152 with Dissolve(0.3)
+    menu:
+        @S:
+            gg 8 @S
+            scene cm_party_159 with Dissolve(0.3)
+            li 2 @S
+            show cm_party_152 with Dissolve(0.3)
+            gg 8 @S
+            gg 8 @S
+            scene cm_party_157 with Dissolve(0.3)
+            li 2 @S
+            show cm_party_163 with Dissolve(0.3)
+            gg 8 @S
+            gg 8 @S
+            li 2 @S
+
+        @S:
+            gg 8 @S
+            scene cm_party_161 with Dissolve(0.3)
+            li 2 @S
+            scene cm_party_162 with Dissolve(0.3)
+            li 2 @S
+            show cm_party_163 with Dissolve(0.3)
+            gg 8 @S
+            gg 8 @S
+            gg 8 @S
+            gg 8 @S
+            $ love_li -= 2
+            if lillian_compliment_appearance == True:
+                scene cm_party_157 with Dissolve(0.3)
+                li 2 @S
+                show cm_party_163 with Dissolve(0.3)
+                gg 8 @S
+                gg 8 @S
+                gg 8 @S
+                $ love_li -= 2
+                scene cm_party_153 with Dissolve(0.3)
+                li 2 @S
+                show cm_party_163 with Dissolve(0.3)
+                li 2 @S
+                gg 8 @S
+                gg 8 @S
+                gg 8 @S
+
+        @S:
+            gg 8 @S
+            gg 8 @S
+            gg 8 @S
+            $ love_li += 1
+            show screen rel_up_lillian
+            scene cm_party_158 with Dissolve(0.3)
+            li 2 @S
+            if lillian_compliment_appearance == True:
+                scene cm_party_151 with Dissolve(0.3)
+                li 2 @S
+                scene cm_party_155 with Dissolve(0.3)
+                li 2 @S
+                scene cm_party_159 with Dissolve(0.3)
+                li 2 @S
+                scene cm_party_154 with Dissolve(0.3)
+                li 2 @S
+                $ love_li += 3
+                show screen rel_up_lillian
+                show cm_party_152 with Dissolve(0.3)
+                gg 8 @S
+
+    li 2 @S
+    scene cm_party_164 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_165 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    li 2 @S
+    scene cm_party_166 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_165 with Dissolve(0.3)
+    gg 8 @S
+    scene cm_party_164 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_165 with Dissolve(0.3)
+    gg 8 @S
+    scene cm_party_167 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_168 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_169 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_165 with Dissolve(0.3)
+    gg 8 @S
+    scene cm_party_170 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_171 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_172 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_173 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_172 with Dissolve(0.3)
+    menu:
+        @S:
+            gg 8 @S
+            $ lillian_choice_blond = True
+            scene cm_party_174 with Dissolve(0.3)
+            li 2 @S
+            show cm_party_175 with Dissolve(0.3)
+            gg 8 @S
+            scene cm_party_176 with Dissolve(0.3)
+            $ love_li += 2
+            show screen rel_up_lillian
+            li 2 @S
+            
+        @S:
+            gg 8 @S
+            $ lillian_choice_brunet = True
+            scene cm_party_177 with Dissolve(0.3)
+            li 2 @S
+            
+        @S:
+            gg 8 @S
+            $ lillian_choice_allhaircolors = True
+            gg 8 @S
+            $ love_li += 1
+            show screen rel_up_lillian
+            scene cm_party_178 with Dissolve(0.3)
+            li 2 @S
+    
+    play sound swing1 volume 0.3
+    scene cm_party_179 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_180 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    scene cm_party_181 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_182 with Dissolve(0.3)
+    li 2 @S
+    scene cm_party_183 with Dissolve(0.3)
+    cm_barmen @S
+    scene cm_party_184 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_185 with Dissolve(0.3)
+    cm_barmen @S
+    scene cm_party_186 with Dissolve(0.3)
+    li 2 @S
+    show cm_party_175 with Dissolve(0.3)
+    menu:
+        @S:
+            gg 8 @S
+            scene cm_party_187 with Dissolve(0.3)
+            li 2 @S
+            $ lillian_choice_sunset = True
+            scene cm_party_188 with Dissolve(0.3)
+            li 2 @S
+            scene cm_party_189 with Dissolve(0.3)
+            gg 8 @S
+            scene cm_party_190 with Dissolve(0.3)
+            li 2 @S
+            scene cm_party_191 with Dissolve(0.3)
+            pause 0.3
+            scene cm_party_192 with Dissolve(0.3)
+            li 2 @S
+            li 2 @S
+            gg 8 @S
+            li 2 @S
+            scene cm_party_193 with Dissolve(0.3)
+            pause 0.3
+            scene cm_party_194 with Dissolve(0.3)
+            pause 1.0
+            play sound woosh2 volume 0.5
+            show cm_party_195 with Dissolve(0.2):
+                zoom 0.8 xalign 0.5 yalign 0.5
+                easein 0.2 zoom 1.0
+            li 2 @S
+            
+        @S:
+            gg 8 @S
+            scene cm_party_186 with Dissolve(0.3)
+            li 2 @S
+            
+    play sound glass_bottles_3 volume 0.8
+    scene cm_party_196 with Dissolve(0.1)
+    cm_barmen @S
+    li 2 @S
+    show cm_party_197 with Dissolve(0.3)
+    pause 2.0
+    li 2 @S with dissolve
+    li 2 @S
+    li 2 @S
+    me 2 @S with dissolve
+    scene cm_party_198 with Dissolve(0.3)
+    me 2 @S with dissolve
+    scene cm_party_199 with Dissolve(0.3)
+    dai 2 @S with dissolve
+    dai 2 @S
+    play sound woosh1 volume 0.6
+    show cm_party_200 with Dissolve(0.3):
+        zoom 0.8 xalign 0.5 yalign 0.5
+        easein 0.3 zoom 1.0
+    me 2 @S with dissolve
+    scene cm_party_201 with hpunch
+    dai 2 @S
+    scene cm_party_202 with hpunch
+    li 2 @S with dissolve
+    scene cm_party_203 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    scene cm_party_204 with Dissolve(0.3)
+    li 2 @S with dissolve
+    scene cm_party_205 with Dissolve(0.3)
+    gg 8 @S with dissolve
+    show cm_party_206 with Dissolve(0.3)
+    @Q
+    gg 8 @S with dissolve
+    scene cm_party_207 with Dissolve(0.3)
+    li 2 @S with dissolve
+    stop music2 fadeout 3
+    play music3 japan_streets_2 fadein 6
+    scene black with Dissolve(1.0)
+    pause 2.0
+
+label party_to_hotel:
+    show party_to_hotel_1
+    $ renpy.pause(2,hard=True)
+    pause 5
+    scene party_to_hotel_2 with Dissolve(0.3)
+    gg 8 @S
+    scene party_to_hotel_3 with Dissolve(0.3)
+    li 2 @S
+    scene party_to_hotel_4 with Dissolve(0.3)
+    li 2 @S
+    li 2 @S
+    scene party_to_hotel_5 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    scene party_to_hotel_6 with Dissolve(0.3)
+    li 2 @S
+    scene party_to_hotel_7 with Dissolve(0.3)
+    gg 8 @S
+    scene party_to_hotel_8 with Dissolve(0.3)
+    li 2 @S
+    scene party_to_hotel_9 with Dissolve(0.3)
+    gg 8 @S
+    scene party_to_hotel_10 with Dissolve(0.3)
+    @Q
+    stop music3 fadeout 3
+    scene black with Dissolve(1.0)
+    pause 2.0
+    
+label lillian_hotel:
+    play music2 lofi_study fadein 5 volume 0.6
+    $ aksha -= 70
+    scene lillian_hotel_1 with Dissolve(1.0):
+        center
+        zoom 1.3
+        ease 2.0 zoom 1
+    pause 2.0
+    scene lillian_hotel_2 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    scene lillian_hotel_3 with Dissolve(0.3)
+    gg 8 @S
+    scene lillian_hotel_4 with Dissolve(0.3)
+    gg 8 @S
+    scene lillian_hotel_5 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    if yumiko_ry and dolg_alexxis == True:
+        gg 8 @S
+        gg 8 @S
+        gg 8 @S
+        gg 8 @S
+    elif dolg_alexxis == True:
+        gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    scene lillian_hotel_6 with Dissolve(0.3)
+    gg 8 @S
+    scene lillian_hotel_7 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    scene lillian_hotel_8 with Dissolve(0.3)
+    li 2 @S
+    scene lillian_hotel_9 with Dissolve(0.3)
+    gg 8 @S
+    scene lillian_hotel_10 with Dissolve(0.3)
+    li 2 @S
+    scene lillian_hotel_11 with Dissolve(0.3)
+    gg 8 @S
+    scene lillian_hotel_12 with Dissolve(0.3)
+    li 2 @S
+    show lillian_hotel_13 with Dissolve(0.3)
+    li 2 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    scene lillian_hotel_14 with Dissolve(0.3)
+    li 2 @S
+    li 2 @S
+    show lillian_hotel_13 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    show lillian_hotel_15 with Dissolve(0.3):
+        center
+        zoom 1.3
+        ease 0.6 zoom 1
+    hide lillian_hotel_13
+    call screen lillian_hotel_choice_1
+    
+label lillian_hotel_leave:
+    pause 0.5
+    gg 8 @S
+    show lillian_hotel_13 with Dissolve(0.3)
+    hide lillian_hotel_15
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    gg 8 @S
+    $ lillian_hotel_choice_leave = True
+    jump school_lillian_missing
+    
+label lillian_hotel_stay:
+    pause 0.5
+    show lillian_hotel_13 with Dissolve(0.3)
+    hide lillian_hotel_15
+    gg 8 @S
+    gg 8 @S
+    scene lillian_hotel_16 with Dissolve(0.3)
+    li 2 @S
+    scene lillian_hotel_17 with Dissolve(0.3)
+    li 2 @S
+    scene lillian_hotel_18 with Dissolve(0.3)
+    li 2 @S
+    scene lillian_hotel_19 with Dissolve(0.3)
+    pause 1.5
+    scene lillian_hotel_20 with dissolve
+    @Q
+    scene lillian_hotel_21 with dissolve
+    li 2 @S
+    scene lillian_hotel_22 with dissolve
+    li 2 @S
+    scene lillian_hotel_23 with Dissolve(0.3)
+    li 2 @S
+    scene lillian_hotel_24 with Dissolve(0.3)
+    li 3 @S
+    gg 8 @S
+    scene lillian_hotel_25 with Dissolve(0.3)
+    gg 8 @S
+    gg 8 @S
+    scene lillian_hotel_26 with dissolve
+    @Q
+    scene lillian_hotel_27 with dissolve
+    @Q
+    scene lillian_hotel_28 with dissolve
+    pause 0.5
+    gg 8 @S
+    gg 8 @S
+    scene lillian_hotel_29 with dissolve
+    pause 0.5
+    li 3 @S
+    scene lillian_hotel_30 with dissolve
+    li 3 @S
+    scene lillian_hotel_31 with dissolve
+    li 3 @S
+    scene lillian_hotel_32 with dissolve
+    li 3 @S
+    scene lillian_hotel_33 with dissolve
+    li 3 @S
+    scene lillian_hotel_34 with dissolve
+    li 3 @S
+    gg 0 @S
+    scene black with dissolve
+    pause 1.0
+    scene lillian_hotel_35 with dissolve
+    pause 1.0
+    li 3 @S
+    scene lillian_hotel_36 with dissolve
+    gg 0 @S
+    scene lillian_hotel_37 with dissolve
+    gg 0 @S
+    scene lillian_hotel_38 with dissolve
+    li 3 @S
+    show lillian_hotel_39 with dissolve
+    $ persistent.gallery_lillian = True
+    pause 0.5
+    call screen lillian_hotel_choice_start
+
+label lillian_hotel_sex_boobs:
+    
+    scene black with dissolve
+    pause 0.8
+    show lillian_hotel_40 with dissolve
+    hide lillian_hotel_39
+    pause 1.0
+    gg 0 @S
+    li 3 @S
+    li 3 @S
+    show lillian_hotel_41 with dissolve
+    hide lillian_hotel_40
+    li 3 @S
+    gg 0 @S
+    show lillian_hotel_42 with dissolve
+    hide lillian_hotel_41
+    li 3 @S
+    gg 0 @S
+    gg 0 @S
+    li 3 @S
+    show lillian_hotel_43 with dissolve
+    hide lillian_hotel_42
+    gg 0 @S
+    li 3 @S
+    @Q
+    $ persistent.gallery_lillian_boobs = True
+    $ lillian_hotel_choice_boobs_complete = True
+    call screen lillian_hotel_choice_start
+
+label lillian_hotel_sex_fingering:
+    scene black with Dissolve(0.5)
+    pause 0.5
+    scene lillian_hotel_98 with vpunch
+    li 3 @S
+    scene lillian_hotel_99 with dissolve
+    li 3 @S
+    scene lillian_hotel_100 with dissolve
+    li 3 @S
+    scene lillian_hotel_101 with dissolve
+    gg 0 @S
+    scene lillian_hotel_102 with dissolve
+    gg 0 @S
+    scene lillian_hotel_103 with dissolve
+    li 3 @S
+    show lillian_hotel_104 with Dissolve(0.1)
+    $ renpy.pause(3.9,hard=True)
+    show lillian_hotel_105 with Dissolve(0.3):
+        top
+        zoom 1.1
+        ease 0.6 zoom 1
+    hide lillian_hotel_104
+    play voice2 voice_lillian_fingering_1 fadein 2
+    li 3 @S
+    @Q
+    li 3 @S
+    gg 0 @S
+    @Q
+    show lillian_hotel_106 with Dissolve(0.1)
+    hide lillian_hotel_105
+    stop voice2 fadeout 1
+    play voice3 voice_lillian_fingering_2
+    li 3 @S
+    $ love_li += 2
+    show screen rel_up_lillian
+    li 3 @S
+    @Q
+    stop voice3 fadeout 2
+    show lillian_hotel_107 with Dissolve(0.1)
+    hide lillian_hotel_106
+    $ renpy.pause(3.9, hard=True)
+    gg 0 @S
+    gg 0 @S
+    show lillian_hotel_108 with Dissolve(0.1)
+    hide lillian_hotel_107
+    $ renpy.pause(0.9, hard=True)
+    li 3 @S
+    play voice2 voice_lillian_fingering_1 fadein 1
+    play sound2 lillian_hotel_109_sound loop
+    show lillian_hotel_109 with Dissolve(0.1)
+    hide lillian_hotel_108
+    pause 1.0
+    li 3  @S
+    stop voice2 fadeout 1
+    stop sound2 fadeout 1
+    play voice3 voice_lillian_fingering_2 fadein 1
+    play sound3 lillian_hotel_110_sound loop
+    show lillian_hotel_110 with Dissolve(0.1)
+    hide lillian_hotel_109
+    pause 0.5
+    li 3  @S
+    li 3  @S
+    show lillian_hotel_111 with Dissolve(0.1)
+    hide lillian_hotel_110
+    pause 0.5
+    li 3  @Q
+    @Q
+    stop sound3 fadeout 1
+    stop voice3 fadeout 4
+    show lillian_hotel_112 with Dissolve(0.3)
+    hide lillian_hotel_111
+    $ renpy.pause(3.1,hard=True)
+    show lillian_hotel_113 with Dissolve(0.1)
+    hide lillian_hotel_112
+    pause 1.0
+    $ persistent.gallery_lillian_fingering = True
+    $ lillian_hotel_choice_fingering_complete = True
+    $ lillian_hotel_choice_handjob_unlock = True
+    call screen lillian_hotel_choice_start
+
+label lillian_hotel_sex_lick:
+
+    scene black with dissolve
+    pause 0.8
+    show lillian_hotel_44 with dissolve
+    gg 0 @S
+    li 3 @S
+    show lillian_hotel_45 with dissolve
+    hide lillian_hotel_44
+    @Q
+    play voice1 voice_lillian_hotel_moan1 volume 0.5
+    show lillian_hotel_46 with dissolve
+    hide lillian_hotel_45
+    li 3 @S
+    $ love_li += 3
+    show screen rel_up_lillian
+    li 3 @S
+    li 3 @S
+    li 3 @S
+    show lillian_hotel_47 with dissolve
+    hide lillian_hotel_46
+    li 3 @S
+    li 3 @S
+    li 3 @S
+    li 3 @S
+    stop voice1 fadeout 1
+    show lillian_hotel_48 with dissolve
+    hide lillian_hotel_47
+    gg 0 @S
+    gg 0 @S
+    $ persistent.gallery_lillian_lick = True
+    $ lillian_hotel_choice_lick_complete = True
+    $ lillian_hotel_choice_handjob_unlock = True
+    call screen lillian_hotel_choice_start
+
+label lillian_hotel_sex_handjob:
+    pause 0.5
+    gg 0 @S
+    li 3 @S
+    scene black with dissolve
+    pause 1.0
+    show lillian_hotel_49 with Dissolve(0.3)
+    $ renpy.pause(3.5,hard=True)
+    show lillian_hotel_50 with dissolve
+    hide lillian_hotel_49
+    pause 0.5
+    li 3 @S
+    li 3 @S
+    @Q
+    show lillian_hotel_51 with dissolve
+    hide lillian_hotel_50
+    @Q
+    show lillian_hotel_52 with dissolve
+    hide lillian_hotel_51
+    @Q
+    gg 0 @S
+    show lillian_hotel_53 with dissolve
+    hide lillian_hotel_52
+    @Q
+    show lillian_hotel_54 with dissolve
+    hide lillian_hotel_53
+    @Q
+    show lillian_hotel_55 with dissolve
+    hide lillian_hotel_54
+    @Q
+    $ persistent.gallery_lillian_handjob = True
+    $ lillian_hotel_choice_handjob_complete = True
+    $ lillian_hotel_choice_footjob_unlock = True
+    $ lillian_hotel_choice_blowjob_unlock = True
+    call screen lillian_hotel_choice_start
+            
+label lillian_hotel_sex_footjob_from_handjob:
+    pause 0.5
+    gg 0 @S
+    scene lillian_hotel_74 with dissolve
+    li 3 @S
+    scene lillian_hotel_75 with dissolve
+    gg 0 @S
+    scene lillian_hotel_76 with dissolve
+    li 3 @S
+    jump lillian_hotel_sex_footjob
+
+label lillian_hotel_sex_footjob_from_blowjob:
+    pause 0.5
+    gg 0 @S
+    jump lillian_hotel_sex_footjob
+
+label lillian_hotel_sex_footjob:
+    scene black with Dissolve(0.5)
+    pause 1.0
+    show lillian_hotel_56 with dissolve
+    pause 0.5
+    li 3 @S
+    gg 0 @S
+    @Q
+    show lillian_hotel_57 with dissolve
+    hide lillian_hotel_56
+    @Q
+    show lillian_hotel_58 with dissolve
+    hide lillian_hotel_57
+    li 3 @S
+    gg 0 @S
+    show lillian_hotel_59 with dissolve
+    hide lillian_hotel_58
+    li 3 @S
+    @Q
+    show lillian_hotel_60 with dissolve
+    hide lillian_hotel_59
+    li 3 @S
+    gg 0 @S
+    li 3 @S
+    @Q
+    show lillian_hotel_61 with dissolve
+    hide lillian_hotel_60
+    @Q
+    show lillian_hotel_62 with dissolve
+    hide lillian_hotel_61
+    @Q
+    show lillian_hotel_63 with dissolve
+    hide lillian_hotel_62
+    @Q
+    show lillian_hotel_64 with dissolve
+    hide lillian_hotel_63
+    @Q
+    show lillian_hotel_65 with dissolve
+    hide lillian_hotel_64
+    @Q
+    show lillian_hotel_66 with dissolve
+    hide lillian_hotel_65
+    @Q
+    gg 0 @S
+    show lillian_hotel_67 with dissolve
+    hide lillian_hotel_66
+    @Q
+    li 3 @S
+    gg 0 @S
+    gg 0 @S
+    show lillian_hotel_68 with dissolve
+    hide lillian_hotel_67
+    @Q
+    gg 0 @S
+    show lillian_hotel_69 with dissolve
+    hide lillian_hotel_68
+    @Q
+    gg 0 @S
+    li 3 @S
+    show black with Dissolve(0.3)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    show black with Dissolve(0.5)
+    pause 0.2
+    hide black with Dissolve(0.3)
+    show black with Dissolve(0.3)
+    pause 0.1
+    hide black with Dissolve(0.2)
+    show black with Dissolve(0.3)
+    pause 0.1
+    hide black with Dissolve(0.2)
+    show black with Dissolve(0.2)
+    pause 0.8
+    play sound cumming
+    show lillian_hotel_70 with Dissolve(0.3)
+    hide black
+    hide lillian_hotel_69
+    pause 0.5
+    li 3 @S
+    li 3 @S
+    li 3 @S
+    $ persistent.gallery_lillian_footjob = True
+    $ lillian_hotel_choice_footjob_complete = True
+    call screen lillian_hotel_choice_from_footjob
+    
+label lillian_hotel_sex_blowjob_from_footjob:
+    pause 1.0
+    gg 0 @S
+    scene lillian_hotel_71 with dissolve
+    li 3 @S
+    li 3 @S
+    scene lillian_hotel_72 with dissolve
+    gg 0 @S
+    li 3 @S
+    scene lillian_hotel_73 with dissolve
+    li 3 @S
+    jump lillian_hotel_sex_blowjob
+
+label lillian_hotel_sex_blowjob_from_handjob:
+    pause 1.0
+    gg 0 @S
+    scene lillian_hotel_74 with dissolve
+    li 3 @S
+    li 3 @S
+    scene lillian_hotel_75 with dissolve
+    gg 0 @S
+    li 3 @S
+    scene lillian_hotel_76 with dissolve
+    li 3 @S
+    jump lillian_hotel_sex_blowjob
+
+label lillian_hotel_sex_blowjob:
+    scene black with Dissolve(0.5)
+    pause 0.5
+    play voice1 voice_lillian_hotel_77 fadein 1
+    show lillian_hotel_77 with Dissolve(0.5)
+    $ renpy.pause(8.5,hard=True)
+    play voice2 voice_lillian_hotel_78 fadein 1
+    stop voice1 fadeout 1
+    show lillian_hotel_78 with Dissolve(0.1)
+    hide lillian_hotel_77
+    li 3 @S
+    gg 0 @S
+    play voice3 voice_lillian_hotel_79 fadein 1
+    stop voice2 fadeout 1
+    show lillian_hotel_79 with Dissolve(0.5)
+    hide lillian_hotel_78
+    $ renpy.pause(9.6,hard=True)
+    stop voice3 fadeout 1
+    play voice1 voice_lillian_hotel_80 fadein 1
+    show lillian_hotel_80 with Dissolve(0.1)
+    hide lillian_hotel_79
+    gg 0 @S
+    play sound lillian_hotel_81_sound loop
+    show lillian_hotel_81 with Dissolve(0.3)
+    hide lillian_hotel_80
+    stop voice1 fadeout 1
+    stop sound fadeout 1
+    $ renpy.pause (5.5,hard=True)
+    play voice2 voice_lillian_hotel_82
+    show lillian_hotel_82 with Dissolve(0.1)
+    hide lillian_hotel_81
+    @Q
+    gg 0 @S
+    stop voice2 fadeout 1
+    play voice3 voice_lillian_hotel_83
+    show lillian_hotel_83 with Dissolve(0.3)
+    hide lillian_hotel_82
+    @Q
+    gg 0 @S
+    call screen lillian_hotel_sex_blowjob_cum
+    
+label lillian_hotel_sex_blowjob_cum_mouth:
+    stop voice3 fadeout 1
+    play voice2 voice_lillian_hotel_84 noloop volume 0.5
+    show lillian_hotel_84 with Dissolve(0.3)
+    hide lillian_hotel_83
+    $ renpy.pause (3.5,hard=True)
+    li 3 @S
+    $ renpy.pause (2,hard=True)
+    if juice_pineapple == True:
+        $ love_li += 1
+        show screen rel_up_lillian
+        scene lillian_hotel_86 with Dissolve(0.3)
+        li 3 @S
+        show lillian_hotel_88 with Dissolve(0.3)
+        gg 0 @S
+        li 3 @S
+        scene lillian_hotel_89 with Dissolve(0.3)
+        li 3 @S
+        show lillian_hotel_90 with Dissolve(0.3)
+        gg 0 @S
+        gg 0 @S
+        
+    if juice_pineapple == False:
+        scene lillian_hotel_87 with Dissolve(0.3)
+        li 3 @S
+        show lillian_hotel_88 with Dissolve(0.3)
+        gg 0 @S
+        li 3 @S
+        scene lillian_hotel_89 with Dissolve(0.3)
+        li 3 @S
+        show lillian_hotel_90 with Dissolve(0.3)
+        gg 0 @S
+        gg 0 @S
+        
+    scene lillian_hotel_91 with Dissolve(0.3)
+    li 3 @S
+    li 3 @S
+    show lillian_hotel_92 with Dissolve(0.3)
+    pause 0.5
+    $ persistent.gallery_lillian_blowjob = True
+    $ lillian_hotel_choice_blowjob_complete = True
+    call screen lillian_hotel_choice_from_blowjob
+        
+label lillian_hotel_sex_blowjob_cum_face:
+    stop voice3 fadeout 1
+    show lillian_hotel_85 with Dissolve(0.3)
+    hide lillian_hotel_83
+    $ renpy.pause (2.8,hard=True)
+    play sound cumming
+    $ renpy.pause (2.4,hard=True)
+    scene lillian_hotel_93 with Dissolve(0.3)
+    li 3 @S
+    scene lillian_hotel_94 with Dissolve(0.3)
+    li 3 @S
+    play voice1 voice_lillian_hotel_mmm noloop volume 0.5
+    scene lillian_hotel_95 with Dissolve(0.3)
+    li 3 @S
+    scene lillian_hotel_96 with Dissolve(0.3)
+    li 3 @S
+    li 3 @S
+    show lillian_hotel_97 with Dissolve(0.3)
+    pause 0.5
+    $ persistent.gallery_lillian_blowjob = True
+    $ lillian_hotel_choice_blowjob_complete = True
+    call screen lillian_hotel_choice_from_blowjob
+
+
+label lillian_hotel_sex_1:
+    
+    scene black with Dissolve(0.5)
+    pause 1.5
+    show lillian_hotel_114 with Dissolve(0.3)
+    $ renpy.pause(5.3, hard=True)
+    show lillian_hotel_115 with Dissolve(0.3)
+    hide lillian_hotel_114
+    li 3 @S with dissolve
+    li 3 @S
+    
+    show lillian_hotel_116 with Dissolve(0.3)
+    hide lillian_hotel_115
+    $ renpy.pause(5.3, hard=True)
+    show lillian_hotel_117 with Dissolve(0.3)
+    hide lillian_hotel_116
+    if lillian_hotel_choice_lick_complete and lillian_hotel_choice_fingering_complete:
+        gg 0 @S with dissolve
+        gg 0 @S
+    else:
+        gg 0 @S with dissolve
+        gg 0 @S
+    
+    show lillian_hotel_118 with Dissolve(0.3)
+    hide lillian_hotel_117
+    $ renpy.pause(2.8, hard=True)
+    show lillian_hotel_119 with Dissolve(0.2)
+    hide lillian_hotel_118
+    gg 0 @S with dissolve
+    
+    show lillian_hotel_120 with Dissolve(0.3)
+    hide lillian_hotel_119
+    $ renpy.pause(2.0, hard=True)
+    show lillian_hotel_121 with Dissolve(0.2)
+    hide lillian_hotel_120
+    gg 0 @S with dissolve
+    
+    play sound lillian_hotel_122_sound
+    show lillian_hotel_122 with Dissolve(0.2)
+    hide lillian_hotel_121
+    $ renpy.pause(2.0, hard=True)
+    show lillian_hotel_123 with Dissolve(0.2)
+    hide lillian_hotel_122
+    if lillian_hotel_choice_lick_complete and lillian_hotel_choice_fingering_complete:
+        li 3 @S with dissolve
+        gg 0 @S with dissolve
+        li 3 @S with dissolve
+        gg 0 @S with dissolve
+        gg 0 @S
+    else:
+        li 3 @S with dissolve
+        gg 0 @S with dissolve
+        li 3 @S with dissolve
+        gg 0 @S with dissolve
+        li 3 @S with dissolve
+        
+    play voice1 voice_lillian_hotel_moan2 volume 0.4
+    play sound2 lillian_hotel_124_sound
+    show lillian_hotel_124 with Dissolve(0.1)
+    hide lillian_hotel_123
+    $ renpy.pause(4.9, hard=True)
+    play sound3 lillian_hotel_125_sound loop
+    show lillian_hotel_125 with Dissolve(0.3)
+    hide lillian_hotel_124
+    pause 0.5
+    gg 0 @S with dissolve
+    gg 0 @S
+    li 3 @S with dissolve
+    li 3 @S
+    @Q
+    $ persistent.gallery_lillian_sex1 = True
+    $ lillian_hotel_choice_sex1_complete = True
+    stop sound3 fadeout 1
+    play sound2 lillian_hotel_126_sound
+    show lillian_hotel_126 with Dissolve(0.1)
+    hide lillian_hotel_125
+    $ renpy.pause(0.9, hard=True)
+    play sound3 lillian_hotel_127_sound loop
+    show lillian_hotel_127 with Dissolve(0.3)
+    hide lillian_hotel_126
+    li 3 @S with dissolve
+    @Q
+    scene black with Dissolve(0.5)
+    pause 0.5
+    stop sound3 fadeout 1
+    stop voice1 fadeout 1
+    play voice2 voice_lillian_hotel_moan2 volume 0.5
+    play sound2 lillian_hotel_128_sound loop
+    show lillian_hotel_128 with Dissolve(0.3)
+    gg 0 @S with dissolve
+    gg 0 @S
+    @Q
+    show lillian_hotel_129 with Dissolve(0.3)
+    hide lillian_hotel_128
+    gg 0 @S
+    @Q
+    show lillian_hotel_130 with Dissolve(0.3)
+    hide lillian_hotel_129
+    li 3 @S with dissolve
+    li 3 @S
+    @Q
+    show lillian_hotel_131 with Dissolve(0.3)
+    hide lillian_hotel_130
+    gg 0 @S with dissolve
+    li 3 @Swith dissolve
+    @Q
+    scene black with Dissolve(0.5)
+    pause 0.3
+    show lillian_hotel_132 with Dissolve(0.3)
+    hide lillian_hotel_131
+    @Q
+    gg 0 @S with dissolve
+    stop voice2 fadeout 3
+    stop sound2 fadeout 1
+    play sound3 lillian_hotel_133_sound
+    show lillian_hotel_133 with Dissolve(0.3)
+    hide lillian_hotel_132
+    $ renpy.pause(3.5,hard=True)
+    play voice3 voice_lillian_hotel_orgasm noloop
+    $ renpy.pause(1.0,hard=True)
+    scene black with Dissolve(0.5)
+    pause 0.3
+    show lillian_hotel_134 with Dissolve(0.3)
+    $ renpy.pause(2.1,hard=True)
+    show lillian_hotel_135 with Dissolve(0.1)
+    hide lillian_hotel_134
+    @Q
+    jump school_lillian_missing
+
+label school_lillian_missing:
+    
+    stop music2 fadeout 3
+    play music3 city_bird volume 0.6 fadein 3
+    $ renpy.music.set_volume(1, delay=0, channel=u@Q)
+    scene black with Dissolve(1.0)
+    pause 2.0
+    show school_corrior_dolg_1 with Dissolve(0.5)
+    $ renpy.music.set_volume(0.3, delay=3, channel=u@Q)
+    $ renpy.pause(4.4, hard=True)
+    show school_corrior_dolg_1_1 with Dissolve(0.1)
+    hide school_corrior_dolg_1
+    pause 2.0
+    show school_lillian_missing_1 with Dissolve(0.3)
+    $ renpy.pause(3.6, hard=True)
+    show school_lillian_missing_2 with Dissolve(0.3)
+    teacher 1 @S with dissolve
+    mob 1 @S with dissolve
+    scene school_lillian_missing_3 with Dissolve(0.5)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_4 with Dissolve(0.5)
+    if lillian_hotel_choice_leave:
+        gg 3 @S with dissolve
+    else:
+        gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_5 with Dissolve(0.5)
+    pause 0.5
+    scene school_lillian_missing_6 with Dissolve(0.5)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S
+    scene school_lillian_missing_7 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    if lillian_hotel_choice_leave:
+        gg 3 @S with dissolve
+        gg 3 @S
+    else:
+        gg 3 @S with dissolve
+        gg 3 @S
+    scene school_lillian_missing_8 with Dissolve(0.3)
+    if lillian_hotel_choice_leave:
+        gg 3 @S with dissolve
+    else:
+        gg 3 @S with dissolve
+        gg 3 @S
+    scene school_lillian_missing_9 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_10 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    stop music3 fadeout 3
+    play music2 dreams_of_success_loopable_by_chilledmusic volume 0.5 fadein 3
+    scene school_lillian_missing_11 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    $ renpy.music.set_volume(1, delay=3, channel=u@Q)
+    scene school_lillian_missing_12 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    leah 1 @S
+    show school_lillian_missing_13 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_14 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    leah 1 @S
+    show school_lillian_missing_13 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_15 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_16 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    gg 3 @S with dissolve
+    scene school_lillian_missing_17 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_lillian_missing_18 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    show school_lillian_missing_19 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    leah 1 @S with dissolve
+    scene school_lillian_missing_20 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_21 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    leah 1 @S
+    show school_lillian_missing_19 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_22 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    leah 1 @S
+    show school_lillian_missing_19 with Dissolve(0.3)
+    if not lillian_hotel_choice_leave:
+        menu:
+            @S:
+                pause 0.5
+                jump school_lillian_missing_truth
+            @S:
+        
+                gg 3 @S with dissolve
+                scene school_lillian_missing_18 with Dissolve(0.3)
+                leah 1 @S with dissolve
+                show school_lillian_missing_19 with Dissolve(0.3)
+                leah 1 @S with dissolve
+                scene school_lillian_missing_22 with Dissolve(0.3)
+                leah 1 @S with dissolve
+                show school_lillian_missing_19 with Dissolve(0.3)
+                gg 3 @S with dissolve
+                gg 3 @S
+            
+    menu:
+        @S:
+            pause 0.5
+            if lillian_hotel_choice_leave:
+                jump school_lillian_missing_truth_nosex
+            else:
+                jump school_lillian_missing_truth
+            
+        @S:
+            stop music2 fadeout 5
+            play music3 city_bird volume 0.3 fadein 5
+            gg 3 @S with dissolve
+            leah 1 @S with dissolve
+            $ school_lillian_missing_phone_leah_rude = True
+            scene school_lillian_missing_23 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            
+            jump school_lillian_missing_leave
+            
+        @S:
+            gg 3 @S with dissolve
+            gg 3 @S
+            gg 3 @S
+            scene school_lillian_missing_23 with Dissolve(0.3)
+            leah 1 @S with dissolve
+        
+            jump school_lillian_missing_call
+
+label school_lillian_missing_truth:
+
+    gg 3 @S with dissolve
+    $ school_lillian_missing_phone_leah_know = True
+    leah 1 @S with dissolve
+    scene school_lillian_missing_24 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_25 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_lillian_missing_26 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    show school_lillian_missing_27 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    gg 3 @S with dissolve
+    gg 3 @S
+    leah 1 @S with dissolve
+    leah 1 @S
+    scene school_lillian_missing_28 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_29 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_lillian_missing_30 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_31 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    
+    jump school_lillian_missing_call
+    
+label school_lillian_missing_truth_nosex:
+
+    gg 3 @S with dissolve
+    gg 3 @S
+    $ school_lillian_missing_phone_leah_know = True
+    leah 1 @S with dissolve
+    scene school_lillian_missing_24 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_25 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_28 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_29 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_25 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_31 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    
+    jump school_lillian_missing_call
+    
+label school_lillian_missing_call:
+    
+    play sound call_start
+    scene school_lillian_missing_32 with Dissolve(0.3)
+    @S with dissolve
+    scene school_lillian_missing_33 with Dissolve(0.3)
+    leah 1 @S
+    
+    menu:
+        @S:
+            scene school_lillian_missing_34 with Dissolve(0.3)
+            pause 0.5
+            scene school_lillian_missing_35 with Dissolve(0.3)
+            gg 3 @S with dissolve
+            show school_lillian_missing_36:
+                xpos 0
+                ease 0.5 xpos -240
+            play sound woosh1 volume 0.5
+            show school_lillian_missing_37 with Dissolve(0.3):
+                xpos 1930
+                ease 0.5 xpos 0
+            li 4 @S with dissolve
+            play sound as4 volume 0.3
+            scene school_lillian_missing_38 with hpunch
+            leah 1 @S with Dissolve(0.3)
+            $ school_lillian_missing_phone_leah_took = True
+
+        @S:
+            scene school_lillian_missing_39 with Dissolve(0.3)
+            gg 3 @S with dissolve
+            scene school_lillian_missing_40 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            scene school_lillian_missing_41 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            scene school_lillian_missing_35 with Dissolve(0.3)
+            gg 3 @S with dissolve
+            show school_lillian_missing_36:
+                xpos 0
+                ease 0.5 xpos -240
+            play sound woosh1 volume 0.5
+            show school_lillian_missing_37 with Dissolve(0.3):
+                xpos 1930
+                ease 0.5 xpos 0
+            li 4 @S with dissolve
+            
+        @Q:
+            scene school_lillian_missing_39 with Dissolve(0.3)
+            gg 3 @S with dissolve
+            scene school_lillian_missing_40 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            scene school_lillian_missing_41 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            scene school_lillian_missing_42 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            scene school_lillian_missing_43 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            show school_lillian_missing_44 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            li 4 @S with dissolve
+            scene school_lillian_missing_45 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            show school_lillian_missing_44 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            li 4 @S with dissolve
+            scene school_lillian_missing_46 with Dissolve(0.3)
+            leah 1 @S with dissolve
+            
+            jump school_lillian_missing_leave
+    
+    scene school_lillian_missing_48 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_lillian_missing_49 with Dissolve(0.3)
+    $ school_lillian_missing_phone_lillian_talk = True
+    li 4 @S with dissolve
+    li 4 @S
+    scene school_lillian_missing_50 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_lillian_missing_51 with Dissolve(0.3)
+    li 4 @S with dissolve
+    scene school_lillian_missing_52 with Dissolve(0.3)
+    li 4 @S with dissolve
+    scene school_lillian_missing_53 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_lillian_missing_54 with Dissolve(0.3)
+    li 4 @S with dissolve
+    li 4 @S
+    scene school_lillian_missing_55 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_56 with Dissolve(0.3)
+    li 4 @S with dissolve
+    scene school_lillian_missing_57 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    gg 3 @S
+    scene school_lillian_missing_58 with Dissolve(0.3)
+    li 4 @S with dissolve
+    scene school_lillian_missing_35 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    scene school_lillian_missing_59 with Dissolve(0.3)
+    leah 1 @S with dissolve
+    scene school_lillian_missing_60 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    if school_lillian_missing_phone_leah_took == True:
+        scene school_lillian_missing_61 with Dissolve(0.3)
+        leah 1 @S with dissolve
+    scene school_lillian_missing_62 with Dissolve(0.3)
+    gg 3 @S with dissolve
+    if school_lillian_missing_phone_leah_took == True:
+        scene school_lillian_missing_63 with Dissolve(0.3)
+        leah 1 @S with dissolve
+    if school_lillian_missing_phone_leah_took == False:
+        scene school_lillian_missing_64 with Dissolve(0.3)
+        leah 1 @S with dissolve
+        
+    jump cafe_minami
+
+
+label school_lillian_missing_leave:
+
+    scene school_lillian_missing_47 with Dissolve(1.0)
+    gg 3 @S with dissolve
+    jump cafe_minami
+
+label cafe_minami:
+
+    stop music2 fadeout 3
+    play music3 japan_streets_2 fadein 3
+    scene black with Dissolve(1.0)
+    pause 2.0
+    show cafe_minami_1 with Dissolve(0.3)
+    $ renpy.pause(4.2,hard=True)
+    show cafe_minami_2 with Dissolve(0.1)
+    gg 9 @S with dissolve
+    stop music3 fadeout 5
+    play music2 breathe_easy_and_relax_by_musiclfiles fadein 6 volume 0.4
+    scene cafe_minami_3 with Dissolve(0.1)
+    gg 9 @S with dissolve
+    scene cafe_minami_4 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    gg 9 @S
+    show cafe_minami_5 with Dissolve(0.1)
+    $ renpy.pause(5.3,hard=True)
+    show cafe_minami_6 with Dissolve(0.1)
+    hide cafe_minami_5
+    $ renpy.pause(2.9,hard=True)
+    show cafe_minami_7 with Dissolve(0.1)
+    hide cafe_minami_6
+    pause 1.0
+    play sound3 sms3
+    show cafe_minami_chat_may_1:
+        alpha 0
+        xpos 1400
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1300
+    @Q
+    play sound2 sms2
+    show cafe_minami_chat_may_2:
+        alpha 0
+        xpos 1400
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1300
+    show cafe_minami_chat_may_1:
+        ease 0.3 ypos 400
+    @Q
+    play sound sms1
+    show cafe_minami_chat_mc_1:
+        alpha 0
+        xpos 1100
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1200
+    show cafe_minami_chat_may_2:
+        ease 0.3 ypos 400
+    show cafe_minami_chat_may_1:
+        ease 0.3 ypos 200
+    @Q
+    play sound sms1 volume 0.5
+    show cafe_minami_chat_mc_2:
+        alpha 0
+        xpos 1100
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1200
+    show cafe_minami_chat_mc_1:
+        ease 0.3 ypos 400
+    show cafe_minami_chat_may_2:
+        ease 0.3 ypos 200
+    show cafe_minami_chat_may_1:
+        ease 0.3 alpha 0 ypos 0
+    @Q
+    hide cafe_minami_chat_may_1
+    play sound2 sms2 volume 0.5
+    show cafe_minami_chat_may_3:
+        alpha 0
+        xpos 1400
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1300
+    show cafe_minami_chat_mc_2:
+        ease 0.3 ypos 355
+    show cafe_minami_chat_mc_1:
+        ease 0.3 ypos 155
+    show cafe_minami_chat_may_2:
+        ease 0.3 alpha 0 ypos -45
+    @Q
+    hide cafe_minami_chat_may_2
+    play sound sms1 volume 0.5
+    show cafe_minami_chat_mc_3:
+        alpha 0
+        xpos 1100
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1200
+    show cafe_minami_chat_may_3:
+        ease 0.3 ypos 400
+    show cafe_minami_chat_mc_2:
+        ease 0.3 ypos 150
+    show cafe_minami_chat_mc_1:
+        ease 0.3 alpha 0 ypos 0
+    @Q
+    hide cafe_minami_chat_mc_1
+    play sound sms1 volume 0.5
+    show cafe_minami_chat_mc_4:
+        alpha 0
+        xpos 1100
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1200
+    show cafe_minami_chat_mc_3:
+        ease 0.3 ypos 400
+    show cafe_minami_chat_may_3:
+        ease 0.3 ypos 200
+    show cafe_minami_chat_mc_2:
+        ease 0.3 alpha 0 ypos 0
+    @Q
+    hide cafe_minami_chat_mc_2
+    play sound sms1 volume 0.5
+    show cafe_minami_chat_mc_5:
+        alpha 0
+        xpos 1100
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1200
+    show cafe_minami_chat_mc_4:
+        ease 0.3 ypos 355
+    show cafe_minami_chat_mc_3:
+        ease 0.3 ypos 155
+    show cafe_minami_chat_may_3:
+        ease 0.3 alpha 0 ypos -45
+    @Q
+    play sound2 sms2 volume 0.5
+    show cafe_minami_chat_may_4:
+        alpha 0
+        xpos 1400
+        ypos 500
+        ease 0.3 alpha 1 ypos 600 xpos 1300
+    show cafe_minami_chat_mc_5:
+        ease 0.3 ypos 355
+    show cafe_minami_chat_mc_4:
+        ease 0.3 ypos 110
+    show cafe_minami_chat_mc_3:
+        ease 0.3  alpha 0 ypos -45
+    @Q
+    play sound swing4 volume 0.3
+    show cafe_minami_chat_may_4:
+        ease 0.3 alpha 0 xpos 1450
+    show cafe_minami_chat_mc_5:
+        ease 0.3 alpha 0 xpos 1350
+    show cafe_minami_chat_mc_4:
+        ease 0.3 alpha 0 xpos 1350
+    show cafe_minami_chat_mc_3:
+        ease 0.3 alpha 0 xpos 1350
+    $ renpy.pause(0.3,hard=True)
+    hide cafe_minami_chat_may_4
+    hide cafe_minami_chat_mc_5
+    hide cafe_minami_chat_mc_4
+    hide cafe_minami_chat_mc_3
+    $ renpy.pause(0.3,hard=True)
+    show cafe_minami_8 with Dissolve(0.1)
+    hide cafe_minami_7
+    stop music2 fadeout 6
+    play music3 japan_streets_1 volume 0.5 fadein 3
+    play music2 jazz_brunch_by_kevin_macleod fadein 1
+    $ renpy.pause(5.9,hard=True)
+    show cafe_minami_9 with Dissolve(0.1)
+    hide cafe_minami_8
+    $ renpy.pause(2.4,hard=True)
+    show cafe_minami_10 with Dissolve(0.1)
+    hide cafe_minami_9
+    stop music3 fadeout 3
+    $ renpy.pause(2.9,hard=True)
+    show cafe_minami_11 with Dissolve(0.1)
+    hide cafe_minami_10
+    $ renpy.pause(3.7,hard=True)
+    scene cafe_minami_12 with Dissolve(0.1)
+    mi 2 @S with dissolve
+    show cafe_minami_13 with Dissolve(0.3)
+    $ choice_var = 0
+    menu:
+        @Q:
+            gg 9 @S with dissolve
+            
+        @Q:
+            gg 9 @S with dissolve
+            scene cafe_minami_14 with Dissolve(0.3)
+            gg 9 @S with dissolve
+            scene cafe_minami_15 with Dissolve(0.3)
+            mi 2 @S with Dissolve(0.3)
+            $ cafe_minami_look_cm = True
+            pause 1.5
+        
+    $ choice_var = 1
+    scene cafe_minami_16 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    scene cafe_minami_17 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    scene cafe_minami_18 with Dissolve(0.3)
+    waitress @S with dissolve
+    scene cafe_minami_19 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_20 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_17 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_21 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_22 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    $ minami_unlock = True
+    show screen rel_open_minami
+    scene cafe_minami_23 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    stop music2 fadeout 6
+    play music3 japan_streets_1 fadein 3 volume 0.3
+    scene black with Dissolve(0.5)
+    pause 0.5
+    scene cafe_minami_24 with Dissolve(0.5)
+    mi 2 @S with dissolve
+    show cafe_minami_25 with Dissolve(0.1)
+    $ renpy.pause(2.4,hard=True)
+    scene cafe_minami_26 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    show cafe_minami_27 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    scene cafe_minami_28 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_29 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    show cafe_minami_30 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    stop music3 fadeout 8
+    play music2 the_question_is_quizpackage_by_sascha_ende fadein 4 volume 0.6
+    scene cafe_minami_31 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    show cafe_minami_30 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    scene cafe_minami_32 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_33 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    show cafe_minami_34 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    show cafe_minami_35 with Dissolve(0.3)
+    hide cafe_minami_34
+    gg 9 @S with dissolve
+    show cafe_minami_34 with Dissolve(0.3)
+    hide cafe_minami_35
+    mi 2 @S with dissolve
+    mi 2 @S
+    show cafe_minami_35 with Dissolve(0.3)
+    hide cafe_minami_34
+    gg 9 @S with dissolve
+    show cafe_minami_34 with Dissolve(0.3)
+    hide cafe_minami_35
+    mi 2 @S with dissolve
+    show cafe_minami_35 with Dissolve(0.3)
+    hide cafe_minami_34
+    mi 2 @S with dissolve
+    show cafe_minami_36 with Dissolve(0.3)
+    hide cafe_minami_35
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    show cafe_minami_37 with Dissolve(0.3)
+    hide cafe_minami_36
+    mi 2 @S with dissolve
+    show cafe_minami_38 with Dissolve(0.3)
+    hide cafe_minami_37
+    gg 9 @S with dissolve
+    gg 9 @S
+    scene cafe_minami_39 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    scene cafe_minami_40 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    show cafe_minami_37 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    show cafe_minami_38 with Dissolve(0.3)
+    hide cafe_minami_37
+    gg 9 @S with dissolve
+    show cafe_minami_37 with Dissolve(0.3)
+    hide cafe_minami_38
+    mi 2 @S with dissolve
+    mi 2 @S
+    
+    show cafe_minami_38 with Dissolve(0.3)
+    hide cafe_minami_37
+    gg 9 @S with dissolve
+    show cafe_minami_37 with Dissolve(0.3)
+    hide cafe_minami_38
+    mi 2 @S with dissolve
+    show cafe_minami_38 with Dissolve(0.3)
+    hide cafe_minami_37
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    
+    show cafe_minami_38 with Dissolve(0.3)
+    hide cafe_minami_37
+    gg 9 @S with dissolve
+    show cafe_minami_37 with Dissolve(0.3)
+    hide cafe_minami_38
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    show cafe_minami_38 with Dissolve(0.3)
+    hide cafe_minami_37
+    gg 9 @S with dissolve
+    show cafe_minami_36 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    scene cafe_minami_26 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    show cafe_minami_36 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    scene cafe_minami_26 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    show cafe_minami_37 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    scene cafe_minami_41 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_42 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_43 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    show cafe_minami_26 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    gg 9 @S
+    show cafe_minami_36 with Dissolve(0.3)
+    hide cafe_minami_26
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    show cafe_minami_26 with Dissolve(0.3)
+    hide cafe_minami_36
+    gg 9 @S with dissolve
+    gg 9 @S
+    gg 9 @S
+    show cafe_minami_37 with Dissolve(0.3)
+    hide cafe_minami_26
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    mi 2 @S
+    show cafe_minami_44 with Dissolve(0.3)
+    hide cafe_minami_37
+    gg 9 @S with dissolve
+    gg 9 @S
+    gg 9 @S
+    gg 9 @S
+    gg 9 @S
+    show cafe_minami_37 with Dissolve(0.3)
+    hide cafe_minami_30
+    mi 2 @S with dissolve
+    mi 2 @S
+    mi 2 @S
+    scene cafe_minami_43 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    show cafe_minami_34 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    show cafe_minami_35 with Dissolve(0.3)
+    hide cafe_minami_34
+    hide cafe_minami_44
+    hide cafe_minami_45
+    
+    $ cafe_minami_choice_1 = []
+    menu cafe_minami_choice_1:
+        set cafe_minami_choice_1
+        
+        @S:
+            gg 9 @S with dissolve
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            $ cafe_minami_choice_1_value += 1
+            if not cafe_minami_choice_1_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_34
+                jump cafe_minami_choice_1
+
+
+        
+        @S:
+            gg 9 @S with dissolve
+            gg 9 @S
+            gg 9 @S
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            $ cafe_minami_choice_1_value += 1
+            if not cafe_minami_choice_1_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_34
+                jump cafe_minami_choice_1
+
+        
+        @Q:
+            gg 9 @S with dissolve
+            gg 9 @S
+            show cafe_minami_45 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S         
+            $ cafe_minami_choice_1_value += 1
+            show cafe_minami_35 with Dissolve(0.3)
+            hide cafe_minami_45
+            menu:
+                @Q:
+                    gg 9 @S with dissolve
+                    show cafe_minami_36 with Dissolve(0.3)
+                    hide cafe_minami_35
+                    mi 2 @S with dissolve
+                    mi 2 @S
+                    mi 2 @S
+                    mi 2 @S
+                    if not cafe_minami_choice_1_value == 6:
+                        show cafe_minami_35 with Dissolve(0.3)
+                        hide cafe_minami_36
+                        jump cafe_minami_choice_1
+                
+                @Q:
+                    pause 0.3
+                    if not cafe_minami_choice_1_value == 6:
+                        jump cafe_minami_choice_1
+
+
+        
+        @S:
+            gg 9 @S with dissolve
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            $ cafe_minami_choice_1_value += 1
+            if not cafe_minami_choice_1_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_34
+                jump cafe_minami_choice_1
+
+
+        
+        @S:
+            gg 9 @S with dissolve
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            show cafe_minami_26 with Dissolve(0.3)
+            hide cafe_minami_34
+            gg 9 @S with dissolve
+            show cafe_minami_45 with Dissolve(0.3)
+            hide cafe_minami_26
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            $ cafe_minami_choice_1_value += 1
+            if not cafe_minami_choice_1_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_45
+                jump cafe_minami_choice_1
+
+
+        
+        @S:
+            hide cafe_minami_34
+            hide cafe_minami_44
+            hide cafe_minami_45
+            gg 9 @S with dissolve
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            show cafe_minami_45 with Dissolve(0.3)
+            hide cafe_minami_34
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            show cafe_minami_36 with Dissolve(0.3)
+            hide cafe_minami_45
+            mi 2 @S with dissolve
+            $ cafe_minami_choice_1_value += 1
+            if not cafe_minami_choice_1_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_6
+                jump cafe_minami_choice_1
+        
+        @Q:
+            if cafe_minami_choice_1_value == 0:
+                gg 9 @S with dissolve
+            else:
+                gg 9 @S with dissolve
+
+    gg 9 @S
+    stop music2 fadeout 3
+    play music japan_streets_1 volume 0.5 fadein 2
+    play music3 jazz_brunch_by_kevin_macleod volume 0.5 fadein 8
+    play sound2 clothes_2 volume 0.5
+    scene cafe_minami_46 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    stop music fadeout 3
+    scene cafe_minami_47 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    play sound pistol_2
+    scene cafe_minami_48 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_49 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    show cafe_minami_30 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_50 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_51 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_52 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    scene cafe_minami_50 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_53 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_54 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_49 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    play sound paper1
+    scene cafe_minami_55 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_56 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    show cafe_minami_57 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    scene cafe_minami_58 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_59 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_60 with Dissolve(0.3)
+    pause 1.0
+    scene cafe_minami_61 with Dissolve(0.3)
+    pause 0.5
+    play sound snap1
+    scene cafe_minami_62 with Dissolve(0.3)
+    pause 0.5
+    scene cafe_minami_63 with Dissolve(0.3)
+    pause 0.5
+    scene cafe_minami_64 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    play sound button1
+    scene cafe_minami_65 with Dissolve(0.3)
+    pause 1.5
+    scene cafe_minami_66 with Dissolve(0.3)
+    pause 1.5
+    scene cafe_minami_67 with Dissolve(0.3)
+    play sound dm2
+    $ renpy.music.set_volume(0.3, delay=1, channel=u@Q)
+    pause 1.0
+    mi 2 @S with dissolve
+    gg 9 @S with dissolve
+    scene cafe_minami_68 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    scene cafe_minami_69 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    $ renpy.music.set_volume(1, delay=5, channel=u@Q)
+    show cafe_minami_34 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S with dissolve
+    show cafe_minami_35 with Dissolve(0.3)
+    hide cafe_minami_34
+    $ cafe_minami_choice_2 = []
+    menu cafe_minami_choice_2:
+        set cafe_minami_choice_2
+        
+        
+        
+        @S:
+
+            gg 9 @S with dissolve
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            $ cafe_minami_choice_2_value += 1
+            if not cafe_minami_choice_2_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_34
+                jump cafe_minami_choice_2
+                
+                
+        
+        @S:
+
+            gg 9 @S with dissolve
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            $ cafe_minami_choice_2_value += 1
+            if not cafe_minami_choice_2_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_34
+                jump cafe_minami_choice_2
+
+        
+        @S:
+        
+            gg 9 @S with dissolve
+            gg 9 @S
+            scene cafe_minami_70 with Dissolve(0.3)
+            mi 2 @S with dissolve
+            scene cafe_minami_71 with Dissolve(0.3)
+            gg 9 @S with dissolve
+            scene cafe_minami_72 with Dissolve(0.3)
+            mi 2 @S with dissolve
+            scene cafe_minami_73 with Dissolve(0.3)
+            $ choice_var = 0
+            menu:
+                @S:
+                    stop music2 fadeout 2
+                    pause 0.3
+                    play sound cafe_minami_74_sound
+                    show cafe_minami_74 with Dissolve(0.1)
+                    $ renpy.pause(2.5,hard=True)
+                    play music3 the_fog_of_war_by_tim_kulig fadein 3
+                    scene black with Dissolve(0.5)
+                    pause 0.5
+                    scene cafe_minami_fb_0 with Dissolve(1.0):
+                        top
+                        ypos -2000
+                        ease 13 ypos 0
+                    pause 5
+                    scene cafe_minami_fb_1 with Dissolve(0.5)
+                    sideman1 @S with dissolve
+                    sideman1 @S
+                    scene cafe_minami_fb_2 with Dissolve(0.5)
+                    mi 3 @S with dissolve
+                    scene cafe_minami_fb_3 with Dissolve(0.5)
+                    mi 3 @S with dissolve
+                    scene cafe_minami_fb_4 with Dissolve(0.5)
+                    pause 1.0
+                    scene cafe_minami_fb_5 with Dissolve(0.5)
+                    pause 1.0
+                    scene cafe_minami_fb_6 with Dissolve(0.5)
+                    pause 1.0
+                    scene cafe_minami_fb_7 with Dissolve(0.5)
+                    sideman2 @S with dissolve
+                    sideman2 @S
+                    scene cafe_minami_fb_8 with Dissolve(0.5)
+                    sideman3 @S with dissolve
+                    scene cafe_minami_fb_9 with Dissolve(0.5)
+                    sidegirl1 @S with dissolve
+                    sidegirl1 @S
+                    scene cafe_minami_fb_10 with Dissolve(0.5)
+                    mi 3 @S with dissolve
+                    scene cafe_minami_fb_11 with Dissolve(0.5)
+                    sidegirl1 @S with dissolve
+                    scene cafe_minami_fb_12 with Dissolve(0.5)
+                    sidegirl1 @S with dissolve
+                    scene cafe_minami_fb_13 with Dissolve(0.5)
+                    sidegirl1 @S with dissolve
+                    sidegirl1 @S
+                    scene cafe_minami_fb_14 with Dissolve(0.5)
+                    sideman1 @S with dissolve
+                    scene cafe_minami_fb_6 with Dissolve(0.5)
+                    sideman2 @S with dissolve
+                    scene cafe_minami_fb_7 with Dissolve(0.5)
+                    sideman2 @S with dissolve
+                    scene black with Dissolve(1.0)
+                    pause 1.0
+                    $ cafe_minami_choice_flashback = True
+                    stop music3 fadeout 3
+                    scene cafe_minami_73 with Dissolve(1.0)
+                    pause 0.5
+                    play music2 jazz_brunch_by_kevin_macleod fadein 23
+                    
+                @S:
+                    pause 0.3
+            
+            $ choice_var = 1
+            scene cafe_minami_75 with Dissolve(0.3)
+            mi 2 @S with dissolve
+            
+            if cafe_minami_choice_flashback == True:
+                scene cafe_minami_76 with Dissolve(0.3)
+                gg 9 @S with dissolve
+                gg 9 @S
+                gg 9 @S
+                
+            $ cafe_minami_choice_2_value += 1
+            if not cafe_minami_choice_2_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                jump cafe_minami_choice_2
+            
+
+        
+        @S:
+            gg 9 @S with dissolve
+            gg 9 @S
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            $ cafe_minami_choice_2_value += 1
+            if not cafe_minami_choice_2_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_34
+                jump cafe_minami_choice_2
+
+        
+        @S:
+            gg 9 @S with dissolve
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            mi 2 @S
+            $ cafe_minami_choice_2_value += 1
+            if not cafe_minami_choice_2_value == 6:
+                show cafe_minami_35 with Dissolve(0.3)
+                hide cafe_minami_34
+                jump cafe_minami_choice_2
+
+        
+        @S:
+
+            gg 9 @S with dissolve
+            show cafe_minami_34 with Dissolve(0.3)
+            hide cafe_minami_35
+            mi 2 @S with dissolve
+            mi 2 @S
+            mi 2 @S
+            show cafe_minami_35 with Dissolve(0.3)
+            hide cafe_minami_34
+            menu:
+                
+                @S:
+
+                    gg 9 @S with dissolve
+                    show cafe_minami_45 with Dissolve(0.3)
+                    mi 2 @S with dissolve
+                    mi 2 @S
+                    mi 2 @S
+                    mi 2 @S
+                    mi 2 @S
+                    mi 2 @S
+                    
+                    $ cafe_minami_choice_2_value += 1
+                    if not cafe_minami_choice_2_value == 6:
+                        show cafe_minami_35 with Dissolve(0.3)
+                        hide cafe_minami_45
+                        jump cafe_minami_choice_2
+                    
+                @S:
+                    pause 0.3
+                    $ cafe_minami_choice_2_value += 1
+                    if not cafe_minami_choice_2_value == 6:
+                        jump cafe_minami_choice_2
+                        
+        @Q:
+            if cafe_minami_choice_2_value == 0:
+                gg 9 @S with dissolve
+            else:
+                gg 9 @S with dissolve
+    
+    scene cafe_minami_77 with Dissolve(0.3)
+    stop music2 fadeout 4
+    pause 2.0
+    play music3 marty_gots_a_plan_by_kevin_macleod fadein 1 volume 0.5
+    scene cafe_minami_78 with Dissolve(0.3)
+    me 3 @S with dissolve
+    scene cafe_minami_79 with Dissolve(0.3)
+    me 3 @S with dissolve
+    scene cafe_minami_80 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_81 with Dissolve(0.3)
+    me 3 @S with dissolve
+    play sound2 as3 volume 0.3
+    scene cafe_minami_82 with Dissolve(0.3)
+    me 3 @S with dissolve
+    scene cafe_minami_83 with Dissolve(0.3)
+    dai 3 @S with dissolve
+    scene cafe_minami_84 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    play sound3 swing1 volume 0.3
+    scene cafe_minami_85 with Dissolve(0.3)
+    me 3 @S with dissolve
+    scene cafe_minami_86 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    scene cafe_minami_87 with Dissolve(0.3)
+    mi 2 @S with dissolve
+    mi 2 @S
+    scene cafe_minami_88 with Dissolve(1.0)
+    @Q
+    scene cafe_minami_89 with Dissolve(0.3)
+    me 3 @S with dissolve
+    scene cafe_minami_90 with Dissolve(0.3)
+    dai 3 @S with dissolve
+    scene cafe_minami_91 with Dissolve(0.3)
+    gg 9 @S with dissolve
+    scene cafe_minami_92 with Dissolve(0.3)
+    dai 3 @S with dissolve
+    play sound slap1
+    scene cafe_minami_93 with Dissolve(0.3)
+    dai 3 @S with dissolve
+    
+label after_cafe_minami:
+    stop music3 fadeout 3
+    play music2 japan_streets_1 fadein 3
+    scene black with Dissolve(1.0)
+    pause 2.0
+    scene after_cafe_minami_1 with Dissolve(1.0)
+    mi 2 @S with dissolve
+    scene after_cafe_minami_2 with Dissolve(0.5)
+    gg 9 @S with dissolve
+    scene after_cafe_minami_3 with Dissolve(0.5)
+    mi 2 @S with dissolve
+    play sound pat_cloth_2
+    scene after_cafe_minami_4 with Dissolve(0.3)
+    @Q
+    scene after_cafe_minami_5 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_6 with Dissolve(0.5)
+    mi 4 @S with dissolve
+    scene after_cafe_minami_7 with Dissolve(0.5)
+    @Q
+    scene after_cafe_minami_8 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    gg 10 @S
+    scene after_cafe_minami_9 with Dissolve(0.3)
+    mi 4 @S with dissolve
+    scene after_cafe_minami_10 with Dissolve(0.3)
+    mi 4 @S with dissolve
+    scene after_cafe_minami_11 with Dissolve(0.5)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_12 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    gg 10 @S
+    play music3 march_on_utopia_loop_by_troyificus fadein 1
+    stop music2 fadeout 1
+    play sound as2 volume 0.6
+    scene after_cafe_minami_13 with hpunch
+    robber0 @S with dissolve
+    robber0 @S
+    scene after_cafe_minami_14 with Dissolve(0.3)
+    robber2 @S with dissolve
+    scene after_cafe_minami_15 with Dissolve(0.3)
+    mi 4 @S with dissolve
+    scene after_cafe_minami_16 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_17 with Dissolve(0.3)
+    pause 1.0
+    gg 10 @S with dissolve
+    scene after_cafe_minami_18 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_19 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_20 with Dissolve(0.3)
+    mi 4 @S with dissolve
+    scene after_cafe_minami_21 with Dissolve(0.3)
+    robber1 @S with dissolve
+    scene after_cafe_minami_22 with Dissolve(0.3)
+    robber2 @S with dissolve
+    scene after_cafe_minami_23 with Dissolve(0.3)
+    robber2 @S with dissolve
+    show after_cafe_minami_24 with Dissolve(0.3)
+    $ choice_var = 0
+    menu:
+        @S:
+            gg 10 @S with dissolve
+            scene after_cafe_minami_25 with Dissolve(0.3)
+            mi 4 @S with dissolve
+            $ minami_my_girl = True
+            scene after_cafe_minami_26 with Dissolve(0.3)
+            robber2 @S with dissolve
+            robber2 @S
+            scene after_cafe_minami_27 with Dissolve(0.3)
+            robber2 @S with dissolve
+            robber2 @S
+        
+        @S:
+            gg 10 @S with dissolve
+            scene after_cafe_minami_28 with Dissolve(0.3)
+            robber2 @S with dissolve
+    
+    $ choice_var = 1
+    scene after_cafe_minami_29 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    play sound woosh_dm
+    scene after_cafe_minami_30 with Dissolve(0.3)
+    @Q
+    scene after_cafe_minami_31 with Dissolve(0.3)
+    robber1 @S with dissolve
+    play sound pistol_1
+    scene after_cafe_minami_32 with Dissolve(0.3)
+    @Q
+    play sound2 pistol_2
+    scene after_cafe_minami_33 with Dissolve(0.3)
+    @Q
+    scene after_cafe_minami_34 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_35 with Dissolve(0.3)
+    robber1 @S with dissolve
+    scene after_cafe_minami_36 with Dissolve(0.3)
+    robber2 @S with dissolve
+    scene after_cafe_minami_37 with Dissolve(0.3)
+    mi 4 @S with dissolve
+    mi 4 @S
+    scene after_cafe_minami_38 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_39 with Dissolve(0.3)
+    robber2 @S with dissolve
+    scene after_cafe_minami_40 with Dissolve(0.3)
+    robber2 @S with dissolve
+    scene after_cafe_minami_41 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_42 with Dissolve(0.3)
+    mi 4 @S with dissolve
+    scene after_cafe_minami_43 with Dissolve(0.3)
+    robber1 @S with dissolve
+    scene after_cafe_minami_44 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    gg 10 @S
+    gg 10 @S
+    gg 10 @S
+    gg 10 @S
+    show after_cafe_minami_45 with Dissolve(0.3)
+    pause 0.05
+    show after_cafe_minami_45 with Dissolve(0.1):
+        top
+        zoom 1
+        ease 0.3 zoom 1.1
+    gg 10 @S with dissolve
+    play music2 last_minute_failure_loop_by_troyificus fadein 1
+    stop music3 fadeout 1
+    scene after_cafe_minami_46 with hpunch
+    robber2 @S with dissolve
+    play sound after_cafe_minami_fight_1
+    show after_cafe_minami_47 with Dissolve(0.1)
+    $ renpy.pause(0.9,hard=True)
+    show after_cafe_minami_48 with Dissolve(0.1)
+    hide after_cafe_minami_47
+    gg 10 @S with dissolve
+    play sound2 after_cafe_minami_fight_2
+    show after_cafe_minami_49 with Dissolve(0.1)
+    hide after_cafe_minami_48
+    $ renpy.pause(1.0,hard=True)
+    show after_cafe_minami_50 with Dissolve(0.1)
+    hide after_cafe_minami_49
+    @Q
+    play sound3 after_cafe_minami_fight_3
+    show after_cafe_minami_51 with Dissolve(0.1)
+    hide after_cafe_minami_50
+    $ renpy.pause(1.0,hard=True)
+    show after_cafe_minami_52 with Dissolve(0.1)
+    hide after_cafe_minami_51
+    @Q
+    play sound after_cafe_minami_fight_4
+    show after_cafe_minami_53 with Dissolve(0.1)
+    hide after_cafe_minami_52
+    $ renpy.pause(1.0,hard=True)
+    show after_cafe_minami_54 with Dissolve(0.1)
+    hide after_cafe_minami_53
+    @Q
+    play sound2 after_cafe_minami_fight_5
+    show after_cafe_minami_55 with Dissolve(0.1)
+    hide after_cafe_minami_54
+    $ renpy.pause(2.0,hard=True)
+    show after_cafe_minami_56 with Dissolve(0.1)
+    hide after_cafe_minami_55
+    @Q
+    play sound3 after_cafe_minami_fight_6
+    show after_cafe_minami_57 with Dissolve(0.1)
+    hide after_cafe_minami_56
+    $ renpy.pause(2.5,hard=True)
+    show after_cafe_minami_58 with Dissolve(0.1)
+    hide after_cafe_minami_57
+    @Q
+    play sound after_cafe_minami_fight_7
+    show after_cafe_minami_59 with Dissolve(0.1)
+    hide after_cafe_minami_58
+    $ renpy.pause(0.5,hard=True)
+    show after_cafe_minami_60 with Dissolve(0.1)
+    hide after_cafe_minami_59
+    @Q
+    play sound2 after_cafe_minami_fight_8
+    show after_cafe_minami_61 with Dissolve(0.1)
+    hide after_cafe_minami_60
+    $ renpy.pause(2.5,hard=True)
+    show after_cafe_minami_62 with Dissolve(0.1)
+    hide after_cafe_minami_61
+    pause 0.5
+    stop music2 fadeout 3
+    play music3 japan_streets_2 fadein 3
+    scene after_cafe_minami_63 with Dissolve(0.5)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_64 with Dissolve(1.0)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_65 with Dissolve(1.0)
+    mi 4 @S with dissolve
+    play sound pat_cloth_2
+    scene after_cafe_minami_66 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_67 with Dissolve(0.3)
+    mi 4 @S with dissolve
+    scene after_cafe_minami_68 with Dissolve(0.3)
+    gg 10 @S with dissolve
+    scene after_cafe_minami_69 with Dissolve(0.3)
+    @Q
+    stop music3 fadeout 6
+    scene black with Dissolve(1.5)
+    pause 1.0
+    jump cdr_2

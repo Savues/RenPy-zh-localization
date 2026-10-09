@@ -10,6 +10,7 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 | 游戏 | 原作 | 语言 | 方案 | 状态 | 译文量 |
 |---|---|---|---|---|---|
 | [AcademyLive 0.11](games/academylive-011/) | passhonQ | 简体中文 | translate 块 | ✅ 100% | 24,002 条 |
+| [City Devil: Restart 0.4.0](games/citydevilrestart-040/) | Sabirow | 简体中文 | 脚本覆盖 | ✅ 100%（10 条保留原文） | 7,792 条 |
 | [Clown Squad 0.1 Part 1](games/clownsquad-01-part1/) | Astreon | 简体中文 | translate 块 | ✅ 100% | 5,034 条 |
 | [Cosy Cafe 0.14.2](games/cosycafe-0142/) | Cosy Creator | 简体中文 | 脚本覆盖 | ✅ 100% | 32,639 条 |
 | [DropOut Saga 0.12.0b](games/dropout-saga-0120/) | LazyBloodLines | 简体中文 | 脚本覆盖 | ✅ 100%（273 条保留原文） | 15,214 条 |

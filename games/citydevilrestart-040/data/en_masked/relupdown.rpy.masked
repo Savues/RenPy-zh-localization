@@ -1,0 +1,59 @@
+transform relupdown_transform:
+    on show:
+        xalign .98 
+        yalign -.3 
+        linear 0.4 xalign .98 yalign .02
+    on hide:
+        linear 0.4 xalign 1.9 yalign .02
+
+
+
+screen rel_open_may(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_open_lillian(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_open_minami(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_open_asami(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_open_izumi(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_open_nao(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+
+
+screen rel_up_may(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_up_lillian(trans=relupdown_transform):
+    timer 3.8 action Hide(@S) at rs_notify
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_up_minami(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_up_asami(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_up_izumi(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
+    
+screen rel_up_nao(trans=relupdown_transform):
+    timer 3.8 action Hide(@S)
+    imagebutton idle @S focus_mask True hover_sound @S action ShowMenu(@S) activate_sound @S at rs_notify
