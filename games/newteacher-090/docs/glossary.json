@@ -1,0 +1,309 @@
+{
+  "_about": "角色名与专有名词。zh 是本作采用的定译；banned 列出的是这一版明确修掉的错译，check.py 会在补丁里扫到它们时报错。banned 是纯子串匹配，所以只放真正该禁的写法——普通中文词、或者另一个名字的一部分，放进去会误伤整库。",
+  "人物": {
+    "Sophia": {
+      "zh": "索菲娅",
+      "banned": []
+    },
+    "Suzie": {
+      "zh": "苏西",
+      "banned": [
+        "苏茜"
+      ]
+    },
+    "Clarissa": {
+      "zh": "克拉丽莎",
+      "banned": []
+    },
+    "Chrissy": {
+      "zh": "克莉丝",
+      "banned": [
+        "克丽丝"
+      ]
+    },
+    "Nova": {
+      "zh": "诺娃",
+      "banned": []
+    },
+    "Esme": {
+      "zh": "埃斯梅",
+      "banned": []
+    },
+    "Morgana": {
+      "zh": "莫嘉娜",
+      "banned": []
+    },
+    "Yui": {
+      "zh": "悠依",
+      "banned": []
+    },
+    "Sadie": {
+      "zh": "萨迪",
+      "banned": []
+    },
+    "Georgia": {
+      "zh": "乔治娅",
+      "banned": [
+        "乔治亚"
+      ]
+    },
+    "Lily": {
+      "zh": "莉莉",
+      "banned": []
+    },
+    "Raya": {
+      "zh": "拉雅",
+      "banned": []
+    },
+    "Belle": {
+      "zh": "贝尔",
+      "banned": [
+        "贝拉"
+      ]
+    },
+    "Stella": {
+      "zh": "斯特拉",
+      "banned": []
+    },
+    "Veronica": {
+      "zh": "维罗妮卡",
+      "banned": []
+    },
+    "Melany": {
+      "zh": "梅兰妮",
+      "banned": []
+    },
+    "Aiko": {
+      "zh": "爱子",
+      "banned": []
+    },
+    "Michelle": {
+      "zh": "米歇尔",
+      "banned": []
+    },
+    "Roxanne": {
+      "zh": "罗克珊",
+      "banned": [
+        "罗克桑"
+      ]
+    },
+    "Daphne": {
+      "zh": "达芙妮",
+      "banned": [
+        "达芳妮"
+      ]
+    },
+    "Ella": {
+      "zh": "艾拉",
+      "banned": []
+    },
+    "Simon": {
+      "zh": "西蒙",
+      "banned": []
+    },
+    "Reginald": {
+      "zh": "雷金纳德",
+      "banned": []
+    },
+    "Yumi": {
+      "zh": "由美",
+      "banned": []
+    },
+    "Mrs. Jackson": {
+      "zh": "杰克逊夫人",
+      "banned": []
+    },
+    "The Director": {
+      "zh": "总监",
+      "banned": []
+    },
+    "Sapdavir Amato": {
+      "zh": "萨帕达维尔·阿马托",
+      "banned": []
+    },
+    "BoB": {
+      "zh": "鲍勃",
+      "banned": []
+    },
+    "Johnny Sin(e)s": {
+      "zh": "强尼·辛斯",
+      "banned": [
+        "强尼·辛斯先生"
+      ]
+    }
+  },
+  "场所与组织": {
+    "Sinergy": {
+      "zh": "星聚能",
+      "banned": []
+    },
+    "NewGram": {
+      "zh": "NewGram",
+      "banned": [
+        "新电gram",
+        "新科拉姆"
+      ]
+    },
+    "PARE system": {
+      "zh": "赏罚系统",
+      "banned": [
+        "惩罚系统"
+      ]
+    },
+    "spud-pudding": {
+      "zh": "土豆布丁",
+      "banned": []
+    },
+    "club": {
+      "zh": "夜总会",
+      "banned": []
+    },
+    "bar": {
+      "zh": "酒吧",
+      "banned": []
+    }
+  },
+  "_kept_verbatim": [
+    "30",
+    "60",
+    "{bt=2}{size=-5}[d8_clarissa_sleep]{/size}{/bt}",
+    "{bt=1}[d8_mc_scaledown_dialogue_1]{/bt}",
+    "{cps=3}. . .{/cps}",
+    "{sc=2}!!!!{/sc}",
+    "[d8_clarissaPrincessWrittenString!t]",
+    "{sc=2}{i}[d8_nova_squeel]{/i}{/sc}",
+    "[d8_mcRepeat_stuttered]",
+    "{sc=2}!!!{/sc}",
+    "[platformText!t]",
+    "{color=[aikoColor]}[aiko]{/color} & {color=[verColor]}[ver]{/color}",
+    "{bt=2}{b}[d5_verWord]{/b}{/bt}",
+    "???",
+    "{cps=5}. . .{/cps}",
+    "{cps=3}. . . . .",
+    "{p=0.5}{nw}",
+    "{cps=3}. . . .{/cps}",
+    "{color=#ff0000}???{/color}",
+    "{cps=10}(. Y .)",
+    "{color=[d7_mc_color]}El [player_name]{/color}",
+    "[d7_mc_walkAway!t]",
+    "{bt=5}{b}[d7_scream_small!t]{/b}{/bt}",
+    "{cps=10}. . . . . . . . .{/cps}",
+    "{bt=2}[d6_size_hmm!t]{/bt}",
+    "{sc=2}{b}[d6_out!t]{/b}{/sc}",
+    "{sc=2}{b}[d6_geo_ahh!t]{/b}{/sc}",
+    "[player_name] [mcNameCutOff]-",
+    "[d6_suzTeam]",
+    "[d6_geoTeam]",
+    "[d6_suzTeam] {color=#ffffff}&{/color} [d6_geoTeam]",
+    "{color=[lilyColor]}[lily]{/color} & {color=[suzColor]}[suz]{/color} & {color=[geoColor]}[geo]{/color}",
+    "{bt=1}{color=#ff92fb}???{/color}{/bt}",
+    "             [soph]",
+    "     [soph]",
+    "RogueOne",
+    "[player_name]",
+    "6'0\\\"",
+    "5'5.8\\\"",
+    "5'4.2\\\"",
+    "5'3.5\\\"",
+    "5'4.1\\\"",
+    "5'3.7\\\"",
+    "5'3\\\"",
+    "5'4.4\\\"",
+    "5'2.85\\\"",
+    "5'1\\\"",
+    "5'4\\\"",
+    "5'2.3\\\"",
+    "5'7.1\\\"",
+    "5'5\\\"",
+    "5'5.2\\\"",
+    "5'8.9\\\"",
+    "5'0.1\\\"",
+    "5'6\\\"",
+    "5'0.2\\\"",
+    "5'4.8\\\"",
+    "5'8\\\"",
+    "1-Z",
+    "5'11\\\"",
+    "6'1\\\"",
+    "5'7.9\\\"",
+    "1-X",
+    "W.M",
+    "Cryoxxx",
+    "Cure",
+    "{size=+10}[selectedChar!t]{/size}",
+    "{b}[punishmentText!t]{/b}",
+    "{b}[rewardsText!t]{/b}",
+    "DejaVu Sans",
+    "Opendyslexic",
+    "⬆",
+    "⬇",
+    "😊😊😊",
+    "[choice_1_text!t]",
+    "[choice_2_text!t]",
+    "[choice_3_text!t]",
+    "[choice_2_text]",
+    "1-B",
+    "1-A",
+    "1-10",
+    "11-20",
+    "21-30+",
+    "[SCu]/[SCl]",
+    "[START+local_idx+1]",
+    "{size=-15}{i}{b}[correctCode!t]{/b}{/i}{/size}",
+    "{size=-32}{i}{b}[correctCode!t]{/b}{/i}{/size}",
+    "[Pu]/[Pl]",
+    "[gidx+1]",
+    ".Ryuss.",
+    "Jessika.exe",
+    ".LilFarmGirlx",
+    "JustYueee",
+    "DailyMemes",
+    "_Suzxie",
+    "Esmeverse",
+    "Miss.Penny",
+    "Belle.mae",
+    "GermanHumor",
+    "Rvxn._",
+    "[calendar.month_name!t]-[calendar.year]",
+    "%H:%M",
+    "%H%M",
+    "%Y/%m/%d",
+    "%Y%m%d",
+    "[nova]",
+    "[suz]",
+    "[si]",
+    "[reg]",
+    "[clarissa]",
+    "[soph]",
+    "LTE",
+    "<",
+    "{#auto_page}A",
+    "{#quick_page}Q",
+    ">",
+    "MAX",
+    "{size=-15}-RogueOne UwU{/size}",
+    "Patreon: {a=https://www.patreon.com/therogueone}RogueOne{/a}",
+    "Subscribestar: {a=https://subscribestar.adult/therogueone}RogueOne{/a}",
+    "Discord: {a=https://discord.gg/8w8sr8Cs7K}The Rogue Ones{/a}",
+    "Bluesky: {a=https://bsky.app/profile/rogueone-dev.bsky.social}RogueOne{/a}",
+    "X/Twitter: {a=https://x.com/TheeRogueOne}RogueOne{/a}"
+  ],
+  "_kept_verbatim_why": {
+    "count": "123 of 19,112 player-visible strings are byte-identical to their English source, and every one of them is an identifier, a format string, a substitution-only line or an interjection beat -- never a sentence. tools/verify_patch.cjs re-derives this list from the patch on every run, and it is the only thing allowed to write it (--dump-verbatim regenerates the list here). A string that comes back untranslated without being in this file fails the build.",
+    "newgram_handles": "The NewGram handles (.LilFarmGirlx, Belle.mae, Cryoxxx, Esmeverse, GermanHumor, Jessika.exe, JustYueee, Miss.Penny, Opendyslexic, Rvxn._, _Suzxie, DailyMemes) had been machine-translated into Chinese in the publisher's text. They are in-world usernames with an @-style look, they are how characters refer to each other in the phone UI, and translating them breaks the joke that they are a different register from the dialogue. This patch puts them back in Latin.",
+    "height_readings": "5'11\\\", 6'0\\\" and the rest are body measurements. The apostrophe and the double quote are the feet-and-inches marks; the string is a bare number pair and reads as one in Chinese too.",
+    "punctuation_only": "Beats like '. . . .', '???', '(. Y .)', ⬆ ⬇ and 😊😊😊 carry sound or gesture. The publisher's text already leaves them, and there is nothing to translate in a Morse fragment."
+  },
+  "_names_are_not_translated": "角色名在这一版里全部译出，正文对白也用名字称呼，所以名字是正文的一部分，不是只在 init 里出现一次——banned 里的两条撞名规则（Sophia/Suzie、Clarissa/Chrissy）是这一版最要紧的守卫。",
+  "_machine_icon_left_alone": "游戏自己的 fullLanguageList 把 chinese 标成 True（机翻）并在语言菜单画一个机器人图标。这一版只做润色和改错，没有把 43,108 行全部重译，所以这个标记仍然属实，补丁不去改它，也不假装它已经改了。",
+  "_doubling_exempt": [],
+  "_variants_allowed": {
+    "俱乐部": "club 在正文里译作「夜总会」，但角色对话里偶有「俱乐部」；两处都是刻意区分，不是错译。",
+    "第N天": "「第 N 天」的阿拉伯数字格式已全局归一，但角色口头说法（说「第几天」）不受格式约束。",
+    "Mr.": "称呼在 Mr. {player_name} → X先生 与 Sensei → 老师 之间分开，是这一版刻意做的语域区分，见 translation-log.md。"
+  },
+  "_variant_names": {
+    "_why": "Sophia and Suzie were BOTH translated 苏西 in the publisher's text, which left the player unable to tell the two leads apart; this patch moves Sophia to 索菲娅 and fixes 35 hard-coded 苏西 and 3 苏茜 with it. That mistake cannot be caught by a banned-variant rule, because 苏西 is now the correct spelling of Suzie's name and appears 43 times in the patch -- a scan for it under Sophia would flag every one of those. The two are now pinned separately above and the pairing is asserted by tools/verify_patch.cjs, which counts both names and fails if either one ever stops appearing. Clarissa / Chrissy (克拉丽莎 / 克莉丝) had the same near-collision and is handled the same way.",
+    "导演": "Not the Director. The game has Ren'Py's own 'interactive director' feature and the line 'The interactive director is not enabled here.' renders 导演 as the correct word for it. That is why The Director's banned list is empty."
+  }
+}

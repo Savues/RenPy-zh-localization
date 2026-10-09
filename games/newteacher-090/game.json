@@ -1,0 +1,34 @@
+{
+  "slug": "newteacher-090",
+  "title": "That New Teacher 0.9.0",
+  "author": "RogueOne",
+  "renpy_version": "8.3.7",
+  "language": "chinese",
+  "language_name": "简体中文",
+  "patch_version": 1,
+  "patch_layout": "script-override",
+  "installer": "ps1",
+  "extra_checks": [
+    [
+      "node",
+      "tools/verify_patch.cjs"
+    ]
+  ],
+  "shim": "zz_zh_locale.rpy",
+  "font_strategy": "game-bundled",
+  "font_assets": [],
+  "_why_chinese_not_schinese": "The game already ships its own Simplified Chinese under game/tl/chinese/ and this patch revises that tree in place rather than adding a second language beside it. Ren'Py keys a translation directory off the language code, so writing game/tl/schinese/ instead would leave the player's language picker showing the publisher's text under 中文 while the revised text sat unused next to it.",
+  "_why_no_fonts": "game/tl/chinese/ already works in the stock download, so the CJK faces the game needs are already in place. Shipping a font would add weight and a licence to account for without changing a single glyph on screen.",
+  "_provenance": "This is a revision of the translation the publisher already ships, not a fresh translation of the English. The base text is game/tl/chinese/ as it came in the download; this patch revises 13,372 of its 43,108 active lines across 43 of 51 files (31.0%) and leaves the rest as the publisher had them. The publisher's own language menu marks Chinese as machine translated and draws a robot icon beside it, and the shim deliberately does not clear that mark. See docs/translation-log.md.",
+  "_patch_note": "The patch ships .rpy only. The download also carries a compiled .rpyc next to every one of them and Ren'Py prefers bytecode, so leaving those in place is how a translation silently stops applying. tools/install.ps1 deletes the stale .rpyc next to each file it writes.",
+  "coverage": {
+    "translated": 18989,
+    "total": 19112,
+    "verbatim": 123,
+    "punctuation_only": 108
+  },
+  "_coverage_note": "19,112 player-visible strings, counted by taking the English from the # comment above each line inside every translate chinese block and the old/new pair out of every translate chinese strings: block. 18,989 of them are localised: 18,881 contain a Han character, and 108 are punctuation-only -- '[player_name]...' became '[player_name]……', '[suz]!?' kept its marks but lost the ASCII spaces. Those 108 are invisible to a plain Han test, because a Ren'Py substitution tag puts ASCII back into the line; a string counts as localised whenever its value differs from the English source, which is the same rule tools/check.py uses to decide a tl-blocks entry is 'still in English'. The remaining 123 are byte-identical to their source and are registered by hand in docs/glossary.json _kept_verbatim: date and clock formats (%H:%M, %Y/%m/%d), substitution-only lines ([soph], {p=0.5}{nw}), the NewGram handles, Patreon/Discord/X/Bluesky/Subscribestar links, key-binding labels ({#auto_page}A), height readings (5'11\"), pagination ranges (21-30+), platform names (LTE, MAX), Morse and emoticon strings, and punctuation beats like '. . . .'. tools/verify_patch.cjs re-derives all three numbers from the patch on every run and fails if game.json disagrees, so none of this is taken on trust.",
+  "_why_script_override": "The patch does not generate tl/<lang>/ from a dictionary -- it ships the game's own translation scripts, revised, at the paths they already occupy. That is what this layout means here, and it is also why there is no data/tl_trans.json to grade: 195 English source lines in this game legitimately carry more than one rendering (the same short line said by different characters in different scenes), so a dictionary would have to drop 195 of them and the check would end up grading the copy it kept rather than the one the player reads. check.py therefore checks the 51 scripts the patch actually ships. That is a stricter glossary check than a database would give, not a looser one: every rendering of those 195 lines is scanned for banned variants, where a dictionary could only ever scan one.",
+  "_why_ps1": "tools/install.py cannot install this game. It insists on a font asset (this patch ships none -- the game's own CJK faces already work), and it recognises a game by a loose game/options.rpy, which this one keeps inside archive.rpa with the other 89 scripts. It also deletes game/tl/<lang> wholesale before copying, so a partial tree would leave the player without the files the patch does not carry. tools/install.ps1 copies file by file instead.",
+  "_complete_tree": "All 51 files under game/tl/chinese/ are shipped, not just the 43 this patch revises. The other 8 are byte-identical to what the download already contains; shipping them keeps the tree complete and lets the installer overwrite in place without having to reason about what the player already had."
+}
