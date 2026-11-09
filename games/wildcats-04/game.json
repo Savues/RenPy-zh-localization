@@ -1,7 +1,7 @@
 {
   "slug": "wildcats-04",
-  "title": "WildCats 0.4",
-  "author": "WildCats / BladeSSR",
+  "title": "WildCats 0.4 (BladeSSR Mod)",
+  "author": "BladeSSR / WildCats",
   "renpy_version": "8.2.0",
   "language": "schinese",
   "language_name": "简体中文",
@@ -15,5 +15,7 @@
   },
   "font_strategy": "game-bundled",
   "font_assets": [],
-  "_mod_note": "WildCats 0.4 Multi-Mod (BladeSSR) localized for Chinese game client."
+  "_mod_note": "WildCats 0.4 Multi-Mod (BladeSSR) localized for Chinese game client. Game itself ships official Chinese.",
+  "kind_label": "模组包",
+  "content_label": "BladeSSR 多功能模组汉化"
 }

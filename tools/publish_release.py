@@ -189,9 +189,12 @@ def render_body(rows, version, repo):
     ]
     for r in rows:
         game = r["title"] if r["kind"] == "patch" else r["for_title"]
-        what = "完整汉化补丁" if r["kind"] == "patch" else r["label"]
+        m = r.get("manifest", {})
+        default_what = "完整汉化补丁" if r["kind"] == "patch" else r["label"]
+        what = m.get("content_label", default_what)
+        kind_label = m.get("kind_label", "主包" if r["kind"] == "patch" else "可选包")
         lines.append("| %s | %s | %s | **%s** | `%s` |"
-                     % ("主包" if r["kind"] == "patch" else "可选包",
+                     % (kind_label,
                         game, what, r["version"], r["asset"]))
 
     optional = any(r["kind"] == "extra" for r in rows)

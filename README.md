@@ -31,7 +31,7 @@ Ren'Py（视觉小说）游戏的中文汉化补丁。每个游戏一个独立�
 | [The Inn 1.02.01-2](games/theinn-10201/) | theinn | 简体中文 | translate 块 | ✅ 100% | 5,421 条 |
 | [TOXICity 0.22.0](games/toxicity-0220/) | Ils Productions | 简体中文 | 脚本覆盖 | ✅ 100% | 28,524 条 |
 | [Wartribe Academy 2.0.3](games/wartribeacademy-0203/) | 3 Pood Productions | 简体中文 | 脚本覆盖 | ⚠️ 123 条未译 | 61,417 条 |
-| [WildCats 0.4](games/wildcats-04/) | WildCats / BladeSSR | 简体中文 | 脚本覆盖 | ✅ 100% | 150 条 |
+| [WildCats 0.4 (BladeSSR Mod)](games/wildcats-04/) | BladeSSR / WildCats | 简体中文 | 脚本覆盖 | ✅ 100% | 150 条 |
 | *（来加一个？）* | | | | | |
 <!-- games:end -->
 
